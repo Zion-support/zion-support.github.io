@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -57,6 +58,8 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -68,18 +71,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface ReferralLinkProps {
-  referralLink: string;
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";  referralLink: string;
   onCopy: () => void;
   onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function ReferralLink({
@@ -142,14 +139,22 @@ export function ReferralLink({
   onCopy,
   onShare,
 }: ReferralLinkProps) {
+=======
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    onCopy();
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
 
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false),
+  
+  const handleCopy = () => {
+    onCopy(),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -164,6 +169,7 @@ export function ReferralLink({
       </CardHeader>
       <CardContent>
         <div className="flex flex-col space-y-3">
+<<<<<<< HEAD
           <div className="flex space-x-2">
 <<<<<<< HEAD
 =======
@@ -537,3 +543,8 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          <div className="flex space-x-2">  )
+  )
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

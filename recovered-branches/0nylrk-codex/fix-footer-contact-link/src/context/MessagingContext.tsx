@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 
@@ -46,6 +46,8 @@ const defaultContext: MessagingContextType = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -70,6 +72,7 @@ const defaultContext: MessagingContextType = {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -274,16 +277,16 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
 
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     messages;
     active_messages;
     setActiveMessages;
@@ -298,6 +301,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     create_conversation;
     markAsRead;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <MessagingContext.Provider value={contextValue}>
@@ -330,6 +334,8 @@ export function useMessaging(): MessagingContextType {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
@@ -337,8 +343,6 @@ export function useMessaging(): MessagingContextType {
   return context;
 }
   const {
-
-
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -398,6 +402,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     } else {;
       setConversations([]),;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -425,6 +430,8 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -472,6 +479,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchConversations,;
     loadMessages;
   };
@@ -486,11 +494,17 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {children}
+=======
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}      {children}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </MessagingContext && MessagingContext.Provider>;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -501,28 +515,21 @@ if ( {) {
     loadMessages;
   };
   return (
-    <MessagingContext && MessagingContext.Provider value={contextValue}>;
-      {children}
-    </MessagingContext && MessagingContext.Provider>;
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-  return (
+=======  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetch_conversations,
     load_messages;
   }
 ;
-<<<<<<< HEAD
   return (
     <MessagingContext.Provider value={context_value}>;
       {children}
     </MessagingContext.Provider>);
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 ),;
@@ -612,3 +619,5 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

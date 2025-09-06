@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -10,18 +11,19 @@ import {Notification, as, BaseNotification} from '@/types/notifications';
 =======
 import { Notification, as, BaseNotification } from "@/types/notifications";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+import {Notification, as, BaseNotification} from '@/types/notifications';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type NotificationType =
-  | "message"
-  | "quote_request"
-  | "booking_confirmation"
-  | "hire_request"
-  | "onboarding"
-  | "system";
-
-
+  | 'message'
+  | 'quote_request'
+  | 'booking_confirmation'
+  | 'hire_request'
 
 export interface Notification extends BaseNotification {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,11 +41,14 @@ export interface Notification extends BaseNotification {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   type: NotificationType;
   action_url?: string;
   action_text?: string;
 }
 export type FilterType =
+<<<<<<< HEAD
 <<<<<<< HEAD
   | 'all'
   | 'unread'
@@ -91,11 +96,21 @@ export interface NotificationContextType {;
 export interface NotificationContextType {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  | 'all'
+  | 'unread'
+  | 'messages'
+
+export interface NotificationContextType {;
+
+export interface NotificationContextType {export interface NotificationContextType {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
   loading: boolean;
   filter: FilterType;
+<<<<<<< HEAD
 <<<<<<< HEAD
   markAsRead: (id: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
@@ -171,6 +186,8 @@ export type FilterType =;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;
@@ -179,8 +196,12 @@ export interface NotificationContextType {;
   loading: boolean,;
   filter: FilterType,;
   markAsRead: (id: string) => Promise<void>,;
+<<<<<<< HEAD
   markAllAsRead: () => Promise<void>,;
   dismissNotification: (id: string) => Promise<void>;
+=======
+  markAllAsRead: () => Promise<void>,;  dismissNotification: (id: string) => Promise<void>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 }

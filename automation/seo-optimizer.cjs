@@ -10,7 +10,12 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 =======
 
@@ -26,6 +31,7 @@
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -34,12 +40,21 @@
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -296,6 +311,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
@@ -419,6 +435,9 @@ class SEOOptimizer {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
 =======
 <<<<<<< HEAD
 
@@ -628,7 +647,11 @@ module.exports = SEOOptimizer;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -650,6 +673,9 @@ module.exports = SEOOptimizer;
 const optimizer = new SEOOptimizer();
 <<<<<<< HEAD
 optimizer.optimize().catch(console.error);
+=======
+<<<<<<< HEAD
+optimizer.optimize().catch(console.error);
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -667,4 +693,8 @@ optimizer.optimizeSEO().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

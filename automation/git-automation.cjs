@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,7 +19,11 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -167,6 +174,8 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -183,7 +192,11 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -197,7 +210,10 @@ class GitAutomation {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,7 +246,11 @@ class GitAutomation {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -440,6 +460,11 @@ if (require.main === module) {}
 =======
 module.exports = GitAutomation;
 <<<<<<< HEAD
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -481,4 +506,8 @@ module.exports = GitAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

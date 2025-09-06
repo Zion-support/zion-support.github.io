@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +30,9 @@ const { useState,useEffect,useCallback,useRef } from";react" export: const useAn
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/hooks/useAnalytics.js.jsx
 =======
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
+=======
+const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""=======const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
 
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("", ") const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
@@ -45,6 +49,7 @@ import { useState,useEffect,useCallback,useRef } from\';react\' \"export\": cons
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("", ") const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
 :temp_exclude/src.disabled/hooks/useAnalytics.js.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -69,3 +74,5 @@ const { useState,useEffect,useCallback,useRef } from";react" export: const useAn
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

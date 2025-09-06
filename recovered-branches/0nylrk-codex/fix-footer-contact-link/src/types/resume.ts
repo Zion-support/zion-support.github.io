@@ -17,10 +17,6 @@ export interface ResumeBasicInfo {
 
 }
 export interface WorkExperience {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -33,9 +29,9 @@ export interface ResumeBasicInfo {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface WorkExperience {
-<<<<<<< HEAD
 
 export interface WorkExperience {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -74,6 +70,8 @@ export interface Education {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id?: string;
   institution: string;
   degree: string;
@@ -86,11 +84,11 @@ export interface Education {;
   location?: string;
 }
 
-<<<<<<< HEAD
   institution_logo_url?: string,
   location?: string;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -108,17 +106,20 @@ export interface Skill {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
+=======
+export interface Skill {  id?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
   proficiency?: number;
   category?: string;
   years_experience?: number;
 }
 
-<<<<<<< HEAD
   category?: string,
   years_experience?: number;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -207,6 +208,12 @@ export interface Resume {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
+=======
+export interface Certification {  id?: string;
+  name: string;
+  proficiency?: number;
+}  id?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   user_id?: string;
   basic_info: ResumeBasicInfo;
   work_experience: WorkExperience[];
@@ -215,6 +222,7 @@ export interface Resume {;
   certifications: Certification[];
   portfolio_projects?: PortfolioProject[];
   is_active: boolean;
+<<<<<<< HEAD
 }
 =======
   portfolio_projects?: PortfolioProject[]
@@ -226,6 +234,9 @@ export interface ResumeBasicInfo {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string,;
+=======
+}  id?: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string,;
   headline?: string,;
   summary?: string;
@@ -295,6 +306,7 @@ export interface Resume {;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   portfolio_projects?: PortfolioProject[],
 =======
@@ -311,21 +323,18 @@ export interface Resume {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+  portfolio_projects?: PortfolioProject[],  is_active: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
-
-
-export interface ResumeBasicInfo {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  is_active: boolean;
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

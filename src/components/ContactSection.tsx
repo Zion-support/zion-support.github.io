@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -72,6 +73,8 @@ export function ContactSection() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -100,10 +103,10 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you soon.');
   };
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -177,15 +180,18 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
 <<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
             Ready to transform your business with cutting-edge technology?
 =======
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
@@ -195,6 +201,9 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ready to transform your business with cutting-edge technology?
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+            Ready to transform your business with cutting-edge technology? 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Let's discuss how we can help you achieve your goals.
           </p>
         </div>
@@ -204,79 +213,77 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-blue-600" />
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="font-semibold">Email</p>
                     <p className="text-gray-600">contact@ziontechgroup.com</p>
-                    <p className="text-gray-600">support@ziontechgroup.com</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-green-600" />
+                
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <p className="font-semibold">Phone</p>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 987-6543</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-600" />
+                
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Office</h4>
-                    <p className="text-gray-600">
-                      123 Tech Street<br />
-                      Innovation District<br />
-                      San Francisco, CA 94105
-                    </p>
+                    <p className="font-semibold">Address</p>
+                    <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-3">Business Hours</h4>
-              <div className="space-y-2 text-gray-600">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h4 className="text-lg font-semibold mb-4">Why Choose Us?</h4>
+              <ul className="space-y-2 text-gray-600">
+                <li>• 24/7 Expert Support</li>
+                <li>• Custom Solutions for Your Business</li>
+                <li>• Proven Track Record</li>
+                <li>• Competitive Pricing</li>
+                <li>• Fast Implementation</li>
+              </ul>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    Full Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    required
                     value={formData.name}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    Email Address
                   </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <Textarea
@@ -699,21 +706,28 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <input
                     type="email"
                     id="email"
                     name="email"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+                    value={formData.email}
+                    onChange={handleChange}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
                   />
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
-                  )}
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -737,6 +751,10 @@ if ( {) {
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+=======
+              </div>
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -751,6 +769,7 @@ if ( {) {
                   placeholder="Your company name"
                 />
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -772,19 +791,31 @@ if ( {) {
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
                   Message *
+=======
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </label>
                 <textarea
                   id="message"
                   name="message"
+<<<<<<< HEAD
                   required
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
                   rows={6}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   value={formData.message}
                   onChange={handleChange}
+                  required
+                  rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
                   placeholder="Tell us about your project or how we can help..."
 =======
                   rows={5}
@@ -793,13 +824,20 @@ if ( {) {
                   className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300 resize-none"
                   placeholder="Tell us about your project or question..."
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
+=======
+                  placeholder="Tell us about your project..."
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 />
               </div>
-
+              
               <button
                 type="submit"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+=======
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
@@ -826,6 +864,7 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ContactSection;
 <<<<<<< HEAD
@@ -907,3 +946,6 @@ export default ContactSection;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+export default ContactSection;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,11 +1,11 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
   ]
 }
 export default v1;
 
   ];
 
+<<<<<<< HEAD
 =======
 
 const baseUrl = 'https://api.zion.os';
@@ -15,6 +15,8 @@ const v1: ApiDocsSpec = {
         }
 
         }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ]
     },
 
@@ -61,6 +63,7 @@ const v1: ApiDocsSpec = {
           samples: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -98,6 +101,8 @@ const v1: ApiDocsSpec = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       ];
     }
@@ -106,6 +111,7 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
             { language: 'python', code: `import requests\nrequests ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -141,3 +147,5 @@ export default v1;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

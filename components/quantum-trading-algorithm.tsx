@@ -31,6 +31,7 @@ import {
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -38,6 +39,8 @@ import Layout from '../components/layout/Layout';import {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   TrendingUp,
   Brain,
   Shield,
@@ -58,10 +61,13 @@ import Layout from '../components/layout/Layout';import {
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   TrendingUp,
   Brain,
   Shield,
@@ -82,8 +88,11 @@ import Layout from '../components/layout/Layout';import {
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
@@ -183,7 +192,6 @@ const pricingPlans = [
 import React from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
-
 
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
@@ -314,7 +322,6 @@ export default function QuantumTradingAlgorithm() {;
           content='https://ziontechgroup && ziontechgroup.com/quantum-trading-algorithm'
         />;
       </Head>;
-
 
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
@@ -468,6 +475,7 @@ export default function QuantumTradingAlgorithm() {;
                 viewport={{ once: true }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -482,6 +490,8 @@ export default function QuantumTradingAlgorithm() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
@@ -938,12 +948,15 @@ function QuantumTradingAlgorithm() {
 =======
                       {feature}
 
+<<<<<<< HEAD
 
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </li>
                   ))}
                 </ul>
@@ -1074,9 +1087,12 @@ function QuantumTradingAlgorithm() {
             </p>;
           </motion && motion.div>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1255,17 +1271,17 @@ function QuantumTradingAlgorithm() {
                       className='flex items - center text - gray - 300';
                     >;
                       <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                    ${plan.price}
-                    <span className="text - lg text - gray - 400 font - normal">/{plan.period}</span>;
+                    <span className="text - lg text - gray-400 font-normal">/{plan.period}</span>;
                   </div>;
                 </div>;
-                <ul className="space - y-4 mb - 8">;
+                <ul className="space-y-4 mb-8">;
                   {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
+                    <li key={feature_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex-shrink-0" />;
                       {feature}
                     </li>))}
                 </ul>;
-                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300">;
+                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition-all duration-300">;
                   Get Started;
                 </button>;
               </motion.div>))}
@@ -1277,8 +1293,8 @@ function QuantumTradingAlgorithm() {
         id='contact';
         className='py - 20 bg - gradient - to - b from - slate - 900 to - black';
       >;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate-900 to-black">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1295,14 +1311,14 @@ function QuantumTradingAlgorithm() {
             </p>;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">;
+            <h2 className="text - 3xl md:text - 5xl font - bold text-white mb-6">;
               Ready to Transform Your Trading?;
             </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
               Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1315,11 +1331,11 @@ function QuantumTradingAlgorithm() {
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
               <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Phone className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Phone className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Phone</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Phone</h3>;
+              <p className="text-gray-300">{contact_info.mobile}</p>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1333,11 +1349,11 @@ function QuantumTradingAlgorithm() {
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
               <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Mail className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Email</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Email</h3>;
+              <p className="text-gray-300">{contact_info.email}</p>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1351,11 +1367,11 @@ function QuantumTradingAlgorithm() {
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
               <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <MapPin className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <MapPin className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Address</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Address</h3>;
+              <p className="text-gray-300">{contact_info.address}</p>;
             </motion.div>;
           </div>;
         </div>;

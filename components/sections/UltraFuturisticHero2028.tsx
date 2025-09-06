@@ -84,12 +84,14 @@ export default function UltraFuturisticHero2028() {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 =======
 
-
   const features = [import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
@@ -167,7 +169,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 
   ];
   return (
@@ -382,10 +383,13 @@ import { motion } from 'framer-motion';
           </motion && motion.button>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -476,6 +480,7 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -486,6 +491,8 @@ import { motion } from 'framer-motion';
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </h3>
                 </div>
               </motion.div>
@@ -775,6 +782,7 @@ import { motion } from 'framer-motion';
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -783,6 +791,8 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -890,11 +900,11 @@ import { motion } from 'framer-motion';
               <div className='text - purple - 400 font - semibold'>;
                 Research Institutions;
               </div>;
-              <div className='text - emerald - 400 font - semibold'>Startups</div>            </div>            <div className="flex flex - wrap justify - center items - center gap - 8 opacity - 70">;
-              <div className="text - cyan - 400 font - semibold">Fortune 500 Companies</div>;
-              <div className="text - blue - 400 font - semibold">Government Agencies</div>;
-              <div className="text - purple - 400 font - semibold">Research Institutions</div>;
-              <div className="text - emerald - 400 font - semibold">Startups</div>;
+              <div className='text - emerald - 400 font - semibold'>Startups</div>            </div>            <div className="flex flex - wrap justify - center items - center gap-8 opacity-70">;
+              <div className="text - cyan-400 font-semibold">Fortune 500 Companies</div>;
+              <div className="text - blue-400 font-semibold">Government Agencies</div>;
+              <div className="text - purple-400 font-semibold">Research Institutions</div>;
+              <div className="text - emerald-400 font-semibold">Startups</div>;
           </div>;
         </motion.div>;
         {/* Bottom CTA */}
@@ -914,14 +924,14 @@ import { motion } from 'framer-motion';
             <Link;
               href='/contact';
               className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border - purple - 300'            >        >;
-          <div className="inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop - blur - sm">;
-            <div className="flex items - center space - x-2">;
-              <Star className="w - 5 h - 5 text - yellow - 400" />;
-              <span className="text - white font - semibold">Ready to transform your business?</span>;
+          <div className="inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop-blur-sm">;
+            <div className="flex items-center space-x-2">;
+              <Star className="w - 5 h - 5 text-yellow-400" />;
+              <span className="text-white font-semibold">Ready to transform your business?</span>;
             </div>;
             <Link;
               href="/contact";
-              className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border - purple - 300";
+              className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border-purple-300";
             >;
               Get Started;
             </Link>;
@@ -947,12 +957,12 @@ import { motion } from 'framer-motion';
         <motion.div;
           animate={{ coordinate_y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w - 6 h - 10 border - 2 border - cyan - 400 / 50 rounded - full flex justify - center";
+          className="w - 6 h - 10 border - 2 border - cyan - 400 / 50 rounded-full flex justify-center";
         >;
           <motion.div;
             animate={{ coordinate_y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
+            className="w - 1 h - 3 bg - cyan - 400 rounded-full mt-2";
           />;
         </motion.div>;
       </motion.div>;

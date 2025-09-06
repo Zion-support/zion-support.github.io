@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Label } from '@/components/ui/label',;
+<<<<<<< HEAD
 import { Textarea } from '@/components/ui/textarea',;
 =======
 try {
@@ -39,6 +43,9 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
+=======
+import { Textarea } from '@/components/ui/textarea',;import {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Dialog,;
   DialogContent,;
   DialogDescription,;
@@ -112,11 +119,15 @@ export default function GuestCheckoutModal(): any ({;
             Enter your details to complete your purchase as a guest.
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {!isProdDomain() && (
           <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
+<<<<<<< HEAD
         )}
 <<<<<<< HEAD
 =======
@@ -126,6 +137,9 @@ export default function GuestCheckoutModal(): any ({;
 
             <Label
               htmlFor='guest-email'
+=======
+        )}              htmlFor='guest-email'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className='text-white flex items-center gap-2'>;
               <Mail className='h-4 w-4 text-zion-cyan' />;
               Email Address;
@@ -133,14 +147,15 @@ export default function GuestCheckoutModal(): any ({;
             <Input
               id='guest-email'
               type='email'
-
               value={email || ''}
-              onChange={e => setEmail(e && e.target.value || '')}
-              placeholder='your && your.email@example && example.com'              required;
-              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
-            />;
-          </div>;
+              onChange={(e) => setEmail(e.target.value || '')}
+              placeholder="your.email@example.com"
+              required
+              className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light"
+            />
+          </div>
 
+<<<<<<< HEAD
           <div className='space-y-2'>;
 
             <Label
@@ -223,11 +238,14 @@ export default function GuestCheckoutModal(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <form onSubmit={handleSubmit} className="space-y-4">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="space-y-2">
-            <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
-              <Mail className="h-4 w-4 text-zion-cyan" />
-              Email Address
+            <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-zion-cyan" />
+              Shipping Address
             </Label>
+<<<<<<< HEAD
             <Input
 <<<<<<< HEAD
               id="guest-email"
@@ -276,10 +294,36 @@ export default function GuestCheckoutModal(): any ({;
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
 =======
+=======
+            />
+          </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+            <p className="text-yellow-400 text-sm">
+              💡 Creating an account allows you to track your order and checkout faster next time.
+            </p>
+          </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {isSubmitting ? (
+=======
+          <DialogFooter className="space-x-2">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => onOpenChange(false)}
+              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10"
+            >
+              Cancel
+            </Button>
+            <Button
+              type="submit"
+              disabled={isSubmitting || !email || !address}
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
+            >              {isSubmitting ? (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 'Processing...'
               ) : (
                 <>
@@ -308,38 +352,13 @@ export default function GuestCheckoutModal(): any ({;
                 </>;
               )}
 
-};
-};
-
-
-          <DialogFooter className='space - x-2'>;
-            <Button;
-              type='button';
-              variant='outline';
-              on_click={() => onOpenChange (false)}
-              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
-              Cancel;
-            </Button>;
-            <Button;
-              type='submit';
-              disabled={is_submitting || !email || !address}
-              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
-              {is_submitting ? (
-                'Processing...') : (
-                <>;
-                  <CreditCard className='h - 4 w - 4 mr - 2' />;
-                  Continue to Payment;
-                </>)}
-            </Button>;
+}
+};            </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-
-}
-
-
-    </Dialog>);
-}
+    </Dialog>;
+  );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 =======
 import React, { useState } from "react",;
@@ -6,32 +7,44 @@ import { Button } from "@/components/ui/button",;
 import { ChatBotPanel } from "./ChatBotPanel",;
 import { MessageSquare, Info, X } from "lucide-react",;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { useRouter } from "next/router",;
 import { Button } from "@/components/ui/button",;
 import { ChatBotPanel } from "./ChatBotPanel",;
 import { MessageSquare, Info, X } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn } from "@/lib/utils",;
 import { useTheme } from "@/hooks/useTheme",;
 ;
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false),;
   const { theme } = useTheme(),;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 =======
   const router = useRouter(),;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+  const router = useRouter(),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ;
   return (;
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -43,33 +56,61 @@ export function SupportWidget() {;
       ;
       {/* Support panel */}
       {isOpen && (;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 
+=======
+        <div ;
+          className={cn(;
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",;
+            theme === "dark" ;
+              ? "bg-zion-blue-dark border border-zion-blue-light" ;
+              :"bg-white border border-gray-200";
+          )}
+          style={{ height:"600px", maxHeight:"80vh" }}
+        >;
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
+            <div className="flex items-center">;
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" :"text-gray-800")}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Zion Support;
               </h3>;
             </div>;
             <div className="flex items-center gap-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Button;
                 variant="ghost";
                 size="icon";
                 className="h-8 w-8 rounded-full";
                 onClick={() => router.push('/help')}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
               </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Button;
                 variant="ghost";
                 size="icon";
                 className="h-8 w-8 rounded-full";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
               >;
@@ -77,18 +118,25 @@ export function SupportWidget() {;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 
 =======
           ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+          ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <ChatBotPanel />;
         </div>;
       )}
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  export function SupportWidget () {;
   const [isOpen, setIsOpen] = useState (false);
@@ -112,4 +160,7 @@ const router = useRouter ();
 }</>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/SupportWidget.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

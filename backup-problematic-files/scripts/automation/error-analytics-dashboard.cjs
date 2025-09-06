@@ -654,7 +654,11 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       })}
     return trends}
   analyzeFixSuccessRates(reports) {
+<<<<<<< HEAD
     const fixReports = reports.filter(report =>
+=======
+    const fixReports = reports.filter(report => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
     const successRates = [];
@@ -913,7 +917,11 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       const fileDistribution = this.analyzeFileDistribution(reports);
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
+<<<<<<< HEAD
       const avgSuccessRate = fixSuccessRates.length > 0
+=======
+      const avgSuccessRate = fixSuccessRates.length > 0 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -977,3 +985,7 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = ErrorAnalyticsDashboard
+<<<<<<< HEAD
+=======
+module.exports = ErrorAnalyticsDashboard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -39,5 +39,10 @@ console.log(' Starting Smart Deployment Automation...')
     "logsDirectory"
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.log('� Application should be running on "http")
+  console.log('� Application should be running on "http")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

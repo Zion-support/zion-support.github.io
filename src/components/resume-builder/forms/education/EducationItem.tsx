@@ -23,6 +23,7 @@ import { EducationItemProps } from './types';
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Card className='bg-muted/40'>
       <CardContent className='pt-6'>
         <div className='flex justify-between'>
@@ -56,13 +57,54 @@ import { EducationItemProps } from './types';
             )}
           </div>
           <div className='flex gap-2'>
+=======
+    <Card className='bg-muted/40'>;
+      <CardContent className='pt-6'>;
+        <div className='flex justify-between'>;
+          <div>;
+            <h4 className='font-medium'>{education && education.degree}</h4>;
+            <p className='text-sm text-muted-foreground'>;
+              {education && education.institution}
+            </p>;
+            {education && education.field_of_study && (;
+              <p className='text-sm text-muted-foreground'>;
+                {education && education.field_of_study}
+              </p>;
+            )}
+            <p className='text-xs text-muted-foreground mt-1'>;
+              {typeof education && education.start_date === 'string';
+                ? education && education.start_date;
+                : format(education && education.start_date, 'MMM yyyy')}{' '}
+              -{' '}
+              {education && education.is_current;
+                ? 'Present';
+                : education && education.end_date;
+                  ? typeof education && education.end_date === 'string';
+                    ? education && education.end_date;
+                    : format(education && education.end_date, 'MMM yyyy');
+                  : ''}
+            </p>;
+            {education && education.location && (;
+              <p className='text-xs text-muted-foreground'>;
+                {education && education.location}
+              </p>;
+            )}
+          </div>;
+          <div className='flex gap-2'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Button
               variant='ghost'
               size='icon'
               onClick={() => onEdit(education)}
+<<<<<<< HEAD
               aria-label='Edit education'            >
               <Edit className='h-4 w-4' />
             </Button>
+=======
+              aria-label='Edit education'            >;
+              <Edit className='h-4 w-4' />;
+            </Button>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Button
               variant='ghost'
               size='icon'
@@ -102,6 +144,7 @@ import { EducationItemProps } from './types';
   );
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { format } from 'date-fns',
@@ -162,6 +205,15 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 <<<<<<< HEAD
 =======
+=======
+
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { format } from 'date - fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -235,7 +287,13 @@ function EducationItem() {
     </Card>);
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -19,6 +19,7 @@ export interface ProfileSkill {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   endorsements?: number;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -30,10 +31,12 @@ export interface ProfileProject {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
-  title: string;
+  title: string,
   description: string;
   image_url?: string;
   tags?: string[];
@@ -46,6 +49,7 @@ export interface ProfileProject {
 
 }
 export interface ProfileExperience {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -79,10 +83,13 @@ export interface ProfileExperience {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   role: string;
-  company: string;
+  company: string,
   description: string;
+<<<<<<< HEAD
   startDate: string;
   endDate?: string;
   current?: boolean;
@@ -101,10 +108,13 @@ export interface Availability {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -131,6 +141,8 @@ export interface Availability {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export interface ProfileData {
   id: string;
@@ -160,9 +172,6 @@ export interface ProfileData {;
   name: string;
   title: string;
   avatarUrl: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   coverImageUrl?: string;
   bio: string;
   location?: string;
@@ -175,6 +184,7 @@ export interface ProfileData {;
   experience: ProfileExperience[];
   availability: Availability;
   hourlyRate?: number;
+<<<<<<< HEAD
   contactEmail?: string;
 }
 <<<<<<< HEAD
@@ -188,19 +198,13 @@ export interface ProfileData {;
 =======
   hourlyRate?: number
 
-  contactEmail?: string
-}
-export interface ProfileSkill {;
-  name: string,;
-  level: number, // 1-5;
-  endorsements?: number;
-}
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  contactEmail?: string
+};
 export interface ProfileProject {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
@@ -211,7 +215,7 @@ export interface ProfileProject {;
 export interface ProfileExperience {;
   id: string,;
   role: string,;
-  company: string,;
+  company: string,,
   description: string,;
   startDate: string,;
   endDate?: string,;
@@ -246,8 +250,11 @@ export interface ProfileData {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
 =======
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/auto-resolve-merge-prs.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -122,3 +125,7 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
+<<<<<<< HEAD
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

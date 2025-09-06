@@ -29,5 +29,10 @@ import { execSync, spawn } from;
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+        execSync(`"npm": install ${packageName}`, { "stdio"`})
+        execSync(`"npm": install ${packageName}`, { "stdio"`})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

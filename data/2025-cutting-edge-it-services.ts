@@ -407,6 +407,7 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -415,6 +416,8 @@ export const cuttingEdgeITServices2025 = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -837,6 +840,7 @@ export const cuttingEdgeITServices2025 = [
     ]
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
@@ -913,26 +917,28 @@ export const cuttingEdgeITServices2025 = [
 
 
 <<<<<<< HEAD
+=======
+export const cuttingEdgeITServices2025 = [
+  {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
-
-=======
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
-    name: 'Quantum Cloud Infrastructure Platform',;
-    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',;
+    name: 'Quantum Cloud Infrastructure Platform',,
+  description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',;
     features: [;
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',;
       'Quantum-enhanced data processingAutomated infrastructure management';
@@ -972,8 +978,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'edge-computing-orchestration-platform',;
-    name: 'Edge Computing Orchestration Platform',;
-    description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.',;
+    name: 'Edge Computing Orchestration Platform',,
+  description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.',;
     features: [;
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',;
       'Edge-to-cloud synchronizationPerformance optimization algorithms';
@@ -1013,8 +1019,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'zero-trust-security-platform',;
-    name: 'Zero Trust Security Platform',;
-    description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.',;
+    name: 'Zero Trust Security Platform',,
+  description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.',;
     features: [;
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',;
       'Automated security responsesComprehensive audit logging';
@@ -1054,8 +1060,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'blockchain-enterprise-platform',;
-    name: 'Blockchain Enterprise Platform',;
-    description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.',;
+    name: 'Blockchain Enterprise Platform',,
+  description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.',;
     features: [;
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',;
       'Multi-party workflow automationComprehensive reporting and analytics';
@@ -1095,8 +1101,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'ai-powered-devops-platform',;
-    name: 'AI-Powered DevOps Platform',;
-    description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.',;
+    name: 'AI-Powered DevOps Platform',,
+  description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.',;
     features: [;
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',;
       'Automated security scanningComprehensive analytics and reporting';
@@ -1133,7 +1139,6 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-<<<<<<< HEAD
   }
 ];
   },
@@ -1143,12 +1148,8 @@ export const cuttingEdgeITServices2025 = [;
   }
 ];
 ;
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1161,3 +1162,5 @@ export const cuttingEdgeITServices2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

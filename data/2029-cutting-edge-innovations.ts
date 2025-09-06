@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   customers: number;
@@ -106,6 +107,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       'Autonomous decision - making AI',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Corporate strategy development',
       'Resource allocation optimization',
       'Financial management automation',
@@ -117,6 +120,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       'Performance optimization',
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     icon: '🏢',
@@ -172,6 +176,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -179,6 +185,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'Comprehensive autonomous AI platform with corporate management capabilities, decision - making algorithms, and operational automation. Includes real - time monitoring and human oversight options.',
@@ -391,6 +398,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
     launchDate: '2029-03-01',
     customers: 8,
@@ -415,6 +424,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     customers: 8;
     rating: 4.8
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -489,6 +499,9 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string, name: string,
+=======
+    reviews: 23  id: string, name: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -507,8 +520,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
@@ -546,13 +562,15 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+;
     realImplementation: true
     implementationDetails:
       'Comprehensive autonomous AI platform with corporate management capabilities, decision-making algorithms, and operational automation. Includes real-time monitoring and human oversight options.'
@@ -739,6 +757,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     variant: 'quantum-futuristic'
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
       mobile: '+1 302 464 0950'
@@ -756,6 +775,9 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      mobile: '+1 302 464 0950';
+=======
+}];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -765,13 +787,13 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     launchDate: '2029-03-01';
     customers: 8;
     rating: 4.8
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
     reviews: 23
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 ];
@@ -779,19 +801,16 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { ServiceVariant } from '../types/service-variants',;
+];import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdge2029Service {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -834,8 +853,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     name: 'AI Consciousness Simulation Platform',;
     tagline: 'Simulate human consciousness in AI systems with quantum neural networks',;
     price: '$12,999',;
-    period: '/month',;
-    description: 'Revolutionary platform that simulates human consciousness patterns in AI systems using quantum neural networks and advanced cognitive modeling. Perfect for research institutions, AI development companies, and consciousness studies.',;
+    period: '/month',,
+  description: 'Revolutionary platform that simulates human consciousness patterns in AI systems using quantum neural networks and advanced cognitive modeling. Perfect for research institutions, AI development companies, and consciousness studies.',;
     features: [;
       'Quantum neural network architectureConsciousness pattern simulationEmotional intelligence modelingSelf-awareness algorithmsCognitive bias simulationMemory consolidation patternsDream state simulationPersonality development AI',;
       'Ethical decision-making frameworksConsciousness evolution tracking';
@@ -877,8 +896,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     name: 'Autonomous AI Corporation Platform',;
     tagline: 'AI systems that run entire corporations autonomously',;
     price: '$45,999',;
-    period: '/month',;
-    description: 'Complete autonomous AI corporation management platform that can run entire businesses without human intervention. Includes decision-making, resource allocation, strategy development, and operational management.',;
+    period: '/month',,
+  description: 'Complete autonomous AI corporation management platform that can run entire businesses without human intervention. Includes decision-making, resource allocation, strategy development, and operational management.',;
     features: [;
       'Autonomous decision-making AICorporate strategy developmentResource allocation optimizationFinancial management automationHR and recruitment AIMarket analysis and forecastingRisk assessment and mitigationCompliance automation',;
       'Stakeholder communicationPerformance optimization';
@@ -920,8 +939,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     name: 'AI Reality Augmentation Platform',;
     tagline: 'Real-time AI reality enhancement and perception modification',;
     price: '$18,999',;
-    period: '/month',;
-    description: 'Advanced platform that uses AI to augment and enhance human perception of reality in real-time. Combines computer vision, neural interfaces, and augmented reality for enhanced human experience.',;
+    period: '/month',,
+  description: 'Advanced platform that uses AI to augment and enhance human perception of reality in real-time. Combines computer vision, neural interfaces, and augmented reality for enhanced human experience.',;
     features: [;
       'Real-time reality enhancementPerception modification AINeural interface integrationAugmented reality overlaysEmotional state enhancementMemory augmentationSensory enhancementCognitive performance boost',;
       'Reality filtering systemsExperience personalization';
@@ -964,8 +983,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     name: 'Quantum Brain-Computer Interface',;
     tagline: 'Direct quantum communication with the human brain',;
     price: '$25,999',;
-    period: '/month',;
-    description: 'Revolutionary quantum brain-computer interface that enables direct communication between quantum computers and human neural networks. Perfect for advanced research, medical applications, and cognitive enhancement.',;
+    period: '/month',,
+  description: 'Revolutionary quantum brain-computer interface that enables direct communication between quantum computers and human neural networks. Perfect for advanced research, medical applications, and cognitive enhancement.',;
     features: [;
       'Quantum neural communicationBrain signal processingCognitive enhancementMemory transfer capabilitiesThought-to-text conversionEmotional state monitoringNeural pattern analysisBrain-computer synchronization',;
       'Quantum encryption securityReal-time neural feedback';
@@ -1007,8 +1026,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     name: 'Quantum Time Manipulation Platform',;
     tagline: 'Manipulate time perception and temporal experiences',;
     price: '$35,999',;
-    period: '/month',;
-    description: 'Groundbreaking platform that uses quantum mechanics to manipulate human perception of time. Enables time dilation, temporal compression, and enhanced temporal awareness for research and applications.',;
+    period: '/month',,
+  description: 'Groundbreaking platform that uses quantum mechanics to manipulate human perception of time. Enables time dilation, temporal compression, and enhanced temporal awareness for research and applications.',;
     features: [;
       'Time perception manipulationTemporal compressionTime dilation effectsTemporal awareness enhancementChronological analysisTemporal pattern recognitionTime-based learning accelerationTemporal memory enhancement',;
       'Quantum temporal effectsTemporal synchronization';
@@ -1043,6 +1062,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     launchDate: '2029-03-01',;
     customers: 8,;
     rating: 4.8;
+<<<<<<< HEAD
     reviews: 23;
 <<<<<<< HEAD
 =======
@@ -1056,3 +1076,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    reviews: 23;  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

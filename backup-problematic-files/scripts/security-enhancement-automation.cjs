@@ -39,5 +39,10 @@ console.log('� Starting Security Enhancement Automation...')
     "recommendations"
     "nextSteps"
   console.log('� Security improvements "applied")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(' Security enhancement automation "failed")
+  console.error(' Security enhancement automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

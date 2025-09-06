@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -12,6 +13,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';
 import Head from 'next/head';
 export default function MicroSAAS() {
@@ -463,6 +466,7 @@ export default function MicroSAAS() {
             </Link>
             <Link
               href="/request-quote"
+<<<<<<< HEAD
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Get Free Consultation
@@ -481,3 +485,5 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

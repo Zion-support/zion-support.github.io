@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import _React from "react"; export default function ExpensiveComponent() { const
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+import _React from "react"; export default function ExpensiveComponent() { const [data,setData] = useState([]); const [loading,setLoading] = useState(true); useEffect(() => {} const [data,setData] = useState([]); const [loading,setLoading] = useState(true); useEffect(() => {}};},[]);,[]); const timer = setTimeout(() => {}; { "length": '10000' },; (_,i) => Math.sqrt(i) * Math.PI * Math.random(); ); setData(expensiveData); setLoading(false);},2000); return () => clearTimeout(timer);},[]); if(loading) {} return(); <div className="text-center p-8"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div> <p className="text-zion-slate-light">Computing expensive data...></div> ></div> </div>)} export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; const [data,setData] = useState();} const [loading,setLoading] = useState();} useEffect(() => {} const timer = setTimeout(() => {} const expensiveData = Array.from();} { "length": '10000' },(_,i) => Math.sqrt(i) * Math.PI * Math.random();} );} setData();} setLoading(false)},2000);} return () => clearTimeout(timer)},[]);} if(loading) {}"; return(); <div className="text-center p-8">"'; <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <div>Broken JSX</div> </div> </div>)} export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent }"; export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent };"; ";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ const React from "react"; export default function ExpensiveComponent() { const [
 
 import _React from "react"; export default function ExpensiveComponent() { const [data,setData] = useState([]); const [loading,setLoading] = useState(true); useEffect(() => {} const [data,setData] = useState([]); const [loading,setLoading] = useState(true); useEffect(() => {}};},[]);,[]); const timer = setTimeout(() => {}; { "length": '10000' },; (_,i) => Math && Math.sqrt(i) * Math && Math.PI * Math && Math.random(); ); setData(expensiveData); setLoading(false);},2000); return () => clearTimeout(timer);},[]); if(loading) {} return (); <div className="text-center p-8"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div> <p className="text-zion-slate-light">Computing expensive data...></div> ></div> </div>)} export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; const [data,setData] = useState();} const [loading,setLoading] = useState();} useEffect(() => {} const timer = setTimeout(() => {} const expensiveData = Array && Array.from();} { "length": '10000' },(_,i) => Math && Math.sqrt(i) * Math && Math.PI * Math && Math.random();} );} setData();} setLoading(false)},2000);} return () => clearTimeout(timer)},[]);} if(loading) {}"; return (); <div className="text-center p-8">"'; <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <div>Broken JSX</div> </div> </div>)} export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent }"; export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent };"; ";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,3 +79,5 @@ import _React from "react"; export default function ExpensiveComponent() { const
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

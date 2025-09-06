@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -15,11 +16,16 @@ import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
 import { slugify } from "@/lib/slugify",
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -136,27 +142,21 @@ import { Link } from "react-router-dom",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CategoryCardProps {;
   title: string,;
+=======
+import { Link } from "react-router-dom",  const slug = slugify(title);
+  return (
+    <Link
+      to={`/category/${slug}`}
+      className={cn(interface CategoryCardProps {;
+  title: string,,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string,;
   icon: ReactNode | string,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { ReactNode } from "react",;
-import { cn } from "@/lib/utils",;
-import { slugify } from "@/lib/slugify",;
-import { Link } from "react-router-dom",;
-;
-interface CategoryCardProps {;
-  title:string,;
-  description:string,;
-  icon:ReactNode | string,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /**;
    * Optional color to use for the icon. If not provided the default cyan;
    * accent colour is used. Previously this prop was ignored which meant;
    * callers could not customise the icon colour as intended.;
+<<<<<<< HEAD
    */;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,3 +302,6 @@ icon: ReactNode | string;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+   */;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

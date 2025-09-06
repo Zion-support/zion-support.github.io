@@ -42,7 +42,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running unit tests...');
     try {}
       execSync('npm test -- --coverage --watchAll=false', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 120000;
       }
@@ -60,7 +64,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running TypeScript type checking...');
     try {}
       execSync('npx tsc --noEmit', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -78,7 +86,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running ESLint...');
     try {}
       execSync('npx eslint . --max-warnings 0', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -96,7 +108,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running build test...');
     try {}
       execSync('npm run build', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -117,7 +133,11 @@ class ComprehensiveTestAutomation {}
     try {}
       // Check bundle size;
       const buildOutput = execSync('npm run build', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
@@ -214,7 +234,11 @@ class ComprehensiveTestAutomation {}
       // Run npm audit;
       try {}
         execSync('npm audit --audit-level=moderate', { })
+<<<<<<< HEAD
           "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           "stdio": 'pipe',
           "timeout": 60000;
         }
@@ -244,11 +268,19 @@ class ComprehensiveTestAutomation {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
 
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
 
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -301,5 +333,10 @@ if ( {})
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComprehensiveTestAutomation;
+module.exports = ComprehensiveTestAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

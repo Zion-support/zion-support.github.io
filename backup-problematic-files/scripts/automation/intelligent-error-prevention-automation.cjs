@@ -52,5 +52,10 @@ const { execSync, spawn } = require("child_process")
     this.log("Continuous mode started. Press Ctrl+C to stop.", "info")
   if (args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+    automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

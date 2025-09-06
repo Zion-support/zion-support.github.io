@@ -116,6 +116,7 @@ export interface SearchSuggestion {
   type: "product" | "category" | "tag" | "skill" | "person" | "recent";
   iconUrl?: string;
 }
+<<<<<<< HEAD
 export interface SearchHighlight {
   before: string;
   match: string;
@@ -130,6 +131,15 @@ export interface FilterOptions {
 <<<<<<< HEAD
   ratingOptions: number[];
 =======
+=======
+;
+export interface SearchHighlight {;
+  before: string,;
+  match: string,;
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+  icon_url?: string;
+}  }[];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   locations: {
     label: string;
     value: string;
@@ -140,16 +150,12 @@ export interface FilterOptions {
   }[];
   ratingOptions: number[];
 }
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 export interface SearchSuggestion {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -212,9 +218,14 @@ export interface FilterOptions {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export interface SearchSuggestion {
   text: string;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

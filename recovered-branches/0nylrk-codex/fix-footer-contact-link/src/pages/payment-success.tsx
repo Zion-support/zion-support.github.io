@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -77,11 +78,36 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
+=======
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function PaymentSuccess() {
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
+=======
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
+  const navigate = useNavigate();
+
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
+import { CheckCircle2 } from 'lucide-react',
+export default function PaymentSuccess() {
+  const navigate = useNavigate(),  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
@@ -145,6 +171,7 @@ export default function PaymentSuccess() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -165,16 +192,23 @@ import {CheckCircle2} from 'lucide-react';
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
 import { CheckCircle2 } from 'lucide-react',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -198,11 +232,14 @@ export default function PaymentSuccess() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;
           <CheckCircle2 className="h-6 w-6 text-green-600" />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -231,11 +268,14 @@ export default function PaymentSuccess() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             onClick={() => navigate('/dashboard')}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
             Go to Dashboard;
           </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -293,11 +333,14 @@ function PaymentSuccess() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >;
             Return to Home;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -316,13 +359,14 @@ function PaymentSuccess() {
 =======
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+;
     </div>);
+}    </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </div>);
 }
@@ -338,11 +382,12 @@ function PaymentSuccess() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,8 @@ import { Download } from "lucide-react";
 import { Resume } from "@/types/resume";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -35,6 +38,7 @@ export function ResumePreviewCard({
 }: ResumePreviewCardProps) {
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
+<<<<<<< HEAD
 import { Resume } from "@/types/resume",
 <<<<<<< HEAD
 =======
@@ -461,3 +465,10 @@ isLoading: boolean
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { Resume } from "@/types/resume",  return (  return (
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
+      <CardContent className="p-4">;
+        <div className="flex justify-between items-start mb-2">;
+          <div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

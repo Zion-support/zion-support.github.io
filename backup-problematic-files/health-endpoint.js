@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/health-endpoint.js
 <<<<<<< HEAD:backup-problematic-files/health-endpoint.js
 <<<<<<< HEAD:backup-problematic-files/health-endpoint.js
 =======
@@ -47,6 +49,10 @@ const http = require( http'); const port = process.env.PORT |3000; const server 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:health-endpoint.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const http = require(
   http');
 const port = process.env.PORT |3000;
@@ -76,6 +82,7 @@ const server = http && http.createServer((req, res) => {
   Content-Type': 'text/"plain":  })';
     res && res.end(
   '"Not": Found')}'})
+<<<<<<< HEAD
 =======
 
 
@@ -86,6 +93,7 @@ const server = http && http.createServer((req, res) => {
 =======
 server.listen(port, () => {
   console.log(`"Health": endpoint server running on port ${port}`)})
+<<<<<<<< HEAD:backup-problematic-files/health-endpoint.js
 <<<<<<< HEAD:backup-problematic-files/health-endpoint.js
 const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
 const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
@@ -140,3 +148,11 @@ const http = require( http'); const port = process.env.PORT || 3000; const serve
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:health-endpoint.js
+========
+const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
+const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
+const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:health-endpoint.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

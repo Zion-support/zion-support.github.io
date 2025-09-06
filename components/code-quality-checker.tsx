@@ -44,7 +44,6 @@ export default function CodeQualityCheckerPage() {
 export default function CodeQualityCheckerPage() {;
 } from 'lucide-react';
 
-
 export default function CodeQualityCheckerPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -282,6 +281,14 @@ export default function CodeQualityCheckerPage() {;
           'Add proper error handling for better robustness'
           'Consider adding JSDoc comments for better documentation'
         ]
+<<<<<<< HEAD
+=======
+      });
+      setIsAnalyzing(false);
+    }, 3000)
+};      setIsAnalyzing(false)
+    }, 3000)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
 =======
@@ -327,9 +334,10 @@ export default function CodeQualityCheckerPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       setIsAnalyzing(false);
-    }, 3000);  };      setIsAnalyzing(false);
-    }, 3000);
-  };
+    }, 3000)
+};      setIsAnalyzing(false);
+    }, 3000)
+};
     <>;
       <Head>;
         <title>;
@@ -644,10 +652,6 @@ export default function CodeQualityCheckerPage() {;
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
-
-
       {/* Supported Languages Section */}
 <<<<<<< HEAD
       <section className='section-padding bg-gradient-cursor'>
@@ -658,6 +662,7 @@ export default function CodeQualityCheckerPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -689,6 +694,8 @@ export default function CodeQualityCheckerPage() {;
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -723,11 +730,11 @@ export default function CodeQualityCheckerPage() {;
                     </div>;
                     <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
                   </div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - 2xl font - bold mb - 4 text - white">;
+                  <div className="flex-1">;
+                    <h3 className="text - 2xl font - bold mb-4 text-white">;
                       {feature.title}
                     </h3>;
-                    <p className="text - gray - 400 leading - relaxed">;
+                    <p className="text - gray-400 leading-relaxed">;
                       {feature.description}
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -858,25 +865,25 @@ export default function CodeQualityCheckerPage() {;
                     >;
                       <CheckCircle className='w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0' />                      {feature}              Multi - Language Support;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
               We support a wide range of programming languages with language - specific analysis rules and best practices.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6">;
             {supported_languages.map ((language, index) => (
               <Card;
                 key={index}
-                className="card - hover border - gradient - teal";
+                className="card - hover border-gradient-teal";
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
-                <div className="text - center mb - 4">;
-                  <div className="text - 4xl mb - 3">{language.icon}</div>;
-                  <h3 className="text - xl font - bold text - white mb - 3">{language.name}</h3>;
+                <div className="text-center mb-4">;
+                  <div className="text-4xl mb-3">{language.icon}</div>;
+                  <h3 className="text - xl font - bold text-white mb-3">{language.name}</h3>;
                 </div>;
-                <ul className="space - y-2">;
+                <ul className="space-y-2">;
                   {language.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300 text - sm">;
-                      <CheckCircle className="w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0" />;
+                    <li key={feature_index} className="flex items - center text - gray-300 text-sm">;
+                      <CheckCircle className="w - 4 h - 4 text - teal - 400 mr - 3 flex-shrink-0" />;
                       {feature}
                     </li>))}
                 </ul>;
@@ -960,6 +967,7 @@ export default function CodeQualityCheckerPage() {;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   ))}
@@ -969,6 +977,8 @@ export default function CodeQualityCheckerPage() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1092,6 +1102,7 @@ export default function CodeQualityCheckerPage() {;
       )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1102,6 +1113,8 @@ export default function CodeQualityCheckerPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Simple Pricing
       {/* Pricing Section */}
             </h2>
@@ -1137,13 +1150,13 @@ export default function CodeQualityCheckerPage() {;
                 <div className='w - 32 h - 32 mx - auto mb - 6'>;
                   <svg;
                     className='w - full h - full transform -rotate - 90';
-                    view_box='0 0 36 36';
+                    viewBox='0 0 36 36';
                   >;
                     <path;
                       d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831';
                       fill='none';
                       stroke='current_color';
-                      stroke_width='2';
+                      strokeWidth='2';
                       stroke_dasharray={`${(analysis_results.quality_score / 100) * 100}, 100`}
                       className='text - teal - 500';
                     />;
@@ -1171,42 +1184,42 @@ export default function CodeQualityCheckerPage() {;
                         </span>;
                         <div className='text - xs text - gray - 500 mt - 1'>                          Line {issue.line} • Severity: {issue.severity}                Code Quality Analysis Results;
               </h2>;
-              <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.;
               </p>;
             </div>;
-            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8">;
+            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8 mb-8">;
               {/* Quality Score */}
-              <Card className="border - gradient - teal text - center">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Overall Quality Score</h3>;
-                <div className="text - 6xl font - bold text - teal - 400 mb - 4">{analysis_results.quality_score}/100</div>;
-                <div className="w - 32 h - 32 mx - auto mb - 6">;
-                  <svg className="w - full h - full transform -rotate - 90" view_box="0 0 36 36">;
+              <Card className="border - gradient-teal text-center">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Overall Quality Score</h3>;
+                <div className="text - 6xl font - bold text - teal-400 mb-4">{analysis_results.quality_score}/100</div>;
+                <div className="w - 32 h - 32 mx-auto mb-6">;
+                  <svg className="w - full h-full transform -rotate-90" viewBox="0 0 36 36">;
                     <path;
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831";
                       fill="none";
                       stroke="current_color";
-                      stroke_width="2";
+                      strokeWidth="2";
                       stroke_dasharray={`${(analysis_results.quality_score / 100) * 100}, 100`}
-                      className="text - teal - 500";
+                      className="text-teal-500";
                     />;
                   </svg>;
                 </div>;
-                <p className="text - gray - 400">Good code quality with room for improvement</p>;
+                <p className="text-gray-400">Good code quality with room for improvement</p>;
               </Card>;
               {/* Issues Found */}
-              <Card className="border - gradient - teal">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Issues Found</h3>;
-                <div className="space - y-3">;
+              <Card className="border-gradient-teal">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Issues Found</h3>;
+                <div className="space-y-3">;
                   {analysis_results.issues.map ((issue, index) => (
-                    <div key={index} className="flex items - start space - x-3">;
+                    <div key={index} className="flex items-start space-x-3">;
                       {issue.type === 'error' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : (
-                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />)}
+                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex-shrink-0" />) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex-shrink-0" />) : (
+                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0" />)}
                       <div>;
-                        <span className="text - gray - 300 text - sm">{issue.message}</span>;
-                        <div className="text - xs text - gray - 500 mt - 1">;
+                        <span className="text - gray-300 text-sm">{issue.message}</span>;
+                        <div className="text - xs text - gray-500 mt-1">;
                           Line {issue.line} • Severity: {issue.severity}
                         </div>;
                       </div>;
@@ -1242,17 +1255,17 @@ export default function CodeQualityCheckerPage() {;
                     <span className='text - green - 400 font - bold'>;
                       {analysis_results.metrics.security_score}
                     </span>                  </div>                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Maintainability</span>;
-                    <span className="text - green - 400 font - bold">{analysis_results.metrics.maintainability}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Maintainability</span>;
+                    <span className="text - green-400 font-bold">{analysis_results.metrics.maintainability}</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Test Coverage</span>;
-                    <span className="text - blue - 400 font - bold">{analysis_results.metrics.test_coverage}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Test Coverage</span>;
+                    <span className="text - blue-400 font-bold">{analysis_results.metrics.test_coverage}</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Security Score</span>;
-                    <span className="text - green - 400 font - bold">{analysis_results.metrics.security_score}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Security Score</span>;
+                    <span className="text - green-400 font-bold">{analysis_results.metrics.security_score}</span>;
                   </div>;
                 </div>;
               </Card>;
@@ -1266,13 +1279,13 @@ export default function CodeQualityCheckerPage() {;
                 {analysis_results.recommendations.map ((rec, index) => (
                   <div key={index} className='flex items - start space - x-3'>;
                     <CheckCircle className='w - 5 h - 5 text - teal - 400 mt - 1 flex - shrink - 0' />;
-                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient - teal">;
-              <h3 className="text - 2xl font - bold mb - 6 text - white">Improvement Recommendations</h3>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">;
+              <h3 className="text - 2xl font - bold mb-6 text-white">Improvement Recommendations</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols-2 gap-4">;
                 {analysis_results.recommendations.map ((rec, index) => (
-                  <div key={index} className="flex items - start space - x-3">;
-                    <CheckCircle className="w - 5 h - 5 text - teal - 400 mt - 1 flex - shrink - 0" />;
-                    <span className="text - gray - 300">{rec}</span>))}
+                  <div key={index} className="flex items-start space-x-3">;
+                    <CheckCircle className="w - 5 h - 5 text - teal - 400 mt - 1 flex-shrink-0" />;
+                    <span className="text-gray-300">{rec}</span>))}
               </div>;
             </Card>;
           </div>;
@@ -1405,8 +1418,11 @@ export default function CodeQualityCheckerPage() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;

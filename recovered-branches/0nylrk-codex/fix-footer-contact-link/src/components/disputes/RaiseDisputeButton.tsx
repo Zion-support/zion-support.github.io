@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -45,6 +45,8 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Dialog;
@@ -55,6 +57,7 @@ import {
   DialogOverlay
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,26 +77,26 @@ interface RaiseDisputeButtonProps {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
 
-<<<<<<< HEAD
-  projectId: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
-<<<<<<< HEAD
-<<<<<<< HEAD
+  className?: string;
+}
+=======
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
 
-
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
 import { ShieldAlert } from "lucide-react",
 
 =======
@@ -149,12 +152,14 @@ export function RaiseDisputeButton({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   milestoneId, 
+=======
+import { ShieldAlert } from "lucide-react",  milestoneId, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   variant = "outline", 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   size,
   className
 }: RaiseDisputeButtonProps) {
-<<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const navigate = useNavigate(),
 <<<<<<< HEAD
@@ -170,16 +175,20 @@ export function RaiseDisputeButton({
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -334,22 +343,15 @@ export function RaiseDisputeButton({ ;
         className={className} 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onClick={() => setIsDialogOpen(true)}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
-      </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+      </Button>;      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
+<<<<<<< HEAD
             <DialogTitle>Raise a Dispute</DialogTitle>;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -444,6 +446,9 @@ function RaiseDisputeButton() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <DisputeForm;
+=======
+            <DialogTitle>Raise a Dispute</DialogTitle>;          <DisputeForm;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
@@ -453,6 +458,7 @@ function RaiseDisputeButton() {
       </Dialog>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -505,3 +511,5 @@ return (<> <Button variant= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

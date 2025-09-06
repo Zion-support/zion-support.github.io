@@ -49,8 +49,9 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               </div>
             )}
 
-            <CardContent className="p-4">
+<CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">
@@ -68,6 +69,8 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
@@ -104,6 +107,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               {project.tags && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
+<<<<<<< HEAD
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -111,6 +115,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+=======
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {project.description}
               </p>
 
@@ -139,6 +146,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
@@ -146,6 +154,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+  )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 =======
 

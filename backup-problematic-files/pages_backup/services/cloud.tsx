@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -13,26 +16,46 @@ export default function CloudServicesPage() {
 export default function CloudServicesPage() {;
   const cloudServices = [;
     {}
+<<<<<<< HEAD
       title: "Cloud Migration",";
       description: "Seamless migration of your infrastructure to the cloud",";
+=======
+      title: "Cloud Migration",",
+  description: "Seamless migration of your infrastructure to the cloud",";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Cloud,;
       features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]";
     },;
     {}
+<<<<<<< HEAD
       title: "Cloud Infrastructure",";
       description: "Scalable and secure cloud infrastructure setup",";
+=======
+      title: "Cloud Infrastructure",",
+  description: "Scalable and secure cloud infrastructure setup",";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Server,;
       features: ["Auto Scaling", "High Availability", "Disaster Recovery"]";
     },;
     {}
+<<<<<<< HEAD
       title: "Cloud Security",";
       description: "Comprehensive security solutions for cloud environments",";
+=======
+      title: "Cloud Security",",
+  description: "Comprehensive security solutions for cloud environments",";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Shield,;
       features: ["Identity Management", "Data Encryption", "Compliance"]";
     },;
     {}
+<<<<<<< HEAD
       title: "Cloud Optimization",";
       description: "Performance and cost optimization for cloud resources",";
+=======
+      title: "Cloud Optimization",",
+  description: "Performance and cost optimization for cloud resources",";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Zap,;
       features: ["Cost Analysis", "Performance Tuning", "Resource Management"]";
     }
@@ -43,6 +66,7 @@ export default function CloudServicesPage() {;
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 =======
 import * as React from 'react';
 import Head from 'next/head';
@@ -52,22 +76,33 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
 
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface CloudProps {
   className?: string;
 }
 
 export default function CloudServicesPage() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Cloud Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cloud services including migration, infrastructure, database management, and security solutions." />
       </Head>
 
+=======
+    <Layout
+      title="Cloud Solutions - Zion Tech Group"
+      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+    >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="min-h-screen bg-gray-50">
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -75,13 +110,24 @@ export default function CloudServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
+=======
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
+          <div className="container mx-auto px-4">";
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Cloud Solutions;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+<<<<<<< HEAD
                 Transform your business with our comprehensive cloud solutions.
+=======
+                Transform your business with our comprehensive cloud solutions. 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 From migration to optimization, we help you leverage the power of the cloud.,
               transition={{ duration: 0 && 0.8 }}
               className="text-center"">;
@@ -106,6 +152,7 @@ export default function CloudServicesPage() {
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
               className="text-center"
@@ -114,10 +161,21 @@ export default function CloudServicesPage() {
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your business with our comprehensive cloud solutions designed for scalability, 
                 reliability, and security.
+=======
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Cloud Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Transform your business with our comprehensive cloud solutions.
+                From migration to optimization, we help you leverage the power of the cloud.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </p>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
         {/* Services Section */}
         <section className="py-20">";
@@ -165,6 +223,9 @@ export default function CloudServicesPage() {
 =======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
 
+=======
+        {/* Services Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -198,6 +259,7 @@ export default function CloudServicesPage() {
                   </Link>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -235,3 +297,31 @@ export default function CloudServicesPage() {
     </>
   );
 }
+=======
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    <div className="text-blue-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
+          <div className="container mx-auto px-4 text-center">";
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
+            </h2>;
+            <p className="text-xl mb-8 max-w-2xl mx-auto">";
+              Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
+            </p>;
+            <motion&& motion.a
+              href="/contact""
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
+              whileHover={{ scale: 1 && 1.05 }}>,;
+              Get Started Today;
+              <ArrowRight className="w-5 h-5 ml-2" />";
+            </motion && motion.a>;
+          </div>;
+        </section>;
+      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

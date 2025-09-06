@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -23,10 +24,15 @@ export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export type FraudSeverity = "safe" | "suspicious" | "dangerous";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+=======
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface FraudFlag {
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 
 export interface FraudFlag {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -41,6 +47,9 @@ export interface FraudFlag {;
 export interface FraudFlag {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface FraudFlag {export interface FraudFlag {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   user_id: string;
   user_email?: string;
@@ -77,14 +86,8 @@ export interface FraudStats {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-
 export interface FraudStats {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   gpt_explanation?: string
   is_false_positive?: boolean
 }
@@ -92,6 +95,7 @@ export interface FraudStats {;
 export interface FraudStats {
 
 export interface FraudStats {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -103,10 +107,13 @@ export interface FraudStats {;
 export interface FraudStats {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -172,3 +179,5 @@ export interface FraudStats {;
   actioned_count: number;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -11,38 +11,49 @@ import { ScrollArea } from "@/components/ui/scroll-area",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
-import { useWallet } from "@/hooks/useWallet";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
+import {useWallet} from "@/hooks/useWallet";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {Badge} from "@/components/ui/badge";
+import {formatDistanceToNow} from "date-fns";
+export function TransactionHistory() {;
+  const { transactions, loading } = useWallet();
+import React from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ScrollArea } from "@/components/ui/scroll-area",import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {
   const { transactions, loading } = useWallet();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
   if (loading) {;
 
-=======
-
-
   if (loading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
   if (loading) {
     return (
+=======
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Transaction History</CardTitle>;
+          <CardDescription>Loading transactions...</CardDescription>;
+        </CardHeader>;
+      </Card>;
+    );
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -51,6 +62,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ScrollArea } from "@/components/ui/scroll-area",;
 import { Badge } from "@/components/ui/badge",;
 import { formatDistanceToNow } from "date-fns",;
+<<<<<<< HEAD
 ;
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet(),;
@@ -58,11 +70,18 @@ export function TransactionHistory() {;
   if (loading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function TransactionHistory() {;
+  const { transactions, loading } = useWallet(),;
+  if (loading) {;
+    return (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>;
         <CardHeader>;
           <CardTitle>Transaction History</CardTitle>;
           <CardDescription>Loading transactions...</CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
       </Card>;
 <<<<<<< HEAD
     );
@@ -106,6 +125,9 @@ export function TransactionHistory() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+      </Card>;    return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>
         <CardHeader>
           <CardTitle>Transaction History</CardTitle>
@@ -115,6 +137,7 @@ export function TransactionHistory() {
     );
   }
 
+<<<<<<< HEAD
   const earnTransactions = transactions.filter(
     (tx) => tx.transaction_type === "earn",
   );
@@ -416,73 +439,34 @@ if ( {) {
   const burn_transactions = transactions.filter (tx => tx.transaction_type === 'burn');
 ;
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card>;
       <CardHeader>;
-        <CardTitle > Transaction History</CardTitle>;
-        <CardDescription > Your recent ZION$ activity</CardDescription>;
+        <CardTitle>Transaction History</CardTitle>;
+        <CardDescription>Your recent ZION$ activity</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <Tabs default_value="earned">;
-          <TabsList className="w - full">;
-            <TabsTrigger value="earned" className="flex - 1">Earned</TabsTrigger>;
-            <TabsTrigger value="spent" className="flex - 1">Spent</TabsTrigger>;
+        <Tabs defaultValue="earned">;
+          <TabsList className="w-full">;
+            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>;
+            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>;
           </TabsList>;
           <TabsContent value="earned">;
-            <ScrollArea className="h - 64">;
-              {earn_transactions.length === 0 ? (
-                <p className="text - center py - 8 text - muted - foreground">No tokens earned yet</p>) : (
-                <div className="space - y-2 mt - 2">;
-                  {earn_transactions.map (tx => (
-                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
-                      <div>;
-                        <p className="font - medium">{tx.reason || "Token reward"}</p>;
-                        <p className="text - xs text - muted - foreground">;
-                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg - green - 100 text - green - 800">;
-                        +{tx.amount} ZION$;
-                      </Badge>;
-                    </div>))}
-                </div>)}
-            </ScrollArea>;
-          </TabsContent>;
-          <TabsContent value="spent">;
-            <ScrollArea className="h - 64">;
-              {burn_transactions.length === 0 ? (
-                <p className="text - center py - 8 text - muted - foreground">No tokens spent yet</p>) : (
-                <div className="space - y-2 mt - 2">;
-                  {burn_transactions.map (tx => (
-                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
-                      <div>;
-                        <p className="font - medium">{tx.reason || "Feature purchase"}</p>;
-                        <p className="text - xs text - muted - foreground">;
-                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg - red - 100 text - red - 800">;
-                        -{tx.amount} ZION$;
-                      </Badge>;
-                    </div>))}
-                </div>)}
-<<<<<<< HEAD
-
-=======
-              {burnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>;
-              ) :(;
+            <ScrollArea className="h-64">;
+              ) : (;
                 <div className="space-y-2 mt-2">;
-                  {burnTransactions.map(tx => (;
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
+                  {burnTransactions && burnTransactions.map(tx => (;
+                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;                      <div>;
                         <p className="font-medium">{tx.reason || "Feature purchase"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix:true })}
+                        <p className="text - xs text - muted-foreground">;
+                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
                         </p>;
                       </div>;
-                      <Badge variant="outline" className="bg-red-100 text-red-800">;
+                      <Badge variant="outline" className="bg - red - 100 text - red-800">;
                         -{tx.amount} ZION$;
                       </Badge>;
+<<<<<<< HEAD
                     </div>;                  ))}
                 </div>;
               )}
@@ -570,3 +554,7 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                    </div>))}
+                </div>)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

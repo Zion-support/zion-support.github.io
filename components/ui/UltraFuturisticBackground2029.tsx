@@ -90,9 +90,12 @@ interface EnergyField {;
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
 <<<<<<< HEAD
@@ -385,7 +388,7 @@ if ( {) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
-          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
+          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity-20 transform rotate-45";
           animate={{
           transition={{
             duration: 10
@@ -416,15 +419,16 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
-
           }}
-
 
             duration: 10,
             repeat: Infinity,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -443,7 +447,6 @@ if ( {) {
       {/* Gradient overlays for depth */}
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
-
 
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
@@ -465,7 +468,7 @@ if ( {) {
       {/* Content */}
       <div className='relative z - 10'>{children}</div>;
     </div>);      {/* Content */}
-      <div className="relative z - 10">;
+      <div className="relative z-10">;
         {children}
       </div>;
     </div>);

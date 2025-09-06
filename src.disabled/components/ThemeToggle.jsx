@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@ import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] =
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 "export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage && localStorage.getItem (\'theme\') const prefersDark = window && window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
+=======
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}"export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage && localStorage.getItem (\'theme\') const prefersDark = window && window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage && localStorage.getItem ("theme") const prefersDark = window && window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
 
 import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +56,5 @@ import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] =
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

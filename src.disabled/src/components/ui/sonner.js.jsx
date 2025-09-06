@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@ import _React from 'react'; import { Toaster as Sonner } from "sonner"; import {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from \'react\'; import { Toaster as Sonner } from \"sonner\"; import { useTheme } from \"../ThemeProvider\"; const Toaster = ({ ...props }) => {; const { theme = \"system\" } = useTheme(); return (<Sonnertheme={theme} className=\"toaster group\" toastOptions = { { \"classNames\": { toast: \"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\", \"description\": \"group-[.toast]:text-muted-foreground\", \"actionButton\": \"group-[.toast]:bg-primary group-[.toast]:text-primary-foreground\", \"cancelButton\": \"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground\",},}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
+=======
+import _React from 'react'; import { Toaster as Sonner } from "sonner"; import { useTheme } from "../ThemeProvider"; const Toaster = ({ ...props }) => {; const { theme = "system" } = useTheme(); return (<Sonner theme={theme} className="toaster group" toastOptions = {; {; "classNames": {; toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",; "description": "group-[.toast]:text-muted-foreground",; "actionButton": "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",; "cancelButton": "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",;},;}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };import React from \'react\'; import { Toaster as Sonner } from \"sonner\"; import { useTheme } from \"../ThemeProvider\"; const Toaster = ({ ...props }) => {; const { theme = \"system\" } = useTheme(); return (<Sonnertheme={theme} className=\"toaster group\" toastOptions = { { \"classNames\": { toast: \"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\", \"description\": \"group-[.toast]:text-muted-foreground\", \"actionButton\": \"group-[.toast]:bg-primary group-[.toast]:text-primary-foreground\", \"cancelButton\": \"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground\",},}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const React from "react"; import { Toaster as Sonner } from "sonner"; import { useTheme } from "./ThemeProvider"; const Toaster = ({ .props }) => {; const { theme = "system" } = useTheme(); return (<Sonnertheme={theme} className="toaster group" toastOptions = { { classNames: { toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg", description: "group-[.toast]:text-muted-foreground", actionButton: "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground", cancelButton: "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",},}} {.props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };'"'"
 
 import _React from 'react'; import { Toaster as Sonner } from "sonner"; import { useTheme } from "../ThemeProvider"; const Toaster = ({ ...props }) => {; const { theme = "system" } = useTheme(); return (<Sonnertheme={theme} className="toaster group" toastOptions = { { "classNames": { toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg", "description": "group-[.toast]:text-muted-foreground", "actionButton": "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground", "cancelButton": "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",},}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +56,5 @@ import _React from 'react'; import { Toaster as Sonner } from "sonner"; import {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

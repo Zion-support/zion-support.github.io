@@ -54,6 +54,7 @@ const stockStatus =;
 
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -70,6 +71,9 @@ const stockStatus =;
   const stockVariant =;
     product.stock === undefined;
 <<<<<<< HEAD
+=======
+    product.stock === undefined;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ? 'success';
       : product.stock <= 0;
       ? 'destructive';
@@ -102,16 +106,26 @@ const stockStatus =;
   const addToCart = () => {;
     if (!isAuthenticated) {;
       toast({;
+<<<<<<< HEAD
         title: 'Login Required',;
         description: 'Please log in to add items to your cart.',;
+=======
+        title: 'Login Required',,
+  description: 'Please log in to add items to your cart.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant: 'destructive'}),;
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),;
       return;
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),;
     toast({;
+<<<<<<< HEAD
       title: 'Added to cart',;
       description: `${productTitle} has been added to your cart`,;
+=======
+      title: 'Added to cart',,
+  description: `${productTitle} has been added to your cart`,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       action: {;
         label: 'View Cart',;
         onClick: () => router.push('/cart')}});
@@ -245,6 +259,7 @@ const stockStatus =;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
 =======
   const product_title = product.title;
   const image_url = Array.is_array (product.images) && product.images.length > 0 ? product.images[0] : null;
@@ -254,6 +269,8 @@ const stockStatus =;
   const image_sizes = is_mobile ? '100vw' : is_tablet ? '50vw' : '33vw');
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }
 ;

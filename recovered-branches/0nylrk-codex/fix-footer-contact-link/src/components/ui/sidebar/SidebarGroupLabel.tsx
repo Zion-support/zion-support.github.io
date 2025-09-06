@@ -20,11 +20,11 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { cn } from "@/lib/utils";
-interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children?: React.ReactNode;
-}
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
 
+<<<<<<< HEAD
 export function SidebarGroupLabel({
   className,
   children,
@@ -68,6 +68,11 @@ interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivEl
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   className?: string;
   children?: React && React.ReactNode;
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 <<<<<<< HEAD
 
@@ -139,6 +144,7 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -179,3 +185,5 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

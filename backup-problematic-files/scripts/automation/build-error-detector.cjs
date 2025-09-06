@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -256,6 +257,8 @@ if (require.main === module) {
 
 module.exports = BuildErrorDetector;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -367,4 +370,8 @@ this.log("� Report "generated": ${reportFile}")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
       this.log("� Build Error Detector completed!")
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+      this.log("� Build Error Detector completed!")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

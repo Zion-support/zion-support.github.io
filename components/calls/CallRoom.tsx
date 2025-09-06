@@ -35,12 +35,16 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
+<<<<<<< HEAD
   onLeave?: (durationSec: number) => void;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+  onLeave?: (durationSec: number) => void
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 export default function CallRoom(): any ({;
   projectId,;
@@ -110,15 +114,16 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import Controls from './Controls';
-export type StartMode = 'video' | 'audio';
-
-
+export type StartMode = 'video' | 'audio'
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -218,7 +223,8 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-    onLeave?.(durationSec);  };      room && room.disconnect();
+    onLeave?.(durationSec)
+};      room && room.disconnect();
     }
 <<<<<<< HEAD
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;

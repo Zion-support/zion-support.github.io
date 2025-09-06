@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -46,6 +46,8 @@ import { useState } from "react",
 import { Link } from "react-router-dom",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   DropdownMenu;
@@ -55,6 +57,7 @@ import {
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -62,10 +65,13 @@ import { Button } from "@/components/ui/button",
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,6 +86,8 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -93,6 +101,7 @@ interface ApplicationActionsProps {
 
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,6 +127,8 @@ export function ApplicationActions(): any ({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ApplicationActions({;
   application;
   processingId;
@@ -129,6 +140,7 @@ export function ApplicationActions({;
 export function ApplicationActions({
   application,
   processingId,
+<<<<<<< HEAD
   onViewApplication,
 <<<<<<< HEAD
 =======
@@ -187,14 +199,17 @@ export function ApplicationActions({
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             size="sm"
+=======
+  onViewApplication,            size="sm"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
               <Loader2 className="h-4 w-4 animate-spin" />;
             ) : (;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -308,10 +323,13 @@ export function ApplicationActions({;
             )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       <Button 
         variant="default" 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,6 +342,8 @@ export function ApplicationActions({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         size="sm"
         asChild
       >
@@ -332,6 +352,7 @@ export function ApplicationActions({;
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -531,6 +552,9 @@ export function ApplicationActions({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
+=======
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       ;
       <Button ;
@@ -549,7 +573,11 @@ export function ApplicationActions({;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

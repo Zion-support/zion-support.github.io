@@ -18,20 +18,36 @@ import {;
 } from 'lucide-react';
 interface QuickAction {;
   id: string;
-  label: string;
+  label: string,
   description: string;
-  icon: React.ReactNode;
+  icon: React && React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
-
-;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-  const executeAction = async (actionId: string, action: () => void) => {;
-
-
     setIsProcessing(actionId);    try {
+      await action()
+    } catch (error) {
+      logErrorToProduction(`Failed to execute action ${actionId}:`, {
+        data: error
+      })
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import {
+  Zap
+  Download
+  Trash2
+  RefreshCw
+  Settings
+  Activity
+  Package
+  Monitor
+} from 'lucide-react'
+
+interface QuickAction {    setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
@@ -55,7 +71,7 @@ import {
 } from 'lucide-react';
 interface QuickAction {
   id: string;
-  label: string;
+  label: string,
   description: string;
   icon: React.ReactNode;
   action: () => void;
@@ -90,8 +106,11 @@ if ( {) {
 
       id: 'enable - performance - monitor',
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -101,7 +120,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react';
 interface QuickAction {;
   id: string,;
-  label: string,;
+  label: string,,
   description: string,;
   icon: React.ReactNode,;
   action: () => void,;
@@ -130,10 +149,6 @@ export function QuickActions() {;
     }
   },
 
-
-
-
-  const actions: QuickAction[] = [
     // Performance Actions
     {
       id: 'enable-performance-monitor',
@@ -148,10 +163,13 @@ export function QuickActions() {;
       }},
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -159,6 +177,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
@@ -170,6 +189,8 @@ export function QuickActions() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
@@ -185,7 +206,6 @@ export function QuickActions() {;
 <<<<<<< HEAD
 =======
 
-
       },
     },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -193,6 +213,10 @@ export function QuickActions() {;
         sessionStorage.clear(),
         window.location.reload()
       }},
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
@@ -304,9 +328,6 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
-    {
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -344,8 +365,8 @@ export function QuickActions() {;
     },;
     {;
       id: 'test-error-boundary',;
-      label: 'Test Error Boundary',;
-      description: 'Trigger an error to test Sentry integration',;
+      label: 'Test Error Boundary',,
+  description: 'Trigger an error to test Sentry integration',;
       icon: <Monitor className='w-4 h-4' />,;
       category: 'development',;
       dangerous: true,;
@@ -357,8 +378,8 @@ export function QuickActions() {;
     },;
     {;
       id: 'refresh-app',;
-      label: 'Hard Refresh',;
-      description: 'Force reload with cache bypass',;
+      label: 'Hard Refresh',,
+  description: 'Force reload with cache bypass',;
       icon: <RefreshCw className='w-4 h-4' />,;
       category: 'maintenance',;
       action: () => {;
@@ -370,8 +391,8 @@ export function QuickActions() {;
   const categorizedActions = {;
     performance: actions && actions.filter(a => a && a.category === 'performance'),;
     development: actions && actions.filter(a => a && a.category === 'development'),;
-    maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),;
-  };
+    maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),
+};
 
   const categoryColors = {;
     performance:;
@@ -379,12 +400,10 @@ export function QuickActions() {;
     development:;
       'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',;
     maintenance:;
-      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
-  };
-
+      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
+};
 
   if (!isVisible) {;
-
 
     {
       id: 'download-performance-report',
@@ -403,7 +422,6 @@ export function QuickActions() {;
             width: screen.width,
             height: screen.height,
 
-
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -413,7 +431,6 @@ export function QuickActions() {;
       dangerous: true,
       action: () => {
 
-
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -422,6 +439,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+<<<<<<< HEAD
 
 
 
@@ -429,14 +447,19 @@ export function QuickActions() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!isVisible) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -446,12 +469,16 @@ export function QuickActions() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           Quick Actions
         </Button>
       </div>
     )
+<<<<<<< HEAD
   }
 
   return (
@@ -475,6 +502,12 @@ export function QuickActions() {;
             </Button>
           </div>
         </CardHeader>
+=======
+            </Button>
+          </div>
+        </CardHeader>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -522,8 +555,6 @@ export function QuickActions() {;
 } ;
 =======
 } ;
-
-
 
         local_storage.clear ();
         session_storage.clear ();
@@ -711,5 +742,9 @@ if ( {) {
     </div>);
 }
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

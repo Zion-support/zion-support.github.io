@@ -41,7 +41,6 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
 
-
   onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
@@ -74,10 +73,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -118,7 +120,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
     }
 
-
     try {;
       console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
@@ -144,12 +145,17 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Extract just the items from each MatchResult
+<<<<<<< HEAD
   const matchItems = matches.map(match => match.item);
 
   };
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+  const matchItems = matches.map(match => match.item)
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       setIsMatchmaking(false)
 
@@ -178,8 +184,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const handleSearch = async () => {;
     if (!query.trim()) {;
       toast({;
-        title: "Please enter a description",;
-        description: "Tell us what you're looking for so we can find matches.",;
+        title: "Please enter a description",,
+  description: "Tell us what you're looking for so we can find matches.",;
         variant: "destructive"}),;
       return;
     }
@@ -252,23 +258,23 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       </CardContent>;
     </Card>;
   );
-        <div className="space - y-4">;
-          <div className="space - y-2">;
+        <div className="space-y-4">;
+          <div className="space-y-2">;
             <Textarea;
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
               value={query}
               on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}
-              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
             <Button;
               on_click={handle_search}
               disabled={is_matchmaking}
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
             >;
               {is_matchmaking ? (
                 <>Analyzing your needs...</>) : (
                 <>;
-                  <Search className="h - 4 w - 4 mr - 2" />;
+                  <Search className="h - 4 w - 4 mr-2" />;
                   Find Matches;
                 </>)}
             </Button>;

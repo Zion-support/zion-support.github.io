@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -78,3 +79,9 @@ import _React,{ useEffect } from 'react'; import { useLocation } from 'react-rou
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React,{ useEffect } from 'react'; import { useLocation } from 'react-router-dom'; "export": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { "if": ('requestIdleCallback' in, window) {'; requestIdleCallback(() => { if: ('startViewTransition' in, document) {'; try: { document.startViewTransition?.(() => {})} "catch": {} } })} },[location.pathname]) return <>{children}</> } ; "export": default PerformanceOptimizer=======import React,{ useEffect } from \'react\'; import { useLocation } from \'react-router-dom\'; \"export\": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { \"if\": (\'requestIdleCallback\' in window) {\'; requestIdleCallback(() => { if: (\'startViewTransition\' in document) {\'; try: { document && document.startViewTransition?.(() => {})} \"catch\": {} } })} },[location && location.pathname]) return <>{children}</> } ; \"export\": default PerformanceOptimizer
+const React,{ useEffect } from "react"; import { useLocation } from "react-router-dom"; export: const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { if: ("requestIdleCallback" in window) {"; requestIdleCallback(() => { if: ("startViewTransition" in document) {"; try: { document && document.startViewTransition?.(() => {})} catch: {} } })} },[location && location.pathname]) return <>{children}</> } ; export: default PerformanceOptimizer'"'"
+import _React,{ useEffect } from 'react'; import { useLocation } from 'react-router-dom'; "export": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { "if": ('requestIdleCallback' in, window) {'; requestIdleCallback(() => { if: ('startViewTransition' in, document) {'; try: { document && document.startViewTransition?.(() => {})} "catch": {} } })} },[location && location.pathname]) return <>{children}</> } ; "export": default PerformanceOptimizer
+import _React,{ useEffect } from 'react'; import { useLocation } from 'react-router-dom'; "export": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { "if": ('requestIdleCallback' in, window) {'; requestIdleCallback(() => { if: ('startViewTransition' in, document) {'; try: { document && document.startViewTransition?.(() => {})} "catch": {} } })} },[location && location.pathname]) return <>{children}</> } ; "export": default PerformanceOptimizerimport _React,{ useEffect } from 'react'; import { useLocation } from 'react-router-dom'; "export": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { "if": ('requestIdleCallback' in, window) {'; requestIdleCallback(() => { if: ('startViewTransition' in, document) {'; try: { document && document.startViewTransition?.(() => {})} "catch": {} } })} },[location && location.pathname]) return <>{children}</> } ; "export": default PerformanceOptimizer
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

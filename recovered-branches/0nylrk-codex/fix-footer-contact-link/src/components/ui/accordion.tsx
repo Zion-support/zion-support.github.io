@@ -1,10 +1,8 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
+<<<<<<< HEAD
 =======
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -48,43 +46,18 @@ const Accordion = AccordionPrimitive.Root
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 ></typeof>(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-const Accordion = AccordionPrimitive && AccordionPrimitive.Root;
-
-const AccordionItem = React && React.forwardRef<;
-  React && React.ElementRef<typeof AccordionPrimitive && AccordionPrimitive.Item>,;
-  React && React.ComponentPropsWithoutRef<typeof AccordionPrimitive && AccordionPrimitive.Item>;
-></typeof>(({ className, ...props }, ref) => (;
-  <AccordionPrimitive&& AccordionPrimitive.Item
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
-import {cn} from '@/lib / utils';
-;
-const Accordion = AccordionPrimitive.Root;
-;
-const AccordionItem = React.forward_ref<;
-  React.ElementRef < typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef < typeof AccordionPrimitive.Item>;
-></typeof>(({ class_name, ...props }, ref) => (
-  <AccordionPrimitive.Item;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    ref={ref}
     className={cn ('border - b', class_name)}
     {...props}
 
   />
+<<<<<<< HEAD
 
 =======
 const AccordionItem = React.forwardRef<
@@ -95,17 +68,19 @@ const AccordionItem = React.forwardRef<
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ref={ref}
     className={cn('border-b', className)}
     {...props}
   />
 
-<<<<<<< HEAD
 ));
 AccordionItem.displayName = 'AccordionItem';
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -131,10 +106,13 @@ const AccordionTrigger = React.forwardRef<
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
+<<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
 
@@ -193,16 +171,18 @@ const AccordionTrigger = React && React.forwardRef<;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </AccordionPrimitive.Trigger>
+=======
+      className={cn(    </AccordionPrimitive.Trigger>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   </AccordionPrimitive.Header>
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>
   React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -215,10 +195,13 @@ const AccordionContent = React.forwardRef<
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -253,6 +236,10 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 AccordionTrigger && AccordionTrigger.displayName = AccordionPrimitive && AccordionPrimitive.Trigger.displayName;
 
 const AccordionContent = React && React.forwardRef<;
@@ -266,16 +253,11 @@ const AccordionContent = React && React.forwardRef<;
 ));
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Content
-    ref={ref}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+    {...props}>;
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
+  </AccordionPrimitive && AccordionPrimitive.Content>;
+));    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
@@ -287,6 +269,7 @@ const AccordionContent = React && React.forwardRef<;
 
 ))
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
@@ -296,14 +279,10 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
     {...props}>;
     <div className={cn('pb-4 pt-0', className)}>{children}</div>;
   </AccordionPrimitive && AccordionPrimitive.Content>;
@@ -315,18 +294,7 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
   </AccordionPrimitive.Content>
 ))
 
-
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-;
-AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  />));
 AccordionItem.display_name = 'AccordionItem';
 ;
 const AccordionTrigger = React.forward_ref<;
@@ -363,6 +331,7 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 ;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -460,3 +429,7 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

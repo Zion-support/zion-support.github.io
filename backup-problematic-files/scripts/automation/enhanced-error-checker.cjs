@@ -48,5 +48,10 @@ class EnhancedErrorChecker {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = EnhancedErrorChecker;
+module.exports = EnhancedErrorChecker;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

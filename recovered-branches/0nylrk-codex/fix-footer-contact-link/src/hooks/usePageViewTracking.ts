@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,18 +19,24 @@ import { useLocation } from 'react-router-dom',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useEffect  } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -41,10 +48,13 @@ import { useLocation } from 'react-router-dom',
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -52,6 +62,8 @@ import { useLocation } from 'react-router-dom',
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
@@ -66,10 +78,9 @@ export function usePageViewTracking() {
 
 =======
 
-<<<<<<< HEAD
-
 export function usePageViewTracking() {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -267,3 +278,5 @@ export function usePageViewTracking() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

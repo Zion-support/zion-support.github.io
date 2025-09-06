@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -253,6 +254,10 @@ const "Products": NextPage = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+import { ArrowRight, Star, Download, Eye, Code, Database, Shield, Zap, CheckCircle } from 'lucide-react';
+const "Products": NextPage = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import type { NextPage } from 'next';
@@ -261,11 +266,14 @@ import Link from 'next/link';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const products = [{
       title: \'ZionAI Platform\',
       \"description\": \'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.\',
@@ -378,6 +386,7 @@ import Link from 'next/link';
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -413,6 +422,8 @@ import Link from 'next/link';
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const categories = [\'All Products\',
     \'AI & Machine Learning\',
     \'Cloud Solutions\',
@@ -426,6 +437,7 @@ import Link from 'next/link';
     'Cybersecurity',
     'Data Analytics',
     'IoT Platforms',
+<<<<<<< HEAD
     'Blockchain'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -460,6 +472,9 @@ import Link from 'next/link';
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   ];
+=======
+    'Blockchain'  ];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const benefits = [{
       \"title\": \'Enterprise Ready\',
       \"description\": \'Built for scale with enterprise-grade security and reliability.\',
@@ -502,6 +517,7 @@ import Link from 'next/link';
       <section className=\"py-12 bg-gray-50\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"flex flex-wrap justify-center gap-4\">
+<<<<<<< HEAD
             {categories.map((category) => (
 =======
 =======
@@ -519,6 +535,9 @@ import Link from 'next/link';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import {ArrowRight,, Star,, Download,, Eye,, Code,, Database,, Shield,, Zap,, CheckCircle} from 'lucide-react';
+=======
+            {categories.map((category) => (import {ArrowRight,, Star,, Download,, Eye,, Code,, Database,, Shield,, Zap,, CheckCircle} from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const "Products": NextPage = () => {;
   const products = [{;
       title: \'ZionAI Platform\',;
@@ -628,6 +647,7 @@ const "Products": NextPage = () => {;
       \"icon\": Shield,;
       \"color\": \'from-yellow-500 to-orange-500\',;
       \"href\": \'/products/blockchain-suite\';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -638,6 +658,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ];
   const benefits = [{
       \"title\": \'Enterprise Ready\',
@@ -658,7 +680,6 @@ const "Products": NextPage = () => {;
       \"title\": \'Custom Solutions\',
       \"description\": \'Tailored solutions to meet your specific business requirements.\',
       \"icon\": Database
->>>>>>> main
     }
   ];
   const categories = [\'All Products\',;
@@ -697,15 +718,6 @@ const "Products": NextPage = () => {;
       \"icon\": Database;
     }
   ];
-<<<<<<< HEAD
-=======
-
-  return (
-    <MainLayout
-      title=\"Our Products - Zion Tech Group\"
-      description=\"Discover our innovative technology products and platforms designed to transform your business operations and drive digital innovation.\">;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -724,15 +736,19 @@ const "Products": NextPage = () => {;
           <div className=\"flex flex-wrap justify-center gap-4\">;
             {categories && categories.map((category) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <button
                 key={category}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
                   category === \'All Products\'
                     ? \'bg-blue-600 text-white\'
                     : \'bg-white text-gray-700 \"hover\": bg-blue-50\'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }`}>;
                 {category}
@@ -748,6 +764,8 @@ const "Products": NextPage = () => {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }`}
               >
                 {category}
@@ -758,6 +776,7 @@ const "Products": NextPage = () => {;
       </section>
       {/* Products Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
@@ -766,6 +785,8 @@ const "Products": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       <section className=\"py-20\">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
@@ -776,6 +797,7 @@ const "Products": NextPage = () => {;
               your most complex business challenges.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -826,6 +848,9 @@ const "Products": NextPage = () => {;
 =======
 =======
                 }`}>;
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">                }`}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {category}
               </button>;
             ))}
@@ -837,11 +862,14 @@ const "Products": NextPage = () => {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {products.map((product) => (
               <div
                 key={product.title}
@@ -861,6 +889,7 @@ const "Products": NextPage = () => {;
                       <span className=\"ml-1 text-sm text-gray-500\">({product.reviews})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -932,10 +961,17 @@ const "Products": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     {product.title}
+=======
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </h3>
                   <p className=\"text-gray-600 mb-4\">
                     {product.description}
                   </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -973,6 +1009,8 @@ const "Products": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className=\"mb-4\">
                     <p className=\"text-lg font-semibold text-blue-600\">{product.pricing}</p>
                   </div>
@@ -980,6 +1018,7 @@ const "Products": NextPage = () => {;
                   <div className="mb-4">
                     <p className="text-lg font-semibold text-blue-600">{product.pricing}</p>
                   </div>
+<<<<<<< HEAD
                   <ul className="space-y-2 mb-6">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1022,11 +1061,15 @@ const "Products": NextPage = () => {;
 =======
                     {product.features.slice(0, 3).map((feature) => (
                       <li key={feature} className=\"flex items-center text-sm text-gray-600\">
+=======
+                  <ul className="space-y-2 mb-6">                      <li key={feature} className=\"flex items-center text-sm text-gray-600\">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1108,6 +1151,8 @@ const "Products": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {product.features.slice(0, 3).map((feature) => (
                       <li key={feature} className=\"flex items-center text-sm text-gray-600\">
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
@@ -1170,6 +1215,7 @@ const "Products": NextPage = () => {;
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>;
                         {feature}
                       </li>;
+<<<<<<< HEAD
                     ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1215,6 +1261,10 @@ const "Products": NextPage = () => {;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                    ))}                  <div className=\"flex gap-3\">
+                  <div className="flex gap-3">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </ul>;
                   <div className=\"flex gap-3\">;
                   <div className="flex gap-3">;
@@ -1222,6 +1272,7 @@ const "Products": NextPage = () => {;
                   <div className="flex gap-3">;
                   <div className=\"flex gap-3\">;
                   <div className="flex gap-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1252,6 +1303,9 @@ const "Products": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     <Link
+=======
+=======                    <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       href={product && product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\">;
                       <Eye className=\"h-4 w-4 mr-2\" />;
@@ -1268,18 +1322,15 @@ const "Products": NextPage = () => {;
         </div>;
       </section>;
       {/* Benefits Section */}
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <<<<<<< HEAD
 =======
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       <section className=\"py-20 bg-gray-50\">
@@ -1343,6 +1394,8 @@ const "Products": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {benefits.map((benefit) => (
               <div key={benefit.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -1356,21 +1409,16 @@ const "Products": NextPage = () => {;
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ))}
           </div>
         </div>
       </section>
       {/* Pricing Comparison */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-      <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
@@ -1380,6 +1428,7 @@ const "Products": NextPage = () => {;
               Choose the plan that best fits your business needs and scale as you grow.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1413,6 +1462,9 @@ const "Products": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       <section className=\"py-20 bg-gray-50\">;
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">      <section className=\"py-20 bg-gray-50\">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">;
@@ -1469,6 +1521,7 @@ const "Products": NextPage = () => {;
           <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1512,6 +1565,8 @@ const "Products": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {[{
                 name: \'Starter\',
                 \"price\": \'$299\',
@@ -1553,8 +1608,11 @@ const "Products": NextPage = () => {;
                   \'On-site Training\'
                 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               }
             ].map((plan) => (
               <div
@@ -1575,12 +1633,15 @@ const "Products": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1650,6 +1711,7 @@ const "Products": NextPage = () => {;
                       Most Popular;
                     </span>;
                   </div>;
+<<<<<<< HEAD
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1990,3 +2052,13 @@ export default Products;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                )}                  </div>
+                  <p className=\"text-gray-600\">{plan.description}</p>
+                </div>                  </div>
+                  <p className=\"text-gray-600\">{plan.description}</p>
+                </div>
+                  </div>
+                  <p className=\"text-gray-600\">{plan.description}</p>
+                </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

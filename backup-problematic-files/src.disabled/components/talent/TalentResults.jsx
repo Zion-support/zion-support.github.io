@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 "export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {...activeFiltersProps} /> {} ";""
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentResults.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentResults.jsx
 <<<<<<< HEAD:backup-merge-conflicts/TalentResults.jsx.backup
 
@@ -20,3 +19,7 @@ export function TalentResults({" talents,totalCount,isLoading,viewProfile,handle
 </div>"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/talent/TalentResults.jsx
+=======
+</div>""export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {...activeFiltersProps} /> {} ";""
+</div>"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/talent/TalentResults.jsx

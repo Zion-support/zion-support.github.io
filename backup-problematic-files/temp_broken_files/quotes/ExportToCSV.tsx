@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 =======
 import { Button } from "@/components/ui/button",;
@@ -7,6 +8,10 @@ import { Download } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/quotes/ExportToCSV.tsx
+=======
+import { Button } from "@/components/ui/button",;
+import { Download } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { QuoteRequest } from "@/types/quotes",;
 ;
 interface ExportToCSVProps {;
@@ -78,13 +83,47 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       variant="outline" ;
       onClick={handleExport}
       className="flex items-center gap-2";
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/quotes/ExportToCSV.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
       Export CSV;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 
+=======
+    </Button>;
+  ),;
+},; interface ExportToCSVProps {;
+  quotes: QuoteRequest[];
+filename?: string ;
+}export const ExportToCSV = ({;
+  quotes, filename = "quote-requests" ;
+}: ExportToCSVProps) => {;
+  const handleExport = () => {;
+  //Define CSV Headers const headers = [ 'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';';
+'StatusCreated Date' ];
+quote.budget min ;
+}- $$ {;
+  quote.budget max ;
+}`: quote.budget min ? `$$ {;
+  quote.budget min ';
+}` : 'Not specified');
+quote.timeline;
+quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled= {;
+  quotes.length === 0 ;
+}> <Download size= {;
+  16 ;
+}/> Export CSV </Button>) ;
+:temp_broken_files/quotes/ExportToCSV.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/ExportToCSV.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

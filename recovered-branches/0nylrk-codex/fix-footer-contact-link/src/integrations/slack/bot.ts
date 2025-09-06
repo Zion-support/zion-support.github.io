@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 // Mock implementation of Slack bot that doesn't require external dependencies;
 // This replaces the original implementation which had dependency issues;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SlackCommand {
   text: string;
 }
@@ -21,6 +16,7 @@ interface SafeConsole {
   log: (message: string) => void
 }
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -92,10 +88,13 @@ interface SafeConsole {
   log: (message: string) => void;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return this
   }
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -284,6 +283,19 @@ async function askZionGPT(prompt: string): Promise<string> {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+    if (safeConsole && safeConsole.log) {    }
+    return Promise && Promise.resolve()
+  }
+}const app = new MockApp();
+async function askZionGPT(prompt: string): Promise<string> {
+  // Safely log without direct console reference
+  }
+  return `AI response to: ${prompt}`
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Create a mock app instance;
 const app = new MockApp(),;
 async function askZionGPT(prompt: string): Promise<string> {;
@@ -292,6 +304,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -439,6 +452,8 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Declare available globals;
 declare const global_this: {
   console?: SafeConsole;
@@ -497,29 +512,12 @@ app.command ('/zion', async ({ command, ack, respond }: { command: SlackCommand,
       const answer = await askZionGPT (`Suggest talent for ${query}`);
       await respond (answer);
       break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     case 'track - project': {
       const project = args.join (' ');
       await respond (`Tracking project **${project}** - feature coming soon.`);
       break;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    }
     case 'help':;
     default: await respond (
         'Commands:\n' +;
@@ -527,6 +525,7 @@ app.command ('/zion', async ({ command, ack, respond }: { command: SlackCommand,
           '`/zion suggest - talent [skills]` - AI talent suggestions\n' +;
           '`/zion track - project [name]` - project status\n' +;
           '`/zion help` - show this list');
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -586,10 +585,14 @@ export default app;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const env = typeof globalThis !== 'undefined' && globalThis.process ?;
+=======
+  }  const env = typeof globalThis !== 'undefined' && globalThis.process ?;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     globalThis.process.env : {},;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default app;
@@ -603,6 +606,8 @@ export default app;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 })();
 export default app;
@@ -618,6 +623,7 @@ export default app;
 })();
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 });
@@ -629,3 +635,5 @@ export default app;
 export default app;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -15,12 +15,15 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
 import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
+<<<<<<< HEAD
 import {MilestoneStatus} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +151,9 @@ export const useMilestones = (projectId?: string) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
+=======
+import {MilestoneStatus} from './types';import { useState } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
 import { useUpdateMilestone } from './useUpdateMilestone',;
@@ -181,6 +187,7 @@ export const useMilestones = (projectId?: string) => {;
     refetch;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
@@ -188,13 +195,10 @@ export const useMilestones = (projectId?: string) => {;
 =======
 
 
-  }
-}
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  }
+};
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -237,9 +241,12 @@ export const useMilestones = (projectId?:string) => {;
 };
   }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

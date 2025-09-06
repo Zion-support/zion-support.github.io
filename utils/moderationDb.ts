@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -19,15 +20,12 @@ async function ensureBaseFiles() {;
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
-
 export interface ModerationFlag {
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -37,19 +35,26 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 <<<<<<< HEAD
 export async function readAllFlags(): Promise<FlaggedContent[]> {;
@@ -59,6 +64,7 @@ export async function readAllFlags(): Promise<FlaggedContent[]> {;
   return data.flags || [];
 =======
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+<<<<<<< HEAD
   return flags.find (flag => flag.id === id) || null;
 <<<<<<< HEAD
 =======
@@ -215,6 +221,9 @@ export async function createFlag(
 <<<<<<< HEAD
 >>>>>>> main
     contentId: data.contentId || "",
+=======
+  return flags.find (flag => flag.id === id) || null;    contentId: data.contentId || "",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     contentType: data.contentType || "post",
     reason: data.reason || "",
     userEmail: data.userEmail || "",
@@ -225,6 +234,7 @@ export async function createFlag(
 
   flags.push(flag);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -234,6 +244,8 @@ export async function createFlag(
     contentType: data.contentType || 'post',
 <<<<<<< HEAD
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
     reason: data.reason || '',
@@ -244,9 +256,12 @@ export async function createFlag(
   }
 ;
   flags.push (flag);
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return flag;
 }
 <<<<<<< HEAD
@@ -265,15 +280,12 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
 
 export async function updateFlagStatus(
   id: string,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   status: ModerationFlag["status"],
   adminNotes?: string,
 ): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -313,6 +325,8 @@ export async function updateFlagStatus(
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
@@ -323,8 +337,11 @@ export async function updateFlagStatus(
 =======
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

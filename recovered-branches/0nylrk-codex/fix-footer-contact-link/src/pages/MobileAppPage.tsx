@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -111,12 +112,35 @@ import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
 import { DownloadSection } from "@/components/mobile-app/DownloadSection";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const MobileAppPage: React.FC = () => {
+=======
+
+
+import React from "react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {MobileAppHero} from "@/components/mobile-app/MobileAppHero";
+import {AppFeatures} from "@/components/mobile-app/AppFeatures";
+import {AppScreenshots} from "@/components/mobile-app/AppScreenshots";
+import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
+import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
+import {DownloadSection} from "@/components/mobile-app/DownloadSection";
+import React from "react",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",
+import { AppFeatures } from "@/components/mobile-app/AppFeatures",
+import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
+import { DownloadSection } from "@/components/mobile-app/DownloadSection",const MobileAppPage: React.FC = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <AppLayout>
       <SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs"
+<<<<<<< HEAD
       />
 
       <MobileAppHero />
@@ -210,6 +234,11 @@ const MobileAppPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+=======
+export default MobileAppPage;
+
+export default MobileAppPage,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -219,6 +248,7 @@ import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",;
 import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",;
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",;
+<<<<<<< HEAD
 ;
 const MobileAppPage:React.FC = () => {;
   return (;
@@ -289,3 +319,7 @@ export default MobileAppPage;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const MobileAppPage: React.FC = () => {;
+  return (;export default MobileAppPage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

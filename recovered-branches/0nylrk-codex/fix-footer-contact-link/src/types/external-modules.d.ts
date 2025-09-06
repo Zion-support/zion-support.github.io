@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module "cmdk";
 declare module "@radix-ui/react-context-menu";
 declare module "vaul";
@@ -37,48 +38,23 @@ declare module 'react - day - picker' {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+declare module '@tanstack/react-query';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare module '@tanstack/react-query';
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-declare module "cmdk",;
-declare module "@radix-ui/react-context-menu",;
-declare module "vaul",;
-declare module "@radix-ui/react-hover-card",;
-declare module "input-otp",;
-declare module "react-markdown",;
-declare module "@radix-ui/react-menubar",;
-declare module "@radix-ui/react-navigation-menu",;
-declare module "react-resizable-panels",;
-declare module "@radix-ui/react-toggle-group",;
-declare module "@radix-ui/react-toggle",;
-;
-declare module '@tanstack/react-query',;
-declare module 'react-day-picker' {;
-  export interface DateRange {;
-    from?:Date,;
-    to?:Date,;
-  }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Minimal placeholder for the DayPicker component used in the app;
+}  // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
-<<<<<<< HEAD
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
@@ -100,6 +76,8 @@ declare module '@tanstack/react-query';
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -111,6 +89,7 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -128,22 +107,21 @@ declare module 'react-day-picker' {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
 <<<<<<< HEAD
-
-=======
-  export interface DateRange {
-    from?: Date,
-    to?: Date
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-declare module '@tanstack/react-query',
-declare module 'react-day-picker' {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -159,6 +137,7 @@ declare module '@tanstack/react-query',;
 declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
+<<<<<<< HEAD
     to?: Date;
 <<<<<<< HEAD
 =======
@@ -171,6 +150,9 @@ declare module 'react-day-picker' {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+    to?: Date
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 declare module 'sonner';
@@ -182,6 +164,7 @@ import {FC, SVGProps} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   export interface DateRange {;
     from?: Date;
+<<<<<<< HEAD
     to?: Date
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -205,13 +188,15 @@ import {FC, SVGProps} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 declare module 'sonner';
 declare module 'lucide-react' {
+=======
+    to?: Datedeclare module 'lucide-react' {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {FC, SVGProps} from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
+<<<<<<< HEAD
 ;
 
 =======
@@ -450,19 +435,15 @@ import {FC, SVGProps} from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare module 'child_process';
 declare module 'date - fns';
 declare module 'jspdf' {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   export const jsPDF: any,
   export default jsPDF;
-
-=======
-  export const jsPDF: any,
-  export default jsPDF;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 declare module '@hookform / resolvers / zod';
 declare module '@radix - ui / react - accordion';
@@ -495,6 +476,7 @@ declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx (...classes: ClassValue[]): string;
 }
+<<<<<<< HEAD
 declare module 'embla - carousel - react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -936,6 +918,9 @@ declare module 'react-hook-form' {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export interface UseFormReturn<
+=======
+declare module 'embla - carousel - react';  export interface UseFormReturn<
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   export interface UseFormReturn<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -953,6 +938,7 @@ declare module 'react-hook-form' {
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
+<<<<<<< HEAD
   export interface ControllerProps<
 <<<<<<< HEAD
 =======
@@ -1345,49 +1331,33 @@ declare module 'react-hook-form' {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   > {
+=======
+  export interface ControllerProps<  > {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
     default_value?: any;
     render: (props: any) => ReactElement;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   export const Controller: ComponentType<ControllerProps<any, any>>
 
-
   export interface FormProviderProps<;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  export const Controller: ComponentType < ControllerProps < any, any>>;
-  export interface FormProviderProps<;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode;
     [key: string]: any;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  export const FormProvider: ComponentType < FormProviderProps < any>>;
+}
+declare module 'react - i18next';
+declare module 'react-dom / client';  export const FormProvider: ComponentType < FormProviderProps < any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn < TFieldValues>;
-<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -1401,12 +1371,9 @@ declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
 declare module 'react - i18next';
 declare module 'react-dom / client';
+<<<<<<< HEAD
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker:any;
 }
@@ -1754,3 +1721,5 @@ declare module 'react - i18next';
 declare module 'react-dom / client';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

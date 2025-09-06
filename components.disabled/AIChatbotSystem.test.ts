@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -54,6 +55,10 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', ()
 >>>>>>> origin/main
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import AIChatbotSystem from './AIChatbotSystem;
 describe('AIChatbotSystem', () => {;
   it('renders without crashing', () => {;
@@ -64,24 +69,14 @@ describe('AIChatbotSystem', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<AIChatbotSystem />);
-<<<<<<< HEAD
-<<<<<<< HEAD
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
 // Add interaction tests based on component functionality})});
->>>>>>> main
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
->>>>>>> main
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-// Add interaction tests based on component functionality,
 }),
 });
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
+<<<<<<< HEAD
 // Add interaction tests based on component functionality})});
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,3 +126,6 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+// Add interaction tests based on component functionality})});import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

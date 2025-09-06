@@ -289,12 +289,21 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
+<<<<<<< HEAD
+              <Badge;
+                variant={review.would_work_again ? 'default' : 'secondary'}
+                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}`}              >;
+                {review.would_work_again;
+                  ? 'Would work again';
+                  : 'Would not work again'}              </Badge>;
+=======
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
                 {review.would_work_again
                   ? 'Would work again'
                   : 'Would not work again'}              </Badge>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {review.would_work_again ? "Would work again" : "Would not work again"}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

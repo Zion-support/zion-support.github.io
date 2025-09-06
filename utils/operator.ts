@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 type OperatorEvent = {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export interface OperatorSession {
   id: string;
@@ -31,45 +34,15 @@ export async function tagOperatorSession(sessionId: string, tag: string): Promis
 }
 =======
 
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-// Operator utilities;
-export const operator = {
-  // Add operator functionality here;
-  log_event: (event: any) => null,
-  get_events: () => [],
-  getEventById: (id: string) => null;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-// Operator utilities
-export const operator = {
-  // Add operator functionality here
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  logEvent: (event: any) => null
   getEvents: () => []
   getEventById: (id: string) => null
 }
 
   logEvent: (event: any) => null,
   getEvents: () => [],
-  getEventById: (id: string) => null;
+  getEventById: (id: string) => null
 };
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -97,6 +70,7 @@ export const tagOperatorSession = (sessionId: string, tag: string) =>
 export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager.logSupportEvent(event);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
@@ -167,3 +141,7 @@ export const operator = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

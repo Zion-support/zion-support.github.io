@@ -19,20 +19,12 @@ import path from 'path';
 }
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  
-
 
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,12 +66,15 @@ async function post(url: string, body: any) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
+<<<<<<< HEAD
   return await res.json();
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -289,3 +284,6 @@ main().catch((e) => { console.error(e), process.exit(1) });
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return await res.json();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

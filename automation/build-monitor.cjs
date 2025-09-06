@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,16 +33,24 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+const execAsync = promisify(exec);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,7 +71,11 @@ const execAsync = promisify(exec);
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -80,6 +95,8 @@ const execAsync = promisify(exec);
 =======
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -101,7 +118,11 @@ const execAsync = promisify(exec);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -112,9 +133,12 @@ class BuildMonitor {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,7 +167,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -153,10 +181,13 @@ class BuildMonitor {}
     try {}
       this.log('Starting build process...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -176,7 +207,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -199,6 +234,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -211,7 +250,11 @@ class BuildMonitor {}
 =======
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -259,6 +302,8 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -268,7 +313,11 @@ class BuildMonitor {}
 =======
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
@@ -282,7 +331,10 @@ class BuildMonitor {}
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,7 +354,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -323,6 +379,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -335,7 +395,11 @@ class BuildMonitor {}
 =======
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
@@ -352,10 +416,13 @@ class BuildMonitor {}
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -375,7 +442,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -413,6 +484,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -425,7 +500,11 @@ class BuildMonitor {}
 =======
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return buildResult;
     };
   };
@@ -437,10 +516,13 @@ class BuildMonitor {}
         "timeout": 60000}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -460,7 +542,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -488,6 +574,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -500,7 +590,11 @@ class BuildMonitor {}
 =======
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -585,6 +679,12 @@ class BuildMonitor {}
       this.log('Optimizing build...');
 <<<<<<< HEAD
 
+
+
+
+=======
+<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -625,7 +725,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Clean up first;
       await this.cleanupOldBuilds();
       // Run build with optimization;
@@ -684,10 +788,16 @@ if (require.main === module) {}
     process.exit(1);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+});
+};
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -709,7 +819,11 @@ module.exports = BuildMonitor;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {
@@ -733,6 +847,8 @@ module.exports = BuildMonitor;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -747,4 +863,8 @@ module.exports = BuildMonitor;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = BuildMonitor;
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

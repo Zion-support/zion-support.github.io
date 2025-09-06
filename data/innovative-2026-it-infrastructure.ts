@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -8,11 +9,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -38,37 +41,6 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-        'Hybrid quantum-classical computing',
-        'Quantum-resistant encryption',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =;
-  [;
-    // Quantum - Enhanced Cloud Infrastructure;
-    {
-      id: 'quantum - enhanced - cloud - platform',
-      name: 'Quantum - Enhanced Cloud Platform',
-      tagline:;
-        'Next - generation cloud infrastructure with quantum computing capabilities',
-      price: '$599',
-      period: '/month',
-      description:;
-        'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
-      features: [;
-        'Hybrid quantum - classical computing',
-        'Quantum - resistant encryption',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Quantum machine learning acceleration',
         'Multi - cloud orchestration',
         'Auto - scaling infrastructure',
@@ -80,6 +52,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       icon: '⚛️',
 
@@ -88,6 +61,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -130,25 +105,12 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.',
       competitors: [;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'AWS',
         'Google Cloud',
         'Microsoft Azure',
         'IBM Cloud',
         'Oracle Cloud',
       ],
-<<<<<<< HEAD
-=======
-
-      market_size: '$397.4B market',
-      growth_rate: '280% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -162,120 +124,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.9,
       reviews: 400,
     },
-<<<<<<< HEAD
-=======
-
-        'AI-powered edge orchestration',
-    // Edge Computing Orchestration Platform;
-    {
-      id: 'edge - computing - orchestration',
-      name: 'Edge Computing Orchestration Platform',
-      tagline:;
-        'Manage distributed computing at the edge with AI - powered orchestration',
-      price: '$299',
-      period: '/month',
-      description:;
-        'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real - time applications.',
-      features: [;
-        'AI - powered edge orchestration',
-
-        'Global edge network management',
-        'Real - time load balancing',
-        'Edge AI model deployment',
-        'IoT device management',
-        '5G network optimization',
-        'Edge security and compliance',
-        'Performance analytics',
-        'Automated scaling',
-        'Multi - cloud edge integration',
-      ],
-      popular: true,
-      icon: '🌐',
-
-=======
-      color: 'from - teal - 500 to - cyan - 600',
-      text_color: 'text - teal - 400',
-      link: 'https://ziontechgroup.com / edge - computing - orchestration',
-      market_position:;
-        'Competitive with AWS Greengrass ($0.16+), Azure IoT Edge ($0.08+), and Google Cloud IoT Edge ($0.40+). Our advantage: AI - powered orchestration, comprehensive management, and competitive pricing.',
-      target_audience:;
-        'IoT companies, Manufacturing businesses, Smart city initiatives, Transportation companies, Healthcare organizations, Retail businesses',
-      trial_days: 21,
-      setup_time: '1 week',
-      category: 'Edge Computing & IoT',
-      real_service: true,
-      technology: [;
-        'Kubernetes',
-        'Docker',
-        'Python',
-        'Go',
-        'Rust',
-        'TensorFlow',
-        'AWS',
-        'Azure',
-        '5G Networks',
-      ],
-      integrations: [;
-        'AWS IoT',
-        'Azure IoT',
-        'Google Cloud IoT',
-        'Kubernetes',
-        'Docker',
-        'MQTT',
-        'CoAP',
-        'HTTP / 2',
-      ],
-      use_cases: [;
-        'Smart manufacturing',
-        'Autonomous vehicles',
-        'Smart cities',
-        'Healthcare monitoring',
-        'Retail analytics',
-        'Energy management',
-      ],
-      roi: 'Average customer sees 380% ROI within 8 months through improved performance and reduced infrastructure costs.',
-      competitors: [;
-
-        'AWS Greengrass',
-        'Azure IoT Edge',
-        'Google Cloud IoT Edge',
-        'FogHorn',
-        'ClearBlade',
-      ],
-
-      market_size: '$43.4B market',
-      growth_rate: '240% annual growth',
-      variant: 'edge - futuristic',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Enterprise - grade edge computing platform with AI - powered orchestration, global edge network, comprehensive IoT management, and real - time analytics. Includes custom development and 24 / 7 support.',
-      launch_date: '2025 - 07 - 20',
-      customers: 1200,
-      rating: 4 && 4.8,
-      reviews: 600,
-    },
-
-=======
-    // Zero - Trust Network Architecture;
-    {
-      id: 'zero - trust - network - architecture',
-      name: 'Zero - Trust Network Architecture',
-      tagline:;
-        'Secure your network with zero - trust principles and AI - powered monitoring',
-      price: '$449',
-      period: '/month',
-      description:;
-        'Comprehensive zero - trust network security platform that continuously verifies every user, device, and connection, providing enterprise - grade security for modern distributed networks.',
-      features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Continuous identity verification',
         'Micro - segmentation',
         'AI - powered threat detection',
@@ -288,6 +136,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Automated response',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       icon: '🔒',
@@ -310,6 +159,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         'Python',
         'TensorFlow',
         'React',
@@ -320,23 +171,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Docker',
         'Kubernetes',
       ],
-<<<<<<< HEAD
-=======
-
-=======
-      integrations: [;
-        'Active Directory',
-        'LDAP',
-        'SAML',
-        'OAuth',
-        'RADIUS',
-        'Cisco',
-        'Palo Alto',
-        'Fortinet',
-      ],
-      use_cases: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Network access control',
         'Remote work security',
         'Cloud security',
@@ -344,28 +178,12 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Compliance management',
         'Threat prevention',
       ],
-<<<<<<< HEAD
-=======
-
-      roi: 'Average customer saves $1.8M annually through prevented security breaches and simplified compliance.',
-      competitors: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Palo Alto Networks',
         'Cisco',
         'Fortinet',
         'Check Point',
         'Juniper Networks',
       ],
-<<<<<<< HEAD
-=======
-
-      market_size: '$45.2B market',
-      growth_rate: '260% annual growth',
-      variant: 'security - futuristic',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -379,23 +197,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.9,
       reviews: 450,
     },
-<<<<<<< HEAD
-=======
-
-        'AI-powered CI/CD automation',
-    // AI - Powered DevOps Platform;
-    {
-      id: 'ai - powered - devops - platform',
-      name: 'AI - Powered DevOps Platform',
-      tagline: 'Automate and optimize your development pipeline with AI',
-      price: '$199',
-      period: '/month',
-      description:;
-        'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',
-      features: [;
-        'AI - powered CI / CD automation',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Intelligent testing and QA',
         'Performance optimization',
         'Predictive issue detection',
@@ -407,25 +208,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Team collaboration tools',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
-      icon: '🚀',
-
-=======
-      color: 'from - orange - 500 to - red - 600',
-      text_color: 'text - orange - 400',
-      link: 'https://ziontechgroup.com / ai - powered - devops',
-      market_position:;
-        'Competitive with GitLab ($19+), GitHub Actions ($0.008+), and Jenkins (Free+). Our advantage: AI - powered automation, comprehensive DevOps tools, and intelligent optimization.',
-      target_audience:;
-        'Development teams, DevOps engineers, Software companies, IT departments, Digital agencies, Startups',
-      trial_days: 14,
-      setup_time: '3 days',
-      category: 'DevOps & Automation',
-      real_service: true,
-      technology: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js',
         'Python',
@@ -436,48 +218,12 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Azure',
         'Jenkins',
       ],
-<<<<<<< HEAD
-=======
-
-=======
-      integrations: [;
-        'GitHub',
-        'GitLab',
-        'Bitbucket',
-        'Jira',
-        'Slack',
-        'Microsoft Teams',
-        'AWS',
-        'Azure',
-        'Google Cloud',
-      ],
-      use_cases: [;
-        'Continuous integration',
-        'Automated testing',
-        'Deployment automation',
-        'Performance monitoring',
-        'Security scanning',
-        'Cost optimization',
-      ],
-      roi: 'Average customer sees 320% ROI within 6 months through improved development efficiency and reduced deployment issues.',
-      competitors: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'GitLab',
         'GitHub Actions',
         'Jenkins',
         'CircleCI',
         'Travis CI',
       ],
-<<<<<<< HEAD
-=======
-
-      market_size: '$8.2B market',
-      growth_rate: '190% annual growth',
-      variant: 'devops - futuristic',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -491,15 +237,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.7,
       reviews: 1250,
     },
-<<<<<<< HEAD
-=======
-
-        'Quantum-resistant encryption',
-        'Multi-layer security',
-    // Quantum - Safe Data Storage;
-    {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: 'quantum - safe - data - storage',
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
@@ -522,25 +259,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
       icon: '💾',
-<<<<<<< HEAD
-=======
-
-        'Post-Quantum Cryptography',
-      color: 'from - violet - 600 to - purple - 700',
-      text_color: 'text - violet - 400',
-      link: 'https://ziontechgroup.com / quantum - safe - storage',
-      market_position:;
-        'Competitive with AWS S3 ($0.023+), Google Cloud Storage ($0.020+), and Azure Blob ($0.0184+). Our advantage: Quantum - safe encryption, comprehensive security, and future - proof architecture.',
-      target_audience:;
-        'Financial institutions, Healthcare organizations, Government agencies, Legal firms, Research institutions, Technology companies',
-      trial_days: 30,
-      setup_time: '1 week',
-      category: 'Data Storage & Security',
-      real_service: true,
-      technology: [;
-        'Post - Quantum Cryptography',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js',
         'Python',
@@ -549,6 +267,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'AWS',
         'Docker',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -601,6 +320,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       customers: 1100,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       rating: 4 && 4.8,
       reviews: 550,
 
@@ -611,10 +332,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 =======
 =======
 
-
   ];    features: [
 
-=======
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -649,7 +368,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
-=======
       id: 'quantum-safe-data-storage'
       name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
@@ -692,7 +410,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'AWS'
         'Docker'
       ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'AWS S3'
         'Azure Blob'
@@ -712,8 +429,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ]
       roi: 'Average customer saves $500K annually through improved security and compliance management.'
       competitors: [
-<<<<<<< HEAD
-=======
         'AWS S3'
         'Google Cloud Storage'
         'Azure Blob'
@@ -731,12 +446,12 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
       launchDate: '2025-11-20'
       customers: 1100
       rating: 4.8
       reviews: 550
+<<<<<<< HEAD
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -832,6 +547,11 @@ export interface Innovative2026ITInfrastructureService {;
   reviews: number;
 }
 ;
+=======
+    }  ];    features: [
+      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
+      'API accessMobile applications';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
   // Quantum-Enhanced Cloud Infrastructure;
   {;
@@ -839,8 +559,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     name: 'Quantum-Enhanced Cloud Platform',;
     tagline: 'Next-generation cloud infrastructure with quantum computing capabilities',;
     price: '$599',;
-    period: '/month',;
-    description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',;
+    period: '/month',,
+  description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',;
     features: [;
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring',;
       'Global edge computing networkQuantum-safe data storage';
@@ -883,8 +603,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     name: 'Edge Computing Orchestration Platform',;
     tagline: 'Manage distributed computing at the edge with AI-powered orchestration',;
     price: '$299',;
-    period: '/month',;
-    description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.',;
+    period: '/month',,
+  description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.',;
     features: [;
       'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics',;
       'Automated scalingMulti-cloud edge integration';
@@ -927,8 +647,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     name: 'Zero-Trust Network Architecture',;
     tagline: 'Secure your network with zero-trust principles and AI-powered monitoring',;
     price: '$449',;
-    period: '/month',;
-    description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.',;
+    period: '/month',,
+  description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.',;
     features: [;
       'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting',;
       'Real-time monitoringAutomated response';
@@ -971,8 +691,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     name: 'AI-Powered DevOps Platform',;
     tagline: 'Automate and optimize your development pipeline with AI',;
     price: '$199',;
-    period: '/month',;
-    description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',;
+    period: '/month',,
+  description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',;
     features: [;
       'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning',;
       'Cost optimizationTeam collaboration tools';
@@ -1015,6 +735,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     name: 'Quantum-Safe Data Storage',;
     tagline: 'Future-proof your data with quantum-resistant encryption',;
     price: '$349',;
+<<<<<<< HEAD
     period: '/month',;
     description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.',;
     features: [;
@@ -1589,6 +1310,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     price: '$349',;
     period: '/month',;
     description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.',;
+=======
+    period: '/month',,
+  description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     features: [;
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication',;
       'API accessMobile applications';
@@ -1624,6 +1349,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     customers: 1100,;
     rating: 4.8;
     reviews: 550;
+<<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -1927,3 +1653,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

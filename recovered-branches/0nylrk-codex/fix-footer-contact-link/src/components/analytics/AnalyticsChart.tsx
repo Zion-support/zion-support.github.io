@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -15,12 +15,12 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
-
-
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
@@ -50,6 +50,7 @@ export function AnalyticsChart({
   timeRange = '7d';
   onTimeRangeChange
 }: AnalyticsChartProps) {
+<<<<<<< HEAD
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
 <<<<<<< HEAD
   const colors = [
@@ -144,6 +145,13 @@ import { useState } from "react",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const [chartType, setChartType] = useState<'line' | 'bar'>(type);import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { useState } from "react",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface AnalyticsChartProps {
   title: string,
   description?: string,
@@ -153,6 +161,7 @@ interface AnalyticsChartProps {
   timeRange?: string,
   onTimeRangeChange?: (range: string) => void
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   description,
@@ -238,6 +247,9 @@ export function AnalyticsChart({ ;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  return (  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">;
@@ -253,6 +265,7 @@ export function AnalyticsChart({ ;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -260,6 +273,8 @@ export function AnalyticsChart({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   data_keys: string[],
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   time_range?: string;
   onTimeRangeChange?: (range: string) => void;
 }
@@ -274,19 +289,20 @@ function AnalyticsChart() {
   ];
 ;
   return (
-    <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
-      <CardHeader className="pb - 2">;
-        <div className="flex flex - col sm:flex - row justify - between sm:items - center gap - 4">;
+    <Card className="bg - zion - blue - dark border - zion - blue - light overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <div className="flex flex - col sm:flex - row justify - between sm:items - center gap-4">;
           <div>;
-            <CardTitle className="text - white text - lg">{title}</CardTitle>;
-            {description && <CardDescription className="text - zion - slate - light">{description}</CardDescription>}
+            <CardTitle className="text - white text-lg">{title}</CardTitle>;
+            {description && <CardDescription className="text - zion - slate-light">{description}</CardDescription>}
           </div>;
-          <div className="flex items - center gap - 2">;
+          <div className="flex items - center gap-2">;
             {onTimeRangeChange && (
               <Select value={time_range} onValueChange={onTimeRangeChange}>;
-                <SelectTrigger className="w - 24 h - 8 text - xs bg - zion - blue border - zion - blue - light text - zion - slate - light">;
+                <SelectTrigger className="w - 24 h - 8 text - xs bg - zion - blue border - zion - blue - light text - zion - slate-light">;
                   <SelectValue placeholder="Time Range" />;
                 </SelectTrigger>;
+<<<<<<< HEAD
                 <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -296,10 +312,14 @@ function AnalyticsChart() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <SelectItem value="1d">1 Day</SelectItem>;
+=======
+                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <SelectItem value="7d">7 Days</SelectItem>;
                   <SelectItem value="30d">30 Days</SelectItem>;
                   <SelectItem value="90d">3 Months</SelectItem>;
                   <SelectItem value="365d">1 Year</SelectItem>;
+<<<<<<< HEAD
                 </SelectContent>;
 <<<<<<< HEAD
 
@@ -466,6 +486,9 @@ export function AnalyticsChart({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   height={50}
+=======
+                </SelectContent>;                  height={50}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
                 />;
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />;
@@ -478,19 +501,10 @@ export function AnalyticsChart({;
                 />;
                 <Legend />;
                 {dataKeys && dataKeys.map((key, index) => (;
-
-=======
-      <CardContent className="p-0">;
-        <div className="h-72 w-full p-4">;
-          <ResponsiveContainer width="100%" height="100%">;
-            {chartType === 'line' ? (;
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>;
-                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
-                <XAxis;
-                  dataKey="date";
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end";
+<<<<<<< HEAD
                   height={50}
                 />
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
@@ -782,3 +796,6 @@ bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  height={50}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

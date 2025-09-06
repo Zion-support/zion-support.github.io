@@ -1,14 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 import type {;
-  GrantApplication,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  GrantCategory,;
+  GrantApplication,;  GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -49,6 +49,7 @@ export default function GrantsPage() {;
     status?: string;
     region?: string;
     program?: string;
+<<<<<<< HEAD
   }>({});
 <<<<<<< HEAD
 =======
@@ -315,109 +316,16 @@ function GrantsPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
+=======
+  }>({});          }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />
         <select
-          className='border rounded p-2'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
-        <select;
-          className='border rounded p - 2';
-          value={filters.sector || ''}
-          on_change={e =>;
-            set_filters (function => ({ ...f, sector: e.target.value || undefined }));
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          }
-        >;
-          <option value=''>All Sectors</option>;
-          {categories && categories.map(c => (;
-            <option key={c} value={c}>;
-              {c}
-            </option>;
-          ))}
-        </select>;
-        <select
-          className='border rounded p-2'
-          }
-        >;
-          <option value=''>All Stages</option>;
-          {statuses && statuses.map(s => (;
-            <option key={s} value={s}>;
-              {s}
-            </option>;
-          ))}
-        </select>;
-        <input
-          className='border rounded p-2'
-          placeholder='Region'
-          }
-        />;
-<<<<<<< HEAD
-        <select;
-          className='border rounded p - 2';
-          value={filters.program || ''}
-          on_change={e =>;
-            set_filters (function => ({ ...f, program: e.target.value || undefined }));
-          }
-        >;
-          <option value=''>All Programs</option>;
-          <option value='grant'>Grant</option>;
-          <option value='incubator'>Incubator</option>;
-        </select>;
-      </div>;
-      <div className='grid gap - 4'>;
-        {items.map (g => (
-          <div;
-            key={g.id}
-            className='border rounded p - 4 bg - white / 70 dark:bg - black / 40';
-          >;
-            <div className='flex items - center justify - between'>;
-              <div>;
-                <h3 className='text - lg font - medium'>;
-                  <Link href={`/grants/${g.id}`}>;
-                    <a>{g.project_name}</a>;
-                  </Link>;
-                </h3>;
-                <div className='text - xs text - gray - 600 dark:text - gray - 400'>;
-                  {g.sector || 'General'} • {g.region || 'Global'} •{' '}
-
-=======
-          value={filters.program |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, program: e.target.value |undefined }))
-          }
-        >
-          <option value=''>All Programs</option>
-          <option value='grant'>Grant</option>
-          <option value='incubator'>Incubator</option>
-        </select>
-      </div>
-      <div className='grid gap-4'>
-        {items.map(g => (
-          <div
-            key={g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40'
-          >
-            <div className='flex items-center justify-between'>
-              <div>
-                <h3 className='text-lg font-medium'>
-                  <Link href={`/grants/${g.id}`}>
-                    <a>{g.projectName}</a>
-                  </Link>
-                </h3>
-                <div className='text-xs text-gray-600 dark:text-gray-400'>
-                  {g.sector |'General'} • {g.region |'Global'} •{' '}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <select
-          className='border rounded p-2'
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  {g.program === 'incubator' ? 'Incubator' : 'Grant'}
+          className='border rounded p-2'                  {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
+<<<<<<< HEAD
                 {g.program === 'incubator' && (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -455,6 +363,9 @@ function GrantsPage() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className='grid gap-4'>;
+=======
+                {g.program === 'incubator' && (      <div className='grid gap-4'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {items && items.map(g => (;
           <div
             key={g && g.id}
@@ -475,6 +386,7 @@ function GrantsPage() {
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -513,6 +425,8 @@ function GrantsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -535,8 +449,8 @@ function GrantsPage() {
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -592,3 +506,8 @@ function GrantsPage() {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (
+    <EnhancedLayout>
+    <EnhancedLayout>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

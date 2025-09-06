@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
@@ -28,6 +32,8 @@ import { render, screen } from '@testing-library/react';
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import App from '../src/App';
 describe('App', () => {
   it('renders without crashing', () => {
@@ -36,22 +42,19 @@ describe('App', () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   it('has proper heading structure', () => {
     render(<App />);
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
-  });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -86,6 +89,8 @@ describe('App', () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 });
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
@@ -94,10 +99,6 @@ describe('App'
   it('has proper heading structure'
     const heading = screen.getByRole('heading', { level: '1'
     const heading = screen.getByRole('heading'
->>>>>>> origin/automation-improvements-final
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
@@ -114,6 +115,7 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -154,3 +156,7 @@ describe("App", () => {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  it('has proper heading structure', () => {
+    render(<App />);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

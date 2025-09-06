@@ -44,24 +44,35 @@ import {Footer} from "@/components/Footer";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding() {;
+<<<<<<< HEAD
   const { user, isLoading } = useAuth();
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  const { user, isLoading } = useAuth();
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth();
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
@@ -259,14 +270,19 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ServiceProviderRegistrationForm />;
+=======
+  }
+  return (
+  }
+  return (          <ServiceProviderRegistrationForm />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 =======
@@ -301,3 +317,6 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

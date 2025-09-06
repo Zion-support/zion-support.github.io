@@ -34,20 +34,13 @@ export default function ServicesLayout(): any ({;
 }: {;
   children: React && React.ReactNode;
 }) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * ServicesLayout - Function description
  */
 function ServicesLayout() {
   return <div>{children}</div>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,3 +58,5 @@ export default function ServicesLayout({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

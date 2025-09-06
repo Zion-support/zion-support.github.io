@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /**;
 * Helper script to update icon imports across the codebase;
 *;
@@ -13,53 +11,10 @@ const glob = require ('glob'),
 /**
 
  * 
- * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
-
-=======
- * 
- * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
- * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
- */
-
-/**
- * Helper script to update icon imports across the codebase
- *
- * Usage: * 1. Run: node scripts/update-icon-imports.js
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
- * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
- */
-
-const fs = require('fs')
-const path = require('path')
-const glob = require('glob')
-// Helper to replace imports in a file
-function updateIconImportsInFile(filePath) {
-  try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const content = fs && fs.readFileSync(filePath, 'utf8'),
-    
-    // Replace direct lucide imports with our custom icons
-    const updatedContent = content && content.replace(
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,
-<<<<<<< HEAD
-
-=======
-    const content = fs.readFileSync(filePath, 'utf8')
-    // Replace direct lucide imports with our custom icons
-    const updatedContent = content.replace(
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      'import {$1} from "@/components/icons"'
+ * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
+<<<<<<< HEAD
     if (content !== updatedContent) {
 <<<<<<< HEAD
 
@@ -215,6 +170,9 @@ console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed t
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  * updateIconImportsInFile - Function description
+=======
+    if (content !== updatedContent) { * updateIconImportsInFile - Function description
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  */
 function updateIconImportsInFile() {
   try {
@@ -253,6 +211,7 @@ console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support 
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -260,6 +219,8 @@ console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
@@ -271,7 +232,6 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
-<<<<<<< HEAD
 
 /**;
  * Helper script to update icon imports across the codebase;
@@ -308,12 +268,12 @@ function updateIconImportsInFile(filePath) {;
     return false,;
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+<<<<<<< HEAD
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -365,3 +325,6 @@ if (updated) updatedFiles++
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

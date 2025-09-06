@@ -128,6 +128,7 @@ export default function OnboardingWizard() {
     } catch {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -140,10 +141,11 @@ export default function OnboardingWizard() {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!open) return null;
 
   return (
-
 
   );
 <<<<<<< HEAD
@@ -175,7 +177,7 @@ export default function OnboardingWizard() {
 }
   );
 }
-import Link from 'next / link';
+import Link from 'next/link';
 import { use_role } from '../context / RoleContext';
 export default /**
  * OnboardingWizard - Function description

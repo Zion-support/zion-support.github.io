@@ -14,6 +14,7 @@
 =======
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -29,8 +30,12 @@ export const advancedEmergingTechServices2025 = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+=======
+=======export const advancedEmergingTechServices2025 = [
   {
-<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -41,94 +46,6 @@ export const advancedEmergingTechServices2025 = [
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
-    pricing: {
-=======
-
-=======
-    id: 'quantum - materials - discovery - platform',
-    name: 'QuantumMaterials Discovery',
-    description:;
-      'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',
-    features: [;
-      'Quantum materials simulation',
-      'AI - powered discovery algorithms',
-      'Real - time material analysis',
-      'Advanced property prediction',
-      'Integration with research platforms',
-      'Advanced analytics and reporting',
-      'Custom discovery algorithms',
-      '24 / 7 discovery operations',
-    ],
-    pricing: {
-      starter: {
-        price: 699,
-        period: 'month',
-        features: [;
-          'Basic materials simulation',
-          'Standard discovery',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 1799,
-        period: 'month',
-        features: [;
-          'Advanced materials platform',
-          'Custom algorithms',
-          'Priority support',
-          'Dedicated research team',
-        ],
-      },
-      enterprise: {
-        price: 4499,
-        period: 'month',
-        features: [;
-          'Full materials platform',
-          'Custom solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Materials',
-    tags: [;
-
-      'Quantum Computing',
-      'Materials Science',
-      'AI Discovery',
-      'Research Platform',
-    ],
-
-    website: 'https://ziontechgroup.com / quantum - materials - discovery',
-
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-
-=======
-    market_size: '$2.8B',
-    target_audience:;
-      'Materials science companies, research institutions, manufacturing firms, government agencies',
-    competitive_advantage:;
-      'Industry - first quantum materials simulation, advanced AI discovery algorithms, and comprehensive research platform integration',
-  },
-  {
-    id: 'quantum - robotics - platform',
-    name: 'QuantumRobotics Pro',
-    description:;
-      'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',
-    features: [;
-      'Quantum - enhanced robotics',
-      'AI - powered automation',
-      'Real - time robotic control',
-      'Advanced motion planning',
-      'Integration with robotic systems',
-      'Advanced analytics and reporting',
-      'Custom robotic algorithms',
-      '24 / 7 robotic operations',
-    ],
-    pricing: {
       starter: {
         price: 499,
         period: 'month',
@@ -174,6 +91,7 @@ export const advancedEmergingTechServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
 
 =======
     market_size: '$3.2B',
@@ -391,6 +309,8 @@ export const advancedEmergingTechServices2025 = [
     marketSize: '$6 && 6.8B',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       starter: {
         price: 599
         period: 'month'
@@ -945,6 +865,7 @@ export const advancedEmergingTechServices2025 = [
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
+<<<<<<< HEAD
   }
 =======
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
@@ -971,6 +892,12 @@ export const advancedEmergingTechServices2025 = [
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+  }];      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com'
+    }
+    marketSize: '$6.8B'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -1491,29 +1418,13 @@ export const advancedEmergingTechServices2025 = [
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },;
 
-
-];      phone: '+1 302 464 0950';
-    };
-    marketSize: '$6 && 6.8B',
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
+];      phone: '+1 302 464 0950'
+};
+    marketSize: '$6 && 6.8B',    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-
-
-<<<<<<< HEAD
-
 
   }
 ];
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1530,8 +1441,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-bio-computing-platform',;
-    name: 'QuantumBio Computing',;
-    description: 'Revolutionary quantum-biological hybrid computing platform that combines quantum computing with biological processing for unprecedented computational power.',;
+    name: 'QuantumBio Computing',,
+  description: 'Revolutionary quantum-biological hybrid computing platform that combines quantum computing with biological processing for unprecedented computational power.',;
     features: [;
       'Quantum-biological hybrid processingDNA-based computingBiological algorithm optimizationReal-time quantum bio analyticsIntegration with research platformsAdvanced analytics and reportingCustom quantum bio algorithms24/7 platform monitoring';
     ],;
@@ -1553,8 +1464,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'brain-computer-interface-platform',;
-    name: 'BrainInterface Pro',;
-    description: 'Advanced brain-computer interface platform that enables direct neural communication, cognitive enhancement, and neurological research applications.',;
+    name: 'BrainInterface Pro',,
+  description: 'Advanced brain-computer interface platform that enables direct neural communication, cognitive enhancement, and neurological research applications.',;
     features: [;
       'Neural signal processingCognitive enhancement toolsBrain-computer communicationReal-time neural analyticsIntegration with medical devicesAdvanced analytics and reportingCustom neural algorithms24/7 neural monitoring';
     ],;
@@ -1576,8 +1487,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-energy-fusion-platform',;
-    name: 'QuantumEnergy Fusion',;
-    description: 'Revolutionary quantum energy fusion platform that simulates and optimizes fusion power generation for sustainable energy solutions.',;
+    name: 'QuantumEnergy Fusion',,
+  description: 'Revolutionary quantum energy fusion platform that simulates and optimizes fusion power generation for sustainable energy solutions.',;
     features: [;
       'Fusion power simulationQuantum energy optimizationReal-time fusion monitoringEnergy efficiency analyticsIntegration with power gridsAdvanced analytics and reportingCustom fusion algorithms24/7 energy monitoring';
     ],;
@@ -1599,8 +1510,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'autonomous-vehicle-ai-platform',;
-    name: 'AutonomousVehicle AI',;
-    description: 'Advanced autonomous vehicle AI platform that provides intelligent navigation, safety systems, and fleet management for autonomous transportation.',;
+    name: 'AutonomousVehicle AI',,
+  description: 'Advanced autonomous vehicle AI platform that provides intelligent navigation, safety systems, and fleet management for autonomous transportation.',;
     features: [;
       'AI-powered navigationAdvanced safety systemsFleet managementReal-time vehicle monitoringIntegration with vehicle systemsAdvanced analytics and reportingCustom AI algorithms24/7 autonomous operations';
     ],;
@@ -1622,8 +1533,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-materials-discovery-platform',;
-    name: 'QuantumMaterials Discovery',;
-    description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',;
+    name: 'QuantumMaterials Discovery',,
+  description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',;
     features: [;
       'Quantum materials simulationAI-powered discovery algorithmsReal-time material analysisAdvanced property predictionIntegration with research platformsAdvanced analytics and reportingCustom discovery algorithms24/7 discovery operations';
     ],;
@@ -1645,8 +1556,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-robotics-platform',;
-    name: 'QuantumRobotics Pro',;
-    description: 'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',;
+    name: 'QuantumRobotics Pro',,
+  description: 'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',;
     features: [;
       'Quantum-enhanced roboticsAI-powered automationReal-time robotic controlAdvanced motion planningIntegration with robotic systemsAdvanced analytics and reportingCustom robotic algorithms24/7 robotic operations';
     ],;
@@ -1668,8 +1579,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-internet-security-platform',;
-    name: 'QuantumInternet Security',;
-    description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',;
+    name: 'QuantumInternet Security',,
+  description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',;
     features: [;
       'Quantum internet encryptionSecure quantum communicationReal-time security monitoringAdvanced threat detectionIntegration with internet infrastructureAdvanced analytics and reportingCustom security protocols24/7 quantum security operations';
     ],;
@@ -1691,8 +1602,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-logistics-optimization-platform',;
-    name: 'QuantumLogistics Pro',;
-    description: 'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',;
+    name: 'QuantumLogistics Pro',,
+  description: 'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',;
     features: [;
       'Quantum route optimizationAI-powered logisticsReal-time supply chain monitoringAdvanced optimization algorithmsIntegration with logistics systemsAdvanced analytics and reportingCustom optimization models24/7 logistics operations';
     ],;
@@ -1714,8 +1625,8 @@ export const advancedEmergingTechServices2025 = [
   },;
   {;
     id: 'quantum-metaverse-development-platform',;
-    name: 'QuantumMetaverse Pro',;
-    description: 'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum-enhanced graphics and AI.',;
+    name: 'QuantumMetaverse Pro',,
+  description: 'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum-enhanced graphics and AI.',;
     features: [;
       'Quantum-enhanced graphicsAI-powered world generationReal-time virtual renderingAdvanced user interactionIntegration with VR/AR systemsAdvanced analytics and reportingCustom metaverse solutions24/7 platform monitoring';
     ],;
@@ -1734,13 +1645,13 @@ export const advancedEmergingTechServices2025 = [
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-<<<<<<< HEAD
     }
     market_size: '$6.8B',
     target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitive_advantage: 'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR / AR system integration';
   }
 ];
+<<<<<<< HEAD
 ;
 =======
 
@@ -1762,3 +1673,9 @@ export const advancedEmergingTechServices2025 = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;  }
+];
+;  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

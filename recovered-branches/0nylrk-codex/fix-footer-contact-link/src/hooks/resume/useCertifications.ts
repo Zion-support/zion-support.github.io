@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,11 +8,14 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 export function useCertifications() {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -44,12 +47,16 @@ export function useCertifications() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
+=======
+export function useCertifications() {  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add certifications')
+<<<<<<< HEAD
       return false
 <<<<<<< HEAD
     }
@@ -213,6 +220,12 @@ export function useCertifications() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('certifications')
+        .insert({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -240,6 +253,7 @@ export function useCertifications() {;
       setError('You must be logged in to update certifications'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -249,10 +263,14 @@ export function useCertifications() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -563,6 +581,16 @@ export function useCertifications() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
+=======
+          return showSuccessToast("Certification updated", "Your certification has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update certification')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('certifications')
+        .delete()import {useState} from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -581,39 +609,9 @@ function use_certifications() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
       set_error ('You must be logged in to add certifications'),
       return false;
     }
-
-=======
-    }
-  }
-  return {
-    isLoading;
-    error;
-    addCertification;
-    updateCertification;
-
-    deleteCertification
-  }
-}
-;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('certifications');
-        .delete();
-        .eq('id', certId),;
-      if (error) throw error,;
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete certification');
-    } finally {;
-      setIsLoading(false);
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },;
   return {;
     isLoading,;
@@ -621,6 +619,7 @@ if ( {) {
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -811,10 +810,17 @@ deleteCertification
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
+}  }
 }
     setIsLoading (true);
     set_error (null);
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

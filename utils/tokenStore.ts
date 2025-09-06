@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 =======
@@ -9,10 +10,15 @@ import path from 'path';
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import fs from "fs";
+=======
+import fs from 'fs';
+import path from 'path';import fs from "fs";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import path from "path";
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -41,9 +47,15 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+=======export interface TokenTransaction {
+
+export interface TokenTransaction {;
+=======  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   userId: string;
   type: "earn" | "spend" | "transfer";
-  amount: number;
+  amount: number,
   description: string;
   timestamp: string;
   metadata?: Record < string, any>;
@@ -55,12 +67,13 @@ export interface TokenConfig {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export interface TokenConfig {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
   symbol: string;
   total_supply: number;
@@ -69,31 +82,11 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-
 const DATA_DIR = path.join(process.cwd(), "data");
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
-const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-function ensureDataDir() {
+=======function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   }
@@ -107,6 +100,7 @@ function loadTransactions(): TokenTransaction[] {
   } catch {
     return [];
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -436,48 +430,18 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+=======
+}  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export function get_config (): TokenConfig {
-  return load_config ();
-=======
-<<<<<<< HEAD
-export function getConfig(): TokenConfig {
-  return loadConfig();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export function getUserBalance (user_id: string): number {
-  const transactions = load_transactions ();
-=======
-export function getUserBalance(userId: string): number {
-=======
-
-export function getConfig(): TokenConfig {;
-  return loadConfig();
-}
-
-export function setConfig(config: TokenConfig): void {;
-  saveConfig(config);
-}
-
-export function getUserBalance(userId: string): number {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const transactions = loadTransactions();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -489,9 +453,12 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         balance += tx.amount;
       } else if (tx.type === "spend") {
         balance -= tx.amount;

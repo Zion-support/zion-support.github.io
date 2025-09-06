@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -21,11 +22,14 @@ declare const __filename: string,;
 interface Buffer {}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare const __dirname: string;
 declare const __filename: string;
 export {}
 declare const __dirname: string,;
 declare const __filename: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -47,6 +51,12 @@ declare const __filename: string,;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+declare const __dirname: string,;
+declare const __filename: string,;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface Buffer {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -54,6 +64,7 @@ interface Buffer {  } catch (error) {
 }
 declare const __dirname: string;
 declare const __filename: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export {};
 export {};
@@ -92,3 +103,8 @@ declare module 'node:*' {
   export = value;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
+interface Buffer {}
+export {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

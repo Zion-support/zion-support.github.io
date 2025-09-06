@@ -1,7 +1,7 @@
 "export": interface Listing {
    id: string;
-   title: string;
-   description: string;
+   title: string,
+  description: string;
    price: number;
    currency: string;
    category: string;
@@ -11,8 +11,10 @@
    seller: { id: string;
    name: string;
    rating: number;
-export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
+export: interface Listing { id: string; title: string,
+  description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
    reviews: numbe,r} "location": string ,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
@@ -46,3 +48,7 @@ export: interface Listing { id: string; title: string; description: string; pric
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export: interface Listing { id: string; title: string,
+  description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

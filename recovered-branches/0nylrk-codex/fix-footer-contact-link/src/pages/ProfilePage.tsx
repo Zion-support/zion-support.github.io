@@ -103,23 +103,26 @@ export default function ProfilePage() {
 } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/components/ui/use-toast";
+import {SEO} from "@/components/SEO";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {HireNowCTA} from "@/components/profile/HireNowCTA";
+import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
 
-
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { profileId } = useParams() as { profileId?: string };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   useEffect(() => {
     const fetchProfile = async () => {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -133,43 +136,20 @@ export default function ProfilePage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setIsLoading(true),
       setIsError(false),
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
-          .eq("id", profileId)
-<<<<<<< HEAD
-
-          .single(),
-
-
-<<<<<<< HEAD
-=======
-          .single();
-          .single(),
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        if (error) {
-          throw error;
-        }
-
-=======
-      } finally {
-        setIsLoading (false);
-      }
-        if (error) {;
-          throw error;
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        setProfileData(data);
+          .eq("id", profileId)        setProfileData(data);
       } catch (error) {
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
           title: "Error"
           description: "Failed to load profile. Please try again later."
@@ -340,12 +320,36 @@ if ( {) {
           description: "Failed to load profile. Please try again later.",
           variant: "destructive",
         });
+=======
+          title: "Error"
+          description: "Failed to load profile. Please try again later."
+          variant: "destructive"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       } finally {
-        setIsLoading(false);
-      }
-<<<<<<< HEAD
-    };
+        setIsLoading(false)
+import { useState, useEffect } from "react",;
+import { useParams } from "react-router-dom",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/components/ui/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+import {;
+  Star,;
+  MapPin,;
+  Clock,;
+  Link as LinkIcon,;
+  Github,;
+  Twitter,;
+  Linkedin,;
+  CheckCircle2;
+} from "lucide-react",;
 
+<<<<<<< HEAD
     if (profileId) {
       fetchProfile();
     }
@@ -397,31 +401,34 @@ if ( {) {
       fetchProfile();
     }
   }, [profileId]),
+=======
+export default function ProfilePage() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true);
+      setIsError(false);
+      try {;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
-    )
-  }
-  if (isError |!profileData) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">Failed to load profile.</p>
-      </div>
     );
   }
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <>;
+  if (isError || !profileData) {;    <>;
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
@@ -458,6 +465,7 @@ if ( {) {
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -554,64 +562,14 @@ if ( {) {
   }
 ;
   return (;
+=======
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
-      <SEO;
-        title={`${profileData.full_name} | Talent Profile`}
-        description={profileData.bio || "View the profile of this talented individual."}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      />;
+      <SEO      />;
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  return (
-    <>;
-      <SEO
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          {/* Main Content Area */}
-          <div className="col-span-12 lg:col-span-8">;
-            {/* Profile Header */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <div className="flex items-start">;
-                {/* Avatar */}
-                <div className="relative mr-4">
-                  <Avatar className="w-24 h-24">
-                    {profileData.profile_picture_url ? (
-                      <AvatarImage
-                        src={profileData.profile_picture_url}
-                        alt={profileData.full_name}
-                      />
-                    ) : (
-                      <AvatarFallback>
-                        {profileData.full_name?.charAt(0)}
-                      </AvatarFallback>
-                    )}
-                  </Avatar>;
-                  {profileData && profileData.is_verified && (;
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-                    </div>;
-                  )}
-                </div>
-
-=======
-                </div>;
-                    {profileData.profile_picture_url ? (;
-                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />;
-                    ) :(;
-                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>;
-                    )}
-                  </Avatar>;
-                  {profileData.is_verified && (;
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-                    </div>;                  )}
-                </div>;
-                ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -626,11 +584,7 @@ if ( {) {
                     {/* Add Save/Unsave Button Here */}
                   </div>
 
-=======
                   </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">;
                     {profileData && profileData.location && (;
@@ -697,13 +651,9 @@ if ( {) {
                         {skill}
                       </Badge>
                     ))}
-<<<<<<< HEAD
-                  </div>;
-                </div>;
-              )}
-            </div>
-
+            </div>;
             {/* Bio Section */}
+<<<<<<< HEAD
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
 <<<<<<< HEAD
@@ -787,6 +737,12 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             {/* Portfolio Section */}
+=======
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+            </div>;            {/* Portfolio Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
@@ -798,21 +754,8 @@ if ( {) {
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors">;
-=======
-                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (;
-                  profileData.portfolio_links.map((link, index) => (;
-                    <a;
-                      key={index}
-                      href={link}
-                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors";
-                    >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                      <LinkIcon className="h-4 w-4 mr-2" />;
+              </div>;
+            </div>;                      <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
                     </a>
                   ))
@@ -848,26 +791,15 @@ if ( {) {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
               <div className="flex space-x-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  </Link>
-
-            {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
-              <div className="flex space-x-4">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                {profileData && profileData.github_link && (;
                   <a
                     href={profileData && profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
-<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   </Link>
@@ -888,6 +820,8 @@ if ( {) {
                   </a>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -915,6 +849,7 @@ if ( {) {
                     target="_blank"
                     rel="noopener noreferrer"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
@@ -929,23 +864,22 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  </Link>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 )}
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    className="text-zion-cyan hover:text-white transition-colors">;
                     <Linkedin className="h-6 w-6" />;
                   </a>;
                 )}
-<<<<<<< HEAD
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1356,3 +1290,7 @@ if (isLoading) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

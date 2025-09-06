@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -55,8 +58,11 @@ import {
   Smartphone
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
+<<<<<<< HEAD
 export default function Services() {;
 	const title = 'Services — Zion Tech Group';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 	return (
 		<Layout>;
@@ -320,6 +326,7 @@ export default function Services() {;
 					</div>;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 						{/* AI Services */}
+<<<<<<< HEAD
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
 							<div className='flex items-center gap-3 mb-3'>;
 								<Brain className='h-5 w-5 text-blue-600' />;
@@ -863,6 +870,8 @@ export default function Services() {;
 						</div>;
 					</div>;
 					<div className='mt-10 text-center text-sm text-gray-500'>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 						Need something custom? Visit our website at{' '}
 						<a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a>{' '}
 						or contact us directly: Email{' '}
@@ -885,6 +894,7 @@ export default function Services() {;
 					</div>;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 						{/* AI Content Creation Tools */}
+<<<<<<< HEAD
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>;
 							<div className='flex items-center gap-3 mb-3'>;
 								<Brain className='h-5 w-5 text-blue-600' />;
@@ -1004,10 +1014,13 @@ export default function Services() {;
 								Get Started Today;
 								<ArrowRight className='ml-2 h-4 w-4' />;
 							</Link>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 							<Link
 								href='https://ziontechgroup && ziontechgroup.com'
 								target='_blank'
 								rel='noreferrer'
+<<<<<<< HEAD
 								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'>;
 								Visit Live Demo;
 								<Globe className='ml-2 h-4 w-4' />;
@@ -1513,3 +1526,10 @@ export default function Services() {;
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

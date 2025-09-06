@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -11,14 +12,15 @@ export interface EmergingTechService {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+export interface EmergingTechService {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface EmergingTechService {
 
 export interface EmergingTechService {;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface EmergingTechService {
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -32,11 +34,13 @@ export interface EmergingTechService {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -61,6 +65,7 @@ export interface EmergingTechService {;
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
 <<<<<<< HEAD
 =======
@@ -552,6 +557,9 @@ export interface EmergingTechService2025 {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+    address: string;];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -568,6 +576,7 @@ export interface EmergingTechService2025 {
     customers: 18;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.8
 =======
 =======
@@ -578,13 +587,15 @@ export interface EmergingTechService2025 {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -627,8 +638,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Space Mining Platform',;
     tagline: 'Revolutionary asteroid mining and space resource extraction',;
     price: '$5,999',;
-    period: '/month',;
-    description: 'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',;
+    period: '/month',,
+  description: 'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',;
     features: [;
       'Automated asteroid detectionResource extraction algorithmsSpace logistics managementReal-time monitoring systemsResource processing automationSafety and compliance protocolsCost optimization algorithmsPerformance analytics',;
       'Integration with space agenciesGlobal space network';
@@ -671,8 +682,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Bio-Computing Platform',;
     tagline: 'Revolutionary computing that combines quantum mechanics with biological systems',;
     price: '$3,999',;
-    period: '/month',;
-    description: 'Breakthrough quantum bio-computing platform that integrates quantum computing with biological systems for unprecedented computational power and biological insights.',;
+    period: '/month',,
+  description: 'Breakthrough quantum bio-computing platform that integrates quantum computing with biological systems for unprecedented computational power and biological insights.',;
     features: [;
       'Quantum-biological hybrid processingDNA computing integrationBiological algorithm optimizationReal-time bio-monitoringQuantum bio-simulationPerformance analyticsIntegration with lab systemsResearch collaboration tools',;
       'Compliance and safety protocolsGlobal research network';
@@ -715,8 +726,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Brain-Computer Interface Platform',;
     tagline: 'Direct neural interface for human-computer interaction',;
     price: '$2,999',;
-    period: '/month',;
-    description: 'Advanced brain-computer interface platform that enables direct communication between the human brain and computers. Provides unprecedented control and interaction capabilities.',;
+    period: '/month',,
+  description: 'Advanced brain-computer interface platform that enables direct communication between the human brain and computers. Provides unprecedented control and interaction capabilities.',;
     features: [;
       'Neural signal processingBrain activity monitoringThought-to-action conversionReal-time feedback systemsMulti-modal interface supportSafety and compliance protocolsPerformance analyticsIntegration with applications',;
       'Research collaboration tools24/7 neural support';
@@ -759,8 +770,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Energy Platform',;
     tagline: 'Revolutionary energy solutions powered by quantum technology',;
     price: '$4,999',;
-    period: '/month',;
-    description: 'Advanced quantum energy platform that optimizes energy production, distribution, and consumption using quantum algorithms. Enables breakthrough energy efficiency and sustainability.',;
+    period: '/month',,
+  description: 'Advanced quantum energy platform that optimizes energy production, distribution, and consumption using quantum algorithms. Enables breakthrough energy efficiency and sustainability.',;
     features: [;
       'Quantum energy optimizationFusion power simulationGrid optimization algorithmsEnergy storage optimizationReal-time monitoringPredictive analyticsSustainability reportingCost optimization',;
       'Integration with power systemsGlobal energy network';
@@ -803,8 +814,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Autonomous Vehicle AI Platform',;
     tagline: 'Advanced AI systems for autonomous vehicle operation',;
     price: '$1,999',;
-    period: '/month',;
-    description: 'Comprehensive autonomous vehicle AI platform that provides advanced perception, decision-making, and control systems for self-driving vehicles. Ensures safety and reliability.',;
+    period: '/month',,
+  description: 'Comprehensive autonomous vehicle AI platform that provides advanced perception, decision-making, and control systems for self-driving vehicles. Ensures safety and reliability.',;
     features: [;
       'Advanced perception systemsAI decision makingReal-time control algorithmsSafety monitoringPerformance optimizationIntegration with vehiclesCompliance reportingAnalytics dashboard',;
       'Update and maintenance24/7 support';
@@ -847,8 +858,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Materials Discovery Platform',;
     tagline: 'Accelerate materials science with quantum computing',;
     price: '$3,499',;
-    period: '/month',;
-    description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI. Enables breakthrough discoveries in materials science.',;
+    period: '/month',,
+  description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI. Enables breakthrough discoveries in materials science.',;
     features: [;
       'Quantum materials simulationAI-powered discoveryProperty prediction algorithmsReal-time analysisCollaboration toolsPerformance monitoringIntegration with lab systemsCompliance reporting',;
       'Research analyticsGlobal materials database';
@@ -891,8 +902,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Robotics Platform',;
     tagline: 'Next-generation robotics powered by quantum computing',;
     price: '$2,499',;
-    period: '/month',;
-    description: 'Advanced quantum robotics platform that combines quantum computing with robotics for unprecedented performance, intelligence, and capabilities. Enables breakthrough robotic applications.',;
+    period: '/month',,
+  description: 'Advanced quantum robotics platform that combines quantum computing with robotics for unprecedented performance, intelligence, and capabilities. Enables breakthrough robotic applications.',;
     features: [;
       'Quantum-enhanced roboticsAI-powered control systemsAdvanced perceptionReal-time optimizationSafety protocolsPerformance monitoringIntegration frameworksAnalytics dashboard',;
       'Update and maintenance24/7 support';
@@ -935,8 +946,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Internet Security Platform',;
     tagline: 'Unbreakable internet security with quantum technology',;
     price: '$1,899',;
-    period: '/month',;
-    description: 'Revolutionary quantum internet security platform that provides unbreakable encryption and security for internet communications. Ensures absolute security in the quantum era.',;
+    period: '/month',,
+  description: 'Revolutionary quantum internet security platform that provides unbreakable encryption and security for internet communications. Ensures absolute security in the quantum era.',;
     features: [;
       'Quantum encryption protocolsUnbreakable securityReal-time monitoringThreat detectionCompliance reportingPerformance analyticsIntegration APIsGlobal security network',;
       '24/7 monitoringExpert support';
@@ -979,8 +990,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Logistics Platform',;
     tagline: 'Optimize supply chains with quantum computing power',;
     price: '$1,299',;
-    period: '/month',;
-    description: 'Advanced quantum logistics platform that optimizes supply chains, routes, and logistics operations using quantum computing. Provides unprecedented efficiency and cost savings.',;
+    period: '/month',,
+  description: 'Advanced quantum logistics platform that optimizes supply chains, routes, and logistics operations using quantum computing. Provides unprecedented efficiency and cost savings.',;
     features: [;
       'Quantum route optimizationSupply chain optimizationReal-time trackingCost optimizationPerformance analyticsIntegration APIsCompliance reportingGlobal logistics network',;
       '24/7 monitoringExpert support';
@@ -1023,8 +1034,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Metaverse AI Development Platform',;
     tagline: 'Build intelligent metaverse experiences with AI',;
     price: '$799',;
-    period: '/month',;
-    description: 'Comprehensive metaverse AI development platform that enables creation of intelligent, interactive, and immersive virtual worlds. Combines AI with metaverse technology for breakthrough experiences.',;
+    period: '/month',,
+  description: 'Comprehensive metaverse AI development platform that enables creation of intelligent, interactive, and immersive virtual worlds. Combines AI with metaverse technology for breakthrough experiences.',;
     features: [;
       'AI-powered metaverse creationIntelligent NPCs and avatarsReal-time interaction systemsContent generationPerformance optimizationIntegration frameworksAnalytics dashboardMulti-platform support',;
       'Developer tools24/7 support';
@@ -1067,8 +1078,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Machine Learning Platform',;
     tagline: 'Unlock quantum advantage in machine learning',;
     price: '$1,299',;
-    period: '/month',;
-    description: 'Advanced quantum machine learning platform that combines quantum computing with classical ML algorithms to solve complex problems faster than classical computers.',;
+    period: '/month',,
+  description: 'Advanced quantum machine learning platform that combines quantum computing with classical ML algorithms to solve complex problems faster than classical computers.',;
     features: [;
       'Quantum algorithms for MLHybrid quantum-classical trainingQuantum feature mappingQuantum neural networksPerformance benchmarkingMulti-qubit supportCloud quantum accessExpert consultation',;
       'Custom algorithm developmentResearch collaboration';
@@ -1111,8 +1122,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Neuromorphic Computing Platform',;
     tagline: 'Brain-inspired computing for the future',;
     price: '$899',;
-    period: '/month',;
-    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure for efficient, low-power AI processing.',;
+    period: '/month',,
+  description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure for efficient, low-power AI processing.',;
     features: [;
       'Spiking neural networksNeuromorphic hardware supportLow-power AI processingReal-time learningAdaptive algorithmsHardware accelerationPerformance optimizationResearch tools',;
       'Custom network designExpert consultation';
@@ -1155,8 +1166,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Synthetic Biology Platform',;
     tagline: 'Design and engineer biological systems',;
     price: '$1,199',;
-    period: '/month',;
-    description: 'Advanced synthetic biology platform that provides tools for designing, simulating, and engineering biological systems for various applications.',;
+    period: '/month',,
+  description: 'Advanced synthetic biology platform that provides tools for designing, simulating, and engineering biological systems for various applications.',;
     features: [;
       'DNA sequence designBiological circuit designSimulation and modelingProtocol automationStrain engineeringMetabolic pathway designSafety and complianceResearch collaboration',;
       'Custom design toolsExpert consultation';
@@ -1199,8 +1210,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     name: 'Quantum Metaverse Platform',;
     tagline: 'Experience the metaverse with quantum-enhanced capabilities',;
     price: '$999',;
-    period: '/month',;
-    description: 'Revolutionary quantum metaverse platform that provides quantum-enhanced virtual experiences, improved graphics, and advanced AI interactions.',;
+    period: '/month',,
+  description: 'Revolutionary quantum metaverse platform that provides quantum-enhanced virtual experiences, improved graphics, and advanced AI interactions.',;
     features: [;
       'Quantum-enhanced graphicsAI-powered interactionsReal-time quantum processingAdvanced physics simulationMulti-user experiencesVR/AR integrationPerformance optimizationCustom world creation',;
       'API for developers24/7 quantum metaverse access';
@@ -1238,6 +1249,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
@@ -1256,10 +1268,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
+];  }
 ];
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -37,11 +38,17 @@ export type MilestoneStatus =
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import {supabase} from '@/integrations / supabase / client';
+export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Milestone {
 import {supabase} from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 
 export interface Milestone {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -56,6 +63,9 @@ export interface Milestone {;
 export interface Milestone {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   project_id: string;
   title: string;
@@ -64,6 +74,7 @@ export interface Milestone {
   amount: number;
   status: MilestoneStatus;
   created_at: string;
+<<<<<<< HEAD
   updated_at: string;
 <<<<<<< HEAD
 
@@ -95,12 +106,16 @@ export interface MilestoneActivity {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   created_by: string
+=======
+  updated_at: string;  created_by: string
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   deliverables?: any[]
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface MilestoneActivity {
 
 export interface MilestoneActivity {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -112,6 +127,8 @@ export interface MilestoneActivity {;
 export interface MilestoneActivity {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   milestone_id: string;
   user_id: string;
@@ -121,6 +138,7 @@ export interface MilestoneActivity {
   comment?: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,3 +200,7 @@ export interface MilestoneActivity {;
   };
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -36,8 +36,8 @@ Object.entries(seoChecks).forEach(([name, check]) => {
     console.log(`❌ ${name}: ERROR - ${error.message}`);
   }
 });
-<<<<<<< HEAD
 console.log('🎉 SEO monitoring completed!');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/seo-monitor-enhanced.js
 ========
@@ -51,14 +51,14 @@ console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTa
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/seo-monitor-enhanced.js
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
@@ -66,6 +66,8 @@ console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTa
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 <<<<<<<< HEAD:backup-problematic-files/scripts/seo-monitor-enhanced.js

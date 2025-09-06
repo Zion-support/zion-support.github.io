@@ -28,17 +28,26 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
+=======
+import { Input } from "@/components/ui/input",
+import { toast } from "@/hooks/use-toast",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
@@ -105,7 +114,6 @@ function InvoiceHistory() {
   const getBadgeForStatus = (status: string, ) =>: any {
     switch (status) {
 
-
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
@@ -121,8 +129,11 @@ function InvoiceHistory() {
       amount: "$1,999.00",
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       status: "paid",
       period: "Apr 2025"},
     {
@@ -132,8 +143,11 @@ function InvoiceHistory() {
       amount: "$1,999.00",
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       status: "paid",
       period: "Mar 2025"},
     {
@@ -143,8 +157,11 @@ function InvoiceHistory() {
       amount: "$1,999.00",
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       status: "paid",
       period: "Feb 2025"},
     {
@@ -154,15 +171,17 @@ function InvoiceHistory() {
       amount: "$1,999.00",
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       status: "paid",
       period: "Jan 2025"},
     {
       id: "INV-1229",
 <<<<<<< HEAD
 =======
-
 
     toast({
       title: "Downloading invoice"
@@ -323,10 +342,18 @@ export function InvoiceHistory() {;
   const handleDownloadInvoice = (invoiceId: string) => {;
     // In a real app, this would trigger a download of the invoice PDF;
     toast({;
+<<<<<<< HEAD
       title: "Downloading invoice",;
       description: `Downloading invoice ${invoiceId} as PDF.`});
   },;
   const getBadgeForStatus = (status: string) => {;
+=======
+      title: "Downloading invoice",,
+  description: `Downloading invoice ${invoiceId} as PDF.`})
+};
+
+  const getBadgeForStatus = (status: string,) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     switch (status) {;
 <<<<<<< HEAD
       case "paid": return <Badge className="bg-green-500">Paid</Badge>,;
@@ -342,6 +369,7 @@ export function InvoiceHistory() {;
 
   )
 }
+<<<<<<< HEAD
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return <Badge variant="destructive">Overdue</Badge>;
@@ -423,3 +451,10 @@ export function InvoiceHistory() {;
   );
 }
 ;
+=======
+      case "paid": return <Badge className="bg - green-500">Paid</Badge>;
+        return <Badge variant="destructive">Overdue</Badge>;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -4,15 +4,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 =======
 
-<<<<<<< HEAD
-import React from './react';
-import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-interface QuoteStatusCardsProps {
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {
   status_counts: {
 
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -112,24 +108,13 @@ interface QuoteStatusCardsProps {_statusCounts: {
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-interface QuoteStatusCardsProps {
-<<<<<<< HEAD
-  statusCounts: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   status_counts: {
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -148,6 +133,8 @@ import { Badge } from "@/components/ui/badge",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -248,6 +235,7 @@ interface QuoteStatusCardsProps {
         </CardContent>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   );
 }
@@ -255,19 +243,13 @@ interface QuoteStatusCardsProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
 }) => {;
-  return (
-=======
-<<<<<<< HEAD
-=======
-    </div>
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  )
+  return (  )
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -283,6 +265,7 @@ interface QuoteStatusCardsProps {;
 }
 ;
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 =======
@@ -336,151 +319,23 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Unreviewed quote requests;
+=======
+  return (;            Unreviewed quote requests;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </p>;
         </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
-            In Review;
-            <Badge className="bg - yellow - 500">{status_counts.in_review}</Badge>;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            Quotes being evaluated;
-          </p>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
-            Responded;
-            <Badge className="bg - purple - 500">{status_counts.responded}</Badge>;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            Quotes with responses sent;
-          </p>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
-            Accepted;
-            <Badge className="bg - green - 500">{status_counts.accepted}</Badge>;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            Successfully converted quotes;
-          </p>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
-            Closed;
-            <Badge className="bg - gray - 500">{status_counts.closed}</Badge>;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            Finalized or declined quotes;
-          </p>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    </div>);
-}
-;
-
-<<<<<<< HEAD
-=======
-
-    </div>
-
-    </div>;
-);
+      </Card>
 };
-
-
-export default QuoteStatusCards;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-    </div>
-
-    </div>;
-);
-=======
-  );
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-};
-
 
 export default QuoteStatusCards;
 
     </div>);
 }
 ;
-    closed: number;};
+    closed: number
+};
 }
 
-<<<<<<< HEAD
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCounts}) => {_return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
@@ -593,11 +448,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
         </CardContent>;
       </Card>;
     </div>;
-);
+)
 };
 
 export default QuoteStatusCards;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

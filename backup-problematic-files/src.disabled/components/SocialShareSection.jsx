@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/SocialShareSection.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/SocialShareSection.jsx
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
@@ -38,3 +39,6 @@ export: function SocialShareSection () { const socialPlatforms = [ { name: "Twit
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/SocialShareSection.jsx
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/SocialShareSection.jsx

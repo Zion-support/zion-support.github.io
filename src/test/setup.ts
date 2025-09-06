@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 // Test setup file for Jest
 import "@testing-library/jest-dom";
@@ -12,6 +14,7 @@ Object.defineProperty(window, "matchMedia", {
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
@@ -147,8 +150,11 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ) {
       return;
     }
@@ -178,6 +184,10 @@ afterAll(() => {
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
+<<<<<<< HEAD
+});
+=======
 });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

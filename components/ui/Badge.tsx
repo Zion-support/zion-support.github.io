@@ -82,6 +82,7 @@ function Badge() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export { Badge, badge_variants }
@@ -93,3 +94,6 @@ export { Badge, badge_variants }
 
 export { Badge, badgeVariants };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

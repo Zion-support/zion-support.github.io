@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 module && module.exports = {
-  darkMode: ["class"],
-
-=======
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  content: [
+  darkMode: ["class"],  content: [
     "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
   ],
   theme: {
@@ -52,6 +41,7 @@ module.exports = {
         },
       },
       borderRadius: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   plugins: []}
@@ -175,3 +165,6 @@ module.exports = {;
   plugins: [],
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  plugins: []}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

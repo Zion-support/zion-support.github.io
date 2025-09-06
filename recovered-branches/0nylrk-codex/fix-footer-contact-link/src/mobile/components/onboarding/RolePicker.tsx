@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -25,12 +26,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -38,9 +37,8 @@ import { Briefcase, Users, Check } from './lucide-react';
 ;
 type UserRole = "talent" | "client" | null;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -550,3 +548,9 @@ space-y-3 mt-6"> <Card className= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Briefcase, Users, Check } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -62,8 +62,6 @@ import {
 <<<<<<< HEAD
 =======
 
-
-
   Zap;
   Shield,
   BarChart3,
@@ -91,10 +89,13 @@ import {
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -401,11 +402,14 @@ import {
                     </p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -614,9 +618,9 @@ import {
                         <div className='text - sm text - gray - 300 max - w-xs'>;
                           {service.use_case}
                         </div>                      </div>;
-                      <div className="text - right">;
-                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;
-                        <div className="text - sm text - gray - 300 max - w-xs">{service.use_case}</div>;
+                      <div className="text-right">;
+                        <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs">{service.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;
@@ -636,6 +640,7 @@ import {
             implementation support.;
           </p>;
 
+<<<<<<< HEAD
 
 
 
@@ -644,6 +649,8 @@ import {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

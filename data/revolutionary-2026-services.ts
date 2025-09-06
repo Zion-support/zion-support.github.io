@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -1236,6 +1237,8 @@ export interface Revolutionary2026Service {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   contactInfo: {
       
     mobile: string, email: string,
@@ -1248,7 +1251,10 @@ export interface Revolutionary2026Service {
   rating: number,
   reviews: number
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
@@ -2343,7 +2349,7 @@ export interface Revolutionary2026Service {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -2378,9 +2384,6 @@ export interface Revolutionary2026Service {;
   rating: number,;
   reviews: number;
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -2409,10 +2412,8 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
 
@@ -2434,11 +2435,9 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
 ];
 =======
     rating: 4.8,
-    reviews: 25;
-<<<<<<< HEAD
-=======
-
+    reviews: 25;  }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3123,3 +3122,5 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

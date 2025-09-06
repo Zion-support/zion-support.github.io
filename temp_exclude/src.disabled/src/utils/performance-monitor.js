@@ -8,10 +8,9 @@ if (typeof window !== 'undefined') { window && window.addEventListener('load',()
 // Performance monitoring
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/utils/performance-monitor.js
 if (typeof window !== 'undefined') {
-<<<<<<< HEAD
-<<<<<<< HEAD
   window.addEventListener('load', () => {
     const perfData = performance.getEntriesByType('navigation')[0];
+<<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
 =======
 <<<<<<< HEAD
@@ -75,3 +74,8 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/utils/performance-monitor.js
+=======
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/utils/performance-monitor.js

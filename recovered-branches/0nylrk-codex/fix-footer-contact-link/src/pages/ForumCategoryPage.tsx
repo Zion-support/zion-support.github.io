@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -17,6 +20,7 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -94,23 +98,15 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 <<<<<<< HEAD
 
     adminOnly: false,
-    icon: "Briefcase"
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-    adminOnly: false,
+
+    adminOnly: false
+
+    icon: "Briefcase"
+  }    adminOnly: false,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: "Briefcase"
   },
-    adminOnly: false,
-    icon: "Briefcase"
-  },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    adminOnly: false,
-    icon: "Briefcase"
-  },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "project-help": {
 
     id: "project-help"
@@ -118,6 +114,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
+<<<<<<< HEAD
     icon: "MessageSquare"
 <<<<<<< HEAD
 
@@ -305,37 +302,13 @@ const postsByCategory: Record<string ForumPost[]> = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+=======
+    icon: "MessageSquare"    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      author_id: "user6",
-      author_name: "James Wilson",
-      category_id: "getting - hired",
-      tags: ["portfolio", "projects", "examples"];
-      created_at: "2025 - 04 - 07T11:30:00Z",
-      updated_at: "2025 - 04 - 07T11:30:00Z",
-      upvotes: 19,
-      downvotes: 2,
-      reply_count: 6;
-<<<<<<< HEAD
-
-=======
-=======
-      authorId: "user6"
-      authorName: "James Wilson"
-      categoryId: "getting-hired"
-      tags: ["portfolio", "projects", "examples"];
-      createdAt: "2025-04-07T11:30:00Z"
-      updatedAt: "2025-04-07T11:30:00Z"
-      upvotes: 19
-      downvotes: 2
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -364,19 +337,22 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
-<<<<<<< HEAD
 
       replyCount: 6
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   ];
   "project - help": [;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -574,10 +550,12 @@ const postsByCategory: Record<string ForumPost[]> = {
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
-<<<<<<< HEAD
       author_id: "user7",
       author_name: "Lisa Park",
       category_id: "ai - tools",
@@ -587,6 +565,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 31,
       downvotes: 0,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       replyCount: 9
@@ -678,10 +657,12 @@ const postsByCategory: Record<string ForumPost[]> = {
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
+=======
+      replyCount: 9    {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
       content: "I think the job matching could be improved by considering these additional factors...",
-<<<<<<< HEAD
       author_id: "user8",
       author_name: "Ryan Mitchell",
       category_id: "feedback",
@@ -691,6 +672,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 17,
       downvotes: 3,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       replyCount: 5
@@ -2316,3 +2298,13 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      replyCount: 5  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;              value={searchQuery}
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+              value={searchQuery}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

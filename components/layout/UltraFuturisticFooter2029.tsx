@@ -415,8 +415,11 @@ const UltraFuturisticFooter2029 = () => {
 
           {/* Service Categories */}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -536,8 +539,11 @@ const UltraFuturisticFooter2029 = () => {
             </div>;
           </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -554,8 +560,11 @@ const UltraFuturisticFooter2029 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Link
                   key={link.name}
                   href={link.href}
@@ -629,6 +638,7 @@ const UltraFuturisticFooter2029 = () => {
                         </Link>;
                       </li>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -638,6 +648,8 @@ const UltraFuturisticFooter2029 = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Footer Sections */}
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
@@ -697,22 +709,22 @@ const UltraFuturisticFooter2029 = () =>: any {
             {/* Social Links */}
             <div className='flex space - x-4'>;
               {social_links.map (social => (            {/* Contact Information */}
-            <div className="space - y-3 mb - 6">;
-              <div className="flex items - center space - x-3 text - gray - 400 hover:text - white transition - colors">;
-                <Phone className="w - 4 h - 4" />;
-                <a href={`tel:${contact_info.mobile}`} className="text - sm">;
+            <div className="space-y-3 mb-6">;
+              <div className="flex items - center space - x-3 text - gray - 400 hover:text-white transition-colors">;
+                <Phone className="w-4 h-4" />;
+                <a href={`tel:${contact_info.mobile}`} className="text-sm">;
                   {contact_info.mobile}
                 </a>;
               </div>;
-              <div className="flex items - center space - x-3 text - gray - 400 hover:text - white transition - colors">;
-                <Mail className="w - 4 h - 4" />;
-                <a href={`mailto:${contact_info.email}`} className="text - sm">;
+              <div className="flex items - center space - x-3 text - gray - 400 hover:text-white transition-colors">;
+                <Mail className="w-4 h-4" />;
+                <a href={`mailto:${contact_info.email}`} className="text-sm">;
                   {contact_info.email}
                 </a>;
               </div>;
-              <div className="flex items - center space - x-3 text - gray - 400">;
-                <MapPin className="w - 4 h - 4" />;
-                <span className="text - sm">{contact_info.address}</span>;
+              <div className="flex items - center space - x-3 text-gray-400">;
+                <MapPin className="w-4 h-4" />;
+                <span className="text-sm">{contact_info.address}</span>;
               </div>;
             </div>;
             {/* Social Links */}
@@ -732,7 +744,7 @@ const UltraFuturisticFooter2029 = () =>: any {
                   rel="noopener noreferrer";
                   className={`p - 2 bg - slate - 800 / 50 rounded - lg text - gray - 400 ${social.color} transition - all duration - 200 hover:bg - slate - 700 / 50`}
                 >;
-                  <social.icon className="w - 5 h - 5" />;
+                  <social.icon className="w-5 h-5" />;
                 </a>))}
             </div>;
           </div>;
@@ -756,15 +768,15 @@ const UltraFuturisticFooter2029 = () =>: any {
                         >;
                           <ArrowRight className='w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200' />                          <span>{service.name}</span>              {service_categories.map ((category, index) => (
                 <div key={index}>;
-                  <h5 className="text - sm font - medium text - gray - 300 mb - 3">{category.title}</h5>;
-                  <ul className="space - y-2">;
+                  <h5 className="text - sm font - medium text - gray-300 mb-3">{category.title}</h5>;
+                  <ul className="space-y-2">;
                     {category.services.map ((service) => (
                       <li key={service.name}>;
                         <Link;
                           href={service.href}
-                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200 flex items - center space - x-2 group";
+                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200 flex items-center space-x-2 group";
                         >;
-                          <ArrowRight className="w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200" />;
+                          <ArrowRight className="w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition-opacity duration-200" />;
                           <span>{service.name}</span>;
                         </Link>;
                       </li>))}
@@ -787,9 +799,9 @@ const UltraFuturisticFooter2029 = () =>: any {
                   <link.icon className='w - 4 h - 4' />                  <span>{link.name}</span>                <Link;
                   key={link.name}
                   href={link.href}
-                  className="flex items - center space - x-2 text - sm text - gray - 400 hover:text - white transition - colors duration - 200 p - 2 rounded - lg hover:bg - slate - 800 / 50";
+                  className="flex items - center space - x-2 text - sm text - gray - 400 hover:text - white transition - colors duration - 200 p - 2 rounded - lg hover:bg-slate-800 / 50";
                 >;
-                  <link.icon className="w - 4 h - 4" />;
+                  <link.icon className="w-4 h-4" />;
                   <span>{link.name}</span>;
                 </Link>))}
             </div>;
@@ -812,7 +824,7 @@ const UltraFuturisticFooter2029 = () =>: any {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                           href={link.href}
-                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200";
+                          className="text - sm text - gray - 400 hover:text - white transition-colors duration-200";
                         >;
                           {link.name}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -964,8 +976,11 @@ export default UltraFuturisticFooter2029;  )
 export default UltraFuturisticFooter2029;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default UltraFuturisticFooter2029;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export default UltraFuturisticFooter2029;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

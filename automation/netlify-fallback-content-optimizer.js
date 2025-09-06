@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Basic fallback logic const result = {
   status_code: 200;
@@ -42,6 +43,13 @@ message: error && error.message
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  statusCode: 500;
+body: JSON && JSON.stringify ({
+  error: 'Fallback execution failed';
+
+#!/usr/bin/env node
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 
 // Netlify Function Fallback: content-optimizer
@@ -56,13 +64,14 @@ body: JSON.stringify ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     // // // console.log('content-optimizer fallback executed locally'),
-<<<<<<< HEAD
-=======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
         // Basic fallback logic
         const result = {
@@ -71,6 +80,7 @@ body: JSON.stringify ({
 
                 message: 'content-optimizer executed locally as fallback'
                 timestamp: new Date().toISOString()
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -87,14 +97,17 @@ message: error && error.message
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-#!/usr/bin/env node
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
+#!/usr/bin/env node
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Netlify Function Fallback: content-optimizer
 // This is a local fallback when the main function is unavailable
@@ -102,6 +115,7 @@ message: error && error.message
 exports.handler = async (_event, _context) => {
     // // // console.log('content-optimizer fallback executed locally'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -113,12 +127,16 @@ exports.handler = async (_event, _context) => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
         // Basic fallback logic;
         const result = {
 
         console && console.error('Fallback execution error:', error),
         return {
+<<<<<<< HEAD
 <<<<<<< HEAD
             statusCode: 500
             body: JSON.stringify({
@@ -179,6 +197,9 @@ exports.handler = async (_event, _context) => {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 // Netlify Function Fallback: content-optimizer;
 // This is a local fallback when the main function is unavailable;
@@ -206,6 +227,7 @@ exports.handler = async (_event, _context) => {;
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 },;
 
@@ -218,3 +240,5 @@ exports.handler = async (_event, _context) => {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

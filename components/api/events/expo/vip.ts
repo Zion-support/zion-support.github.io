@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
   [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
 =======
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ export default async function handler(
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 const allowlist = new Set < string>(
   [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
@@ -44,6 +47,7 @@ function handler() {
 }
   res.status (200).json ({ allowed: allowlist.has (address) });
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -114,3 +118,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

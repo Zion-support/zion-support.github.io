@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
@@ -21,11 +22,14 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+<<<<<<< HEAD
 </Component>'
 <<<<<<< HEAD
 =======
@@ -67,13 +71,20 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 =======
 =======
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+=======
+</Component>'import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

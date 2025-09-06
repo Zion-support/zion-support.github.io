@@ -25,5 +25,10 @@ const glob = require('glob')
       const importRegex = /import\s+.*\s+from\s+['"]([^'')]
           "type"
           "description"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

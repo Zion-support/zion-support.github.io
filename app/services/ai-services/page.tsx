@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import Link from 'next/link';
@@ -1634,25 +1635,41 @@ function MetricCard({
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
+  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function AIServicesPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI Services & Solutions
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          AI Services
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
           Harness the power of artificial intelligence to automate processes,
           gain insights, and transform your business with cutting-edge AI
           solutions.
+=======
+          Transform your business with cutting-edge artificial intelligence solutions. 
+          From custom LLM development to computer vision, we deliver enterprise-grade AI that drives real results.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Services Consultation"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Get Free AI Consultation
+            Get AI Consultation
           </a>
           <a
             href="tel:+13024640950"
@@ -1663,9 +1680,10 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-      {/* AI Services Grid */}
+      {/* Core AI Services */}
       <section className="py-12">
         <div className="text-center mb-12">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Our AI Services
           </h2>
@@ -1732,17 +1750,24 @@ export default function AIServicesPage() {
               "Customer Segmentation",
               "Performance Optimization",
             ]}
+=======
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Solutions</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive AI services designed to accelerate your digital transformation and drive innovation.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AIServiceCard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             icon="🧠"
-            href="/services/ai-data-analytics"
-          />
-          <AIService
-            title="AI Code Reviewer"
-            description="Automated code analysis and quality assurance with AI-powered suggestions and security scanning"
-            price="Starting at $1,000"
+            title="Custom LLM Development"
+            description="Build and deploy large language models tailored to your specific business needs and use cases."
             features={[
-              "Code quality analysis",
-              "Security vulnerability detection",
+              "Custom model training",
+              "Fine-tuning for specific domains",
+              "API integration",
               "Performance optimization",
+<<<<<<< HEAD
               "Best practice recommendations",
               "CI/CD integration",
             ]}
@@ -1752,14 +1777,18 @@ export default function AIServicesPage() {
               "Performance Reviews",
               "Team Training",
             ]}
-            icon="🔍"
-            href="/services/ai-code-reviewer"
+=======
+              "Cost-effective deployment"
+            ]}
+            price="From $15,000"
           />
-          <AIService
-            title="AI Meeting Assistant"
-            description="Intelligent meeting transcription, summarization, and action item extraction"
-            price="Starting at $2,000"
+          <AIServiceCard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            icon="🔍"
+            title="RAG Systems"
+            description="Retrieval-Augmented Generation systems that combine knowledge bases with LLMs for accurate, contextual responses."
             features={[
+<<<<<<< HEAD
               "Real-time transcription",
               "Meeting summaries",
               "Action item extraction",
@@ -1774,12 +1803,22 @@ export default function AIServicesPage() {
             ]}
             icon="🎤"
             href="/services/ai-meeting-assistant"
+=======
+              "Knowledge base integration",
+              "Vector database setup",
+              "Context-aware responses",
+              "Real-time data updates",
+              "Custom embeddings"
+            ]}
+            price="From $8,000"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
-          <AIService
-            title="AI Customer Insights"
-            description="Customer behavior analysis and personalized recommendations using advanced AI algorithms"
-            price="Starting at $2,500"
+          <AIServiceCard
+            icon="🤖"
+            title="AI Agents & Automation"
+            description="Intelligent agents that automate complex workflows and decision-making processes."
             features={[
+<<<<<<< HEAD
               "Customer segmentation",
               "Behavior prediction",
               "Personalized recommendations",
@@ -1794,11 +1833,20 @@ export default function AIServicesPage() {
             ]}
             icon="👥"
             href="/services/ai-customer-insights"
+=======
+              "Workflow automation",
+              "Decision trees",
+              "Multi-agent systems",
+              "Integration with existing tools",
+              "Continuous learning"
+            ]}
+            price="From $12,000"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
-          <AIService
-            title="Computer Vision Solutions"
-            description="Image and video analysis using advanced computer vision and deep learning models"
-            price="Starting at $4,000"
+          <AIServiceCard
+            icon="👁️"
+            title="Computer Vision"
+            description="Advanced image and video analysis solutions for object detection, recognition, and processing."
             features={[
               "Object detection",
               "Image classification",
@@ -1812,14 +1860,19 @@ export default function AIServicesPage() {
               "Medical Imaging",
               "Retail Analytics",
             ]}
+<<<<<<< HEAD
             icon="👁️"
             href="/services/computer-vision-solutions"
+=======
+            price="From $10,000"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
-          <AIService
-            title="AI Document Processing"
-            description="Intelligent document analysis, extraction, and processing using OCR and NLP technologies"
-            price="Starting at $2,000"
+          <AIServiceCard
+            icon="🔧"
+            title="MLOps & Model Deployment"
+            description="End-to-end machine learning operations including model training, deployment, and monitoring."
             features={[
+<<<<<<< HEAD
               "OCR text extraction",
               "Document classification",
               "Data validation",
@@ -1834,12 +1887,22 @@ export default function AIServicesPage() {
             ]}
             icon="📄"
             href="/services/ai-document-processor"
+=======
+              "Model versioning",
+              "Automated training pipelines",
+              "A/B testing",
+              "Performance monitoring",
+              "Scalable deployment"
+            ]}
+            price="From $20,000"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
-          <AIService
-            title="AI Email Optimizer"
-            description="AI-powered email marketing optimization with smart subject lines and content personalization"
-            price="Starting at $99"
+          <AIServiceCard
+            icon="💬"
+            title="Natural Language Processing"
+            description="Text analysis, sentiment analysis, and language understanding solutions for your applications."
             features={[
+<<<<<<< HEAD
               "Subject line optimization",
               "Content personalization",
               "Send time optimization",
@@ -1854,10 +1917,20 @@ export default function AIServicesPage() {
             ]}
             icon="📧"
             href="/services/ai-email-optimizer"
+=======
+              "Sentiment analysis",
+              "Text classification",
+              "Named entity recognition",
+              "Language translation",
+              "Text summarization"
+            ]}
+            price="From $6,000"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* AI Technologies */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
@@ -2063,6 +2136,8 @@ export default function AIServicesPage() {
         </div>
       </section>
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
         <h2 className="text-3xl font-bold mb-4">
@@ -2074,10 +2149,10 @@ export default function AIServicesPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Services Project Inquiry"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Consultation"
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Start Your AI Journey
+            Get Free Consultation
           </a>
           <a
             href="tel:+13024640950"
@@ -2087,11 +2162,45 @@ export default function AIServicesPage() {
           </a>
         </div>
         <div className="mt-8 text-sm">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>Email: kleber@ziontechgroup.com</p>
+          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>📧 kleber@ziontechgroup.com</p>
         </div>
       </section>
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+function AIServiceCard({ icon, title, description, features, price }: {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2 mb-6">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <div className="text-lg font-semibold text-blue-600 mb-4">{price}</div>
+      <a
+        href="mailto:kleber@ziontechgroup.com?subject=AI Service: {title}"
+        className="w-full block text-center py-2 px-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+      >
+        Get Quote
+      </a>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -38,8 +38,11 @@ export default async function handler(
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return res.status(400).json({ error: 'Missing required fields' });
   }
 

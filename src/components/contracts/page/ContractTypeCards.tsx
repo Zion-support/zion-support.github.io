@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -10,15 +11,21 @@ interface ContractTypeCardsProps {
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
         <CardHeader>
+<<<<<<< HEAD
           <CardTitle className="flex items-center gap-2">
 =======
 <CardTitle className="flex items-center gap-2">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <FileText className="h-5 w-5" />
+=======
+          <CardTitle className="flex items-center gap-2">            <FileText className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Standard Contracts
           </CardTitle>
           <CardDescription>
@@ -29,8 +36,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -39,6 +49,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
           <Button variant="outline" onClick={onStandardClick}>
 <<<<<<< HEAD
 =======
@@ -57,6 +68,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
@@ -73,6 +86,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
             Deploy agreements on Ethereum or Polygon with escrow capabilities
           </CardDescription>
         </CardHeader>
+<<<<<<< HEAD
         <CardContent>
           <ul className="space-y-2">
             <li className="text-sm">✓ All standard contract features</li>
@@ -123,11 +137,17 @@ interface ContractTypeCardsProps {;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
+=======
+        <CardContent>    <div className="grid md:grid-cols-2 gap-6 mb-10">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD
             Standard Contracts;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </CardTitle>;
           <CardDescription>;
             Generate traditional legal agreements for your projects;
@@ -142,8 +162,24 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>;
         </CardContent>;
         <CardFooter>;
+<<<<<<< HEAD
           <Button variant="outline" onClick={onStandardClick}>;
             Create Standard Contract;
+=======
+          <Button variant='outline' on_click={onStandardClick}>            Create Standard Contract;
+          </Button>;
+        </CardFooter>;
+      </Card>;
+          <ul className="space-y-2">;
+            <li className="text-sm">✓ Legally binding templates</li>;
+            <li className="text-sm">✓ Milestone - based payment terms</li>;
+            <li className="text-sm">✓ IP rights and confidentiality clauses</li>;
+            <li className="text-sm">✓ DocuSign integration</li>;
+          </ul>;
+        </CardContent>;
+        <CardFooter>;
+          <Button variant="outline" on_click={onStandardClick}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         </CardFooter>;
       </Card>;
@@ -154,7 +190,19 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
               <ShieldCheck className="h-5 w-5 text-primary" />;
               Smart Contracts;
             </CardTitle>;
+<<<<<<< HEAD
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
+=======
+            <span className='px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
+        <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded-t-lg">;
+          <div className="flex justify - between items-center">;
+            <CardTitle className="flex items - center gap-2">;
+              <ShieldCheck className="h - 5 w - 5 text-primary" />;
+              Smart Contracts;
+            </CardTitle>;
+            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded-full">;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Blockchain Powered;
             </span>;
           </div>;
@@ -163,6 +211,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ All standard contract features</li>;
             <li className="text-sm">✓ Automatic escrow payment release</li>;
@@ -191,3 +240,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+          </Button>;
+        </CardFooter>;
+      </Card>;
+    </div>;
+  )
+};
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

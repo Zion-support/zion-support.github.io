@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
 =======
@@ -40,6 +40,8 @@ import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   FormField;
@@ -49,8 +51,8 @@ import {
   FormDescription;
   FormMessage
 } from "@/components/ui/form",
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import {
 =======
 <<<<<<< HEAD
@@ -112,13 +114,15 @@ import { ContractFormValues } from "./ContractForm",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PaymentTermsFieldsProps {
+=======
+import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   form: UseFormReturn<ContractFormValues>
   talent: TalentProfile
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
-<<<<<<< HEAD
 
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
@@ -129,6 +133,7 @@ import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -152,6 +157,8 @@ export function PaymentTermsFields({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }: PaymentTermsFieldsProps) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -175,6 +182,7 @@ export function PaymentTermsFields({
               </Select>
               <FormMessage />
             </FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -208,23 +216,27 @@ import { ContractFormValues } from "./ContractForm",;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface PaymentTermsFieldsProps {;
   form: UseFormReturn<ContractFormValues>,;
   talent: TalentProfile,;
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
 }
-<<<<<<< HEAD
 
 export function PaymentTermsFields(): any ({ ;
   form;
   talent;
   handleMilestonesGenerated ;
 }: PaymentTermsFieldsProps) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField
@@ -258,6 +270,7 @@ export /**
 function PaymentTermsFields() {
   return (
     <>;
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
 <<<<<<< HEAD
 =======
@@ -447,11 +460,14 @@ export function PaymentTermsFields({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Project Milestones */}
+=======
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;      {/* Project Milestones */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -492,63 +508,31 @@ export function PaymentTermsFields({ ;
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-
-                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            projectName={form && form.getValues("projectName") || "Project"}
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}            projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
             startDate={form && form.getValues("startDate") || new Date()}
             endDate={form && form.getValues("endDate")}
             projectType={form && form.getValues("projectName").includes("AI") ? "AI/ML" : 
                         form && form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-                <Input ;
-                  placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" :"Total $X"} ;
-                  {...field} ;
-                />;
-              </FormControl>;
-              <FormDescription>;
-                {form.getValues("paymentTerms") === "milestone" && ;
-                  "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
-              </FormDescription>;
-              <FormMessage />;
-            </FormItem>;          )}
-        />;
-      </div>;
-;
-      {/* Project Milestones */}
-      {form.watch("paymentTerms") === "milestone" && (;
-        <div className="pt-2">;
-          <MilestoneSuggestions;
-            projectName={form.getValues("projectName") || "Project"}
-            scopeSummary={form.getValues("scopeSummary") || ""}
-            startDate={form.getValues("startDate") || new Date()}
-            endDate={form.getValues("endDate")}
-            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :;
-                        form.getValues("projectName").includes("Web") ? "Web Development" :"Other"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onMilestonesGenerated={handleMilestonesGenerated}
           />;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -650,3 +634,9 @@ handleMilestonesGenerated
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    </>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

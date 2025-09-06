@@ -495,10 +495,13 @@ export default function RevolutionaryServicesPage() {;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -594,8 +597,9 @@ export default function RevolutionaryServicesPage() {;
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from - yellow - 500 to - orange - 600',
-    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w - 6 h - 6" />,
+    },  ],
+  description: 'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className="w-6 h-6" />,
       count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from - yellow - 500 to - orange - 600';
     }
@@ -627,6 +631,7 @@ export default function RevolutionaryServicesPage() {;
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 
   };
@@ -645,6 +650,8 @@ export default function RevolutionaryServicesPage() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -1518,6 +1525,7 @@ export default function RevolutionaryServicesPage() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1529,6 +1537,8 @@ export default function RevolutionaryServicesPage() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1809,20 +1819,20 @@ export default function RevolutionaryServicesPage() {;
                           Contact Sales;
                           <Mail className='ml - 2 w - 4 h - 4' />;
                         </Button>                      </div>;
-                      <div className="flex gap - 4">;
+                      <div className="flex gap-4">;
                                                 <Button;
                           variant="primary";
                           on_click={() => window.open (selected_service.link, '_blank')}
                           >;
                           Visit Service;
-                          <ExternalLink className="ml - 2 w - 4 h - 4" />;
+                          <ExternalLink className="ml - 2 w-4 h-4" />;
                         </Button>;
                         <Button;
                           variant="futuristic";
                           on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
                           >;
                           Contact Sales;
-                          <Mail className="ml - 2 w - 4 h - 4" />;
+                          <Mail className="ml - 2 w-4 h-4" />;
                         </Button>;
                     </div>;
                   </div>;
@@ -1834,10 +1844,10 @@ export default function RevolutionaryServicesPage() {;
         <section className='py - 20'>;
           <div className='container mx - auto px - 4 text - center'>;
             <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
-          <div className="container mx - auto px - 4 text - center">;
+              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py-20">;
+          <div className="container mx - auto px-4 text-center">;
             <motion.div;
-              className="max - w-4xl mx - auto";
+              className="max-w-4xl mx-auto";
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -1893,17 +1903,17 @@ export default function RevolutionaryServicesPage() {;
                   </div>;
                   <div className='text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
               </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
+              <p className="text - xl text - gray-300 mb-8">;
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center mb-8">;
                                 <Button;
                   variant="primary";
                   size="lg";
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
                   >;
                   Start Free Trial;
-                  <Rocket className="ml - 2 w - 5 h - 5" />;
+                  <Rocket className="ml - 2 w-5 h-5" />;
                 </Button>;
                 <Button;
                   variant="futuristic";
@@ -1911,24 +1921,24 @@ export default function RevolutionaryServicesPage() {;
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
                   >;
                   Schedule Demo;
-                  <Calendar className="ml - 2 w - 5 h - 5" />;
+                  <Calendar className="ml - 2 w-5 h-5" />;
                 </Button>;
               </div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-center">;
                 <div>;
-                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.mobile}</div>;
-                  <div className="text - gray - 400 text - sm">Call us anytime</div>;
+                  <Phone className="w - 8 h - 8 text - cyan - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.mobile}</div>;
+                  <div className="text - gray-400 text-sm">Call us anytime</div>;
                 </div>;
                 <div>;
-                  <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.email}</div>;
-                  <div className="text - gray - 400 text - sm">Email us 24 / 7</div>;
+                  <Mail className="w - 8 h - 8 text - purple - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.email}</div>;
+                  <div className="text - gray-400 text-sm">Email us 24 / 7</div>;
                 </div>;
                 <div>;
-                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.address}</div>;
-                  <div className="text - gray - 400 text - sm">Visit our office</div>;
+                  <MapPin className="w - 8 h - 8 text - green - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.address}</div>;
+                  <div className="text - gray-400 text-sm">Visit our office</div>;
                 </div>;
               </div>;
             </motion.div>;

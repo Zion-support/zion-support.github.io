@@ -34,11 +34,14 @@ import React, { useEffect, useRef } from 'react';
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
@@ -52,7 +55,7 @@ canvas && canvas.height = window && window.innerHeight;
 if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
 if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
 if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-// Draw particle requestAnimationFrame (animate) ;
+// Draw particle requestAnimationFrame (animate) 
 };
 animate ();
 // Handle resize window && window.addEventListener ('resize', handleResize);
@@ -65,8 +68,11 @@ interface UltraFuturisticBackground2028Props {;
   children: React && React.ReactNode;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
@@ -174,7 +180,6 @@ if (return) {
 
       />;
 
-
       {/* Gradient Overlays */}  }, []);
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -264,8 +269,12 @@ if (return) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
+<<<<<<< HEAD
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - blue - 500 / 30 rotate - 45";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          className="absolute top - 40 right - 32 w - 24 h - 24 border border - blue-500 / 30 rotate-45";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           animate={{
             rotate: [45, -315]
             scale: [1, 1.2, 1]
@@ -425,7 +434,7 @@ if (return) {
           className='absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full';
           animate={{
             coordinate_y: [0, 25, 0],
-            opacity: [0.2, 0.5, 0.2],          className="absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full";
+            opacity: [0.2, 0.5, 0.2],          className="absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue-400 / 40 rounded-full";
           animate={{
             coordinate_y: [0, 25, 0];
             opacity: [0.2, 0.5, 0.2];
@@ -439,7 +448,7 @@ if (return) {
           className='absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full';
           animate={{
             coordinate_y: [0, -15, 0],
-            opacity: [0.25, 0.55, 0.25],          className="absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full";
+            opacity: [0.25, 0.55, 0.25],          className="absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan-400 / 40 rounded-full";
           animate={{
             coordinate_y: [0, -15, 0];
             opacity: [0.25, 0.55, 0.25];
@@ -464,7 +473,7 @@ if (return) {
             duration: 4,
             repeat: Infinity,
             ease: 'linear',        <motion.div;
-          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - purple - 500 to - transparent";
+          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - purple-500 to-transparent";
           animate={{
             coordinate_y: [0, 1000];
             opacity: [0, 1, 0];
@@ -485,7 +494,7 @@ if (return) {
 =======
         />;
         <motion.div;
-          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent";
+          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue-500 to-transparent";
           animate={{
             coordinate_y: [0, 1000],
             opacity: [0, 1, 0],            coordinate_y: [0, 1000];
@@ -545,8 +554,11 @@ if (return) {
         style={{ zIndex: 4 }}
       >
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -616,6 +628,7 @@ if (return) {
               delay: Math.random() * 3
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -628,6 +641,8 @@ if (return) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }}
           />;
 
@@ -748,7 +763,7 @@ if (return) {
         className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none';
         style={{ z_index: 5 }}
       />;
-    </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none" style={{ z_index: 5 }} />;
+    </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer-events-none" style={{ z_index: 5 }} />;
     </div>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

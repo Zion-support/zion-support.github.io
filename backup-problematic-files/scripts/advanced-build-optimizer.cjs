@@ -90,5 +90,10 @@ console.log('⚡ Starting Advanced Build Optimization...')
           "impact"
           resolve({ "size": 0, "message"})
           resolve({ "size": 0, "message"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    this.log(' Build Optimization "Summary")
+    this.log(' Build Optimization "Summary")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

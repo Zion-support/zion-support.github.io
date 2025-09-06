@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             // Simple conflict resolution - take the incoming change
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
@@ -115,6 +118,7 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
+<<<<<<< HEAD
 
 '
 
@@ -122,6 +126,10 @@ if (require.main === module) {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+module.exports = GitWorkflowAutomator;
+'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -188,6 +196,7 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
             "stdio"
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
+<<<<<<< HEAD
 =======
   git commit -m '"fix"
 <<<<<<< HEAD
@@ -195,3 +204,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  git commit -m '"fix"
+  git commit -m '"fix"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

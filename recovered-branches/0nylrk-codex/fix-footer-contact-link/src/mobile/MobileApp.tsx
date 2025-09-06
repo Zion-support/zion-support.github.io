@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,6 +22,17 @@ import { MobileProjects } from "./pages/MobileProjects";
 import { MobileMessages } from "./pages/MobileMessages";
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";
 import { MobileJobPost } from "./pages/MobileJobPost";
+=======
+import React from "react",
+import { Routes, Route, Navigate } from "react-router-dom",
+import { MobileThemeProvider } from "./theme/MobileThemeProvider",
+import { MobileOnboarding } from "./pages/MobileOnboarding",
+import { MobileHome } from "./pages/MobileHome",
+import { MobileBrowse } from "./pages/MobileBrowse",
+import { MobileProjects } from "./pages/MobileProjects",
+import { MobileMessages } from "./pages/MobileMessages",
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",import { MobileJobPost } from "./pages/MobileJobPost";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
@@ -39,10 +51,13 @@ export function MobileApp() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <MobileThemeProvider>
       <Routes>
@@ -63,6 +78,7 @@ export function MobileApp() {
       </Routes>
     </MobileThemeProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -72,6 +88,10 @@ export function MobileApp() {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  )
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
 import {MobileThemeProvider} from "./theme/MobileThemeProvider";
@@ -84,6 +104,7 @@ import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
 import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -94,6 +115,8 @@ import {useAuth} from "@/hooks/useAuth";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -105,6 +128,7 @@ import { MobileMessages } from "./pages/MobileMessages",;
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
 import { MobileJobPost } from "./pages/MobileJobPost",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -149,11 +173,14 @@ export function MobileApp() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <MobileThemeProvider>;
       <Routes>;
         <Route path="/onboarding" element={<MobileOnboarding />} />;
         <Route;
           path="/";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           element={
@@ -193,10 +220,13 @@ export function MobileApp() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
+<<<<<<< HEAD
         <Route path="/resume" element={<MobileResumeBuilder />} />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,3 +274,6 @@ export function MobileApp() {;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <Route path="/resume" element={<MobileResumeBuilder />} />;=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/ProjectActions.tsx
 =======
 import React from 'react',;
@@ -6,11 +7,16 @@ import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
 import { ShieldAlert } from "lucide-react",;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
 import { ShieldAlert } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/components/ProjectActions.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 ;
 interface ProjectActionsProps {;
@@ -29,6 +35,7 @@ export function ProjectActions({;
   onAddMilestone;
 } ProjectActionsProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/ProjectActions.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="flex gap-2">;
@@ -36,17 +43,29 @@ export function ProjectActions({;
         <Button variant="outline" asChild>;
           <Link to={`/dashboard/disputes/${disputeId}`}>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
           <Link href={`/dashboard/disputes/${disputeId}`}>;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/components/ProjectActions.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <ShieldAlert className="h-4 w-4 mr-2" />;
             View Active Dispute;
           </Link>;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/ProjectActions.tsx
 
+=======
+      ) :(;
+        <RaiseDisputeButton ;
+          projectId={projectId}
+          variant="outline";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />;
       )}
       {isTalent && !isUnderDispute && (;
@@ -55,9 +74,12 @@ export function ProjectActions({;
         </Button>;
       )}
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/ProjectActions.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  {;
   isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
@@ -72,4 +94,7 @@ export function ProjectActions({;
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/components/ProjectActions.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/components/ProjectActions.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

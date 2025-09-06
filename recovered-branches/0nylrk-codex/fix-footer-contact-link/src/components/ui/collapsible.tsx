@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import * as CollapsiblePrimitive from &quot;@radix - ui / react - collapsible & quot;
 ;
@@ -12,14 +15,13 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
 
-
 const Collapsible = CollapsiblePrimitive.Root
 const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
 const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
 
-
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -33,10 +35,13 @@ const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
 const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -63,3 +68,8 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+;
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +64,10 @@ import { format } from 'date-fns',;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  * Formats a date for PDF display;
+=======
+
+import {format} from 'date-fns'; * Formats a date for PDF display;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * @param date Date or string to format;
  * @returns Formatted date string;
  */;
@@ -72,11 +77,14 @@ export function formatDate(date: Date | string | undefined): string {;
     return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   return format(date, 'MMM yyyy')
 
@@ -86,12 +94,15 @@ export function formatDate(date: Date | string | undefined): string {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   }
   return format(date, 'MMM yyyy')
@@ -100,9 +111,9 @@ export function formatDate(date: Date | string | undefined): string {;
     return format (new Date (date), 'MMM yyyy');
   }
   return format (date, 'MMM yyyy');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}}
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -111,3 +122,6 @@ export function formatDate(date: Date | string | undefined): string {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

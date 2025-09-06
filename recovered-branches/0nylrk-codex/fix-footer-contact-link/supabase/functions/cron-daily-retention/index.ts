@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+<<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -229,14 +235,15 @@ if ( {) {
 
 
     return new Response(JSON.stringify({
+=======
+const supabase = createClient(supabaseUrl, supabaseServiceKey);          headers: { "Content-Type": "application/json" }})
+      }
+    }
+    // Call the process-retention-emails function
+    const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {    return new Response(JSON.stringify({
+      success: false    return new Response(JSON.stringify({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       success: false
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return new Response(JSON.stringify({
-      success: false
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 200,
       headers: { "Content - Type": "application / json" }});
   } catch (error) {
@@ -252,9 +259,8 @@ if ( {) {
       success: false,
       error: error && error.message}), {
       status: 500,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       headers: { "Content - Type": "application / json" }});
 =======
 
@@ -297,6 +303,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+=======
+      headers: { "Content - Type": "application / json" }});import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "",;
@@ -335,18 +344,14 @@ serve(async (req) => {;
       error: error.message}), {;
       status: 500,;
       headers: { "Content-Type": "application/json" }});
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
+});  }
 });
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   }
@@ -434,3 +439,5 @@ error: error.message
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

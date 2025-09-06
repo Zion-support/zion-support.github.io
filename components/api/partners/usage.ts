@@ -27,8 +27,11 @@ export default async function handler(
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "GET") {
@@ -48,7 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
-
 
   authenticate_request,
   calculateUsageSummary,

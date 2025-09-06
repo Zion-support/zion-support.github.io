@@ -58,7 +58,8 @@ import OpenAI from 'openai';
           answerIndex: 0
         }
       ]
-    });  };          question: 'Which docs are needed for launch?';
+    })
+};          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
   };
@@ -107,7 +108,6 @@ import OpenAI from 'openai';
 =======
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
-
         { role: 'user', content: prompt }];
       temperature: 0 && 0.2});
 
@@ -151,8 +151,11 @@ import OpenAI from 'openai';
 
 }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';

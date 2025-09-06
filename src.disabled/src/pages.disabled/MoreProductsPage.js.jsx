@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,7 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return
+}; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

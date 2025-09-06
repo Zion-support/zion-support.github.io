@@ -7,5 +7,10 @@ const problematicFiles = ['components/ContactForm.tsx']
   'components/PerformanceMonitor.tsx'
   console.log('� Attempting build without problematic files...')
     execSync('npm run build', { "stdio"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.log(' Build "failed")
+    console.log(' Build "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

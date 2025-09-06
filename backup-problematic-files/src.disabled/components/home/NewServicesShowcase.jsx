@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
 <<<<<<< HEAD:backup-merge-conflicts/NewServicesShowcase.jsx.backup
 
 
@@ -45,3 +46,6 @@
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/home/NewServicesShowcase.jsx
+=======
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/home/NewServicesShowcase.jsx

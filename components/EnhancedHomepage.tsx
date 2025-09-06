@@ -39,7 +39,6 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-
   opacity: 0 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -55,7 +54,7 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <h1>EnhancedHomepage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {
@@ -400,9 +399,6 @@ const EnhancedHomepage: React.FC = () => {
 
 =======
 
-
-
-
             {/* CTA Buttons */}
             <motion&& motion.div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -507,8 +503,11 @@ const EnhancedHomepage: React.FC = () => {
 
             <motion&& motion.div 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -561,7 +560,6 @@ const EnhancedHomepage: React.FC = () => {
           animate="visible">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div 
-
 
             <motion.div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -843,7 +841,6 @@ if ( {) {
             </motion && motion.h2>;
             <motion&& motion.div 
 
-
             <motion.div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
@@ -885,8 +882,11 @@ if ( {) {
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -933,11 +933,13 @@ if ( {) {
             <motion.p 
 =======
 
-
             <motion.p 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
@@ -1049,6 +1051,7 @@ if ( {) {
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
@@ -1066,6 +1069,8 @@ export default EnhancedHomepage;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;

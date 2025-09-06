@@ -56,7 +56,6 @@ type RoleContextValue = {
 
   children,;
 
-
 export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
   children,;
 }) => {  const [role, setRole] = useState<UserRole>('client');
@@ -84,8 +83,11 @@ type RoleContextValue = {
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   children,
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
 <<<<<<< HEAD
@@ -134,6 +136,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
         window.localStorage.setItem('zion_user_role', role);      }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
@@ -148,6 +151,12 @@ const ctx = useContext(RoleContext);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      }
+    } catch {}
+  }, [role]);
+  const value = useMemo(() => ({ role, setRole }), [role])
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export function useRole(): any (): RoleContextValue {;

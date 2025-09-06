@@ -194,7 +194,11 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
       error.rule === "prefer-const" ||;
       error.message.includes("prefer const");
     ) {}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } else if (;)
       error.rule === "prefer-const" ||;
       error.message.includes("prefer const");
@@ -431,5 +435,10 @@ if (require.main === module) {}
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ESLintErrorFixer;
+module.exports = ESLintErrorFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

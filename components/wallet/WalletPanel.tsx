@@ -19,10 +19,6 @@ type Tx = {
 
 =======
 
-
-
-
-
 type Tx = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -77,12 +73,13 @@ export default function WalletPanel() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export default function WalletPanel() {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -123,7 +120,7 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
   amount: number,;
   reason: string,;
-  createdAt: string;
+  createdAt: string
 };
 
 type Summary = {;
@@ -204,8 +201,8 @@ export default function WalletPanel() {;
       const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
       setEthAddress(accounts?.[0] || null);
     } catch (e) {;
-      console && console.error(e);
-    };
+      console && console.error(e)
+};
   }
     }
   }
@@ -344,7 +341,7 @@ if ( {) {
         <div className='mt - 4'>          <Badges balance={balance} />;
         </div>;
       </div>;
-        <div className="mt - 4">;
+        <div className="mt-4">;
           <Badges balance={balance} />;
         </div>;
       </div>;
@@ -525,7 +522,7 @@ if ( {) {
 }
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
-            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+            </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
           </div>)}
       </div>;
     </div>);

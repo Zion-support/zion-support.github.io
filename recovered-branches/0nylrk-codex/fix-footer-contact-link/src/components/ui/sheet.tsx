@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,6 +14,10 @@ import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as SheetPrimitive from "@radix-ui/react-dialog"
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 import * as React from "react"
@@ -20,13 +25,6 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Sheet = SheetPrimitive.Root
 const SheetTrigger = SheetPrimitive.Trigger
 const SheetClose = SheetPrimitive.Close
@@ -36,6 +34,7 @@ const SheetOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
+<<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
 
@@ -58,6 +57,9 @@ const SheetOverlay = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
     ref={ref}
@@ -66,15 +68,12 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const sheetVariants = cva(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
 =======
-  &quot;fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500&quot;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   {
     variants: {
       side: {
@@ -83,10 +82,8 @@ const sheetVariants = cva(
           &quot;inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom&quot;
         left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;
         right:
-<<<<<<< HEAD
-          &quot;inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm&quot;}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+    defaultVariants: {
+      side: "right"}}  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
       side: {
@@ -97,25 +94,22 @@ const sheetVariants = cva(
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     defaultVariants: {
-      side: &quot;right&quot;}}
-=======
-    defaultVariants: {
+      side: &quot;right&quot;}}    defaultVariants: {
       side: "right"}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    defaultVariants: {
-      side: "right"}}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 )
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>
   VariantProps<typeof sheetVariants> { }
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>
+<<<<<<< HEAD
   SheetContentProps
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,6 +278,9 @@ const SheetContent = React.forwardRef<;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </SheetPrimitive.Close>
+=======
+  SheetContentProps      </SheetPrimitive.Close>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
@@ -293,6 +290,7 @@ const SheetHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
+<<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
 
@@ -338,11 +336,15 @@ SheetHeader.displayName = "SheetHeader"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const SheetFooter = ({
+=======
+    className={cn(const SheetFooter = ({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -386,10 +388,15 @@ SheetFooter.displayName = "SheetFooter"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
   <SheetPrimitive.Title
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,26 +452,20 @@ const SheetTitle = React.forward_ref<;
   <SheetPrimitive.Title;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
+=======
+  <SheetPrimitive.Title    ref={ref}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
     {...props}
-<<<<<<< HEAD
-
 
   React.ElementRef<typeof SheetPrimitive.Description>,;
 
-
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    ref={ref}
+>(({ className, ...props }, ref) => (;    ref={ref}
     className={cn("text-lg font-semibold text-foreground", className)}
     {...props}
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   />));
 SheetTitle.display_name = SheetPrimitive.Title.display_name;
 const SheetDescription = React.forward_ref<;
@@ -475,7 +476,6 @@ const SheetDescription = React.forward_ref<;
     ref={ref}
     className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
     {...props}
-<<<<<<< HEAD
 
   />));
 SheetDescription.display_name = SheetPrimitive.Description.display_name;
@@ -484,6 +484,7 @@ export {
 export {;
 
   Sheet, SheetClose;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -618,3 +619,6 @@ export {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

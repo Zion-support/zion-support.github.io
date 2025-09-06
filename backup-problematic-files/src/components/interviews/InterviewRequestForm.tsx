@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -53,8 +56,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
   async function onSubmit(values:z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
+<<<<<<< HEAD
         title:"Authentication required",;
         description:"Please log in to schedule an interview",;
+=======
+        title:"Authentication required",,
+  description:"Please log in to schedule an interview",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive"}),;
       return,;
     }
@@ -82,14 +90,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
       }),;
 ;
       toast({;
+<<<<<<< HEAD
         title:"Interview requested",;
         description:`Your interview request with ${talent.full_name} has been sent.`}),;
+=======
+        title:"Interview requested",,
+  description:`Your interview request with ${talent.full_name} has been sent.`}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       onClose(),;
     } catch (error) {;
       logErrorToProduction('Failed to schedule interview:', { data:error }),;
       toast({;
+<<<<<<< HEAD
         title:"Failed to schedule interview",;
         description:"An error occurred while scheduling the interview. Please try again.",;
+=======
+        title:"Failed to schedule interview",,
+  description:"An error occurred while scheduling the interview. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
@@ -157,6 +175,21 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         ) :(;
                           <span>Pick a date</span>;
                         )}
+<<<<<<< HEAD
+=======
+                      <Button;
+                        variant="outline";
+                        className={cn(;
+                          "w-full pl-3 text-left font-normal",;
+                          !field.value && "text-muted-foreground";
+                        )}
+                      >;
+                        {field.value ? (;
+                          format(field.value, "PPP");
+                        ) :(;
+                          <span>Pick a date</span>;
+                        )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
                     </FormControl>;
@@ -169,35 +202,188 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="time";
+            render={({ field } { field:ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (;
+              <FormItem>;
+                <FormLabel>Time</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select time" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent className="max-h-[300px]">;
+                    {timeSlots.map((time) => (;
+                      <SelectItem key={time} value={time}>;
+                        {time}
+                      </SelectItem>;                    ))}
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        </div>;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="duration";
+            render={({ field } { field:ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (;
+              <FormItem>;
+                <FormLabel>Duration</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select duration" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+                    <SelectItem value="15">15 minutes</SelectItem>;
+                    <SelectItem value="30">30 minutes</SelectItem>;
+                    <SelectItem value="45">45 minutes</SelectItem>;
+                    <SelectItem value="60">60 minutes</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="platform";
+            render={({ field } { field:ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (;
+              <FormItem>;
+                <FormLabel>Platform</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select platform" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+                    <SelectItem value="zoom">Zoom</SelectItem>;
+                    <SelectItem value="google-meet">Google Meet</SelectItem>;
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>;
+                    <SelectItem value="other">Other</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        </div>;
+;
+        {form.watch('platform') !== 'in-app' && (;
+          <FormField;
+            control={form.control}
+            name="meetingLink";
+            render={({ field } { field:ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (;
+              <FormItem>;
+                <FormLabel>Meeting Link (Optional)</FormLabel>;
+                <FormControl>;
+                  <Input;
+                    placeholder={`Add your ${form.watch('platform')} link here`}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 
+=======
+              </FormItem>;            )}
+          />;
+        )}
+;
+        <FormField;
+          control={form.control}
+          name="notes";
+          render={({ field } { field:ControllerRenderProps<z.infer<typeof formSchema>, "notes"> }) => (;
+            <FormItem>;
+              <FormLabel>Notes (Optional)</FormLabel>;
+              <FormControl>;
+                <Textarea ;
+                  placeholder="Share what you'd like to discuss in this interview";
+                  className="h-20";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 
+=======
+            </FormItem>;
+          )}
+        />;
+;
+        <div className="flex justify-end gap-4 pt-4">;
+          <Button variant="outline" onClick={onClose} type="button">;
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={isSubmitting}>;
+            {isSubmitting ? "Scheduling..." :"Schedule Interview"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
 
+=======
+  ),;}
+ interface InterviewRequestFormProps {;
+  talent: TalentProfile;
+onClose: () => void;
+userDetails?: UserProfile ;
+}const formSchema = z.object ({;
+  date: z.date ({;
+  required error: "Please select a date for the interview." ;
+}) .refine (date => date > new Date (), {";
+  message: "Interview date must be in the future" ;
+});";
+time: z.string () .min (1, "Please select a time for the interview.");";
+duration: z.string () .min (1, "Please select the interview duration.");";
+platform: z.string () .min (1, "Please select a meeting platform.");
+const form = useForm<z.infer<typeof formSchema>> ({;
+  resolver: zodResolver (formSchema), defaultValues: {;
+  title: `Interview with $ {;
+  talent.full name ;
+}`;
+async function onSubmit (values: z.infer<typeof formSchema>) {;
+  if (!userDetails?.id) {;
+  toast ({;
+  return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }setIsSubmitting (true);
 }catch (error) {;
   logErrorToProduction ('Failed to schedule interview:', {;
   data: error ;
 });
 toast ({;
+<<<<<<< HEAD
 
+=======
+  ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }finally {;
   setIsSubmitting (false) ;
 }";
@@ -207,9 +393,41 @@ toast ({;
 "18:00", "18:30", "19:00", "19:30", "20: 00" ];";
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ";
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+<<<<<<< HEAD
 
+=======
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) ;
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ";
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> </div> {';
+  form.watch ('platform') !== 'in-app' && (<FormField control= {;
+  form.control ;
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {;
+  `Add your $ {';
+  form.watch ('platform') ;
+}link here` ;
+}{;
+  ...field ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }/> </FormControl> <FormMessage /> </FormItem>) ;
 }/>) ;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
+<<<<<<< HEAD
 
+=======
+}'"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

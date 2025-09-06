@@ -2,6 +2,7 @@
 
 export type IntegrationCategory = 'crm' | 'ats';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export type IntegrationCategory = 'crm' | 'ats';
@@ -14,8 +15,9 @@ export type IntegrationCategory = 'crm' | 'ats';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type IntegrationCategory = 'crm' | 'ats';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type IntegrationProviderId =;
@@ -24,6 +26,7 @@ export type IntegrationProviderId =;
   | 'zoho';
   | 'pipedrive';
   | 'greenhouse';
+<<<<<<< HEAD
   | 'lever';
 <<<<<<< HEAD
 =======
@@ -45,12 +48,16 @@ export type IntegrationProviderId =
   | 'lever'
 
   | 'workable';
+=======
+  | 'lever';  | 'workable';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   | 'bamboohr';
 
   | 'workable';
   | 'bamboohr';
 export interface IntegrationProviderMeta {
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: IntegrationProviderId, name: string
   id: IntegrationProviderId, name: string,;
@@ -64,29 +71,30 @@ export interface IntegrationProviderMeta {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   icon?: string
 }
 
-
-
-<<<<<<< HEAD
 ;
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
+<<<<<<< HEAD
 =======
 =======
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   icon?: string
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
+<<<<<<< HEAD
   autoSyncApplicants?: boolean;
 <<<<<<< HEAD
   autoUploadResumes?: boolean;
@@ -122,10 +130,14 @@ export interface SyncLogEntry {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+  autoSyncApplicants?: boolean;  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   timestamp: number;
   provider_id: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   details?: Record<string, any>;
 =======
@@ -140,10 +152,13 @@ export interface SyncLogEntry {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -174,11 +189,15 @@ export interface IntegrationsState {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 
+<<<<<<< HEAD
 export interface ZapierEvent {;
 <<<<<<< HEAD
 =======
@@ -258,3 +277,6 @@ export interface IntegrationsState {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface ZapierEvent {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

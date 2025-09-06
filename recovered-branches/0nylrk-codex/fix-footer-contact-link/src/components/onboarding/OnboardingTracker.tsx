@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,18 +7,15 @@
 
 =======
 <<<<<<< HEAD
-
-
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 import {Link} from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,6 +128,9 @@ export function OnboardingTracker({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
+=======
+import {Link} from "react-router-dom";;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function OnboardingTracker({;
   steps,;
   title = "Complete Your Profile",;
@@ -138,15 +139,9 @@ export function OnboardingTracker({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
   title?: string;
   className?: string;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function OnboardingTracker(): any ({ ;
   steps;
   title = "Complete Your Profile", ;
   className ;
@@ -154,54 +149,14 @@ export function OnboardingTracker(): any ({ ;
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  return (
-=======
-  return (
-
-import React from "react",;
-import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
-;
-export interface OnboardingStep {;
-  id:string,;
-  label:string,;
-  completed:boolean,;
-  link:string,;
-  action?:string;}
-;
-interface OnboardingTrackerProps {;
-  steps:OnboardingStep[],;
-  title?:string,;
-  className?:string;
-}
-;
-export function OnboardingTracker({ ;
-  steps,;
-  title = "Complete Your Profile", ;
-  className ;
-} OnboardingTrackerProps) {;
-  const completedSteps = steps.filter(step => step.completed).length,;
-  const progress = Math.round((completedSteps / steps.length) * 100),;
-;
-  return (;
-}: OnboardingTrackerProps) {;
-  const completedSteps = steps.filter(step => step.completed).length;
-  const progress = Math.round((completedSteps / steps.length) * 100);
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return (  return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -231,6 +186,8 @@ export function OnboardingTracker({ ;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -238,17 +195,6 @@ export function OnboardingTracker({ ;
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  title?: string;
-  className?: string;
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
           <div key={step && step.id} className="flex items-center">;
@@ -256,6 +202,7 @@ export function OnboardingTracker({ ;
               {step && step.completed ? (;
                 <CheckCircle className="h-5 w-5 text-zion-cyan" />;
               ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -472,3 +419,5 @@ return (<div className= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

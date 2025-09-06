@@ -150,11 +150,14 @@ export default function Revolutionary2026ServicesShowcase() {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
@@ -377,9 +380,12 @@ export default function Revolutionary2026ServicesShowcase() {;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
@@ -489,12 +495,14 @@ export default function Revolutionary2026ServicesShowcase() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
                   <Link 
                     href={service.link} 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -828,12 +836,14 @@ export default function Revolutionary2026ServicesShowcase() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
                   <Link 
                     href={service.link} 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -907,20 +917,20 @@ export default function Revolutionary2026ServicesShowcase() {;
                     className='inline - flex items - center text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm font - medium';
                   >;
                     Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                  </Link>                    <div>;
-                      <span className="text - 2xl font - bold text - indigo - 400">{service.price}</span>;
-                      <span className="text - gray - 400">{service.period}</span>;
+                      <span className="text - 2xl font - bold text-indigo-400">{service.price}</span>;
+                      <span className="text-gray-400">{service.period}</span>;
                     </div>;
-                    <div className="flex items - center space - x-1">;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                      <span className="text - yellow - 400 text - sm">{service.rating}</span>;
-                      <span className="text - gray - 400 text - sm">({service.reviews})</span>;
+                    <div className="flex items-center space-x-1">;
+                      <Star className="w - 4 h - 4 text - yellow-400 fill-current" />;
+                      <span className="text - yellow-400 text-sm">{service.rating}</span>;
+                      <span className="text - gray-400 text-sm">({service.reviews})</span>;
                     </div>;
                   </div>;
                   <Link;
                     href={service.link}
-                    className="inline - flex items - center text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm font - medium";
+                    className="inline - flex items - center text - indigo - 400 hover:text - indigo - 300 transition - colors text-sm font-medium";
                   >;
-                    Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                    Learn More <ArrowRight className="w - 4 h-4 ml-2" />;
                   </Link>;
                 </div>;
               </motion.div>))}
@@ -931,12 +941,12 @@ export default function Revolutionary2026ServicesShowcase() {;
               className='inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white font - semibold rounded - xl hover:from - indigo - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
             >;
               View All Quantum Space Services{' '}
-              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text - center mt - 8">;
+              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text-center mt-8">;
             <Link;
               href="/services?category = quantum - space";
-              className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white font - semibold rounded - xl hover:from - indigo - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+              className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white font - semibold rounded - xl hover:from - indigo - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow-cyan-500 / 30";
             >;
-              View All Quantum Space Services <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              View All Quantum Space Services <ArrowRight className="w - 5 h-5 ml-2" />;
           </div>;
         </motion.div>;
         {/* Metaverse & Digital Reality Services Section */}
@@ -1025,12 +1035,14 @@ export default function Revolutionary2026ServicesShowcase() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
                   <Link 
                     href={service.link} 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -1208,20 +1220,20 @@ export default function Revolutionary2026ServicesShowcase() {;
                     className='inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium';
                   >;
                     Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                  </Link>                    <div>;
-                      <span className="text - 2xl font - bold text - pink - 400">{service.price}</span>;
-                      <span className="text - gray - 400">{service.period}</span>;
+                      <span className="text - 2xl font - bold text-pink-400">{service.price}</span>;
+                      <span className="text-gray-400">{service.period}</span>;
                     </div>;
-                    <div className="flex items - center space - x-1">;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                      <span className="text - yellow - 400 text - sm">{service.rating}</span>;
-                      <span className="text - gray - 400 text - sm">({service.reviews})</span>;
+                    <div className="flex items-center space-x-1">;
+                      <Star className="w - 4 h - 4 text - yellow-400 fill-current" />;
+                      <span className="text - yellow-400 text-sm">{service.rating}</span>;
+                      <span className="text - gray-400 text-sm">({service.reviews})</span>;
                     </div>;
                   </div>;
                   <Link;
                     href={service.link}
-                    className="inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium";
+                    className="inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text-sm font-medium";
                   >;
-                    Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                    Learn More <ArrowRight className="w - 4 h-4 ml-2" />;
                   </Link>;
                 </div>;
               </motion.div>))}
@@ -1232,12 +1244,12 @@ export default function Revolutionary2026ServicesShowcase() {;
               className='inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
             >;
               View All Metaverse Services{' '}
-              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text - center mt - 8">;
+              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text-center mt-8">;
             <Link;
               href="/services?category = metaverse";
-              className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+              className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow-cyan-500 / 30";
             >;
-              View All Metaverse Services <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              View All Metaverse Services <ArrowRight className="w - 5 h-5 ml-2" />;
           </div>;
         </motion.div>;
         {/* Call to Action Section */}
@@ -1283,12 +1295,12 @@ export default function Revolutionary2026ServicesShowcase() {;
                 <span className='text - purple - 300'>;
                   ✉️ kleber@ziontechgroup.com;
                 </span>;
-                <span className='text - purple - 300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt - 8 text - center">;
-              <p className="text - gray - 400 text - sm mb - 2">Contact Information</p>;
-              <div className="flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm">;
-                <span className="text - purple - 300">📱 +1 302 464 0950</span>;
-                <span className="text - purple - 300">✉️ kleber@ziontechgroup.com</span>;
-                <span className="text - purple - 300">🌐 ziontechgroup.com</span>;
+                <span className='text - purple - 300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt-8 text-center">;
+              <p className="text - gray - 400 text-sm mb-2">Contact Information</p>;
+              <div className="flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space-x-6 text-sm">;
+                <span className="text-purple-300">📱 +1 302 464 0950</span>;
+                <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>;
+                <span className="text-purple-300">🌐 ziontechgroup.com</span>;
             </div>;
           </div>;
         </motion.div>;

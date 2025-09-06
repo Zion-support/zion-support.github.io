@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -90,3 +91,12 @@ import _React from 'react'; import SEOHead from '../src/components/SEOHead'; imp
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> )
+}; export default RequestQuotePage;import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> )
+}; export default RequestQuotePage;
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> )
+}; export default RequestQuotePage;
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> )
+}; export default RequestQuotePage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

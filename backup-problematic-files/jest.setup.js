@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/jest.setup.js
 // Jest setup file
 import '@testing-library/jest-dom';
+=======
+import "@testing-library/jest-dom";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -19,6 +23,7 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
+<<<<<<< HEAD
 =======
         emit: jest.fn()
       },
@@ -33,10 +38,13 @@ jest.mock("next/router", () => ({
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 :backup-problematic-files/jest.setup.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     };
   },
 }));
 
+<<<<<<< HEAD
 =======
 // Mock Next.js Image component
 jest.mock("next/image", () => {
@@ -45,6 +53,14 @@ jest.mock("next/image", () => {
   };
 });
 :jest.setup.js
+=======
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  return function MockedImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />
+};
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -53,6 +69,7 @@ jest.mock("next/link", () => {
       <a href={href} {...props}>
         {children}
       </a>
+<<<<<<< HEAD
     );
   };
 });
@@ -66,6 +83,11 @@ jest.mock('next/link', () => ({
 <<<<<<< HEAD
 
 }));
+=======
+    )
+};
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -74,16 +96,24 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
+<<<<<<< HEAD
 
+=======
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
 });
 
+<<<<<<< HEAD
 =======
 require('@testing-library/jest-dom');
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:jest.setup.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -91,12 +121,17 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 };
 <<<<<<< HEAD:backup-problematic-files/jest.setup.js
 
@@ -150,3 +185,5 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:jest.setup.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

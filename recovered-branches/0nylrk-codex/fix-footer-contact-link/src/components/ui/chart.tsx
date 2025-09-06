@@ -1,36 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
-<<<<<<< HEAD
-=======
-import * as React from "react"
-import type { CSSProperties } from "react"
-import * as RechartsPrimitive from "recharts"
-import {useReactId} from "@/hooks/useReactId"
-import {cn} from "@/lib/utils"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
-  string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useReactId } from "@/hooks/useReactId"
+  string;import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
@@ -38,6 +22,7 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -62,6 +47,8 @@ function useChart(): ChartContextProps {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from "react";
 import type { CSSProperties } from "react";
 import * as RechartsPrimitive from "recharts";
@@ -73,7 +60,6 @@ import {cn} from "@/lib/utils";
 const THEMES = { light: "", dark: ".dark" } as const;
 
 export type ChartConfig = Record<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   string;
   {;
     label?: React && React.ReactNode;
@@ -81,36 +67,20 @@ export type ChartConfig = Record<;
   } & (;
     | { color?: string, theme?: never }
     | { color?: never, theme: Record<keyof typeof THEMES, string> }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import * as React from './react';
-import type { CSSProperties } from './react';
-import * as RechartsPrimitive from './recharts';
-import { useReactId } from '@/hooks / useReactId';
-import { cn } from '@/lib / utils';
-// Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: ".dark" } as const;
-export type ChartConfig = Record<;
-  string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     label?: React.ReactNode;
     icon?: React.ComponentType;
   } & (
     | { color?: string, theme?: never }
-<<<<<<< HEAD
     | { color?: never, theme: Record < keyof typeof THEMES, string> }
   );
 >;
-<<<<<<< HEAD
 
 type ChartContextProps = {
   config: ChartConfig;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -145,6 +115,9 @@ type ChartContextProps = {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
+=======
+const ChartContainer = React.forwardRef<  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -186,6 +159,7 @@ function useChart(): any (): ChartContextProps {;
 }
 
 const ChartContainer = React && React.forwardRef<;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 type ChartContextProps = {
@@ -209,263 +183,14 @@ type ChartContextProps = {
 
 
   return (
-    <ChartContext && ChartContext.Provider value={{ config }}>;
 =======
-import * as React from "react";
-import type { CSSProperties } from "react";
-import * as RechartsPrimitive from "recharts";
-import { useReactId } from "@/hooks/useReactId";
-;
-import { cn } from "@/lib/utils";
-;
-// Format:{ THEME_NAME:CSS_SELECTOR }
-const THEMES = { light:"", dark:".dark" } as const;
-;
-export type ChartConfig = Record<;
-  string,;
-  {;
-    label?:React.ReactNode;
-    icon?:React.ComponentType;
-  } & (;
-    | { color?:string, theme?:never }
-    | { color?:never, theme:Record<keyof typeof THEMES, string> }
-  );
->;
-;
-type ChartContextProps = {;
-  config:ChartConfig;
-}
-;
-const ChartContext = React.createContext<ChartContextProps>({;
-  config:{}});
-;
-function useChart():ChartContextProps {;
-  return React.useContext(ChartContext);
-}
-;
-const ChartContainer = React.forwardRef<;
-  HTMLDivElement,;
-  React.ComponentProps<"div"> & {;
-    config:ChartConfig;
-    children:React.ComponentProps<;
-      typeof RechartsPrimitive.ResponsiveContainer;
-    >["children"];
-  }
->(({ id, className, children, config, ...props }, ref) => {;
-  const uniqueId = useReactId();
-  return (
+    <ChartContext && ChartContext.Provider value={{ config }}>;  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <ChartContext && ChartContext.Provider value={{ config }}>;
-
-const ChartContainer = React.forwardRef<
-  HTMLDivElement,
-  React.ComponentProps<"div"> & {
-    config: ChartConfig
-    children: React.ComponentProps<
-      typeof RechartsPrimitive.ResponsiveContainer
-    >["children"]
-  }
->(({ id, className, children, config, ...props }, ref) => {
-  const uniqueId = useReactId()
-  const chartId = `chart-${id |uniqueId.replace(/:/g, "")}`
-  return (
-    <ChartContext.Provider value={{ config }}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return (
-    <ChartContext && ChartContext.Provider value={{ config }}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div
         data-chart={chartId}
         ref={ref}
-        className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "flex aspect-video justify-center text-xs [&_ && _.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_ && _.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_ && _.recharts-curve && curve.recharts-tooltip-cursor]:stroke-border [&_ && _.recharts-dot[stroke='#fff']]:stroke-transparent [&_ && _.recharts-layer]:outline-none [&_ && _.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_ && _.recharts-radial-bar-background-sector]:fill-muted [&_ && _.recharts-rectangle && rectangle.recharts-tooltip-cursor]:fill-muted [&_ && _.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_ && _.recharts-sector[stroke='#fff']]:stroke-transparent [&_ && _.recharts-sector]:outline-none [&_ && _.recharts-surface]:outline-none"
-          className
-        )}
-        {...props}>;
-        <ChartStyle id={chartId} config={config} />;
-        <RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
-          {children}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        </RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
-      </div>;
-    </ChartContext && ChartContext.Provider>;
-  );
-});
-ChartContainer && ChartContainer.displayName = "Chart";
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {;
-  const colorConfig = Object && Object.entries(config).filter(;
-    ([_, config]) => config && config.theme || config && config.color;
-  );
-<<<<<<< HEAD
-
-  if (!colorConfig && colorConfig.length) {;
-    return null;
-
-=======
-=======
-  if (!colorConfig && colorConfig.length) {;
-    return null;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-const ChartContext = React.create_context < ChartContextProps>({
-  config: {}});
-function use_chart (): ChartContextProps {
-  return React.useContext (ChartContext);
-}
-const ChartContainer = React.forward_ref<;
-  HTMLDivElement;
-  React.ComponentProps<"div"> & {
-    config: ChartConfig;
-    children: React.ComponentProps<;
-      typeof RechartsPrimitive.ResponsiveContainer;
-    >["children"];
-  }
->(({ id, class_name, children, config, ...props }, ref) => {
-  const unique_id = useReactId ();
-  const chart_id = `chart-${id || unique_id.replace (/:/g, "")}`;
-  return (
-    <ChartContext.Provider value={{ config }}>;
-      <div;
-        data - chart={chart_id}
-        ref={ref}
-        className={cn (
-          "flex aspect - video justify - center text - xs [&_.recharts - cartesian - axis - tick_text]:fill - muted - foreground [&_.recharts - cartesian - grid_line[stroke='#ccc']]:stroke - border / 50 [&_.recharts - curve.recharts - tooltip - cursor]:stroke - border [&_.recharts - dot[stroke='#fff']]:stroke - transparent [&_.recharts - layer]:outline - none [&_.recharts - polar - grid_[stroke='#ccc']]:stroke - border [&_.recharts - radial - bar - background - sector]:fill - muted [&_.recharts - rectangle.recharts - tooltip - cursor]:fill - muted [&_.recharts - reference - line_[stroke='#ccc']]:stroke - border [&_.recharts - sector[stroke='#fff']]:stroke - transparent [&_.recharts - sector]:outline - none [&_.recharts - surface]:outline - none";
-          class_name)}
-        {...props}
-      >;
-        <ChartStyle id={chart_id} config={config} />;
-        <RechartsPrimitive.ResponsiveContainer>;
-          {children}
-        </RechartsPrimitive.ResponsiveContainer>;
-      </div>;
-    </ChartContext.Provider>);
-});
-ChartContainer.display_name = "Chart";
-const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) =>: any {
-  const color_config = Object.entries (config).filter (
-    ([_, config]) => config.theme || config.color);
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  }
-  return (
-    <style;
-      dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
-;
-  return (;
-    <ChartContext.Provider value={{ config }}>;
-      <div;
-        data-chart={chartId}
-        ref={ref}
-        className={cn(;
-          "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",;
-          className;
-        )}
-        {...props}
-      >;
-        <ChartStyle id={chartId} config={config} />;
-        <RechartsPrimitive.ResponsiveContainer>;
-          {children}
-        </RechartsPrimitive.ResponsiveContainer>;
-      </div>;
-    </ChartContext.Provider>;
-  );
-});
-ChartContainer.displayName = "Chart";
-;
-const ChartStyle = ({ id, config } { id:string, config:ChartConfig }) => {;
-  const colorConfig = Object.entries(config).filter(;
-    ([_, config]) => config.theme || config.color;
-  );
-;
-  if (!colorConfig.length) {;
-    return null;
-  }
-;
-  return (;
-    <style;
-      dangerouslySetInnerHTML={{;
-        __html:Object.entries(THEMES);
-          .map(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            ([theme, prefix]) => `;
-${prefix} [data-chart=${id}] {;
-${colorConfig;
-  .map(([key, itemConfig]) => {;
-    const color =;
-<<<<<<< HEAD
-      itemConfig && itemConfig.theme?.[theme as keyof typeof itemConfig && itemConfig.theme] ||;
-      itemConfig && itemConfig.color;
-    return color ? `  --color-${key}: ${color},` : null;
-  });
-
-=======
-      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||;
-      itemConfig.color;
-    return color ? `  --color-${key} ${color},` :null;
-  });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  .join("\n")}
-}
-`;
-          );
-          .join("\n")}}
-    />;
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-const ChartTooltip = RechartsPrimitive && RechartsPrimitive.Tooltip;
-
-const ChartTooltipContent = React && React.forwardRef<;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  HTMLDivElement;
-  React && React.ComponentProps<typeof RechartsPrimitive && RechartsPrimitive.Tooltip> &;
-    React && React.ComponentProps<"div"> & {;
-      hideLabel?: boolean;
-      hideIndicator?: boolean;
-      indicator?: "line" | "dot" | "dashed";
-      nameKey?: string;
-      labelKey?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        __html: Object.entries (THEMES);
+        className={cn(        __html: Object.entries (THEMES);
           .map (
             ([theme, prefix]) => `;
 ${prefix} [data - chart=${id}] {
@@ -492,10 +217,8 @@ const ChartTooltipContent = React.forward_ref<;
       indicator?: "line" | "dot" | "dashed";
       name_key?: string;
       label_key?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
+<<<<<<< HEAD
 
 >(
   (
@@ -578,6 +301,8 @@ const ChartTooltipContent = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       active,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       payload,
       className,
       indicator = "dot",
@@ -590,8 +315,8 @@ const ChartTooltipContent = React.forwardRef<
       color,
       nameKey,
       labelKey},
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -603,6 +328,8 @@ const ChartTooltipContent = React.forwardRef<
 =======
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ref
   ) => {
     const { config } = useChart()
@@ -617,6 +344,7 @@ const ChartTooltipContent = React.forwardRef<
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
+<<<<<<< HEAD
       if (labelFormatter) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -676,12 +404,16 @@ const ChartTooltipContent = React.forwardRef<
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return (
+=======
+      if (labelFormatter) {        return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
           </div>;
         );
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -794,6 +526,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             return (
               <div
                 key={item && item.dataKey}
@@ -846,6 +580,7 @@ if ( {) {
                       <div className="grid gap-1 && 1.5">;
                         {nestLabel ? tooltipLabel : null}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <span className="text-muted-foreground">
                           {itemConfig?.label |item.name}
                         </span>
@@ -855,6 +590,8 @@ if ( {) {
                           {item.value.toLocaleString()}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
                         <span className="text-muted-foreground">;
                           {itemConfig?.label || item && item.name}
@@ -864,6 +601,7 @@ if ( {) {
                         <span className="font-mono font-medium tabular-nums text-foreground">;
                           {item && item.value.toLocaleString()}
                         </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -1327,10 +1065,13 @@ const ChartLegendContent = React.forward_ref<;
 =======
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
+<<<<<<< HEAD
       return null
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1582,6 +1323,9 @@ function getPayloadConfigFromPayload(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+=======
+      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ref) => {
     const { config } = use_chart ();
     // Check condition
@@ -1612,7 +1356,7 @@ export {;
               {item_config?.icon && !hide_icon ? (
                 <item_config.icon />) : (
                 <div;
-                  className="h - 2 w - 2 shrink - 0 rounded-[2px]";
+                  className="h - 2 w - 2 shrink-0 rounded-[2px]";
                   style={{
                     background_color: item.color}}
                 />)}
@@ -1659,15 +1403,7 @@ if ( {) {
     : config[key as keyof typeof config];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-export {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
 
@@ -1701,27 +1437,8 @@ function getPayloadConfigFromPayload(): any (;
       key as keyof typeof payloadPayload;
     ] as string;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-<<<<<<< HEAD
-=======
-=======
-
-
-
-export {;
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
+=======;
 
   return configLabelKey in config;
     ? config[configLabelKey];
@@ -1731,6 +1448,7 @@ export {;
   ChartLegend;
   ChartLegendContent;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ChartContainer,;
   ChartTooltip,;
@@ -1777,68 +1495,14 @@ export {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ChartLegend;
-  ChartLegendContent;
-
-  ChartStyle}
-
-<<<<<<< HEAD
 =======
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-  ChartLegend;
-  ChartLegendContent;
-  ChartStyle}
-);
-ChartLegendContent.displayName = "ChartLegend";
-;
-// Helper to extract item config from a payload.;
-function getPayloadConfigFromPayload(;
-  config:ChartConfig,;
-  payload:unknown,;
-  key:string;
-) {;
-  if (typeof payload !== "object" || payload === null) {;
-    return undefined;
-  }
-;
-  const payloadPayload =;
-    "payload" in payload &&;
-    typeof payload.payload === "object" &&;
-    payload.payload !== null;
-      ? payload.payload;
-      :undefined;
-;
-  let configLabelKey:string = key;
-;
-  if (;
-    key in payload &&;
-    typeof payload[key as keyof typeof payload] === "string";
-  ) {;
-    configLabelKey = payload[key as keyof typeof payload] as string;
-  } else if (;
-    payloadPayload &&;
-    key in payloadPayload &&;
-    typeof payloadPayload[key as keyof typeof payloadPayload] === "string";
-  ) {;
-    configLabelKey = payloadPayload[;
-      key as keyof typeof payloadPayload;
-    ] as string;
-  }
-;
-  return configLabelKey in config;
-    ? config[configLabelKey];
-    :config[key as keyof typeof config];
+  ChartStyle}  return configLabelKey in config
+    ? config[configLabelKey]
+    : config[key as keyof typeof config]
 }
-;
-export {;
-  ChartContainer,;
-  ChartTooltip,;
-  ChartTooltipContent,;
-  ChartLegend;
+export {  ChartLegend;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ChartLegendContent;
+
   ChartStyle}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+

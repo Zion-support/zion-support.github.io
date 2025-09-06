@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -19,6 +20,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
 =======
 
   };      permanent: false}}
+=======
+import { GetServerSideProps } from 'next'
+};      permanent: false}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function LaunchRedirect() {;
@@ -41,7 +46,6 @@ export default /**
  * LaunchRedirect - Function description
  */
 function LaunchRedirect() {
-
 
 }
 ;

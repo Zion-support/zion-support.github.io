@@ -81,8 +81,11 @@ export default function CuttingEdgeServicesShowcase2025() {
   Mail
   MapPin;} from 'lucide-react';import {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Brain,
   Atom,
   Shield,
@@ -213,7 +216,7 @@ const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',;
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 const heroStats = [;
   {;
@@ -241,8 +244,8 @@ const heroStats = [;
   { label: 'Success Rate', value: '99 && 99.9%', icon: <Award className="w-5 h-5" /> }
 const serviceCategories = [;
   {;
-    title: 'AI & Consciousness',;
-    description:;
+    title: 'AI & Consciousness',,
+  description:;
       'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025,;
     icon: Brain,;
     color: 'from-violet-500 to-purple-600',;
@@ -254,37 +257,37 @@ const serviceCategories = [;
     count: cuttingEdgeAIServices2025 && cuttingEdgeAIServices2025.length,;
   },;
   {;
-    title: 'Quantum & Emerging Tech',;
-    description:;
+    title: 'Quantum & Emerging Tech',,
+  description:;
       'Breakthrough quantum computing and space technology solutions',    services: cuttingEdgeQuantumServices2025,;
     icon: Atom,;
     color: 'from-indigo-500 to-blue-600',;
     gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',;
     count: cuttingEdgeQuantumServices2025 && cuttingEdgeQuantumServices2025.length,;
-  },  {    count: cuttingEdgeAIServices2025 && cuttingEdgeAIServices2025.length;
-  };
+  },  {    count: cuttingEdgeAIServices2025 && cuttingEdgeAIServices2025.length
+};
   {;
-    title: 'Quantum & Emerging Tech',;
-    description: 'Breakthrough quantum computing and space technology solutions',;
+    title: 'Quantum & Emerging Tech',,
+  description: 'Breakthrough quantum computing and space technology solutions',;
     icon: Atom,;
     color: 'from-indigo-500 to-blue-600',;
     gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',;
     count: cuttingEdgeQuantumServices2025 && cuttingEdgeQuantumServices2025.length,;
-  },    count: cuttingEdgeQuantumServices2025 && cuttingEdgeQuantumServices2025.length;
-  };
+  },    count: cuttingEdgeQuantumServices2025 && cuttingEdgeQuantumServices2025.length
+};
   {;
-    title: 'Enterprise IT',;
-    description: 'Advanced enterprise infrastructure and security solutions',;
+    title: 'Enterprise IT',,
+  description: 'Advanced enterprise infrastructure and security solutions',;
     services: cuttingEdgeEnterpriseITServices2025,;
     icon: Shield,;
     color: 'from-blue-500 to-cyan-600',;
     gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',;
     count: cuttingEdgeEnterpriseITServices2025 && cuttingEdgeEnterpriseITServices2025.length,;
-  },  {    count: cuttingEdgeEnterpriseITServices2025 && cuttingEdgeEnterpriseITServices2025.length;
-  };
+  },  {    count: cuttingEdgeEnterpriseITServices2025 && cuttingEdgeEnterpriseITServices2025.length
+};
   {;
-    title: 'Micro SAAS',;
-    description: 'Innovative business solutions for modern enterprises',;
+    title: 'Micro SAAS',,
+  description: 'Innovative business solutions for modern enterprises',;
     services: cuttingEdgeMicroSaasServices2025,;
     icon: Rocket,;
     color: 'from-teal-500 to-emerald-600',;
@@ -390,6 +393,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         duration: 0.5,
       },
+<<<<<<< HEAD
     },  };
 
   };
@@ -398,6 +402,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    },  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
         <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
@@ -413,6 +421,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Cutting-Edge Services
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -420,6 +429,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -441,11 +452,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </span>
               </motion.h1>
 
-
               <motion.p 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -606,11 +619,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div 
 
-
               initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -690,6 +705,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   <button
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -703,6 +719,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -744,11 +762,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
                 <button
-
-
-
-
-
 
                 <button
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -864,10 +877,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           {tag}
                         </span>;
                       ))}
-
-
-
-
 
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
@@ -986,17 +995,19 @@ className='flex items-start text-sm text-white/80'>;
                     </div>;
                   </div>;
 
-
                   {/* Hover Effect Overlay */}
 <<<<<<< HEAD
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
@@ -1004,6 +1015,7 @@ className='flex items-start text-sm text-white/80'>;
 
             </motion && motion.div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1016,6 +1028,8 @@ className='flex items-start text-sm text-white/80'>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1095,6 +1109,7 @@ className='flex items-start text-sm text-white/80'>;
             <motion.div
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1102,6 +1117,8 @@ className='flex items-start text-sm text-white/80'>;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 <a
@@ -1254,9 +1271,9 @@ visible: {;
                     {/* CTA */}
                     <div className='flex items - center justify - between'>                        Starting From;
                       </h4>;
-                      <div className="text - 2xl font - bold text - white">;
+                      <div className="text - 2xl font-bold text-white">;
                         ${service.pricing.starter.price}
-                        <span className="text - sm font - normal text - white / 60">/{service.pricing.starter.period}</span>;
+                        <span className="text - sm font-normal text-white / 60">/{service.pricing.starter.period}</span>;
                       </div>;
                     </div>;
                     {/* CTA */}
@@ -1275,22 +1292,22 @@ visible: {;
                         Get Started;
                         <ArrowRight className='ml - 2 w - 4 h - 4' />                      </a>                      <a;
                         href={service.website}
-                        className="inline - flex items - center text - cyan - 400 hover: text - cyan - 300 transition - colors duration - 300 text - sm font - medium";
+                        className="inline - flex items - center text - cyan - 400 hover: text - cyan - 300 transition - colors duration - 300 text-sm font-medium";
                       >;
                         Learn More;
-                        <ExternalLink className="ml - 1 w - 4 h - 4" />;
+                        <ExternalLink className="ml - 1 w-4 h-4" />;
                       </a>;
                       <a;
                         href="/contact";
-                        className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
+                        className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration-300 transform hover:scale-105";
                       >;
                         Get Started;
-                        <ArrowRight className="ml - 2 w - 4 h - 4" />;
+                        <ArrowRight className="ml - 2 w-4 h-4" />;
                       </a>;
                     </div>;
                   </div>;
                   {/* Hover Effect Overlay */}
-                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none" />;
+                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer-events-none" />;
                 </motion.div>))}
             </motion.div>;
             {/* No Results */}
@@ -1313,15 +1330,15 @@ visible: {;
                     setSelectedCategory ('all');
                   }}
                   className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >              >;
-                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-                <p className="text - white / 70 mb - 6">Try adjusting your search terms or category filter</p>;
+                <div className="text-6xl mb-4">🔍</div>;
+                <h3 className="text - 2xl font - bold text-white mb-2">No services found</h3>;
+                <p className="text-white / 70 mb-6">Try adjusting your search terms or category filter</p>;
                 <button;
                   on_click={() => {
                     setSearchTerm ('');
                     setSelectedCategory ('all');
                   }}
-                  className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
+                  className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
                 >;
                   Clear Filters;
                 </button>;
@@ -1330,8 +1347,8 @@ visible: {;
         </section>;
         {/* Contact CTA Section */}
         <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
-          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
-          <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
+          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple-900 / 20 to-black">;
+          <div className="max - w-4xl mx - auto text - center px - 4 sm:px-6 lg:px-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1360,23 +1377,23 @@ visible: {;
                 >;
                   <Phone className='mr - 2 w - 5 h - 5' />                  Call Now                Ready to Transform Your Business?;
               </h2>;
-              <p className="text - xl text - white / 80 mb - 8 leading - relaxed">;
+              <p className="text - xl text - white / 80 mb-8 leading-relaxed">;
                 Our cutting - edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.;
                 Let's discuss how we can help you achieve your goals.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify-center mb-8">;
                 <a;
                   href="/contact";
-                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25";
+                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow-cyan-500 / 25";
                 >;
                   Start Your Journey;
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
+                  <ArrowRight className="ml - 2 w-5 h-5" />;
                 </a>;
                 <a;
                   href={`tel:${contact_info.mobile}`}
-                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105";
+                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration-300 transform hover:scale-105";
                 >;
-                  <Phone className="mr - 2 w - 5 h - 5" />;
+                  <Phone className="mr - 2 w-5 h-5" />;
                   Call Now;
                 </a>;
               </div>;
@@ -1414,26 +1431,26 @@ visible: {;
                   <div className='text - white / 70 text - sm'>;
                     {contact_info.address}
                   </div>                </div>                  </div>;
-                  <div className="text - white font - semibold">Phone</div>;
-                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
+                  <div className="text-white font-semibold">Phone</div>;
+                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition-colors duration-300">;
                     {contact_info.mobile}
                   </a>;
                 </div>;
-                <div className="flex flex - col items - center">;
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
-                    <Mail className="w - 6 h - 6 text - cyan - 400" />;
+                <div className="flex flex-col items-center">;
+                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify-center mb-3">;
+                    <Mail className="w - 6 h - 6 text-cyan-400" />;
                   </div>;
-                  <div className="text - white font - semibold">Email</div>;
-                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
+                  <div className="text-white font-semibold">Email</div>;
+                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition-colors duration-300">;
                     {contact_info.email}
                   </a>;
                 </div>;
-                <div className="flex flex - col items - center">;
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
-                    <MapPin className="w - 6 h - 6 text - cyan - 400" />;
+                <div className="flex flex-col items-center">;
+                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify-center mb-3">;
+                    <MapPin className="w - 6 h - 6 text-cyan-400" />;
                   </div>;
-                  <div className="text - white font - semibold">Address</div>;
-                  <div className="text - white / 70 text - sm">{contact_info.address}</div>;
+                  <div className="text-white font-semibold">Address</div>;
+                  <div className="text-white / 70 text-sm">{contact_info.address}</div>;
                 </div>;
               </div>;
             </motion.div>;

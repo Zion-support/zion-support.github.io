@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -137,10 +141,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     isLoading;
     error;
     loadJobDetails
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export default useJobDetails;
@@ -292,3 +299,6 @@ export default useJobDetails;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

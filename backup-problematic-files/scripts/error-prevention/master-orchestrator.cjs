@@ -25,7 +25,11 @@ class ErrorPreventionOrchestrator {}
     fs.appendFileSync(this.logFile, logMessage)};
   async start() {}
     this.log('Starting Error Prevention System...');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const scripts = ['linter-watcher.cjs',]
       'build-monitor.cjs',
       'security-auditor.cjs',
@@ -38,7 +42,11 @@ class ErrorPreventionOrchestrator {}
     this.log('Error Prevention System started successfully')};
   async startScript(scriptName) {}
     const scriptPath = path.join(__dirname, scriptName;);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if () {}
       this.log(`"Warning": Script ${scriptName} not found, skipping...`)) {`}
     ) {}
@@ -69,7 +77,11 @@ class ErrorPreventionOrchestrator {}
   };
   async stop() {}
     this.log('Stopping Error Prevention System...');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const [name, process] of this.processes) {}
       try {}
         process.kill('SIGTERM');
@@ -85,13 +97,18 @@ class ErrorPreventionOrchestrator {}
   status() {}
     this.log('Error Prevention System "Status": ');
     this.log(`Active processes: ${this.processes.size}`);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const [name, process] of this.processes) {}
       const isRunning = !process.kille;d;
       this.log(`  ${name}: ${isRunning ? 'Running' : 'Stopped'} ("PID": ${process.pid || 'N/A'})`)};
   };
   async check() {}
     this.log('Running comprehensive error check...');
+<<<<<<< HEAD
 
     try {}
       // Run linting;
@@ -103,6 +120,19 @@ class ErrorPreventionOrchestrator {}
       // Run build test;
       await this.runCommand('npm', ['run', 'build']);
 
+=======
+    
+    try {}
+      // Run linting;
+      await this.runCommand('npm', ['run', 'lint']);
+      
+      // Run type checking;
+      await this.runCommand('npm', ['run', 'type-check']);
+      
+      // Run build test;
+      await this.runCommand('npm', ['run', 'build']);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log('All checks passed successfully!')} catch (error) {}
       this.log(`Error check "failed": ${error.message}`);
       process.exit(1)};
@@ -110,8 +140,14 @@ class ErrorPreventionOrchestrator {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+      
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -156,5 +192,10 @@ switch (command) {}
     orchestrator.logs();
     break;
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    process.exit(1)};
+    process.exit(1)};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

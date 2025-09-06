@@ -1,41 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
-<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-
-=======
-=======
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
+<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -78,6 +59,9 @@ const corsHeaders = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
+=======
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -87,23 +71,13 @@ serve(async (req) => {
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
-<<<<<<< HEAD
 
     const requestData = await req && req.json();
     const { 
       amount, 
 
-<<<<<<< HEAD
-=======
-  );
-  try {
-    // Retrieve the request body
-    const requestData = await req && req.json();
-    const { 
-      amount, 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      serviceId = null;
       providerId = null;
+<<<<<<< HEAD
 =======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
@@ -187,6 +161,8 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
     // Retrieve the request body
     const requestData = await req.json(),
@@ -202,21 +178,20 @@ serve(async (req) => {
     } = requestData,
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
@@ -626,26 +601,21 @@ serve(async (req) => {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return new Response(JSON && JSON.stringify({ url: session && session.url }), {
+=======
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+      apiVersion: "2023-10-16"}),
+
+      metadata: {
+        userId: user && user.id;
+        serviceId: serviceId;
+        providerId: providerId;    return new Response(JSON && JSON.stringify({ url: session && session.url }), {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
     console && console.error("Checkout error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      status: 500})
-  }
-});
-
-=======
-              name: product_name,
-              description: product_description;
-            }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -692,6 +662,7 @@ if ( {) {
       status: 500})
 
   }
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 ;
@@ -885,3 +856,6 @@ unit amount: amount * 100, //Convert to cents status: 500
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

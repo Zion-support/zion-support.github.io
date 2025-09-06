@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DesignMapSection = {;
   id: string;
   title: string;
@@ -226,6 +227,9 @@ export interface TokenSet {
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+export interface TokenSet {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
@@ -241,6 +245,7 @@ export interface UIKit {;
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -275,6 +280,8 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     
     return this.props.children;
   }
@@ -308,8 +315,8 @@ export async function buildTokenSet(): Promise<TokenSet> {;
 =======
   colors: Record<string, string>;
   typography: {
-    fontSizes: Record<string, string>;
-  };
+    fontSizes: Record<string, string>
+};
 };
 
 export async function buildTokenSet(): Promise<TokenSet> {
@@ -373,13 +380,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    };
+=======    };
   }
   if (kind === 'chakra') {
     return {
@@ -406,97 +407,19 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     if (!res && res.ok) return null;
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
-    return null;
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-// Design mapping utilities
-export interface DesignElement {
-  id: string;
-  type: 'component' | 'layout' | 'style' | 'asset';
-  name: string;
-  figmaId?: string;
-  properties: Record<string, any>;
-  children?: DesignElement[];
-  parent?: string;
-}
-
-export interface DesignSystem {
-  id: string;
-  name: string;
-  version: string;
-  components: DesignElement[];
-  tokens: Record<string, any>;
-  assets: DesignElement[];
-  lastUpdated: Date;
-}
-
-export interface FigmaNode {
-  id: string;
-  name: string;
-  type: string;
-  children?: FigmaNode[];
-  absoluteBoundingBox?: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  };
-  fills?: Array<{
-    type: string;
-    color?: {
-      r: number;
-      g: number;
-      b: number;
-      a: number;
-    };
-  }>;
-  effects?: Array<{
-    type: string;
-    radius?: number;
-    color?: {
-      r: number;
-      g: number;
-      b: number;
-      a: number;
-    };
-  }>;
-  characters?: string;
-  style?: {
-    fontFamily?: string;
-    fontSize?: number;
-    fontWeight?: number;
-    textAlignHorizontal?: string;
-    textAlignVertical?: string;
+    return null
+};
   };
 }
 
-  const tokens = await buildTokenSet(fileId);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    };
-  };
-}
-
-<<<<<<< HEAD
   getDesignSystem(id: string): DesignSystem | null {
     return this.designSystems.get(id) || null;
   }
 
   addComponent(designSystemId: string, component: DesignElement): boolean {
     const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-=======
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const tokens = await buildTokenSet(fileId);
+    if (!designSystem) return false;  const tokens = await buildTokenSet(fileId);
   return {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -678,12 +601,15 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -701,6 +627,7 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
       sm: 8,
       md: 16,
       lg: 24,
+<<<<<<< HEAD
 <<<<<<< HEAD
       xl: 32,
 =======
@@ -749,6 +676,9 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {;
     return null;
   }
 =======
+=======
+      xl: 32,    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 }
 
@@ -771,6 +701,7 @@ export async function buildUIKit(
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -778,3 +709,5 @@ export async function buildUIKit(
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

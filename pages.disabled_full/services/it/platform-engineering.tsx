@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<<< HEAD:pages.disabled_full/services/it/platform-engineering.tsx
@@ -29,11 +30,16 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function PlatformEngineering() {}; return null} } ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {}; return null} } ;
-module.exports = default function PlatformEngineering() { return; }; return null} } ; function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) {}; return null} <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() { return; }; return null} } ;'"'"
+module.exports = default function PlatformEngineering() { return
+}; return null} } ; function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) {}; return null} <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() { return
+}; return null} } ;'"'"
 import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -78,3 +84,6 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

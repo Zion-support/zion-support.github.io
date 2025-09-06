@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/FilterSidebar.tsx
 =======
 import React from "react",;
@@ -9,6 +10,11 @@ import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/FilterSidebar.tsx
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Filter } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { SearchFilter } from "./filters/SearchFilter",;
 import { SortFilter } from "./filters/SortFilter",;
 import { SkillsFilter } from "./filters/SkillsFilter",;
@@ -39,10 +45,13 @@ export function FilterSidebar({;
   isMobileFilterOpen;
 } FilterSidebarProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/FilterSidebar.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/FilterSidebar.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       {/* Filter header */}
       <div className="flex items-center justify-between mb-6">;
@@ -50,17 +59,87 @@ export function FilterSidebar({;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
         </h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/FilterSidebar.tsx
 
+=======
+        <Button ;
+          variant="ghost" ;
+          size="sm" ;
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
+        >;
+          Clear All;
+        </Button>;
+      </div>;
+      ;
+      {/* Search */}
+      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
+      ;
+      {/* Sorting */}
+      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
+      ;
+      {/* Skills */}
+      <SkillsFilter ;
+        selectedSkills={selectedSkills} ;
+        toggleSkill={toggleSkill} ;
+        expanded={expandedSections.skills} ;
+        toggleSection={() => toggleSection('skills')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      ;
+      {/* Availability */}
+      <AvailabilityFilter ;
+        selectedAvailability={selectedAvailability} ;
+        toggleAvailability={toggleAvailability} ;
+        expanded={expandedSections.availability} ;
+        toggleSection={() => toggleSection('availability')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      ;
+      {/* Region */}
+      <RegionFilter ;
+        selectedRegions={selectedRegions} ;
+        toggleRegion={toggleRegion} ;
+        expanded={expandedSections.region} ;
+        toggleSection={() => toggleSection('region')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      ;
+      {/* Years of Experience */}
+      <ExperienceFilter ;
+        experienceRange={experienceRange} ;
+        setExperienceRange={setExperienceRange} ;
+        expanded={expandedSections.experience} ;
+        toggleSection={() => toggleSection('experience')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      ;
+      {/* Price Range */}
+      <PriceFilter ;
+        priceRange={priceRange} ;
+        setPriceRange={setPriceRange} ;
+        expanded={expandedSections.price} ;
+        toggleSection={() => toggleSection('price')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      ;
+      {isMobileFilterOpen && (;
+        <Button ;
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
         >;
           Apply Filters;
         </Button>;
       )}
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/FilterSidebar.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  export function FilterSidebar ({;
   searchTerm;
@@ -165,4 +244,7 @@ isMobileFilterOpen ;
 }</>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/FilterSidebar.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

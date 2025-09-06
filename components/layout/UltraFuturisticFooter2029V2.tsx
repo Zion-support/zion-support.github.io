@@ -482,8 +482,11 @@ function UltraFuturisticFooter2029V2() {
             </motion && motion.div>;
           </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -770,13 +773,12 @@ function UltraFuturisticFooter2029V2() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                           href={service.href}
-                          className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
+                          className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 text-xs block";
                         >;
                           {service.name}
           </div>;
         </motion && motion.div>;
       </div>;
-
 
                     ))}
                   </ul>;
@@ -824,6 +826,12 @@ function UltraFuturisticFooter2029V2() {
               © 2025 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
+<<<<<<< HEAD
+=======
+              </Link>            </motion.div>
+
+            </motion.div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             {/* Social Links */}
             <motion.div
@@ -912,11 +920,14 @@ function UltraFuturisticFooter2029V2() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Newsletter Signup */}

@@ -80,7 +80,6 @@ import Link from 'next/link';
 =======
 import Link from 'next/link';
 
-
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
@@ -118,7 +117,7 @@ import Link from 'next/link';
   Globe,
   ChevronDown,
 } from 'lucide-react';
-import Link from 'next / link';import {
+import Link from 'next/link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
@@ -477,8 +476,11 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             </div>
                           </motion.div>
                         )}
@@ -689,8 +691,11 @@ import Link from 'next/link';
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             {/* Backdrop */}
             <div
@@ -721,8 +726,11 @@ import Link from 'next/link';
             />
             
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Mobile Menu */}
             <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -938,9 +946,12 @@ import Link from 'next/link';
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
@@ -959,6 +970,7 @@ import Link from 'next/link';
                     </div>;
                   ))}
 
+<<<<<<< HEAD
 
 
 
@@ -968,6 +980,8 @@ import Link from 'next/link';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -1072,15 +1086,15 @@ export default Navigation;
         )}
       </AnimatePresence>;
     </>;
-  );
+  )
 };
 
-export default Navigation;  );
+export default Navigation;  )
 };
 
 export default Navigation;
                           </div>;
-                          <div className="pl - 4 space - y-2">;
+                          <div className="pl-4 space-y-2">;
                             {item.dropdown.map ((dropdown_item) => {
                               const Icon = dropdown_item.icon;
                               return (
@@ -1088,12 +1102,12 @@ export default Navigation;
                                   key={dropdown_item.name}
                                   href={dropdown_item.href}
                                   on_click={() => setIsOpen (false)}
-                                  className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition - all duration - 300";
+                                  className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition-all duration-300";
                                 >;
-                                  <Icon className="w - 5 h - 5 text - cyan - 400" />;
+                                  <Icon className="w - 5 h - 5 text-cyan-400" />;
                                   <div>;
-                                    <div className="text - white font - medium">{dropdown_item.name}</div>;
-                                    <div className="text - gray - 400 text - sm">{dropdown_item.description}</div>;
+                                    <div className="text-white font-medium">{dropdown_item.name}</div>;
+                                    <div className="text - gray-400 text-sm">{dropdown_item.description}</div>;
                                   </div>;
                                 </Link>);
                             })}
@@ -1107,10 +1121,10 @@ export default Navigation;
                           <item.icon className='w - 5 h - 5 text - cyan - 400' />;
                           <span className='text - white font - medium'>;
                             {item.name}
-                          </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                          </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition-all duration-300";
                         >;
-                          <item.icon className="w - 5 h - 5 text - cyan - 400" />;
-                          <span className="text - white font - medium">{item.name}</span>)}
+                          <item.icon className="w - 5 h - 5 text-cyan-400" />;
+                          <span className="text-white font-medium">{item.name}</span>)}
                     </div>))}
                 </div>;
                 {/* Contact Information */}
@@ -1131,13 +1145,13 @@ export default Navigation;
                       <MapPin className='w - 4 h - 4 text - pink - 400' />;
                       <span className='text - xs'>{contact_info.address}</span>                    </div>                      <span>{contact_info.mobile}</span>;
                     </div>;
-                    <div className="flex items - center space - x-2 text - gray - 300">;
-                      <Mail className="w - 4 h - 4 text - purple - 400" />;
+                    <div className="flex items - center space - x-2 text-gray-300">;
+                      <Mail className="w - 4 h - 4 text-purple-400" />;
                       <span>{contact_info.email}</span>;
                     </div>;
-                    <div className="flex items - center space - x-2 text - gray - 300">;
-                      <MapPin className="w - 4 h - 4 text - pink - 400" />;
-                      <span className="text - xs">{contact_info.address}</span>;
+                    <div className="flex items - center space - x-2 text-gray-300">;
+                      <MapPin className="w - 4 h - 4 text-pink-400" />;
+                      <span className="text-xs">{contact_info.address}</span>;
                     </div>;
                   </div>;
                 </div>;
@@ -1151,7 +1165,7 @@ export default Navigation;
                     href="/contact";
                     while_tap={{ scale: 0.95 }}
                     on_click={() => setIsOpen (false)}
-                    className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25";
+                    className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow-cyan-500 / 25";
                   >;
                     Get Started Today;
                   </motion.a>;

@@ -48,6 +48,7 @@ import Link from 'next/link';
 
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
+<<<<<<< HEAD
   description: 'Comprehensive micro SaaS development services including product engineering, billing systems, analytics, and growth optimization.'
 };
 
@@ -2216,15 +2217,21 @@ function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radi
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
+  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function MicroSaaSPage() {
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Micro SaaS Solutions
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Micro SaaS Development
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
           Complete SaaS development from concept to deployment. We build scalable, secure, and user-friendly micro SaaS applications that drive business growth.
 =======
@@ -2232,22 +2239,27 @@ export default function MicroSaaSPage() {
           scalable, secure, and user-friendly micro SaaS applications that drive
           business growth.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+          Build and launch your next micro SaaS product with our comprehensive development services. 
+          From AI-powered tools to productivity apps, we help you create revenue-generating solutions.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Consultation"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Development Inquiry"
+            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
-            Get Free Consultation
+            Start Your SaaS Project
           </a>
           <a
             href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
         </div>
       </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       {/* What We Build */}
@@ -2889,6 +2901,8 @@ export default function MicroSaaSPage() {
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>
   );
 }

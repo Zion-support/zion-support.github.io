@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,12 +10,6 @@
 // Define the shape of a conversation;
 
 export interface Conversation {
-<<<<<<< HEAD
-=======
-// Define the shape of a message
-export interface Message {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -24,6 +17,7 @@ export interface Message {;
   created_at: string;
   read: boolean;
   sender_name?: string;
+<<<<<<< HEAD
   sender_avatar?: string;
 <<<<<<< HEAD
 
@@ -56,13 +50,15 @@ export interface Conversation {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+=======
+  sender_avatar?: string;  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
   avatar_url?: string;
   last_message?: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     content: string,
+<<<<<<< HEAD
     created_at: string;
 
 =======
@@ -226,6 +222,9 @@ export interface MessagingContextType {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
    * Set the currently active conversation. Passing `null` will clear the;
+=======
+    created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
@@ -233,6 +232,7 @@ export interface MessagingContextType {;
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -244,3 +244,6 @@ export interface MessagingContextType {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

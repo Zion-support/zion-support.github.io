@@ -25,6 +25,7 @@ export default function UltraFuturisticBackground2035() {
 export default function UltraFuturisticBackground2035() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -32,6 +33,8 @@ export default function UltraFuturisticBackground2035() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -490,7 +493,6 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
           />
           />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -571,6 +573,7 @@ if ( {) {
           animate={{
             scale_x: [0, 1, 0],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         />
@@ -580,6 +583,9 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
             opacity: [0, 1, 0],          className="absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan - 500 / 50 to - transparent";
+=======
+            opacity: [0, 1, 0],          className="absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan-500 / 50 to-transparent";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           animate={{
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
@@ -595,7 +601,6 @@ if ( {) {
             ease: 'easeInOut',          }}
 
         />;
-
 
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
@@ -838,12 +843,15 @@ rotate: [0, 360],            }}            style={{
         <div className='absolute inset-0'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
                 delay: i * 0.5,
@@ -1059,8 +1067,11 @@ rotate: [0, 360],            }}            style={{
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
@@ -1075,6 +1086,7 @@ rotate: [0, 360],            }}            style={{
               }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1085,6 +1097,10 @@ rotate: [0, 360],            }}            style={{
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              }}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />
           ))}
         </div>

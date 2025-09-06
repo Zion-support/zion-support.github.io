@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -13,49 +14,19 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 interface TokenRequest {
   userId: string;
   amount: number
   reason?: string
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
-const serviceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-
-const supabase = createClient(supabaseUrl, serviceKey);
-=======
-
-
-=======
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
-const serviceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-const supabase = createClient(supabaseUrl, serviceKey);
-
-
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
-const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-const supabase = createClient(supabaseUrl, serviceKey);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
+}import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -72,6 +43,9 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -81,6 +55,7 @@ interface TokenRequest {
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -147,52 +122,23 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   if (action === 'earn') {
     return await changeBalance(userId, amount, 'earn', reason)
-  } else if (action === 'burn') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return await changeBalance(userId, -Math && Math.abs(amount), 'burn', reason)
-  }
-
-
-  return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), { status: 400 })
-
-});
+  } else if (action === 'burn') {});
+async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
+  try {});
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
-=======
-  return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), { status: 400 })
-});
-async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
-  try {
-    return await changeBalance(userId, -Math.abs(amount), 'burn', reason)
-  }
-  return new Response(JSON.stringify({ error: 'Invalid action' }), { status: 400 })
-});
-async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-});
-async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
-  try {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { data: wallet, error: walletError } = await supabase
     .from('wallets')
     .select('*')
     .eq('user_id', userId)
     .single();
   if (walletError && walletError.code !== 'PGRST116') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
-=======
-    return new Response(JSON.stringify({ error: walletError.message }), { status: 500 })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
   }
   let balance = wallet?.balance |0;
   balance += delta;
@@ -202,19 +148,12 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
       .from('wallets')
       .update({ balance, updated_at: new Date().toISOString() })
       .eq('user_id', userId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
-=======
-    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   } else {
     const { error } = await supabase
       .from('wallets')
       .insert({ user_id: userId, balance });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
@@ -447,6 +386,8 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.0",;
 ;
@@ -540,8 +481,11 @@ if (wallet) {
 ;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

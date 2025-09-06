@@ -184,7 +184,8 @@
         }
       }
 
-      requestAnimationFrame(animate);    };            ctx && ctx.stroke();
+      requestAnimationFrame(animate)
+};            ctx && ctx.stroke();
           }
         }
       }
@@ -476,7 +477,7 @@ if (return) {
           repeat: Infinity,
           ease: 'linear',        }}
       />;
-      <motion.div        className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30 transform rotate - 45";
+      <motion.div        className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 30 transform rotate-45";
         animate={{
           rotate: -360,
           scale: [1, 1.3, 1];
@@ -502,8 +503,12 @@ if (return) {
           repeat: Infinity
           duration: 18,
           repeat: Infinity,
+<<<<<<< HEAD
           ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink - 400 / 30 rounded - lg";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+          ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink-400 / 30 rounded-lg";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         animate={{
 <<<<<<< HEAD
           rotate: 360
@@ -725,7 +730,7 @@ if (return) {
           ease: 'linear',        }}
       />;
       {/* Neural Network Nodes */}
-      <div className='absolute inset - 0'>        className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - purple - 400 / 20 rounded - full";
+      <div className='absolute inset - 0'>        className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - purple-400 / 20 rounded-full";
         animate={{
           rotate: -360,
           scale: [1, 1.2, 1];
@@ -751,7 +756,7 @@ if (return) {
               delay: Math.random () * 2,            }}        {[...Array (12)].map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 3 h - 3 bg - green - 400 rounded - full";
+            className="absolute w - 3 h - 3 bg - green-400 rounded-full";
             style={{
           duration: 25,
           repeat: Infinity,
@@ -904,14 +909,16 @@ if (return) {
               duration: 8 + i * 0.5,
               repeat: Infinity,
 
-
           />
         ))}
       </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -976,8 +983,12 @@ if (return) {
           repeat: Infinity,
           ease: 'easeInOut',        }}
       />;
+<<<<<<< HEAD
       <motion.div        className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      <motion.div        className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan-400 rounded-full";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         animate={{
           box_shadow: [;
             '0 0 10px rgba (0, 255, 255, 0.5)0 0 30px rgba (0, 255, 255, 0.8)0 0 10px rgba (0, 255, 255, 0.5)';
@@ -1018,6 +1029,7 @@ if (return) {
       />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       />
 =======
@@ -1030,12 +1042,17 @@ if (return) {
 =======
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }}
 
       />
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
@@ -1165,13 +1182,17 @@ export default UltraFuturisticBackground2034;
 }
 }
 }
+<<<<<<< HEAD
 export default UltraFuturisticBackground2034;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+export default UltraFuturisticBackground2034
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
-export default UltraFuturisticBackground2034;  );
+export default UltraFuturisticBackground2034;  )
 };
 
 export default UltraFuturisticBackground2034;

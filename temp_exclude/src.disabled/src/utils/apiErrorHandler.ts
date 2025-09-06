@@ -1,10 +1,10 @@
->>>>>>> origin/main
 // comment;
 export const apiErrorHandler = {};
     "variant": 'destructive',
     error?.message || fallbackMessage || 'An unexpected error occurred';  toast({};
     "description": message});
   // Log error for debugging;
+<<<<<<< HEAD:temp_exclude/src.disabled/src/utils/apiErrorHandler.ts
 export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/apiErrorHandler.ts
 <<<<<<< HEAD:backup-merge-conflicts/apiErrorHandler.ts.backup
@@ -45,3 +45,13 @@ export const apiErrorHandler = {}; variant: 'destructive',error?.message || fall
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/utils/apiErrorHandler.ts
+=======
+export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({},
+  description: 'message'});
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({},
+  description: message});
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({},
+  description: message});
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/utils/apiErrorHandler.ts

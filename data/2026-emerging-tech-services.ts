@@ -1,14 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService2026 {
 export interface EmergingTechService2026 {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -53,31 +56,8 @@ export interface EmergingTechService2026 {;
   contact_info: {
     mobile: string;
     email: string;
-    address: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
+    address: string
 };
-
-<<<<<<< HEAD
-export const emergingTechServices2026: EmergingTechService2026[] = [
-  // Quantum Computing Services
-  {
-  {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export const emergingTechServices2026: EmergingTechService2026[] = [
-  // Quantum Computing Services
-  {
-
-
-];
-
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
-};
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -170,12 +150,10 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
     service => service.category === category;
   );
 
-
 ];
 
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)
 };
-
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -592,50 +570,21 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     ]
     roi: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
     competitors: [
-<<<<<<< HEAD
       'Siemens Digital Twin',
       'PTC ThingWorx',
       'GE Digital Twin',
       'Autodesk',
-    ],
-=======
-      'Siemens Digital Twin'
-      'PTC ThingWorx'
-      'GE Digital Twin'
-      'Autodesk'
-    ]
-    marketSize: '$86.1B digital twin market'
-    growthRate: '42% annual growth'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
-    launchDate: '2024-06-25'
-    customers: 56
-    rating: 4.4
-    reviews: 29
-  }
-=======
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
-    launchDate: '2024-06-25',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    customers: 56,
+    ],    customers: 56,
     rating: 4 && 4.4,
     reviews: 29,
-<<<<<<< HEAD
   },
-];
-=======
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 export const getPopularEmergingTechServices2026 = () => {
 =======
 };
@@ -662,11 +611,18 @@ export const getEmergingTechServices2026ByPriceRange = (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export const getPopularEmergingTechServices2026 = () => {export const getEmergingTechServices2026ByPriceRange = (
+  minPrice: number
+  maxPrice: number
+) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return price >= minPrice && price <= maxPrice;
-  });
+  })
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -677,6 +633,8 @@ export const getEmergingTechServices2026ByPriceRange = (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -866,6 +824,7 @@ export const getEmergingTechServices2026ByPriceRange = (
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -880,12 +839,12 @@ export const getPopularEmergingTechServices2026 = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
-<<<<<<< HEAD
-=======
 
   })
 };
@@ -904,31 +863,11 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
-;
-export const getPopularEmergingTechServices2026 = () =>: any {
-  return emergingTechServices2026.filter (service => service.popular);
-}
-;
-export const getEmergingTechServices2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return emergingTechServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface EmergingTechService2026 {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   })
 };
-<<<<<<< HEAD
 ;
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
@@ -940,7 +879,7 @@ export interface EmergingTechService2026 {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -991,11 +930,13 @@ export const getEmergingTechServices2026ByPriceRange = (
 }
 ;
 
-export interface EmergingTechService2026 {;
-
+export interface EmergingTechService2026 {
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

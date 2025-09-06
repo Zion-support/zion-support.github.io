@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import _React from "react"; "export { function };export default function PostCar
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+import _React from "react"; "export { function };export default function PostCard({ post }) { return (); <div className="bg-white/10" backdrop-blur-sm rounded-lg p-4 mb-4">" <div className="flex" items-start space-x-4>" <img" src="{post.author.avatar}" alt="{post.author.name}" className="w-10" h-10 rounded-full" / / />" <div className="flex-1">" <h3 className="text-lg font-semibold text-zion-cyan mb-2> {post.title}" </h3>" <p className="text-zion-slate-light" mb-3 line-clamp-3>" {post.content}" </p> <div className="flex" items-center justify-between text-sm text-zion-slate-light">" <span>By {post.author.name}</span> <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div> <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light"> <span>{post.replies.length} replies</span> <span>{post.likes} likes</span> ";"export default function PostCard({ post }) {} return()"; <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4"> <div className="flex items-start space-x-4">"; <div>Broken JSX</div> / >"" <div className="flex-1"> <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {post.title}" </h3>"" <p className="text-zion-slate-light mb-3 line-clamp-3">"; {post.content}" </p>"" <div className="flex items-center justify-between text-sm text-zion-slate-light">"; <span>By {post.author.name}></div> <span>{new Date(post.createdAt).toLocaleDateString()}</span>" </div>"" <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light"> <span>{post.replies.length} replies></div> <span>{post.likes} likes></div> <span>{post.views} views></div> ></div> ></div> ></div> </div>)} export { PostCard }; export { PostCard }; export { PostCard }; export { PostCard }; export { PostCard };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ const React from "react"; "export { function };export default function PostCard(
 
 import _React from "react"; "export { function };export default function PostCard({ post }) { return (); <div className="bg-white/10" backdrop-blur-sm rounded-lg p-4 mb-4">" <div className="flex" items-start space-x-4>" <img" src="{post && post.author.avatar}" alt="{post && post.author.name}" className="w-10" h-10 rounded-full" / / />" <div className="flex-1">" <h3 className="text-lg font-semibold text-zion-cyan mb-2> {post && post.title}" </h3>" <p className="text-zion-slate-light" mb-3 line-clamp-3>" {post && post.content}" </p> <div className="flex" items-center justify-between text-sm text-zion-slate-light">" <span>By {post && post.author.name}</span> <span>{new Date(post && post.createdAt).toLocaleDateString()}</span> </div> <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light"> <span>{post && post.replies.length} replies</span> <span>{post && post.likes} likes</span> ";"export default function PostCard({ post }) {} return ()"; <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4"> <div className="flex items-start space-x-4">"; <div>Broken JSX</div> / >"" <div className="flex-1"> <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {post && post.title}" </h3>"" <p className="text-zion-slate-light mb-3 line-clamp-3">"; {post && post.content}" </p>"" <div className="flex items-center justify-between text-sm text-zion-slate-light">"; <span>By {post && post.author.name}></div> <span>{new Date(post && post.createdAt).toLocaleDateString()}</span>" </div>"" <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light"> <span>{post && post.replies.length} replies></div> <span>{post && post.likes} likes></div> <span>{post && post.views} views></div> ></div> ></div> ></div> </div>)} export { PostCard }; export { PostCard }; export { PostCard }; export { PostCard }; export { PostCard };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,3 +79,5 @@ import _React from "react"; "export { function };export default function PostCar
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

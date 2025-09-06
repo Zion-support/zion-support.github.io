@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import fs from 'fs';
@@ -8,9 +9,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface DevIdentity {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
   isAuthenticated: boolean;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -31,6 +35,10 @@ export interface DevIdentity {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+=======
+export interface DevIdentity {;
+  isAuthenticated: boolean;    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
@@ -47,12 +55,13 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // TODO: integrate real auth; for now, check a header and env var for dev
 
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
@@ -60,31 +69,21 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
   if (token && adminToken && token === adminToken) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
   return { isAuthenticated: false, roles: [] }
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   return { isAuthenticated: false, roles: [] }
 }
-  if (token && adminToken && token === adminToken) {
-
-=======
-<<<<<<< HEAD
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
-<<<<<<< HEAD
-
-=======
-=======
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -94,6 +93,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -309,3 +309,5 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

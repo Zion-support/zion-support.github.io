@@ -8,7 +8,7 @@
 
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
-  targetId: string; // unique identifier for the target;
+  targetId: string; // unique identifier for the target
 };
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
@@ -35,7 +35,8 @@ export default function AdminNotesPanel({
 =======
   targetType,
   targetId,;
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)
+};
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type Note = {
@@ -54,10 +55,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-};
-
-
-
+}
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
@@ -194,12 +192,14 @@ if ( {) {
       setText('');
       setAdding(false);    }
 
-
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 
@@ -429,10 +429,10 @@ if ( {) {
               <li key={n.id} className='rounded border p - 2 text - sm'>;
                 <div className='opacity - 60 text - xs mb - 1'>;
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
+                </div>                <div>{n.text}</div>          <ul className="space-y-2">;
             {notes.map ((n) => (
-              <li key={n.id} className="rounded border p - 2 text - sm">;
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+              <li key={n.id} className="rounded border p-2 text-sm">;
+                <div className="opacity - 60 text-xs mb-1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;
@@ -805,10 +805,10 @@ if ( {) {
               <li key={n.id} className='rounded border p - 2 text - sm'>;
                 <div className='opacity - 60 text - xs mb - 1'>;
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
+                </div>                <div>{n.text}</div>          <ul className="space-y-2">;
             {notes.map ((n) => (
-              <li key={n.id} className="rounded border p - 2 text - sm">;
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+              <li key={n.id} className="rounded border p-2 text-sm">;
+                <div className="opacity - 60 text-xs mb-1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;

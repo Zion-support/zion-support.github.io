@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,10 +14,14 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -27,6 +32,8 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { cn } from "@/lib/utils"
 
@@ -35,6 +42,7 @@ const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
+<<<<<<< HEAD
   (
 <<<<<<< HEAD
 
@@ -60,93 +68,23 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ref
+=======
+  (    ref
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ) => (
     <SeparatorPrimitive.Root
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const Separator = React && React.forwardRef<;
-  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
-></typeof>(;
-  (;
-    { className, orientation = 'horizontal', decorative = true, ...props },;
-    ref;
-  ) => (;
-    <SeparatorPrimitive&& SeparatorPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from 'react';
+import * as React from 'react';import React from 'react';
 import * as React from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ref={ref}
       decorative={decorative}
       orientation={orientation}
-      className={cn(
-<<<<<<< HEAD
-
-=======
-import * as React from "react";
-import * as SeparatorPrimitive from "@radix-ui/react-separator";
-;
-import { cn } from "@/lib/utils";
-;
-const Separator = React.forwardRef<;
-  React.ElementRef<typeof SeparatorPrimitive.Root>,;
-  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>;
->(;
-  (;
-    { className, orientation = "horizontal", decorative = true, ...props },;
-    ref;
-  ) => (;
-    <SeparatorPrimitive.Root;
-      ref={ref}
-      decorative={decorative}
-      orientation={orientation}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-        "shrink-0 bg-border",
-        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
-
-
-        className
-<<<<<<< HEAD
-=======
-=======
-        className
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      className={cn(;
+      className={cn(        className
+=======      className={cn(;
         "shrink-0 bg-border",;
         orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
         className;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      )}
-      {...props}
-    />;
-  );
-);
-export { Separator }
-export { Separator }
-;
-
-
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-
-export { Separator }
-;
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export { Separator };
 import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;
@@ -173,6 +111,7 @@ Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
 export { Separator }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -238,3 +177,5 @@ export { Separator }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

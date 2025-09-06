@@ -6,9 +6,15 @@
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -38,10 +44,17 @@ class ComprehensiveAutomationRunner {
   async runCommand(command, description, timeout = 30000) {
     this.log(`🔧 ${description}`);
     try {
+<<<<<<< HEAD
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
         timeout: timeout
+=======
+      const result = execSync(command, { 
+        encoding: 'utf8', 
+        stdio: 'pipe',
+        timeout: timeout 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
@@ -349,4 +362,8 @@ if (require.main === module) {
   runner.run().catch(console.error);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = ComprehensiveAutomationRunner;

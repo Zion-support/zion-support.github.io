@@ -1,14 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SpecializedITSolution2026 {
 export interface SpecializedITSolution2026 {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -61,12 +64,9 @@ export interface SpecializedITSolution2026 {;
   contact_info: {
     mobile: string;
     email: string;
-    address: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
+    address: string
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
@@ -447,6 +447,11 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return price >= minPrice && price <= maxPrice;
   });
+=======
+    return price >= minPrice && price <= maxPrice;
+  })
+};    return price >= minPrice && price <= maxPrice
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
 };
@@ -460,12 +465,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -679,55 +679,16 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
     reviews: 33
-<<<<<<< HEAD
     website: string;
   }
-=======
-  }
-];
-export const getSpecializedITSolutions2026ByCategory = (category: string) => {
-  return specializedITSolutions2026.filter(solution => solution.category === category)
-};
-export const getPopularSpecializedITSolutions2026 = () => {
-  return specializedITSolutions2026.filter(solution => solution.popular)
-};
-export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return specializedITSolutions2026.filter(solution => {
-    const price = parseInt(solution.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice
-
   })
 };
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
-}
-;
-export const getPopularSpecializedITSolutions2026 = () =>: any {
-  return specializedITSolutions2026.filter (solution => solution.popular);
-}
-;
-export const getSpecializedITSolutions2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return specializedITSolutions2026.filter (solution => {
-    const price = parse_int (solution.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export interface SpecializedITSolution2026 {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  })
+}  })
 };
-<<<<<<< HEAD
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
@@ -739,7 +700,7 @@ export interface SpecializedITSolution2026 {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -790,11 +751,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 }
 ;
 
-export interface SpecializedITSolution2026 {;
-
+export interface SpecializedITSolution2026 {
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

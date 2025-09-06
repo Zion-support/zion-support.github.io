@@ -1,8 +1,35 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+}
+>(({ className, separator, ...props }, ref,) => (;
+  <nav
+import * as React from 'react';
+import { Slot } from '@radix - ui / react - slot';
+import { ChevronRight } from 'lucide-react';
+import { cn } from '@/lib / utils';
+const Breadcrumb = React.forward_ref<;
+  HTMLElement,
+  React.ComponentPropsWithoutRef<'nav'> & {
+    separator?: React.ReactNode;
+  }
+>(({ class_name, separator, ...props }, ref, ) => (
+  <nav;
+    ref={ref}
+    aria-label='breadcrumb'
+    className={cn(
+      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
+    )}
+    {...props}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from "react"
@@ -33,6 +60,23 @@ const Breadcrumb = React.forwardRef<
     {...props}
   />
 ))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  />));
+Breadcrumb.display_name = 'Breadcrumb';
+    ref = {ref, }
+    aria - label="breadcrumb";
+    class_name = {cn (
+      "inline - flex items - center gap - 1 text - sm text - zion - slate - light",
+      class_name), }
+    {...props}
+  />));
+Breadcrumb.display_name = 'Breadcrumb';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 Breadcrumb.displayName = "Breadcrumb"
  
 const BreadcrumbList = React.forwardRef<
@@ -64,6 +108,11 @@ const BreadcrumbLink = React.forwardRef<
   React.ComponentPropsWithoutRef<"a"> & {
     asChild?: boolean
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
  
@@ -78,15 +127,31 @@ const BreadcrumbLink = React.forwardRef<
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
 const BreadcrumbSeparator = ({
+<<<<<<< HEAD
   children,
   className,
   ...props
+=======
+<<<<<<< HEAD
+  children
+  className
+  ...props
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   >
     {children || <ChevronRight className="h-4 w-4" />}
   </li>
@@ -205,6 +270,8 @@ const BreadcrumbEllipsis = ({;
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
+<<<<<<< HEAD
+=======
 
   >;
     {children || <ChevronRight className="h-4 w-4" />}
@@ -217,13 +284,67 @@ const BreadcrumbEllipsis = ({;
   ...props;
 }: React && React.ComponentProps<"span">) => (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <span
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
+<<<<<<< HEAD
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className
+  ...props
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+    {...props}>;
+    &#8230,;
+  </span>;
+);
+BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+export {;
+  Breadcrumb,;
+  BreadcrumbList,;
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+
+export {;
+
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis};
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className,
+  ...props
+}: React.ComponentProps<"span">) => (
+  <span
+    role="presentation"
+    aria-hidden="true"
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+    {...props}
+  >
+    &#8230,
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+=======
 
 
 export {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Breadcrumb
@@ -287,3 +408,6 @@ export {
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

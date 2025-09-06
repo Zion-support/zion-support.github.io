@@ -23,6 +23,7 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <h1>Homepage2040</h1>
       <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -32,6 +33,9 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {
@@ -248,9 +252,121 @@ const Homepage2040: React.FC = () => {
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
             {/* Quantum particle effects */}
+<<<<<<< HEAD
             <div className="absolute inset-0">
               {[...Array(20)].map((_, i) => (
                 <motion.div
+=======
+            <div className="absolute inset-0">;
+              {[...Array(20)].map((_, i) => (;
+                <motion&& motion.div
+        duration: 3,
+        repeat: -1,
+        ease: "easeInOut" as const;
+      }
+    }
+  }
+;
+  const stats_data = [;
+    {
+      number: "100+",
+      label: "Innovative Services",
+      description: "Cutting - edge solutions",
+      icon: Sparkles,
+      color: "text - cyan - 400",
+      hover_color: "group - hover:text - cyan - 300";
+    }
+    {
+      number: "∞",
+      label: "Future Possibilities",
+      description: "Unlimited potential",
+      icon: InfinityIcon,
+      color: "text - purple - 400",
+      hover_color: "group - hover:text - purple - 300";
+    }
+    {
+      number: "24 / 7",
+      label: "Autonomous Operations",
+      description: "Always available",
+      icon: Cpu,
+      color: "text - blue - 400",
+      hover_color: "group - hover:text - blue - 300";
+    }
+    {
+      number: "10x",
+      label: "Performance Boost",
+      description: "Quantum enhancement",
+      icon: Lightning,
+      color: "text - green - 400",
+      hover_color: "group - hover:text - green - 300";
+    }
+  ];
+;
+  // Combine all services for showcase;
+  const all_services = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
+  const featured_services = all_services.filter (service => service.popular).slice (0, 6);
+;
+  const service_categories = [;
+    {
+      name: "AI & Machine Learning",
+      icon: Brain,
+      count: all_services.filter (string => s.category.includes ('AI')).length,
+      color: "from - pink - 500 to - rose - 600";
+    }
+    {
+      name: "Quantum Technology",
+      icon: Atom,
+      count: all_services.filter (string => s.category.includes ('Quantum')).length,
+      color: "from - blue - 500 to - cyan - 600";
+    }
+    {
+      name: "Emerging Tech",
+      icon: Rocket,
+      count: all_services.filter (string => s.category.includes ('Emerging') || s.category.includes ('Space')).length,
+      color: "from - purple - 500 to - indigo - 600";
+    }
+    {
+      name: "Cybersecurity",
+      icon: Shield,
+      count: all_services.filter (string => s.category.includes ('Security') || s.category.includes ('Cyber')).length,
+      color: "from - green - 500 to - emerald - 600";
+    }
+  ];
+;
+  return (
+    <Layout>;
+      {/* Main Content */}
+      <main className="relative z-10" id="main">;
+        {/* Hero Section with Enhanced Background */}
+        <section;
+          className="min - h-screen flex items - center justify - center px-4 relative overflow-hidden";
+          aria - labelledby="hero - heading";
+        >;
+          {/* Enhanced Futuristic Background Elements */}
+          <div className="absolute inset - 0 pointer-events-none">;
+            {/* Animated geometric shapes */}
+            <motion.div;
+              variants={floating_variants}
+              animate="float";
+              className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan-400 / 20 rounded-lg";
+            ></motion.div>;
+            <motion.div;
+              variants={floating_variants}
+              animate="float";
+              style={{ animation_delay: '1s' }}
+              className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
+            ></motion.div>;
+            <motion.div;
+              variants={floating_variants}
+              animate="float";
+              style={{ animation_delay: '2s' }}
+              className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 / 20 transform rotate-45";
+            ></motion.div>;
+            {/* Quantum particle effects */}
+            <div className="absolute inset-0">;
+              {[...Array (20)].map ((_, i) => (
+                <motion.div;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   key={i}
 <<<<<<< HEAD
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
@@ -297,11 +413,13 @@ const Homepage2040: React.FC = () => {
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
 
-
               <motion.h1 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
@@ -314,11 +432,13 @@ const Homepage2040: React.FC = () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
               <motion.p 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
@@ -363,6 +483,7 @@ const Homepage2040: React.FC = () => {
               </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Enhanced Trust Indicators */}
               <motion.div
@@ -405,6 +526,8 @@ const Homepage2040: React.FC = () => {
             <motion.div
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {/* Enhanced Trust Indicators */}
               <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -472,7 +595,6 @@ const Homepage2040: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
 
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">;
@@ -633,8 +755,8 @@ const Homepage2040: React.FC = () => {
                       </div>;
                     )}
                       {/* Service Price */}
-                      <div className="mb - 6">;
-                        <span className="text - 2xl font - bold text - cyan - 400">;
+                      <div className="mb-6">;
+                        <span className="text - 2xl font - bold text-cyan-400">;
                           {service.price}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -686,10 +808,10 @@ const Homepage2040: React.FC = () => {
                       {/* CTA Button */}
                       <Link;
                         href={service.link}
-                        className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white font - semibold rounded - xl hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 group - hover:shadow - lg group - hover:shadow - cyan - 400 / 25";
+                        className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white font - semibold rounded - xl hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 group - hover:shadow - lg group - hover:shadow-cyan-400 / 25";
                       >;
                         Learn More;
-                        <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
+                        <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition-transform duration-300" />;
                       </Link>;
                     </motion.div>))}
                 </motion.div>;
@@ -736,11 +858,13 @@ const Homepage2040: React.FC = () => {
 <<<<<<< HEAD
 =======
 
-
               <motion.div 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >
@@ -771,9 +895,12 @@ const Homepage2040: React.FC = () => {
                   <TrendingUp className="w-5 h-5 text-blue-400" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default Homepage2040;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

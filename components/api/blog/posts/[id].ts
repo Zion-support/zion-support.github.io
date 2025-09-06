@@ -71,6 +71,7 @@ function handler() {
   $2
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,6 +81,8 @@ function handler() {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return res.status(405).end();
 
   if (req.method === 'PUT') {

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -74,3 +75,6 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedSid
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

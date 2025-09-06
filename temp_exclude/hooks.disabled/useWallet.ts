@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:temp_exclude/hooks.disabled/useWallet.ts
 interface UseWalletProps {
@@ -20,3 +21,5 @@ export default function UseWallet({ }: UseWalletProps) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

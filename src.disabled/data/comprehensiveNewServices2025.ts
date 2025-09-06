@@ -1,15 +1,17 @@
 "export": interface ComprehensiveNewService {
    id: string;
-   title: string;
-   description: string;
+   title: string,
+  description: string;
    category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';
    pricing: {
    monthly: string;
    yearly: string;
    enterprise: string;
    setup: string;
-export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string} marketPrice: 'strin',g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string: 'implementationTime?: string: trainingRequired?: string: compliance?: string[]' } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['';,;
+export: interface ComprehensiveNewService { id: string; title: string,
+  description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string} marketPrice: 'strin',g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string: 'implementationTime?: string: trainingRequired?: string: compliance?: string[]' } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['';,;
    marketPrice: strin,g} "features": string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: "string": implementationTime?: string: trainingRequired?: string: compliance?: string[] } "export": const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
@@ -43,3 +45,7 @@ export: interface ComprehensiveNewService { id: string; title: string; descripti
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export: interface ComprehensiveNewService { id: string; title: string,
+  description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

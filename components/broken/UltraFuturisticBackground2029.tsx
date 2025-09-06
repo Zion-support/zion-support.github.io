@@ -201,11 +201,11 @@ if ( {) {
             ease: 'easeInOut',          }}  }, []);
 ;
   return (
-    <div className="fixed inset - 0 pointer - events - none overflow - hidden z - 0">;
+    <div className="fixed inset - 0 pointer - events - none overflow-hidden z-0">;
       {/* Canvas for particle effects */}
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ background: 'transparent' }}
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black">;
@@ -217,9 +217,9 @@ if ( {) {
             ]
       />;
       {/* Animated gradient background */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black">;
+      <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan-900 / 20 to-black">;
         <motion.div;
-          className="absolute inset - 0 opacity - 30";
+          className="absolute inset-0 opacity-30";
           animate={{
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
@@ -330,6 +330,7 @@ if ( {) {
         />
       </div>
 
+<<<<<<< HEAD
 
             ease: 'easeInOut',            ease: "easeInOut";
           }}
@@ -350,6 +351,11 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+            duration: 20,
+            repeat: Infinity,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             duration: 20,
             repeat: Infinity,
 
@@ -502,7 +508,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
             ease: 'linear',          }}        <motion.div;
-          className="absolute inset - 0";
+          className="absolute inset-0";
           style={{
             background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
@@ -550,9 +556,7 @@ if ( {) {
         />;
       </div>;
 
-
       {/* Quantum energy waves */}
-
 
           }}
       {/* Quantum energy waves */}
@@ -654,13 +658,11 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 
-
         />
       </div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Holographic elements */}
-
 
         animate={{
 <<<<<<< HEAD
@@ -797,7 +799,7 @@ if ( {) {
               opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
+            className="absolute w - 1 h - 1 bg - cyan-400 / 40 rounded-full";
             style={{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
@@ -878,6 +880,7 @@ if ( {) {
               repeat: Infinity,
               delay: i * 0.3,
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           />
@@ -891,6 +894,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
 
@@ -935,7 +940,7 @@ if ( {) {
         {Array.from ({ length: 5 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan - 400 / 60 to - transparent";
+            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan-400 / 60 to-transparent";
             style={{
               left: `${15 + (i * 15)}%`,
               top: '-20px';
@@ -948,6 +953,7 @@ if ( {) {
               ease: 'linear',            }}              ease: "linear"
             }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -957,6 +963,8 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             transition={{
               duration: 4,
               repeat: Infinity,
@@ -968,6 +976,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ease: 'linear',            }}
 
+<<<<<<< HEAD
               ease: 'linear',            }}
 
             }}
@@ -989,15 +998,21 @@ export default UltraFuturisticBackground2029;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default UltraFuturisticBackground2029;  );
@@ -1021,7 +1036,7 @@ export default UltraFuturisticBackground2029;  );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 
-export default UltraFuturisticBackground2029;  );
+export default UltraFuturisticBackground2029;  )
 };
 export default UltraFuturisticBackground2029;
 <<<<<<< HEAD
@@ -1045,9 +1060,11 @@ export default UltraFuturisticBackground2029;
 export default UltraFuturisticBackground2029);
 }
 ;
-export default UltraFuturisticBackground2029;
-
+export default UltraFuturisticBackground2029
 };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

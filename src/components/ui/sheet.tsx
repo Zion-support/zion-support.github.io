@@ -6,8 +6,11 @@ import * as React from "react"
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 import { cn } from "@/lib/utils"
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const Sheet = SheetPrimitive.Root
 
 const SheetTrigger = SheetPrimitive.Trigger
@@ -25,10 +28,13 @@ const SheetOverlay = React.forwardRef<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
     ref={ref}
@@ -37,6 +43,10 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
@@ -60,6 +70,7 @@ const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -68,6 +79,8 @@ const SheetContent = React.forwardRef<
 
 
   <SheetPortal>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
@@ -78,11 +91,18 @@ const SheetContent = React.forwardRef<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
+=======
+      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
@@ -98,10 +118,13 @@ const SheetHeader = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "flex flex-col space-y-2 text-center sm:text-left",
       className
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
   />
@@ -109,11 +132,12 @@ const SheetHeader = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 SheetHeader.displayName = "SheetHeader"
-
-
 
 const SheetFooter = ({
   className,
@@ -124,10 +148,13 @@ const SheetFooter = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
       className
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
   />
@@ -135,17 +162,19 @@ const SheetFooter = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 SheetFooter.displayName = "SheetFooter"
-
-
 
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
+<<<<<<< HEAD
     ref={ref}
 <<<<<<< HEAD
 =======
@@ -153,17 +182,23 @@ const SheetTitle = React.forwardRef<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn("text-lg font-semibold text-foreground", className)}
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     {...props}
   />;
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 const SheetDescription = React.forwardRef<;
+<<<<<<< HEAD
   React.ElementRef<typeof SheetPrimitive.Description>,;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <SheetPrimitive.Description;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -181,3 +216,9 @@ export {;
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
 }
 ;
+=======
+    {...props}
+  />;
+));
+SheetDescription.displayName = SheetPrimitive.Description.displayName;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

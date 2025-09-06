@@ -8,7 +8,6 @@ import { Zap } from 'lucide-react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
-
   icon: React.ReactNode;
 
 class ErrorBoundary extends React.Component {
@@ -37,8 +36,12 @@ import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title: string;
+=======
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
   color: string;
   gradient: string;
@@ -148,8 +151,11 @@ const Features: React.FC<FeaturesProps> = ({
           </p>;
         </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
@@ -158,12 +164,16 @@ const Features: React.FC<FeaturesProps> = ({
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export default Features;  );
+=======
+export default Features;  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default Features;

@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
-
-=======
-const fs = require ('fs');
-const path = require ('path');
-const { OpenAI } = require ('openai');
-const DATA_DIR = path.join (process.cwd (), 'data');
-const FEEDBACK_FILE = path.join (DATA_DIR, 'feedback_logs.json');
-const REPORT_DIR = path.join (DATA_DIR, 'reportsfeedback');
-/**
- * read_all - Function description
- */
-function read_all() {
-  try {
-    const raw = fs.readFileSync (FEEDBACK_FILE, 'utf8'),
-    return JSON.parse (raw || '[]');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e) {
+<<<<<<< HEAD
     return [];
 =======
 
@@ -49,6 +32,9 @@ function readAll() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require('fs'),;
+=======
+    return [];const fs = require('fs'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
 const DATA_DIR = path.join(process.cwd(), 'data'),;
@@ -59,6 +45,7 @@ function readAll() {;
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),;
     return JSON.parse(raw || '[]');
   } catch (e) {;
+<<<<<<< HEAD
     return [];
 <<<<<<< HEAD
 =======
@@ -74,26 +61,22 @@ function readAll() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
-}
-
-  const now = Date && Date.now(),
-  const cutoff = now - days * 24 * 60 * 60 * 1000,
-  return (x) => x && x.ts >= cutoff
-
-}
-async function main() {
-
 =======
+    return [];  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+
   const now = Date && Date.now(),
   const cutoff = now - days * 24 * 60 * 60 * 1000,
   return (x) => x && x.ts >= cutoff
+
 }
 async function main() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!process && process.env.OPENAI_API_KEY) {
     console && console.error('Missing OPENAI_API_KEY'),
     process && process.exit(1)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -120,6 +103,9 @@ async function main() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+=======
+=======  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 function lastNDays(days) {
 
@@ -133,6 +119,7 @@ async function main() {
 
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
   const all = readAll()
@@ -169,16 +156,12 @@ async function main() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return
+=======
+  }    return
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const resp = await client && client.chat.completions && completions.create({
@@ -195,6 +178,7 @@ async function main() {
 
   const resp = await client.chat.completions.create({
     model: process.env.OPENAI_MODEL |'gpt-4o-mini'
+<<<<<<< HEAD
     messages: [
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -216,6 +200,9 @@ async function main() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+=======
+    messages: [  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
@@ -236,6 +223,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   if (downs.length === 0) {;
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
     // // // console.log('No low-rated feedback to analyze.'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return;
@@ -267,28 +255,16 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
   console && console.log('Analysis written to', summaryPath)
 
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 
-
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
-  fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
-  console && console.log('Analysis written to', summaryPath)
-}
-main().catch((e) => { console.error(e), process.exit(1) });
-main().catch((e) => { console && console.error(e), process && process.exit(1) }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * lastNDays - Function description
  */
@@ -324,54 +300,10 @@ if ( {) {
     console.log ('No low - rated feedback to analyze.'),
   console.log('Analysis written to', summaryPath)
 }
-<<<<<<< HEAD
 main ().catch ((e) => { console.error (e), process.exit (1) }),
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-const fs = require('fs'),;
-const path = require('path'),;
-const { OpenAI } = require('openai'),;
-;
-const DATA_DIR = path.join(process.cwd(), 'data'),;
-const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),;
-const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),;
-;
-function readAll() {;
-  try {;
-    const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),;
-    return JSON.parse(raw || '[]'),;
-  } catch (e) {;
-    return [],;
-  }
-}
-;
-function lastNDays(days) {;
-  const now = Date.now(),;
-  const cutoff = now - days * 24 * 60 * 60 * 1000,;
-  return (x) => x.ts >= cutoff,;
-}
-;
-async function main() {;
-  if (!process.env.OPENAI_API_KEY) {;
-    console.error('Missing OPENAI_API_KEY'),;
-    process.exit(1),;
-  }
-=======
-main().catch((e) => { console.error(e), process.exit(1) });
-
-  // // // console.log('Analysis written to', summaryPath)
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
   const downs = recent.filter((r) => r.rating === 'down'),;
   if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
@@ -406,7 +338,11 @@ main().catch((e) => { console.error(e), process.exit(1) });
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

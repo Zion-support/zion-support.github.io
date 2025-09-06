@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,6 +30,7 @@ export default /**
 function ForgotPassword() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -59,3 +55,5 @@ function ForgotPassword() {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

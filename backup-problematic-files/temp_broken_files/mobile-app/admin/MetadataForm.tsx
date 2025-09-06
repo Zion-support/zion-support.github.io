@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 =======
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { AppMetadataValues } from "./MetadataManager",;
@@ -11,11 +14,15 @@ import { Textarea } from "@/components/ui/textarea",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 import { X } from "lucide-react",;
 =======
 import { X } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+import { X } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 interface MetadataFormProps {;
   form:UseFormReturn<AppMetadataValues>;
@@ -49,10 +56,13 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
   const longDescription = watch("longDescription"),;
 ;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -60,6 +70,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
       <CardContent>;
         <Form {...form}>;
           <div className="space-y-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
               render={({ field }) => (;
@@ -67,10 +78,23 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                   <FormLabel>App Title</FormLabel>;
                   <FormControl>;
 
+=======
+            <FormField;
+              control={control}
+              name="appTitle";
+              render={({ field } { field:any }) => (;
+                <FormItem>;
+                  <FormLabel>App Title</FormLabel>;
+                  <FormControl>;
+                    <Input ;
+                      placeholder="Enter app title";
+                      maxLength={platform === "ios" ? 30 :50}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
               render={({ field }) => (;
@@ -79,6 +103,8 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                   <FormControl>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     Max {platform === "ios" ? "30" :"50"} characters;
                   </FormDescription>;
                 </FormItem>;              )}
@@ -94,11 +120,15 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input ;
                       placeholder="Brief description of your app";
                       maxLength={platform === "ios" ? 170 :80}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
               render={({ field }) => (;
@@ -107,6 +137,8 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                   <FormControl>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     Max {platform === "ios" ? "170" :"80"} characters;
                   </FormDescription>;
                 </FormItem>;              )}
@@ -122,12 +154,16 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                     <Textarea ;
                       placeholder="Detailed description of your app";
                       className="min-h-32";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       maxLength={maxDescriptionLength}
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
                     {keyword}
@@ -136,6 +172,8 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {longDescription.length}/{maxDescriptionLength} characters;
                   </FormDescription>;
                 </FormItem>;
@@ -160,7 +198,10 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
                       aria-label="Remove keyword";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     >;
                       <X className="h-3 w-3" />;
                     </button>;
@@ -168,9 +209,12 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                 ))}
               </div>;
               <FormDescription className="mt-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Add keywords to improve discoverability (max 100 characters total);
               </FormDescription>;
             </div>;
@@ -189,14 +233,20 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                   </FormControl>;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
           </div>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </Card>;
   ),;
 },; import {;
@@ -227,4 +277,7 @@ if (value && !keywords.includes (value) ) {;
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/MetadataForm.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

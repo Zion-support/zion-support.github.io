@@ -15,37 +15,12 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  resumeId?: string;
-
-  initialData?: Partial<BasicInfoFormData>;
-<<<<<<< HEAD
-
-  onSave: (data: BasicInfoFormData) => void,;
-
-=======
-  onSave: (data: BasicInfoFormData) => void,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
-<<<<<<< HEAD
-
 
 export function BasicInfoForm(): any ({;
-
-=======
-export function BasicInfoForm(): any ({;
-  resumeId;
-  resumeId?: string;
-  initialData?: Partial<BasicInfoFormData>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -80,41 +55,17 @@ export function BasicInfoForm({;
   skills = [];
   yearsExperience = 0;
 export function BasicInfoForm({
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-export function BasicInfoForm(): any ({;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  resumeId;
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-  onComplete?: () => void
-}
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   resumeId,
   initialData = {},
   onSave,
   skills = [],
   yearsExperience = 0,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -187,6 +138,12 @@ export function BasicInfoForm(): any ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",;
+=======
+    if (initialData) {
+      Object.entries(initialData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;
@@ -210,67 +167,24 @@ export function BasicInfoForm({;
   initialData = {},;
   onSave,;
   skills = [],;
-  yearsExperience = 0,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  onComplete;
-}: BasicInfoFormProps) {;
-  const form = useForm<BasicInfoFormData>({;
-    resolver: zodResolver(basicInfoSchema),;
-    defaultValues: {;
-      fullName: "",;
-      title: "",;
-      email: "",;
-      phone: "",;
-      location: "",;
-      website: "",;
-      linkedin: "",;
-      github: "",;
-      hourlyRate: 0,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ...initialData}});
-
-  useEffect(() => {;
-    if (initialData) {;
-      Object && Object.entries(initialData).forEach(([key, value]) => {;
-        if (value !== undefined) {;
-
-          form.setValue(key as keyof BasicInfoFormData, value as any);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        }
-      });
-    }
-
-
-=======
-
-  };
-
-=======
-  }, [initialData, form]),;
+  yearsExperience = 0,;  }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 
     <Form {...form}>;
@@ -281,101 +195,20 @@ export function BasicInfoForm({;
 
           <div className="pt-4 border-t border-gray-200">;
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
-
-=======
-
-
-  };
-
-  }, [initialData, form]),;
-
-  const handleSubmit = (data: BasicInfoFormData) => {;
-          form && form.setValue(key as keyof BasicInfoFormData, value as any);
-        }
-      });
-    }
-  }, [initialData, form]);
-  const handleSubmit = (data: BasicInfoFormData) => {;
-
-import React, { useState, useEffect } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { Card } from "@/components/ui/card",;
-import { RateOptimizationSection } from "../RateOptimizationSection",;
-import { basicInfoSchema, BasicInfoFormData } from "./schema",;
-import { PersonalInfoFields } from "./PersonalInfoFields",;
-import { ContactFields } from "./ContactFields",;
-;
-export interface BasicInfoFormProps {;
-  resumeId?:string,;
-  initialData?:Partial<BasicInfoFormData>,;
-  onSave:(data:BasicInfoFormData) => void,;
-  skills?:string[],;
-  yearsExperience?:number,;
-  onComplete?:() => void;
-}
-;
-export function BasicInfoForm({;
-  resumeId,;
-  initialData = {},;
-  onSave,;
-  skills = [],;
-  yearsExperience = 0,;
-  onComplete;
-} BasicInfoFormProps) {;
-  const form = useForm<BasicInfoFormData>({;
-    resolver:zodResolver(basicInfoSchema),;
-    defaultValues:{;
-      fullName:"",;
-      title:"",;
-      email:"",;
-      phone:"",;
-      location:"",;
-      website:"",;
-      linkedin:"",;
-      github:"",;
-      hourlyRate:0,;
-      ...initialData}}),;
-;
-      ...initialData}}),;
-  useEffect(() => {;
-    if (initialData) {;
-      Object.entries(initialData).forEach(([key, value]) => {;
-        if (value !== undefined) {;
-
-
-
-
-  return (
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               yearsExperience={yearsExperience || 0}
 
-
-=======
-              yearsExperience={yearsExperience || 0}
-
-
-          form.setValue(key as keyof BasicInfoFormData, value as any);
-        }
-      })
-    }
-=======
-        }
-      });
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
@@ -385,11 +218,9 @@ export function BasicInfoForm({;
   }
   };
 
-
         }
       });
     }
-
 
   }, [initialData, form]),;
 
@@ -412,14 +243,16 @@ export function BasicInfoForm({;
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
-<<<<<<< HEAD
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               location={form.getValues("location")}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               rateType="hourly"
             />
           </div>
@@ -429,6 +262,7 @@ export function BasicInfoForm({;
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -487,6 +321,9 @@ export function BasicInfoForm({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+  )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -523,9 +360,8 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -625,3 +461,5 @@ if (initialData) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

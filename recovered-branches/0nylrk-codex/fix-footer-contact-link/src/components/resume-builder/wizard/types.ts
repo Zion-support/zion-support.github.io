@@ -41,6 +41,7 @@ import { Resume } from "@/types/resume",
 import {Resume} from "@/types/resume";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -48,11 +49,13 @@ import {Resume} from "@/types/resume";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface StepProps {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   label: string
 
-
 export interface NavigationButtonsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,10 +109,13 @@ export interface ResumeProgressProps {
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export interface ResumeProgressProps {
   resume: Resume | null;
+<<<<<<< HEAD
   progress: number;
 }
 
@@ -195,37 +201,35 @@ export interface ResumeProgressProps {;
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   progress: number
 }
-
 export interface CreateResumeFormProps {
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+export interface ResumeProgressProps {;
+  resume: Resume | null,;
+  progress: number
+};
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  onCancel: () => void;
   isLoading: boolean;
 }
 
-
 }
 export interface EmptyResumeProps {
   onCreateClick: () => void;
@@ -239,6 +243,7 @@ export interface EmptyResumeProps {
 }
 }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -268,3 +273,5 @@ export interface EmptyResumeProps {
 ;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

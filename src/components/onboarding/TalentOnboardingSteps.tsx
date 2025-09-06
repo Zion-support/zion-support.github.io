@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -40,6 +41,12 @@ export function TalentOnboardingSteps() {
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+=======
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 return <OnboardingTracker steps={steps} />
 
@@ -87,6 +94,7 @@ function TalentOnboardingSteps() {
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -132,6 +140,8 @@ function TalentOnboardingSteps() {
       action: "Set",
     },
     {
+<<<<<<< HEAD
+=======
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
@@ -150,4 +160,8 @@ function TalentOnboardingSteps() {
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

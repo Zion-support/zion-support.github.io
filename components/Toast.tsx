@@ -14,8 +14,8 @@ interface Toast {
   duration?: number;
   action?: {
     label: string;
-    onClick: () => void;
-  };
+    onClick: () => void
+};
 }
 
 interface ToastContextType {
@@ -32,7 +32,7 @@ export const useToast = () => {
   if (!context) {
     throw new Error("useToast must be used within a ToastProvider");
   }
-  return context;
+  return context
 };
 
 interface ToastProviderProps {
@@ -87,7 +87,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </ToastContext.Provider>
-  );
+  )
 };
 
 interface ToastContainerProps {
@@ -105,7 +105,7 @@ const ToastContainer: React.FC<ToastContainerProps> = ({
         <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
       ))}
     </div>
-  );
+  )
 };
 
 interface ToastItemProps {
@@ -125,8 +125,8 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
 
   const handleRemove = () => {
     setIsLeaving(true);
-    setTimeout(() => onRemove(toast.id), 300);
-  };
+    setTimeout(() => onRemove(toast.id), 300)
+};
 
   const getToastStyles = () => {
     const baseStyles =
@@ -139,9 +139,18 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
     if (isVisible) {
       return `${baseStyles} translate-x-0 opacity-100`;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    return `${baseStyles} translate-x-full opacity-0`
+};
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     return `${baseStyles} translate-x-full opacity-0`;
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
   const getIconAndColor = () => {
     switch (toast.type) {
@@ -223,7 +232,7 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 // Convenience hooks for different toast types
@@ -231,6 +240,21 @@ export const useToastNotifications = () => {
   const { addToast } = useToast();
 
   return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    success: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'success', title, message, ...options }),
+    error: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'error', title, message, ...options }),
+    warning: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'warning', title, message, ...options }),
+    info: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'info', title, message, ...options }),
+  }
+};
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     success: (title: string, message?: string, options?: Partial<Toast>) =>
       addToast({ type: "success", title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) =>
@@ -241,3 +265,7 @@ export const useToastNotifications = () => {
       addToast({ type: "info", title, message, ...options }),
   };
 };
+<<<<<<< HEAD
+=======
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

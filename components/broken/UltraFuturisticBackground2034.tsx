@@ -40,8 +40,8 @@ const UltraFuturisticBackground2034: React.FC<;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-    };
+      canvas.width = window.innerWidth
+};
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -506,8 +506,8 @@ if ( {) {
   // Mouse move handler for interactive effects;
   useEffect(() => {;
     const handleMouseMove = (e: MouseEvent) => {;
-      setMousePosition({ x: e && e.clientX, y: e && e.clientY });
-    };
+      setMousePosition({ x: e && e.clientX, y: e && e.clientY })
+};
 
     window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
@@ -739,18 +739,18 @@ if ( {) {
   }, []);
 ;
   return (
-    <div className="fixed inset - 0 pointer - events - none z - 0 overflow - hidden">;
+    <div className="fixed inset - 0 pointer - events - none z-0 overflow-hidden">;
       {/* HTML Canvas Background */}
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ filter: `blur (${0.5 * intensity}px)` }}
       />;
       {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset - 0">;
+      <div className="absolute inset-0">;
         {/* Floating geometric shapes */}
         <motion.div;
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border-cyan-400 / 30";
           animate={{
           }}
           transition={{
@@ -764,16 +764,17 @@ if ( {) {
             repeat: -1,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }}
 
         />;
       </div>;
 
-
       {/* Energy waves */}
-
 
             duration: 6,
             repeat: -1,
@@ -838,7 +839,6 @@ if ( {) {
           <motion.div
 =======
 
-
           animate={{
             coordinate_x: ['-100%', '100%'],          }}
           transition={{
@@ -848,7 +848,7 @@ if ( {) {
 
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
             ease: 'linear',        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan-500 / 10 to-transparent";
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -879,7 +879,7 @@ if ( {) {
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
         />;
         <motion.div;
-          className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent";
+          className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple-500 / 10 to-transparent";
           animate={{
             coordinate_y: ['-100%100%'];
           }}
@@ -918,7 +918,7 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             key={i}
-            className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
+            className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan-400 / 20 to-transparent";
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
 
@@ -954,7 +954,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
             transition={{
 =======
 
@@ -985,10 +984,6 @@ if ( {) {
               delay: i * 0.1,
               repeat: -1,
 =======
-
-
-
-
 
             transition={{
               duration: 3,
@@ -1074,7 +1069,7 @@ export default UltraFuturisticBackground2034;        <motion.div
 }
 ;
 export default UltraFuturisticBackground2034;        <motion.div;
-          className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
+          className="absolute inset - 0 bg-[linear-gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear-gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
           style={{
             background_size: '50px 50px';
           }}
@@ -1138,12 +1133,17 @@ export default UltraFuturisticBackground2034);
 export default UltraFuturisticBackground2034;
 =======
     </div>;
-  );
-
-
+  )
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
           }}
         />
@@ -1157,7 +1157,7 @@ export default UltraFuturisticBackground2034;
 =======
 };
 
-export default UltraFuturisticBackground2034;  );
+export default UltraFuturisticBackground2034;  )
 };
 
 export default UltraFuturisticBackground2034;

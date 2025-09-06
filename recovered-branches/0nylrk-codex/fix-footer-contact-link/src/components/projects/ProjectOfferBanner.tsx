@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -10,22 +13,32 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 
+=======
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+export function ProjectOfferBanner() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ProjectOfferBanner() {
@@ -57,6 +70,12 @@ export function ProjectOfferBanner() {
     return null
   }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  useEffect(() => {
+    if (projects && !isLoading) {
+      const offers = projects.filter(p => p.status === 'offer_sent'),
+      setPendingOffers(offers)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -81,6 +100,7 @@ export function ProjectOfferBanner() {;
       const updated = new Set(prev),;
       updated.add(projectId),;
       return updated;
+<<<<<<< HEAD
     });
   };
   const handleViewOffer = (projectId: string) => {;
@@ -96,6 +116,17 @@ export function ProjectOfferBanner() {;
   }
   
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    })
+};
+  const handleViewOffer = (projectId: string) => {;
+    navigate(`/project/${projectId}`)
+};
+  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
+    return null;
+  }
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -125,6 +156,7 @@ export function ProjectOfferBanner() {;
                 <Button
                   size="sm"
                   variant="ghost"
+<<<<<<< HEAD
                   onClick={(e) => handleDismiss(offer.id, e)}
                 >
                   <X className="h-4 w-4" />
@@ -135,3 +167,29 @@ export function ProjectOfferBanner() {;
         ))}
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                  onClick={(e) => handleDismiss(offer && offer.id, e)}
+                >;
+                  <X className="h-4 w-4" />;
+                </Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+import { useEffect, useState } from './react';
+import { use_navigate } from './react-router-dom';
+import { Bell, Calendar, X } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { use_projects } from '@/hooks / use_projects';
+import { Project } from '@/types / projects';
+export /**
+ * ProjectOfferBanner - Function description
+ */
+function ProjectOfferBanner() {
+  const navigate = use_navigate ();
+  const { projects, is_loading } = use_projects ();
+  const [pending_offers, setPendingOffers] = useState < Project[]>([]);
+  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

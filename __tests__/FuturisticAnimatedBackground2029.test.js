@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -74,3 +75,6 @@ import _React from 'react"  import '@testing-library/jest-dom import FuturisticA
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react"  import '@testing-library/jest-dom import FuturisticAnimatedBackground2029 from '../components/FuturisticAnimatedBackground2029" describe('FuturisticAnimatedBackground2029',() => {' test('renders without crashing',() => {' render(<FuturisticAnimatedBackground2029 / / />) expect( screen.getByTestId('futuristicanimatedbackground2029')' ).toBeInTheDocument() }) test('displays correct content',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) test('handles user interactions',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) test('applies correct styling',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

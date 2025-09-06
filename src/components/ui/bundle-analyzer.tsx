@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 totalSize: number;
   gzippedSize: number;
@@ -11,6 +12,21 @@ totalSize: number;
 
 
       localStorage.getItem('bundle-analyzer') === 'true'
+=======
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
+  }
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
+  const [chunks, setChunks] = useState<ChunkInfo[]>([])
+  const [isVisible, setIsVisible] = useState(false)
+  const [isCollecting, setIsCollecting] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  useEffect((,) => {
+    // Only show in development or when explicitly enabled      localStorage.getItem('bundle-analyzer') === 'true'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
@@ -63,22 +79,44 @@ if ( {) {
 if (return) {
   $2
 }
-    setIsVisible (true);
-    collectBundleInfo ();
-  }, []);
-  const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return;
-    setIsCollecting(true)
+    setIsCollecting (true);
     try {
-
-
-        totalSize,
+      // Get performance entries for script resources
+      const resourceEntries = performance.getEntriesByType(
+        'resource'
+      ) as PerformanceResourceTiming[]
+      const scriptEntries = resourceEntries.filter(
+        entry =>
+          entry.name.includes('/_next/static/') &&
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+      )
+      // Calculate bundle information
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = []
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize |entry.encodedBodySize |0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
+        chunkData.push({
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
+        })
+      })
+      // Estimate gzipped size (roughly 70% of original)
+      const gzippedSize = totalSize * 0.7
+      const cacheHitRate = null;
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
+      setBundleInfo({        totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
@@ -144,11 +182,14 @@ if (return) {
     }
   }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -261,12 +302,15 @@ export function BundleAnalyzer() {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -274,6 +318,7 @@ export function BundleAnalyzer() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant="outline"
@@ -311,21 +356,28 @@ export function BundleAnalyzer() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 variant="ghost"
                 size="sm"
+=======
+        </Button>
+      </div>
+    )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className="h-6 w-6 p-0"
-              >
-                <Zap className="w-3 h-3" />
-              </Button>
+                className='h-6 w-6 p-0'>;
+                <Zap className='w-3 h-3' />;
+              </Button>;
               <Button
-                variant="ghost"
-                size="sm"
+                variant='ghost'
+                size='sm'
                 onClick={toggleAnalyzer}
+<<<<<<< HEAD
                 className="h-6 w-6 p-0"
               >
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ✕
@@ -425,6 +477,7 @@ if ( {) {
             </div>;
           </div>;
         </CardHeader>;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -439,6 +492,8 @@ if ( {) {
 
 
                         </span>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
                             cached
@@ -446,10 +501,17 @@ if ( {) {
                         )}
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
+=======
+                      <Badge
+                        className={getSizeColor(chunk.size)}
+                        variant='outline'
+                      >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {formatSize(chunk.size)}
                       </Badge>;
                     </div>;
@@ -475,11 +537,18 @@ if ( {) {
 } 
 
 }
+<<<<<<< HEAD
 
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </CardContent>;
+=======
+            <div className="text-xs text-muted-foreground">
+              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
+            </div>;
+          )}        </CardContent>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </Card>;
     </div>;
   );
@@ -488,10 +557,7 @@ if ( {) {
 =======
 } ;
 
-
-
         
-
 
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
@@ -573,4 +639,7 @@ if ( {) {
       </Card>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

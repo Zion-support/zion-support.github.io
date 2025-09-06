@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -15,11 +16,16 @@ import {Badge} from "@/components/ui/badge";
 import {formatDate} from "@/utils/referralUtils";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Referral, ReferralStatus } from "@/types/referrals",
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 import { formatDate } from "@/utils/referralUtils",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -234,6 +240,12 @@ export function ReferralTable({ referrals, isLoading } ReferralTableProps) {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+=======
+import { formatDate } from "@/utils/referralUtils",      case "expired":
+        return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
+      default:
+        return nullimport { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -257,18 +269,11 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
   };
   if (isLoading) {;
     return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex items-center justify-center p-8">;
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
       </div>;
     );
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -554,3 +559,6 @@ isLoading: boolean
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

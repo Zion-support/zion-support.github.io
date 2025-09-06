@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,6 @@ const { useEffect } from "react"; import { useRouter } from "next/router"; impor
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const { useEffect } from "react"; import { useRouter } from "next/router"; import { useSelector } from "react-redux"; function withAuth(Component) {; const Wrapped = (props) => {; const router = useRouter(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {; if(!isLoggedIn) {; router.push("/login?next=/community/new")}},[isLoggedIn,router]); if(!isLoggedIn) {; return null}; return <Component {.props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth;''"=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

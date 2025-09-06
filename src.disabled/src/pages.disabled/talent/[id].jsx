@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from \"react\"; import Link from \"next/link\"; import { ArrowRight,Phone,Mail } from \"lucide-react\"; ); export default function DynamicPage() {}; return null} )}
 const React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() { return; }; return null} )}""
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
@@ -5,3 +6,6 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

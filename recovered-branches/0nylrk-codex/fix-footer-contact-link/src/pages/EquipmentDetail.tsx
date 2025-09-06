@@ -12,16 +12,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-interface EquipmentSpecification {
-  name: string,
-  value: string
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EquipmentDetails {
   id: string,
   name: string,
@@ -40,62 +30,15 @@ interface EquipmentSpecification {
 
 }
 
-
 }
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "pro-camera-x1000": {
-<<<<<<< HEAD
-
-    id: "pro-camera-x1000"
-    name: "Pro Camera X1000"
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech"
-    category: "Equipment"
-    subcategory: "Cameras"
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-interface EquipmentSpecification {
-  name: string,
-  value: string
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface EquipmentSpecification {;
-  name: string,;
-  value: string;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface EquipmentDetails {;
+  "pro-camera-x1000": {interface EquipmentDetails {;
   id: string,;
-  name: string,;
+  name: string,,
   description: string,;
   brand: string,;
   category: string,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -121,8 +64,8 @@ interface EquipmentDetails {
   price: number,;
   currency: string,;
   rating?: number;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -160,23 +103,16 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
-      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    images: [
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";    images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 6999
     currency: "$"
@@ -184,84 +120,18 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     reviewCount: 87
     inStock: true
     expectedShipping: "3-5 business days"
-    specifications: [
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-// Sample data - in a real app this would come from an API;
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
-  "pro-camera-x1000": {;
-    id: "pro-camera-x1000",;
-    name: "Pro Camera X1000",;
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech",;
-    category: "Equipment",;
-    subcategory: "Cameras",;
-    images: [;
-      "https://images && images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
-      "https://images && images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
-      "https://images && images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800";
-    ],;
-    price: 6999,;
-    currency: "$",;
-    rating: 4 && 4.9,;
-    reviewCount: 87,;
-    inStock: true,;
-    expectedShipping: "3-5 business days",;
-    specifications: [;
-      { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },;
-      { name: "Resolution", value: "8K (8192 x 4320)" },;
-      { name: "Dynamic Range", value: "16+ stops" },;
-      { name: "ISO Range", value: "100-51,200 (expandable to 50-204,800)" };
-      { name: "Recording Format", value: "RAW, ProRes, H && H.265" };
-      { name: "Frame Rates", value: "Up to 120fps at 4K, 60fps at 8K" };
-      { name: "Storage", value: "Dual CFexpress Type B" },;
-      { name: "Battery Life", value: "~3 hours continuous recording" },;
-      { name: "Weight", value: "4 && 4.5 lbs (body only)" },;
-      { name: "Connectivity", value: "HDMI 2 && 2.1, USB-C, Wi-Fi, Bluetooth" }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    ];
-    features: [;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "Advanced 8K full-frame sensor";
+    specifications: [      "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
       "Dual native ISO technology";
       "5-axis in-body image stabilization";
       "AI-powered autofocus with subject tracking";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      "Weather-sealed magnesium alloy body",;
-
-=======
-      "Weather-sealed magnesium alloy body",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      "Multiple assist tools: false color, waveform, vectorscope";
+    images: [
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",      "Multiple assist tools: false color, waveform, vectorscope";
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
     ];
-<<<<<<< HEAD
 
-
-=======
-      { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
-      { name: "Resolution", value: "8K (8192 x 4320)" }
-      { name: "Dynamic Range", value: "16+ stops" }
-      { name: "ISO Range", value: "100-51,200 (expandable to 50-204,800)" }
-      { name: "Recording Format", value: "RAW, ProRes, H.265" }
-      { name: "Frame Rates", value: "Up to 120fps at 4K, 60fps at 8K" }
-      { name: "Storage", value: "Dual CFexpress Type B" }
-      { name: "Battery Life", value: "~3 hours continuous recording" }
-      { name: "Weight", value: "4.5 lbs (body only)" }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -271,38 +141,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Storage", value: "Dual CFexpress Type B" },
       { name: "Battery Life", value: "~3 hours continuous recording" },
       { name: "Weight", value: "4.5 lbs (body only)" },
-<<<<<<< HEAD
 
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
-
-=======
-      { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
-    ],
-    features: [
-      "Advanced 8K full-frame sensor";
-      "16+ stops of dynamic range";
-      "Internal RAW recording";
-      "Dual native ISO technology";
-      "5-axis in-body image stabilization";
-      "AI-powered autofocus with subject tracking";
-      "Weather-sealed magnesium alloy body"
-      "Multiple assist tools: false color, waveform, vectorscope";
-      "Anamorphic de-squeeze options";
-      "Custom 3D LUT support"
-    ];
-    warranty: "2 years manufacturer warranty"
-    returnPolicy: "30-day return policy for unused items in original packaging"
-  }
-  "audio-mixer-pro": {
-    id: "audio-mixer-pro"
-    name: "AudioMixer Pro Digital Mixing Console"
-    description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
-    brand: "AudioTech"
-    category: "Equipment"
-    subcategory: "Audio"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -324,19 +166,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
-<<<<<<< HEAD
-
 
     images: [
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
-=======
-    images: [
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";    images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    images: [
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 3499
@@ -354,12 +187,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       { name: "Weight", value: "32 lbs" }
     ],
     features: [
@@ -379,6 +206,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
 },
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -458,11 +286,14 @@ export default function EquipmentDetail() {
   const handleBuyNow = () => {
     setIsAdding(true);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
 
   const handleBuyNow = () => {
     setIsAdding(true),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -490,6 +321,8 @@ export default function EquipmentDetail() {
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <>
@@ -525,6 +358,7 @@ export default function EquipmentDetail() {
                           className="w-full h-full object-cover"
                         />
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -582,11 +416,14 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     warranty: "2 years manufacturer warranty",;
-    returnPolicy: "30-day return policy for unused items in original packaging";
-  };
+    returnPolicy: "30-day return policy for unused items in original packaging"
+};
   "audio-mixer-pro": {;
     id: "audio-mixer-pro",;
+<<<<<<< HEAD
     name: "AudioMixer Pro Digital Mixing Console",;
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
 <<<<<<< HEAD
@@ -642,6 +479,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Weight", value: "32 lbs" }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
+=======
+    name: "AudioMixer Pro Digital Mixing Console",,
+  description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";    ];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
       "16 motorized faders with touch-sensitive control";
@@ -741,11 +582,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "iOS and Android remote control app";
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      "Integrated WiFi for wireless control";
     ],;
     warranty: "3 years manufacturer warranty",;
     returnPolicy: "21-day return policy for items in original condition";
@@ -760,16 +596,8 @@ export default function EquipmentDetail() {;
 
   // In a real app, this would fetch from an API;
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-<<<<<<< HEAD
 
-  if (!equipment) {;
-
-=======
-  if (!equipment) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    return (
+  if (!equipment) {;    return (
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -805,6 +633,7 @@ if ( {) {
     return (
       <>;
         <Header />;
+<<<<<<< HEAD
         <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
           <div className="container mx - auto">;
             <div className="text - center py - 20">;
@@ -990,49 +819,24 @@ export default function EquipmentDetail() {;
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
+=======
+        <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="container mx-auto">;
-            <div className="text-center py-20">;
-              <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>;
-              <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
+            <div className="text - center py-20">;
+              <h1 className="text - 3xl font - bold text - white mb-4">Equipment Not Found</h1>;
+              <p className="text - zion - slate - light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
             </div>;
           </div>;
         </div>;
         <Footer />;
-      </>;
-    );
-  }
-;
-  const handleAddToCart = () => {;
-    setIsAdding(true),;
-    // Simulate API call;
-    setTimeout(() => {;
-      setIsAdding(false),;
-      toast({;
-        title: "Added to cart",;
-        description: `${quantity}x ${equipment.name} added to your cart.`});
-    }, 800);
-  },;
-  const handleBuyNow = () => {;
-    setIsAdding(true),;
-    // Simulate API call;
-    setTimeout(() => {;
-      setIsAdding(false),;
-      toast({;
-        title: "Proceeding to checkout";
-        description: `Preparing your order for ${equipment.name}.`});
-    }, 800);
-  };
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <>;
+  return (    <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+<<<<<<< HEAD
             {/* Left Column - Images */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1396,6 +1200,9 @@ export default function EquipmentDetail() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
+=======
+            {/* Left Column - Images */}            <div className="lg:col-span-1">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
                 {/* Category and Brand */}
                 <div className="flex flex-wrap gap-2 mb-3">;
@@ -1407,7 +1214,6 @@ export default function EquipmentDetail() {;
                       {equipment && equipment.subcategory}
                     </Badge>;
                   )}
-<<<<<<< HEAD
 
                 </div>;
 
@@ -1425,6 +1231,7 @@ export default function EquipmentDetail() {;
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
+<<<<<<< HEAD
 
 =======
 
@@ -1471,8 +1278,12 @@ export default function EquipmentDetail() {;
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                               : "text-zion-slate-light"
+                          }`}                              : "text-zion-slate-light"
                           }`}
+<<<<<<< HEAD
 =======
                             i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
@@ -1514,34 +1325,16 @@ export default function EquipmentDetail() {;
                               : "text-zion-slate-light"
                           }`}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         />;
                       ))}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                      {equipment && equipment.rating.toFixed(1)} ({equipment && equipment.reviewCount} reviews);
-                    </span>;
-                  </div>;
-                )}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                {/* Price */}
                 <div className="text-3xl font-bold text-white mb-4">;
                   {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
                 </div>;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Stock Status */}
                 <div className="mb-6">;
                   {equipment && equipment.inStock ? (;
@@ -1560,6 +1353,7 @@ export default function EquipmentDetail() {;
                       <span>Out of Stock</span>;
                     </div>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1683,6 +1477,11 @@ export default function EquipmentDetail() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                    <button 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1692,6 +1491,7 @@ export default function EquipmentDetail() {;
                   </div>
                 </div>
                 {/* Purchase Buttons */}
+<<<<<<< HEAD
                 <div className="space-y-3 mb-6">
 <<<<<<< HEAD
 
@@ -1869,6 +1669,9 @@ export default function EquipmentDetail() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ;
                 {/* Purchase Buttons */}
+=======
+                <div className="space-y-3 mb-6">                {/* Purchase Buttons */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="space-y-3 mb-6">;
                   <Button ;
                     onClick={handleBuyNow}
@@ -1885,6 +1688,7 @@ export default function EquipmentDetail() {;
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1898,15 +1702,15 @@ export default function EquipmentDetail() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Additional Info */}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
 
-=======
                 ;
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div className="flex gap-3 text-zion-slate-light">;
                     <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                     <div>;
@@ -1914,42 +1718,24 @@ export default function EquipmentDetail() {;
                       <p className="text-xs">For orders over $100 within the US</p>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
-
 
                   {/* Warranty */}
-                  {equipment && equipment.warranty && (;
-=======
-                  ;
-                  {/* Warranty */}
-                  {equipment.warranty && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                {/* Additional Info */}
+                  {equipment && equipment.warranty && (;                {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
                   {/* Warranty */}
                   {equipment && equipment.warranty && (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex gap-3 text-zion-slate-light">;
                       <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                       <div>;
                         <p className="text-white text-sm font-medium">Warranty</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <p className="text-xs">{equipment && equipment.warranty}</p>;
                       </div>;
                     </div>;
                   )}
 
-
-
                   {/* Return Policy */}
-                  {equipment && equipment.returnPolicy && (;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  {/* Return Policy */}
+                  {equipment && equipment.returnPolicy && (;                  {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;
                         <p className="text-xs">{equipment.warranty}</p>;
                       </div>;
@@ -1957,44 +1743,25 @@ export default function EquipmentDetail() {;
                   ;
                   {/* Return Policy */}
                   {equipment.returnPolicy && (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    <div className="flex gap-3 text-zion-slate-light">;
-                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
-                      <div>;
-                        <p className="text-white text-sm font-medium">Returns</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <p className="text-xs">{equipment && equipment.returnPolicy}</p>;
-                      </div>;
-                    </div>;
-                  )}
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            {/* Right Column - Purchase Info */}
-            <div className="lg:col - span - 1">;
-              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">;
+            <div className="lg:col - span-1">;
+              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top-6">;
                 {/* Category and Brand */}
-                <div className="flex flex - wrap gap - 2 mb - 3">;
-                  <Badge variant="outline" className="text - zion - slate - light border - zion - blue - light">;
+                <div className="flex flex - wrap gap - 2 mb-3">;
+                  <Badge variant="outline" className="text - zion - slate - light border - zion - blue-light">;
                     {equipment.category}
                   </Badge>;
                   {equipment.subcategory && (
-                    <Badge variant="outline" className="text - zion - slate - light border - zion - blue - light">;
+                    <Badge variant="outline" className="text - zion - slate - light border - zion - blue-light">;
                       {equipment.subcategory}
                     </Badge>)}
                 </div>;
                 {/* Product Title */}
-                <h1 className="text - 2xl font - bold text - white mb - 1">{equipment.name}</h1>;
-                <p className="text - zion - cyan mb - 4">Brand: {equipment.brand}</p>;
+                <h1 className="text - 2xl font - bold text - white mb-1">{equipment.name}</h1>;
+                <p className="text - zion - cyan mb-4">Brand: {equipment.brand}</p>;
                 {/* Rating */}
                 {equipment.rating && (
-                  <div className="flex items - center gap - 2 mb - 4">;
-                    <div className="flex items - center">;
+                  <div className="flex items - center gap - 2 mb-4">;
+                    <div className="flex items-center">;
                       {[...Array (5)].map ((_, i) => (
                         <Star;
                           key={i}
@@ -2005,36 +1772,36 @@ export default function EquipmentDetail() {;
                           }`}
                         />))}
                     </div>;
-                    <span className="text - sm text - zion - slate - light">;
+                    <span className="text - sm text - zion - slate-light">;
                       {equipment.rating.to_fixed (1)} ({equipment.review_count} reviews);
                     </span>;
                   </div>)}
                 {/* Price */}
-                <div className="text - 3xl font - bold text - white mb - 4">;
+                <div className="text - 3xl font - bold text - white mb-4">;
                   {equipment.currency}{equipment.price.toLocaleString ()}
                 </div>;
                 {/* Stock Status */}
-                <div className="mb - 6">;
+                <div className="mb-6">;
                   {equipment.in_stock ? (
-                    <div className="text - emerald - 400 flex items - center gap - 1">;
-                      <span className="w - 2 h - 2 bg - emerald - 400 rounded - full"></span>;
+                    <div className="text - emerald - 400 flex items - center gap-1">;
+                      <span className="w - 2 h - 2 bg - emerald - 400 rounded-full"></span>;
                       <span > In Stock</span>;
                       {equipment.expected_shipping && (
-                        <span className="text - zion - slate - light ml - 1 text - sm">;
+                        <span className="text - zion - slate - light ml - 1 text-sm">;
                           (Ships in {equipment.expected_shipping});
                         </span>)}
                     </div>) : (
-                    <div className="text - rose - 400 flex items - center gap - 1">;
-                      <span className="w - 2 h - 2 bg - rose - 400 rounded - full"></span>;
+                    <div className="text - rose - 400 flex items - center gap-1">;
+                      <span className="w - 2 h - 2 bg - rose - 400 rounded-full"></span>;
                       <span > Out of Stock</span>;
                     </div>)}
                 </div>;
                 {/* Quantity */}
-                <div className="mb - 6">;
-                  <label className="text - sm text - zion - slate - light block mb - 2">Quantity</label>;
-                  <div className="flex items - center border border - zion - blue - light rounded - md w - 32">;
+                <div className="mb-6">;
+                  <label className="text - sm text - zion - slate - light block mb-2">Quantity</label>;
+                  <div className="flex items - center border border - zion - blue - light rounded - md w-32">;
                     <button;
-                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";
+                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
                       on_click={() => set_quantity (prev => Math.max (1, prev - 1))}
                       disabled={quantity <= 1 || !equipment.in_stock}
                     >;
@@ -2042,12 +1809,12 @@ export default function EquipmentDetail() {;
                     </button>;
                     <input;
                       type="number";
-                      className="w - full text - center bg - transparent border - 0 text - white focus:ring - 0";
+                      className="w - full text - center bg - transparent border - 0 text - white focus:ring-0";
                       value={quantity}
                       read_only;
                     />;
                     <button;
-                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";
+                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
                       on_click={() => set_quantity (prev => prev + 1)}
                       disabled={!equipment.in_stock}
                     >;
@@ -2056,11 +1823,11 @@ export default function EquipmentDetail() {;
                   </div>;
                 </div>;
                 {/* Purchase Buttons */}
-                <div className="space - y-3 mb - 6">;
+                <div className="space - y-3 mb-6">;
                   <Button;
                     on_click={handleBuyNow}
                     disabled={is_adding || !equipment.in_stock}
-                    className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
+                    className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py-6";
                   >;
                     {is_adding ? "Processing..." : "Buy Now"}
                   </Button>;
@@ -2068,29 +1835,29 @@ export default function EquipmentDetail() {;
                     on_click={handleAddToCart}
                     disabled={is_adding || !equipment.in_stock}
                     variant="outline";
-                    className="w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10";
+                    className="w - full border - zion - purple text - zion - cyan hover:bg - zion-purple / 10";
                   >;
-                    <ShoppingCart className="h - 4 w - 4 mr - 2" />;
+                    <ShoppingCart className="h - 4 w - 4 mr-2" />;
                     Add to Cart;
                   </Button>;
                 </div>;
                 {/* Additional Info */}
-                <div className="space - y-4 border - t border - zion - blue - light pt - 4">;
+                <div className="space - y-4 border - t border - zion - blue - light pt-4">;
                   {/* Shipping */}
-                  <div className="flex gap - 3 text - zion - slate - light">;
-                    <Truck className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
+                  <div className="flex gap - 3 text - zion - slate-light">;
+                    <Truck className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
                     <div>;
-                      <p className="text - white text - sm font - medium">Free Shipping</p>;
-                      <p className="text - xs">For orders over $100 within the US</p>;
+                      <p className="text - white text - sm font-medium">Free Shipping</p>;
+                      <p className="text-xs">For orders over $100 within the US</p>;
                     </div>;
                   </div>;
                   {/* Warranty */}
                   {equipment.warranty && (
-                    <div className="flex gap - 3 text - zion - slate - light">;
-                      <Shield className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
+                    <div className="flex gap - 3 text - zion - slate-light">;
+                      <Shield className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
                       <div>;
-                        <p className="text - white text - sm font - medium">Warranty</p>;
-                        <p className="text - xs">{equipment.warranty}</p>;
+                        <p className="text - white text - sm font-medium">Warranty</p>;
+                        <p className="text-xs">{equipment.warranty}</p>;
                       </div>;
                     </div>)}
                   {/* Return Policy */}
@@ -2128,13 +1895,14 @@ export default function EquipmentDetail() {;
 =======
 =======
                   {equipment.return_policy && (
-                    <div className="flex gap - 3 text - zion - slate - light">;
-                      <RotateCcw className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
+                    <div className="flex gap - 3 text - zion - slate-light">;
+                      <RotateCcw className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
                       <div>;
-                        <p className="text - white text - sm font - medium">Returns</p>;
-                        <p className="text - xs">{equipment.return_policy}</p>;
+                        <p className="text - white text - sm font-medium">Returns</p>;
+                        <p className="text-xs">{equipment.return_policy}</p>;
                       </div>;
                     </div>)}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2315,3 +2083,5 @@ if (!equipment) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

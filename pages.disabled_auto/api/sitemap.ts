@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -13,12 +14,12 @@ export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   https: //ziontechgroup.com'';;
   const staticPages = [',';
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React from 'react';
+
 import React from 'react';
 <<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-
-=======
-import React from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
@@ -95,15 +96,21 @@ interface SitemapProps {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+interface SitemapProps {
+  // Add props here as needed
+}  res.status(200).send(sitemap)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 interface SitemapProps {
   // Add props here as needed
 }
 
   res.status(200).send(sitemap)}
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -119,6 +126,9 @@ import { NextApiRequest,NextApiResponse } from';next'';; export: default functio
 import { NextApiRequest,NextApiResponse } from';next'';; export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify';';]';; const blogPages = [ '/blog/5g-technology-and-its-impact-on-iot-chat';';,'';/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat';';,'';/blog/api-first-development-building-scalable-systems-chat';';,'';/blog/augmented-reality-in-enterprise-applications-chat';';,'';/blog/blockchain-technology-in-modern-business-solutions-chat';';,'';/blog/cloud-native-architecture-best-practices-chat';';,'';/blog/cybersecurity-trends-for-2024-and-beyond-chat';';,'';/blog/data-analytics-in-digital-transformation-chat';';,'';/blog/devops-automation-strategies-for-modern-teams-chat';';,'';/blog/digital-twins-revolutionizing-industry-4-0-chat';';,'';/blog/machine-learning-applications-in-enterprise-software-chat';';,'';/blog/microservices-architecture-benefits-and-challenges-chat';';,'';/blog/quantum-computing-implications-for-business-chat';';,'';/blog/sustainable-technology-green-computing-solutions-chat';';,'';/blog/the-rise-of-edge-computing-in-iot-applications-chat';';]';; const servicePages = [ '/services/ai-model-development-chat';';,'';/services/api-development-chat';';,'';/services/business-intelligence-chat';';,'';/services/cloud-migration-services-chat';';,'';/services/data-pipeline-engineering-chat';';,'';/services/database-design-chat';';,'';/services/mobile-app-development-chat';';,'';/services/network-security-chat';';,'';/services/performance-optimization-chat';';,'';/services/quality-assurance-testing-chat';';,'';/services/security-auditing-chat';';,'';/services/system-administration-chat';';,'';/services/technical-documentation-chat';';,'';/services/ui-ux-design-chat';';,'';/services/web-application-development-chat';';]';; const categoryPages = [ '/category/ai-consulting-chat';';,'';/category/business-intelligence-chat';';,'';/category/cloud-architecture-chat';';,'';/category/cybersecurity-chat';';,'';/category/data-science-chat';';,'';/category/database-administration-chat';';,'';/category/devops-automation-chat';';,'';/category/mobile-development-chat';';,'';/category/network-engineering-chat';';,'';/category/product-management-chat';';,'';/category/quality-assurance-chat';';,'';/category/system-administration-chat';';,'';/category/technical-writing-chat';';,'';/category/ui-ux-design-chat';';,'';/category/web-development-chat';';]';; const chatContentPages = [ '/chat-content/ai-powered-business-solutions-discussion';';,'';/chat-content/cloud-computing-strategies';';,'';/chat-content/cybersecurity-best-practices';';,'';/chat-content/data-analytics-implementation';';,'';/chat-content/digital-transformation-insights';';,'';/chat-content/emerging-technology-trends';';,'';/chat-content/future-of-work-and-automation';';,'';/chat-content/innovation-in-enterprise-technology';';,'';/chat-content/sustainable-technology-practices';';,'';/chat-content/technology-implementation-strategies';';]';; const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages]; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages; .map((page) => { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';; const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/';';) ? 'weekly';'; : 'monthly';; return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('')}'; </urlset>`; res.setHeader( 'Content-Type','';text/xml')';; res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';; res.status(200).send(sitemap)}
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import { NextApiRequest,NextApiResponse } from';next'';; export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify';';]';; const blogPages = [ '/blog/5g-technology-and-its-impact-on-iot-chat';';,'';/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat';';,'';/blog/api-first-development-building-scalable-systems-chat';';,'';/blog/augmented-reality-in-enterprise-applications-chat';';,'';/blog/blockchain-technology-in-modern-business-solutions-chat';';,'';/blog/cloud-native-architecture-best-practices-chat';';,'';/blog/cybersecurity-trends-for-2024-and-beyond-chat';';,'';/blog/data-analytics-in-digital-transformation-chat';';,'';/blog/devops-automation-strategies-for-modern-teams-chat';';,'';/blog/digital-twins-revolutionizing-industry-4-0-chat';';,'';/blog/machine-learning-applications-in-enterprise-software-chat';';,'';/blog/microservices-architecture-benefits-and-challenges-chat';';,'';/blog/quantum-computing-implications-for-business-chat';';,'';/blog/sustainable-technology-green-computing-solutions-chat';';,'';/blog/the-rise-of-edge-computing-in-iot-applications-chat';';]';; const servicePages = [ '/services/ai-model-development-chat';';,'';/services/api-development-chat';';,'';/services/business-intelligence-chat';';,'';/services/cloud-migration-services-chat';';,'';/services/data-pipeline-engineering-chat';';,'';/services/database-design-chat';';,'';/services/mobile-app-development-chat';';,'';/services/network-security-chat';';,'';/services/performance-optimization-chat';';,'';/services/quality-assurance-testing-chat';';,'';/services/security-auditing-chat';';,'';/services/system-administration-chat';';,'';/services/technical-documentation-chat';';,'';/services/ui-ux-design-chat';';,'';/services/web-application-development-chat';';]';; const categoryPages = [ '/category/ai-consulting-chat';';,'';/category/business-intelligence-chat';';,'';/category/cloud-architecture-chat';';,'';/category/cybersecurity-chat';';,'';/category/data-science-chat';';,'';/category/database-administration-chat';';,'';/category/devops-automation-chat';';,'';/category/mobile-development-chat';';,'';/category/network-engineering-chat';';,'';/category/product-management-chat';';,'';/category/quality-assurance-chat';';,'';/category/system-administration-chat';';,'';/category/technical-writing-chat';';,'';/category/ui-ux-design-chat';';,'';/category/web-development-chat';';]';; const chatContentPages = [ '/chat-content/ai-powered-business-solutions-discussion';';,'';/chat-content/cloud-computing-strategies';';,'';/chat-content/cybersecurity-best-practices';';,'';/chat-content/data-analytics-implementation';';,'';/chat-content/digital-transformation-insights';';,'';/chat-content/emerging-technology-trends';';,'';/chat-content/future-of-work-and-automation';';,'';/chat-content/innovation-in-enterprise-technology';';,'';/chat-content/sustainable-technology-practices';';,'';/chat-content/technology-implementation-strategies';';]';; const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages]; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages; .map((page) => { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';; const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/';';) ? 'weekly';'; : 'monthly';; return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('')}'; </urlset>`; res.setHeader( 'Content-Type','';text/xml')';; res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';; res.status(200).send(sitemap)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Sitemap({ }: SitemapProps) {
   return (
     <div>
@@ -126,6 +136,7 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -163,15 +174,12 @@ export default function Sitemap({ }: SitemapProps) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
-
-=======
-
-=======
+}
 <<<<<<< HEAD
-=======
-}
 
 
 
@@ -226,3 +234,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

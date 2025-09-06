@@ -16,5 +16,10 @@ const { execSync } = require('child_process')
     this.deployments.push('Created Dockerfile')
     this.log('Created Dockerfile', 'SUCCESS')
     const dockerCompose = ""version"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Deployment automation "failed")
+    console.error('Deployment automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

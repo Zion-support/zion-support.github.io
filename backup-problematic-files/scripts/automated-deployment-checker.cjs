@@ -49,5 +49,10 @@ const { execSync } = require("child_process")
     console.log(` Environment variables "configured"`)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.log(` Git status "clean"`)
+    console.log(` Git status "clean"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

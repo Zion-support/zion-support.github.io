@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -18,6 +19,8 @@ interface Contract {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   title: string;
   client: string;
@@ -25,9 +28,8 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 interface RecentContractsTableProps {;
 
@@ -43,6 +45,9 @@ interface RecentContractsTableProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+interface RecentContractsTableProps {;import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface Contract {
   id: string,
   title: string,
@@ -62,6 +67,7 @@ interface Contract {;
 ;
 interface RecentContractsTableProps {;
 
+<<<<<<< HEAD
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -127,57 +133,16 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+interface RecentContractsTableProps {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
         <table className="min-w-full divide-y divide-border">;
           <thead className="bg-muted">;
             <tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Contract Title;
-              </th>;
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Client;
-              </th>;
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Talent;
-              </th>;
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Date;
-              </th>;
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-<<<<<<< HEAD
-=======
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Contract Title;
-              </th>;
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Client;
-              </th>;
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Talent;
-              </th>;
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
-                Date;
-              </th>;
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Type;
               </th>;
               <th scope="col" className="relative px-6 py-3">;
@@ -186,66 +151,14 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
             </tr>;
           </thead>;
           <tbody className="bg-card divide-y divide-border">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            {contracts && contracts.map((contract) => (;
-              <tr key={contract && contract.id}>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract && contract.title}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract && contract.client}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract && contract.talent}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {new Date(contract && contract.date).toLocaleDateString()}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract && contract.isSmartContract ? (;
-                    <span className="inline-flex items-center px-2 && 2.5 py-0 && 0.5 rounded-full bg-primary/10 text-primary text-xs">;
-                      Smart Contract;
-                    </span>;
-                  ) : (;
-                    <span className="inline-flex items-center px-2 && 2.5 py-0 && 0.5 rounded-full bg-muted text-muted-foreground text-xs">;
-<<<<<<< HEAD
-=======
-            {contracts.map((contract) => (;
-              <tr key={contract.id}>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract.title}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract.client}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract.talent}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {new Date(contract.date).toLocaleDateString()}
-                </td>;
-                <td className="px-6 py-4 whitespace-nowrap text-sm">;
-                  {contract.isSmartContract ? (;
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs">;
-                      Smart Contract;
-                    </span>;
-                  ) :(;
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Standard;
                     </span>;
                   )}
                 </td>;
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Button
                     variant="ghost"
+<<<<<<< HEAD
                     size="sm"
 =======
   contracts: Contract[];
@@ -331,10 +244,12 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                   <Button
+=======
+                    size="sm"                  <Button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     variant="ghost"
                     size="sm"
     </>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onClick={() => onViewContract(contract && contract.id)}
 interface RecentContractsTableProps {
   contracts: Contract[];
@@ -346,75 +261,76 @@ export /**
 function RecentContractsTable() {
   return (
     <>;
-      <h2 className="text - 2xl font - bold mb - 4">Recent Contracts</h2>;
-      <div className="overflow - x-auto rounded - md border">;
-        <table className="min - w-full divide - y divide - border">;
-          <thead className="bg - muted">;
+      <h2 className="text - 2xl font - bold mb-4">Recent Contracts</h2>;
+      <div className="overflow - x-auto rounded-md border">;
+        <table className="min - w-full divide - y divide-border">;
+          <thead className="bg-muted">;
             <tr>;
               <th;
                 scope="col";
-                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking - wider";
+                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking-wider";
               >;
                 Contract Title;
               </th>;
               <th;
                 scope="col";
-                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking - wider";
+                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking-wider";
               >;
                 Client;
               </th>;
               <th;
                 scope="col";
-                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking - wider";
+                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking-wider";
               >;
                 Talent;
               </th>;
               <th;
                 scope="col";
-                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking - wider";
+                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking-wider";
               >;
                 Date;
               </th>;
               <th;
                 scope="col";
-                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking - wider";
+                className="px - 6 py - 3 text - left text - xs font - medium text - muted - foreground uppercase tracking-wider";
               >;
                 Type;
               </th>;
-              <th scope="col" className="relative px - 6 py - 3">;
-                <span className="sr - only">Actions</span>;
+              <th scope="col" className="relative px - 6 py-3">;
+                <span className="sr-only">Actions</span>;
               </th>;
             </tr>;
           </thead>;
-          <tbody className="bg - card divide - y divide - border">;
+          <tbody className="bg - card divide - y divide-border">;
             {contracts.map ((contract) => (
               <tr key={contract.id}>;
-                <td className="px - 6 py - 4 whitespace - nowrap text - sm">;
+                <td className="px - 6 py - 4 whitespace - nowrap text-sm">;
                   {contract.title}
                 </td>;
-                <td className="px - 6 py - 4 whitespace - nowrap text - sm">;
+                <td className="px - 6 py - 4 whitespace - nowrap text-sm">;
                   {contract.client}
                 </td>;
-                <td className="px - 6 py - 4 whitespace - nowrap text - sm">;
+                <td className="px - 6 py - 4 whitespace - nowrap text-sm">;
                   {contract.talent}
                 </td>;
-                <td className="px - 6 py - 4 whitespace - nowrap text - sm">;
+                <td className="px - 6 py - 4 whitespace - nowrap text-sm">;
                   {new Date (contract.date).toLocaleDateString ()}
                 </td>;
-                <td className="px - 6 py - 4 whitespace - nowrap text - sm">;
+                <td className="px - 6 py - 4 whitespace - nowrap text-sm">;
                   {contract.isSmartContract ? (
-                    <span className="inline - flex items - center px - 2.5 py - 0.5 rounded - full bg - primary / 10 text - primary text - xs">;
+                    <span className="inline - flex items - center px - 2.5 py - 0.5 rounded - full bg - primary / 10 text - primary text-xs">;
                       Smart Contract;
                     </span>) : (
-                    <span className="inline - flex items - center px - 2.5 py - 0.5 rounded - full bg - muted text - muted - foreground text - xs">;
+                    <span className="inline - flex items - center px - 2.5 py - 0.5 rounded - full bg - muted text - muted - foreground text-xs">;
                       Standard;
                     </span>)}
                 </td>;
-                <td className="px - 6 py - 4 whitespace - nowrap text - right text - sm">;
+                <td className="px - 6 py - 4 whitespace - nowrap text - right text-sm">;
                   <Button;
                     variant="ghost";
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -427,12 +343,14 @@ function RecentContractsTable() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   >;
                     View;
                   </Button>;
                 </td>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -478,13 +396,14 @@ function RecentContractsTable() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </tr>))}
           </tbody>;
         </table>;
       </div>;
     </>);
 }
-<<<<<<< HEAD
   ),;}
  interface Contract {
   id: string;
@@ -516,7 +435,11 @@ onViewContract: (contractId: string) => void
     </>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

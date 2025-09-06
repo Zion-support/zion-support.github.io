@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,10 +13,13 @@ export interface NextGenAi2026Service {
 export interface NextGenAi2026Service {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -75,6 +79,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       email: "kleber@ziontechgroup.com"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"
 <<<<<<< HEAD
     }
@@ -135,24 +140,12 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 ];
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ],
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-],
-
-
-
-],
-      mobile: "+1 302 464 0950",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      mobile: '+1 302 464 0950',
+      mobile: "+1 302 464 0950",      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
@@ -167,6 +160,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 ],
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -179,3 +173,5 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

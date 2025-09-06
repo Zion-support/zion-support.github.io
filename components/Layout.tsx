@@ -2,11 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import Head from 'next/head';
 
@@ -18,6 +21,7 @@ interface LayoutProps {
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
@@ -26,6 +30,8 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
 =======
 >>>>>>> main
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -98,7 +104,7 @@ const Layout: React.FC < LayoutProps> = ({
   }
 ;
   return (
-    <div className="min - h-screen bg - white">;
+    <div className="min-h-screen bg-white">;
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
@@ -126,7 +132,7 @@ const Layout: React.FC < LayoutProps> = ({
       <main>{children}</main>;
       <Footer />;
     </div>;
-  );
+  )
 };
 
 interface LayoutProps {
@@ -198,9 +204,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-  );
+  )
 };
 export default Layout;
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react';
@@ -251,6 +258,9 @@ export default function Layout({
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
   return (
+=======
+=======  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>
       <Head>
         <title>{title}</title>
@@ -263,6 +273,7 @@ export default function Layout({
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -329,3 +340,6 @@ export default Layout;
 =======
 }
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

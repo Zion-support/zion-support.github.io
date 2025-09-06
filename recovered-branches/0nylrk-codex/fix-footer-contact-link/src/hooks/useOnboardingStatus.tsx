@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -37,6 +38,13 @@ import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface OnboardingStatus {
+=======
+import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",interface OnboardingStatus {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   profileCompleted: boolean;
   skillsAdded: boolean;
   availabilitySet: boolean;
@@ -48,6 +56,7 @@ interface OnboardingStatus {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -474,6 +483,12 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
           .eq('user_id', user.id);
+=======
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),          .eq('user_id', user.id);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           .single(),;
           ;
         if (error) {;
@@ -560,14 +575,16 @@ const { data, error} = await supabase
   
   return status
 }
-;
 
 };
 }, [user]);
 return status;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

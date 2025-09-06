@@ -23,13 +23,17 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -41,10 +45,13 @@ import { toast } from "sonner",
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -66,6 +73,8 @@ export async function createJob(jobData: any) {
 =======
       .select();
       .single();
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       .select()
       .single();
     if (error) throw error;
@@ -82,13 +91,15 @@ export async function createJob(jobData: any) {
     console.error("Error creating job:", error),
     throw new Error(error.message || "Failed to create job")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console && console.error("Error creating job:", error);
     throw new Error(error && error.message || "Failed to create job")
-
 
       .select()
       .single();
@@ -138,6 +149,7 @@ export async function updateJob(jobId: string, jobData: any) {
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
+<<<<<<< HEAD
       .from("jobs")
       .select("*")
       .eq("id", jobId)
@@ -209,11 +221,16 @@ export async function getJobById(jobId: string) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      .from('jobs')
+      .select('*')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return data
   } catch (error: any) {
     console && console.error("Error fetching job:", error);
     toast && toast.error("Failed to load job details");
     return null
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -234,6 +251,8 @@ export async function createJob(jobData: any) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const { data, error } = await supabase;
       .from ('jobs');
       .insert ([job_data]);
@@ -243,10 +262,14 @@ export async function createJob(jobData: any) {;
     // Check condition
 if (throw error) {
   $2
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return data;
+=======
+}    return data;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error: any) {
     console.error("Error fetching job:", error);
     toast.error("Failed to load job details");
@@ -300,10 +323,13 @@ if (throw error) {
     toast.error ("Failed to load job details");
     return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-<<<<<<< HEAD
+}  }
 
 }
 ;
@@ -316,13 +342,8 @@ if (throw error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  const {
-  data, error 
-}= await supabase 
 }
+<<<<<<< HEAD
 }export async function updateJob (jobId: string, jobData: unknown) {
   try {
   const {
@@ -351,3 +372,5 @@ if (throw error) {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

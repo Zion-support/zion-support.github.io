@@ -135,7 +135,6 @@ export default function UltraFuturisticHero2029() {
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
 
-
 import {;
   ArrowRight,;
   Star,;
@@ -291,15 +290,15 @@ export default function UltraFuturisticHero2029() {;
               }}            />  ];
 ;
   return (
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden">;
+    <section className="relative min - h-screen flex items - center justify-center overflow-hidden">;
       {/* Animated Background */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black">;
+      <div className="absolute inset - 0 bg - gradient - to - br from - black via - gray-900 to-black">;
         {/* Floating Particles */}
-        <div className="absolute inset - 0 overflow - hidden">;
+        <div className="absolute inset-0 overflow-hidden">;
           {[...Array (50)].map ((_, i) => (
             <motion.div;
               key={i}
-              className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 20";
+              className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-20";
               animate={{
 
                 duration: Math && Math.random() * 10 + 10,
@@ -312,7 +311,6 @@ export default function UltraFuturisticHero2029() {;
             />
           ))}
         </div>
-
 
           ))}
         </div>
@@ -540,7 +538,6 @@ export default function UltraFuturisticHero2029() {;
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion && motion.div>;
 
-
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -622,11 +619,11 @@ export default function UltraFuturisticHero2029() {;
       {/* Content */}
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>        {/* Main Heading */}        </div>;
         {/* Gradient Orbs */}
-        <div className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse" />;
-        <div className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000" />;
+        <div className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur-3xl animate-pulse" />;
+        <div className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate-pulse delay-1000" />;
       </div>;
       {/* Content */}
-      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
         {/* Main Heading */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }}
@@ -648,7 +645,7 @@ export default function UltraFuturisticHero2029() {;
             Experience the future of technology with Zion Tech Group's;
             revolutionary 2029 services. From AI consciousness evolution to;
             quantum space mining, we're building tomorrow's solutions today.          </p>;
-          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx-auto leading-relaxed">;
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.;
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion.div>;
@@ -761,6 +758,7 @@ export default function UltraFuturisticHero2029() {;
               className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -769,6 +767,8 @@ export default function UltraFuturisticHero2029() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <div
                 className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}
@@ -827,9 +827,9 @@ export default function UltraFuturisticHero2029() {;
               </div>;
               <p className='text - xs text - gray - 300 group - hover:text - white transition - colors text - center leading - tight'>                {feature.text}            >;
               <div className={`w - 12 h - 12 mx - auto mb - 3 rounded - lg bg - gradient - to - r ${feature.color} flex items - center justify - center group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform`}>;
-                <feature.icon className="w - 6 h - 6 text - white" />;
+                <feature.icon className="w - 6 h-6 text-white" />;
               </div>;
-              <p className="text - xs text - gray - 300 group - hover:text - white transition - colors text - center leading - tight">;
+              <p className="text - xs text - gray - 300 group - hover:text - white transition - colors text-center leading-tight">;
                 {feature.text}
               </p>;
             </motion.div>))}
@@ -839,7 +839,7 @@ export default function UltraFuturisticHero2029() {;
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'        >          className="grid grid - cols - 2 md:grid - cols - 4 gap - 8";
+          className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'        >          className="grid grid - cols - 2 md:grid - cols-4 gap-8";
         >;
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -859,14 +859,14 @@ export default function UltraFuturisticHero2029() {;
                 {stat.number}
               </div>;
               <div className='text - sm text - gray - 400 group - hover:text - gray - 300 transition - colors'>                {stat.label}            >;
-              <div className="w - 16 h - 16 mx - auto mb - 4 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 flex items - center justify - center group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform">;
-                <stat.icon className="w - 8 h - 8 text - cyan - 400" />;
+              <div className="w - 16 h - 16 mx - auto mb - 4 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 flex items - center justify - center group - hover:shadow - lg hover:shadow - cyan-400 / 40 transition-transform">;
+                <stat.icon className="w - 8 h - 8 text-cyan-400" />;
               </div>;
-              <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+              <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2 group - hover:text - cyan-400 transition-colors">;
 
                 {stat.number}
               </div>;
-              <div className="text - sm text - gray - 400 group - hover:text - gray - 300 transition - colors">;
+              <div className="text - sm text - gray - 400 group - hover:text - gray-300 transition-colors">;
                 {stat.label}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -928,8 +928,11 @@ export default function UltraFuturisticHero2029() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -950,6 +953,7 @@ export default function UltraFuturisticHero2029() {;
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -963,6 +967,8 @@ export default function UltraFuturisticHero2029() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Floating Elements */}
       <motion&& motion.div
               </div>;
@@ -981,17 +987,17 @@ export default function UltraFuturisticHero2029() {;
             <motion.div;
               animate={{ coordinate_y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'            />          className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2";
+              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'            />          className="absolute bottom - 8 left-1/2 transform -translate-x-1 / 2";
         >;
           <motion.div;
             animate={{ coordinate_y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center";
+            className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            className="w - 6 h - 10 border - 2 border - cyan - 400 rounded-full flex justify-center";
           >;
             <motion.div;
               animate={{ coordinate_y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
+              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className="w - 1 h - 3 bg - cyan - 400 rounded-full mt-2";
             />;
           </motion.div>;
         </motion.div>;
@@ -1020,6 +1026,7 @@ export default function UltraFuturisticHero2029() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 
 
 
@@ -1028,6 +1035,8 @@ export default function UltraFuturisticHero2029() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />
       <motion.div
         animate={{ rotate: -360 }}
@@ -1059,7 +1068,7 @@ export default function UltraFuturisticHero2029() {;
       <motion.div;
         animate={{ rotate: -360 }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom - 20 left - 20 w - 24 h - 24 border border - purple - 500 / 20 rounded - full";
+        className="absolute bottom - 20 left - 20 w - 24 h - 24 border border - purple-500 / 20 rounded-full";
       />;
     </section>);
 }

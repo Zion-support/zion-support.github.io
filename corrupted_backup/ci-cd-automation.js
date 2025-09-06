@@ -1,28 +1,22 @@
+<<<<<<< HEAD:backup-problematic-files/pm2-automation/ci-cd-automation.js
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class CICDAutomation { constructor() { this.logFile = path.join(__dirname,'logs','ci-cd.log'); this.reportFile = path.join(__dirname,'reports','ci-cd-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(` Success: ${description}`); return { success: true,output }} catch (error) { this.log(` Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runTests() { this.log(' Running test suite...'); return await this.runCommand('npm test','Running tests')} async runLinting() { this.log(' Running linting...'); return await this.runCommand('npm run lint','Running linting')} async buildApplication() { this.log(' Building application...'); return await this.runCommand('npm run build','Building application')} async installDependencies() { this.log(' Installing dependencies...'); return await this.runCommand('npm ci','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log(' Starting CI/CD Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const testResult = await this.runTests() { { const testResult = await this.runTests(}); results.push({ step: 'test',...testResult }); const lintResult = await this.runLinting(;); results.push({ step: 'lint',...lintResult }); const buildResult = await this.buildApplication(;); results.push({ step: 'build',...buildResult })} const report = this.generateReport(results;); this.log(` CI/CD Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new CICDAutomation) { { const automation = new CICDAutomation}(;); automation.run().catch(error => { console.error('CI/CD Automation failed:',error); process.exit(1)})} module.exports = CICDAutomation;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class CICDAutomation { constructor() { this.logFile = path.join(__dirname,'logs','ci-cd.log'); this.reportFile = path.join(__dirname,'reports','ci-cd-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runTests() { this.log('🧪 Running test suite...'); return await this.runCommand('npm test','Running tests')} async runLinting() { this.log('🔍 Running linting...'); return await this.runCommand('npm run lint','Running linting')} async buildApplication() { this.log('🏗️ Building application...'); return await this.runCommand('npm run build','Building application')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm ci','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting CI/CD Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const testResult = await this.runTests() { { const testResult = await this.runTests(}); results.push({ step: 'test',...testResult }); const lintResult = await this.runLinting(;); results.push({ step: 'lint',...lintResult }); const buildResult = await this.buildApplication(;); results.push({ step: 'build',...buildResult })} const report = this.generateReport(results;); this.log(`📊 CI/CD Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new CICDAutomation) { { const automation = new CICDAutomation}(;); automation.run().catch(error => { console.error('CI/CD Automation failed:',error); process.exit(1)})} module.exports = CICDAutomation;
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:corrupted_backup/ci-cd-automation.js
 #!/usr/bin/env node
 /**
  * PM2 CI/CD Automation Script
  * Replaces GitHub Actions CI/CD pipeline
  */
 const { execSync } = require('child_process');
-const fs = require('fs')
-const path = require('path')
 class CICDAutomation {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'ci-cd.log');
     this.reportFile = path.join(__dirname, 'reports', 'ci-cd-report.json');
-    this.ensureDirectories()}
-  ensureDirectories() {
-    const dirs = ['logs', 'reports'];
-    dirs.forEach(dir => {
-      const dirPath = path.join(__dirname, dir;);
-      if () {
-        fs.mkdirSync(dirPath, { "recursive": true })}
-    })}
   log(message) {
     const timestamp = new Date().toISOString() {
     ) {
@@ -32,7 +26,6 @@ class CICDAutomation {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message};`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n')}
   async runCommand(command, description) {
     try {
       this.log(`"Starting": ${description}`);
@@ -41,24 +34,12 @@ class CICDAutomation {
         "cwd": process.cwd(),
         "stdio": 'pipe'
       };);
-      this.log(`✅ "Success": ${description}`);
+      this.log(` "Success": ${description}`);
       return { "success": true, output }} catch (error) {
-      this.log(`❌ "Error": ${description} - ${error.message}`);
+      this.log(` "Error": ${description} - ${error.message}`);
       return { "success": false, "error": error.message, "output": error.stdout || error.stderr }}
   }
   async runTests() {
-    this.log('🧪 Running test suite...');
-    return await this.runCommand('npm test', 'Running tests')}
-  async runLinting() {
-    this.log('🔍 Running linting...');
-    return await this.runCommand('npm run lint', 'Running linting')}
-  async buildApplication() {
-    this.log('🏗️ Building application...');
-    return await this.runCommand('npm run build', 'Building application')}
-  async installDependencies() {
-    this.log('📦 Installing dependencies...');
-    return await this.runCommand('npm ci', 'Installing dependencies')}
-  generateReport(results) {
     const report = {
       "timestamp": new Date().toISOString(),
       "status": results.every(r => r.success) ? 'success' : 'failed',
@@ -68,11 +49,10 @@ class CICDAutomation {
         "passed": results.filter(r => r.success).length,
         "failed": results.filter(r => !r.success).length
       }
-   };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     return report}
   async run() {
-    this.log('🚀 Starting CI/CD Automation Pipeline');
+    this.log(' Starting CI/CD Automation Pipeline');
     const results = [];
     // Install dependencies
     const installResult = await this.installDependencies(;);
@@ -91,9 +71,8 @@ class CICDAutomation {
       const buildResult = await this.buildApplication(;);
       results.push({ "step": 'build', ...buildResult })}
     const report = this.generateReport(results;);
-    this.log(`📊 CI/CD Pipeline completed with "status": ${report.status}`);
+    this.log(` CI/CD Pipeline completed with "status": ${report.status}`);
     return report}
-}
 // Run if called directly
 if ( {
   const automation = new CICDAutomation) {
@@ -103,6 +82,8 @@ if ( {
     console.error('CI/CD Automation "failed": ', error);
     process.exit(1)})}
 module.exports = CICDAutomation;
+<<<<<<< HEAD:backup-problematic-files/pm2-automation/ci-cd-automation.js
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class CICDAutomation { constructor() { this.logFile = path.join(__dirname,'logs','ci-cd.log'); this.reportFile = path.join(__dirname,'reports','ci-cd-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runTests() { this.log('🧪 Running test suite...'); return await this.runCommand('npm test','Running tests')} async runLinting() { this.log('🔍 Running linting...'); return await this.runCommand('npm run lint','Running linting')} async buildApplication() { this.log('🏗️ Building application...'); return await this.runCommand('npm run build','Building application')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm ci','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting CI/CD Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const testResult = await this.runTests() { { const testResult = await this.runTests(}); results.push({ step: 'test',...testResult }); const lintResult = await this.runLinting(;); results.push({ step: 'lint',...lintResult }); const buildResult = await this.buildApplication(;); results.push({ step: 'build',...buildResult })} const report = this.generateReport(results;); this.log(`📊 CI/CD Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new CICDAutomation) { { const automation = new CICDAutomation}(;); automation.run().catch(error => { console.error('CI/CD Automation failed:',error); process.exit(1)})} module.exports = CICDAutomation;
@@ -110,3 +91,4 @@ module.exports = CICDAutomation;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class CICDAutomation { constructor() { this.logFile = path.join(__dirname,'logs','ci-cd.log'); this.reportFile = path.join(__dirname,'reports','ci-cd-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runTests() { this.log('🧪 Running test suite...'); return await this.runCommand('npm test','Running tests')} async runLinting() { this.log('🔍 Running linting...'); return await this.runCommand('npm run lint','Running linting')} async buildApplication() { this.log('🏗️ Building application...'); return await this.runCommand('npm run build','Building application')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm ci','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting CI/CD Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const testResult = await this.runTests() { { const testResult = await this.runTests(}); results.push({ step: 'test',...testResult }); const lintResult = await this.runLinting(;); results.push({ step: 'lint',...lintResult }); const buildResult = await this.buildApplication(;); results.push({ step: 'build',...buildResult })} const report = this.generateReport(results;); this.log(`📊 CI/CD Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new CICDAutomation) { { const automation = new CICDAutomation}(;); automation.run().catch(error => { console.error('CI/CD Automation failed:',error); process.exit(1)})} module.exports = CICDAutomation;
 =======
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class CICDAutomation { constructor() { this.logFile = path.join(__dirname,'logs','ci-cd.log'); this.reportFile = path.join(__dirname,'reports','ci-cd-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runTests() { this.log('🧪 Running test suite...'); return await this.runCommand('npm test','Running tests')} async runLinting() { this.log('🔍 Running linting...'); return await this.runCommand('npm run lint','Running linting')} async buildApplication() { this.log('🏗️ Building application...'); return await this.runCommand('npm run build','Building application')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm ci','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting CI/CD Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const testResult = await this.runTests() { { const testResult = await this.runTests(}); results.push({ step: 'test',...testResult }); const lintResult = await this.runLinting(;); results.push({ step: 'lint',...lintResult }); const buildResult = await this.buildApplication(;); results.push({ step: 'build',...buildResult })} const report = this.generateReport(results;); this.log(`📊 CI/CD Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new CICDAutomation) { { const automation = new CICDAutomation}(;); automation.run().catch(error => { console.error('CI/CD Automation failed:',error); process.exit(1)})} module.exports = CICDAutomation;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:corrupted_backup/ci-cd-automation.js

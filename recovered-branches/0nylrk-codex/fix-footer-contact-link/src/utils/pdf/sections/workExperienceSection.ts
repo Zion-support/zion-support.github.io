@@ -15,6 +15,7 @@ export function addWorkExperienceSection (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -27,10 +28,13 @@ export function addWorkExperienceSection(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
+<<<<<<< HEAD
 export function addWorkExperienceSection(;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -132,10 +136,11 @@ export function addWorkExperienceSection(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   for (const work of sortedWorkExperience) {
+=======
+export function addWorkExperienceSection(;  for (const work of sortedWorkExperience) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Check if we need to add a new page
     if (yPos > 260) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
     }
@@ -159,33 +164,16 @@ export function addWorkExperienceSection(;
     if (work && work.location) {
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
-    
-=======
-    doc && doc.setFontSize(14);
-    doc && doc.setTextColor(colors && colors.subheading);
-    doc && doc.text(work && work.role_title, 20, yPos);
-    doc && doc.setFontSize(12);
-    doc && doc.text(work && work.company_name, 20, yPos + 5);
-    const startDate = formatDate(work && work.start_date);
-    const endDate = work && work.is_current ? 'Present' : formatDate(work && work.end_date);
-    const dateText = `${startDate} - ${endDate}`;
-    doc && doc.setFontSize(10);
-    doc && doc.setTextColor(colors && colors.text);
-    doc && doc.text(dateText, 20, yPos + 10);
-    if (work && work.location) {
-      doc && doc.text(work && work.location, 70, yPos + 10)
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    if (work && work.description) {
+        if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
-<<<<<<< HEAD
       
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 
     } else {
       yPos += 20
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -227,6 +215,8 @@ export function addWorkExperienceSection(;
     } else {
       yPos += 20
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -289,6 +279,7 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
 
 
 =======
@@ -492,3 +483,5 @@ doc.text (dateText, 20, yPos + 10);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -195,17 +195,22 @@ const serviceCategories = [
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/month' };
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' };
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
-    ];
-  };
+    ]
+};
       { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' };
       { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' };
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
-    ];
-  };
+    ]
+};
 
+<<<<<<< HEAD
     ];
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    ]
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -248,26 +253,26 @@ export default function UltraFuturisticNavigation2028() {
     services: [;
       {;
         name: 'Carbon Footprint Tracking',;
-        href: '/carbon-footprint-tracking',;
-        description: 'Monitor environmental impact',;
+        href: '/carbon-footprint-tracking',,
+  description: 'Monitor environmental impact',;
         price: '$1,499/month',;
       },;
       {;
         name: 'Renewable Energy Management',;
-        href: '/renewable-energy-management',;
-        description: 'Optimize green energy',;
+        href: '/renewable-energy-management',,
+  description: 'Optimize green energy',;
         price: '$2,999/month',;
       },;
       {;
         name: 'Waste Management AI',;
-        href: '/waste-management-ai',;
-        description: 'Intelligent waste optimization',;
+        href: '/waste-management-ai',,
+  description: 'Intelligent waste optimization',;
         price: '$1,999/month',;
       },;
       {;
         name: 'Sustainable Supply Chain',;
-        href: '/sustainable-supply-chain',;
-        description: 'Green supply chain solutions',;
+        href: '/sustainable-supply-chain',,
+  description: 'Green supply chain solutions',;
         price: '$3,999/month',;
       },;
     ],;
@@ -319,6 +324,7 @@ const companyLinks = [;
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const handleCategoryHover = (categoryTitle: string) => {;
@@ -330,6 +336,10 @@ const companyLinks = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setActiveCategory(null);
   };
+=======
+    setActiveCategory(null)
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
@@ -841,7 +851,6 @@ const companyLinks = [;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
                         </Link>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -914,12 +923,15 @@ const companyLinks = [;
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   ))}
               {/* Mobile CTA */}
 <<<<<<< HEAD
@@ -964,8 +976,11 @@ const companyLinks = [;
 =======
       </AnimatePresence>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -990,12 +1005,15 @@ const companyLinks = [;
                       {service.price}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </Link>
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices && filteredServices.length > 0 && (;
@@ -1074,14 +1092,14 @@ const companyLinks = [;
                     </span>                  </div>                <Link;
                   key={service.name}
                   href={service.href}
-                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors";
+                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple-900 / 40 transition-colors";
                 >;
-                  <div className="flex items - center justify - between">;
+                  <div className="flex items-center justify-between">;
                     <div>;
-                      <h4 className="text - sm font - medium text - white">{service.name}</h4>;
-                      <p className="text - xs text - purple - 300">{service.description}</p>;
+                      <h4 className="text - sm font-medium text-white">{service.name}</h4>;
+                      <p className="text - xs text-purple-300">{service.description}</p>;
                     </div>;
-                    <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
+                    <span className="text - xs text - purple-400 font-medium">{service.price}</span>;
                   </div>;
                 </Link>))}
             </div>;

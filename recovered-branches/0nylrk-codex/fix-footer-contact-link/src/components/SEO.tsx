@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -92,6 +93,13 @@ import { Helmet } from "react-helmet-async",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SEOProps {
+=======
+
+import { Helmet } from './react - helmet - async';  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;interface SEOProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string,
   description: string,
   keywords?: string,
@@ -103,6 +111,7 @@ interface SEOProps {
 =======
   noindex?: boolean
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,16 +148,16 @@ export function SEO({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ogUrl,
   canonical,
   noindex}: SEOProps) {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 =======
@@ -185,13 +194,15 @@ export function SEO({;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  return (  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
       {keywords && <meta name="keywords" content={keywords} />}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -284,8 +295,10 @@ function SEO() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Helmet } from "react-helmet-async",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface SEOProps {;
-  title: string,;
+  title: string,,
   description: string,;
   keywords?: string,;
   ogImage?: string,;
@@ -317,129 +330,27 @@ export function SEO({;
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {/* Twitter */}
+;      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={ogImage} />;
-<<<<<<< HEAD
-      ;
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      ;
-      {/* No index directive for search engines if needed */}
-      {noindex && <meta name="robots" content="noindex" />}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />;
-      <meta name="twitter:site" content="@lovable_dev" />;
-      <meta name="twitter:title" content={fullTitle} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={ogImage} />;
-
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
 
-
-
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Helmet>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    </Helmet>);
-    </Helmet>;
-  ),; interface SEOProps {
-  title: string;
-description: string;
-keywords?: string;
-ogImage?: string;
-ogUrl?: string;
-canonical?: string;
-noindex?: boolean 
-}export function SEO ({
-  title;
-description;
-keywords;
-//Default to the Google Drive image URL ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
-ogUrl;
-canonical;
-noindex 
-}: SEOProps) {
-  return (<Helmet> <title> {
-  fullTitle 
-}</title> <meta name="description" content= {
-  description 
-}/> {
-  keywords && <meta name="keywords" content= {
-  keywords 
-}/> 
-}{
-  /* Open Graph /Facebook */ 
-}<meta property="og:type" content="website" /> <meta property="og:title" content= {
-  fullTitle 
-}/> <meta property="og:description" content= {
-  description 
-}/> <meta property="og:image" content= {
-  ogImage 
-}/> {
-  ogUrl && <meta property="og:url" content= {
-  ogUrl 
-}/> 
-}{
-  /* Twitter */ 
-}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@lovable dev" /> <meta name="twitter:title" content= {
-  fullTitle 
-}/> <meta name="twitter:description" content= {
-  description 
-}/> <meta name="twitter:image" content= {
-  ogImage 
-}/> {
-  /* Canonical URL */ 
-}{
-  canonical && <link rel="canonical" href= {
-  canonical 
-}/> 
-}{
-  /* No index directive for search engines if needed */ 
-}{
-  noindex && <meta name="robots" content="noindex" /> 
-}
-}
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
     </Helmet>);
 }
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

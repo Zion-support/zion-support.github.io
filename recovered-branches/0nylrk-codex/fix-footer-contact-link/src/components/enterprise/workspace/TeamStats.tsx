@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import {;
@@ -7,14 +6,10 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -40,10 +35,13 @@ import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Card,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -120,6 +118,11 @@ export function TeamStats() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react",
+=======
+import { Progress } from "@/components/ui/progress";
+export function TeamStats() {;
+  return (import React from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
 export function TeamStats() {
@@ -138,10 +141,9 @@ export function TeamStats() {
           <Progress value={64} className="h-2" />
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
-<<<<<<< HEAD
         
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -177,10 +179,17 @@ export function TeamStats() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="pt-4 text-center border-t border-border mt-4">
+=======
+              <p className="text-xl font-bold">24</p>
+            </div>
+          </div>
+        </div>        <div className="pt-4 text-center border-t border-border mt-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
         </div>
+<<<<<<< HEAD
       </CardContent>
 <<<<<<< HEAD
 =======
@@ -193,12 +202,16 @@ export function TeamStats() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
+=======
+      </CardContent>  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 =======
@@ -230,54 +243,22 @@ export function TeamStats() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="flex items-center justify-between text-sm">;
+=======
+  return (;          <div className="flex items-center justify-between text-sm">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <span>Team capacity</span>;
             <span className="font-medium">32 / 50 seats used</span>;
           </div>;
           <Progress value={64} className="h-2" />;
           <p className="text-xs text-muted-foreground">18 seats available</p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <div className="space-y-4 pt-2">;
-          <div className="grid grid-cols-2 gap-4">;
-            <div className="space-y-1">;
-              <p className="text-xs text-muted-foreground">Active projects</p>;
-              <p className="text-xl font-bold">12</p>;
-            </div>;
-            <div className="space-y-1">;
-              <p className="text-xs text-muted-foreground">Job postings</p>;
-              <p className="text-xl font-bold">8</p>;
-            </div>;
-            <div className="space-y-1">;
-              <p className="text-xs text-muted-foreground">Avg. time to hire</p>;
-              <p className="text-xl font-bold">14d</p>;
-            </div>;
-            <div className="space-y-1">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <p className="text-xs text-muted-foreground">;
-                Interviews this month;
-              </p>;
-=======
-              <p className="text-xs text-muted-foreground">Interviews this month</p>;
-              <p className="text-xs text-muted-foreground">Interviews this month</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p className="text-xl font-bold">24</p>;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className="pt-4 text-center border-t border-border mt-4">;
+<<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 <<<<<<< HEAD
 =======
@@ -345,19 +326,19 @@ function TeamStats() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             View Full Analytics;
+=======
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View Full Analytics;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
+  );
+}
+;
     </Card>
 
-
     </Card>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -395,3 +376,8 @@ function TeamStats() {
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );}  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

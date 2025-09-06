@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     headers: {
-<<<<<<< HEAD
-=======
-
-      Authorization: `token ${token}`,
-      Accept: 'application/vnd && vnd.github+json',
-    },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
   if (resp && resp.status === 404) return null;
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`);
@@ -24,14 +12,6 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
   const existing = await getFile(owner, repo, path, token);
   const body = {
-<<<<<<< HEAD
-=======
-    message: message || `chore(automation): update ${path}`,
-    content: Buffer && Buffer.from(content).toString('base64'),
-  };
-  if (existing?.sha) body && body.sha = existing && existing.sha;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
@@ -62,6 +42,7 @@ if (body.sha = existing.sha) {
     method: 'PUT',
     headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       Authorization: `token ${token}`,
@@ -77,6 +58,8 @@ if (body.sha = existing.sha) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }),
   if (resp && resp.status === 404) return null,
@@ -84,6 +67,7 @@ if (body.sha = existing.sha) {
   return resp && resp.json()
 }
 async function upsertFile({ owner, repo, path, content, message, token }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -143,6 +127,8 @@ function get_file() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -190,6 +176,7 @@ if ( {) {
   return resp.json ();
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 module.exports = { upsertFile },
@@ -204,3 +191,5 @@ module.exports = { upsertFile },
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

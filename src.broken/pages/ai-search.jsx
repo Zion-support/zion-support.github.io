@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 interface Basic.specProps {
   // Add props here as needed
+<<<<<<< HEAD:src.broken/pages/ai-search.jsx
 }
 
 =======
@@ -32,10 +31,13 @@ interface AisearchProps {
 }
 export default function Aisearch({ }: AisearchProps) {
 =======
+=======
+}import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:tests/e2e/basic.spec.ts
 interface Basic.specProps {
   // Add props here as needed
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 export default function Basic.spec({ }: Basic.specProps) {
+<<<<<<< HEAD:src.broken/pages/ai-search.jsx
 <<<<<<< HEAD
 =======
 =======
@@ -94,74 +96,42 @@ export default function Basic.spec({ }: Basic.specProps) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:tests/e2e/basic.spec.ts
   return (
+=======
+=======export default function Help({ }: HelpProps) {
+=export default function Basic.spec({ }: Basic.specProps) {
+>  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:tests/e2e/basic.spec.ts
     <div>
       <h1>Aisearch</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:src.broken/pages/ai-search.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/ai-search.jsx
 }
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-
-
 =======
-<<<<<<<< HEAD:src.pages.disabled/Help.jsx
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:tests/e2e/basic.spec.ts
 
+}=
 
-
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-}
-=======
-<<<<<<<< HEAD:corrupted_backup/Mobile.jsx
-}
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/Mobile.jsx
-========
-
-
-
-<<<<<<< HEAD
->>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:tests/e2e/basic.spec.ts
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-:src.pages.disabled/Help.jsx
+>}
 }
 }
 }
 }
-}
-<<<<<<< HEAD
 :temp_exclude/src.pages.disabled/Help.jsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
-
-
-<<<<<<< HEAD
-
-
-
 
 :src.pages.disabled/Help.jsx
-========
->>>>>>>> main:tests/e2e/basic.spec.ts
+=>}
 }
 }
 }
 }
+<<<<<<< HEAD:src.broken/pages/ai-search.jsx
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -172,3 +142,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:tests/e2e/basic.spec.ts
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:tests/e2e/basic.spec.ts

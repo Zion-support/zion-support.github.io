@@ -1,24 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {AddMilestoneForm} from '../AddMilestoneForm';
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
   isSubmitting: boolean,;
   onCancel: () => void,;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
 
-
-<<<<<<< HEAD
 export function MilestoneCreator(): any ({;
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -108,6 +102,9 @@ export function MilestoneCreator({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
+=======
+export function MilestoneCreator({;import React from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
@@ -128,8 +125,6 @@ export function MilestoneCreator({;
   projectEndDate;
   projectType;
 }: MilestoneCreatorProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (;
     <AddMilestoneForm;
 <<<<<<< HEAD
@@ -137,6 +132,7 @@ export function MilestoneCreator({;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -149,6 +145,8 @@ export function MilestoneCreator({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <AddMilestoneForm
 
@@ -177,6 +175,7 @@ export function MilestoneCreator({;
   return (;
     <AddMilestoneForm ;
   return (;
+<<<<<<< HEAD
     <AddMilestoneForm;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -210,6 +209,9 @@ export function MilestoneCreator({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   on_submit: (data: any) => Promise < void>,
+=======
+    <AddMilestoneForm;  on_submit: (data: any) => Promise < void>,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   is_submitting: boolean,
   on_cancel: () => void,
   project_scope?: string;
@@ -231,6 +233,7 @@ function MilestoneCreator() {
       projectEndDate={projectEndDate}
       project_type={project_type}
     />);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,3 +266,6 @@ function MilestoneCreator() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

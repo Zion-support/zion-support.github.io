@@ -29,6 +29,7 @@ import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
@@ -41,6 +42,8 @@ interface ClientBudgetRecommenderProps {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
@@ -185,12 +188,15 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setSuggestion(result);
     } catch (error) {;
       console && console.error("Error generating budget suggestion:", error);
@@ -322,7 +328,7 @@ if ( {) {
   }
 ;
   return (
-    <div className="space - y-4">;
+    <div className="space-y-4">;
       <div>;
         {!suggestion && !is_loading ? (
           <Button;
@@ -330,9 +336,9 @@ if ( {) {
             variant="outline";
             on_click={generate_suggestion}
             disabled={!job_title || !category}
-            className="w - full";
+            className="w-full";
           >;
-            <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation;
+            <Sparkles className="h - 4 w - 4 mr-2" /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -340,6 +346,7 @@ if ( {) {
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 
+<<<<<<< HEAD
 
 
 
@@ -351,13 +358,11 @@ if ( {) {
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </div>;
     </div>;
-  );
-
-
-
-
+  )
 };
             rate_type="hourly";
           />)}

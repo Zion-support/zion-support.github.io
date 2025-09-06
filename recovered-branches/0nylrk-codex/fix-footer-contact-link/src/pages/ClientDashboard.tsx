@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -22,6 +25,7 @@ import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviews
 import {useIsMobile} from "@/hooks/use-mobile";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function ClientDashboardContent() {;
 
 =======
@@ -39,6 +43,8 @@ function ClientDashboardContent() {;
   }, [jobs, selectedJobId]);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -54,6 +60,7 @@ import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
 import { useJobs } from "@/hooks/useJobs",
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
+<<<<<<< HEAD
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 =======
 import { useState, useEffect } from "react";
@@ -82,6 +89,9 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useIsMobile } from "@/hooks/use-mobile";
+=======
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",import { useIsMobile } from "@/hooks/use-mobile";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -89,6 +99,7 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -113,6 +124,8 @@ import { useIsMobile } from "@/hooks/use-mobile",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -129,11 +142,10 @@ function ClientDashboardContent() {
       setSelectedJobTitle(jobs[0].title)
     }
 
-<<<<<<< HEAD
   }, [jobs, selectedJobId]),
 
-
   const handleJobSelect = (jobId: string, jobTitle: string) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
@@ -150,6 +162,10 @@ function ClientDashboardContent() {
     (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle));
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle))
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
@@ -159,11 +175,14 @@ function ClientDashboardContent() {
 =======
   }
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <>
       <SEO
@@ -259,20 +278,101 @@ function ClientDashboardContent() {
 
           <div>
             <div className="sticky top-4 space-y-6">
-<<<<<<< HEAD
+              {/* Active Projects Card */}
+              <ActiveProjectsCard />;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 
-
-<<<<<<< HEAD
 =======
+              {/* Upcoming Interviews Card */}
+              <UpcomingInterviewsCard />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { useState, useEffect } from "react",;
+              {/* AI Talent Suggestions */}
+              <div>;
+                <h2 className="text-xl font-semibold mb-4 flex items-center">;
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
+                  AI Talent Suggestions;
+                </h2>;
+
+                {selectedJobId ? (;
+                  <SuggestedTalents jobId={selectedJobId} />;
+                ) : (;
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">;
+                    <p className="text-muted-foreground">;
+                      Select a job to see AI-matched talent suggestions;
+                    </p>;
+                  </div>;
+                )}
+import { useState, useEffect } from './react';
+import { AppHeader } from '@/layout / AppHeader';
+import { Footer } from '@/components / Footer';
+import { JobsList } from '@/components / jobs / JobsList';
+import { Button } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Link } from './react-router-dom';
+import { JobStatus } from '@/types / jobs';
+import { SEO } from '@/components / SEO';
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from './lucide-react';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { SuggestedTalents } from '@/components / jobs / SuggestedTalents';
+import { use_jobs } from '@/hooks / use_jobs';
+import { ClientOnboardingSteps } from '@/components / onboarding / ClientOnboardingSteps';
+import { ActiveProjectsCard } from '@/components / projects / ActiveProjectsCard';
+import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard';
+import { useIsMobile } from '@/hooks / use - mobile';
+/**
+ * ClientDashboardContent - Function description
+ */
+function ClientDashboardContent() {
+  const [active_tab, setActiveTab] = useState < JobStatus | "all">("all");
+  const { jobs, is_loading } = use_jobs ();
+  const [selectedJobId, setSelectedJobId] = useState < string | null>(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState < string>("");
+  const is_mobile = useIsMobile ();
+;
+  // Set the first job as selected when jobs are loaded (if any);
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setSelectedJobId (jobs[0].id);
+      setSelectedJobTitle (jobs[0].title);
+    }
+  }, [jobs, selectedJobId]);
+;
+  const handleJobSelect = (job_id: string, job_title: string) =>: any {
+    setSelectedJobId (job_id),
+    setSelectedJobTitle (job_title);
+  }
+;
+  return (
+    <>;
+      <SEO;
+        title="Client Dashboard | Zion AI Marketplace";
+        description="Manage your jobs and talent requests in the Zion AI Marketplace.";
+      />;
+      <AppHeader />;
+      <main className="container mx - auto px - 4 py-8">;
+        <div className={`flex flex - col ${!is_mobile ? 'md:flex - row md:justify - between md:items - center' : ''} mb - 8 gap - 4`}>;
+          <div>;
+            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>My Jobs</h1>;
+            <p className="text - muted - foreground mt-1">Manage your job postings and talent applications</p>;
+          </div>;
+          <div className={`flex gap - 2 ${is_mobile ? 'flex - col' : ''}`}>;
+            <Button variant="outline" as_child className={is_mobile ? 'w - full justify - center' : ''}>;
+              <Link to="/hiring - tracker">;
+                <Kanban className="h - 4 w - 4 mr-2" /> Hiring Pipeline;
+              </Link>;
+            </Button>;
+            <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
+              <Link to="/post - job">;
+                <PlusCircle className="h - 4 w - 4 mr-2" /> Post New Job;import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { JobsList } from "@/components/jobs/JobsList",;
@@ -302,28 +402,6 @@ function ClientDashboardContent() {;
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]),;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const handleJobSelect = (jobId: string, jobTitle: string) => {;
-    setSelectedJobId(jobId),;
-    setSelectedJobTitle(jobTitle);
-  };
-<<<<<<< HEAD
-
-  return (
-    <>;
-      <SEO
-        title="Client Dashboard | Zion AI Marketplace" 
-        description="Manage your jobs and talent requests in the Zion AI Marketplace." 
-=======
-  return (;
-    <>;
-      <SEO;
-        title="Client Dashboard | Zion AI Marketplace";
-        description="Manage your jobs and talent requests in the Zion AI Marketplace.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -333,6 +411,7 @@ function ClientDashboardContent() {;
             <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
+<<<<<<< HEAD
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
 <<<<<<< HEAD
 =======
@@ -736,6 +815,9 @@ export default function ClientDashboard() {
   );
 }
 export default /**
+=======
+            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;export default /**
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * ClientDashboard - Function description
  */
 function ClientDashboard() {
@@ -744,6 +826,7 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -779,3 +862,5 @@ export default function ClientDashboard() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

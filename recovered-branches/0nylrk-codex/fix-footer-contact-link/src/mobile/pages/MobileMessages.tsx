@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 =======
@@ -16,12 +16,15 @@ import {MobileConversationList} from "../components/messaging/MobileConversation
 import {MobileChatView} from "../components/messaging/MobileChatView";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
+<<<<<<< HEAD
 import { MobileChatView } from "../components/messaging/MobileChatView",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -177,6 +180,9 @@ import {MobileChatView} from "../components/messaging/MobileChatView";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Mock data for demonstration;
 const mockConversations = [;
+=======
+import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {;
     id: "1",;
     name: "Sarah Johnson",;
@@ -210,15 +216,7 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;;
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -239,69 +237,7 @@ const mockMessages: Message[] = [;
     isMe: false,;
     status: "read"},;
   {;
-    id: "4",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
-=======
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    timestamp: "10:40 AM",;
-    isMe: true,;
-    status: "read"},;
-  {;
-    id: "5",;
-    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?",;
-    timestamp: "10:45 AM",;
-    isMe: false,;
-    status: "read"}],;
-
-export function MobileMessages() {;
-<<<<<<< HEAD
-  const [activeConversation, setActiveConversation] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
-
-  const handleSelectConversation = (id: string) => {;
-    setActiveConversation(id);
-  };
-
-  const handleBack = () => {;
-    setActiveConversation(null);
-  };
-
-  const handleSendMessage = (content: string) => {;
-    const newMessage: Message = {;
-      id: `${Date && Date.now()}`,;
-      content;
-=======
-  const [activeConversation, setActiveConversation] = useState<string | null>(null),;
-  const [messages, setMessages] = useState<Message[]>(mockMessages),;
-  const handleSelectConversation = (id: string) => {;
-    setActiveConversation(id);
-  },;
-  const handleBack = () => {;
-    setActiveConversation(null);
-  },;
-  const handleSendMessage = (content: string) => {;
-    const newMessage: Message = {;
-      id: `${Date.now()}`,;
-      content,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      timestamp: "Just now",;
-      isMe: true,;
-      status: "sent"},;
-    setMessages([...messages, newMessage]);
-<<<<<<< HEAD
-  };
-
-  const currentContact = mockConversations && mockConversations.find(c => c && c.id === activeConversation);
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
+    id: "4",;  return (
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
         <MobileChatView;
@@ -309,6 +245,7 @@ export function MobileMessages() {;
             id: currentContact?.id || "";
             name: currentContact?.name || "";
             status: "Online";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -322,6 +259,8 @@ export function MobileMessages() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     id: "4",
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
@@ -337,7 +276,6 @@ export function MobileMessages() {;
     isMe: false,
     status: "read"}],
 
-
   return (
     <div className="min-h-screen flex flex-col">
       {activeConversation ? (
@@ -348,6 +286,7 @@ export function MobileMessages() {;
             name: currentContact?.name || "",
             status: "Online"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -486,31 +425,23 @@ export function MobileMessages() {;
             <MobileConversationList;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               conversations={mockConversations}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               onSelectConversation={handleSelectConversation}
             />;
           </main>;
-<<<<<<< HEAD
-
-=======
-          ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <BottomNavigation />;
         </>;
       )}
     </div>;
-<<<<<<< HEAD
   );
 }
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />) : (
         <>;
           <MobileHeader;
             title="Messages";
           />;
-          <main className="flex - 1 overflow - y-auto">;
+          <main className="flex - 1 overflow-y-auto">;
             <MobileConversationList;
               conversations={mock_conversations}
               onSelectConversation={handleSelectConversation}
@@ -520,62 +451,3 @@ export function MobileMessages() {;
         </>)}
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
-   id: string;
-content: string;
-timestamp: string;
-isMe: boolean;
-export function MobileMessages () {
-  const [activeConversation, setActiveConversation] = useState<string | null> (null);
-const [messages, setMessages] = useState<Message[]> (mockMessages);
-const handleSelectConversation = (id: string) => {
-  setActiveConversation (id) 
-};
-const handleBack = () => {
-  setActiveConversation (null) 
-};
-const newMessage: Message = {
-  id: `$ {
-  Date.now () 
-}`;
-content;
-timestamp: "Just now";
-isMe: true;
-/>) : (<> <MobileHeader title="Messages" /> <main className="flex-1 overflow-y-auto" > <MobileConversationList conversations= {
-  mockConversations 
-}onSelectConversation= {
-  handleSelectConversation 
-}/> </main> <BottomNavigation /> </>) 
-}</div>) 
-}
-            id: currentContact?.id || "";
-            name: currentContact?.name || "";
-            status: "Online";
-          }}
-          messages={messages}
-          onBack={handleBack}
-          onSendMessage={handleSendMessage}
-        />
-      ) : (
-        <>
-          <MobileHeader
-            title="Messages"
-          />
-          <main className="flex-1 overflow-y-auto">
-            <MobileConversationList
-              conversations={mockConversations}
-              onSelectConversation={handleSelectConversation}
-            />
-          </main>
-          <BottomNavigation />
-        </>
-      )}
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

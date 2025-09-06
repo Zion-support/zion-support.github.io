@@ -14,6 +14,7 @@ export default function ReportProblemButton({
   entityId,
 }: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,9 @@ export default function ReportProblemButton({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -31,71 +35,14 @@ export default function ReportProblemButton({
   const query = new URLSearchParams({
     projectId
     ...(entityType ? { entityType } : {})
-    ...(entityId ? { entityId } : {})
-<<<<<<< HEAD
-
-export default function ReportProblemButton(): any ({;
-  projectId,;
-  entityType,;
-  entityId,;
-}: {;
-  projectId: string;
-  entityType?: "milestone" | "contract" | "thread";
-  entityId?: string;
-}) {;
-  const query = new URLSearchParams({;
-    projectId,;
-    ...(entityType ? { entityType } : {}),;
-    ...(entityId ? { entityId } : {}),;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  });
-
-  return (
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Link href={`/disputes/new?${query && query.toString()}`}>;
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
-        {" "}
-        Report a Problem;
-      </a>;
-    </Link>;
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default function ReportProblemButton(): any ({;
-  projectId,;
-  entityType,;
-  entityId,;
-}: {;
-  projectId: string;
-  entityType?: "milestone" | "contract" | "thread";
-  entityId?: string;
-}) {;
-  const query = new URLSearchParams({;
-    projectId,;
-    ...(entityType ? { entityType } : {}),;
-    ...(entityId ? { entityId } : {}),;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  });
+    ...(entityId ? { entityId } : {})  });
   return (
     <Link href={`/disputes/new?${query && query.toString()}`}>;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
     </Link>;
 
-<<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -206,3 +153,7 @@ function ReportProblemButton() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}  });
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,10 +13,14 @@ export const dataStore = {
   // Add data store functionality here
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -68,13 +73,16 @@ export const dataStore = {
 interface Project {
   id: string;
   title: string;
+=======
+}  id: string;
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
   status: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
-<<<<<<< HEAD
 interface Review {
   id: string;
   projectId: string;
@@ -101,11 +109,6 @@ class DataStore {
     return this.projects.find((project) => project.id === id);
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-  createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
       title: data.title || "",
@@ -117,14 +120,7 @@ class DataStore {
     this.projects.push(project);
     return project;
   }
-<<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-
   // Review methods
   hasExistingReview(
     projectId: string,
@@ -138,82 +134,8 @@ class DataStore {
         review.fromId === fromId,
     );
   }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-  upsertReview(data: Partial<Review>): Review {
-    const existingIndex = this.reviews.findIndex(
-      (review) =>
-        review.projectId === data.projectId &&
-        review.fromRole === data.fromRole &&
-        review.fromId === data.fromId,
-    );
-
-    if (existingIndex !== -1) {
-      // Update existing review
-      this.reviews[existingIndex] = {
-        ...this.reviews[existingIndex],
-        ...data,
-        updatedAt: new Date(),
-      };
-      return this.reviews[existingIndex];
-    } else {
-      // Create new review
-      const review: Review = {
-        id: Math.random().toString(36).substr(2, 9),
-        projectId: data.projectId || "",
-        fromRole: data.fromRole || "client",
-        fromId: data.fromId || "",
-        toRole: data.toRole || "talent",
-        toId: data.toId || "",
-        rating: data.rating || 0,
-        text: data.text || "",
-        categories: data.categories,
-        anonymous: data.anonymous || false,
-        approved: data.approved || false,
-        removed: data.removed || false,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-      this.reviews.push(review);
-      return review;
-    }
-  }
-
-  getReviewsByProject(projectId: string): Review[] {
-    return this.reviews.filter((review) => review.projectId === projectId);
-  }
-
-  getAllReviews(): Review[] {
-    return [...this.reviews];
-  }
-
-  counterpartRole(role: "client" | "talent"): "client" | "talent" {
-    return role === "client" ? "talent" : "client";
-  }
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-// Data store utilities;
-export const data_store = {
-  // Add data store functionality here;
-  get_data: () => [],
-  set_data: (data: any) => null,
-  update_data: (id: string, data: any) => null,
-  delete_data: (id: string) => null;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -234,6 +156,8 @@ export const data_store = {
     return project;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
   // Review methods
@@ -298,6 +222,7 @@ export const data_store = {
 
 const store = new DataStore();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -402,3 +327,5 @@ export const counterpartRole = (role: 'client' | 'talent') => store.counterpartR
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

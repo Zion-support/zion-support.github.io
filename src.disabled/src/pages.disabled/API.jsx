@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const API = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>API Reference - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> API Reference"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Integrate with Zion Tech Group services using our comprehensive; API documentation.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; API documentation coming soon. We're building comprehensive; integration guides.; ></div> ></div> ></div> ></div> </>)}; export default API; export { API }; export { API }; export { API }; export { API }; export { API };
 
@@ -55,3 +56,6 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const API = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>API Reference - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> API Reference"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Integrate with Zion Tech Group services using our comprehensive; API documentation.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; API documentation coming soon. We're building comprehensive; integration guides.; ></div> ></div> ></div> ></div> </>)}; export default API; export { API }; export { API }; export { API }; export { API }; export { API };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

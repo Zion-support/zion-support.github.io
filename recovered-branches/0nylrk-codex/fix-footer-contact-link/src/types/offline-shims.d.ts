@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -41,18 +42,12 @@ declare module 'react' {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   export const useEffect: any;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
-<<<<<<< HEAD
-<<<<<<< HEAD
-    initialState: S | (() => S)
-=======
-    initialState: S | (() => S);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    initialState: S | (() => S);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    initialState: S | (() => S);    initialState: S | (() => S);
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -61,6 +56,7 @@ declare module 'react' {
   export function useId(): string
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     render: (props: P, ref: Ref<T>) => ReactElement | null
@@ -76,6 +72,9 @@ declare module 'react' {
     render: (props: P, ref: Ref<T>) => ReactElement | null;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ): any;
+=======
+    render: (props: P, ref: Ref<T>) => ReactElement | null  ): any;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef < T>(initial_value: T): { current: T }
@@ -123,6 +122,7 @@ declare module 'react' {
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -388,3 +388,9 @@ declare module 'react/jsx-runtime' {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+declare module 'react-dom' {
+  export * from 'react-dom / index';
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

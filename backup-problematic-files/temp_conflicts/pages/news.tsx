@@ -148,7 +148,11 @@ export default function NewsPage() {;
       category:"Company News",;
       author:"Zion Tech Group",;
       readTime:"3 min read",;
+<<<<<<< HEAD
       image:"🚀",;
+=======
+      image:"",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       featured:true;
     },;
     {;
@@ -497,8 +501,13 @@ export default function News() {;
       type:'Conference',;
       date:'2024-02-15',;
       time:'9:00 AM - 6:00 PM',;
+<<<<<<< HEAD
       location:'San Francisco, CA',;
       description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+=======
+      location:'San Francisco, CA',,
+  description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
     },;
     {;
@@ -507,8 +516,13 @@ export default function News() {;
       type:'Workshop',;
       date:'2024-02-22',;
       time:'1:00 PM - 5:00 PM',;
+<<<<<<< HEAD
       location:'Virtual',;
       description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+=======
+      location:'Virtual',,
+  description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       registration:'https://ziontechgroup.com/events/quantum-workshop';
     }
   ],;
@@ -1430,7 +1444,11 @@ export default function News() {;
       category:"Partnerships",;
       author:"Sarah Chen",;
       readTime:"2 min read",;
+<<<<<<< HEAD
       image:"🤝";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     {;
       id:3,;
@@ -1440,7 +1458,11 @@ export default function News() {;
       category:"Innovation",;
       author:"Dr. Emily Watson",;
       readTime:"4 min read",;
+<<<<<<< HEAD
       image:"⚖️";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     {;
       id:4,;
@@ -1450,7 +1472,11 @@ export default function News() {;
       category:"Company News",;
       author:"Marcus Rodriguez",;
       readTime:"2 min read",;
+<<<<<<< HEAD
       image:"🌏";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     {;
       id:5,;
@@ -1460,7 +1486,11 @@ export default function News() {;
       category:"Technology",;
       author:"Dr. James Wilson",;
       readTime:"5 min read",;
+<<<<<<< HEAD
       image:"🧠";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     {;
       id:6,;
@@ -1470,7 +1500,11 @@ export default function News() {;
       category:"Sustainability",;
       author:"Lisa Park",;
       readTime:"6 min read",;
+<<<<<<< HEAD
       image:"🌱";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     {;
       id:7,;
@@ -1480,7 +1514,11 @@ export default function News() {;
       category:"Case Studies",;
       author:"Alex Thompson",;
       readTime:"4 min read",;
+<<<<<<< HEAD
       image:"📊";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     {;
       id:8,;
@@ -1490,7 +1528,11 @@ export default function News() {;
       category:"Research",;
       author:"Prof. Maria Garcia",;
       readTime:"7 min read",;
+<<<<<<< HEAD
       image:"📚";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   ],;
 ;
@@ -1556,9 +1598,15 @@ export default function News() {;
                     </p>;
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">;
                       <span>By {article.author}</span>;
+<<<<<<< HEAD
                       <span>•</span>;
                       <span>{article.date}</span>;
                       <span>•</span>;
+=======
+                      <span></span>;
+                      <span>{article.date}</span>;
+                      <span></span>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <span>{article.readTime}</span>;
                     </div>;
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
@@ -1624,6 +1672,7 @@ export default function News() {;
     </>;
   );
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1633,3 +1682,5 @@ export default function News() {;
 }
 :backup-problematic-files/temp_conflicts/pages/news.tsx
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

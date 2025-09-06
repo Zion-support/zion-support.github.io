@@ -20,10 +20,8 @@ export const InstallPrompt: React.FC = () => {
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
 
-
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
-
 
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
@@ -54,6 +52,7 @@ export const InstallPrompt: React.FC = () => {
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -166,6 +165,8 @@ export const InstallPrompt: React.FC = () => {;
   // Only render if promptEvent is set and visible is true;
   if (!promptEvent || !visible) return null,;
   return (;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
       <style>;
@@ -210,12 +211,12 @@ export default InstallPrompt,
 
 export default InstallPrompt,;
 
-      <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
-        <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
-          <p className="text - sm">Install our app for a better experience!</p>;
+      <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button-container"> {/* Added a container for styling */}
+        <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space-x-3">;
+          <p className="text-sm">Install our app for a better experience!</p>;
           <Button on_click={install} aria - label="Install PWA" size="sm">Install</Button>;
           <Button variant="ghost" size="sm" on_click={close} aria - label="Dismiss install prompt">;
-            <X className="h - 4 w - 4" />;
+            <X className="h - 4 w-4" />;
           </Button>;
         </div>;
       </div>;
@@ -223,7 +224,11 @@ export default InstallPrompt,;
 },
 export default InstallPrompt,
 ;
+<<<<<<< HEAD
 
     </>
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

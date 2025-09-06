@@ -27,6 +27,7 @@ export interface EducationFormProps {
   educationEntries: Education[];
   onComplete: () => void;
   onBack: () => void;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export interface EducationItemProps {
@@ -45,41 +46,27 @@ export interface EducationFormProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resumeId: string;
+=======
+}  resumeId: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   educationEntries: Education[];
   onComplete: () => void;
   onBack: () => void;
 }
-<<<<<<< HEAD
 export interface EducationItemProps {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-export interface EducationItemProps {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
   education: Education;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
 }
-<<<<<<< HEAD
-=======
   education: Education;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface EducationFormFieldsProps {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
 
 
 export interface EducationFormFieldsProps {;
@@ -109,12 +96,14 @@ export interface EducationFormFieldsProps {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
   onCancel: () => void;
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -124,11 +113,14 @@ export interface EducationFormFieldsProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {
   resume_id: string;
   education_entries: Education[];
   on_complete: () => void;
+<<<<<<< HEAD
   on_back: () => void;
 
 <<<<<<< HEAD
@@ -192,3 +184,6 @@ export interface EducationFormFieldsProps {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  on_back: () => void;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

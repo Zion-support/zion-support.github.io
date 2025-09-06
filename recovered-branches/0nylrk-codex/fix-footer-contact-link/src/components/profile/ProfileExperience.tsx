@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,9 @@ import { Briefcase } from "lucide-react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -72,26 +76,16 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
-=======
-=======
-        ))}
-      </div>
-    </div>
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -284,3 +278,6 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
@@ -102,6 +103,12 @@ console.log(' Starting comprehensive syntax fixer...')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -125,14 +132,18 @@ class ComprehensiveSyntaxFixer {
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 
   getAllCodeFiles() {
     const files = [];
+<<<<<<< HEAD
 
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir);
@@ -141,6 +152,16 @@ class ComprehensiveSyntaxFixer {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
 
+=======
+    
+    const scanDirectory = (dir) => {
+      const items = fs.readdirSync(dir);
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if (stat.isDirectory()) {
           // Skip node_modules and other irrelevant directories
           if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
@@ -151,7 +172,11 @@ class ComprehensiveSyntaxFixer {
         }
       }
     };
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     scanDirectory(this.projectRoot);
     return files;
   }
@@ -165,7 +190,11 @@ class ComprehensiveSyntaxFixer {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = this.fixSyntaxErrors(content, filePath);
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (content !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.fixedFiles++;
@@ -183,6 +212,7 @@ class ComprehensiveSyntaxFixer {
     // Fix semicolon issues in object properties
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*([^,;}\n]*);/g, '$1: $2, $3,');
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*$/gm, '$1: $2,');
+<<<<<<< HEAD
 
     // Fix object property semicolons to commas
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),
@@ -191,35 +221,65 @@ class ComprehensiveSyntaxFixer {
     // Fix array element semicolons
     fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
 
+=======
+    
+    // Fix object property semicolons to commas
+    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),
+    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*}/g, '$1: $2\n  }');
+    
+    // Fix array element semicolons
+    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix string concatenation issues
     fixed = fixed.replace(/(\w+):\s*'([^']+)';\s*(\w+):/g, '$1: \'$2\',\n    $3: '),
     // Fix function parameter semicolons
     fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2, $3)');
     fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2)');
+<<<<<<< HEAD
 
     // Fix object literal semicolons in function calls
     fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');
 
+=======
+    
+    // Fix object literal semicolons in function calls
+    fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix specific patterns
     fixed = fixed.replace(/id:\s*'([^']+)';\s*title:/g, 'id: \'$1\',\n      title: '), fixed = fixed.replace(/title:\s*'([^']+)',\s*description:/g, 'title: \'$1\',\n      description: '), fixed = fixed.replace(/description:\s*'([^']+)',\s*path:/g, 'description: \'$1\',\n      path: '),
     // Fix array literals
     fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix specific API patterns
     fixed = fixed.replace(/activeUsers30d:\s*(\d+);/g, 'activeUsers30d: $1,');
     fixed = fixed.replace(/gmv:\s*(\d+);/g, 'gmv: $1,');
     fixed = fixed.replace(/mrr:\s*(\d+);/g, 'mrr: $1,');
     fixed = fixed.replace(/yoyGrowth:\s*([\d.]+);/g, 'yoyGrowth: $1,');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix string literals in objects
     fixed = fixed.replace(/title:\s*'([^']+)';\s*content:/g, 'title: \'$1\',\n    content: '),
     // Fix long string concatenations
     fixed = fixed.replace(/'([^']+)';\s*'([^']+)'\]/g, '\'$1\',\n    \'$2\'\n  ]');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Count errors fixed
     const originalSemicolons = (content.match(/;/g) || []).length;
     const fixedSemicolons = (fixed.match(/;/g) || []).length;
     errorCount = originalSemicolons - fixedSemicolons;
+<<<<<<< HEAD
 
     this.totalErrors += errorCount;
 
@@ -227,11 +287,22 @@ class ComprehensiveSyntaxFixer {
   }
 }
 =======
+=======
+    
+    this.totalErrors += errorCount;
+    
+    return fixed;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
@@ -329,9 +400,12 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

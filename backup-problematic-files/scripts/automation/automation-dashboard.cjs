@@ -85,5 +85,10 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(chalk.red(" Dashboard "error": ")
+  console.error(chalk.red(" Dashboard "error": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

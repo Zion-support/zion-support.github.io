@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -72,6 +75,7 @@ if (require && require.main === module) {
   optimizer && optimizer.analyzeBundle();
   optimizer && optimizer.generateReport();
 }
+<<<<<<< HEAD
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 #!/usr/bin/env node
@@ -134,15 +138,20 @@ module && module.exports = PerformanceOptimizer;
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = // // require('fs');
 const path = // // require('path');
 const glob = // // require('glob');
 class PerformanceOptimizer {
   constructor() {
+<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.ensureDirectories();
     this && this.projectRoot = process && process.cwd();
     this && this.srcDir = path && path.join(this && this.projectRoot, 'src');
@@ -153,12 +162,15 @@ class PerformanceOptimizer {
     if (!fs && fs.existsSync(this && this.reportsDir)) {
       fs && fs.mkdirSync(this && this.reportsDir, { recursive: true });
     }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.ensureDirectories()}
     this && this.ensureDirectories()}
   ensureDirectories() {
@@ -167,6 +179,7 @@ class PerformanceOptimizer {
   }
   log(message) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
     console.log(`[${timestamp}] ${message}`);
   }
@@ -176,6 +189,10 @@ class PerformanceOptimizer {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+    console.log(`[${timestamp}] ${message}`);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log(`[${timestamp}] ${message}`)}
     console && console.log(`[${timestamp}] ${message}`);
   }
@@ -187,9 +204,12 @@ class PerformanceOptimizer {
   }
     console && console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
+<<<<<<< HEAD
     this && this.log('⚡ Starting performance optimization');
     const files = glob && glob.sync('**/*.{js,jsx,ts,tsx}', {
       "cwd": this && this.srcDir,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
     });
     const results = {
@@ -197,6 +217,7 @@ class PerformanceOptimizer {
       "optimizations": 0,
       "errors": []
     };
+<<<<<<< HEAD
     for (const file of files) {
       const filePath = path.join(this.srcDir, file);
       try {
@@ -224,11 +245,16 @@ class PerformanceOptimizer {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+            fileOptimizations++;
+          }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             fileOptimizations++}
           // Add useCallback to event handlers
           if (content && content.includes('onClick') && !content && content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
             fileOptimizations++;
           }
@@ -238,6 +264,10 @@ class PerformanceOptimizer {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+            fileOptimizations++;
+          }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             fileOptimizations++}
           // Add useMemo to expensive calculations
           if (content && content.includes('useState') && content && content.includes('map(') && !content && content.includes('useMemo')) {
@@ -260,16 +290,22 @@ class PerformanceOptimizer {
           }
         });
         // Add performance optimizations for React components
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
             fileOptimizations++;
           }
         }
         if (newContent !== content) {
+<<<<<<< HEAD
           fs.writeFileSync(filePath, newContent, 'utf8');
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
           fs && fs.writeFileSync(filePath, newContent, 'utf8');
           this && this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
@@ -277,6 +313,7 @@ class PerformanceOptimizer {
         results && results.processed++;
         results && results.optimizations += fileOptimizations;
       } catch (error) {
+<<<<<<< HEAD
         results && results.errors.push({ file, error: error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`);
       }
@@ -296,6 +333,13 @@ class PerformanceOptimizer {
         results && results.optimizations += fileOptimizations} catch (error) {
         results && results.errors.push({ file, "error": error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`)}
+=======
+      }
+          this.log(` "Optimized": ${file} (${fileOptimizations} optimizations)`)}
+        results.processed++;
+        results.optimizations += fileOptimizations} catch (error) {
+        results.errors.push({ file, "error": error.message });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     // Generate report
     const report = {
@@ -307,19 +351,25 @@ class PerformanceOptimizer {
       },
       "details": results
     };
+<<<<<<< HEAD
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report;
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     const reportPath = path && path.join(this && this.reportsDir, 'performance-optimization-report && report.json');
@@ -338,8 +388,11 @@ const fs = // // require('fs');
 const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
+<<<<<<< HEAD
     this.metrics = {
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       pageLoadTime: 0,
       firstContentfulPaint: 0,
       largestContentfulPaint: 0,
@@ -347,12 +400,15 @@ class PerformanceMonitor {
       firstInputDelay: 0
     };
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -362,6 +418,7 @@ class PerformanceMonitor {
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time
+<<<<<<< HEAD
       window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
@@ -373,6 +430,8 @@ class PerformanceMonitor {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         this.reportMetrics()});
       window && window.addEventListener('load', () => {
         this && this.metrics.pageLoadTime = performance && performance.now();
@@ -406,6 +465,7 @@ class PerformanceMonitor {
             }
           }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
@@ -415,11 +475,16 @@ class PerformanceMonitor {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
   reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
       console.log('Performance Metrics:', this.metrics);
     }
@@ -429,6 +494,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+      console.log('Performance Metrics:', this.metrics);
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.log('Performance "Metrics": ', this.metrics)}
         observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
@@ -456,36 +525,46 @@ class PerformanceMonitor {
     if (typeof gtag !== 'undefined') {
       Object && Object.entries(this && this.metrics).forEach(([key, value]) => {
         gtag('event', key, {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           event_category: 'Performance',
           value: Math && Math.round(value),
           non_interaction: true
         });
       });
     }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           "event_category": 'Performance',
           "value": Math && Math.round(value),
           "non_interaction": true
         })})}
   }
+<<<<<<< HEAD
 }
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
     const utilsDir = path.dirname(scriptPath);
     if (!fs.existsSync(utilsDir)) {
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       fs.mkdirSync(utilsDir, { recursive: true });
     const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
     const utilsDir = path && path.dirname(scriptPath);
     if (!fs && fs.existsSync(utilsDir)) {
       fs && fs.mkdirSync(utilsDir, { recursive: true });
     }
+<<<<<<< HEAD
     fs && fs.writeFileSync(scriptPath, monitoringScript);
     this && this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
@@ -500,6 +579,8 @@ export default PerformanceMonitor;";
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 // Run the script
 if (require && require.main === module) {
@@ -507,16 +588,20 @@ if (require && require.main === module) {
   optimizer && optimizer.optimizePerformance()
     .then(() => optimizer && optimizer.createPerformanceMonitoringScript())
     .then(() => {
+<<<<<<< HEAD
       console.log('🎉 Performance optimization completed successfully');
       process.exit(0);
     })
     .catch((error) => {
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
     });
 }
 module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
 =======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
       console.error('❌ Performance optimization "failed": ', error);
@@ -534,3 +619,8 @@ module.exports = PerformanceOptimizer;
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
+=======
+      console.error(' Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

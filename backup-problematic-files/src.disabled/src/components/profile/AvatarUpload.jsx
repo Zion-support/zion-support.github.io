@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AvatarUpload.jsx.backup
 
 
@@ -10,6 +11,8 @@ import _React,{ useState } from 'react'; import { useState } from 'react'; expor
 
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/profile/AvatarUpload.jsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +37,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React,{ useState } from \'react\'; import { useState } from \'react\'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset=\"avatar_preset\" onUpload={handleUpload}> Upload Avatar; ></div> ) : (\"; <p className=\"text-sm text-gray-500\"> Image upload feature is currently unavailable.></div> )} ></div> );} \'"
+<<<<<<< HEAD
 const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
@@ -50,3 +54,8 @@ import _React,{ useState } from 'react'; import { useState } from 'react'; expor
 =======
 >>>>>>> main:src.disabled/src/components/profile/AvatarUpload.jsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return
+}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

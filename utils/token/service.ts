@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
@@ -13,6 +14,8 @@ export function earnTokens(;
   userId: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -20,14 +23,8 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
-export interface TokenTransaction {;
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  id: string;
+export interface TokenTransaction {;  id: string;
   userId: string;
-
 
   id: string;
   user_id: string;
@@ -62,62 +59,15 @@ export interface TokenTransaction {
 =======
   timestamp: number;
 
-
-
 }
 // Mock data storage - replace with actual database;
-let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-export function issueTokens(
-  userId: string,
-  amount: number,
-  reason: string,
-): TokenTransaction {
-  const transaction: TokenTransaction = {
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount
-    type: 'issue'
-    reason
-    timestamp: Date.now()
-  }
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    userId,
-    amount,
-    type: "issue",
+let transactions: TokenTransaction[] = [];    type: 'redeem',
     reason,
     timestamp: Date.now(),
   };
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-  
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   transactions.push(transaction);
   return transaction;
+<<<<<<< HEAD
 }
 
 export function redeemTokens(
@@ -254,20 +204,18 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   transactions.push(transaction);
   return transaction;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
-<<<<<<< HEAD
-    timestamp: Date.now();
-  };
+    timestamp: Date.now()
+};
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -388,16 +336,12 @@ export function set_config (
   Object.assign (current, partial);
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 ): void {
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -492,20 +436,20 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   transactions.push(transaction);
+=======
+=======  transactions.push(transaction);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return transaction;
 }
 
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -517,3 +461,6 @@ export function set_config (
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

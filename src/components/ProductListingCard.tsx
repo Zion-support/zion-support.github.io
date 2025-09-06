@@ -66,10 +66,19 @@ import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { RatingStars } from "@/components/RatingStars",
+=======
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/imageimport { RatingStars } from "@/components/RatingStars",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
 import type { AppDispatch } from '@/store',
@@ -87,14 +96,18 @@ interface ProductListingCardProps {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
 <<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
@@ -108,19 +121,29 @@ const ProductListingCardComponent = ({
   ),
   const [imageError, setImageError] = useState(false),
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const stockStatus =
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
+<<<<<<< HEAD
       ? 'Out of stock'
       : listing.stock <= 5
       ? 'Low stock'
       : 'In stock',
 
+=======
+        ? 'Out of stock'
+        : listing.stock <= 5
+          ? 'Low stock'
+          : 'In stock'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const stockVariant =
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+<<<<<<< HEAD
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
@@ -188,39 +211,77 @@ if ( {) {
       return;
     }
     router.push (`${detailBasePath}/${listing.id}`);
+=======
+        ? 'destructive'
+        : listing.stock <= 5
+          ? 'warning'
+          : 'success'
+  const { formatPrice } = useCurrency()
+  const getPrice = () => {
+    if (listing.price === null) return 'Custom pricing'
+    return formatPrice(listing.price)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-  const dispatch = use_dispatch < AppDispatch>();
-  const addToCart = () =>: any {
-    set_loading (true);
-    dispatch (
-      add_item ({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
-      }));
-    toast.success (`1× ${listing.title} added`, {
-      action: {
-        label: 'View Cart',
-        on_click: () => router.push ('/cart'),
-      },
-    });
-    set_loading (false);
-
-  }
-  const handleRequestQuote = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation ();
-    // Check condition
+  const handleImageError = () => {
+    if (!imageError) {
+      // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg')
+      setImageError(true)    // Check condition
 if ( {) {
   $2
 }
-      onRequestQuote (listing.id);
-    } else {
-      router.push (`/request - quote?listing=${listing.id}`);
     }
   }
-  const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
+  const handleViewListing = () => {
+    // Debug logging for development
+    if (process.env.NODE_ENV === 'development') {
+      logDebug('[ProductCard] Navigating to:', {
+        path: `${detailBasePath}/${listing.id}`
+      })
+      logDebug('[ProductCard] Listing ID:', { id: listing.id })
+      logDebug('[ProductCard] Listing Title:', { title: listing.title })
+    }
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction(
+        '[ProductCard] Missing listing ID, cannot navigate'
+        new Error('Missing listing ID')
+        { component: 'ProductListingCard' }
+      )
+      toast({
+        title: 'Navigation Error'
+        description: 'Product information is incomplete'
+        variant: 'destructive'
+      })
+      return
+    }
+    router.push(`${detailBasePath}/${listing.id}`)
+  }
+  const dispatch = useDispatch<AppDispatch>()
+  const addToCart = () => {
+    setLoading(true)
+    dispatch(
+      addItem({
+        id: listing.id
+        title: listing.title
+        price: listing.price ?? 0
+      })
+    )
+    toast.success(`1 ${listing.title} added`, {
+      action: {
+        label: 'View Cart'
+        onClick: () => router.push('/cart')
+      }
+    })
+    setLoading(false)
+  }
+    } else {
+      router.push(`/request-quote?listing=${listing.id}`)
+    }
+  }
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
       onKeyDown={e => {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   detailBasePath?: string;
@@ -332,16 +393,147 @@ const ProductListingCardComponent = ({;
           e && e.preventDefault();
           handleViewListing();
 
+=======
+        if (e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault()
+          handleViewListing()
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }      }}
-    >;
+    >
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+  const getPrice = () => {
+    if (listing.price === null) return "Custom pricing",
+    return formatPrice(listing.price)
+  },
 
+  const handleImageError = () => {
+    if (!imageError) { // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg'),
+      setImageError(true)
+import React, { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { ProductListing } from "@/types/listings",;
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars",;
+import { FavoriteButton } from "@/components/FavoriteButton",;
+import { useDispatch } from 'react-redux',;
+import type { AppDispatch } from '@/store',;
+import { addItem } from '@/store/cartSlice',;
+import { toast } from '@/hooks/use-toast',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import Image from 'next/image', // Import next/image;
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+  view?: 'grid' | 'list',;
+  onRequestQuote?: (id: string) => void,;
+  detailBasePath?: string;
+}
+;const ProductListingCardComponent = ({;
+  listing,;
+  view = 'grid',;
+  onRequestQuote,;
+  detailBasePath = '/marketplace/listing';
+}: ProductListingCardProps) => {;
+  const isGrid = view === 'grid',;
+  const router = useRouter(),;
+  const [loading, setLoading] = useState(false),;
+  const [imageSrc, setImageSrc] = useState(;
+    listing.images && listing.images.length > 0 && listing.images[0];
+    ? listing.images[0];
+    : '/placeholder.svg';
+  ),;
+  const [imageError, setImageError] = useState(false),;
+  const stockStatus =;
+    listing.stock === undefined;
+      ? 'In stock';
+      : listing.stock <= 0;
+      ? 'Out of stock';
+      : listing.stock <= 5;
+      ? 'Low stock';
+      : 'In stock',;
+  const stockVariant =;
+    listing.stock === undefined;
+      ? 'success';
+      : listing.stock <= 0;
+      ? 'destructive';
+      : listing.stock <= 5;
+      ? 'warning';
+      : 'success',;
+  const { formatPrice } = useCurrency(),;
+  const getPrice = () => {;
+    if (listing.price === null) return "Custom pricing",;
+    return formatPrice(listing.price);
+  },;
+  const handleImageError = () => {;
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
+      setImageSrc('/placeholder.svg'),;
+      setImageError(true);
+    }
+  },;
+  const handleViewListing = () => {;
+    // Debug logging for development;
+    if (process.env.NODE_ENV === 'development') {;
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` }),;
+      logDebug('[ProductCard] Listing ID:', { id: listing.id }),;
+      logDebug('[ProductCard] Listing Title:', { title: listing.title });
+    }
+    
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),
+      toast({
+        title: "Navigation Error",
+        description: "Product information is incomplete",
+        variant: "destructive"}),
+      return
+;
+    // Validate listing ID exists before navigation;
+    if (!listing.id) {;
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),;
+      toast({;
+        title: "Navigation Error",,
+  description: "Product information is incomplete",;
+        variant: "destructive"}),;
+      return;
+    }
+;
+    router.push(`${detailBasePath}/${listing.id}`);
+  },;
+  const dispatch = useDispatch<AppDispatch>(),;
+  const addToCart = () => {;
+    setLoading(true),;
+    dispatch(;
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
+    ),;
+    toast.success(`1× ${listing.title} added`, {;
+      action: {;
+        label: 'View Cart',;
+        onClick: () => router.push('/cart')}}),;
+    setLoading(false);
+  },;
+  const handleRequestQuote = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestQuote) {;
+      onRequestQuote(listing.id);
+    } else {;
+      router.push(`/request-quote?listing=${listing.id}`);
+    }
+  },
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
+<<<<<<< HEAD
 
         onKeyDown={e => {;
           if (e && e.key === 'Enter' || e && e.key === ' ') {;
@@ -349,6 +541,9 @@ const ProductListingCardComponent = ({;
             handleViewListing();
           }  return ();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div
       data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -360,6 +555,7 @@ const ProductListingCardComponent = ({;
           e.preventDefault(),
           handleViewListing()
         }
+<<<<<<< HEAD
       }}
     >;
       {/* Image */}
@@ -385,19 +581,59 @@ const ProductListingCardComponent = ({;
             onError={handleImageError}
 =======
         <div className={`relative ${imageContainerClasses}`}>;
+=======
+      }}
+    >
+      {/* Image */}
+      <div;
+        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role='button'
+        tabIndex={-1} // Remove from tab order as parent is focusable
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+          }  return ()
+    <div
+      data-testid= "equipment-link";'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0};"
+      onKeyDown={(e) => {
+        if(e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault ()          handleViewListing () }
+      }}
+      {/* Image */}
+      <div'
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+            handleViewListing () }
+        }}
+      >
+        <div className={`relative ${imageContainerClasses}`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {' '}
-          {/* Ensure this container has dimensions */}
-
-
-        onKeyDown={(e) => {
+          {/* Ensure this container has dimensions */}        onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          }
+        }}
+      >;
+        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+          <Image;
+            src={imageSrc}
+            alt={listing.title}
+            fill={true}
+            style={{ objectFit: 'cover' }}
+            onError={handleImageError}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
@@ -409,6 +645,7 @@ const ProductListingCardComponent = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {stockStatus && (;
@@ -434,6 +671,14 @@ const ProductListingCardComponent = ({;
             </Badge>;
             {listing.rating && (;
               <RatingStars value={listing.rating} count={listing.reviewCount} />;
+=======
+              {stockStatus}
+            </Badge>
+          )}              {listing.category}
+            </Badge>
+            {listing.rating && (
+              <RatingStars value={listing.rating} count={listing.reviewCount} />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
 <<<<<<< HEAD
 =======
@@ -486,6 +731,7 @@ const ProductListingCardComponent = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           {/* Title & Description */}
+<<<<<<< HEAD
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
@@ -501,6 +747,53 @@ const ProductListingCardComponent = ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+=======
+          <div on_click={handleViewListing} className='block'>;
+            {listing.usp_headline && (
+              <p className='text - primary font - semibold text - sm mb - 1'>;
+                {listing.usp_headline}
+              </p>)}
+            <h3 className='font - semibold text - foreground mb - 2 hover:text - primary transition - colors text-[clamp (1rem, 2.5vw, 1.125rem)]'>;
+
+              {listing.title}
+            </h3>;
+          </div>;
+          <p className='text - foreground / 80 line - clamp - 2 mb - 4 text-[clamp (0.875rem, 2vw, 1rem)]'>;
+            {listing.description}
+
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2 && 2.5vw,1 && 1.125rem)]'>;
+              {listing && listing.title}
+            </h3>;
+          </div>;
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0 && 0.875rem,2vw,1rem)]'>;
+            {listing && listing.description}
+          </p>;
+
+          {/* Tags */}
+          {listing && listing.tags && listing && listing.tags.length > 0 && (;
+            <div className='flex flex-wrap gap-1 mb-4'>;
+              {listing && listing.tags.map((tag, idx) => (;
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
+                {listing.uspHeadline}
+              </p>
+            )}
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
+              {listing.title}
+            </h3>
+          </div>
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]'>
+            {listing.description}
+          </p>
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className='flex flex-wrap gap-1 mb-4'>
+              {listing.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {listing.title}
             </h3>
           </div>
@@ -515,6 +808,7 @@ const ProductListingCardComponent = ({;
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
+<<<<<<< HEAD
                   {tag}
                 </span>;
               ))}
@@ -535,10 +829,17 @@ const ProductListingCardComponent = ({;
 
 
             {listing.price !== null ? (
+=======
+
+                {listing.uspHeadline}
+              </p>
+            )}            {listing.price !== null ? (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
+<<<<<<< HEAD
             ) : (
 <<<<<<< HEAD
 =======
@@ -624,14 +925,46 @@ const ProductListingCardComponent = ({;
             {onRequestQuote && (;
 
               <Button
+=======
+            ) : (              <Button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 size='sm'
                 variant='outline'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleRequestQuote}
+<<<<<<< HEAD
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
               </Button>
+=======
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
+              >;                Request Quote;
+              </Button>;
+            )}
+
+          </p>;
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className='flex flex - wrap gap - 1 mb - 4'>;
+              {listing.tags.map ((tag, idx) => (
+                <span;
+                  key={idx}
+                  className='text - xs text - foreground / 70 bg - background / 50 px - 2 py - 1 rounded - full'                >;
+                  {tag}
+                </span>))}
+            </div>)}
+        </div>;
+        {/* Footer with price and button */}
+        <div className='flex items - center justify - between mt - auto pt - 3 border - t border - primary / 10 sm:border - primary / 20'>;
+          <div className='text - sm font - medium'>;
+            {listing.price !== null ? (
+              <div className='flex items - center text - primary'>;
+                <DollarSign className='h - 4 w - 4 mr - 1' />;
+                {get_price ()}
+              </div>) : (
+              <span className='text - foreground / 80'>{get_price ()}</span>)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
           <div className="flex gap-2">;
             <Button;
@@ -645,9 +978,31 @@ const ProductListingCardComponent = ({;
             >;
               {loading ? (;
                 <>;
+<<<<<<< HEAD
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
+=======
+                  <svg;
+                    className='animate - spin -ml - 1 mr - 3 h - 5 w - 5 text - white';
+                    xmlns='http://www.w3.org / 2000 / svg';
+                    fill='none';
+                    viewBox='0 0 24 24';
+                  >;
+                    <circle;
+                      className='opacity - 25';
+                      cx='12';
+                      cy='12';
+                      r='10';
+                      stroke='current_color';
+                      strokeWidth='4';
+                    ></circle>;
+                    <path;
+                      className='opacity - 75';
+                      fill='current_color';
+                      d='M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z';
+                    ></path>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </svg>;
                   Loading...;
                 </>;
@@ -717,7 +1072,7 @@ if ( {) {
 }{
   stock_status && (<Badge variant= {
   stock_variant as any;
-}className="absolute top - 2 left - 2" > {
+}className="absolute top - 2 left-2" > {
   stock_status;
 }</Badge>);
 }<FavoriteButton item_id= {
@@ -736,17 +1091,17 @@ if ( {) {
 }/>);
 }</div> <span key= {
   idx ";
-}className="text - xs text - foreground / 70 bg - background / 50 px - 2 py - 1 rounded - full" > {
+}className="text - xs text - foreground / 70 bg - background / 50 px - 2 py - 1 rounded-full" > {
   tag;
 }</span>) );
 }</div>);
 }</div> </span>) ";
-}</div> <div className="flex gap - 2" > <Button on_click={
+}</div> <div className="flex gap-2" > <Button on_click={
   (e) => {
   e.stop_propagation (), //Prevent card click event addToCart ();
 }disabled= {
   loading ";
-}loading ? (<> <svg className="animate - spin -ml - 1 mr - 3 h - 5 w - 5 text - white" xmlns="http://www.w3.org / 2000 / svg" fill="none" view_box="0 0 24 24" > <circle className="opacity - 25" cx="12" cy="12" r="10" stroke="current_color" stroke_width="4" ></circle> <path className="opacity - 75" fill="current_color" d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z" ></path> </svg> Loading... </>) : ("Add to Cart");
+}loading ? (<> <svg className="animate - spin -ml - 1 mr - 3 h - 5 w - 5 text-white" xmlns="http://www.w3.org / 2000 / svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="current_color" strokeWidth="4" ></circle> <path className="opacity-75" fill="current_color" d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z" ></path> </svg> Loading... </>) : ("Add to Cart");
 }</Button> <Button on_click={
   (e) => {
   e.stop_propagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (add_item ({
@@ -758,7 +1113,7 @@ router.push ('/checkout');
 }> Buy Now </Button> {";
   onRequestQuote && (<Button size="sm" variant="outline" on_click={
   handleRequestQuote ";
-}className="border - primary text - primary hover:bg - primary / 10 hover:text - primary - foreground" > Request Quote </Button>);
+}className="border - primary text - primary hover:bg - primary / 10 hover:text - primary-foreground" > Request Quote </Button>);
 }</div> </div> </div> </div>);
 
 }
@@ -768,11 +1123,8 @@ ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
 
-
 export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
-
-            
+ProductListingCard.displayName = 'ProductListingCard';            
             {onRequestQuote && (
               <Button 
                 size="sm"
@@ -831,12 +1183,11 @@ ProductListingCard.displayName = 'ProductListingCard';
                 Request Quote;
               </Button>;
             )}
-
-          </div>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -858,6 +1209,8 @@ export default ProductListingCard;
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';

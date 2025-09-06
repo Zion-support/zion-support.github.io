@@ -171,7 +171,6 @@ function on_submit() {
       set_message ('Application submitted. Await approval.');
       form.reset ();
 
-
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -271,7 +270,6 @@ function on_submit() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
-
   return (            .map(s => s && s.trim());
             .filter(Boolean);
           teamSize: Number(payload && payload.teamSize || 0),;
@@ -300,7 +298,6 @@ function on_submit() {
 =======
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
     <div className='max-w-2xl mx-auto space-y-6'>;
       <h1 className='text-2xl font-semibold'>;
@@ -514,6 +511,9 @@ function on_submit() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

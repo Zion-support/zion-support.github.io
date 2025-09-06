@@ -33,11 +33,13 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
-
 
   const config = statusConfig[status];
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
@@ -62,6 +64,7 @@ interface QuoteStatusBadgeProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
 
@@ -77,6 +80,8 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

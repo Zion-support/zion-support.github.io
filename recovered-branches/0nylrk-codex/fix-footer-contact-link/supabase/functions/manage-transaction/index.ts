@@ -1,41 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
-<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-
-=======
-=======
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
+<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -78,6 +59,9 @@ const corsHeaders = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
+=======
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -87,13 +71,13 @@ serve(async (req) => {
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
-<<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
     
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -142,9 +126,13 @@ serve(async (req) => {
     const authHeader = req.headers.get("Authorization")!,
     const token = authHeader.replace("Bearer ", ""),
     const { data: { user } } = await supabaseClient.auth.getUser(token),
+=======
+      .single(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     
-    if (!user?.id) throw new Error("User not authenticated"),
+    if (fetchError || !transaction) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -178,6 +166,8 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -185,6 +175,7 @@ serve(async (req) => {
     const { data: transaction, error: fetchError } = await supabaseAdmin
       .from("transactions")
       .select("*")
+<<<<<<< HEAD
       .eq("id", transactionId)
 <<<<<<< HEAD
 
@@ -316,6 +307,9 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Clients can cancel or request refunds, providers can only release funds
+=======
+      .eq("id", transactionId)    // Clients can cancel or request refunds, providers can only release funds
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
@@ -324,20 +318,10 @@ serve(async (req) => {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-<<<<<<< HEAD
-
     const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
 
-<<<<<<< HEAD
       apiVersion: "2023-10-16"});
-    let result;
-=======
-=======
-    const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
-      apiVersion: "2023-10-16"});
-    let result;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
+    let result;import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 const cors_headers = {
@@ -413,6 +397,7 @@ if ( {) {
     let result;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -442,6 +427,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     switch (action) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case 'release':;
         // Only providers or admins can release escrow funds;
         // Check condition
@@ -449,6 +436,7 @@ if ( {) {
   $2
 }
           throw new Error ("Only service providers can release funds from escrow");
+<<<<<<< HEAD
         }
 <<<<<<< HEAD
 
@@ -746,11 +734,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 200})
   } catch (error) {
+=======
+        }  } catch (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
       default: throw new Error("Invalid action")
@@ -769,6 +759,8 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       status: 500})
   }
 });
@@ -782,6 +774,7 @@ const corsHeaders = {;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
 serve(async (req) => {;
   if (req.method === "OPTIONS") {;
+<<<<<<< HEAD
     return new Response(null, { headers: corsHeaders });
   }
 <<<<<<< HEAD
@@ -816,6 +809,10 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+    return new Response(null, { headers: corsHeaders })
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case 'cancel':;
         // Only allow cancellation for pending transactions;
         // Check condition
@@ -847,6 +844,7 @@ if ( {) {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 });
@@ -867,18 +865,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 });
 ;
@@ -1020,9 +1014,12 @@ if ( {) {
       status: 500});
   }
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

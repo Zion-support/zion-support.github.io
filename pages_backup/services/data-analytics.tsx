@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -487,15 +488,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 Transform your data into actionable insights with advanced analytics,
                 business intelligence, and AI-powered data solutions.
 =======
+=======
+const benefits = [
+  'Data-driven decision making',
+  'Improved business performance',
+  'Better customer insights',
+  'Reduced operational costs',
+  'Enhanced competitive advantage',
+  'Automated reporting and analytics'
+];
+export default function DataAnalyticsServices() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
-    <>
-      <Head>
-        <title>Data Analytics Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive data analytics services including business intelligence, predictive analytics, data management, and AI-powered insights." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
+    <Layout
+      title="Data Analytics Services - Zion Tech Group"
+      description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
+      keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
+      <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -577,6 +588,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <service.icon className="w-6 h-6 text-blue-600" />
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+        <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Data Analytics Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with advanced analytics,
+                business intelligence, and AI-powered data solutions.              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -593,6 +618,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+<<<<<<< HEAD
                     <feature.icon className="w-6 h-6 text-purple-600" />
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -607,11 +633,34 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     {feature.description}
                   </p>
                 </div>
+=======
+                    <feature.icon className="w-6 h-6 text-purple-600" />                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
+                  <Link
+                    href="/contact"
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Get Quote
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </motion.div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -707,12 +756,30 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 >
                   View AI Services
                 </Link>
+=======
+                  ))}
+                </ul>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>
-            </motion.div>
+              <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Unlock Your Data?</h3>
+                <p className="text-lg mb-6">
+                  Let our data analytics experts help you transform your data
+                  into powerful insights that drive business success.
+                </p>
+                <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+            </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
     </>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

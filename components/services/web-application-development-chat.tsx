@@ -27,6 +27,7 @@ const WebApplicationDevelopmentChat: NextPage = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -51,6 +52,8 @@ export default WebApplicationDevelopmentChat;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -81,6 +84,7 @@ const WebApplicationDevelopmentChat: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
@@ -96,6 +100,8 @@ const WebApplicationDevelopmentChat: NextPage = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -118,6 +124,7 @@ const WebApplicationDevelopmentChat: NextPage = () => {
 }
 ;
 export default WebApplicationDevelopmentChat;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,3 +181,6 @@ export default WebApplicationDevelopmentChat;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

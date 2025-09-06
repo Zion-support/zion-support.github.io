@@ -413,9 +413,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
 =======
 
 
-
-
-<<<<<<< HEAD
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -847,14 +844,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Regulations'
       'Risk Management Standards'
     ]
-  }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export const cuttingEdgeMicroSaasServices2025 = [
+  }export const cuttingEdgeMicroSaasServices2025 = [
   {
-
 
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
@@ -908,21 +899,23 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 
-
 ;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
-    name: 'Customer Success AI Pro',;
-    description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',;
+    name: 'Customer Success AI Pro',,
+  description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',;
     features: [;
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows',;
       'Performance metrics and reportingCustom AI model training';
@@ -962,8 +955,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   },;
   {;
     id: 'quantum-supply-chain-optimizer',;
-    name: 'Quantum Supply Chain Optimizer',;
-    description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.',;
+    name: 'Quantum Supply Chain Optimizer',,
+  description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.',;
     features: [;
       'Quantum-enhanced route optimizationReal-time supply chain monitoringPredictive demand forecastingInventory optimization algorithmsSupplier performance analyticsRisk assessment and mitigationCost optimization modelingSustainability impact analysis',;
       'Multi-modal transportation planningReal-time collaboration tools';
@@ -1003,8 +996,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   },;
   {;
     id: 'blockid-verify-pro',;
-    name: 'BlockID Verify Pro',;
-    description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.',;
+    name: 'BlockID Verify Pro',,
+  description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.',;
     features: [;
       'Blockchain-based identity verificationMulti-factor biometric authenticationReal-time identity validationFraud detection and preventionCompliance with global regulationsAPI integration capabilitiesCustom verification workflowsAudit trail and reporting',;
       'Mobile and web applicationsWhite-label solutions';
@@ -1044,8 +1037,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   },;
   {;
     id: 'hr-analytics-ai-suite',;
-    name: 'HR Analytics AI Suite',;
-    description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.',;
+    name: 'HR Analytics AI Suite',,
+  description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.',;
     features: [;
       'AI-powered performance analyticsEmployee engagement monitoringPredictive turnover analysisRecruitment optimization algorithmsWorkforce planning and forecastingDiversity and inclusion analyticsReal-time performance dashboardsCustom reporting and analytics',;
       'Integration with HR systemsPredictive modeling capabilities';
@@ -1085,8 +1078,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   },;
   {;
     id: 'quantum-risk-financial-manager',;
-    name: 'Quantum Risk Financial Manager',;
-    description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.',;
+    name: 'Quantum Risk Financial Manager',,
+  description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.',;
     features: [;
       'Quantum-enhanced risk modelingReal-time portfolio optimizationAdvanced financial analyticsRisk assessment and monitoringPortfolio stress testingRegulatory compliance reportingCustom risk modelsReal-time market data integration',;
       'Performance attribution analysisComprehensive risk reporting';
@@ -1123,7 +1116,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-<<<<<<< HEAD
   }
 ];
   },
@@ -1133,12 +1125,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   }
 ];
 ;
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1151,3 +1139,5 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

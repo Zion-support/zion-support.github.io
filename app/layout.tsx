@@ -17,12 +17,16 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import './globals.css';
 =======
 import React from "react";
 import Link from "next/link";
 import "./globals.css";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import './global-styles.css';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export const metadata = {
   title: "Zion Tech Group — AI, Micro SaaS, and IT Services",

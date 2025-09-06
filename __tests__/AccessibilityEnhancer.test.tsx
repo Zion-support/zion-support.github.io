@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -18,6 +19,8 @@ import { describe, it, expect, vi } from 'vitest';
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
@@ -33,6 +36,7 @@ describe('AccessibilityEnhancer'
   it('handles keyboard events correctly'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
+<<<<<<< HEAD
 <<<<<<< HEAD
     fireEvent.keyDown(element, { "key";
 =======
@@ -164,6 +168,9 @@ describe('AccessibilityEnhancer', () => {
 =======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
+=======
+    fireEvent.keyDown(element, { "key";import { render, screen, fireEvent } from '@testing-library/react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
 import { describe, it, expect, vi } from 'vitest'
 describe('AccessibilityEnhancer'
@@ -178,8 +185,11 @@ describe('AccessibilityEnhancer'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
     fireEvent.keyDown(element, { "key";
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

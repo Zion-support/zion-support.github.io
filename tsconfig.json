@@ -1,7 +1,22 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
+=======
+    "target": "ES2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
+    ],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,6 +35,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,10 +61,12 @@
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
       "@/utils/*": ["./src/utils/*"],
+<<<<<<< HEAD
       "@/hooks/*": ["./src/hooks/*"],
       "@/types/*": ["./src/types/*"],
       "@/styles/*": ["./src/styles/*"],
@@ -71,3 +89,18 @@
   "exclude": ["node_modules"]
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      "@/types/*": ["./src/types/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

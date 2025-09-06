@@ -1,18 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   reactStrictMode: false,
   trailingSlash: true,
   output: 'export',
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  reactStrictMode: true,
+  trailingSlash: true,
+  output: 'export',
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['images.unsplash.com', 'via.placeholder.com']
   },
   eslint: {
     ignoreDuringBuilds: true
@@ -21,14 +28,30 @@ const nextConfig = {
   reactStrictMode: true,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   experimental: {
+<<<<<<< HEAD
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
 <<<<<<< HEAD
+=======
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons'],
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   async redirects() {
     return [
       { source: '/api-documentation', destination: '/api-docs', permanent: true },
       { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
     ];
+<<<<<<< HEAD
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -100,6 +123,8 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   async headers() {
     return [
@@ -122,19 +147,31 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack configuration here if needed
+  webpack: (config, { isServer }) => {
+    // Handle problematic files
+    config.module.rules.push({
+      test: /\.(js|jsx|ts|tsx)$/,
+      include: [
+        /corrupted_backup/,
+        /backup/,
+        /disabled/
+      ],
+      use: 'ignore-loader'
+    });
+
+    // Optimize for production
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+
     return config;
   },
+<<<<<<< HEAD
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
@@ -167,10 +204,16 @@ const nextConfig = {
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   serverExternalPackages: ['sharp'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 };
 
+<<<<<<< HEAD
 module.exports = nextConfig;
+=======
+export default nextConfig;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

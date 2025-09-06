@@ -106,9 +106,15 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -692,5 +698,10 @@ if (require.main === module) {}
   enhancer.run()};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = AICodeQualityEnhancer;
+module.exports = AICodeQualityEnhancer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

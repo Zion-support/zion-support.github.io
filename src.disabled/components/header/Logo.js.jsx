@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' import { Link } from';';react-router-dom' "export": const Logo = () => { return (<Link to='/' className='flex items-center group'>''' <div className='flex items-center space-x-2'>''; {}''' <"div": className='relative'>''' <div className='w-8 h-8 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover: scale-110: transition-transform duration-200'>''' <span className='text-white font-bold text-sm'>Z</span>'' </div>''' <div className='absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-pulse'></div>' </div>''; ,{}''' <"div": className='flex flex-col'>''' <div className='text-xl font-bold text-white leading-tight'>'{isWhitelabel ? brandName: ';';ZION,'}'' </div>''' <"div": className='text-xs text-zion-cyan font-medium leading-tight'>' TECH GROUP' </div>' </div>'' </div>''' <div className='text-xs lg: text-sm: text-gray-300 font-medium'>Group</div>' </Link>)}'';'';';
 =======
 <<<<<<< HEAD
@@ -47,3 +48,6 @@ import _React from';react' import { Link } from';';react-router-dom' "export": c
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from';react' import { Link } from';';react-router-dom' "export": const Logo = () => { return (<Link to='/' className='flex items-center group'>''' <div className='flex items-center space-x-2'>''; {}''' <"div": className='relative'>''' <div className='w-8 h-8 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover: scale-110: transition-transform duration-200'>''' <span className='text-white font-bold text-sm'>Z</span>'' </div>''' <div className='absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-pulse'></div>' </div>''; ,{}''' <"div": className='flex flex-col'>''' <div className='text-xl font-bold text-white leading-tight'>'{isWhitelabel ? brandName: ';';ZION,'}'' </div>''' <"div": className='text-xs text-zion-cyan font-medium leading-tight'>' TECH GROUP' </div>' </div>'' </div>''' <div className='text-xs lg: text-sm: text-gray-300 font-medium'>Group</div>' </Link>)}'';'';';=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

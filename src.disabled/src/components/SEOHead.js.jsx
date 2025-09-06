@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@ import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Pow
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from \'react\'; const SEOHead = ({ title = \"Zion Tech Group - AI-Powered Technology Solutions & Services\",description = \"Discover innovative AI,quantum computing,and technology solutions && solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.\",keywords = \"AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation\",image = \"/images/zion-tech-group-og && og.jpg\",url = \""https\": \';\' })
+=======
+import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og.jpg",url = ""https": ';' })import React from \'react\'; const SEOHead = ({ title = \"Zion Tech Group - AI-Powered Technology Solutions & Services\",description = \"Discover innovative AI,quantum computing,and technology solutions && solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.\",keywords = \"AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation\",image = \"/images/zion-tech-group-og && og.jpg\",url = \""https\": \';\' })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const React from "react"; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions && solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og && og.jpg",url = "https: ";" })'"'"
 
 import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions && solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og && og.jpg",url = ""https": ';' })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +56,5 @@ import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Pow
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

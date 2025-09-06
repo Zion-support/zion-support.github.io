@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ console.log ('🚀 Starting development server...'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 console.log('🚀 Starting development server...'),;
 
@@ -36,11 +39,14 @@ dev_process.on ('close', (code) => {
 // Handle process termination;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { spawn } = require('child_process');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🚀 Starting development server...');
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';
@@ -83,6 +89,7 @@ process.on('SIGTERM', () => {;
   console.log('Stopping development server...'),;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
+<<<<<<< HEAD
 }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,3 +151,6 @@ process.on('SIGTERM', () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

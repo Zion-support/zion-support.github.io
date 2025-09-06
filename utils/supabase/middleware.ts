@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
   if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { NextResponse } from 'next/server',;
 import type { NextRequest } from 'next/server',;
 export function middleware(request: NextRequest) {;
@@ -22,12 +25,6 @@ export function middleware(request: NextRequest) {;
   }
   return NextResponse.next();
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
 export /**
  * middleware - Function description
@@ -43,11 +40,14 @@ if ( {) {
     return NextResponse.redirect (new URL (target, request.url));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const config = {matcher: ['/dashboard/dashboard/']}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {;
@@ -62,9 +62,9 @@ export function middleware(request: NextRequest) {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   return NextResponse.next ();
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -106,10 +106,14 @@ if ( {) {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const config = {
+=======
+}export const config = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   matcher: ['/dashboard / dashboard/']}
 
 ;
 export const config = {;
+<<<<<<< HEAD
   matcher: ['/dashboard/dashboard/']};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,3 +135,6 @@ export const config = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  matcher: ['/dashboard/dashboard/']};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

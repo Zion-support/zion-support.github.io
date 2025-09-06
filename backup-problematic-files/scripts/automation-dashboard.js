@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/automation-dashboard.js
 =======
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
     return: this && this.processes} catch (error) { console && console.error( '❌ Failed to get PM2 status:',error && error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this && this.processes.lengt,h onlineProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ==,= online').length,'; erroredProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ===';stopped').lengt,h},'; processes: this && this.processes.map(proc: => ({ name: proc && proc.nam,e status: proc && proc.pm2_env.statu,s memory: `${Math && Math.round(proc && proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc && proc.monit.cp,u}%` uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime,) restarts: proc && proc.pm2_env.restart_tim,e pm_id: proc && proc.pm_i,d})) recommendations[]} if: (report && report.summary.erroredProcesses > 0) { report && report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report && report.summary.onlineProcesses === 0) { report && report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) { report && report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path && path.join(process && process.cwd() 'automation-health-report && report.json')';; fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.reports.health: = report,
     return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000); const hours = Math && Math.floor(seconds / 3600); const minutes = Math && Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON && JSON.parse(output); this && this.processes = processes && processes.filter(proc =>; proc && proc.name !==';pm2-logrotate' &&; proc && proc.name !==';zion-app' &&; proc && proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error && error.message); return []; return this && this.processes} catch (error) { console && console.error( '❌ Failed to get PM2 status:',error && error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this && this.processes.length onlineProcesses: this && this.processes.filter(p => p && p.pm2_env.status === online').length erroredProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===';errored).length,stoppedProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===; `stopped`).length} processes: this && this.processes.map(proc => ({ nam e: proc && proc.name status: proc && proc.pm2_env.status memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc && proc.monit.cpu}%` uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime) restarts: proc && proc.pm2_env.restart_time pm_id: proc && proc.pm_id})) recommendations[]} if (report && report.summary.erroredProcesses > 0) { report && report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report && report.summary.onlineProcesses === 0) { report && report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) { report && report.recommendations.push(' 'stopped').length},processes: this && this.processes.map(proc => ({,
     name: proc && proc.name,status: proc && proc.pm2_env.status,memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc && proc.monit.cpu}%`,uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime),restarts: proc && proc.pm2_env.restart_time,pm_id: proc && proc.pm_id})),recommendations[]} if (report && report.summary.erroredProcesses > 0) {; report && report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report && report.summary.onlineProcesses === 0) {; report && report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {; report && report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path && path.join(process && process.cwd(),';automation-health-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000); const hours = Math && Math.floor(seconds / 3600); const minutes = Math && Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console && console.clear(); '🚀 PM2: Automation Dashboard')', , '=' .repeat(50))';; const status = await this && this.getPM2Status(); const health = await this && this.generateHealthReport(); ')';; health && health.processes.forEach(proc: => { const statusIcon = proc && proc.status === 'online', ', ? '🟢';'; : proc && proc.status: === 'errored', ', ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this && this.getPM2Status(); const health = await this && this.generateHealthReport(); `)';); health && health.processes.forEach(proc => {' const statusIcon = proc && proc.status === 'online'; ? '🟢'; : proc && proc.status === 'errored'; ? '🔴; ` : `🟡; proc && proc.name.padEnd(25) +; `${statusIco,n} ${proc && proc.status}`.padEnd(10) +; proc && proc.memory.padEnd(10) +; proc && proc.cpu.padEnd(8) +; proc && proc.uptime.padEnd(15) +; proc && proc.restarts)})`  if (health && health.recommendations.length > 0) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node,"}),"})
 import { execSync } from,,"}),"})
   child_process',"}),"})
@@ -20,9 +23,12 @@ import path from,"}),"})
   'path',"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
+<<<<<<< HEAD
 const __dirname = path && path.dirname(__filename),"}),"})
 // // // // // // // console && console.log(,"}),"})
   '🚀 Starting PM2 Automation Dashboard...'),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class AutomationDashboard {,"}),"})
   constructor() {,"}),"})
     this && this.processes = [],"}),"})
@@ -41,6 +47,7 @@ class AutomationDashboard {,"}),"})
         proc && proc.name !==,"}),"})
   'zion-backend',"}),"})
       ),"}),"})
+<<<<<<< HEAD
       // // // // // // // console && console.error(,"}),"})
   '❌ Failed to get PM2 "status": ', error && error.message),"}),"})
       return [],"}),"})
@@ -53,6 +60,8 @@ class AutomationDashboard {,"}),"})
   async generateHealthReport() {,"}),"})
     // // // // // // // console && console.log(,"}),"})
   '📊 Generating automation health report...'),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const report = {,"}),"})
   "timestamp": new Date().toISOString(),,"}),"})
       "summary": {,"}),"})
@@ -76,6 +85,7 @@ class AutomationDashboard {,"}),"})
       recommendations[],"}),"})
     },"}),"})
     // Generate recommendations,"}),"})
+<<<<<<< HEAD
     if (report && report.summary.erroredProcesses > 0) {,"}),"})
       report && report.recommendations.push(,"}),"})
   '⚠️  Some automation processes have errors. Check logs for details.')}"}),"})
@@ -85,6 +95,8 @@ class AutomationDashboard {,"}),"})
     if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {,"}),"})
       report && report.recommendations.push(,"}),"})
   '⚠️  Some automation processes are not running. Consider restarting failed processes.')}"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Save report,"}),"})
     const reportPath = path && path.join(process && process.cwd(),,"}),"})
   'automation-health-report && report.json'),"}),"})
@@ -99,6 +111,7 @@ class AutomationDashboard {,"}),"})
     const minutes = Math && Math.floor((seconds % 3600) / 60),"}),"})
     return `${hours}h ${minutes}m`}"}),"})
   async displayDashboard() {,"}),"})
+<<<<<<< HEAD
     console && console.clear(),"}),"})
     // // // // // // // console && console.log(,"}),"})
   '🚀 PM2 Automation Dashboard'),"}),"})
@@ -113,6 +126,8 @@ class AutomationDashboard {,"}),"})
     // Display process table,"}),"})
     // // // // // // // console && console.log('🔄 Automation "Processes": '),"}),"})
     // // // // // // // console && console.log('─,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '.repeat(80)),"}),"})
     // // // // // // // console && console.log('Name,"}),"})
   '.padEnd(25) + 'Status,"}),"})
@@ -121,6 +136,7 @@ class AutomationDashboard {,"}),"})
   '.padEnd(8) + 'Uptime,"}),"})
   '.padEnd(15) + 'Restarts,"}),"})
   '),"}),"})
+<<<<<<< HEAD
     // // // // // // // console && console.log('─,"}),"})
   '.repeat(80)),"}),"})
     health && health.processes.forEach(proc => {,"}),"})
@@ -142,17 +158,26 @@ class AutomationDashboard {,"}),"})
     if (health && health.recommendations.length > 0) {,"}),"})
       console && console.log(,"}),"})
   '💡 "Recommendations":  ,"}),"})
+=======
+      )}),"}),"})
+    console && console.log(''),"}),"})
+    // Display recommendations,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),"}),"})
       health && health.recommendations.forEach(rec => console && console.log(`  ${rec}`)),"}),"})
       console && console.log(',"}),"})
   ')}"}),"})
     // Display recent logs,"}),"})
+<<<<<<< HEAD
     // // // console && console.log('📝 Recent "Activity": '),"}),"})
     // // // console && console.log('─,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '.repeat(50)),"}),"})
 ,"}),"})
     // // // // // // // console && console.log(''),"}),"})
     // Display recommendations,"}),"})
+<<<<<<< HEAD
     if (health && health.recommendations.length > 0) {,"}),"})
       // // // // // // // console && console.log(,"}),"})
   '💡 "Recommendations": ),"}),"})
@@ -163,6 +188,8 @@ class AutomationDashboard {,"}),"})
     // Display recent logs,"}),"})
     // // // // // // // console && console.log('📝 Recent "Activity": '),"}),"})
     // // // // // // // console && console.log('─,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '.repeat(50)),"}),"})
     try {,"}),"})
       const logs = execSync('pm2 logs --lines 5 --nostream, { "encoding":  ,"}),"})
@@ -174,6 +201,7 @@ class AutomationDashboard {,"}),"})
         if (log && log.includes('ERROR,"}),"})
   ') || log && log.includes('error,"}),"})
   ')) {,"}),"})
+<<<<<<< HEAD
           // // // // // // // console && console.log(`🔴 ${log}`),"}),"})
         } else if (log && log.includes('WARN,"}),"})
   ') || log && log.includes('warn,"}),"})
@@ -181,6 +209,8 @@ class AutomationDashboard {,"}),"})
           // // // // // // // console && console.log(`🟡 ${log}`),"}),"})
         } else {,"}),"})
           // // // // // // // console && console.log(`ℹ️  ${log}`),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }"}),"})
       }),"}),"})
     } catch (error) {,"}),"})
@@ -202,11 +232,14 @@ class AutomationDashboard {,"}),"})
   '  Ctrl+C - Exit dashboard),"}),"})
   }"}),"})
 ,"}),"})
+<<<<<<< HEAD
           console && console.log(`🔴 ${log}`)} else if (log && log.includes(,,"}),"})
   WARN') || log && log.includes(,"}),"})
   'warn')) {,"}),"})
           console && console.log(`🟡 ${log}`)} else {,"}),"})
           console && console.log(`ℹ️  ${log}`)}"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       })} catch (error) {,"}),"})
       console && console.log(,"}),"})
   '  No recent logs available')}"}),"})
@@ -223,8 +256,11 @@ class AutomationDashboard {,"}),"})
   '),"}),"})
     console && console.log('  Ctrl+C - Exit dashboard)}"}),"})
   async startMonitoring() {,"}),"})
+<<<<<<< HEAD
     // // // // // // // console && console.log(,,"}),"})
   🔄 Starting continuous monitoring...,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '),"}),"})
     // Initial display,"}),"})
     await this && this.displayDashboard(),"}),"})
@@ -232,16 +268,23 @@ class AutomationDashboard {,"}),"})
     setInterval(async () => {,"}),"})
       await this && this.displayDashboard()}, 30000)}"}),"})
   async restartFailedProcesses() {,"}),"})
+<<<<<<< HEAD
     // // // // // // // console && console.log('🔄 Restarting failed processes...,"}),"})
   '),"}),"})
     const failedProcesses = this && this.processes.filter(p => p && p.pm2_env.status === 'errored,"}),"})
   '),"}),"})
     if (failedProcesses && failedProcesses.length === 0) {,"}),"})
       // // // // // // // console && console.log('✅ No failed processes to restart,"}),"})
+=======
+  '),"}),"})
+    const failedProcesses = this && this.processes.filter(p => p && p.pm2_env.status === 'errored,"}),"})
+  '),"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '),"}),"})
       return,"}),"})
     failedProcesses && failedProcesses.forEach(proc => {,"}),"})
       try {,"}),"})
+<<<<<<< HEAD
         execSync(`pm2 restart ${proc && proc.pm_id}`, { "stdio": 'inherit }),"}),"})
         // // // // // // // console && console.log(`✅ Restarted ${proc && proc.name}`),"}),"})
       } catch (error) {,"}),"})
@@ -250,6 +293,8 @@ class AutomationDashboard {,"}),"})
     }),"}),"})
   async generatePerformanceReport() {,"}),"})
     // // // // // // // console && console.log('📊 Generating performance report...,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '),"}),"})
     const report = {,"}),"})
       "timestamp": new Date().toISOString(),,"}),"})
@@ -272,12 +317,16 @@ class AutomationDashboard {,"}),"})
         "totalRestarts": this && this.processes.reduce((sum, p) => sum + p && p.pm2_env.restart_time, 0),"}),"})
     },"}),"})
 ,"}),"})
+<<<<<<< HEAD
       console && console.log(,,"}),"})
   ✅ No failed processes to restart,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '),"}),"})
       return}"}),"})
     failedProcesses && failedProcesses.forEach(proc => {,"}),"})
       try {,"}),"})
+<<<<<<< HEAD
         execSync(`pm2 restart ${proc && proc.pm_id}`, { "stdio": 'inherit }),"}),"})
         console && console.log(`✅ Restarted ${proc && proc.name}`)} catch (error) {,"}),"})
         console && console.error(`❌ Failed to restart ${proc && proc.name}:`, error && error.message)}"}),"})
@@ -285,6 +334,8 @@ class AutomationDashboard {,"}),"})
   async generatePerformanceReport() {,"}),"})
     console && console.log(,,"}),"})
   📊 Generating performance report...,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '),"}),"})
     const reportPath = path && path.join(process && process.cwd(), 'automation-performance-report && report.json,"}),"})
   '),"}),"})
@@ -298,16 +349,20 @@ async function main() {,"}),"})
   // Handle graceful shutdown,"}),"})
   process && process.on('SIGINT,"}),"})
   ', async () => {,"}),"})
+<<<<<<< HEAD
     // // // // // // // console && console.log('\n🛑 Shutting down automation dashboard...,"}),"})
   '),"}),"})
     await dashboard && dashboard.generatePerformanceReport(),"}),"})
     // // // // // // // console && console.log('✅ Performance report saved,"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   '),"}),"})
     process && process.exit(0),"}),"})
   }),"}),"})
   try {,"}),"})
     await dashboard && dashboard.startMonitoring(),"}),"})
   } catch (error) {,"}),"})
+<<<<<<< HEAD
     // // // // // // // console && console.error('❌ Dashboard "failed": error),"}),"})
     process && process.exit(1),"}),"})
 ,"}),"})
@@ -322,12 +377,18 @@ async function main() {,"}),"})
 // Start the dashboard,"}),"})
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  '),"}),"})
+    process && process.exit(0)}),"}),"})
+  try {,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   child_process';
 import fs from "fsfs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(',
+<<<<<<< HEAD
 main().catch(console ;
 import fs from "fsfs';
 import path from "pathpath';
@@ -335,6 +396,8 @@ import {fileURLToPath} from "urlurl';
 const __dirname = path && path.dirname(__filename);
 // // // // // // // console && console.log(',
       '🚀 Starting PM2 Automation Dashboard...');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class AutomationDashboard {;
   constructor() {;
   constructor() {
@@ -345,6 +408,7 @@ class AutomationDashboard {;
     try {
       const output = execSync(
   'pm2 jlist', { "encoding": 'utf8})';
+<<<<<<< HEAD
       const processes = JSON && JSON.parse(output);
       this."processes": = processes && processes.filter(proc =>;
         proc && proc.name: !==', pm2-logrotate' &&',
@@ -361,6 +425,8 @@ class AutomationDashboard {;
   async generateHealthReport() {
     // // // // // // // console && console.log(
   '📊 Generating automation health report...')';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const report = {
   "timestamp": new: Date().toISOString()
       summary: {
@@ -379,6 +445,7 @@ class AutomationDashboard {;
         "pm_id": proc && proc.pm_i,d}))
       recommendations[]}
     // "Generate": recommendations;
+<<<<<<< HEAD
     if: (report && report.summary.erroredProcesses > 0) {
       report && report.recommendations.push(
   '⚠️  Some automation processes have errors. Check logs for details.')}';
@@ -388,6 +455,8 @@ class AutomationDashboard {;
     "if": (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {
       report && report.recommendations.push(
   '⚠️  Some automation processes are not running. Consider restarting failed processes.')}';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // "Save": report;
     const reportPath = path && path.join(process && process.cwd()
   'automation-health-report && report.json')';
@@ -402,6 +471,7 @@ class AutomationDashboard {;
     "return": `${hours}h ${minutes}m`}
   async displayDashboard() {
   'pm2 jlist', { "encoding": 'utf8 });
+<<<<<<< HEAD
       const processes = JSON && JSON.parse(output);
       this && this.processes = processes && processes.filter(proc =>;
         proc && proc.name !==';pm2-logrotate' &&;
@@ -418,6 +488,8 @@ class AutomationDashboard {;
   async generateHealthReport() {
     // // // // // // // console && console.log(',
       '📊 Generating automation health report...');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const report = {
   "timestamp": new Date().toISOString()
       summary: {
@@ -439,6 +511,7 @@ class AutomationDashboard {;
         pm_id: proc && proc.pm_id}))
       recommendations[]}
     // Generate recommendations;
+<<<<<<< HEAD
     if (report && report.summary.erroredProcesses > 0) {
       report && report.recommendations.push(
   "⚠️  Some automation processes have errors. Check logs for details.")}
@@ -447,6 +520,8 @@ class AutomationDashboard {;
       '🚨 No automation processes are running. Start the automation system.')}
     if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {
       report && report.recommendations.push('
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   'stopped').length},
       "processes": this && this.processes.map(proc => ({;
         name: proc && proc.name,
@@ -458,12 +533,15 @@ class AutomationDashboard {;
         "pm_id": proc && proc.pm_id})),
       recommendations[]}
     // Generate recommendations;
+<<<<<<< HEAD
     if (report && report.summary.erroredProcesses > 0) {;
       report && report.recommendations.push(';⚠️  Some automation processes have errors. Check logs for details.')}
     if (report && report.summary.onlineProcesses === 0) {;
       report && report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')}
     if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {;
       report && report.recommendations.push(';⚠️  Some automation processes are not running. Consider restarting failed processes.')}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Save report;
     const reportPath = path && path.join(process && process.cwd(), ';automation-health-report && report.json');
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
@@ -477,6 +555,7 @@ class AutomationDashboard {;
     const minutes = Math && Math.floor((seconds % 3600) / 60);
     return "${hours}h ${minutes}m"}
   async displayDashboard() {;
+<<<<<<< HEAD
     console && console.clear();
     // // // // // // // console && console.log(
   '🚀 "PM2": Automation Dashboard')';
@@ -526,3 +605,5 @@ class AutomationDashboard {;
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/automation-dashboard.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

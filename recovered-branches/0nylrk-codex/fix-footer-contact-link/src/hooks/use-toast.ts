@@ -25,6 +25,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string;
   title?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   variant?: "default" | "destructive" | "success"
 };
 
@@ -73,6 +74,11 @@ export const useToast = useToastHook;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  variant?: "default" | "destructive" | "success"
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
   const { toast } = useToastHook();
@@ -80,7 +86,7 @@ function baseToast(props: ToastOptions) {
 }
 // Convenience helpers mirroring common toast variants.
 baseToast.title = (title: string) => {
-  baseToast({ title });
+  baseToast({ title })
 };
 
 <<<<<<< HEAD
@@ -92,19 +98,21 @@ baseToast && baseToast.description = (description: string) => {
   baseToast({ description })
 =======
 baseToast.description = (description: string) => {
+<<<<<<< HEAD
   baseToast({ description });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  baseToast({ description })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 baseToast.error = (error: string) => {
-  baseToast({ variant: "destructive", title: "Error", description: error });
+  baseToast({ variant: "destructive", title: "Error", description: error })
 };
 
 baseToast.success = (message: string) => {
-  baseToast({ variant: "success", title: "Success", description: message });
+  baseToast({ variant: "success", title: "Success", description: message })
 };
-
-=======
 
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
@@ -112,25 +120,13 @@ function baseToast(props: ToastOptions) {
   toast(props)
 }
 // Convenience helpers mirroring common toast variants.
-baseToast.title = (title: string) => {
-  baseToast({ title })
-}
-baseToast.description = (description: string) => {
-  baseToast({ description })
-}
-baseToast.error = (error: string) => {
-  baseToast({ variant: "destructive", title: "Error", description: error })
-}
-baseToast.success = (message: string) => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  baseToast({ variant: "success", title: "Success", description: message })
+baseToast && baseToast.title = (title: string) => {  baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
 export const toast = baseToast as typeof baseToast & {
-  title: (title: string) => void;
+  title: (title: string) => void,
   description: (description: string) => void;
+<<<<<<< HEAD
   error: (error: string) => void;
   success: (message: string) => void;
 <<<<<<< HEAD
@@ -144,6 +140,12 @@ export const toast = baseToast as typeof baseToast & {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  error: (error: string) => void
+  success: (message: string) => void
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 },
 
 baseToast.description = (description: string) => {
@@ -159,6 +161,7 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -173,6 +176,11 @@ baseToast.success = (message: string) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const toast = baseToast as typeof baseToast & {;
   title: (title: string) => void;
+=======
+
+};export const toast = baseToast as typeof baseToast & {;
+  title: (title: string) => void,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: (description: string) => void;
   error: (error: string) => void,
   success: (message: string) => void
@@ -214,9 +222,10 @@ baseToast.success = (message: string) => {;
 },;
 // Export the callable toast function.;
 export const toast = baseToast as typeof baseToast & {;
-  title: (title: string) => void,;
+  title: (title: string) => void,,
   description: (description: string) => void,;
   error: (error: string) => void;
+<<<<<<< HEAD
   success: (message: string) => void;
 <<<<<<< HEAD
 };
@@ -227,10 +236,14 @@ export const toast = baseToast as typeof baseToast & {;
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+  success: (message: string) => void
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+};
 
 };
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

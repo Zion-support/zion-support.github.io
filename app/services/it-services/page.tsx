@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export const metadata = { 
@@ -1896,6 +1897,18 @@ function TechExpertiseCard({
   category: string;
   technologies: string[];
 }) {
+=======
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = { 
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
+};
+
+export default function ITServicesPage() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 <<<<<<< HEAD
     <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
@@ -2029,22 +2042,26 @@ function IndustrySolution({ title, description, solutions, icon }: {
 =======
 =======
     <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          IT Services & Solutions
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          IT Services
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
           Complete IT infrastructure, cloud solutions, and digital
           transformation services to modernize your business operations. 24/7
           support with 99.9% uptime guarantee.
+=======
+          Comprehensive IT solutions for modern businesses. 
+          From cloud migration to cybersecurity, we keep your technology infrastructure running smoothly.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=IT Services Consultation"
+            href="mailto:kleber@ziontechgroup.com?subject=IT Services Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Get Free IT Consultation
+            Get IT Consultation
           </a>
           <a
             href="tel:+13024640950"
@@ -2054,6 +2071,7 @@ function IndustrySolution({ title, description, solutions, icon }: {
           </a>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* IT Services Grid */}
       <section className="py-12">
@@ -2486,6 +2504,8 @@ function IndustrySolution({ title, description, solutions, icon }: {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>
   );
 <<<<<<< HEAD

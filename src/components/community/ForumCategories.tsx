@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
@@ -15,14 +16,30 @@ const categories: ForumCategoryInfo[] = [
 =======
 {
     id: "feedback"
+=======
+  {
+
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+import { ForumCategoryInfo } from "@/types/community",
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+  {    id: "feedback"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
 
-
   },
-
 
   {
     id: "announcements"
@@ -30,6 +47,7 @@ const categories: ForumCategoryInfo[] = [
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
 const categories: ForumCategoryInfo[] = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
@@ -120,6 +138,8 @@ export const ForumCategories = () => {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -150,6 +170,7 @@ import { ForumCategoryInfo } from "@/types/community",;
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
+<<<<<<< HEAD
     name: "Getting Hired",;
 <<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.",;
@@ -199,12 +220,16 @@ const categories: ForumCategoryInfo[] = [;
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {;
+=======
+    name: "Getting Hired",;  {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: "announcements",;
-    name: "Announcements",;
-    description: "Official announcements from the Zion team.",;
+    name: "Announcements",,
+  description: "Official announcements from the Zion team.",;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ],;
 const iconMap = {;
@@ -254,6 +279,8 @@ export const ForumCategories = () => {;
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <CardHeader className="flex flex-row items-center gap-4">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
@@ -274,15 +301,15 @@ export const ForumCategories = () => {;
         );
       })}
     </div>;
-  );
+  )
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default ForumCategories;
-
-export default ForumCategories;
-
 
 export default ForumCategories;
 ";

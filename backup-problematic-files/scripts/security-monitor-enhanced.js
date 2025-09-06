@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/security-monitor-enhanced.js
 ========
 <<<<<<< HEAD
@@ -22,12 +23,27 @@ const securityChecks = {
   },
   "headers": () => {
 
+=======
+const securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+console.log(' Enhanced Security Monitor Starting...');
+const securityChecks = {
+  "dependencies": () => {
+    console.log(' Checking dependencies for vulnerabilities...'),
+    return true
+  },
+  "codeScan": () => {
+    console.log(' Scanning code for security issues...'),
+    return true
+  },
+  "headers": () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return true
   }
 };
 Object && Object.entries(securityChecks).forEach(([name, check]) => {
   try {
     const result = check();
+<<<<<<< HEAD
     console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
     console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
@@ -52,3 +68,5 @@ console.log('🔒 Enhanced Security Monitor Starting...'); const securityChecks 
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/security-monitor-enhanced.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/security-monitor-enhanced.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

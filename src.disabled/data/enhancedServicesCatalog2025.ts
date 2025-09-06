@@ -1,9 +1,8 @@
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';E-commerce: Solutions' |';';Remote: Work Tools' |';';Legal: Tech' |';';EdTech' |';';Real: Estate Tech' |';';Supply: Chain Tech' |';';Energy: Tech' |';';Smart: Cities' |';';AgriTech' |';';Media: & Entertainment' |';';Logistics: Tech' |';';HR: Tech' |';';Sales: Tech' |';';Customer: Experience' |';';Productivity: Tools' price: string'';,;
 "export": type ServiceItem = { id: string: title: string: description: string: category,:
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';E-commerce: Solutions' |';';Remote: Work Tools' |';';Legal: Tech' |';';EdTech' |';';Real: Estate Tech' |';';Supply: Chain Tech' |';';Energy: Tech' |';';Smart: Cities' |';';AgriTech' |';';Media: & Entertainment' |';';Logistics: Tech' |';';HR: Tech' |';';Sales: Tech' |';';Customer: Experience' |';';Productivity: Tools' price: string'',
-<<<<<<< HEAD
-<<<<<<< HEAD
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';E-commerce: Solutions' |';';Remote: Work Tools' |';';Legal: Tech' |';';EdTech' |';';Real: Estate Tech' |';';Supply: Chain Tech' |';';Energy: Tech' |';';Smart: Cities' |';';AgriTech' |';';Media: & Entertainment' |';';Logistics: Tech' |';';HR: Tech' |';';Sales: Tech' |';';Customer: Experience' |';';Productivity: Tools' price: string'',
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -34,3 +33,5 @@ export: type ServiceItem = { id: string: title: string: description: string: cat
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useAuthStatus } from "./talent/useAuthStatus",
@@ -27,11 +27,14 @@ export function useTalentDirectory() {
     isAuthenticated;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
+<<<<<<< HEAD
   // Fetch auth status and saved talents
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -177,6 +180,9 @@ function useTalentDirectory() {
     savedTalents;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } = useUIState(),
+=======
+  // Fetch auth status and saved talents  } = useUIState(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return {
     // Talents and loading state
@@ -211,8 +217,6 @@ function useTalentDirectory() {
     userDetails,
     savedTalents,
     
-<<<<<<< HEAD
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Actions
@@ -227,6 +231,7 @@ function useTalentDirectory() {
 }
 =======
 
+<<<<<<< HEAD
     expanded_sections;
 =======
 
@@ -250,6 +255,9 @@ function useTalentDirectory() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useAuthStatus } from "./talent/useAuthStatus",;
+=======
+    expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
@@ -333,6 +341,7 @@ export function useTalentDirectory() {;
     toggleSection;
     handleToggleSave;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -341,6 +350,11 @@ export function useTalentDirectory() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -368,13 +382,10 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
-<<<<<<< HEAD
-}
-=======
-}
-  }
+}  }
 }
 ;
+<<<<<<< HEAD
   }
 }
 ;
@@ -385,3 +396,5 @@ export function useTalentDirectory() {;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

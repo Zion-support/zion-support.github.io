@@ -11,24 +11,22 @@ export interface CodeSample {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -43,6 +41,8 @@ export interface EndpointSpec {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -61,6 +61,7 @@ export interface ErrorCode {;
 
 export interface EndpointSpec {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -70,8 +71,10 @@ export interface EndpointSpec {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
-  title: string;
+  title: string,
   description: string;
   path: string;
   method: HttpMethod;
@@ -84,6 +87,7 @@ export interface EndpointSpec {;
   rate_limits?: RateLimitInfo[];
   errors?: ErrorCode[];
   tags?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export interface SectionSpec {
@@ -107,10 +111,14 @@ export interface SectionSpec {
 export interface SectionSpec {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface SectionSpec {export interface SectionSpec {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface SectionSpec {
 =======
@@ -118,13 +126,16 @@ export interface SectionSpec {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+export interface SectionSpec {  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
 export interface ApiDocsSpec {
 
-
 export interface ApiDocsSpec {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -300,3 +311,9 @@ export interface ApiDocsSpec {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  product: 'Zion OS';
+  versions: string[]; // available versions;
+  default_version: string;
+  sections: SectionSpec[];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

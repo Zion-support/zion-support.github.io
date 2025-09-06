@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react',;
 import { QueryClient } from '@tanstack/react-query',;
 import * as Sentry from '@sentry/nextjs',;
@@ -152,16 +153,11 @@ if ( {) {
   $2
 }
         return this.props.fallback;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
-      return (
-        <div className='flex min - h-screen items - center justify - center p - 4'>;
-          <div className='w - full max - w-md space - y-4'>;
-            <Alert variant='destructive'>;
-              <div className='flex items - center gap - 2'>;
-                {isNetworkError ? (
-                  <WifiOff className='h - 4 w - 4' />) : (
-                  <RefreshCw className='h - 4 w - 4' />)}
 
+<<<<<<< HEAD
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -173,6 +169,9 @@ if ( {) {
             </Alert>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex min-h-screen items-center justify-center p-4">
+=======
+      return (        <div className="flex min-h-screen items-center justify-center p-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
@@ -188,7 +187,6 @@ if ( {) {
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
-
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -203,6 +201,7 @@ if ( {) {
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             <div className="flex flex-col gap-2">
@@ -214,10 +213,11 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={this.handleRetry}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
-
 
                 {this.state.isRetrying ? (
                   <>
@@ -236,6 +236,7 @@ if ( {) {
               <Button
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 variant="outline"
@@ -243,6 +244,8 @@ if ( {) {
                 className="w-full"
               >
                 Reload Page
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Button>
             </div>
 
@@ -252,9 +255,13 @@ if ( {) {
                 <span>Offline</span>
               </div>
             )}
+<<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 rounded border p-2 text-xs">
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mt-4 rounded border p-2 text-xs">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
@@ -263,7 +270,6 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <pre className="mt-2 whitespace-pre-wrap break-all">
-
 
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
@@ -296,6 +302,7 @@ if ( {) {
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
+<<<<<<< HEAD
     Sentry.withScope((scope) => {;
       scope.setTag('sourceuseApiErrorHandler'),;
       scope.setLevel('error'),;
@@ -319,3 +326,14 @@ export const useApiErrorHandler = () => {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
+=======
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag('source', 'useApiErrorHandler');
+      scope && scope.setLevel('error');
+      Sentry && Sentry.captureException(error);
+    })
+};
+  return { handleApiError }
+};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

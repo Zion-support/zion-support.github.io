@@ -63,5 +63,10 @@ await this.log(" ESLint configuration fixed")
             "file": file,"
             "timestamp": new Date().toISOString()")}
 });")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  await this.log(")
+  await this.log(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

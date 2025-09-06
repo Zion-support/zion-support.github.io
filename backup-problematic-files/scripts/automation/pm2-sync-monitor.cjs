@@ -883,5 +883,10 @@ if (require.main === module) {}
   }, 60000)};
 ;
 module.exports = PM2SyncMonitor;
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = PM2SyncMonitor;
+module.exports = PM2SyncMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

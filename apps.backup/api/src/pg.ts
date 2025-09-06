@@ -35,36 +35,32 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 =======
 =======
 
-<<<<<<< HEAD
   if (!pool) {;
-  if (!pool) {;
-=======
-
-  if (!pool) {;
-
-
-=======
-  if (!pool) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    pool = new Pool({ connectionString:process.env.DATABASE_URL });
+  if (!pool) {;    pool = new Pool({ connectionString:process.env.DATABASE_URL });
     pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
   }
   return pool;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const client = await getPool().connect();
   try {
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
+<<<<<<< HEAD
     const result = await fn(client);
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -116,6 +112,9 @@ client.release();  }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } finally {;
+=======
+    const result = await fn(client);  } finally {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     client.release();
   }
 }
@@ -125,19 +124,9 @@ client.release();  }
 }
 
   } finally {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  } finally {
-
-    client && client.release();  }
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 client.release ();  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -155,3 +144,5 @@ client.release();  }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

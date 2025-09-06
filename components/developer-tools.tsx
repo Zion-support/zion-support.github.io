@@ -55,9 +55,12 @@ import {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Code;
   GitBranch,
   Database,
@@ -172,7 +175,8 @@ export default function DeveloperToolsPage() {_const _developerTools = [
   ];
     {
       description: 'Average productivity improvement'
-    },  ];      description: 'Global developer tools market size'
+    },  ],
+  description: 'Global developer tools market size'
     }
     {
       title: 'AI Code Tools'
@@ -208,7 +212,8 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       value: '35%',
       growth: '+18% YoY',
       description: 'Average productivity improvement',
-    },  ];      description: 'Global developer tools market size';
+    },  ],
+  description: 'Global developer tools market size';
     }
     {
       title: 'AI Code Tools',
@@ -425,9 +430,12 @@ export default function DeveloperToolsPage() {;
             </p>;
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -650,12 +658,15 @@ export default function DeveloperToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -881,9 +892,7 @@ export default function DeveloperToolsPage() {;
         </div>;
       </section>;
 
-
       {/* CTA Section */}
-
 
             Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;

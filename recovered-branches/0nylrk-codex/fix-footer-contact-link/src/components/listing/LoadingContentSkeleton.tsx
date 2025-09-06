@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 export function LoadingContentSkeleton() {;
 
+<<<<<<< HEAD
   return (
 =======
 import React from "react",
@@ -16,6 +20,9 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function LoadingContentSkeleton() {
+=======
+  return (export function LoadingContentSkeleton() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
       <CardHeader>
@@ -33,6 +40,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
           ))}
         </div>
         <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
@@ -46,15 +54,10 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 =======
-export function LoadingContentSkeleton() {;
-<<<<<<< HEAD
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+export function LoadingContentSkeleton() {;
+  return (;
       <CardHeader>;
         <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
       </CardHeader>;
@@ -96,9 +99,8 @@ export function LoadingContentSkeleton() {;
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -150,3 +152,5 @@ function LoadingContentSkeleton() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

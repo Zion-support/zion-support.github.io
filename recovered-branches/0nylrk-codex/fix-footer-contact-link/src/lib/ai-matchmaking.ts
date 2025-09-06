@@ -7,6 +7,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface MatchResultItem {
 =======
 =======
@@ -76,41 +77,33 @@ export interface MatchResult {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   item: MatchResultItem;
-  score: number;
-
 =======
-  item: MatchResultItem;
-  score: number;
+export interface MatchResultItem {export interface MatchResultItem {
 
-  skills?: string[],
-  image?: string;
-}
-export interface MatchResult {
-  item: MatchResultItem;
+export interface MatchResultItem {;
+export interface MatchResultItem {// AI Matchmaking utility functions
+export interface MatchResultItem {
+
+export interface MatchResultItem {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   score: number;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   matched_skills: string[],
   reason: string;
 }
 // Sample data for testing when API is not available;
 const sample_data: MatchResultItem[] = [;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export interface MatchResult {
 
 export interface MatchResult {;
 export interface MatchResult {
   item: MatchResultItem;
   score: number;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "talent - 1";
-    title: "Senior AI Engineer";
-    description: "Experienced AI engineer with expertise in machine learning and computer vision";
+    title: "Senior AI Engineer",
+  description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -134,27 +127,18 @@ export interface MatchResult {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   {
     id: "service - 1";
-    title: "AI Model Training";
-    description: "Custom AI model training service with data preparation and deployment";
-    category: "Services - AI Development";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    price: 5000,
-    skills: ["Machine Learning", "Model Training", "AI Deployment"];
-
-=======
-    price: 5000,
-    skills: ["Machine Learning", "Model Training", "AI Deployment"];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  }
+    title: "AI Model Training",
+  description: "Custom AI model training service with data preparation and deployment";
+    category: "Services - AI Development";  }
   {
     id: "equipment - 1";
+<<<<<<< HEAD
     title: "NVIDIA A100 GPU Server";
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
@@ -256,6 +240,12 @@ export interface MatchResult {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    title: "NVIDIA A100 GPU Server",
+  description: "High - performance GPU server for AI model training and inference";
+    category: "Equipment - Hardware";
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -283,6 +273,7 @@ const sampleData: MatchResultItem[] = [
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
 ];
+<<<<<<< HEAD
 // Function to find matches based on query and type
 <<<<<<< HEAD
 
@@ -315,10 +306,14 @@ export async function findMatches(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   limit: number = 5
 ): Promise<MatchResult[]> {
+=======
+// Function to find matches based on query and type): Promise<MatchResult[]> {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -416,6 +411,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -427,33 +424,36 @@ if ( {) {
     return []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
   {;
     id: "talent-1",;
-    title: "Senior AI Engineer",;
-    description: "Experienced AI engineer with expertise in machine learning and computer vision",;
+    title: "Senior AI Engineer",,
+  description: "Experienced AI engineer with expertise in machine learning and computer vision",;
     category: "Talent - Engineering",;
     price: 120,;
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
   },;
   {;
     id: "service-1",;
-    title: "AI Model Training",;
-    description: "Custom AI model training service with data preparation and deployment",;
+    title: "AI Model Training",,
+  description: "Custom AI model training service with data preparation and deployment",;
     category: "Services - AI Development",;
     price: 5000,;
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
   },;
   {;
     id: "equipment-1",;
-    title: "NVIDIA A100 GPU Server",;
-    description: "High-performance GPU server for AI model training and inference",;
+    title: "NVIDIA A100 GPU Server",,
+  description: "High-performance GPU server for AI model training and inference",;
     category: "Equipment - Hardware",;
     price: 15000,;
     skills: ["GPU Computing", "High Performance", "AI Hardware"];
@@ -512,6 +512,7 @@ export async function find_matches (
     let filtered_items = sample_data;
     // Check condition
 if ( {) {
+<<<<<<< HEAD
   $2
 <<<<<<< HEAD
 
@@ -655,3 +656,7 @@ export async function findMatches(;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  $2  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

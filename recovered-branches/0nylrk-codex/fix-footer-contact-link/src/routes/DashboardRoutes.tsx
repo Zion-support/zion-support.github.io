@@ -31,6 +31,7 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const DashboardRoutes = () => {
 =======
@@ -39,6 +40,9 @@ const DashboardRoutes = () => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Fragment} from "react";
+=======
+const DashboardRoutes = () => {import {Fragment} from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -60,8 +64,6 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -297,65 +299,6 @@ import ContractBuilder from "@/pages/ContractBuilder",;
 const DashboardRoutes = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const DashboardRoutes = () => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <Routes>;
-      {/* Dashboard Routes */}
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/client-dashboard"
-        element={
-          <ProtectedRoute>
-            <ClientDashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/talent-dashboard"
-        element={
-          <ProtectedRoute>;
-            <TalentDashboard />;
-          </ProtectedRoute>;
-        }
-      />
-      <Route
-        path="/creator-dashboard"
-        element={
-          <ProtectedRoute>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/analytics"
-        element={
-          <ProtectedRoute>
-            <Analytics />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/project/:id/milestones"
-        element={
-          <ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/project/:id"
-        element={
-          <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;
         }
@@ -365,7 +308,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         }
       />;
-<<<<<<< HEAD
       <Route
         path="/messages"
         element={
@@ -440,10 +382,7 @@ const DashboardRoutes = () => {;
       />
       <Route
         path="/developers"
-        element={
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <ProtectedRoute>;
+        element={          <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -452,7 +391,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         }
       />;
-<<<<<<< HEAD
       <Route
         path="/dashboard/api-access"
         element={
@@ -462,6 +400,7 @@ const DashboardRoutes = () => {;
         }
       />
       <Route
+<<<<<<< HEAD
         path="/contract-builder"
 =======
 import { Fragment } from './react';
@@ -837,12 +776,16 @@ export default DashboardRoutes;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
+=======
+        path="/contract-builder"        }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
     </Routes>);
 }
 ;
 export default DashboardRoutes;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -879,3 +822,5 @@ export default DashboardRoutes;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Link } from 'react-router-dom',
 import { SERVICE_CATEGORIES } from '@/data/servicesData',
@@ -18,18 +19,15 @@ export function ContactPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const [selectedService, setSelectedService] = useState(''),
 
 <<<<<<< HEAD
 =======
   });
-  const [selectedService, setSelectedService] = useState('');
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-import React, { useState } from 'react',;
+  const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
 export function ContactPage() {
@@ -46,6 +44,7 @@ export function ContactPage() {
 
   const [selectedService, setSelectedService] = useState(''),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -68,6 +67,12 @@ export function ContactPage() {
     window.location.href = mailtoLink
   },
 
+=======
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -132,6 +137,7 @@ export function ContactPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
+<<<<<<< HEAD
             </p>
 <<<<<<< HEAD
             
@@ -157,6 +163,9 @@ export function ContactPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <form onSubmit={handleSubmit} className="space-y-6">
+=======
+            </p>            <form onSubmit={handleSubmit} className="space-y-6">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -189,6 +198,7 @@ export function ContactPage() {
                     placeholder="your.email@company.com"
                   />
                 </div>
+<<<<<<< HEAD
               </div>
 <<<<<<< HEAD
               
@@ -323,6 +333,9 @@ export function ContactPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
+              </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                     Budget Range
@@ -448,6 +461,7 @@ export function ContactPage() {
 
             {/* Business Hours */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -520,6 +534,8 @@ export function ContactPage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -579,6 +595,7 @@ export function ContactPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
   )
@@ -626,3 +643,6 @@ describe('EquipmentPage', () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

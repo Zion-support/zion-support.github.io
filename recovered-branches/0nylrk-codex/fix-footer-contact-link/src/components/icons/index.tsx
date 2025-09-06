@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+<<<<<<< HEAD
     return <LucideIcon {...props} />;
   };
 
@@ -125,6 +119,11 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return <LucideIcon {...props} />
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -133,6 +132,7 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 // Generate icon exports
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
+<<<<<<< HEAD
     iconExports[alias] = createIconComponent(alias, lucideName)
 <<<<<<< HEAD
 =======
@@ -478,6 +478,9 @@ export const {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Alias for missing icons or for icons with different names;
+=======
+    iconExports[alias] = createIconComponent(alias, lucideName)// Alias for missing icons or for icons with different names;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
   LayoutGrid: 'LayoutGrid',;
@@ -563,42 +566,8 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   BookOpen: 'BookOpen',;
   Key: 'Key',;
   Tag: 'Tag' as keyof typeof LucideIcons},;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-type IconProps = LucideIcons && LucideIcons.LucideProps;
-
-=======
-type IconProps = LucideIcons && LucideIcons.LucideProps;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-type IconProps = LucideIcons && LucideIcons.LucideProps;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-// Create a type safe export for each icon;
-const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {;
-  const IconComponent = (props: IconProps) => {;
-    // Fix: Use proper type casting to access the icon component;
-    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,;
-    return <LucideIcon {...props} />;
-  };
-  IconComponent && IconComponent.displayName = aliasName;
-  return IconComponent;
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Export all of our icon components;
-const iconExports: Record<string, React.FC<IconProps>> = {};
-
-=======
-// Export all of our icon components;
-const iconExports: Record<string, React.FC<IconProps>> = {};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-// Export all of our icon components;
-const iconExports: Record<string, React.FC<IconProps>> = {};
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-// Generate icon exports;
+type IconProps = LucideIcons && LucideIcons.LucideProps;// Generate icon exports;
 Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   if (LucideIcons[lucideName]) {;
     iconExports[alias] = createIconComponent(alias, lucideName);
@@ -607,6 +576,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     // Use a fallback icon;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -638,6 +608,9 @@ export const {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   LayoutGrid;
+=======
+});  LayoutGrid;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   List;
   Zap;
   Settings;
@@ -886,101 +859,11 @@ export const {;
   Key,;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
-export * from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  LayoutGrid;
-  List;
-  Zap;
-  Settings;
-  Plus;
-  HelpCircle;
-  Twitter;
-  Linkedin;
-  Facebook;
-  Instagram;
-  Github;
-  Server;
-  Network;
-  Recycle;
-  Truck;
-  HardDrive;
-  Check;
-  CheckIcon;
-  Handshake;
-  StarIcon;
-  Moon;
-  Sun;
-  Bell;
-  CalendarIcon;
-  ChevronRight;
-  MoreHorizontal;
-  MoreVertical;
-  Quote;
-  Info;
-  AlertTriangle;
-  Ban;
-  ShieldAlert;
-  Archive;
-  Trash2;
-  Trash;
-  Power;
-  RefreshCw;
-  Copy;
-  ClipboardCopy;
-  Download;
-  LogIn;
-  EyeOff;
-  Wallet;
-  Code;
-  Megaphone;
-  Terminal;
-  ThumbsUp;
-  ThumbsDown;
-  Pin;
-  Lock;
-  Trophy;
-  Award;
-  BadgeCheck;
-  MessageSquare;
-  Link;
-  Briefcase;
-  FileText;
-  Clock;
-  Save;
-  StarOff;
-  LayoutDashboard;
-  BarChart;
-  BookOpen;
-  Key;
-
-
-
-=======
-=======
-// Also export all original icons from lucide-react;
-export * from 'lucide-react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  Tag} = icon_exports;
+export * from 'lucide-react';  Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
+;;
 // Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
 // Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
   const IconComponent = (props: IconProps) => {
@@ -988,8 +871,9 @@ export * from 'lucide-react';
   
 };
 // Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

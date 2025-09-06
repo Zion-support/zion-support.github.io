@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Common constants used across fraud detection modules
 // Phrases that might indicate fraud
@@ -80,16 +80,14 @@ export const suspiciousEmailDomains = [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "tempmail";
+=======
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "throwaway";
   "fakeemail";
   "mailinator";
   "guerrillamail";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  "10minutemail"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
@@ -130,6 +128,7 @@ export const suspiciousEmailDomains = [;
   "10minutemail";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -137,6 +136,8 @@ export const suspiciousEmailDomains = [;
 ];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
@@ -164,9 +165,9 @@ export const suspiciousEmailDomains = [;
   "fakeemail";
   "mailinator";
   "guerrillamail";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "10minutemail";
 ];
+<<<<<<< HEAD
 
 ;
 
@@ -199,3 +200,5 @@ export const suspiciousEmailDomains = [
 ];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

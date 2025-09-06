@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Header } from "@/components/Header",;
@@ -158,7 +161,11 @@ const BLOG_POSTS:BlogPost[] = [;
 <p>Forward-thinking organizations are creating robust upskilling programs to develop AI capabilities within their existing workforce. Structured mentorship, educational stipends, and dedicated learning time can transform motivated employees into valuable AI contributors.</p>;
 ;
 <h2>Creating Compelling AI Missions</h2>;
+<<<<<<< HEAD
 <p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challenges—whether in sustainability, healthcare, education, or other domains—can be a powerful recruitment tool.</p>;
+=======
+<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challengeswhether in sustainability, healthcare, education, or other domainscan be a powerful recruitment tool.</p>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 <h2>Remote-First Talent Strategies</h2>;
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>;
@@ -247,7 +254,10 @@ export default function Blog() {;
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." ;
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT";
         canonical="https://app.ziontechgroup.com/blog";
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
       <Header />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;
@@ -259,12 +269,24 @@ export default function Blog() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+          ;
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts.length > 0 && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 <div className="aspect-video overflow-hidden rounded-lg">;
+<<<<<<< HEAD
 
+=======
+                  <img ;
+                    src={featuredPosts[0].featuredImage} ;                    alt={featuredPosts[0].title}
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />;
                 </div>;
                 <div className="flex flex-col justify-center">;
@@ -278,6 +300,7 @@ export default function Blog() {;
                     {featuredPosts[0].excerpt}
                   </p>;
                   <div className="flex items-center mb-6">;
+<<<<<<< HEAD
 
                       <p className="text-sm text-zion-slate-light">;
                         {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
@@ -285,28 +308,72 @@ export default function Blog() {;
                     </div>;
                   </div>;
 
+=======
+                    <img ;
+                      src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}
+                      className="w-10 h-10 rounded-full mr-3";
+                    />;
+                    <div>;
+                      <p className="text-white font-medium">{featuredPosts[0].author.name}</p>;
+                      <p className="text-sm text-zion-slate-light">;
+                        {featuredPosts[0].publishedDate}  {featuredPosts[0].readTime}
+                      </p>;
+                    </div>;
+                  </div>;
+                  <Button ;
+                    asChild;
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit";
+                  >;
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       Read Article;
                     </Link>;
                   </Button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
+=======
+            </div>;
+          )}
+        ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+<<<<<<< HEAD
 
+=======
+                <Input;
+                  type="text";
+                  placeholder="Search articles...";
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+                />;
+              </div>;
+              ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                   <SelectValue placeholder="Select Category" />;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+<<<<<<< HEAD
 
+=======
+                  {CATEGORIES.map((category) => (;
+                    <SelectItem key={category} value={category} className="text-white">;                      {category}
+                    </SelectItem>;
+                  ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
                     >;
                       <Link to={`/blog/${post.slug}`}>;
@@ -315,6 +382,70 @@ export default function Blog() {;
                     </Button>;
                   </CardFooter>;
 
+=======
+;
+          {/* Blog Posts Grid */}
+          {filteredPosts.length > 0 ? (;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {filteredPosts.map((post) => (;
+                <Card ;
+                  key={post.id} ;
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300";
+                >;
+                  <div className="aspect-[16/9] relative overflow-hidden">;
+                    <img ;
+                      src={post.featuredImage} ;
+                      alt={post.title} ;
+                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
+                    />;
+                  </div>;
+                  <CardContent className="p-6">;
+                    <div className="flex items-center justify-between mb-3">;
+                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">;                        {post.category}
+                      </span>;
+                      <div className="text-xs text-zion-slate-light">;
+                        {post.publishedDate}  {post.readTime}
+                      </div>;
+                    </div>;
+                    <h3 className="text-xl font-bold text-white mb-3">;
+                      {post.title}
+                    </h3>;
+                    <p className="text-zion-slate-light mb-4 line-clamp-3">;
+                      {post.excerpt}
+                    </p>;
+                    <div className="flex items-center">;
+                      <img ;
+                        src={post.author.avatarUrl} ;
+                        alt={post.author.name} ;
+                        className="w-8 h-8 rounded-full mr-2";
+                      />;
+                      <span className="text-sm text-white">{post.author.name}</span>;
+                    </div>;
+                  </CardContent>;
+                  <CardFooter className="p-6 pt-0">;
+                    <Button ;
+                      variant="link" ;
+                      className="text-zion-cyan p-0 hover:text-zion-purple";
+                      asChild;
+                    >;
+                      <Link to={`/blog/${post.slug}`}>;
+                        Read More ;
+                      </Link>;
+                    </Button>;
+                  </CardFooter>;
+                </Card>;
+              ))}
+            </div>;
+          ) :(;
+            <div className="text-center py-16">;
+              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
+              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
+              <Button ;
+                variant="outline" ;
+                onClick={() => {;
+                  setSearchQuery(""),;
+                  setSelectedCategory("All Categories"),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
@@ -326,5 +457,92 @@ export default function Blog() {;
       </div>;
       <Footer />;
     </>;
+<<<<<<< HEAD
 
+=======
+  ),; }];
+//Categories for filtering "All Categories";
+"Trends";
+"Marketing";
+"Sustainability";
+"Ethics";
+"Recruitment";
+"Infrastructure" ];
+export default function Blog () {
+  const [searchQuery, setSearchQuery] = useState ("");
+const [selectedCategory, setSelectedCategory] = useState ("All Categories");
+Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https://app.ziontechgroup.com/blog" /> <Header /> <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <div className="container mx-auto"> <div className="text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Expert perspectives on artificial intelligence, tech innovation, and digital transformation </p> </div> {
+  /* Featured Post Section - Only show if there are featured posts */ 
+}{
+  featuredPosts.length > 0 && (<div className="mb-16"> <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> <div className="aspect-video overflow-hidden rounded-lg"> <img src= {
+  featuredPosts[0].featuredImage 
+}alt= {
+  featuredPosts[0].title 
+}className="object-cover w-full h-full hover:scale-105 transition-transform duration-300" /> </div> <div className="flex flex-col justify-center"> <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
+  featuredPosts[0].category 
+}</span> <h3 className="text-3xl font-bold text-white mb-4"> {
+  featuredPosts[0].title 
+}</h3> <p className="text-zion-slate-light mb-6"> {
+  featuredPosts[0].excerpt 
+}</p> <div className="flex items-center mb-6"> <img src= {
+  featuredPosts[0].author.avatarUrl 
+}alt= {
+  featuredPosts[0].author.name 
+}className="w-10 h-10 rounded-full mr-3" /> <div> <p className="text-white font-medium"> {
+  featuredPosts[0].author.name 
+}</p> <p className="text-sm text-zion-slate-light"> {
+  featuredPosts[0].publishedDate 
+} {
+  featuredPosts[0].readTime 
+}</p> </div> </div> <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit" > <Link to= {
+  `/blog/$ {
+  featuredPosts[0].slug 
+}` 
+}> Read Article </Link> </Button> </div> </div> </div>) 
+}{
+  /* Filters and Search */ 
+}<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {
+  CATEGORIES.map ( (category) => (<SelectItem key= {
+  category 
+}value= {
+  category 
+}className="text-white"> {
+  category 
+}</SelectItem>) ) 
+}</SelectContent> </Select> </div> </div> {
+  /* Blog Posts Grid */ 
+}{
+  filteredPosts.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
+  filteredPosts.map ( (post) => (<Card key= {
+  post.id 
+}className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300" > <div className="aspect-[16/9] relative overflow-hidden"> <img src= {
+  post.featuredImage 
+}alt= {
+  post.title 
+}className="object-cover w-full h-full hover:scale-105 transition-transform duration-300" /> </div> <CardContent className="p-6"> <div className="flex items-center justify-between mb-3"> <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
+  post.category 
+}</span> <div className="text-xs text-zion-slate-light"> {
+  post.publishedDate 
+} {
+  post.readTime 
+}</div> </div> <h3 className="text-xl font-bold text-white mb-3"> {
+  post.title 
+}</h3> <p className="text-zion-slate-light mb-4 line-clamp-3"> {
+  post.excerpt 
+}</p> <div className="flex items-center"> <img src= {
+  post.author.avatarUrl 
+}alt= {
+  post.author.name 
+}className="w-8 h-8 rounded-full mr-2" /> <span className="text-sm text-white"> {
+  post.author.name 
+}</span> </div> </CardContent> <CardFooter className="p-6 pt-0" > <Button variant="link" className="text-zion-cyan p-0 hover:text-zion-purple" asChild > <Link to= {
+  `/blog/$ {
+  post.slug 
+}` 
+}> Read More  </Link> </Button> </CardFooter> </Card>) ) 
+}</div>) : (<div className="text-center py-16"> <h3 className="text-xl font-bold text-white mb-2">No articles found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your search or filter criteria</p> <Button 
+}
+}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
+}</div> </div> <Footer /> </>) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

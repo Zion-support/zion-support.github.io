@@ -1,26 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ok: true,
-    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
-  };
-
-
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
+};
 
   };
 }
-=======
-
-
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
@@ -64,14 +62,9 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 <<<<<<< HEAD
 =======
 
-
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -135,6 +128,8 @@ export function buildPressRelease(
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   type: PressReleaseType
 ;
   // Check condition
@@ -146,7 +141,6 @@ if (return [...base, ...web3Extras]) {
 export function buildPressRelease (
   type: PressReleaseType,
   params: {
-<<<<<<< HEAD
   type: PressReleaseType,
   params: {;
   type: PressReleaseType
@@ -159,6 +153,7 @@ if (return [...base, ...web3Extras]) {
 ;
 export function buildPressRelease (
   type: PressReleaseType,
+<<<<<<< HEAD
   params: {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -174,10 +169,14 @@ export function buildPressRelease(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     date: string;
+=======
+  params: {    date: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     raiseAmount?: string;
     tokenName?: string;
     anchors?: string[];
   }
+<<<<<<< HEAD
 ): string {
 <<<<<<< HEAD
 =======
@@ -205,6 +204,9 @@ export function buildTimeline(startDate: Date) {
   const fmt = (d: Date) => d.toISOString().substring(0, 10);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return [
+=======
+): string {  return [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
     {
@@ -214,20 +216,21 @@ export function buildTimeline(startDate: Date) {
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 function titleCase(s: string) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -256,6 +259,9 @@ function titleCase(s: string) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+function titleCase(s: string) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
@@ -293,6 +299,7 @@ function title_case() {
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -308,3 +315,5 @@ function title_case() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

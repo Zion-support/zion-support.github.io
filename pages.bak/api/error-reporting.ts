@@ -24,6 +24,7 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     // 2. Store in database for analysis
     // 3. Send alerts for critical errors
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages.bak/api/error-reporting.ts.backup
     res.status(200).json({ "message": 'Error reported successfully' })} catch (error) {
     console.error('Error processing error "report": ', error);
@@ -72,3 +73,5 @@ import type { NextApiRequest,NextApiResponse } from 'next'; interface ErrorRepor
 =======
 >>>>>>> main:pages.bak/api/error-reporting.ts.backup
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

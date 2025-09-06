@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -22,6 +23,8 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Alternative data analysis',
       'Machine learning models',
       'Real - time scoring',
@@ -35,11 +38,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     icon: '💳',
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
@@ -94,12 +100,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 =======
     icon: '💳',
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -140,6 +149,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4 && 4.8,
     reviews: 45,
   },
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
 =======
@@ -609,10 +619,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true;
+=======
+  {    realImplementation: true;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -629,13 +643,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -677,8 +693,8 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     name: 'AI-Powered Credit Risk Assessment',;
     tagline: 'Intelligent credit scoring with alternative data analysis',;
     price: '$1,199',;
-    period: '/month',;
-    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',;
+    period: '/month',,
+  description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',;
     features: [;
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',;
       'Performance analyticsRegulatory compliance';
@@ -706,10 +722,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -718,6 +730,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89;
     rating: 4.5,
     reviews: 52;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1009,3 +1022,10 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }];
+;
+  }
+];  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

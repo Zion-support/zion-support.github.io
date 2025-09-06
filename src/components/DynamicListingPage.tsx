@@ -20,6 +20,7 @@ export function DynamicListingPage({
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
+<<<<<<< HEAD
 
 
   },
@@ -50,11 +51,14 @@ import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
+<<<<<<< HEAD
   SelectItem} from "@/components/ui/select",
 import { Checkbox } from "@/components/ui/checkbox",
 import Skeleton from "react-loading-skeleton",
@@ -66,6 +70,8 @@ import { toast } from "@/hooks/use-toast",
 import { captureException } from "@/utils/sentry",
 interface PriceRange {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   min: number,
   max: number
 import { useState, useEffect } from "react",;
@@ -92,6 +98,7 @@ import { captureException } from "@/utils/sentry",;
 interface PriceRange {;
   min: number,;
   max: number;
+<<<<<<< HEAD
 }
 ;
 interface DynamicListingPageProps {;
@@ -193,28 +200,55 @@ function DynamicListingPage() {
     // Check condition
 if ( {) {
   $2
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-      const max = Math.max (...listingsWithPrice.map (l => l.price || 0));
-      setPriceRange ({ min: 0, max });
-      setCurrentPriceFilter ([0, max]) }
-  }, [all_listings]);
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
-    [number, number];
-  >([0, initial_price.max]);
-  const handleSliderChange = (values: number[]) =>: any {
-    const [min, max] = values.map (Number);
-    if (|| isNaN (max)) return) {
-  $2
+;
+interface DynamicListingPageProps {;
+  title: string,,
+  description: string,;
+  categorySlug: string,;
+  listings: ProductListing[],;
+  categoryFilters: { label: string, value: string }[],;
+  initialPrice?: PriceRange,;
+  /**;
+   * Base path for listing detail pages. Defaults to `/marketplace/listing`.;
+   */;
+  detailBasePath?: string;
 }
-    setCurrentPriceFilter ([min, max]);
+
+export function DynamicListingPage({
+  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
+  const router = useRouter(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev =>
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    )  // Swap icons to match action
+  const ToggleViewIcon = isGrid ? (
+    <List className='h-4 w-4' />
+  ) : (
+
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
+
+    setCurrentPriceFilter([min, max])
   }
-  let filtered_listings: ProductListing[] = [];
+  },
+  const clearCategories = () => setSelectedCategories([]),
+  const [view, setView] = useState<ListingView>("grid"),
+  const isGrid = view === "grid",
+  // Swap icons to match action
+  const ToggleViewIcon = isGrid ? (
+    <List className='h-4 w-4' />
+  ) : (
+    setCurrentPriceFilter([min, max])
+  }
+  let filteredListings: ProductListing[] = []
   try {
-
-
-    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
-
-    <LayoutGrid className="h-4 w-4" />
+    filteredListings = allListings.filter(listing => {      const matchesSearch = null;    <LayoutGrid className="h-4 w-4" />
   ),
   const [isLoading, setIsLoading] = useState(false),
   const [priceRange, setPriceRange] = useState<PriceRange>({
@@ -255,6 +289,7 @@ if ( {) {
   let filteredListings: ProductListing[] = [],
   try {
     filteredListings = allListings.filter((listing) => {
+<<<<<<< HEAD
       const matchesSearch =
 <<<<<<< HEAD
 =======
@@ -502,6 +537,10 @@ export function DynamicListingPage({;
             new Date(b.createdAt).getTime() -;
             new Date(a.createdAt).getTime();
           );
+=======
+      const matchesSearch =          return (
+            new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     });
   } catch (error) {;
@@ -509,6 +548,7 @@ export function DynamicListingPage({;
     logErrorToProduction('Listing filter error:', { data: error });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
@@ -526,17 +566,34 @@ export function DynamicListingPage({;
 
 
   const handleRequestQuote = (listingId: string) => {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
-
 
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
           description: `Your quote request for ${listing.title} has been sent.`
         })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        router.push ('/request - quote');
+
+      }
+    }, 500);
+  }
+    const listing = allListings.find((item) => item.id === listingId),
+
+    setTimeout(() => {
+      setIsLoading(false),
+      if (listing) {
+        toast({
+          title: "Quote Requested",
+          description: `Your quote request for ${listing.title} has been sent.`}),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug,
@@ -558,35 +615,11 @@ export function DynamicListingPage({;
             category: listing.category
             image: listing.images?.[0]
           }
-  const handleRequestQuote = (listing_id: string) =>: any {
-    setIsLoading (true);
-    const listing = all_listings.find (item => item.id === listing_id);
-    set_timeout (() => {
-      setIsLoading (false);      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: 'Quote Requested',
-          description: `Your quote request for ${listing.title} has been sent.`,
-        });
-        // Store quote data in session_storage for the request - quote page;
-        const quote_data = {
-          service_type: category_slug,
-          specific_item: {
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
-            image: listing.images?.[0],
-          },
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          session_storage.set_item ('quoteRequestData', JSON.stringify (quote_data));
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { useState, useEffect } from 'react';
@@ -769,6 +802,18 @@ export function DynamicListingPage(): any ({;
 
   return (
 <<<<<<< HEAD
+=======
+        router.push('/request-quote')
+      }
+    }, 500)
+  }
+        router.push("/request-quote")
+      }
+    }, 500)
+  },
+
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="min-h-screen bg-zion-blue py-12 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
@@ -777,11 +822,14 @@ export function DynamicListingPage(): any ({;
             {description}
           </p>
         </div>
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
@@ -791,6 +839,7 @@ export function DynamicListingPage(): any ({;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+<<<<<<< HEAD
                   Categories
                 </label>
                 <div className="space-y-2">
@@ -817,6 +866,13 @@ export function DynamicListingPage(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+                  Categories
+                </label>
+                <div className='space-y-2'>
+                  {categoryFilters.map(filter => (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true),;
     const listing = allListings.find((item) => item.id === listingId),;
@@ -824,8 +880,8 @@ export function DynamicListingPage(): any ({;
       setIsLoading(false),;
       if (listing) {;
         toast({;
-          title: "Quote Requested",;
-          description: `Your quote request for ${listing.title} has been sent.`}),;
+          title: "Quote Requested",,
+  description: `Your quote request for ${listing.title} has been sent.`}),;
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {;
           serviceType: categorySlug,;
@@ -874,11 +930,16 @@ export function DynamicListingPage(): any ({;
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
+<<<<<<< HEAD
 
 
                         {filter.label}
                       </label>;
                     </div>;
+=======
+                      </label>
+                    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   ))}
                 </div>
               </div>
@@ -897,8 +958,11 @@ export function DynamicListingPage(): any ({;
                           className='text-white'>                          {b || 'N/A'}
                         </SelectItem>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value)}
                   >
@@ -919,19 +983,29 @@ export function DynamicListingPage(): any ({;
                 </div>;
               )}
 
+<<<<<<< HEAD
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Specifications
                 </label>
+=======
+              <div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  Specifications;
+                </label>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Input
 <<<<<<< HEAD
                   type="text"
                   placeholder="Search specifications..."
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   value={specQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e.target.value);
@@ -939,17 +1013,21 @@ export function DynamicListingPage(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
               </div>
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Availability
                   </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
@@ -970,6 +1048,8 @@ export function DynamicListingPage(): any ({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
@@ -987,10 +1067,11 @@ export function DynamicListingPage(): any ({;
                           {a || 'N/A'}
                         </SelectItem>;
                       ))}
-                    </SelectContent>;
-                  </Select>;
-                </div>;
+                    </SelectContent>
+                  </Select>
+                </div>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1001,10 +1082,13 @@ export function DynamicListingPage(): any ({;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
                   <Slider
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1068,6 +1152,14 @@ export function DynamicListingPage(): any ({;
                         logInfo('Rating selected:', { data: rating });
                         setSelectedRating(rating);                      }}
 
+=======
+                    defaultValue={[0, priceRange.max]}
+                    min={0}
+                    max={priceRange.max}
+                    step={priceRange.max / 100}                    value={currentPriceFilter}
+                    onValueChange={handleSliderChange}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       aria-pressed = {selectedRating === rating,}
                       className={`{;
                         selectedRating === rating;
@@ -1084,6 +1176,7 @@ export function DynamicListingPage(): any ({;
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               <div className="mb-6">
@@ -1106,6 +1199,8 @@ export function DynamicListingPage(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       className={`{
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light"
@@ -1128,8 +1223,9 @@ export function DynamicListingPage(): any ({;
                           <span className="ml-1">& Up</span>
                         </div>
                       )}
-                    </Button>;
+                    </Button>
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
               </div>
@@ -1143,6 +1239,14 @@ export function DynamicListingPage(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   logInfo("Clearing filters"),
+=======
+                </div>
+              </div>
+              <Button
+                variant="outline"
+                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
+                onClick={() => {                  logInfo("Clearing filters"),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   setSearchQuery(""),
                   clearCategories(),
                   setCurrentPriceFilter([0, priceRange.max]),
@@ -1150,11 +1254,16 @@ export function DynamicListingPage(): any ({;
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }}
               >
                 Clear All
               </Button>
             </div>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
 =======
@@ -1479,6 +1588,9 @@ export function DynamicListingPage(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     variant="outline"
+=======
+          </div>                    variant="outline"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     size="icon"
                     onClick={() => setView(isGrid ? "list" : "grid")}
                     aria-label={isGrid ? "List view" : "Grid view"}
@@ -1496,8 +1608,8 @@ export function DynamicListingPage(): any ({;
             </div>
 =======
 
-
                     {ToggleViewIcon}
+<<<<<<< HEAD
                     <span className='sr-only'>;
                       {isGrid ? 'List view' : 'Grid view'}
 
@@ -1506,12 +1618,23 @@ export function DynamicListingPage(): any ({;
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
+=======
+                    <span className="sr-only">
+                      {isGrid ? "List view" : "Grid view"}
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
+<<<<<<< HEAD
 
             {isLoading ? (
 <<<<<<< HEAD
@@ -1708,11 +1831,15 @@ export function DynamicListingPage(): any ({;
                 </Button>;
               </div>;
             )}
+=======
+            {isLoading ? (            )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1935,4 +2062,7 @@ setSelectedRating (null);
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;

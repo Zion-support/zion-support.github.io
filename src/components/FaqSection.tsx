@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
@@ -11,14 +12,22 @@ import {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const FaqSection = () => {
+=======
+const FaqSection: React.FC = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       question: "What services does Zion Tech offer?",
       answer: "We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow."
@@ -46,28 +55,38 @@ const FaqSection = () => {
 =======
       question: 'What services does Zion Tech offer?',
       answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.',
+=======
+      question: "What services does Zion Tech Group offer?",
+      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in cutting-edge technologies to help businesses modernize and scale."
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
     {
-      question: 'How long does implementation take?',
-      answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation.',
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed timelines during our initial consultation."
     },
     {
-      question: 'Do you provide ongoing support?',
-      answer: 'Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance.',
+      question: "Do you provide ongoing support after implementation?",
+      answer: "Yes, we offer 24/7 support and maintenance services. Our support packages include monitoring, updates, troubleshooting, and optimization to ensure your systems run smoothly and efficiently."
     },
     {
-      question: 'What makes Zion Tech different?',
-      answer: 'We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries.',
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, and government. Our solutions are tailored to meet the specific needs and compliance requirements of each industry."
     },
     {
-      question: 'Do you work with small businesses?',
-      answer: 'Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to fit any budget and requirement.',
+      question: "How do you ensure data security and compliance?",
+      answer: "We implement enterprise-grade security measures including encryption, access controls, regular audits, and compliance with industry standards like SOC 2, HIPAA, and GDPR. Security is our top priority in every solution we deliver."
     },
     {
+<<<<<<< HEAD
       question: 'How do you ensure data security?',
       answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data.',
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      question: "What makes Zion Tech Group different from competitors?",
+      answer: "Our combination of cutting-edge technology expertise, proven methodology, 24/7 support, and commitment to client success sets us apart. We focus on delivering measurable ROI and long-term partnerships rather than just technical implementations."
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ];
 
   const toggleFaq = (index: number) => {
@@ -75,44 +94,72 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
-        <p className="text-xl text-gray-600 text-center mb-12">
-          Find answers to common questions about our services and processes.
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-xl text-gray-600">
+            Find answers to common questions about our services and processes.
+          </p>
+        </div>
+
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-200"
+            >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
                 onClick={() => toggleFaq(index)}
               >
-                <span className="text-lg font-semibold">{faq.question}</span>
-                <svg
-                  className={`w-5 h-5 transform transition-transform ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <span className="text-lg font-semibold text-gray-900 pr-4">
+                  {faq.question}
+                </span>
+                <div className="flex-shrink-0">
+                  {openIndex === index ? (
+                    <ChevronUp className="w-6 h-6 text-blue-600" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-gray-500" />
+                  )}
+                </div>
               </button>
+              
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               )}
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="bg-blue-50 rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+              Still Have Questions?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Our team is here to help. Contact us for personalized answers to your specific questions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Contact Us
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                Schedule a Call
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
+<<<<<<< HEAD
 export default FaqSection;
 <<<<<<< HEAD
 =======
@@ -816,3 +863,6 @@ export default FaqSection;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+export default FaqSection;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

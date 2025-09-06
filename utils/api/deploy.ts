@@ -1,17 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface DeployConfig {
   instanceName: string;
   governanceMode: string;
   tokenActivation: boolean;
   modules: {
     token: boolean;
-    [key: string]: boolean;
-  };
+    [key: string]: boolean
+};
 }
 
 export interface DeployResult {
@@ -50,6 +53,7 @@ export async function deployInstance(config: DeployConfig): Promise<DeployResult
       message: error instanceof Error ? error.message : 'Deployment failed'
     };
   }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -110,11 +114,18 @@ function toSlug(name: string): string {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}    .toLowerCase();
+    .replace(/[^a-z0-9]+/g, "-");
+    .replace(/(^-|-$)+/g, "");
+    .slice(0, 64);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+<<<<<<< HEAD
 
 =======
   } catch (error) {
@@ -238,6 +249,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -255,7 +268,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
       daoConfigPath,;
       JSON.stringify(;
-<<<<<<< HEAD
         {treasury: `${instanceSlug}-treasury`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           governanceMode: input.governanceMode;
@@ -272,6 +284,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       );
     );
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
+<<<<<<< HEAD
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
 <<<<<<< HEAD
   }
@@ -295,6 +308,9 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
@@ -310,7 +326,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
       tokenConfigPath,;
       JSON.stringify(;
-<<<<<<< HEAD
         {symbol: "ZION$";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           decimals: 18;
@@ -327,6 +342,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       );
     );
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
+<<<<<<< HEAD
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
 <<<<<<< HEAD
   }
@@ -351,6 +367,9 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 
@@ -389,6 +408,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
+<<<<<<< HEAD
     writeTextFile(;
 <<<<<<< HEAD
 =======
@@ -615,6 +635,9 @@ if ( {) {
 <<<<<<< HEAD
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
+=======
+    writeTextFile(;    ensureDir(docsDir);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     writeTextFile(;
       bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
@@ -644,7 +667,6 @@ if ( {) {
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
 
-
   writeTextFile(;
 
     summitEventPath,;
@@ -669,6 +691,7 @@ if ( {) {
     );
   ),;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       changelogPath;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
@@ -1318,3 +1341,7 @@ if ( {) {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

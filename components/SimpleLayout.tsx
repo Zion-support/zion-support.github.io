@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -47,6 +48,11 @@ interface SimpleLayoutProps {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { ReactNode } from "react";
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export default /**
  * SimpleLayout - Function description
@@ -58,6 +64,7 @@ function SimpleLayout() {,
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {children};
@@ -73,6 +80,11 @@ function SimpleLayout() {,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import React, { ReactNode } from "react";
+=======
+=======
+import React, { ReactNode } from 'react';
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 interface SimpleLayoutProps {
   children: ReactNode;
@@ -93,4 +105,11 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -6,6 +6,7 @@ import { SearchSuggestion } from '@/types/search';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
@@ -105,6 +106,8 @@ import { SearchSuggestion } from "@/types/search",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -224,170 +227,17 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 36,
     featured: true,
-<<<<<<< HEAD
     location: "Global",
 
-<<<<<<< HEAD
     location: "Global",
-
-=======
-    location: 'Global',
-    availability: 'Immediate',
-    aiScore: 94,;
-  },];      name: "VisionTech AI";
-      id: "visiontech";
-      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"};
-    images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"];
-    createdAt: "2023-12-10T16:45:00.000Z";
-    rating: 4.8;
-    reviewCount: 36;
-    featured: true;
-    location: "Global";
     location: "Global",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    availability: "Immediate",
-    aiScore: 94
-  }
-],
-
-// Generate search suggestions based on existing listings
-export const generateSearchSuggestions = (): SearchSuggestion[] => {
-  const suggestions = [
-    'AI models',
-    'GPT integration',
-    'Machine learning',
-    'Computer vision',
-    'Speech recognition',
-    'Data analysis',
-    'Content generation',
-    'Code assistant',
-    'Virtual assistant',
-    'Enterprise AI solutions',;
-  ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    type: 'product', // Use a valid type from the SearchSuggestion interface
-  }));};  ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    "AI models",
-    "GPT integration",
-    "Machine learning",
-    "Computer vision",
-    "Speech recognition",
-    "Data analysis",
-    "Content generation",
-    "Code assistant",
-    "Virtual assistant",
-    "Enterprise AI solutions"
-  ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
-=======
-}
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
-  const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  ].sort();
-  const locations = [
-    ...new Set(
-      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
-    ),
-  ].sort();
-  const availability = [
-    ...new Set(
-      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.availability).filter(Boolean)
-    ),
-  ].sort();
-
-    productTypes: productTypes && productTypes.map(type => ({
-      label: type,
-      value: type,
-    })),
-    locations: locations && locations.map(location => ({
-      label: location,
-      value: location,
-    })),
-    availabilityOptions: availability && availability.map(item => ({
-      label: item,
-      value: item,
-    })),
-    ratingOptions: [1, 2, 3, 4, 5],
-  };
-};
-
-export const MAX_PRICE = Math && Math.max(
-  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
-);
-export const MIN_PRICE = Math && Math.min(
-  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-);
-reviewCount: 58;
-featured: true;
-location: "Global";
-availability: "Immediate";
-reviewCount: 18;
-featured: true;
-location: "Global";
-availability: "2-3 Weeks";
-reviewCount: 36;
-featured: true;
-location: "Global";
-availability: "Immediate";
-aiScore: 94
-}];
-//Generate search suggestions based on existing listings ];
-  return {
-ratingOptions: [1, 2, 3, 4, 5]
-};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
-export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
-
-=======
-},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-// Generate filter options for sidebar
-export const generateFilterOptions = () => {
-  // Extract unique categories, locations, and availability options from listings
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
     images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
     created_at: "2023 - 12 - 10T16:45:00.000Z";
@@ -441,6 +291,7 @@ export const generateFilterOptions = () =>: any {
       MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean)),
   ].sort ();
 ;
+<<<<<<< HEAD
     product_types: product_types.map (type => ({
 <<<<<<< HEAD
 =======
@@ -521,6 +372,9 @@ ai_score: 98;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 rating: 4.8;
+=======
+    product_types: product_types.map (type => ({rating: 4.8;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 review_count: 32;
 location: "North America";
 availability: "4 - 6 Weeks";
@@ -565,6 +419,7 @@ availability_options: availability.map (item => ({
 }) );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 rating_options: [1, 2, 3, 4, 5];
@@ -588,6 +443,10 @@ ratingOptions: [1, 2, 3, 4, 5]
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -595,8 +454,8 @@ import { SearchSuggestion } from "@/types/search",;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   {;
     id: "ai-model-1",;
-    title: "GPT-4 API Integration Package",;
-    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",;
+    title: "GPT-4 API Integration Package",,
+  description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",;
     category: "AI Models & APIs",;
     price: 1999,;
     currency: "$",;
@@ -616,8 +475,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   },;
   {;
     id: "ai-service-2",;
-    title: "Custom Machine Learning Model Development",;
-    description: "End-to-end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.",;
+    title: "Custom Machine Learning Model Development",,
+  description: "End-to-end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.",;
     category: "Services",;
     price: 5999,;
     currency: "$",;
@@ -636,8 +495,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   },;
   {;
     id: "ai-equipment-3",;
-    title: "AI Workstation Supercomputer",;
-    description: "High-performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre-installed ML frameworks.",;
+    title: "AI Workstation Supercomputer",,
+  description: "High-performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre-installed ML frameworks.",;
     category: "Equipment",;
     price: 12999,;
     currency: "$",;
@@ -656,8 +515,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   },;
   {;
     id: "ai-content-4",;
-    title: "AI Content Generation Suite",;
-    description: "Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user-friendly interface.",;
+    title: "AI Content Generation Suite",,
+  description: "Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user-friendly interface.",;
     category: "Content Creation",;
     price: 399,;
     currency: "$",;
@@ -676,8 +535,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   },;
   {;
     id: "ai-analytics-5",;
-    title: "AI-Powered Business Intelligence Dashboard",;
-    description: "Comprehensive analytics solution with AI-driven insights, predictive capabilities, and customizable visualization tools for data-driven decision making.",;
+    title: "AI-Powered Business Intelligence Dashboard",,
+  description: "Comprehensive analytics solution with AI-driven insights, predictive capabilities, and customizable visualization tools for data-driven decision making.",;
     category: "Data Analysis",;
     price: 2499,;
     currency: "$",;
@@ -695,8 +554,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   },;
   {;
     id: "ai-vision-6",;
-    title: "Computer Vision API Bundle",;
-    description: "Ready-to-use computer vision APIs for object detection, image recognition, facial analysis, and scene understanding with comprehensive documentation.",;
+    title: "Computer Vision API Bundle",,
+  description: "Ready-to-use computer vision APIs for object detection, image recognition, facial analysis, and scene understanding with comprehensive documentation.",;
     category: "Computer Vision",;
     price: 999,;
     currency: "$",;
@@ -762,8 +621,5 @@ export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-<<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

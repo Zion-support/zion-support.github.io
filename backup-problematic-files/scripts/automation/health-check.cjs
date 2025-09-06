@@ -26,7 +26,11 @@ class HealthChecker {}
         fs.appendFileSync(this.logFile, logMessage)};
     async checkSystemHealth() {}
         this.log('Starting health check...');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
@@ -116,7 +120,11 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         this.log(`Health check completed. "Status": ${healthReport.status}`);
         return healthReport};
     async run() {}
@@ -134,5 +142,10 @@ class HealthChecker {}
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = HealthChecker;
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

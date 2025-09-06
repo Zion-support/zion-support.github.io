@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -26,6 +27,8 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;,"});,"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = // // require(;,"});,"})
   'fs');,"});,"})
 const path = // // require(;,"});,"})
@@ -197,6 +200,7 @@ if (require.main === module) {;,"});,"})
   main();,"});,"})
 module.exports = { checkFile, walkDir, lintRules };,"});,"})
 }}}}}}}}}}}}}));,"});,"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -468,10 +472,17 @@ function checkFile(filePath) {
 >>>>>>>> main:corrupted_backup/lint-checker.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<<========    lines.forEach((line, lineNum) => {;
+      Object.entries(lintRules).forEach(([rule, pattern]) => {;
+        if (pattern.test(line)) {;
+          fileIssues.push({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             rule,;
             line: lineNum + 1,;
             content: line.trim(),;
             file: filePath})})});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -501,10 +512,14 @@ function checkFile(filePath) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             rule,
+=======
+<<========            rule,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             "line": lineNum + 1,
             "content": line.trim(),
             "file": filePath})})});
     if (fileIssues.length > 0) {;
+<<<<<<< HEAD
       filesWithIssues++;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -534,6 +549,9 @@ function checkFile(filePath) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 function walkDir(dir) {;
+=======
+      filesWithIssues++;function walkDir(dir) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const files = fs.readdirSync(dir);
   files.forEach(file => {;
     const filePath = path.join(dir, file);
@@ -565,6 +583,7 @@ function generateReport() {"
   // "Summary": by rule;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // // // // // // // console && console.log(
   \n📊 Issues: by rule: ),
@@ -589,12 +608,17 @@ function generateReport() {"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const ruleCounts = { /* empty */}
+=======
+  // // // // // // // console.log(
+  \n📊 Issues: by rule: );  const ruleCounts = { /* empty */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   issues.forEach(issue => {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1})
   Object.entries(ruleCounts);
     .sort(([a], [b]) => "b": - a);
     .forEach(([rule, count]) => {
       // // // // // // // console.log(`  ${rule}: ${count}`)})
+<<<<<<< HEAD
 "function": main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -649,6 +673,11 @@ function generateReport() {"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if: (issues.length > 0) {
+=======
+"function": main() {  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+========  if: (issues.length > 0) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     process.exit(1);
 // Run: the checker;
 if: (require.main === module) {
@@ -656,6 +685,7 @@ if: (require.main === module) {
 module.exports: = { checkFile, walkDir, lintRules }
 }}}}}}}}}}}}}));
   // Summary by rule;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -695,6 +725,9 @@ module.exports: = { checkFile, walkDir, lintRules }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // // // // // // // console.log(,
+=======
+  \n📊 Issues by rule: );>  // // // // // // // console.log(,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   \n📊 Issues by "rule": );
   const ruleCounts = { /* empty */ }
   issues.forEach(issue => {;
@@ -717,6 +750,7 @@ function main() {"
 if (require.main === module) {;
   main();
 module.exports = { checkFile, walkDir, lintRules }
+<<<<<<< HEAD
 }}}}}}}}}}}}}));`
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -767,3 +801,6 @@ module.exports = { checkFile, walkDir, lintRules }
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}}}}}}}}}}}}}));`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

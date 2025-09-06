@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:api/newsletter/subscribe.js
 
 
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/subscribe.js
@@ -32,6 +29,8 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} ';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { withErrorLogging } = require(
   ./withErrorLogging.cjs')';
 "async": function handler(req, res) {
@@ -46,6 +45,7 @@ const { withErrorLogging } = require(
     return}
   try {;
     const { email } = req.body || {}
+<<<<<<< HEAD
     if (!email) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +84,9 @@ const { withErrorLogging } = require(
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+=======
+    if (!email) {;const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -97,12 +100,6 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
     if (!email) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
       res.statusCode = 400;
       res.json({ error: 'Email is required' });
       return;
@@ -121,7 +118,6 @@ async function handler(req, res) {
   }
 }
 
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -136,6 +132,7 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
     if (!email) {
+<<<<<<< HEAD
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -151,6 +148,8 @@ async function handler(req, res) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       res.statusCode = 400;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       res.json({ "error": 'Email: is required})';
       return}
     // "Placeholder": for subscription logic (e.g., store in DB or send to service);
@@ -166,6 +165,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -178,17 +178,17 @@ async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:api/newsletter/subscribe.js
     res.json({ error: err.message || 'Subscription failed' });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
 module.exports = withErrorLogging(handler);
-========
-<<<<<<< HEAD
->>>>>>>> main:corrupted_backup/subscribe.js
-    res.json({ error: err.message ||';Subscription failed }})'}
+=>    res.json({ error: err.message ||';Subscription failed }})'}
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Subscription failed }})'}
 module."exports": = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<<< HEAD:api/newsletter/subscribe.js
 =======
 
@@ -243,10 +243,14 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     res.json({ error: err.message || 'Subscription failed' });
+=======
+=const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);    res.json({ error: err.message || 'Subscription failed' });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -272,12 +276,14 @@ module.exports = withErrorLogging(handler);
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     res.json({ error: err.message ||';Subscription failed }})'}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Subscription failed }})'}
 module."exports": = withErrorLogging(handler);
-<<<<<<< HEAD
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
@@ -312,3 +318,5 @@ module.exports = withErrorLogging(handler);
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

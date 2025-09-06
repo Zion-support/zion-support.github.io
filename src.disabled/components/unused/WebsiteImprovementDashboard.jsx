@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,15 +20,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 import React from 'react';
 interface WebsiteImprovementDashboardProps {
   // Add props here as needed
-<<<<<<< HEAD
-
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -62,11 +54,15 @@ interface WebsiteImprovementDashboardProps {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function WebsiteImprovementDashboard({ }: WebsiteImprovementDashboardProps) {
+=======
+=======export default function WebsiteImprovementDashboard({ }: WebsiteImprovementDashboardProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div>
       <h1>WebsiteImprovementDashboard</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -109,3 +105,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  );}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

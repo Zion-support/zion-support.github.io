@@ -1,14 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { ProfileSkill } from "@/types/profile";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -42,6 +46,8 @@ interface ProfileSkillsProps {
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -99,6 +105,7 @@ interface ProfileSkillsProps {;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 import { Badge } from "@/components/ui/badge",;
@@ -176,34 +183,45 @@ export /**
  * ProfileSkills - Function description
  */
 function ProfileSkills() {
+=======
+  )
+import { Badge } from "@/components/ui/badge",;
+import { ProfileSkill } from "@/types/profile";
+
+import {Badge} from "@/components/ui/badge";
+import {ProfileSkill} from "@/types/profile";
+interface ProfileSkillsProps {;
+  skills: ProfileSkill[];
+}
+
+export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
-    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
-      <h3 className="text - xl font - bold text - white mb - 4">Skills</h3>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-        {skills.map ((skill, index) => (
-          <div key={index} className="flex flex - col">;
-            <div className="flex justify - between items - center mb - 1">;
-              <span className="text - zion - slate - light">{skill.name}</span>;
-              {skill.endorsements && (
-                <span className="text - sm text - zion - slate">;
-                  {skill.endorsements} endorsements;
-                </span>)}
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
+      <h3 className="text-xl font-bold text-white mb-4">Skills</h3>;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+        {skills && skills.map((skill, index) => (;
+          <div key={index} className="flex flex-col">;
+            <div className="flex justify-between items-center mb-1">;
+              <span className="text-zion-slate-light">{skill && skill.name}</span>;
+              {skill && skill.endorsements && (;
+                <span className="text-sm text-zion-slate">;
+                  {skill && skill.endorsements} endorsements;
+                </span>;
+              )}
             </div>;
-            <div className="h - 2 w - full bg - zion - blue - light rounded - full overflow - hidden">;
-              <div;
-                className="h - full bg - gradient - to - r from - zion - purple to - zion - cyan";
-                style={{ width: `${(skill.level / 5) * 100}%` }}
+
+            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">;
+              <div
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
+                style={{ width: `${(skill && skill.level / 5) * 100}%` }}
               />;
             </div>;
-          </div>))}
+          </div>;
+        ))}
       </div>;
-    </div>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
+    </div>;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile",;
 ;
@@ -261,5 +279,3 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -34,6 +35,8 @@ import { HELP_CATEGORIES } from "./help-content",
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -43,6 +46,7 @@ import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -97,11 +101,21 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { HELP_CATEGORIES } from "./help-content";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
   searchQuery: string;
 }
+<<<<<<< HEAD
 
 export function HelpArticleList({
   categoryId,
@@ -139,6 +153,13 @@ export function HelpArticleList({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+=======
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
@@ -178,32 +199,6 @@ export function HelpArticleList({
     </div>
   );
 }
-
-=======
-            <Card
-              key={article.id}
-              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-              onClick={() => onArticleSelect(article.id)}
-            >
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">{article.title}</CardTitle>
-                <CardDescription className="text-zion-slate-light text-sm">
-                  Last updated: {formatDate(article.lastUpdated)}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-zion-slate-light truncate">
-                  {article.content.substring(0, 120)}...
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
 
@@ -226,61 +221,16 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
         <h2 className="text-2xl font-bold mb-2">{category && category.name}</h2>;
         <p className="text-zion-slate-light">{category && category.description}</p>;
       </div>;
-<<<<<<< HEAD
 
-      {filteredArticles && filteredArticles.length === 0 ? (;
-=======
-      {filteredArticles && filteredArticles.length === 0 ? (;
-
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { HELP_CATEGORIES } from "./help-content",;
-;
-interface HelpArticleListProps {;
-  categoryId:string,;
-  onArticleSelect:(articleId:string) => void,;
-  searchQuery:string;
-}
-;
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } HelpArticleListProps) {;
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
-  ;
-  if (!category) {;
-    return <div>Category not found</div>,;
-  }
-  ;
-  // Filter articles based on search query;
-  const filteredArticles = searchQuery;
-    ? category.articles.filter(;
-        article =>;
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          article.content.toLowerCase().includes(searchQuery.toLowerCase());
-      );
-    :category.articles,;
-  ;
-  return (;
-    <div>;
-      <div className="mb-6">;
-        <h2 className="text-2xl font-bold mb-2">{category.name}</h2>;
-        <p className="text-zion-slate-light">{category.description}</p>;
-      </div>;
-      ;
-      {filteredArticles.length === 0 ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <div className="text-center py-8">;
+      {filteredArticles && filteredArticles.length === 0 ? (;        <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
           <p className="text-zion-slate-light">;
             Try adjusting your search query or browse another category.;
           </p>;
         </div>;
-<<<<<<< HEAD
       ) : (;
         <div className="space-y-4">;
           {filteredArticles && filteredArticles.map(article => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
             >;
@@ -288,8 +238,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
                 <CardTitle className="text-lg">{article && article.title}</CardTitle>;
                 <CardDescription className="text-zion-slate-light text-sm">;
                   Last updated: {formatDate(article && article.lastUpdated)}
-<<<<<<< HEAD
-=======
       ) :(;
         <div className="space-y-4">;
           {filteredArticles.map(article => (;
@@ -302,37 +250,18 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
                 <CardTitle className="text-lg">{article.title}</CardTitle>;
                 <CardDescription className="text-zion-slate-light text-sm">;
                   Last updated:{formatDate(article.lastUpdated)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                </CardDescription>;
-              </CardHeader>;
-              <CardContent>;
-                <p className="text-sm text-zion-slate-light truncate">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  {article && article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
             </Card>;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
 
-
-
-
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
+<<<<<<< HEAD
 <<<<<<< HEAD
     day: "numeric"
 <<<<<<< HEAD
@@ -494,19 +423,15 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
 year: "numeric"
     month: "long"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     day: "numeric"
 
-  });
-}
-
-  });
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
+    </div>;
+  );  })
   })
-  })
+
 <<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
@@ -523,3 +448,5 @@ function formatDate(date: string): string {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

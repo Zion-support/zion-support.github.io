@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -33,6 +34,8 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -45,6 +48,7 @@ import {Navigate} from "react-router-dom";
 export default function WhitelabelManager() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -80,12 +84,15 @@ export default function WhitelabelManager() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
+<<<<<<< HEAD
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
   // Check if user has admin role
@@ -103,12 +110,18 @@ import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelR
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
+=======
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   // Check if user has admin role
 <<<<<<< HEAD
@@ -120,27 +133,11 @@ export default function WhitelabelManager() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized" />
   }
   return (
-    <>
-      <SEO
-        title="White-Label Management - Zion AI Marketplace"
-        description="Create and manage white-label instances of the Zion AI Marketplace platform."
-      />
-      <Header />
-      <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col space-y-6">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">
-              White-Label Management
-            </h1>
-            <p className="text-muted-foreground mt-2">
-              Create and manage branded versions of the platform for agencies,
-              startups, and enterprise clients.
-            </p>
-          </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
 =======
@@ -230,6 +227,8 @@ export default function WhitelabelManager() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -244,6 +243,7 @@ export default function WhitelabelManager() {;
   const [activeTab, setActiveTab] = useState("tenants"),;
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
   }
@@ -341,10 +341,14 @@ export default function WhitelabelManager() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 ;
+=======
+  if (!isAdmin) {;;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
@@ -398,83 +402,17 @@ export default function WhitelabelManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </p>;
                 <table>;
                   <thead>;
                     <tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <th > Record Type</th>;
                       <th > Name</th>;
                       <th > Value</th>;
-                      <th > TTL</th>;
-
-=======
-                      <th>Record Type</th>;
-                      <th>Name</th>;
-                      <th>Value</th>;
-                      <th>TTL</th>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    </tr>;
-                  </thead>;
-                  <tbody>;
-                    <tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                      <td > CNAME</td>;
-                      <td > marketplace</td>;
-                      <td > ziontechmarketplace.com</td>;
-                      <td > 3600</td>;
-                    </tr>;
-                  </tbody>;
-                </table>;
-                <h3 > Email Templates</h3>;
-                <p>;
-                  White - label instances can use customized email templates. You can upload HTML templates;
-                  for the following emails:;
-                </p>;
-                <ul>;
-                  <li > Welcome Email</li>;
-                  <li > Password Reset</li>;
-                  <li > Quote Request</li>;
-                  <li > Invoice</li>;
-                  <li > Receipt</li>;
-                </ul>;
-                <h3 > Admin Access</h3>;
-                <p>;
-                  You can assign tenant administrators who will have access to manage their white - label instance,
-
-=======
-                      <td>CNAME</td>;
-                      <td>marketplace</td>;
-                      <td>ziontechmarketplace.com</td>;
-                      <td>3600</td>;
-                    </tr>;
-                  </tbody>;
-                </table>;
-                <h3>Email Templates</h3>;
-                <p>;
-                  White-label instances can use customized email templates. You can upload HTML templates;
-                  for the following emails:;
-                </p>;
-                <ul>;
-                  <li>Welcome Email</li>;
-                  <li>Password Reset</li>;
-                  <li>Quote Request</li>;
-                  <li>Invoice</li>;
-                  <li>Receipt</li>;
-                </ul>;
-                <h3>Admin Access</h3>;
-                <p>;
-                  You can assign tenant administrators who will have access to manage their white-label instance;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
+                      <th > TTL</th>;                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
                 </p>;
               </div>;
             </TabsContent>;
@@ -488,19 +426,6 @@ export default function WhitelabelManager() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </>);
 }
@@ -521,6 +446,7 @@ including content, users, and analytics. Tenant admins cannot access data from o
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -531,3 +457,6 @@ including content, users, and analytics. Tenant admins cannot access data from o
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

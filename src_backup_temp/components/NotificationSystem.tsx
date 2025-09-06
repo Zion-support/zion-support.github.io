@@ -609,7 +609,7 @@ export ';';
         priority: 'high',
         ...options
       }) }
-  }';
+  }'
 };';';
 '"`
 ;,"});,})";

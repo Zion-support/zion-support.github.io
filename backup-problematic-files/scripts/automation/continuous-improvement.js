@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/automation/continuous-improvement.js
 =======
 <<<<<<< HEAD
@@ -54,10 +55,13 @@ async function runContinuousImprovement() {,"}),"})
     // Check for outdated dependencies,"}),"})
     // // // console && console.log(,"}),"})
   '📦 Checking for outdated dependencies...'),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {,"}),"})
       execSync(,"}),"})
   'npm outdated', { "stdio": 'inherit }),"}),"})
     } catch (error) {,"}),"})
+<<<<<<< HEAD
       // // // console && console.log(,,"}),"})
   ✅ All dependencies are up to date'),"}),"})
     // Generate performance report,"}),"})
@@ -113,10 +117,13 @@ async function runContinuousImprovement() {,"}),"})
     // Check for outdated dependencies,"}),"})
     // // // // // // // console && console.log(,"}),"})
   '📦 Checking for outdated dependencies...'),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {,"}),"})
       execSync(,"}),"})
   'npm outdated', { "stdio": 'inherit }),"}),"})
     } catch (error) {,"}),"})
+<<<<<<< HEAD
       // // // // // // // console && console.log(,,"}),"})
   ✅ All dependencies are up to date'),"}),"})
     }"}),"})
@@ -143,12 +150,15 @@ async function runContinuousImprovement() {,"}),"})
     } catch (error) {,"}),"})
       // // // // // // // console && console.log(,"}),"})
   '⚠️  Bundle analysis failed but continuing...'),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }"}),"})
 ,"}),"})
     // Generate report,"}),"})
   "status": 'completed,"}),"})
 },"}),"})
 ,"}),"})
+<<<<<<< HEAD
     const reportPath = path && path.join(process && process.cwd(),,"}),"})
   'continuous-improvement-report && report.json'),"}),"})
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),"}),"})
@@ -165,20 +175,26 @@ async function runContinuousImprovement() {,"}),"})
     // // // // // // // console && console.error(,"}),"})
   '❌ Continuous improvement "failed":  ,"}),"})
   , error && error.message),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,"}),"})
     // Don,"}),"})
   't exit, just log the error and continue,"}),"})
 // Main continuous loop,"}),"})
 async function runContinuous() {,"}),"})
+<<<<<<< HEAD
   // // // // // // // console && console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
 ,"}),"})
   // // // console && console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Run initial improvement,"}),"})
   await runContinuousImprovement(),"}),"})
   // Set up continuous execution,"}),"})
   setInterval(async () => {,"}),"})
     await runContinuousImprovement(),"}),"})
   }, AUTOMATION_INTERVAL),"}),"})
+<<<<<<< HEAD
   // // // // // // // console && console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
 }"}),"})
 // Handle graceful shutdown,"}),"})
@@ -342,11 +358,14 @@ async function runContinuousImprovement() {
 async: function runContinuous() {
   // // // // // // // console && console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // // // console && console.log(`🚀 "Starting": continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // "Run": initial improvement;
   await: runContinuousImprovement();
   // Set: up continuous execution;
   setInterval(async: () => {
     await runContinuousImprovement()}, AUTOMATION_INTERVAL);
+<<<<<<< HEAD
   // // // // // // // console && console.log(`✅ "Continuous": improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
 process && process.on('SIGINT';', () => {';
@@ -375,17 +394,23 @@ runContinuous().catch(error: => {
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // // // // // console && console.error(',
       '❌ Continuous improvement "failed": error && error.message);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Don;
   "t exit, just log the error and continue;
 // Main continuous loop;
 async function runContinuous() {
+<<<<<<< HEAD
   // // // // // // // console && console.log("🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals");
   // // // console && console.log("🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals");
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Run initial improvement;
   await runContinuousImprovement();
   // Set up continuous execution;
   setInterval(async () => {
     await runContinuousImprovement()}, AUTOMATION_INTERVAL);"
+<<<<<<< HEAD
   // // // // // // // console && console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
 process && process.on("SIGINT;
@@ -412,6 +437,8 @@ process && process.on('SIGTERM', () => {'
 // Start the continuous improvement;
 runContinuous().catch(error => {'
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -728,7 +755,11 @@ async function runContinuousImprovement() {
   '⚠️  Bundle analysis failed but continuing...")  }
     // Generate report;
   "status": "completed}
+<<<<<<< HEAD
   '⚠️  Bundle analysis failed but continuing...')}
+=======
+  '  Bundle analysis failed but continuing...')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Generate report;
   "status": 'completed}
     const reportPath = path && path.join(process && process.cwd(),
@@ -817,6 +848,7 @@ process && process.on('SIGTERM', () => {'
   process && process.exit(0)});
 // Start the continuous improvement;
 runContinuous().catch(error => {'
+<<<<<<< HEAD
   // // // // // // // console.error('❌ Failed to start continuous "improvement": error);
   // // // console.error('❌ Failed to start continuous improvement:', error);
   process.exit(1)})}}}}}}}}
@@ -829,3 +861,5 @@ runContinuous().catch(error => {'
 #!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) ,"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; async function runContinuousImprovement() {,"}),"}) try {,"}),"}) 📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) }"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'continuous-improvement-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed:',error.message),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runContinuousImprovement(),"}),"}) setInterval(async () => {,"}),"}) await runContinuousImprovement(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runContinuousImprovement() { try {',📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync( `npm run lint',{ stdio: 'inherit }) ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...'); '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date'); '📊 Generating performance report...'); try { execSync( 'npm run build',{ stdio: 'inherit }) ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); '📦 Analyzing bundle size...'); try { execSync( 'node scripts/analyze-bundle.js',{ stdio: `inherit }) ✅ Bundle analysis completed`)} catch (error) { `⚠️ Bundle analysis failed but continuing...`); `📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync(','npm run lint',{ stdio: 'inherit }); ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...') } '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date') } '📊 Generating performance report...'); try { execSync(' 'npm run build',{ stdio: 'inherit }); ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...') } '📦 Analyzing bundle size...'); try { execSync(' 'node scripts/analyze-bundle.js',{ stdio: 'inherit }); ✅ Bundle analysis completed')} catch (error) { '⚠️ Bundle analysis failed but continuing...`) } status: `completed} '⚠️ Bundle analysis failed but continuing...')} status: 'completed} ; const reportPath = path.join(process.cwd(),fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed:',error.message)';; '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed: ',error.message); async: function runContinuous() { await: runContinuousImprovement(); setInterval(async: () => { await runContinuousImprovement()},AUTOMATION_INTERVAL); process.on('SIGINT';',() => {'; process.on('SIGINT';',() => {'; process.exit(0)}) process.on('SIGTERM';',() => {'; process.exit(0)}) runContinuous().catch(error: => { fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed:',error.message); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed: error.message); `t exit,just log the error and continue; async function runContinuous() { await runContinuousImprovement(); setInterval(async () => { await runContinuousImprovement()},AUTOMATION_INTERVAL);` process.on(`SIGINT; `,() => { `); process.on(`SIGINT; `,() => { `); process.exit(0)}) process.on('SIGINT',() => {' process.exit(0)}); process.on('SIGTERM',() => {' process.exit(0)}); runContinuous().catch(error => {' process.exit(1)})}}}}}}}}
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

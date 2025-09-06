@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ComprehensiveITService {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -32,11 +35,9 @@ export interface ComprehensiveITService {
     mobile: string;
     email: string;
     address: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -395,17 +396,16 @@ export interface ComprehensiveITService {
   reviews: number
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
-<<<<<<< HEAD
-=======
 
     id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
@@ -442,7 +442,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -485,8 +485,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     name: 'Enterprise IT Infrastructure Management',;
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',;
     price: '$25,999',;
-    period: '/month',;
-    description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',;
+    period: '/month',,
+  description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',;
     features: [;
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management',;
       'Help desk supportStrategic IT consulting';
@@ -526,23 +526,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180;
     rating: 4.9,
     reviews: 156;
-<<<<<<< HEAD
-=======
-
-  }
-
-=======
-
-export interface ComprehensiveITService {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -1207,14 +1191,12 @@ export interface ComprehensiveITService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launchDate: '2024-09-15'
     customers: 180
     rating: 4.9
     reviews: 156
+<<<<<<< HEAD
   }
 =======
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
@@ -1227,6 +1209,9 @@ export interface ComprehensiveITService {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+  }];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1237,6 +1222,7 @@ export interface ComprehensiveITService {;
     customers: 180;
     rating: 4.9
 
+<<<<<<< HEAD
     reviews: 156
 <<<<<<< HEAD
 
@@ -2615,3 +2601,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    reviews: 156
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

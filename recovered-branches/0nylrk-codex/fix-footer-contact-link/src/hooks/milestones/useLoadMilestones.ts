@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -197,6 +197,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -211,6 +213,7 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -230,6 +233,8 @@ if ( {) {
       setIsLoading (false);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return;
     }
     try {
@@ -255,6 +260,7 @@ if (throw milestones_error) {
           .from ('milestone_activities');
           .select (`;
             *;
+<<<<<<< HEAD
             created_by_profile:profiles ! user_id (display_name, avatar_url);
 <<<<<<< HEAD
           `);
@@ -546,3 +552,6 @@ refetch: fetchMilestones
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            created_by_profile:profiles ! user_id (display_name, avatar_url);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

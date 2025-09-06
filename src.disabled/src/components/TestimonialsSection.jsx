@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/components/TestimonialsSection.jsx
 export const TestimonialsSection = () => { const testimonials = [ { \"id\": \'1\',\"name\": \"Sarah Johnson\",\"comp\": \"TechCorp Solutions\",\"role\": \"CTO\",\"content\": \"Zion Tech Group transformed our AI infrastructure completely.Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.\",\"rating\": \'5\',\"avatar\": \"https:}}
 module.exports = const TestimonialsSection = () => { const testimonials = [ { id: "1",name: "Sarah Johnson",comp: "TechCorp Solutions",role: "CTO",content: "Zion Tech Group transformed our AI infrastructure completely.Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.",rating: "5",avatar: "https:}}'"'"
@@ -53,3 +54,6 @@ export const TestimonialsSection = () => { const testimonials = [ { "id": '1',"n
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export const TestimonialsSection = () => { const testimonials = [ { "id": '1',"name": "Sarah Johnson","comp": "TechCorp Solutions","role": "CTO","content": "Zion Tech Group transformed our AI infrastructure completely.Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.","rating": '5',"avatar": "https:}}"]"=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

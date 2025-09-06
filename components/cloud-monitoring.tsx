@@ -92,8 +92,11 @@ export default function CloudMonitoringPage() {
 export default function CloudMonitoringPage() {
   const features = [
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -210,9 +213,12 @@ export default function CloudMonitoringPage() {
       icon: <Activity className='w-8 h-8 text-white' />,
   ];
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -406,7 +412,7 @@ export default function CloudMonitoringPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                 key={index}
-                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
+                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration-300 hover:-translate-y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
               >;
                 <div className="relative">;
@@ -414,10 +420,10 @@ export default function CloudMonitoringPage() {
                     {feature.icon}
                   </div>;
                 </div>;
-                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition - colors duration - 300">;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition-colors duration-300">;
                   {feature.title}
                 </h3>;
-                <p className="text - gray - 400 leading - relaxed">;
+                <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </p>
@@ -522,12 +528,15 @@ export default function CloudMonitoringPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Use Cases
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -667,6 +676,7 @@ export default function CloudMonitoringPage() {
                     {plan.price}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover:border-green-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -681,6 +691,8 @@ export default function CloudMonitoringPage() {
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -718,8 +730,11 @@ export default function CloudMonitoringPage() {
                 </Button>;
               </Card>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </li>
                   ))}
                 </ul>
@@ -810,7 +825,6 @@ export default function CloudMonitoringPage() {
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
 
               </Card>
 
@@ -912,7 +926,6 @@ export default function CloudMonitoringPage() {
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
 
               Watch Demo;
             </Button>;

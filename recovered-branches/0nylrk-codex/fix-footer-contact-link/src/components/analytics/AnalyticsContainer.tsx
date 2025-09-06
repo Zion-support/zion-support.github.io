@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -26,6 +29,7 @@ import { SEO } from "@/components/SEO",
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 interface AnalyticsContainerProps {
   children: React.ReactNode
@@ -89,11 +93,15 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // If still loading auth status, show loading
   if (isLoading) {
+=======
+import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
     )
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 
@@ -391,3 +399,6 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

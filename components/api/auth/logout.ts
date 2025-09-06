@@ -22,32 +22,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 =======
   res.status(200).json({ ok: true })
-<<<<<<< HEAD
-
 
 }
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   res.status(200).json({ ok: true })
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { clearSessionCookie } from '../../../utils / auth - utils';
+}import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
 export default /**
  * handler - Function description
@@ -63,6 +45,7 @@ function handler() {
   res.set_header ('Set - Cookie', cookie);
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -100,3 +83,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

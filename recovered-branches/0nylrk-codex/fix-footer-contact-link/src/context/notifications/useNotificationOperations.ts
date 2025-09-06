@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -12,14 +13,14 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export const useNotificationOperations = (user_id?: string): NotificationContextType => {
   const [notifications, set_notifications] = useState < Notification[]>([]);
   const [loading, set_loading] = useState (false);
@@ -50,6 +51,7 @@ if (throw error) {
       set_loading (false);
     }
 
+<<<<<<< HEAD
 
   const filteredNotifications = notifications && notifications.filter(notification => {
 
@@ -290,6 +292,12 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useCallback } from 'react',;
+=======
+  const filteredNotifications = notifications && notifications.filter(notification => {    loading;
+    filter;
+    markAsRead;
+    markAllAsRead;import { useState, useCallback } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
@@ -377,6 +385,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     filter,;
     markAsRead,;
     markAllAsRead,;
+<<<<<<< HEAD
     dismissNotification,;
 <<<<<<< HEAD
 
@@ -403,10 +412,14 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     dismiss_notification;
+=======
+    dismissNotification,;    dismiss_notification;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     set_filter;
     fetch_notifications}
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -548,3 +561,5 @@ case 'system':
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

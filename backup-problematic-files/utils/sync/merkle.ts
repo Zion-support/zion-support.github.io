@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import crypto from "crypto";
 import { ProposalVoteEntry } from "./types";
 export function sha256Hex(input: string): string {;
@@ -48,3 +49,14 @@ export function verifyMerkleProof(leafData: any, proof: string[], rootHash: stri
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import crypto from 'crypto';
+
+export interface MerkleNode {
+  hash: string;
+  left?: MerkleNode;
+  right?: MerkleNode;
+  data?: any;
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

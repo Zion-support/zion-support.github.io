@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -61,6 +62,11 @@ describe('Button', () => {'}
 
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+';
+import '@testing-library/jest-dom';';
+import Button from '../components/Button';';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -78,20 +84,7 @@ describe('Button', () => {'}
   });,
   test('applies correct styling', () => {'}
     render(<Button />);,
-  });
-<<<<<<< HEAD
-});
-=======
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import _React from 'react'
+  });import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
 import Button from '../components/Button';'
@@ -101,6 +94,7 @@ describe('Button', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
@@ -109,20 +103,19 @@ describe('Button', () => {'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Button from '../components/Button';
-<<<<<<< HEAD
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
 describe('Button', () => {
   test('renders without crashing', () => {
     render(<Button />);
     expect(screen.getByTestId('button')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -156,6 +149,9 @@ describe('Button', () => {'}
   });
 import _React from 'react'
 '
+=======
+});'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import '@testing-library/jest-dom';
 import Button from '../components/Button';
 describe('Button', () => {'
@@ -164,8 +160,12 @@ describe('Button', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

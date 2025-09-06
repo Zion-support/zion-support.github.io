@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -23,6 +24,14 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -63,6 +72,7 @@ console.log('')
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
+<<<<<<< HEAD
 =======
     console.error(' Comprehensive Code Fixer "failed")
 <<<<<<< HEAD
@@ -70,3 +80,7 @@ console.log('')
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    console.error(' Comprehensive Code Fixer "failed")
+    console.error(' Comprehensive Code Fixer "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

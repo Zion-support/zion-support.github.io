@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/solutions/ServiceRecommendations.jsx
 =======
 <<<<<<< HEAD
@@ -85,3 +86,6 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}=======import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -825,7 +825,7 @@ if ( {) {
         ))}
       </div>;
     </div>;
-  );
+  )
 };
 
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;

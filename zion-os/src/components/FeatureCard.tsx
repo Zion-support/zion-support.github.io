@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -50,6 +51,8 @@ export function FeatureCard({;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -62,6 +65,7 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -80,6 +84,9 @@ interface FeatureCardProps {id: number;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+=======
+=======}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export /**
  * FeatureCard - Function description
  */
@@ -95,8 +102,11 @@ function FeatureCard() {
   return (
     <div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className={`card group cursor - pointer transition - all duration - 300 ${
         is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
       } ${color_classes[color as keyof typeof color_classes]}`}
@@ -107,6 +117,7 @@ if ( {) {
   $2
 }
           e.prevent_default ();
+<<<<<<< HEAD
           on_click ();
 =======
       className={`card group cursor-pointer transition-all duration-300 ${isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105';
@@ -180,10 +191,36 @@ export function FeatureCard({;
           href={href}
           className="text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded";
           onClick={(e) => e.stopPropagation()}
+=======
+          on_click ();          e.preventDefault();
+          onClick();
+        }
+      }}
+      tab_index={0}
+      role="button";
+      aria - pressed={is_active}
+      aria - label={`${title} - ${description}`}
+    >;
+      <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration-200">;
+        {icon}
+      </div>;
+      <h3 className="text - xl font - semibold mb - 2 group - hover:text - white transition-colors">;
+        {title}
+      </h3>;
+      <p className="text - gray - 400 group - hover:text - gray - 300 transition-colors">;
+        {description}
+      </p>;
+      <div className="mt - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration-200">;
+        <Link;
+          href={href}
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue-500 rounded";
+          on_click={(e) => e.stop_propagation ()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         >;
           Learn more →;
         </Link>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -192,3 +229,7 @@ export function FeatureCard({;
     </div>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -40,6 +41,9 @@ const { execSync } = require('child_process');
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

@@ -8,19 +8,15 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ContractPreviewProps {;
   contractContent?: string;
-  generatedContract?: string, // Added to support both naming conventions;
-=======
-=======
-import React from "react",
+  generatedContract?: string, // Added to support both naming conventions;import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 import { SmartContractInfo } from "@/types/smart-contracts",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
@@ -83,38 +79,33 @@ import { SmartContractInfo } from "@/types/smart-contracts",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ContractPreviewProps {
+=======
+import { SmartContractInfo } from "@/types/smart-contracts",interface ContractPreviewProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  talent?: TalentProfile;
-  onDeploy?: () => void;
-  onSign?: () => void;
-  onClose?: () => void;
-  deployStatus?: string;
-  deploymentInfo?: SmartContractInfo | null
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+export function ContractPreview({
+  contractContent;}
 export function ContractPreview({
   contractContent;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   generatedContract,
   status = 'ready',
   onDeploy,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   generatedContract
   status = 'ready'
   onDeploy
   onSign;
   onClose;
   deployStatus;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   talent?: TalentProfile,
   onDeploy?: () => void,
   onSign?: () => void,
@@ -123,8 +114,6 @@ export function ContractPreview({
   deploymentInfo?: SmartContractInfo | null
 }
 
-<<<<<<< HEAD
-
   deploymentInfo
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
@@ -132,33 +121,17 @@ export function ContractPreview({
   const displayContent = contractContent || generatedContract || "",
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  const displayContent = contractContent || generatedContract || "",
-  
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  talent?: TalentProfile;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <div className="space - y-4">;
-      <div className="flex justify - between items - center mb - 4">;
-        <h2 className="text - 2xl font - bold">Contract Preview</h2>;
+    <div className="space-y-4">;
+      <div className="flex justify - between items - center mb-4">;
+        <h2 className="text - 2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function ContractPreview(): any ({ ;
   contractContent;
   generatedContract, ;
   status = 'ready', ;
   onDeploy, ;
   onSign;
   onClose;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -192,6 +165,9 @@ export function ContractPreview({
         {status === 'ready' ? (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Badge
+=======
+=======          <Badge
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             variant="secondary"
             className="text-sm bg-green-100 text-green-800"
           >
@@ -206,38 +182,6 @@ export function ContractPreview({
           </Badge>
         ) : (
           <Badge variant="outline">Draft</Badge>
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { TalentProfile } from "@/types/talent",;
-import { SmartContractInfo } from "@/types/smart-contracts",;
-interface ContractPreviewProps {;
-  contractContent?: string,;
-  generatedContract?: string, // Added to support both naming conventions;
-  status?: 'draft' | 'ready' | 'pending',;
-  talent?: TalentProfile,;
-  onDeploy?: () => void,;
-  onSign?: () => void,;
-  onClose?: () => void,;
-  deployStatus?: string,;
-  deploymentInfo?: SmartContractInfo | null;
-}
-;
-export function ContractPreview({;
-  contractContent,;
-  generatedContract,;
-  status = 'ready',;
-  onDeploy,;
-  onSign,;
-  onClose,;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   deployStatus;
   deploymentInfo;
 }: ContractPreviewProps) {;
@@ -245,54 +189,19 @@ export function ContractPreview({;
   // Use either contractContent or generatedContract, whichever is provided;
   const displayContent = contractContent || generatedContract || "";
 
-<<<<<<< HEAD
-  return (
-=======
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { TalentProfile } from "@/types/talent",;
-import { SmartContractInfo } from "@/types/smart-contracts",;
-;
-interface ContractPreviewProps {;
-  contractContent?:string,;
-  generatedContract?:string, // Added to support both naming conventions;
-  status?:'draft' | 'ready' | 'pending',;
-  talent?:TalentProfile,;
-  onDeploy?:() => void,;
-  onSign?:() => void,;
-  onClose?:() => void,;
-  deployStatus?:string,;
-  deploymentInfo?:SmartContractInfo | null,;
-}
-;
-export function ContractPreview({ ;
-  contractContent,;
-  generatedContract, ;
-  status = 'ready', ;
-  onDeploy, ;
-  onSign,;
-  onClose,;
-  deployStatus,;
-  deploymentInfo;
-} ContractPreviewProps) {;
-  ;
-  // Use either contractContent or generatedContract, whichever is provided;
-  const displayContent = contractContent || generatedContract || "",;
-  ;
-  return (;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className="space-y-4">;
+  return (    <div className="space-y-4">;
       <div className="flex justify-between items-center mb-4">;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Badge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
             Ready to Sign;
@@ -319,6 +228,7 @@ export function ContractPreview({ ;
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
+<<<<<<< HEAD
           {displayContent}
 <<<<<<< HEAD
 
@@ -472,34 +382,38 @@ export function ContractPreview({ ;
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
+=======
+          {displayContent}            variant="secondary";
+            className="text - sm bg - green - 100 text - green-800";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >;
             Ready to Sign;
           </Badge>) : status === 'pending' ? (
           <Badge;
             variant="outline";
-            className="text - sm bg - yellow - 100 text - yellow - 800";
+            className="text - sm bg - yellow - 100 text - yellow-800";
           >;
             Pending Review;
           </Badge>) : (
           <Badge variant="outline">Draft</Badge>)}
       </div>;
       {/* Contract content */}
-      <div className="border rounded - lg p - 6 bg - muted / 50">;
+      <div className="border rounded - lg p - 6 bg-muted / 50">;
         {/* Render the contract content as markdown or formatted text */}
-        <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted - foreground">;
+        <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted-foreground">;
           {display_content}
         </div>;
       </div>;
       {/* Deployment info if available */}
       {deployment_info && (
-        <div className="mt - 4 p - 4 bg - primary / 10 rounded - lg">;
-          <h3 className="font - medium mb - 2">Contract Deployment Info</h3>;
-          <p className="text - sm">Contract Address: {deployment_info.deployed_address || "Pending..."}</p>;
-          <p className="text - sm">Network: {deployment_info.network_name || "Unknown"}</p>;
-          <p className="text - sm">Status: {deployment_info.status}</p>;
+        <div className="mt - 4 p - 4 bg - primary / 10 rounded-lg">;
+          <h3 className="font - medium mb-2">Contract Deployment Info</h3>;
+          <p className="text-sm">Contract Address: {deployment_info.deployed_address || "Pending..."}</p>;
+          <p className="text-sm">Network: {deployment_info.network_name || "Unknown"}</p>;
+          <p className="text-sm">Status: {deployment_info.status}</p>;
         </div>)}
       {/* Actions */}
-      <div className="flex justify - end space - x-3 mt - 4">;
+      <div className="flex justify - end space - x-3 mt-4">;
         {on_close && (
           <Button variant="outline" on_click={on_close}>;
             Close;
@@ -515,50 +429,3 @@ export function ContractPreview({ ;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
- interface ContractPreviewProps {
-  contractContent?: string;
-generatedContract?: string, //Added to support both naming conventions status?: 'draft' | 'ready' | 'pending';
-talent?: TalentProfile;
-onDeploy?: () => void;
-onSign?: () => void;
-onClose?: () => void;
-deployStatus?: string;
-deploymentInfo?: SmartContractInfo | null 
-}export function ContractPreview ({
-  contractContent;
-generatedContract;
-status = 'ready';
-onDeploy;
-onSign;
-onClose;
-deployStatus;
-deploymentInfo 
-}: ContractPreviewProps) {
-  //Use either contractContent or generatedContract, whichever is provided const displayContent = contractContent || generatedContract || "";
->Contract Preview</h2> {
-  status === 'ready' ? (<Badge variant=" secondary"className="text-sm bg-green-100 text-green-800"> Ready to Sign </Badge>) : status === 'pending' ? (<Badge variant=" outline"className="text-sm bg-yellow-100 text-yellow-800"> Pending Review </Badge>) : (<Badge variant=" outline">Draft</Badge>) 
-}</div> {
-  /* Contract content */ 
-}<div className="border rounded-lg p-6 bg-muted/50"> {
-  /* Render the contract content as markdown or formatted text */ 
-}<div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground"> {
-  displayContent 
-}</div> </div> {
-  /* Deployment info if available */ 
-}{
-  deploymentInfo && (<div className="mt-4 p-4 bg-primary/10 rounded-lg"> <h3 className="font-medium mb-2">Contract Deployment Info</h3> Close </Button>) 
-}{
-  status === 'ready' && onSign && (<Button onClick= {
-  onSign 
-}> Sign Contract </Button>) 
-}Deploy on Blockchain </Button>) 
-}</div> </div>) 
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

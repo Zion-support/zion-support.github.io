@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -12,6 +16,9 @@ import React from 'react';
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
+=======
+import React from 'react';import Link from 'next/link';';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
@@ -224,12 +231,15 @@ export default function IndustrySolutionsPage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
+<<<<<<< HEAD
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center""
@@ -280,6 +290,7 @@ export default function IndustrySolutionsPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-2xl shadow-xl p-8 hover: shadow-2xl transition-shadow duration-300"">;
@@ -296,6 +307,8 @@ export default function IndustrySolutionsPage() {
                       <industry.icon className="w-8 h-8 text-white" />";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <div>;
                       <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>"
                       <p className="text-gray-600">{industry.description}</p>"
@@ -357,6 +370,7 @@ export default function IndustrySolutionsPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300"">,;
@@ -373,6 +387,8 @@ export default function IndustrySolutionsPage() {
                 </motion.div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>,
           </div>;
         </section>;
@@ -402,6 +418,7 @@ export default function IndustrySolutionsPage() {
                 Let's discuss how our industry expertise can help you build solutions that meet your specific regulatory and business requirements';
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
@@ -428,6 +445,8 @@ export default function IndustrySolutionsPage() {
                 >;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View All Solutions;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </Link>;
               </div>;
             </motion.div>;

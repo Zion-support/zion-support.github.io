@@ -216,5 +216,10 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    fs.writeFileSync(path.join(this.projectRoot, ")
+    fs.writeFileSync(path.join(this.projectRoot, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

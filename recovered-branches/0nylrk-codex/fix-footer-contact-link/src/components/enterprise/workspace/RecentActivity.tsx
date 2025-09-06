@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 =======
@@ -14,10 +14,13 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -145,6 +148,16 @@ export function RecentActivity() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Badge } from "@/components/ui/badge",      id: "act-1",
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",      type: "job"
+    }
+    },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "act-4"
       user: "Emily Davis"
@@ -153,6 +166,7 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -176,6 +190,10 @@ import {Badge} from "@/components/ui/badge";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -193,12 +211,13 @@ import {Badge} from "@/components/ui/badge";
 
   },
 
-<<<<<<< HEAD
-=======
   }
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <Card>
@@ -242,73 +261,31 @@ import {Badge} from "@/components/ui/badge";
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
-
-<<<<<<< HEAD
-=======
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
-
-
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function RecentActivity() {;
-  // Mock activity data;
-  const activities = [;
-    {;
-      id: "act-1",;
-      user: "Michael Chen",;
-      action: "posted a new job",;
-      target: "Senior React Developer",;
-      timestamp: "1h ago",;
-      type: "job";
-<<<<<<< HEAD
-<<<<<<< HEAD
-    };
-=======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
       action: "shortlisted",;
       target: "5 candidates for UI/UX Designer",;
       timestamp: "3h ago",;
-      type: "candidate";
-<<<<<<< HEAD
-<<<<<<< HEAD
-    };
-=======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    {;
+      type: "candidate"
+};    {;
       id: "act-3",;
       user: "David Johnson",;
       action: "scheduled an interview with",;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
+<<<<<<< HEAD
       type: "interview";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -341,126 +318,28 @@ export function RecentActivity() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
+=======
+      type: "interview";      case "candidate":;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
     }
   }
 
-  return (
-<<<<<<< HEAD
-=======
-      id:"act-1",;
-      user:"Michael Chen",;
-      action:"posted a new job",;
-      target:"Senior React Developer",;
-      timestamp:"1h ago",;
-      type:"job";
-    },;
-    {;
-      id:"act-2",;
-      user:"Sarah Wilson",;
-      action:"shortlisted",;
-      target:"5 candidates for UI/UX Designer",;
-      timestamp:"3h ago",;
-      type:"candidate";
-    },;
-    {;
-      id:"act-3",;
-      user:"David Johnson",;
-      action:"scheduled an interview with",;
-      target:"Alex Morgan",;
-      timestamp:"Yesterday",;
-      type:"interview";
-    },;
-    {;
-      id:"act-4",;
-      user:"Emily Davis",;
-      action:"added comments to",;
-      target:"Frontend Developer application",;
-      timestamp:"2d ago",;
-      type:"comment";
-    }
-  ],;
-;
-  const getBadgeForType = (type:string) => {;
-    switch (type) {;
-      case "job":return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,;
-  ],;
-  const getBadgeForType = (type: string) => {;
-    switch (type) {;
-      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,;
-      case "candidate":;
-        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,;
-      case "interview":;
-        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,;
-    }
-  },;
-;
-  return (;
-      case "comment":;
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
-      default:;
-        return <Badge variant="outline">Activity</Badge>;
-    }
-  };
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Card>;
-      <CardHeader>;
-        <CardTitle>Recent Activity</CardTitle>;
-        <CardDescription>Latest actions from your team</CardDescription>;
-      </CardHeader>;
-      <CardContent className="p-0">;
-        <div className="divide-y divide-border">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {activities && activities.map((activity) => (;
+  return (          {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-                {activity && activity.user.charAt(0)}
-              </div>;
-              <div className="flex-1">;
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">;
-                  <p className="text-sm">;
-                    <span className="font-medium">{activity && activity.user}</span>{" "}
-                    {activity && activity.action}{" "}
-                    <span className="font-medium">{activity && activity.target}</span>;
-                  </p>;
-                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;
-                    {getBadgeForType(activity && activity.type)}
-                    <span className="text-xs text-muted-foreground">{activity && activity.timestamp}</span>;
-=======
-          {activities.map((activity) => (;
-            <div key={activity.id} className="p-4 flex items-start gap-3">;
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-                {activity.user.charAt(0)}
-                    <span className="font-medium">{activity.user}</span>{" "}
-                    {activity.action}{" "}
-                    <span className="font-medium">{activity.target}</span>;
-                  </p>;
-                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;
-                    {getBadgeForType(activity.type)}
-                    <span className="text-xs text-muted-foreground">{activity.timestamp}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          {activities && activities.map((activity) => (;
-            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>;
                 </div>;
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </div>;
 
         <div className="p-3 text-center border-t border-border">;
+<<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 <<<<<<< HEAD
 }
@@ -587,24 +466,17 @@ function RecentActivity() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             View All Activity;
+=======
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </button>;
         </div>;
       </CardContent>;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+;
     </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-}
+}}
     </Card>);
     </Card>;
   ); export function RecentActivity () {
@@ -654,6 +526,7 @@ default:
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -662,3 +535,5 @@ default:
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -22,13 +22,17 @@ interface SkillsSectionProps {
   skills: Skill[];
 }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface SkillsSectionProps {
   skills: Skill[];
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +72,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other';
     if (!acc[category]) {
@@ -87,6 +93,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
       acc[category] = [];
     }
     acc[category].push(skill),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -132,16 +139,20 @@ const skillsByCategory = skills.reduce(
     },
     {} as Record<string, Skill[]>,
   );
+=======
+    return acc
+  }, {} as Record<string Skill[]>),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-  if (skills.length === 0) return null;
-
-  return (
+  if (skills.length === 0) return null,
+    return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
       <div className="space-y-2">
         {Object.entries(skillsByCategory).map(([category, skills]) => (
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
+<<<<<<< HEAD
             <p className="text-sm">
               {skills.map((skill) => skill.name).join(", ")}
             </p>
@@ -226,12 +237,15 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
               {skills.map(skill => skill.name).join(', ')}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </p>;
+=======
+            <p className="text-sm">            </p>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -245,10 +259,16 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;
       <div className="space - y-2">;
+=======
+}  return (
+    <div className="mb-6">;
+      <h2 className="text - lg font - semibold border - b mb-3">Skills</h2>;
+      <div className="space-y-2">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {Object.entries (skillsByCategory).map (([category, skills]) => (
           <div key={category}>;
-            <h3 className="text - sm font - medium">{category}</h3>;
-            <p className="text - sm">;
+            <h3 className="text - sm font-medium">{category}</h3>;
+            <p className="text-sm">;
               {skills.map ((skill) => skill.name).join (", ")}
             </p>;
           </div>))}

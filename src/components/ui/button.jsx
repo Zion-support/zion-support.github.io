@@ -1,23 +1,37 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -32,13 +46,21 @@ export function Button({
   disabled = false 
 }) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import React from 'react';';
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className="", onClick,  type = 'button', disabled = false }) {';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -72,6 +94,11 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -81,7 +108,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -100,6 +132,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+'
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
 <<<<<<< HEAD
 =======
@@ -119,7 +158,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 
 }
 
@@ -140,6 +183,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 '
 <<<<<<< HEAD
 <<<<<<< HEAD
+}
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
 <<<<<<< HEAD
 =======
@@ -155,7 +201,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

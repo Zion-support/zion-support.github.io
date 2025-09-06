@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -33,14 +34,31 @@ export function UsageStats() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 =======
 return (
+=======
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+export function UsageStats() {
 
+  const handleSaveChanges = () => {
+    toast({
 
+<<<<<<< HEAD
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Card>
+=======
+  return (
+    <div className="space-y-8">
+      <div>
+        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
+        <p className="text-muted-foreground mb-6">
+          Configure usage limits for your team to manage your subscription resources.
+        </p>
+      </div>        <Card>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
             <CardDescription>
@@ -69,8 +87,11 @@ return (
           </CardFooter>
         </Card>
 
-
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -100,9 +121,12 @@ return (
           </CardFooter>
         </Card>
 
+<<<<<<< HEAD
 
         
         <Card>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -131,8 +155,11 @@ return (
           </CardFooter>
         </Card>
 
-
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -176,6 +203,7 @@ return (
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
@@ -184,6 +212,8 @@ return (
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
           </div>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
             <p className="text-sm text-muted-foreground">
@@ -216,11 +246,21 @@ import { Progress } from "@/components/ui/progress",;
 export function UsageStats() {;
   const handleSaveChanges = () => {;
     toast({;
+<<<<<<< HEAD
       title: "Limits updated";
       description: "The new usage limits have been saved successfully."});
   };
   return (;
     <div className="space-y-8">;
+=======
+      title: 'Limits updated',,
+  description: 'The new usage limits have been saved successfully.',;
+    })
+};
+
+  return (
+    <div className='space-y-8'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
@@ -352,6 +392,7 @@ export function UsageStats() {;
           </CardFooter>;
         </Card>;
       </div>;
+<<<<<<< HEAD
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">;
@@ -383,3 +424,9 @@ export function UsageStats() {;
     </div>
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

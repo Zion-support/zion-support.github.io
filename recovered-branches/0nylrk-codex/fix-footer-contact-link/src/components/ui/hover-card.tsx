@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -14,36 +15,26 @@ import * as HoverCardPrimitive from &quot;@radix-ui/react-hover-card&quot;
 import { cn } from &quot;@/lib/utils&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react"
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
 
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const HoverCard = HoverCardPrimitive.Root
 const HoverCardTrigger = HoverCardPrimitive.Trigger
 const HoverCardContent = React.forwardRef<
   React.ElementRef<typeof HoverCardPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
-<<<<<<< HEAD
-<<<<<<< HEAD
->(({ className, align = &quot;center&quot;, sideOffset = 4, ...props }, ref) => (
-=======
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
   <HoverCardPrimitive.Content
     ref={ref}
     align={align}
     sideOffset={sideOffset}
+<<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
 
@@ -66,11 +57,15 @@ const HoverCardContent = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
   />;
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -80,6 +75,8 @@ HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
@@ -91,7 +88,6 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from &quot;react & quot;
 import * as HoverCardPrimitive from &quot;@radix - ui / react - hover - card & quot;
 ;
@@ -99,22 +95,6 @@ import { cn } from &quot;@/lib / utils & quot;
 
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-<<<<<<< HEAD
-=======
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-export { HoverCard, HoverCardTrigger, HoverCardContent }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 const HoverCard = HoverCardPrimitive.Root;
@@ -133,10 +113,6 @@ const HoverCardContent = React.forward_ref<;
     {...props}
   />));
 HoverCardContent.display_name = HoverCardPrimitive.Content.display_name;
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-<<<<<<< HEAD
-=======
-export { HoverCard, HoverCardTrigger, HoverCardContent }
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 ;
@@ -172,8 +148,11 @@ React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>)
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -32,10 +32,17 @@ class AdvancedAppOptimizer {}
         console.log(message)};
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
+<<<<<<< HEAD
 
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
 
+=======
+        
+        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+        let nextConfig = ;';';
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('next').NextConfig} */
@@ -44,7 +51,11 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
@@ -60,7 +71,11 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
@@ -68,7 +83,11 @@ const nextConfig = {}
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": true,
     "contentSecurityPolicy": "default-src 'sel}f;'; script-src 'none'; sandbox;"},
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
     // Production optimizations;
@@ -100,12 +119,20 @@ const nextConfig = {}
             "chunks": 'all',
             "enforce": true}}}};
     return config}},
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Experimental features for performance;
   "experimental": {}
     optimizeCss: true,
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Headers for security and performance;
   async headers() {}
     return [;]
@@ -121,7 +148,11 @@ const nextConfig = {}
           {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]},
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Redirects and rewrites;
   async redirects() {}
     return [;]
@@ -135,6 +166,7 @@ module.exports = nextConfig;
 
         fs.writeFileSync(nextConfigPath, optimizedConfig);
         this.log('Next.js configuration optimized');
+<<<<<<< HEAD
 
         return { "status": 'success', "message": 'Next.js config optimized' }};
     optimizeTailwindConfig() {}
@@ -143,6 +175,16 @@ module.exports = nextConfig;
         const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
         let tailwindConfig = ;';';
 
+=======
+        
+        return { "status": 'success', "message": 'Next.js config optimized' }};
+    optimizeTailwindConfig() {}
+        this.log('Optimizing Tailwind CSS configuration...');
+        
+        const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
+        let tailwindConfig = ;';';
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if () {}
             tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('tailwindcss').Config} */
@@ -254,11 +296,19 @@ module.exports = {}
 
         fs.writeFileSync(tailwindConfigPath, optimizedConfig);
         this.log('Tailwind CSS configuration optimized');
+<<<<<<< HEAD
 
         return { "status": 'success', "message": 'Tailwind config optimized' }};
     createPerformanceMonitoring() {}
         this.log('Creating performance monitoring utilities...');
 
+=======
+        
+        return { "status": 'success', "message": 'Tailwind config optimized' }};
+    createPerformanceMonitoring() {}
+        this.log('Creating performance monitoring utilities...');
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
@@ -297,11 +347,20 @@ export class PerformanceMonitor {}
     if (this.isClient) {}
       performance.mark(\`\${name}-end\`)};
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
+<<<<<<< HEAD
 
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+      const measure = performance.getEntriesByName(name)[0];
+      this.metrics.set(name, measure.duration);
+      
+      
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Log slow operations;
       if ( {})
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
@@ -328,7 +387,11 @@ export const performanceMonitor = new PerformanceMonitor;(;);
 ";
 
         fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Web Vitals utility;
         const webVitals = "/**
  * Web Vitals Utility;
@@ -369,11 +432,16 @@ export function initWebVitals() {}
 ";
 
         fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         this.log('Performance monitoring utilities created');
         return { "status": 'success', "message": 'Performance monitoring created' }};
     optimizeImages() {}
         this.log('Optimizing images...');
+<<<<<<< HEAD
 
         const publicDir = path.join(this.projectRoot, 'public';);
         const imageFiles = this.findImageFiles(publicDir;);
@@ -381,11 +449,24 @@ export function initWebVitals() {}
         let optimizedCount = ;0;
         const optimizations = [];
 
+=======
+        
+        const publicDir = path.join(this.projectRoot, 'public';);
+        const imageFiles = this.findImageFiles(publicDir;);
+        
+        let optimizedCount = ;0;
+        const optimizations = [];
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 if ( { // Only optimize large images;})
                     optimizations.push({})
                         "file": path.relative(this.projectRoot, file),
@@ -420,15 +501,26 @@ export function initWebVitals() {}
     findImageFiles(dir) {}
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
         const files = [];
+<<<<<<< HEAD
 
         if () return file) {}
     ) return file}s;
 
+=======
+        
+        if () return file) {}
+    ) return file}s;
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             if () {}
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
@@ -441,7 +533,11 @@ export function initWebVitals() {}
         return files}};
     generateOptimizationReport() {}
         this.log('Generating advanced app optimization report...');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -456,7 +552,11 @@ export function initWebVitals() {}
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Advanced app optimization report saved to ${this.reportFile}");
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return report};
     generateOptimizationRecommendations() {}
         return [;]
@@ -473,7 +573,11 @@ export function initWebVitals() {}
         ]};
     async run() {}
         this.log('Advanced App Optimizer started');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         try {}
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
@@ -488,5 +592,10 @@ if ( {})
      {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = AdvancedAppOptimizer;
+module.exports = AdvancedAppOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

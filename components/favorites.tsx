@@ -31,7 +31,6 @@ export default function FavoritesPage() {
 <<<<<<< HEAD
 =======
 
-
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {;
@@ -133,12 +132,12 @@ function FavoritesPage() {
             </li>          </ol>;
         </nav>;
       </div>;
-      <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>      <div className="mb - 6 text - sm text - gray - 500 dark:text - gray - 400">;
+      <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>      <div className="mb - 6 text - sm text - gray - 500 dark:text-gray-400">;
         <nav aria - label="Breadcrumb">;
-          <ol className="flex items - center gap - 2">;
+          <ol className="flex items-center gap-2">;
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>;
             <li aria - hidden="true">/</li>;
-            <li className="text - gray - 900 dark:text - gray - 100" aria - current="page">Favorites</li>;
+            <li className="text - gray - 900 dark:text-gray-100" aria - current="page">Favorites</li>;
         </nav>;
       </div>;
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
@@ -161,8 +160,11 @@ function FavoritesPage() {
               key={t.slug}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
   );
 }
@@ -200,11 +202,11 @@ function FavoritesPage() {
                     <a className='px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600'>;
                       Request to Hire;
                     </a>;
-                  </Link>                </div>              <div className="mt - 4 flex items - center justify - between text - sm">;
-                <div className="font - medium">${t.hourlyRateUsd}/hr</div>;
-                <div className="flex items - center gap - 3">;
-                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white">View Profile</a></Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600">Request to Hire</a></Link>;
+                  </Link>                </div>              <div className="mt - 4 flex items - center justify-between text-sm">;
+                <div className="font-medium">${t.hourlyRateUsd}/hr</div>;
+                <div className="flex items-center gap-3">;
+                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo-600 text-white">View Profile</a></Link>;
+                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text-indigo-600">Request to Hire</a></Link>;
               </div>;
             </div>))}
         </div>)}

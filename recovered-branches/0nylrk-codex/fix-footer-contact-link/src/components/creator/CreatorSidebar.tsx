@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 
 =======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 =======
 <<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
 
 import {
 
@@ -17,6 +13,7 @@ import {;
   Home,;
   Mail,;
   Search,;
+<<<<<<< HEAD
   Settings,;
 =======
 
@@ -56,15 +53,17 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Bell,
+=======
+  Settings,;  Bell,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   FileText,
   Home,
   Mail,
   Search,
   Settings,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   Users,;
+<<<<<<< HEAD
 } from "lucide-react";
 =======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
@@ -72,6 +71,9 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Bell,
+=======
+} from "lucide-react";  Bell,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   FileText,
   Home,
   Mail,
@@ -83,7 +85,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Users,;
 } from "lucide-react";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Sidebar,;
   SidebarContent,;
@@ -92,6 +93,7 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   SidebarGroupContent,;
 =======
@@ -185,6 +187,10 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  SidebarGroupContent,;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -194,15 +200,7 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
-                  </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                  </Link>                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -210,19 +208,12 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
-                  </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                  </Link>                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
+<<<<<<< HEAD
         </SidebarGroup>
 <<<<<<< HEAD
 
@@ -266,27 +257,23 @@ import {
                   </Link>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
+=======
+        </SidebarGroup>                </SidebarMenuButton>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
-                  </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                  </Link>                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -297,6 +284,8 @@ import {
     </Sidebar>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }
   )
@@ -311,6 +300,7 @@ import {;
   SidebarGroupLabel,;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 =======
@@ -577,3 +567,9 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (;                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -14,7 +14,11 @@ const runCommand = (command, description) => {}
   try {}
     log(`"Starting": ${description}`);
     const output = execSync(command, { })
+<<<<<<< HEAD
       "encoding": 'utf8',
+=======
+      "encoding": 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "stdio": 'pipe',
       "cwd": process.cwd();
     }
@@ -139,5 +143,10 @@ main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

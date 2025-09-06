@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -19,22 +20,18 @@ origin/main
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}});
-  }
-});
-console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
 =======
-;
-  };
-}),
-console.log(`Fixed ${fixedCount} files`),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}});
+console.log(`Fixed ${fixedCount} files`)
+};
+});
+console.log(`Fixed ${fixedCount} files`);}})
+};
+}),;
+console.log(`Fixed ${fixedCount} files`),;
 ,
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node import fs from 'fs' import path from 'path' function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === 'node_modules' || entry.startsWith('.')) continue out.push(...listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,'utf8') let after = before after = after.replace(/,\s*;/g,',') after = after.replace(/;\s*,/g,',') after = after.replace(/;\s*\]/g,']') after = after.replace(/;\s*\}/g,'}') if (after !== before) { fs.writeFileSync(filePath,after,'utf8') return true } return false } catch (e) { console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles('.',['.js','.jsx','.ts','.tsx']) let fixed = 0 for (const f of files) if (fixFile(f)) fixed++ }
@@ -131,10 +128,18 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+};
+});
+console.log(`Fixed ${fixedCount} files`);
+;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node import fs from "fs" import path from "path" function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === "node_modules" | entry.startsWith(".")) continue out.push(.listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,"utf8") let after = before after = after.replace(/,\s*;/g,",") after = after.replace(/;\s*,/g,",") after = after.replace(/;\s*\]/g,"]") after = after.replace(/;\s*\}/g,"}") if (after !== before) { fs.writeFileSync(filePath,after,"utf8") console.log(`Fixed: ${filePath}`) return true } return false } catch (e) { console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles(".",[".js",".jsx",".ts",".tsx"]) let fixed = 0 for (const f of files) if (fixFile(f)) fixed++ console.log(`Fixed remaining syntax issues in ${fixed} files.`) }'"`'"`
 #!/usr/bin/env node import fs from 'fs' import path from 'path' function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === 'node_modules' || entry.startsWith('.')) continue out.push(...listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,'utf8') let after = before after = after.replace(/,\s*;/g,',') after = after.replace(/;\s*,/g,',') after = after.replace(/;\s*\]/g,']') after = after.replace(/;\s*\}/g,'}') if (after !== before) { fs.writeFileSync(filePath,after,'utf8') _console.log(`"Fixed": ${filePath}`) return true } return false } catch (e) { _console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles('.',['.js','.jsx','.ts','.tsx']) let fixed = 0 for (const f of, files) if (fixFile(f)) fixed++ _console.log(`Fixed remaining syntax issues in ${fixed} files.`) }
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -200,6 +205,8 @@ console && console.log(`Fixed ${fixedCount} files`),
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -237,12 +244,6 @@ function fixRemainingSyntax(content) {
 =======
       if (line && line.includes('[')) bracketCount++;
       if (line && line.includes(']')) bracketCount--;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -277,18 +278,22 @@ function fixRemainingSyntax(content) {
       if (line.includes('[')) bracketCount++;
       if (line.includes(']')) bracketCount--;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (bracketCount === 0) {
         inArray = false;
       }
     }
   }
   // Fix function declarations that are missing opening braces
+<<<<<<< HEAD
 <<<<<<< HEAD
   content = content.replace(/export default function (\w+)\(\)\s*\{\s*\}/g, 'export default function $1() {\n  return (\n    <div>Content</div>\n  );\n}');
 =======
@@ -449,10 +454,14 @@ function processFile(filePath) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      console.log(`Fixed: ${filePath}`);  content = content && content.replace(/export default function (\w+)\(\)\s*\{\s*\}/g, 'export default function $1() {\n  return (\n    <div>Content</div>\n  );\n}');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return true;
     }
     return false;
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
 =======
@@ -465,83 +474,25 @@ function processFile(filePath) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   'pages/about && about.tsx',
   'pages/accessibility && accessibility.tsx', 
   'pages/ai-services && services.tsx',
   'pages/api && api.tsx',
   'pages/blog && blog.tsx'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-];
-console && console.log(`Processing ${errorFiles && errorFiles.length} files with errors`);
-let fixedCount = 0;
-errorFiles && errorFiles.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/automation-improvements-final
-  
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-console.log(`Fixed ${fixedCount} files`);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
-=======
-  console && console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
 // Run the main function
-<<<<<<< HEAD
 
 main().catch(console.error);
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 main().catch(console.error);
-
-=======
-
-
-
-=======
-
-  
-
-main().catch(console.error);
-=======
-
-
-
-=======
-}
-// Run the main function
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 // Run the main function
 
 main().catch(console.error);
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -692,3 +643,17 @@ console.log(`Fixed ${fixedCount} files`);
 
 main();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    return false;
+  }
+}
+];
+console.log(`Processing ${errorFiles.length} files with errors`);
+let fixedCount = 0;
+errorFiles.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+});
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

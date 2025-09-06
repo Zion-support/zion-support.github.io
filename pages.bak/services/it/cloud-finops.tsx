@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function CloudFinOps() { return ( <Article title=\"Cloud FinOps\" subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\" price=\"from $4k/mo\" bullets={[\'Tagging strategy and cost allocation by team and customer\',\'Automated rightsizing and commitment planning (SP/RI/CCA)\',\'Unit economics dashboard by feature and environment\',\'FinOps runbooks and CFO-ready monthly reporting\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function CloudFinOps() { return ( <Article title="Cloud FinOps" subtitle="Cost visibility,unit economics,and automated savings for AWS/Azure/GCP" price="from $4k/mo" bullets={["Tagging strategy and cost allocation by team and customer","Automated rightsizing and commitment planning (SP/RI/CCA)","Unit economics dashboard by feature and environment","FinOps runbooks and CFO-ready monthly reporting" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 =======
@@ -19,13 +20,15 @@ module.exports = default function CloudFinOps() { return ( <Article title="Cloud
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function CloudFinOps() { return ( <Article title=\"Cloud FinOps\" subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\" price=\"from $4k/mo\" bullets={[\'Tagging strategy and cost allocation by team and customer\',\'Automated rightsizing and commitment planning (SP/RI/CCA)\',\'Unit economics dashboard by feature and environment\',\'FinOps runbooks and CFO-ready monthly reporting\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function CloudFinOps() { return ( <Article title="Cloud FinOps" subtitle="Cost visibility,unit economics,and automated savings for AWS/Azure/GCP" price="from $4k/mo" bullets={["Tagging strategy and cost allocation by team and customer","Automated rightsizing and commitment planning (SP/RI/CCA)","Unit economics dashboard by feature and environment","FinOps runbooks and CFO-ready monthly reporting" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 interface CloudfinopsProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
 
 =======
@@ -50,14 +53,15 @@ import React from 'react';
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import * as React from 'react';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 interface CloudfinopsProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -66,6 +70,8 @@ interface CloudfinopsProps {
 export default function Cloudfinops({ }: CloudfinopsProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Cloudfinops({ }: CloudfinopsProps) {
   return (
     <div>
@@ -73,6 +79,7 @@ export default function Cloudfinops({ }: CloudfinopsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +102,9 @@ export default function Cloudfinops({ }: CloudfinopsProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -137,6 +147,7 @@ export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
       <h1>Cloudfinops</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,3 +206,6 @@ export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

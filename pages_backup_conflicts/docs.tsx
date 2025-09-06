@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react';
 
 interface DocsProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -26,11 +25,13 @@ import * as React from 'react';
 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface DocsProps {
   // Add props here as needed
-<<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -40,12 +41,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function Docs({ }: DocsProps) {
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function Docs({ }: DocsProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div>
       <h1>Docs</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -57,11 +62,15 @@ export default function Docs({ }: DocsProps) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 }
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+<<<<<<< HEAD
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -77,3 +86,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

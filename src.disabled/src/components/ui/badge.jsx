@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,9 +15,18 @@ import _React from 'react'; return(); <div className={`${baseClasses} ${variantC
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from \'react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
+=======
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )
+}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };import React from \'react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )
+}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )
+}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-import _React from 'react'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+import _React from 'react'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )
+}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +61,5 @@ import _React from 'react'; return(); <div className={`${baseClasses} ${variantC
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

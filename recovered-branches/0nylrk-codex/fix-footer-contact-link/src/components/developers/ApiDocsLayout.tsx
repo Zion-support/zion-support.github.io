@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,12 +14,15 @@ import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 interface ApiDocsLayoutProps {
   children: React.ReactNode
@@ -60,12 +63,16 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+=======
+import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const location = useLocation();
   const currentPath = location.pathname;
   const location = useLocation(),
   const currentPath = location.pathname,
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -222,6 +229,8 @@ export default ApiDocsLayout;
 <<<<<<< HEAD
 export default ApiDocsLayout;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Search } from "lucide-react",;
@@ -243,14 +252,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   return (;
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
         <Link to="/developers/docs" className="flex items-center mb-8">;
           <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
@@ -258,6 +259,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
           </div>;
           <span className="font-bold text-white">API Docs</span>;
         </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -358,18 +360,17 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {children}
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-;
-
-
+export default ApiDocsLayout;;
 export default ApiDocsLayout;
+<<<<<<< HEAD
 
 =======
 import React from './react';
@@ -457,3 +458,5 @@ export default ApiDocsLayout;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

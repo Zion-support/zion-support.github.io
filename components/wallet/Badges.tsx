@@ -22,14 +22,15 @@ import React from 'react';
   id: string;
 label: string;
 
-
-
 export function currentBadge(balance: number): Badge | null {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   let current: Badge | null = null;
-threshold: number, //token balance threshold ;
+threshold: number, //token balance threshold 
 };
 const BADGES: Badge[] = [;
   { id: 'starter', label: 'Starter', threshold: 50 },;
@@ -99,14 +100,18 @@ if (current = b) {
           className={`px-3 py-1 rounded-full text-xs border ${
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return current;
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -119,6 +124,8 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
@@ -159,7 +166,7 @@ function Badges() {
   const active = current_badge (balance);
   return (
     <div className='flex gap - 2 items - center flex - wrap'>;
-      {BADGES.map (boolean => (    <div className="flex gap - 2 items - center flex - wrap">;
+      {BADGES.map (boolean => (    <div className="flex gap - 2 items-center flex-wrap">;
       {BADGES.map ((b) => (
         <span;
           key={b.id}
@@ -168,8 +175,6 @@ function Badges() {
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
-
-
 
 export default function Badges({ balance }: { balance: number }) {;
 
@@ -222,7 +227,7 @@ export default function Badges({ balance }: { balance: number }) {
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
         </span>)}
-    </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
+    </div>);        <span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
     </div>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

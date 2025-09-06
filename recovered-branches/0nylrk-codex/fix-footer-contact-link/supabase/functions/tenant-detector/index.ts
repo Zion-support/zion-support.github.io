@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -10,17 +11,14 @@
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+<<<<<<< HEAD
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -71,54 +69,19 @@ if (!supabaseUrl |!supabaseServiceKey) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   throw new Error('Required environment variables are not set')
+=======
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req && req.method === 'OPTIONS') {
-=======
-  if (req.method === 'OPTIONS') {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  if (req && req.method === 'OPTIONS') {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
-  try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const url = new URL(req && req.url);
-    const hostnameParam = url && url.searchParams.get('host');
-    const subdomainParam = url && url.searchParams.get('subdomain');
-    
-    // Get hostname from parameters or headers
-    const forwardedHost = req && req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam || 
-      (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
-      url && url.hostname;
-<<<<<<< HEAD
-
-
-=======
-    const url = new URL(req.url);
-    const hostnameParam = url.searchParams.get('host');
-    const subdomainParam = url.searchParams.get('subdomain');
-    // Get hostname from parameters or headers
-    const forwardedHost = req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam |
-      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) |
-      url.hostname;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    if (!hostname && !subdomainParam) {
+  try {    if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
     // Extract tenant info
@@ -132,18 +95,9 @@ serve(async (req) => {
         .eq('is_active', true)
         .single();
       if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         console && console.error('Database error:', error);
+        throw new Error(`Database error: ${error && error.message}`)        console && console.error('Database error:', error);
         throw new Error(`Database error: ${error && error.message}`)
-=======
-        console.error('Database error:', error);
-        throw new Error(`Database error: ${error.message}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        console && console.error('Database error:', error);
-        throw new Error(`Database error: ${error && error.message}`)
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       tenantInfo = data as TenantInfo
     } else {
@@ -156,21 +110,14 @@ serve(async (req) => {
         .single();
       // If no match on custom domain, try subdomain
       if (!data && !error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const subdomain = hostname && hostname.split('.')[0];
-=======
-        const subdomain = hostname.split('.')[0];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        const subdomain = hostname && hostname.split('.')[0];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        const subdomain = hostname && hostname.split('.')[0];        const subdomain = hostname && hostname.split('.')[0];
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
             .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
             .eq('subdomain', subdomain)
             .eq('is_active', true)
+<<<<<<< HEAD
             .single();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,6 +155,9 @@ interface TenantInfo {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   theme_preset: string;
+=======
+            .single();  theme_preset: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}
@@ -282,91 +232,7 @@ if ( {) {
         .eq ('is_active', true);
         .single ();
 ;
-      // If no match on custom domain, try subdomain;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  theme_preset: string;
-}
-;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'},;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get('SUPABASE_URL'),;
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),;
-if (!supabaseUrl || !supabaseServiceKey) {;
-  throw new Error('Required environment variables are not set');
-}
-;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
-    return new Response(null, {;
-      status: 204,;
-      headers: corsHeaders});
-  }
-;
-  try {;
-    const url = new URL(req.url),;
-    const hostnameParam = url.searchParams.get('host'),;
-    const subdomainParam = url.searchParams.get('subdomain'),;
-    // Get hostname from parameters or headers;
-    const forwardedHost = req.headers.get('x-forwarded-host'),;
-    const hostname = hostnameParam ||;
-      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) ||;
-      url.hostname,;
-    if (!hostname && !subdomainParam) {;
-      throw new Error('No hostname or subdomain provided');
-    }
-;
-    // Extract tenant info;
-    let tenantInfo: TenantInfo | null = null,;
-    if (subdomainParam) {;
-      // Direct subdomain lookup;
-      const { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq('subdomain', subdomainParam);
-        .eq('is_active', true);
-        .single(),;
-      if (error) {;
-        console.error('Database error:', error),;
-        throw new Error(`Database error: ${error.message}`);
-      }
-;
-      tenantInfo = data as TenantInfo;
-    } else {;
-      // Try matching custom domain first;
-      let { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq('custom_domain', hostname);
-        .eq('is_active', true);
-        .single(),;
-      // If no match on custom domain, try subdomain;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      if (!data && !error) {;
-        const subdomain = hostname.split('.')[0],;
-        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {;
-          const subdomainResult = await supabase;
-            .from('whitelabel_tenants');
-            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-            .eq('subdomain', subdomain);
-            .eq('is_active', true);
-            .single(),;
-          if (!subdomainResult.error) {;
-            tenantInfo = subdomainResult.data as TenantInfo;
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      // Check condition
+      // If no match on custom domain, try subdomain;      // Check condition
 if ( {) {
   $2
 }
@@ -385,6 +251,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
             tenant_info = subdomain_result.data as TenantInfo;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -466,6 +333,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response (
+=======
+            tenant_info = subdomain_result.data as TenantInfo;    return new Response (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       JSON.stringify ({
         tenant: tenant_info,
         status: 'success';
@@ -481,6 +351,7 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -561,11 +432,19 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'Content - Type': 'application / json',
+=======
+      });
+      {
+        status: 500;
+        headers: {  }
+});          'Content - Type': 'application / json',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           ...cors_headers}}
     );
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -706,3 +585,5 @@ if (subdomainParam) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

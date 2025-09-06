@@ -8,6 +8,29 @@ import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+import { useHireRequestForm, FormValues } from './useHireRequestForm';
+import { Button } from '@/components/ui/button';
+import { DialogFooter } from '@/components/ui/dialog';
+import { Form } from '@/components/ui/form';
+import { Loader2 } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { PersonalInfoFields } from './PersonalInfoFields';
+import { ProjectDetailsField } from './ProjectDetailsField';
+import { TimelineField } from './TimelineField';
+import { BudgetFields } from './BudgetFields';
+export interface HireRequestFormProps {;
+  talent: TalentProfile;
+  onClose: () => void;
+  initialJobTitle?: string;
+  userDetails?: {;
+    name?: string;
+    email?: string;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
 <<<<<<< HEAD
@@ -38,17 +61,21 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails 
   }),
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <PersonalInfoFields form={form} />
         </div>
 <<<<<<< HEAD
 =======
 
-    id?: string;
-  };
+    id?: string
+};
   onSubmitSuccess?: () => void;
 
 export function HireRequestForm(): any ({;
@@ -96,7 +123,6 @@ export function HireRequestForm(): any ({;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
 
-
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
 import { Button } from "@/components/ui/button";
@@ -119,7 +145,6 @@ export interface HireRequestFormProps {
   onSubmitSuccess?: () => void
 
 }
-
 
 export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
@@ -169,7 +194,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 <<<<<<< HEAD
 =======
 
-
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled = {isSubmitting,}
@@ -191,8 +215,11 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             ) : (;
               'Submit Request';
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             Cancel
           </Button>
@@ -204,6 +231,10 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Submitting...
               </>
             ) : (
@@ -232,6 +263,7 @@ export interface HireRequestFormProps {;
   onSubmitSuccess?: () => void;
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -277,6 +309,10 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             ) : (;
               'Submit Request';
             )}
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         </DialogFooter>;
       </form>;
@@ -360,28 +396,28 @@ function HireRequestForm() {
   });
   return (
     <Form {...form}>;
-      <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <PersonalInfoFields form={form} />;
         </div>;
         <ProjectDetailsField form={form} />;
         <TimelineField form={form} />;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <BudgetFields form={form} talent={talent} />;
         </div>;
-        <DialogFooter className="pt - 4">;
+        <DialogFooter className="pt-4">;
           <Button;
             type="button";
             variant="outline";
             on_click={on_close}
-            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+            className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
             disabled={is_submitting}
-        <DialogFooter className="pt - 4">;
+        <DialogFooter className="pt-4">;
           <Button;
             type="button";
             variant="outline";
             on_click = {on_close, }
-            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+            className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
             disabled = {is_submitting, }
           >;
             Cancel;
@@ -390,13 +426,13 @@ function HireRequestForm() {
             type='submit';
             className='bg - zion - purple hover:bg - zion - purple - dark text - white'          <Button;
             type="submit";
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+            className="bg - zion - purple hover:bg - zion - purple - dark text-white";
             disabled={is_submitting}
             disabled = {is_submitting, }
           >;
             {is_submitting ? (
               <>;
-                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />;
                 Submitting...;
               </>) : (
               'Submit Request')}

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 export interface Notification {
@@ -22,13 +23,18 @@ export interface Notification {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   type: "success" | "error" | "warning" | "info";
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   title?: string;
   message: string;
   duration?: number;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 interface NotificationSystemProps {
@@ -474,3 +480,5 @@ export const useNotifications = () => {
 };
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

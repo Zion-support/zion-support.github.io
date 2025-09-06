@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // This file re - exports all fraud detection functionality;
 // to maintain backward compatibility;
@@ -45,6 +46,16 @@ export * from './signupCheck';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+
+export * from './signupCheck';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // This file re-exports all fraud detection functionality;
 // to maintain backward compatibility;
 export * from './analyzeContent',;
@@ -52,6 +63,7 @@ export * from './analyzeEmail',;
 export * from './flagContent',;
 export * from './messageCheck',;
 export * from './monitorContent',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -80,3 +92,6 @@ export * from "./messageCheck";
 export * from "./monitorContent";
 export * from "./signupCheck";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export * from './signupCheck';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

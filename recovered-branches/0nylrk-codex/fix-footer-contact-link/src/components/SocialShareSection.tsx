@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,6 +18,10 @@ export function SocialShareSection() {
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
 import { toast } from "./ui/use-toast";
@@ -55,6 +60,7 @@ export function SocialShareSection() {
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -98,10 +104,14 @@ export function SocialShareSection() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const shareLinks = [
+=======
+    const shareLinks = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       name: "Twitter"
       icon: <Twitter className="h-5 w-5" />
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
+<<<<<<< HEAD
       onClick: shareToTwitter
 <<<<<<< HEAD
 
@@ -149,10 +159,14 @@ export function SocialShareSection() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
+=======
+      onClick: shareToTwitter    {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       name: "LinkedIn"
       icon: <Linkedin className="h-5 w-5" />
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -192,6 +206,10 @@ import {toast} from "./ui/use-toast";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }],
 
   return (
@@ -207,6 +225,7 @@ import {toast} from "./ui/use-toast";
               <Button
                 key={index}
                 className={`${link.color} text-white`}
+<<<<<<< HEAD
                 size="sm"
 <<<<<<< HEAD
 =======
@@ -444,11 +463,20 @@ function SocialShareSection() {
     <section className="py - 12 bg - zion - blue">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6">;
+=======
+                size="sm"    {;
+      name: "LinkedIn",;
+      icon: <Linkedin className="h-5 w-5" />,;
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
+      onClick: shareToLinkedIn;    <section className="py - 12 bg - zion-blue">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p-6">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div>;
-            <h3 className="text - xl font - bold text - white mb - 2">Share Zion with Your Network</h3>;
-            <p className="text - zion - slate - light">Help others discover the future of AI & tech marketplace</p>;
+            <h3 className="text - xl font - bold text - white mb-2">Share Zion with Your Network</h3>;
+            <p className="text - zion - slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
-          <div className="flex flex - wrap gap - 3">;
+          <div className="flex flex - wrap gap-3">;
             {share_links.map ((link, index) => (
               <Button;
                 key={index}
@@ -464,6 +492,7 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -587,3 +616,5 @@ export function SocialShareSection() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

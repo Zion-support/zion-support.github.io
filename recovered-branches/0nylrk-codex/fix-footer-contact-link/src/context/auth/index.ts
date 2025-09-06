@@ -3,6 +3,9 @@ export { AuthProvider } from "./AuthProvider";
 
 // Re-export the context type for convenience
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type { AuthContextType } from '@/types/auth';
 
 ;
@@ -10,6 +13,7 @@ export type { AuthContextType } from '@/types/auth';
 export type { AuthContextType } from '@/types / auth';
 ;
 
+<<<<<<< HEAD
 
 
 
@@ -61,3 +65,9 @@ export type { AuthContextType } from '@/types/auth';
 =======
 export type { AuthContextType } from "@/types/auth";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export { AuthContext } from './AuthContext',;
+export { AuthProvider } from './AuthProvider',;
+// Re-export the context type for convenience;
+export type { AuthContextType } from '@/types/auth';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

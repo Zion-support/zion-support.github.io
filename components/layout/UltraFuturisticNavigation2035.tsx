@@ -134,11 +134,13 @@ interface NavigationItem {
   href: string;  icon?: React.ReactNode;import { ;
 =======
 
-
   href: string;  icon?: React.ReactNode;import { ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -375,7 +377,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
     name: 'All Services',
     href: '/comprehensive - services - showcase - 2025',
-    icon: <Globe className="w - 5 h - 5" />,
+    icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     featured: true,
@@ -471,7 +473,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]
     href: '/ai - services',
-    icon: <Brain className="w - 5 h - 5" />,
+    icon: <Brain className="w-5 h-5" />,
     badge: 'New',
     featured: true,
     children: [;
@@ -600,7 +602,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       { name: 'Invoice Studio', href: '/invoice-studio', description: 'Instant branded invoices and payments' }
     ]
     href: '/micro - saas',
-    icon: <Rocket className="w - 5 h - 5" />,
+    icon: <Rocket className="w-5 h-5" />,
     badge: 'Hot',
     featured: true,
     children: [;
@@ -709,7 +711,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology', description: 'Revolutionary space AI' }
     ]
     href: '/quantum - services',
-    icon: <Atom className="w - 5 h - 5" />,
+    icon: <Atom className="w-5 h-5" />,
     badge: 'Hot',
     featured: true,
     children: [;
@@ -877,7 +879,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     description: 'Documentation, support, and learning resources'
     children: [
     href: '/enterprise - it',
-    icon: <Shield className="w - 5 h - 5" />,
+    icon: <Shield className="w-5 h-5" />,
     badge: 'Enterprise',
     featured: true,
     children: [;
@@ -1025,12 +1027,13 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     closeDropdowns()
   };
 
-
-
             {/* Desktop Navigation */}  };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -1139,8 +1142,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -1694,10 +1700,13 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         }`} />;
                       </button>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -1744,6 +1753,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   <div className="text-sm opacity-75 mt-1">{child.description}</div>
                                 )}
 
+<<<<<<< HEAD
                               </Link>
 
                                 )}
@@ -1756,6 +1766,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                               </Link>
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1770,6 +1782,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     </div>;
                   ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {/* Mobile Quick Actions */}
                   <div className='pt-4 border-t border-gray-800/50'>
@@ -1789,6 +1802,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           key={action.name}
                           href={action.href}
                         <Link
@@ -1959,7 +1974,7 @@ export default UltraFuturisticNavigation2035;
 }
 ;
 }, []);
-</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </div> <div className="text - xs text - gray - 400" >Revolutionary Technology</div> </div> </a> > {
+</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip-text text-transparent" > Zion Tech Group </div> <div className="text - xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
   item.icon;
 }<span> {
   item.name;
@@ -1990,7 +2005,7 @@ export default UltraFuturisticNavigation2035;
 }on_click= {
   close_dropdowns;
 }>);
-}</div> <ArrowRight className="w - 4 h - 4 opacity - 50" /> </a>) );
+}</div> <ArrowRight className="w - 4 h-4 opacity-50" /> </a>) );
 }</div> </div> </motion.div>);
 }</AnimatePresence> </div>) );
 }</div> <Link key= {

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -62,6 +62,11 @@ export function useAuthState() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+ * Custom hook to manage auth state
+ */
+export function useAuthState() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return {
     user,
     setUser,
@@ -76,6 +81,7 @@ export function useAuthState() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -88,22 +94,25 @@ import type { UserProfile } from "@/types/auth",;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
   }
 }
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from './react';
 import type { UserProfile } from "@/types / auth";
@@ -116,13 +125,7 @@ export /**
 function useAuthState() {
   const [user, set_user] = useState < UserProfile | null>(null);
   const [is_loading, setIsLoading] = useState < boolean>(true);
-  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const [user, setUser] = useState<UserProfile | null>(null),;
+  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);  const [user, setUser] = useState<UserProfile | null>(null),;
   const [isLoading, setIsLoading] = useState<boolean>(true),;
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
   return {;
@@ -132,6 +135,7 @@ function useAuthState() {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -144,6 +148,8 @@ function useAuthState() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -158,18 +164,12 @@ function useAuthState() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return {;
     user;
     set_user;
     is_loading;
+<<<<<<< HEAD
     setIsLoading;
 <<<<<<< HEAD
 
@@ -191,3 +191,6 @@ function useAuthState() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    setIsLoading;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

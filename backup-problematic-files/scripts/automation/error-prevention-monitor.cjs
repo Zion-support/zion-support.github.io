@@ -184,9 +184,15 @@ class ErrorPreventionMonitor {
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
     try {
+<<<<<<< HEAD
       execSync('bash start-simple-error-prevention.sh', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
+=======
+      execSync('bash start-simple-error-prevention.sh', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       this.log('Auto-fix process completed')} catch (error) {
       this.log(`Auto-fix process "failed": ${error.message}`)}
@@ -194,9 +200,15 @@ class ErrorPreventionMonitor {
   checkBuildStatus() {
     try {
       this.log('Checking build status...');
+<<<<<<< HEAD
       execSync('yarn build', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
+=======
+      execSync('yarn build', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       this.log('Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
@@ -336,7 +348,11 @@ class ErrorPreventionMonitor {
       }
       // Check for multiple CSS frameworks
       const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
+<<<<<<< HEAD
       const foundFrameworks = cssFrameworks.filter(framework =>
+=======
+      const foundFrameworks = cssFrameworks.filter(framework => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         packageJson.dependencies && packageJson.dependencies[framework]
       );
       if (foundFrameworks.length > 1) {
@@ -643,3 +659,7 @@ if (require.main === module) {
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 monitor.run();
+<<<<<<< HEAD
+=======
+monitor.run();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

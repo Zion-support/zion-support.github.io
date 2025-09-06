@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import { FileText } from 'lucide-react';
@@ -54,60 +55,72 @@ export function SelectResumeSection({
 =======
 import React from 'react';
 import { FileText } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-interface ResumeOption {
-  id: string;
-  title: string;
-  description: string;
-  lastModified: string;
-  fileSize: string;
-  url: string;
-}
-
-interface Resume {
-  id: string;
-  title: string;
-  description: string;
-  lastModified: string;
-  fileSize: string;
-  url: string;
-}
-
-interface ResumePreviewCardProps {
-  resume: Resume;
-  isSelected: boolean;
-  onSelect: (resume: Resume) => void;
-}
-
-const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
-  resume,
-  isSelected,
-  onSelect,
-}) => {
+export function SelectResumeSection({
+  isLoading
+}: SelectResumeSectionProps) {
   return (
-    <div
-      className={`p-4 border rounded-lg cursor-pointer transition-colors ${
-        isSelected
-          ? 'border-blue-500 bg-blue-50'
-          : 'border-gray-200 hover:border-gray-300'
-      }`}
-      onClick={() => onSelect(resume)}
-    >
-      <div className="flex items-start space-x-3">
-        <FileText className="h-8 w-8 text-gray-400" />
-        <div className="flex-1">
-          <h3 className="font-medium text-gray-900">{resume.title}</h3>
-          <p className="text-sm text-gray-500 mt-1">{resume.description}</p>
-          <div className="flex items-center space-x-4 mt-2 text-xs text-gray-400">
-            <span>Modified: {resume.lastModified}</span>
-            <span>{resume.fileSize}</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div className="space-y-2">
+      {resumeOptions.length === 0 ? (
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
+      ) : (
+        <>
+
+            >
+              <div className="flex items-center">
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white">{option.title}</span>
+              </div>
+            </button>
+          ))}
+          
+
+          
+
+          
+
+          
+
+          {resumeOptions.map((option) => (
+            <button
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick={() => handleResumeSelect(option.id)}
+            >
+              <div className="flex items-center">
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white">{option.title}</span>
+              </div>
+            </button>
+          ))}
+
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
+            <ResumePreviewCard
+              resume = {selectedResume.resume as Resume,}
+              onDownload = {handleDownloadResume,}
+              isLoading = {isLoading,}
+            />
+;
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
+            <ResumePreviewCard;
+              resume={selectedResume.resume as Resume}
+              onDownload={handleDownloadResume}
+              isLoading={isLoading}
+            />;
+          )}
+        </>
+      )}
   );
+}}
 };
 
+<<<<<<< HEAD
 interface SelectResumeSectionProps {
   resumes: ResumeOption[];
   selectedResume: ResumeOption | null;
@@ -162,3 +175,9 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
 =======
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

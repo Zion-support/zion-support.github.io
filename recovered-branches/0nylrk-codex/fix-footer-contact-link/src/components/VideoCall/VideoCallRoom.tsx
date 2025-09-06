@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,21 +33,32 @@ interface VideoCallRoomProps {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import React from 'react',
+<<<<<<< HEAD
 =======
 import React from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-interface VideoCallRoomProps {
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
   room?: string;
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,6 +70,8 @@ interface VideoCallRoomProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
@@ -66,19 +80,16 @@ interface VideoCallRoomProps {
   className?: string
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-
-export function VideoCallRoom({
-  room,
-  token,
-  serverUrl,
-  onDisconnect,
-  className,
-}: VideoCallRoomProps) {
+export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -130,6 +141,9 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -138,24 +152,19 @@ interface VideoCallRoomProps {;
   token?: string,;
   serverUrl?: string,;
   onDisconnect?: () => void;
+<<<<<<< HEAD
   className?: string;
 =======
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+  className?: string;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -198,56 +207,16 @@ function VideoCallRoom() {
       <CardHeader>;
         <CardTitle > Video Call</CardTitle>;
       </CardHeader>;
-      <CardContent className="flex flex - col items - center justify - center p - 8">;
-        <p className="text - center mb - 4">;
-          Video calling functionality is currently unavailable.;
-          Please check back later or use an alternative communication method.;
-        </p>;
-        <div className="flex gap - 2">;
-          <Button on_click={on_disconnect}>Close</Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-
-
-import React from 'react',;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-;
-interface VideoCallRoomProps {;
-  room?:string,;
-  token?:string,;
-  serverUrl?:string,;
-  onDisconnect?:() => void,;
-  className?:string,;
-}
-;
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className } VideoCallRoomProps) {;
-  return (;
-    <Card className={className || "w-full max-w-3xl mx-auto"}>;
-      <CardHeader>;
-        <CardTitle>Video Call</CardTitle>;
-      </CardHeader>;
-      <CardContent className="flex flex-col items-center justify-center p-8">;
-        <p className="text-center mb-4">;
+      <CardContent className="flex flex - col items - center justify - center p-8">;
+        <p className="text - center mb-4">;
           Video calling functionality is currently unavailable.;
           Please check back later or use an alternative communication method.;
         </p>;
         <div className="flex gap-2">;
-          <Button onClick={onDisconnect}>Close</Button>;
+          <Button on_click={on_disconnect}>Close</Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   ),;}
  interface VideoCallRoomProps {
@@ -270,3 +239,7 @@ className?: string
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

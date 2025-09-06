@@ -1,10 +1,7 @@
 =======
 
+
 <<<<<<< HEAD
-
-=======
-
-
 
 import fs from "fs";
 import path from "path";
@@ -13,6 +10,8 @@ import { IntegrationsState } from "./types";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
@@ -36,18 +35,10 @@ function ensureDataDir (): void {
   $2
 }
     const initial: IntegrationsState = {
-<<<<<<< HEAD
       connections: []
       logs: []
       overrides: []
       events: []
-=======
-
-      connections: [],
-      logs: [],
-      overrides: [],
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 export function readState(): IntegrationsState {
@@ -58,6 +49,7 @@ export function readState(): IntegrationsState {;
   ensureDataDir();
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
+<<<<<<< HEAD
     return JSON && JSON.parse(raw) as IntegrationsState;
 <<<<<<< HEAD
   }
@@ -99,10 +91,14 @@ function ensureDataDir(): void {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
+=======
+    return JSON && JSON.parse(raw) as IntegrationsState;  } catch (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -115,6 +111,11 @@ export function writeState(
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  mutator: (state: IntegrationsState) => void,
+): IntegrationsState {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ensureDataDir();
   const current = readState();
   (mutator(current)
@@ -124,8 +125,6 @@ export function writeState(
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-
 
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
@@ -143,6 +142,7 @@ export function write_state (
   (mutator (current),
     fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
   return current;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -152,3 +152,6 @@ export function write_state (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

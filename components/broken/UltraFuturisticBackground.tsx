@@ -83,13 +83,14 @@ if (return) {
           }
         });
       });
-      requestAnimationFrame(animate);    };          }
+      requestAnimationFrame(animate)
+};          }
         });
-      });
-    };
+      })
+};
 
-    animate();
-    };
+    animate()
+};
 
     window && window.addEventListener('resize', handleResize);
 ;
@@ -186,6 +187,7 @@ if ( {) {
             duration: 20,
             repeat: Infinity,
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 <<<<<<< HEAD
@@ -193,6 +195,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       {/* Canvas Background */}
@@ -217,7 +221,6 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           animate={{
-
 
           }}
           transition={{
@@ -351,8 +354,6 @@ if ( {) {
           }}
         />;
 
-
-
             duration: 15,
             repeat: Infinity,
 
@@ -371,7 +372,6 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
-
 
         />
 
@@ -537,7 +537,7 @@ if ( {) {
               coordinate_y: [0, -20, 0];
 
             key={i}
-            className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
+            className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded-full blur-sm";
             style={{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }}
@@ -545,6 +545,38 @@ if ( {) {
               duration: 3 + i * 0.5,
               repeat: Infinity,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              ease: "easeInOut",
+              delay: i * 0.3
+            }}
+          />;
+        ))}
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>;
+        {[...Array(5)].map((_, i) => (;
+          <motion&& motion.div
+              delay: i * 0.3,              ease: "easeInOut",
+              delay: i * 0.3
+            }}
+          />
+        ))}
+      </div>
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>
+              delay: i * 0.3;
+            }}
+          />))}
+      </div>;
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset - 0'>;
+        {[...Array (5)].map ((_, i) => (
+          <motion.div;
+
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             }}
 
@@ -655,7 +687,11 @@ if ( {) {
           <motion.div;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             key={i}
+<<<<<<< HEAD
 
+=======
+            className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan-400 / 20 to-transparent";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             style={{
               top: `${20 + (i * 15)}%`;
             }}
@@ -717,6 +753,7 @@ if ( {) {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -724,6 +761,8 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Neon Glow Effects */}
       <div className='absolute inset-0'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />
@@ -869,14 +908,16 @@ if ( {) {
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
 
-
           />
         ))}
       </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
         <svg className='w-full h-full'>;
@@ -952,6 +993,7 @@ if ( {) {
               }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
                 ease: 'easeInOut',                ease: "easeInOut"
@@ -964,9 +1006,10 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-
 
               }}
 
@@ -998,7 +1041,7 @@ export default UltraFuturisticBackground;  )
 =======
 };
 
-export default UltraFuturisticBackground;  );
+export default UltraFuturisticBackground;  )
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1011,11 +1054,11 @@ export default UltraFuturisticBackground;
               ease: 'linear',
               delay: Math.random () * 5,            }}      </div>;
       {/* Data Stream Effect */}
-      <div className="absolute inset - 0">;
+      <div className="absolute inset-0">;
         {[...Array (20)].map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent";
+            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan-400 to-transparent";
             style={{
               left: `${Math.random () * 100}%`,
               top: '-2rem';
@@ -1059,7 +1102,7 @@ export default UltraFuturisticBackground;
               x2={Math.random () * 100}
               y2={Math.random () * 100}
               stroke='url (#quantum_gradient)';
-              stroke_width='1';
+              strokeWidth='1';
               opacity='0.3';
               animate={{
                 opacity: [0.1, 0.5, 0.1],
@@ -1068,7 +1111,7 @@ export default UltraFuturisticBackground;
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
                 ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
-              stroke_width="1";
+              strokeWidth="1";
               opacity="0.3";
               animate={{
                 opacity: [0.1, 0.5, 0.1];

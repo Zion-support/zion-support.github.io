@@ -153,8 +153,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       };
     ];
     setGeneratedSlides(newSlides);
-    setIsGenerating(false);
-  };
+    setIsGenerating(false)
+};
 ;
   const updateSlide = ("props": "any) => {;
   const updateSlide = (props) => {;
@@ -174,11 +174,11 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       "id": Dat e.now().toString()",;
       "title": 'New Slide',;
       "content": 'Slide content here...',;
-      "type": 'custom';
-  };
+      "type": 'custom'
+};
   const removeSlide = (props) => {;
-    setGeneratedSlides(prev => prev.filter(slide => slide.id !== id));
-  };
+    setGeneratedSlides(prev => prev.filter(slide => slide.id !== id))
+};
   const addSlide = (props: any) => {
     const newSlide: Slid e = {';
       id: Dat e.now().toString(),';';
@@ -192,8 +192,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       "content": 'Slide content here...',
       "type": 'custom'
     };
-    setGeneratedSlides(prev => [...prev, newSlide]);
-  };
+    setGeneratedSlides(prev => [...prev, newSlide])
+};
   return (
     <div className="min-h-screen bg-white">
       <div className="flex justify-between items-center mb-6">
@@ -206,10 +206,10 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       id: Dat e.now().toString(),;
       title: 'New Slide',;
       content: 'Slide content here...',;
-      type: 'custom';
-    };
-    setGeneratedSlides(prev => [...prev, newSlide]);
-  };
+      type: 'custom'
+};
+    setGeneratedSlides(prev => [...prev, newSlide])
+};
 ;
   return (;
     <div className="max-w-6xl mx-auto p-6">;
@@ -411,7 +411,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
   );
 }
     </div>
-    );
+    )
 };
 export default SlideEditor;
 </textarea>';

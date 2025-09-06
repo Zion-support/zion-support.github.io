@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextPage } from 'next',
 import Head from 'next / head',
@@ -33,11 +34,14 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <EnhancedLayout>
       <Head>
         <title>{_title} - Zion Tech Solutions</title>
       </Head>
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {!data ? (
 <<<<<<< HEAD
@@ -45,3 +49,13 @@ if ( {) {
       ) : (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      {!data ? (
+
+        <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>      )}
+    </EnhancedLayout>
+  )
+},
+
+export default AutomationDetail,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

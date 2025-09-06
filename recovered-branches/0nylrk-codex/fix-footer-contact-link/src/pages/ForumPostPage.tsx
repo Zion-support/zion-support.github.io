@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,6 +27,10 @@ import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -45,6 +50,7 @@ import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
+<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -84,6 +90,9 @@ const mockPost: ForumPost = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const mockPost: ForumPost = {
+=======
+import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: "1"
   title: "Best practices for AI model fine-tuning"
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
@@ -113,6 +122,7 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-01T14:30:00Z"
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
+<<<<<<< HEAD
     downvotes: 0
 <<<<<<< HEAD
 
@@ -126,6 +136,9 @@ const mockReplies: ForumReply[] = [
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
+=======
+    downvotes: 0  {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: "reply2"
     postId: "1"
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."
@@ -148,6 +161,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z"
     upvotes: 15
     downvotes: 0
+<<<<<<< HEAD
     isAnswer: true
 <<<<<<< HEAD
   }
@@ -516,6 +530,9 @@ export default function ForumPostPage() {
     return (
 <<<<<<< HEAD
 =======
+=======
+    isAnswer: true    return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { postId } = useParams() as { postId?:string },;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
@@ -531,11 +548,6 @@ export default function ForumPostPage() {
   // For this demo, we'll assume the post is found;
   if (!post) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <AppLayout>;
         <div className="container py-8">;
           <h1>Post not found</h1>;
           <Button asChild className="mt-4">;
@@ -543,25 +555,10 @@ export default function ForumPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
-
-
-  },
-
-
-
-=======
-  }
-  },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     );
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -572,6 +569,7 @@ export default function ForumPostPage() {
     setPost({ ...post, downvotes: post.downvotes + 1 })
     toast({
       title: "Vote recorded"
+<<<<<<< HEAD
       description: "You downvoted this post"})
 <<<<<<< HEAD
 
@@ -618,11 +616,12 @@ export default function ForumPostPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       downvotes: 0
+=======
+      description: "You downvoted this post"})      downvotes: 0
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: `reply${Date.now()}`,
       postId: post.id,
       content,
@@ -638,7 +637,6 @@ export default function ForumPostPage() {
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
     
-<<<<<<< HEAD
 
     toast({
       title: "Reply posted"
@@ -646,6 +644,7 @@ export default function ForumPostPage() {
 
   },
 
+<<<<<<< HEAD
 
 
 =======
@@ -739,25 +738,20 @@ export default function ForumPostPage() {
         variant: "destructive";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       return;
     }
-<<<<<<< HEAD
-
 
     // Update the replies;
     const updatedReplies = replies && replies.map(reply => ({;
-
-=======
-      });
-      return;
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
 
       ...reply,
+<<<<<<< HEAD
       isAnswer: reply.id === replyId
 <<<<<<< HEAD
 
@@ -779,15 +773,16 @@ export default function ForumPostPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })),
+=======
+      isAnswer: reply.id === replyId    })),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
     toast({
       title: "Answer marked"
+<<<<<<< HEAD
       description: "The reply has been marked as the accepted answer"})
 
   },
@@ -806,6 +801,11 @@ export default function ForumPostPage() {
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      description: "The reply has been marked as the accepted answer"})    toast({
+      title: "Answer marked"
+      description: "The reply has been marked as the accepted answer"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -815,6 +815,7 @@ export default function ForumPostPage() {
     }
     toast({
       title: "Report submitted"
+<<<<<<< HEAD
       description: "A moderator will review this content"})
 <<<<<<< HEAD
 
@@ -859,26 +860,33 @@ export default function ForumPostPage() {
     setPost({ ...post, isLocked: !post.isLocked })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
+=======
+      description: "A moderator will review this content"})  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
     
     setPost({ ...post, isLocked: !post.isLocked }),
     
-<<<<<<< HEAD
 
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
+<<<<<<< HEAD
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     toast({
+=======
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+<<<<<<< HEAD
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1207,6 +1215,9 @@ export default function ForumPostPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {post.authorRole}
+=======
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")                      {post.authorRole}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </Badge>
                   )}
                 </div>
@@ -1222,6 +1233,7 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1435,12 +1447,13 @@ export default function ForumPostPage() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>;
+=======
+    setPost({ ...post, isAnswered: true }),;        <Card>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
                 <Avatar className="h-12 w-12">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <AvatarImage src={post && post.authorAvatar} />;
                   <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
                 </Avatar>;
@@ -1448,47 +1461,22 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post && post.authorName}</div>;
                   {post && post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
-                      {post && post.authorRole}
-=======
-                  <AvatarImage src={post.authorAvatar} />;
-                  <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <div className="font-medium text-lg">{post.authorName}</div>;
-                  {post.authorRole && (;
-                    <Badge variant="outline" className="mt-1">;
-                      {post.authorRole}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    </Badge>;
+                      {post && post.authorRole}                    </Badge>;
                   )}
                 </div>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <div className="flex items-center text-sm text-muted-foreground">;
                 <Calendar className="h-4 w-4 mr-1" />;
-                <time dateTime={post && post.createdAt} title={formattedDate}>;
-=======
-              ;
-              <div className="flex items-center text-sm text-muted-foreground">;
-                <Calendar className="h-4 w-4 mr-1" />;
-                <time dateTime={post.createdAt} title={formattedDate}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  {timeAgo}
+                <time dateTime={post && post.createdAt} title={formattedDate}>;                  {timeAgo}
                 </time>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
 
             <div className="flex flex-wrap gap-2 mb-6">;
+<<<<<<< HEAD
               {post && post.tags.map(tag => (;
 =======
             ;
@@ -1501,214 +1489,22 @@ export default function ForumPostPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {tag}
                 </Badge>;
-              ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            </div>;
-
-            <div className="prose dark:prose-invert max-w-none mb-6">;
-              {post && post.content.split('\n\n').map((paragraph, i) => (;
-                <p key={i}>{paragraph}</p>;
-              ))}
-            </div>;
-
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
-              <div className="flex items-center gap-4">;
-
-=======
-            </div>;
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-            <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <Button
+              ))}                <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  className="flex items-center gap-2">;
-                  <ThumbsUp className="h-4 w-4" />;
-                  <span>{post && post.upvotes}</span>;
-                </Button>;
-<<<<<<< HEAD
-=======
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsUp className="h-4 w-4" />
-                  <span>{post.upvotes}</span>
-                </Button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleDownvote}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                  className="flex items-center gap-2">;
-                  <ThumbsDown className="h-4 w-4" />;
-                  <span>{post && post.downvotes}</span>;
-                </Button>;
-              </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              <div className="flex items-center gap-2">;
-                {(isAuthor || isAdminOrMod) && (;
-                  <Button variant="ghost" size="sm" asChild>;
-                    <Link to={`/community/edit/${post && post.id}`}>;
-<<<<<<< HEAD
-=======
-            ;
-            <div className="prose dark:prose-invert max-w-none mb-6">;
-              {post.content.split('\n\n').map((paragraph, i) => (;
-                <p key={i}>{paragraph}</p>;
-              ))}
-            </div>;
-            ;
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
-              <div className="flex items-center gap-4">;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  onClick={handleUpvote}
-                  className="flex items-center gap-2";
-                >;
-                  <ThumbsUp className="h-4 w-4" />;
-                  <span>{post.upvotes}</span>;
-                </Button>;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  onClick={handleDownvote}
-                  className="flex items-center gap-2";
-                >;
-                  <ThumbsDown className="h-4 w-4" />;
-                  <span>{post.downvotes}</span>;
-                </Button>;
-              </div>;
-              ;
-              <div className="flex items-center gap-2">;
-                {(isAuthor || isAdminOrMod) && (;
-                  <Button variant="ghost" size="sm" asChild>;
-                    <Link to={`/community/edit/${post.id}`}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                      <Edit className="h-4 w-4 mr-1" />;
-                      Edit;
-                    </Link>;
-                  </Button>;
-                )}
-<<<<<<< HEAD
-
-                {isAdminOrMod && (;
-                  <>;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={handlePinPost}>;
-                      <Pin className="h-4 w-4 mr-1" />;
-                      {post && post.isPinned ? "Unpin" : "Pin"}
-                    </Button>;
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={handleLockPost}>;
-                      <Lock className="h-4 w-4 mr-1" />;
-                      {post && post.isLocked ? "Unlock" : "Lock"}
-                    </Button>;
-                  </>;
-                )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsDown className="h-4 w-4" />
-                  <span>{post.downvotes}</span>
-                </Button>
-              </div>
-              <div className="flex items-center gap-2">
-                {(isAuthor |isAdminOrMod) && (
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link to={`/community/edit/${post.id}`}>
-                      <Edit className="h-4 w-4 mr-1" />
-                      Edit
-                    </Link>
-                  </Button>
-                )}
-                {isAdminOrMod && (
-                  <>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={handlePinPost}
-                    >
-                      <Pin className="h-4 w-4 mr-1" />
-                      {post.isPinned ? "Unpin" : "Pin"}
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={handleLockPost}
-                    >
-                      <Lock className="h-4 w-4 mr-1" />
-                      {post.isLocked ? "Unlock" : "Lock"}
-                    </Button>
-                  </>
-                )}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleReportPost}
-                >
-                  <Flag className="h-4 w-4 mr-1" />
-                  Report
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <div className="mt-8">
-          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
-          {post.isAnswered && (
-            <div className="mb-6">
-              <h3 className="flex items-center text-green-600 font-medium mb-2">
-                <CheckCircle className="h-4 w-4 mr-2" />
-                Accepted Answer
-              </h3>
-              {replies.filter(reply => reply.isAnswer).map(reply => (
-                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />
-              ))}
+                  onClick={handleDownvote}              )}
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2205,6 +2001,8 @@ if (return) {
             </div>
           )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -2217,27 +2015,19 @@ if (return) {
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-          {post && post.isLocked && (;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ReplyCard
+                  key={reply.id}
+                  reply={reply}                <ReplyCard
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
-<<<<<<< HEAD
           {post && post.isLocked && (;
                 </Alert>;              )}
             </div>;
           )}
           ;
           {post.isLocked && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Alert className="mb-8">;
               <AlertDescription className="flex items-center">;
                 <Lock className="h-4 w-4 mr-2" />;
@@ -2245,30 +2035,22 @@ if (return) {
               </AlertDescription>;
             </Alert>;
           )}
-<<<<<<< HEAD
 
           <div className="space-y-6">;
             {replies;
               .filter(reply => !reply && reply.isAnswer);
               .map(reply => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <ReplyCard
                   key={reply && reply.id}
                   reply={reply}
 
                   onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
                   canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
-                />;
-=======
-=======
-                  onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
-                  canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
-                />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+                />;                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2477,3 +2259,5 @@ downvotes: 0
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

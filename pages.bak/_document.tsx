@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,16 +69,17 @@ import { Html,Head,Main,NextScript } from 'next/document'; export default functi
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+<<<<<<< HEAD
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
@@ -130,3 +132,6 @@ import { Html,Head,Main,NextScript } from 'next/document'; export default functi
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

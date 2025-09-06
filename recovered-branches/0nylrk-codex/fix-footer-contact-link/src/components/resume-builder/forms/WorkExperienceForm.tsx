@@ -66,12 +66,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -133,12 +134,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 =======
 
-
   };
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -157,7 +160,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   }
   };
 =======
-
 
   };
 
@@ -396,7 +398,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               name="description";
               render={({ field }) => (
                 <FormItem>;
-                  <FormLabel className="flex justify - between">;
+                  <FormLabel className="flex justify-between">;
                     <span > Job Description</span>;
                     <AIEnhancementButton;
                       current_content={field.value || ''}
@@ -408,8 +410,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormControl>;
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
+<<<<<<< HEAD
                       className="min - h-[100px]";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                      className="min-h-[100px]";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {...field}
                     />;
                   </FormControl>;
@@ -439,8 +445,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       company_name: '',;
                       role_title: '',;
                       start_date: format(new Date(), 'yyyy-MM-dd');
-                      is_current: false,;
-                      description: '',;
+                      is_current: false,,
+  description: '',;
                       location: ''});
                   } else {;
                     onBack();

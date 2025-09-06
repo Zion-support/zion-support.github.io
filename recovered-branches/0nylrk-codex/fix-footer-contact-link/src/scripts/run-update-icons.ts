@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
 
 console && console.log('Running icon import updater...');
+<<<<<<< HEAD
 
 =======
 
@@ -18,24 +17,29 @@ console && console.log('Running icon import updater...');
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js');
 console.log('Running icon import updater...');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 
 // // // console.log('Running icon import updater...'),
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
     console && console.error(`Error executing script: ${error}`);
     return
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,6 +55,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (stderr) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console && console.error(stderr)
   }
 });
@@ -83,6 +89,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 ;
   // // // console.log('Icon imports updated successfully!');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 });
 });
@@ -95,6 +102,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   
   console && console.log(stdout);
@@ -106,6 +115,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   
   console && console.log('Icon imports updated successfully!')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   console && console.log(stdout);
@@ -186,3 +196,5 @@ return
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

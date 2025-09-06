@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
   const apiKey = process.env.OPENAI_API_KEY;
@@ -41,9 +42,11 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
+      return {  try {
       return {
-<<<<<<< HEAD
     }
     const confidence =
       typeof parsed && parsed.confidence === 'number'
@@ -61,60 +64,25 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
   } catch {
     return {
   reasoning: string;
-=======
-
-        label: 'SUSPICIOUS',
-        reason: 'Unrecognized label from GPT',
-
-    return {
-
-      label,
-      reason: parsed && parsed.reason || 'No reason provided',
-      confidence,
-
-    } as GptClassification;
-  } catch {
-    return {
-
-=======
-// GPT-based fraud classification utilities
-export interface GptClassification {
-  label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-  confidence: number; // 0-100
-
-  reasoning: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5,
     }
   }export interface GptResult {
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
-<<<<<<< HEAD
   label: string;
   confidence: number;
   reasoning: string
 }
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  label: string;
+}  label: string;
   confidence: number;
   reasoning: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -127,6 +95,7 @@ export interface GptClassification {
 
   }
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -150,3 +119,6 @@ export interface GptClassification {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

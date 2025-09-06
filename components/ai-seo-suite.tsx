@@ -178,7 +178,6 @@ export default function AISeosuitePage() {
     {
       icon: <Search className='w-8 h-8 text-white' />,
 
-
 export default function AISeosuitePage() {
   const features = [
 } from 'lucide-react';
@@ -666,13 +665,13 @@ export default function AISeosuitePage() {
     {;
       category: 'On-Page SEO',;
       icon: <Target className="w-6 h-6 text-green-400" />,;
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization'];
-    };
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+};
     {;
       category: 'Technical SEO',;
       icon: <Settings className="w-6 h-6 text-purple-400" />,;
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator'];
-    };
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+};
     {;
       category: 'Analytics & Reporting',;
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
@@ -842,10 +841,10 @@ export default function AISeosuitePage() {
                     {feature.icon}
                   </div>;
                 </div>;
-                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300">;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition-colors duration-300">;
                   {feature.title}
                 </h3>;
-                <p className="text - gray - 400 leading - relaxed">;
+                <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1022,10 +1021,6 @@ export default function AISeosuitePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
 
-
-
-
-
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1155,6 +1150,7 @@ export default function AISeosuitePage() {
               <Card
                 key={index}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </p>;
               </Card>))}
@@ -1400,6 +1396,8 @@ export default function AISeosuitePage() {
                 )}
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1464,8 +1462,11 @@ export default function AISeosuitePage() {
                 </Button>;
               </Card>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </li>
                   ))}
                 </ul>
@@ -1658,7 +1659,6 @@ export default function AISeosuitePage() {
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
 
               Watch Demo;
             </Button>;

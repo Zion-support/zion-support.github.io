@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -9,6 +10,8 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -25,6 +28,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Define the form schema with zod;
@@ -124,10 +128,13 @@ export function ProductSubmissionForm() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define the form schema with zod
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -505,10 +512,11 @@ export function ProductSubmissionForm() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     setIsSubmitting(true),
     
-
 
     try {
       // Create the product listing
@@ -528,9 +536,12 @@ export function ProductSubmissionForm() {;
         .insert([productData])
         .select('id')
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       }
 
@@ -548,18 +559,12 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-    setIsSubmitting(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {;
       // Create the product listing;
       const productData = {;
-        title: values && values.title,;
-        description: values && values.description,;
+        title: values && values.title,,
+  description: values && values.description,;
         price: parseFloat(values && values.price),;
         category: values && values.category,;
         currency: "USD", // Default currency;
@@ -610,30 +615,25 @@ export function ProductSubmissionForm() {;
 
       // Show success message;
       toast({;
-        title: "Product Published!",;
-        description: "Your product has been successfully published on Zion."}),;
+        title: "Product Published!",,
+  description: "Your product has been successfully published on Zion."}),;
 
       // Redirect to product page;
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
     } catch (error) {;
       toast({;
-        title: "Publication Failed",;
-        description: error instanceof Error ? error && error.message : "An unknown error occurred",;
+        title: "Publication Failed",,
+  description: error instanceof Error ? error && error.message : "An unknown error occurred",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
-<<<<<<< HEAD
 
     }
-  }
-=======
-=======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    }
+  }    }
 
   },
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -882,6 +882,9 @@ export function ProductSubmissionForm() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+=======
+  return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
           Manual Creation;
@@ -891,6 +894,7 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1104,6 +1108,8 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
             <FormField
               control={form && form.control}
@@ -1118,25 +1124,27 @@ if ( {) {
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <FormControl>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
                   <FormDescription>;
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 </FormItem>;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1144,13 +1152,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
-
 
             <FormField
               control={form && form.control}
               name="description"
-<<<<<<< HEAD
 
               render={({ field }) => (;
                 <FormItem>;
@@ -1159,6 +1167,7 @@ if ( {) {
                     <Textarea
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
+<<<<<<< HEAD
                       {...field} 
 <<<<<<< HEAD
 =======
@@ -1186,27 +1195,17 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
+=======
+                      {...field}                     />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-              <FormField
-                control={form && form.control}
-                name="price"
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Price (USD)</FormLabel>;
-                    <FormControl>;
-                      <Input type="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field} />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </FormItem>)}
             />;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
               <FormField;
                 control={form.control}
                 name="price";
@@ -1214,6 +1213,7 @@ if ( {) {
                   <FormItem>;
                     <FormLabel > Price (USD)</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
 <<<<<<< HEAD
 
@@ -1351,35 +1351,22 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>;
+=======
+                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             />;
-
 
             <FormField
               control={form && form.control}
               name="image"
-
-=======
-                    Add relevant tags to help users find your product (e.g., ai, productivity, design);
-                  </FormDescription>;
-                  <FormMessage />;
-                </FormItem>;              )}
-            />;
-;
-            <FormField;
-              control={form.control}
-              name="image";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
                     <Input
                       type="file" 
                       accept="image/*" 
@@ -1398,20 +1385,13 @@ if ( {) {
                         <img
                           src={imagePreview} 
                           alt="Preview" 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-            <FormField
-              control={form && form.control}
-              name="image"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
                     </div>;
                   )}
                 </FormItem>;
+<<<<<<< HEAD
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1776,3 +1756,6 @@ return (<Tabs value= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+              )}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

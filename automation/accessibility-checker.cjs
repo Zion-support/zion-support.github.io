@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +13,13 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -150,8 +156,12 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -316,6 +326,8 @@ if (require.main === module) {
     });
 }
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 console.log('♿ Running accessibility check...');
@@ -461,7 +473,11 @@ if (!fs.existsSync(reportsDir)) {
 
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -605,6 +621,8 @@ if (require.main === module) {
 =======
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -622,7 +640,11 @@ if (require.main === module) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -645,6 +667,8 @@ console.log(`📄 Accessibility report saved to: ${reportFile}`);
 =======
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -675,7 +699,11 @@ console.log(`📄 Accessibility report saved to: ${reportFile}`);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -731,6 +759,8 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -750,4 +780,8 @@ module.exports = AccessibilityChecker;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

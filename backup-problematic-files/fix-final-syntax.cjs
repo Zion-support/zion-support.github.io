@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
 <<<<<<< HEAD
@@ -50,6 +51,11 @@ const path = require('path');
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -57,26 +63,35 @@ const fixes = [
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     replacement: 'import { $1 } from \'$2\';'
   },
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed import statements
   {
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     replacement: 'import { $1 } from \'$2\';\n\nexport default function'
   },
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing semicolons after import statements
   {
     pattern: /import\s+([^]+)\s*$/gm,
     replacement: 'import $1;'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix unterminated string literals
@@ -105,10 +120,13 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /export\s+([^]+)\s*$/gm,
     replacement: 'export $1;'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed function declarations
@@ -137,10 +155,13 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = $2;'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix missing closing brackets and parentheses
@@ -169,10 +190,13 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: 'function $1() {\n'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed JSX attributes
@@ -201,20 +225,27 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = () => $2;'
   },
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing semicolons in object properties
   {
     pattern: /(\w+):\s*([^,}]+)\s*$/gm,
     replacement: '$1: $2,'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed return statements
@@ -243,10 +274,13 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /(\w+)\s*$/gm,
     replacement: '$1,'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix duplicated content (remove duplicate lines)
@@ -275,10 +309,13 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix missing closing brackets in arrays
@@ -307,10 +344,13 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed JSX closing tags
@@ -339,6 +379,8 @@ const fixes = [
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'for (let i = 0; i < length; i++) {\n'
@@ -423,100 +465,155 @@ const fixes = [
     pattern: /import\s+([^;]+)\s*$/gm,
     replacement: 'import $1;'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
     "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     "replacement": 'import { $1 } from \'$2\';'
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed import statements
   {
     "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing semicolons after import statements
   {
     "pattern": /import\s+([^]+)\s*$/gm,
     "replacement": 'import $1;'
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix unterminated string literals
   {
     "pattern": /'([^']*)\s*$/gm,
     "replacement": '\'$1\';'
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed function declarations
   {
     "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
     "replacement": 'export default function $1() {\n  return ('
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing closing brackets and parentheses
   {
     "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
     "replacement": 'return (\n    <div className="min-h-screen bg-white">'
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed JSX attributes
   {
     "pattern": /className="([^"]*);\s*"/g,
     "replacement": 'className="$1"'
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing semicolons in object properties
   {
     "pattern": /(\w+):\s*'([^']*)',\s*;/g,
     "replacement": '$1: \'$2\','
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed return statements
   {
     "pattern": /return\s*\(\s*<div";"/g,
     "replacement": 'return (\n    <div className="min-h-screen bg-white">'
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix duplicated content (remove duplicate lines)
   {
     "pattern": /^(.*)\n\1$/gm,
     "replacement": '$1'
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing closing brackets in arrays
   {
     "pattern": /(\[.*?);\s*\]\s*},/g,
     "replacement": '$1\n  ]\n},'
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed JSX closing tags
   {
     "pattern": /<\/div>\s*\)\s*}\s*$/gm,
     "replacement": '    </div>\n  );\n}'
   }
+<<<<<<< HEAD
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
     "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     "replacement": 'import { $1 } from \'$2\';'
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed import statements
   {
     "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
   },
+<<<<<<< HEAD
   // Fix malformed function declarations
   {
     "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
@@ -567,65 +664,105 @@ const fixes = [// Fix missing semicolons in import statements
     "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
   },
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing semicolons after import statements
   {
     "pattern": /import\s+([^]+)\s*$/gm,
     "replacement": 'import $1;'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix unterminated string literals
   {
     "pattern": /'([^']*)\s*$/gm,
     "replacement": '\'$1\';'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed function declarations
   {
     "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
     "replacement": 'export default function $1() {\n  return ('
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing closing brackets and parentheses
   {
     "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
     "replacement": 'return (\n    <div className="min-h-screen bg-white">'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed JSX attributes
   {
     "pattern": /className="([^"]*);\s*"/g,
     "replacement": 'className="$1"'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing semicolons in object properties
   {
     "pattern": /(\w+):\s*'([^']*)',\s*;/g,
     "replacement": '$1: \'$2\','
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed return statements
   {
     "pattern": /return\s*\(\s*<div";"/g,
     "replacement": 'return (\n    <div className="min-h-screen bg-white">'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix duplicated content (remove duplicate lines)
   {
     "pattern": /^(.*)\n\1$/gm,
     "replacement": '$1'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix missing closing brackets in arrays
   {
     "pattern": /(\[.*?);\s*\]\s*},/g,
     "replacement": '$1\n  ]\n},'
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Fix malformed JSX closing tags
   {
     "pattern": /<\/div>\s*\)\s*}\s*$/gm,
     "replacement": '    </div>\n  );\n}'
   }
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -670,6 +807,9 @@ console.log('🔧 Fixing final syntax errors...');
 
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+console.log('🔧 Fixing final syntax errors...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -677,6 +817,7 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
 <<<<<<< HEAD
@@ -789,12 +930,28 @@ function fixFile(filePath) {
     
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+];
+function fixFile(filePath) {
+    if (!fs.existsSync(filePath)) {
+    }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixes = 0;
+    let fixes = 0;
+    let modified = false;
+    let modified = false;
+
+    let modified = false;
+    let modified = false;
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true}
     });
+<<<<<<< HEAD
 =======
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -803,11 +960,33 @@ function fixFile(filePath) {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return true}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
   return false}
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+function walkDirectory(dir) {
+  let fixedCount = 0;
+  
+  try {
+    const files = fs.readdirSync(dir);
+    
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (stat.isDirectory()) {
         fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
         if (fixFile(filePath)) {
@@ -816,6 +995,7 @@ function fixFile(filePath) {
     }
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message)}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return fixedCount}
@@ -855,6 +1035,13 @@ function fixFile(filePath) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+  
+  return fixedCount}
+    let fixes = 0;
+    let fixes = 0;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
         // Fix malformed className
@@ -865,7 +1052,11 @@ function fixFile(filePath) {
     if (filePath.includes('use-toast.ts')) {
         // Fix malformed interface
         content = content.replace(/position\?\: "top-right" \| "top-center" \| "top-left" \| "bottom-right" \| "bottom-center" \| "bottom-left"\}\s*$/g, 'position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";\n}');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Fix malformed function
         content = content.replace(/const showToast = \(message: string, options\?\: ToastOptions\)\s*=> \{\s*return toast\(message, options\)\s*return \{ showToast \};\s*\};\s*$/g, 'const showToast = (message: string, options?: ToastOptions) => {\n    return toast(message, options);\n  };\n\n  return { showToast };\n}');
     }
@@ -886,12 +1077,20 @@ function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Apply all fixes
     for (const fix of fixes) {
       content = content.replace(fix.pattern, fix.replacement);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -914,6 +1113,7 @@ let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
 <<<<<<< HEAD
@@ -928,10 +1128,14 @@ filesToFix.forEach(file => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 if (totalFixes > 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
     console.log('\n✅ Final syntax error fixing completed!');
 =======
@@ -1015,22 +1219,34 @@ console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
 if (totalFixes > 0) {
+=======
+    console.log('\n✅ Final syntax error fixing completed!');
+} else {
+    console.log('\n✨ No syntax errors found to fix.');
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 if (totalFixes > 0) {
 } else {
 }
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Final targeted fixes for remaining syntax errorsconst fixes = [/ Fix missing semicolons in import statements {" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*$/gm,"" replacement: "import { $1 } from \"$2\";" }, / Fix malformed import statements {"" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*export\s*default\s*function/g,"" replacement: "import { $1 } from \"$2\";\n\nexport default function" }, / Fix missing semicolons after import statements {" pattern: /import\s+([^]+)\s*$/gm,"" replacement: "import $1;" }, / Fix unterminated string literals {"" pattern: /"([^"]*)\s*$/gm,"" replacement: "\"$1\";" }, / Fix malformed function declarations {" pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,"" replacement: "export default function $1() {\n return (" }, / Fix missing closing brackets and parentheses {" pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix malformed JSX attributes {" pattern: /className="([^"]*);\s*"/g,"" replacement: "className="$1"" }, / Fix missing semicolons in object properties {"" pattern: /(\w+):\s*"([^"]*)",\s*;/g,"" replacement: "$1: \"$2\"," }, / Fix malformed return statements {" pattern: /return\s*\(\s*<div";"/g,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix duplicated content (remove duplicate lines) {" pattern: /^(.*)\n\1$/gm,"" replacement: "$1" }, / Fix missing closing brackets in arrays {" pattern: /(\[.*?);\s*\]\s*},/g,"" replacement: "$1\n ]\n}," }, / Fix malformed JSX closing tags {" pattern: /<\/div>\s*\)\s*}\s*$/gm,"" replacement: " </div>\n );\n}" }];function fixFile(filePath) { if (!fs.existsSync(filePath)) {" console.log(` File not found: ${filePath}`); return; }" let content = fs.readFileSync(filePath, "utf8"); let modified = false; fixes.forEach(fix => { const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) { content = newContent; modified = true} }); if (modified) {" fs.writeFileSync(filePath, content, "utf8");"` console.log(`Fixed: ${filePath}`); return true} } catch (error) {` console.error(`Error fixing ${filePath}:`, error.message)} return false}function walkDirectory(dir) { let fixedCount = 0; try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) {" fixedCount += walkDirectory(filePath)} else if (file.endsWith(".tsx") | file.endsWith(".ts") | file.endsWith(".jsx") | file.endsWith(".js")) { if (fixFile(filePath)) { fixedCount++} } } } catch (error) {` console.error(`Error reading directory ${dir}:`, error.message)} return fixedCount}"console.log("\n Summary: ");`console.log(` Files processed: ${filesToFix.length}`);"`console.log(` Total fixes applied: ${totalFixes}`);if (totalFixes > 0) {" console.log("\n Final syntax error fixing completed!");} else {" console.log("\n No syntax errors found to fix.");}""`"`
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
         return;
     }
@@ -1070,6 +1286,7 @@ if (totalFixes > 0) {
 }
 } else {
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
 =======
@@ -1094,6 +1311,11 @@ if (totalFixes > 0) {
 #!/usr/bin/env node;
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+#!/usr/bin/env node;
+}#!/usr/bin/env node;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
 const path = require('path')
     "pattern"
@@ -1107,6 +1329,7 @@ const path = require('path')
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
     "replacement"
     "replacement"
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
 <<<<<<< HEAD
@@ -1155,3 +1378,69 @@ const path = require('path')
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+    "replacement"
+    "replacement"
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+function findFiles(dir, extensions) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+function main() {
+  console.log('🔧 Starting final syntax fixes...');
+  
+  const extensions = ['.ts', '.tsx', '.js', '.jsx', '.cjs', '.mjs'];
+  const files = findFiles(process.cwd(), extensions);
+  
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`✅ Fixed syntax in ${fixedCount} files`);
+  console.log('🎉 Final syntax fixes completed!');
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixFile, findFiles };
+    "replacement"
+    "replacement"
+    "replacement"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

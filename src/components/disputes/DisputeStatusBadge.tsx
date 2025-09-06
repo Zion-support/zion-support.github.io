@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 <<<<<<< HEAD
@@ -69,11 +70,17 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     default:
       break
   }
+  
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Tooltip>
       <TooltipTrigger asChild>
         <Badge variant={variant} className="flex items-center gap-1">
@@ -83,9 +90,12 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
+<<<<<<< HEAD
       </TooltipContent>
     </Tooltip>
   )
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -114,19 +124,27 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   }
 ;
   return (;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
+<<<<<<< HEAD
           <span>Under Dispute</span>;
         </Badge>;
+=======
+          <span>Under Dispute</span>;        </Badge>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Tooltip>;
   );
@@ -144,3 +162,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
     </Tooltip>
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -11,7 +16,11 @@ const noopPromise = () => Promise.resolve();
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -145,7 +154,10 @@ export default mockSentry;
   // Next && Next.js specific
   withSentryConfig: (config: any,) => config,
 
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -437,7 +449,10 @@ export { mockSentry as Sentry };
     Debug: 'debug'
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -570,9 +585,16 @@ export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // All exports are already defined above;
 =======
 // All exports are already defined above;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

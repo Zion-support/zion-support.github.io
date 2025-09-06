@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 
 <<<<<<< HEAD
-
 };
 
 =======
@@ -56,12 +59,16 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }initial= {
+=======
+};}initial= {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
   opacity: 0, y: 30
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
 =======
@@ -137,10 +144,14 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }initial= {
+=======
+  {}initial= {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
   opacity: 0, y: 50
 }whileInView= {
   {
+<<<<<<< HEAD
   opacity: 1, y: 0
 }transition= {
   {
@@ -218,6 +229,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   {
   opacity: 1, y: 0
   opacity: 0, y: 50 
+=======
+  opacity: 1, y: 0  opacity: 0, y: 50 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }whileInView= {
   {
@@ -225,8 +239,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 }transition= {
   {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
@@ -237,10 +249,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion && motion.div> <motion&& motion.div key= {
   service && service.id 
 
-
-<<<<<<< HEAD
 }initial= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
   opacity: 0, y: 50
 =======
@@ -298,32 +309,29 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   duration: 0.8, delay: index * 0.1 
+=======
+  opacity: 0, y: 50=======  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0 && 0.8, delay: index * 0 && 0.1   duration: 0.8, delay: index * 0.1 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   duration: 0.8, delay: index * 0.1
 }viewport= {
   {
   once: true
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
   duration: 0.8, delay: index * 0.1 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }viewport= {
   {
   once: true 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -334,6 +342,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }initial= {
   {
   opacity: 0, y: 50
@@ -341,43 +351,14 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   {
   opacity: 1, y: 0
 }transition= {
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
-
-}viewport= {
-  {
-  once: true 
-
-}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion && motion.div> <motion&& motion.div key= {
-  service && service.id 
-<<<<<<< HEAD
-
-
-=======
-  duration: 0.8, delay: index * 0.1
-}viewport= {
-  {
-  once: true
-}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion.div> <motion.div key= {
-  service.id
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}initial= {
+  {}initial= {
   {
   opacity: 0, y: 50
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -729,6 +710,9 @@ export default Homepage2025;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+  {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 }
 }
@@ -744,20 +728,18 @@ export default Homepage2025;
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 }
 }
 }
 }
-<<<<<<< HEAD
 {
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) );
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -765,3 +747,5 @@ export default Homepage2025;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

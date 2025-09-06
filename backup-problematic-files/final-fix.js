@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/final-fix.js
 ========
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 #!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") |file.endsWith(".ts") |file.endsWith(".jsx") |file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
@@ -52,6 +55,7 @@ function fixFile(filePath) {
       console && console.log("""Fixed": ${filePath}"");
       return true}
     return false} catch (error) {
+<<<<<<< HEAD
   console.error(`"Error": ${filePath}`, error.message);
     return false}
 }
@@ -80,10 +84,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
   fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") |file.endsWith(".ts") |file.endsWith(".jsx") |file.endsWith(".js")) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (fixFile(fullPath)) {
   fixedCount++}
     }
   }
+<<<<<<< HEAD
   return fixedCount}
 const srcDir = path.join(__dirname, "src");
 console.log("Final fix...");
@@ -121,3 +128,5 @@ console.log(""Fixed ${totalFixed} files"")
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/final-fix.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/final-fix.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

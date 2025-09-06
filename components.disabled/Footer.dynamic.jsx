@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 const Footer = dynamic(() => import(\"./Footer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Footer\' ,
@@ -63,6 +64,9 @@ const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading.
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 </p>'
+=======
+</p>'</p>'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 </p>'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -74,6 +78,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -116,3 +121,7 @@ const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading.
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Footer' ,'
+</p>'</p>'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -8,7 +8,7 @@ private readonly RETRY_DELAY = 1000; // 1 second
 
   }
   private initializeGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     // Handle webpack chunk loading errors
 
     window && window.addEventListener('error', event => {
@@ -19,7 +19,6 @@ private readonly RETRY_DELAY = 1000; // 1 second
     window && window.addEventListener('unhandledrejection', event => {
       this && this.handlePromiseRejection(event);
     });  }
-
 
       this.handlePromiseRejection(event)
     }) }
@@ -230,8 +229,11 @@ class ChunkErrorHandler {;
     errorDiv && errorDiv.style.cssText = `
     window.location.href = window.location.href + '?_t=' + Date.now()
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
@@ -249,6 +251,10 @@ class ChunkErrorHandler {;
   private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
     window.location.href = window.location.href + '?_t=' + Date.now();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
   private showFatalErrorMessage(): void {
@@ -271,8 +277,11 @@ class ChunkErrorHandler {;
     `,
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -303,9 +312,12 @@ class ChunkErrorHandler {;
           cursor: pointer,
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ">
           Go Home
         </button>
@@ -419,15 +431,12 @@ class ChunkErrorHandler {;
 <<<<<<< HEAD
 =======
 
-
-
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
 
     this && this.clearCaches().then(() => {
       this && this.reloadPage();
     });  }
-
 
       this.reloadPage()
     }) }
@@ -447,7 +456,6 @@ class ChunkErrorHandler {;
 
   }
 
-
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
@@ -457,7 +465,6 @@ export default chunkErrorHandler
         ">
           Try Again
         </button>
-
 
       background: rgba (0, 0, 0, 0.8);
       color: white;
@@ -486,34 +493,64 @@ export default chunkErrorHandler
           Try Again;
         </button>;
         <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
+          background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+        ">;
+          Go Home;
+        </button>;
+      </div>;
+    `;
+    document.body.append_child (error_div);
+  }
+  private delay (ms: number): Promise < void> {
+    return new Promise (resolve => set_timeout (resolve, ms));
+  }
+  private getSessionKey (): string {
+    return `${navigator.user_agent}_${window.location.origin}`;
+  }
+  private getOrCreateErrorStats (session_key: string): ChunkErrorStats {
+    if () {) {
+  $2
 }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // Public method to manually trigger recovery;
-  public triggerRecovery(): void {;
-    this.clearCaches().then(() => {;
-      this.reloadPage();
-    });
-  }
-;
+  public trigger_recovery (): void {
+    this.clear_caches ().then (() => {
+      this.reload_page ();
+    }) }
   // Public method to check if we're in a chunk error state;
+<<<<<<< HEAD
   public isInErrorState(): boolean {;
     const sessionKey = this.getSessionKey();
     const stats = this.errorStats.get(sessionKey);
     return stats ? stats.errorCount > 0 : false;
+=======
+  public isInErrorState (): boolean {
+    const session_key = this.getSessionKey ();
+    const stats = this.error_stats.get (session_key);
+    return stats ? stats.error_count > 0 : false;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-;
   // Public method to reset error state;
+<<<<<<< HEAD
   public resetErrorState(): void {;
     const sessionKey = this.getSessionKey();
     this.errorStats.delete(sessionKey);
+=======
+  public resetErrorState (): void {
+    const session_key = this.getSessionKey ();
+    this.error_stats.delete (session_key);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-}
-;
 // Create and export singleton instance;
-export const chunkErrorHandler = new ChunkErrorHandler();
+export const chunkErrorHandler = new ChunkErrorHandler ();
 // Export for manual usage;
 <<<<<<< HEAD
 =======
@@ -524,11 +561,6 @@ export default chunkErrorHandler;
         </button>;
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-}
-}
-
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;

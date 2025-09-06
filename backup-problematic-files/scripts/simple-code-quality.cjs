@@ -20,5 +20,10 @@ if (fs.existsSync('package.json')
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  results.checks.push({ "name": 'prettier-config', "status"})
+  results.checks.push({ "name": 'prettier-config', "status"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

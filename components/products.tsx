@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default function Placeholder() {
@@ -72,13 +73,10 @@ export default function Placeholder() {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-export default function Placeholder() {;
-export default function Placeholder() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Placeholder() {;
 export default function Placeholder() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -109,6 +107,7 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -192,6 +191,12 @@ function Placeholder() {
 
 
 
+=======
+
+}
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Head>
         <title>Products - Placeholder</title>
         <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
@@ -245,7 +250,11 @@ export default function Placeholder() {
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

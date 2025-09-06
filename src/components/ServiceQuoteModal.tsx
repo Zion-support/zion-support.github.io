@@ -9,8 +9,6 @@
 }
 }
 
-
-
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
         }
@@ -18,12 +16,15 @@
 }
 }
 
+<<<<<<< HEAD
 
 
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -211,8 +212,8 @@ const TIMELINE_OPTIONS = [;
   { label: "3-6 months", value: "3-6months" },;
   { label: "6+ months", value: "6+months" }],;
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {;
-  const [formData, setFormData] = useState({;
-    description: '',;
+  const [formData, setFormData] = useState({,
+  description: '',;
     email: '',;
     budget: BUDGET_RANGES[0]?.value || '0-5000',;
     timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),;
@@ -244,12 +245,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       if (error) throw error,;
       // Show success message;
       toast({;
-        title: "Quote Request Submitted!",;
-        description: "We've sent your request to the service provider. They will contact you soon."}),;
+        title: "Quote Request Submitted!",,
+  description: "We've sent your request to the service provider. They will contact you soon."}),;
       // Close the modal and reset form;
       onOpenChange(false),;
-      setFormData({;
-        description: '',;
+      setFormData({,
+  description: '',;
         email: '',;
         budget: BUDGET_RANGES[0]?.value || '0-5000',;
         timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),;
@@ -259,8 +260,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } catch (error) {;
       logErrorToProduction('Error submitting quote:', { data: error }),;
       toast({;
-        title: "Error",;
-        description: "There was an error submitting your quote request. Please try again.",;
+        title: "Error",,
+  description: "There was an error submitting your quote request. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);

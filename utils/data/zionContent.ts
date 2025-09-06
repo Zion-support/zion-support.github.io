@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Infobox = {;
 =======
 <<<<<<< HEAD
@@ -6,26 +7,18 @@ export type Infobox = {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
   token: string,;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   protocolType: string;
 }
 export type WikiSection = {id: string;
   title: string;
   paragraphs: string[];
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-},;
 export type WikiContent = {;
   title: string,;
   intro: string,;
@@ -35,6 +28,7 @@ export type WikiContent = {;
 },;
 export type DocsContent = {;
   productOverview: WikiSection,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -59,10 +53,13 @@ export type WikiContent = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -182,10 +179,13 @@ export function buildMarkdownFromWiki (wiki: WikiContent): string {
   const infobox = `| | |;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 |---|---|;
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -272,13 +272,19 @@ export type DocsContent = {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
   team: WikiSection,;
+<<<<<<< HEAD
   publicRoadmap: WikiSection;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  publicRoadmap: WikiSection
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`;
 export function generateZionWiki(): WikiContent {;
@@ -287,6 +293,7 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';
+<<<<<<< HEAD
 <<<<<<< HEAD
     token: 'ZION$';
     protocolType: 'Decentralized AI marketplace & governance protocol'};
@@ -299,16 +306,14 @@ export function generateZionWiki(): WikiContent {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
     {;
-<<<<<<< HEAD
       id: 'history-launch',;
       id: 'history-launch';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
       title: 'History and Launch',;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -343,6 +348,7 @@ export function generateZionWiki(): WikiContent {;
       id: 'adoption';
       title: 'Adoption';
       paragraphs: [;
+<<<<<<< HEAD
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}];
   const references = [;
 <<<<<<< HEAD
@@ -352,10 +358,15 @@ export function generateZionWiki(): WikiContent {;
 <<<<<<< HEAD
     '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'];
   return { title, intro, infobox, sections, references   } catch (error) {
+=======
+        'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
+  const references = [;  } catch (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 
 
@@ -389,6 +400,8 @@ export function slugify (input: string): string {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export function generateZionDocs(): DocsContent {;
   const wiki = generateZionWiki();
@@ -507,6 +520,7 @@ export function slugify(input: string): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 =======
 
@@ -515,3 +529,6 @@ export function slugify(input: string): string {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -49,10 +52,14 @@ files.forEach(file => {
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -142,6 +149,7 @@ files.forEach(file => {})
 });
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
@@ -154,6 +162,61 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+}
+});
+`;`
+      fs.writeFileSync(filePath, fixedContent);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`Error fixing file ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Function to remove unused fireEvent imports;
+function removeUnusedFireEvent(filePath) {}
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Check if fireEvent is imported but not used;
+    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
+      console.log(`Removing unused fireEvent from: ${filePath}`);
+      // Remove fireEvent from import statement;
+      content = content.replace(/, fireEvent/g, '');
+      content = content.replace(/fireEvent, /g, '');
+      content = content.replace(/fireEvent/g, '');
+      fs.writeFileSync(filePath, content);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`Error processing file ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Get all test files;
+const testDir = path.join(__dirname, '__tests__');
+const files = fs.readdirSync(testDir);
+let fixedCount = 0;
+let fireEventCount = 0;
+files.forEach(file => {})
+  if (file.endsWith('.test.js')) {}
+    const filePath = path.join(testDir, file);
+    // Fix malformed files;
+    if (fixTestFile(filePath)) {}
+      fixedCount++;
+    };
+    // Remove unused fireEvent;
+    if (removeUnusedFireEvent(filePath)) {}
+      fireEventCount++;
+    };
+  };
+}
+});
+console.log(`Fixed ${fixedCount} malformed test files`);
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 class TestFileFixer {
   constructor() {
@@ -229,9 +292,14 @@ if (require.main === module) {
     process.exit(fixedCount > 0 ? 0 : 1);
   });
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 module.exports = TestFileFixer;
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+module.exports = TestFileFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

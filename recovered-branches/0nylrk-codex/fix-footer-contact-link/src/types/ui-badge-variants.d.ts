@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,6 +45,10 @@ declare type BadgeVariant = ;
   | "info",
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  | "info",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Additional type declaration for the badge variants;
 declare type BadgeVariant =;
   | "default";
@@ -53,6 +58,7 @@ declare type BadgeVariant =;
   | "success";
   | "warning";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   | "info",;
@@ -76,3 +82,6 @@ declare type BadgeVariant =;
 =======
   | "info";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  | "info",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

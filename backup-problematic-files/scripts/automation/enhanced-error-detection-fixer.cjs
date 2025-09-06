@@ -57,5 +57,10 @@ console.log(' Starting enhanced error detection and fixing automation...')
     execSync('npm install --force', { "stdio"})
     return { "type": 'peer-dependency', "action"}
     return { "type": 'peer-dependency', "action"}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error(' Enhanced error detection "failed")
+    console.error(' Enhanced error detection "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

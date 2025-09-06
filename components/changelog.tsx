@@ -43,10 +43,10 @@ function ChangelogPage() {
           {content}
         </pre>) : (
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
-        <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
+        <p className="mt - 2 text - sm text-gray-600">Generated: {generated_at}</p>)}
 
       {content ? (
-        <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
+        <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray-800 shadow-sm">;
 {content}
         </pre>
       ) : (
@@ -54,7 +54,6 @@ function ChangelogPage() {
           No changelog generated yet.
         </div>
       )}
-
 
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
@@ -130,13 +129,14 @@ export async function getStaticProps() {;
     const content = fs && fs.readFileSync(file, 'utf8');
     return {;
       props: { content, generatedAt: new Date().toISOString() },;
-      revalidate: 300,;
-    };
+      revalidate: 300,
+};
   } catch {;
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -147,9 +147,10 @@ export async function getStaticProps() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
-
 
 export async /**
  * getStaticProps - Function description

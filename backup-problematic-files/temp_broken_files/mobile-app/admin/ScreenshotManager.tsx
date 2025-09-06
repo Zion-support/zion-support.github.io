@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 =======
 import React, { useState, useRef } from "react",;
@@ -6,11 +7,16 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",;
 import { Upload, Trash2, Plus } from "lucide-react",;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useRef } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Upload, Trash2, Plus } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AppPlatform } from "./MetadataManager",;
 import { toast } from "sonner",;
 ;
@@ -100,41 +106,69 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   },;
   ;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 
+=======
+        <div ;
+          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
+            isDragging ;
+              ? "border-zion-cyan bg-zion-cyan/10" ;
+              :"border-zion-purple/30";
+          }`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >;
+          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />;
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
+          <input;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ref={fileInputRef}
             type="file";
             multiple;
             accept="image/*";
             onChange={handleFileSelect}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             className="hidden";
           />;
           <Button ;
             variant="outline" ;
             onClick={() => fileInputRef.current?.click()}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             className="mt-2";
           >;
             <Plus className="mr-2 h-4 w-4" />;
             Select Files;
           </Button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ;
         <div className="text-xs text-gray-300 mb-4">;
           {platform === "ios" ;
@@ -156,7 +190,10 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
                 onClick={() => removeScreenshot(screenshot.id)}
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
                 aria-label="Remove screenshot";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >;
                 <Trash2 className="h-3 w-3" />;
               </button>;
@@ -165,16 +202,23 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;
 },; interface ScreenshotManagerProps {;
   platform: AppPlatform ;
 }type Screenshot = {;
   id: string;
 url: string;
+<<<<<<< HEAD
 file: File ;
+=======
+file: File 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({;
   platform ;
@@ -191,7 +235,11 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/Scree
 }
 };
 return filtered;
+<<<<<<< HEAD
 }) ;
+=======
+}) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 <CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;"  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";"  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
 }</div> </CardContent> </Card>) ;
@@ -200,4 +248,7 @@ return filtered;
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

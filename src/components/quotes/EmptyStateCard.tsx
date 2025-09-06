@@ -46,7 +46,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
+<<<<<<< HEAD
+};
+
+=======
 },;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -14,6 +15,9 @@ export function ChatAssistantTrigger() {
 // Handle sending messages to the AI chat assistant
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSendMessage = async (message: string): Promise<void> => {
+=======
+  // Handle sending messages to the AI chat assistant  const handleSendMessage = async (message: string): Promise<void> => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
@@ -27,7 +31,6 @@ export function ChatAssistantTrigger() {
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
 =======
-
 
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
@@ -67,7 +70,6 @@ export function ChatAssistantTrigger() {;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
 
-
   const [isOpen, setIsOpen] = useState(false);
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -84,6 +86,7 @@ export function ChatAssistantTrigger() {;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
       }
+<<<<<<< HEAD
 ;
       return Promise.resolve();
     } catch (error) {;
@@ -96,19 +99,24 @@ export function ChatAssistantTrigger() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
+=======
+      return Promise.resolve()
+    } catch (error) {
+      logErrorToProduction('Error in AI chat:', { data: error })
+      return Promise.resolve()
+    }  },;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (;
     <>;
       <Button;
-        onClick={() => setIsOpen(true)}
-
-
-        size="icon"
+        onClick={() => setIsOpen(true)}        size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
         aria-label="Open chat assistant"
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD
 
 
       
@@ -116,6 +124,8 @@ export function ChatAssistantTrigger() {;
       {isOpen && (
         <ChatAssistant
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat:', { data: error }),
@@ -123,22 +133,13 @@ export function ChatAssistantTrigger() {;
     }
   },
 
-
-  return (
-    <>;
-      <Button
-        onClick = {(,) => setIsOpen(true),}
-
-        size="icon";
-        variant="outline";
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
-        aria-label="Open chat assistant";
-      >;
-        <MessageSquare className="h-5 w-5" />;
-      </Button>;
-
-      {isOpen && (;
-        <ChatAssistant
+        size="icon"
+        variant="outline"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        aria-label="Open chat assistant"
+      >
+        <MessageSquare className="h-5 w-5" />
+      </Button>        <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
 
@@ -153,6 +154,7 @@ export function ChatAssistantTrigger() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -229,10 +231,17 @@ if ( {) {
 }
 
     </>;
+=======
+      {isOpen && (
+        <ChatAssistant    </>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;

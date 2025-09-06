@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Spinner.displayName = 'Spinner'
 export default Spinner; import React from 'react'
@@ -32,6 +33,9 @@ Spinner && Spinner.displayName = 'Spinner';
 export default Spinner;import React from 'react';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+=======
+import { Loader2 } from 'lucide-react'import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -40,6 +44,10 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
   size?: number | string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
@@ -47,6 +55,7 @@ const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
     <Loader2;
       ref={ref}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className={cn('animate-spin', className)}
       width={size}
@@ -85,3 +94,9 @@ Spinner.display_name = 'Spinner',
 export default Spinner,
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      className = {cn('animate-spin', className),}
+      width = {size,}
+      height = {size,}
+    />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

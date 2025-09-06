@@ -48,8 +48,6 @@ export default function TokenIntegrationsPage() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-
-
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
 
@@ -75,6 +73,7 @@ export default function TokenIntegrationsPage() {;
 
   }
 
+<<<<<<< HEAD
 
   async function runOperator() {;
     const res = await fetch('/api/operator/suggest-chain', {;
@@ -103,6 +102,8 @@ export default function TokenIntegrationsPage() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const data = await res.json();
     setSuggestion(data);
   }
@@ -153,6 +154,7 @@ export default function TokenIntegrationsPage() {;
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -171,6 +173,8 @@ export default function TokenIntegrationsPage() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setSuggestion(data)
         </div>;
         {rewards && (;
@@ -479,27 +483,27 @@ function run_operator() {
     set_suggestion (data);
   }
   return (
-    <div className="space - y-8">;
-      <section className="space - y-2">;
-        <h1 className="text - 2xl font - bold">ZION$ Integrations</h1>;
-        <p className="text - gray - 600 dark:text - gray - 300">Omnichain transfers via LayerZero and DePIN rewards.</p>;
+    <div className="space-y-8">;
+      <section className="space-y-2">;
+        <h1 className="text-2xl font-bold">ZION$ Integrations</h1>;
+        <p className="text - gray - 600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>;
       </section>;
-      <section className="space - y-4">;
+      <section className="space-y-4">;
         <ClientOnlyBridge />;
       </section>;
-      <section className="space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800">;
-        <h2 className="text - lg font - semibold">DePIN Hook</h2>;
-        <p className="text - sm text - gray - 600 dark:text - gray - 300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
-        <div className="flex gap - 2">;
-          <button on_click={sync_depin} className="px - 4 py - 2 rounded bg - purple - 600 text - white">{depins_syncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>;
-          {!account && <button on_click={connect} className="px - 4 py - 2 rounded border">Connect Wallet</button>}
+      <section className="space - y-3 p - 4 border rounded border - gray - 200 dark:border-gray-800">;
+        <h2 className="text-lg font-semibold">DePIN Hook</h2>;
+        <p className="text - sm text - gray - 600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
+        <div className="flex gap-2">;
+          <button on_click={sync_depin} className="px - 4 py - 2 rounded bg - purple-600 text-white">{depins_syncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>;
+          {!account && <button on_click={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
         {rewards && (
-          <div className="mt - 3 space - y-2 text - sm">;
+          <div className="mt - 3 space-y-2 text-sm">;
             {rewards.map ((r, i) => (
-              <div key={i} className="flex items - center justify - between">;
+              <div key={i} className="flex items-center justify-between">;
                 <span>{r.network} — {r.reason}</span>;
-                <span className="font - medium">+{r.points} ZION$</span>;
+                <span className="font-medium">+{r.points} ZION$</span>;
               </div>))}
           </div>)}
       </section>;
@@ -549,19 +553,19 @@ function run_operator() {
                   .map ((array: any) => a.chain.name);
                   .join (', ')}
               </div>            )}          </div>;
-          <div className="flex flex - col gap - 1">;
-            <label className="text - xs text - gray - 500" html_for="input - Stake (USD)">Stake (USD)</label>;
-            <input value={stake} on_change={(e) => set_stake (e.target.value)} placeholder="e.g., 1000" className="border rounded px - 3 py - 2 bg - white dark:bg - black" />;
+          <div className="flex flex-col gap-1">;
+            <label className="text - xs text-gray-500" html_for="input - Stake (USD)">Stake (USD)</label>;
+            <input value={stake} on_change={(e) => set_stake (e.target.value)} placeholder="e.g., 1000" className="border rounded px - 3 py - 2 bg-white dark:bg-black" />;
           </div>;
-          <div className="flex items - end"><button on_click={run_operator} className="w - full px - 4 py - 2 rounded bg - indigo - 600 text - white">Suggest Chain</button></div>;
+          <div className="flex items-end"><button on_click={run_operator} className="w - full px - 4 py - 2 rounded bg - indigo-600 text-white">Suggest Chain</button></div>;
         </div>;
         {suggestion && (
-          <div className="text - sm mt - 2">;
+          <div className="text-sm mt-2">;
             <div>;
-              <span className="text - gray - 500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>;
+              <span className="text-gray-500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>;
             </div>;
             {suggestion.alternatives && (
-              <div className="text - gray - 500">Alternatives: {suggestion.alternatives.map ((array: any) => a.chain.name).join (', ')}</div>)}
+              <div className="text-gray-500">Alternatives: {suggestion.alternatives.map ((array: any) => a.chain.name).join (', ')}</div>)}
           </div>)}
       </section>;
       <section className='space - y-2 text - xs text - gray - 500'>;
@@ -576,7 +580,7 @@ function run_operator() {
       </section>;
     </div>);
 }        <div > Security</div>;
-        <ul className="list - disc ml - 5 space - y-1">;
+        <ul className="list - disc ml-5 space-y-1">;
           <li > Onchain tx logs (client + API echo)</li>;
           <li > Rate limits (client + API token bucket)</li>;
           <li > Burn - and - mint model via LayerZero OFT (requires token addresses configured)</li>;

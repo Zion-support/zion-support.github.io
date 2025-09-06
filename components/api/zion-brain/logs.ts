@@ -121,6 +121,7 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
   const byType: Record<string, number> = {};
 }
 
+<<<<<<< HEAD
 
   const byModule: Record<string, number> = {};
 
@@ -131,6 +132,9 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+  const byModule: Record<string, number> = {};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const byModule: Record<string, number> = {};
 

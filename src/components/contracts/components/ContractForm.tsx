@@ -21,6 +21,7 @@ const formSchema = z && z.object({;
 export type ContractFormValues = z && z.infer<typeof formSchema>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -58,6 +59,8 @@ interface ContractFormProps {
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         values, ;
         talent, ;
         clientName, ;
@@ -67,6 +70,7 @@ interface ContractFormProps {
   );
 }
 
+<<<<<<< HEAD
 
 export function ContractForm({
   talent,
@@ -127,6 +131,9 @@ interface ContractFormProps {;
   initialValues?: ContractFormValues,;
   onFormValuesChange?: (values: ContractFormValues) => void,;
   onContractGenerated: (contractContent: string) => void;
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 <<<<<<< HEAD
 ;
@@ -319,5 +326,9 @@ export type ContractFormValues = z.infer < typeof form_schema>;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

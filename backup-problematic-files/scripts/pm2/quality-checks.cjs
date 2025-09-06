@@ -14,7 +14,11 @@ const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
     const output = execSync(command, { })
+<<<<<<< HEAD
       encoding: 'utf8',
+=======
+      encoding: 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       stdio: 'pipe',
       cwd: process.cwd(),
     }
@@ -119,9 +123,15 @@ const generateQualityReport = (results) => {}
     codeQuality: results.codeQuality,
     coverage: results.coverage,
     overall: {}
+<<<<<<< HEAD
       passed: results.linting.passed + results.typeChecking.passed +
               results.codeQuality.passed + results.coverage.passed,
       failed: results.linting.failed + results.typeChecking.failed +
+=======
+      passed: results.linting.passed + results.typeChecking.passed + 
+              results.codeQuality.passed + results.coverage.passed,
+      failed: results.linting.failed + results.typeChecking.failed + 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               results.codeQuality.failed + results.coverage.failed;
     };
   };
@@ -179,5 +189,10 @@ main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

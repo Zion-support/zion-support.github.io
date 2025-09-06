@@ -16,55 +16,27 @@ export interface BlogAuthor {
   title: string,
   avatar_url: string;
 
-<<<<<<< HEAD
-}
-export interface BlogPost {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface BlogAuthor {
   name: string;
+}export interface BlogAuthor {
+  name: string;
 }
-<<<<<<< HEAD
 export interface BlogPost {
 
 export interface BlogPost {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: BlogAuthor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  published_date: string;
-  read_time: string;
-  category: string;
-  tags: string[];
-  featuredImage: string;
-  isFeatured?: boolean;
-  isPublished?: boolean;
-  createdBy?: string;
-  updatedAt?: string;
-}
-
-  featured_image: string;
-  is_featured?: boolean;
-  is_published?: boolean;
-  created_by?: string,
-  updated_at?: string;
-}
-// Type for generated blog content;
-
-export interface GeneratedBlogContent {
-  title: string;
   meta_description: string;
   body: string;
   tags: string[];
@@ -74,6 +46,7 @@ export interface GeneratedBlogContent {
 
   tweet_summary?: string,
   image_prompt?: string;
+<<<<<<< HEAD
 }
 =======
   publishedDate: string;
@@ -113,6 +86,9 @@ export interface BlogAuthor {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string,;
+=======
+}  name: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string,;
   avatarUrl: string;
 }
@@ -145,6 +121,7 @@ export interface GeneratedBlogContent {;
   imagePrompt?: string;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -179,6 +156,8 @@ export interface BlogAuthor {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface BlogAuthor {;
 
 // Type for generated newsletter content;
@@ -189,7 +168,10 @@ export interface GeneratedNewsletterContent {;
   cta: string;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

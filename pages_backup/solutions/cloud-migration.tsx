@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -12,6 +16,9 @@ import React from 'react';
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
+=======
+import React from 'react';import Link from 'next/link';';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import { Cloud,
   Shield,
@@ -89,6 +96,7 @@ const phases = [;
   },
   {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: 'Migration Execution,',;
     description: 'Phased migration with minimal downtime and comprehensive testing.,',;
@@ -108,6 +116,8 @@ const phases = [;
       'Testing & validation',',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Go-live support'';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ];
   },
   {}
@@ -150,6 +160,7 @@ const services = [;
 
 const services = [;
   {}
+<<<<<<< HEAD
     title: 'AWS Migration,',
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
     icon: Cloud,
@@ -159,6 +170,8 @@ const services = [;
       'S3 storage migration',',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Lambda serverless functions'';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ];
   },
   {}
@@ -186,6 +199,7 @@ const services = [;
   },
   {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
@@ -205,6 +219,8 @@ const services = [;
       'Cloud Storage migration',',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Cloud Functions deployment'';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ];
   },
   {}
@@ -260,25 +276,6 @@ const benefits = [;
 
 const benefits = [;
   {}
-    title: 'Cost Reduction,',
-    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',
-    icon: BarChart3;
-  },
-  {}
-    title: 'Enhanced Security,',
-    description: 'Enterprise-grade security with automated updates and monitoring.,',
-    icon: Shield;
-  },
-  {}
-    title: 'Improved Scalability,',
-    description: 'Scale resources up or down based on demand automatically.,',
-    icon: Zap;
-  },
-  {}
-    title: 'Better Performance,',
-    description: 'Faster load times and improved application performance.,',
-    icon: Smartphone;
-  }
 ;];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -328,6 +325,7 @@ export default function CloudMigrationPage() {
                 Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.,
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Migration;
@@ -343,6 +341,8 @@ export default function CloudMigrationPage() {
                   View Migration Success Stories;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </Link>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>;
             </motion.div>;
           </div>;
@@ -422,6 +422,7 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -435,6 +436,8 @@ export default function CloudMigrationPage() {
                 Cloud Migration Services;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
@@ -509,6 +512,7 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -522,6 +526,8 @@ export default function CloudMigrationPage() {
                 Why Choose Our Cloud Migration?;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our cloud migration services deliver measurable improvements in cost,
                 performance, and security.,
@@ -560,6 +566,7 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -567,11 +574,14 @@ export default function CloudMigrationPage() {
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
                 with minimal downtime and maximum security.;
               </p>;
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Cloud Migration;
@@ -590,6 +600,15 @@ export default function CloudMigrationPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
+=======
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;            >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>
@@ -612,6 +631,32 @@ export default function CloudMigrationPage() {
     </Layout>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            >;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
+                Ready to Move to the Cloud?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+                Let our cloud migration experts help you seamlessly transition to the cloud ;
+                with minimal downtime and maximum security.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Cloud Migration;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  ),;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

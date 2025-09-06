@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -39,10 +40,17 @@ export type TextareaProps = React.ComponentProps<"textarea">
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
+<<<<<<< HEAD
         className={cn(
 <<<<<<< HEAD
 
@@ -179,3 +187,7 @@ export { Textarea }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        className={cn(export { Textarea }
+export { Textarea };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

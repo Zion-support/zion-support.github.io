@@ -34,8 +34,11 @@ import { motion } from 'framer-motion';
 =======
 import { 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Phone,
   Mail,
   MapPin,
@@ -689,20 +692,21 @@ const serviceCategories = [
 
           </div>;
 
-
-
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       key={service.name}
                       href={service.href}
-                      className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
+                      className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration-200 text-sm";
                     >;
                   ))}
                 </div>;
@@ -774,8 +778,7 @@ const serviceCategories = [
               </div>;
             </div>;
 
-
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+                    className="block text - gray - 400 hover:text - white transition - colors duration-200 text-sm";
                   >;
                 ))}
             {/* Legal Links */}
@@ -824,6 +827,7 @@ const serviceCategories = [
                   <a
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -834,8 +838,9 @@ const serviceCategories = [
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Social Links */}
-
 
                     key={social.name}
                     href={social.href}
@@ -884,13 +889,13 @@ const serviceCategories = [
                   <Link;
                     key={link.name}
                     href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
-              <div className="space - y-2">;
+                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font-semibold mb-4">Legal</h4>;
+              <div className="space-y-2">;
                 {legal_links.map ((link) => (
                   <Link;
                     key={link.name}
                     href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+                    className="block text - gray - 400 hover:text - white transition - colors duration-200 text-sm";
                     {link.name}
                   </Link>))}
               </div>;
@@ -1059,9 +1064,11 @@ export default EnhancedFooter2025;
 export default EnhancedFooter2025;
     </footer>);
 }
-export default EnhancedFooter2025;
-
+export default EnhancedFooter2025
 };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

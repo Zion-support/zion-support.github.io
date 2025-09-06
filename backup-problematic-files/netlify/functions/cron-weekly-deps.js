@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -45,6 +46,8 @@ exports.handler = async function() {;
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -109,6 +112,7 @@ exports.handler = async function () {
     return null
   }
 }
+<<<<<<< HEAD
 =======
 :netlify/functions/cron-weekly-deps.js
 exports.handler = async function() {
@@ -148,16 +152,24 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN,
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

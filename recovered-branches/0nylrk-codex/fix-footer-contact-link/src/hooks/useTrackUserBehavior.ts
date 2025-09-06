@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -66,6 +70,8 @@ export function useTrackUserBehavior(componentName: string) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         trackEvent('button_click', {
           component: componentName;
           elementId: buttonId
@@ -74,6 +80,7 @@ export function useTrackUserBehavior(componentName: string) {;
       }
     }
     // Track form submissions
+<<<<<<< HEAD
     const trackFormSubmits = (e: Event) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,6 +180,9 @@ function useTrackUserBehavior() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
+=======
+    const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function useTrackUserBehavior(componentName: string) {;
   const { trackEvent } = useAnalytics(),;
   const componentRef = useRef<HTMLDivElement>(null),;
@@ -212,17 +222,9 @@ export function useTrackUserBehavior(componentName: string) {;
     }
   }, [trackEvent, componentName]);
   return componentRef;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -348,3 +350,6 @@ return componentRef
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

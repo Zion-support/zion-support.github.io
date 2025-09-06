@@ -68,6 +68,7 @@ export function ProjectDetailsStep({
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
+<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
 =======
 <<<<<<< HEAD
@@ -95,6 +96,8 @@ export function ProjectDetailsStep({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -143,6 +146,7 @@ export function ProjectDetailsStep({
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
         </h3>
+<<<<<<< HEAD
 
 =======
 =======
@@ -168,6 +172,8 @@ export function ProjectDetailsStep({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -234,6 +240,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="name";
               placeholder="Your name";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -260,6 +267,9 @@ value={formData.contactInfo.name}
           </div>
 
           <div>
+=======
+              value={formData.contactInfo.name}          <div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -373,23 +383,6 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
               id="email"
               type="email"
               placeholder="Your email address"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              value={formData.contactInfo.email}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    email: e.target.value,
-                  },
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
             </Label>
@@ -411,6 +404,7 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -447,6 +441,8 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
@@ -454,28 +450,35 @@ import { Label  } from '@/components / ui / label';
 import { Textarea  } from '@/components / ui / textarea';
 interface ProjectDetailsStepProps {
   form_data: QuoteFormData;
+<<<<<<< HEAD
   updateFormData: (data: Partial < QuoteFormData>) => void;
 =======
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+  updateFormData: (data: Partial < QuoteFormData>) => void;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div>;
-        <h3 className="text - xl font - semibold text - white mb - 4">;
+        <h3 className="text - xl font - semibold text - white mb-4">;
           Contact Information;
         </h3>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <div>;
-            <Label html_for="name" className="text - zion - slate - light">;
+            <Label html_for="name" className="text - zion - slate-light">;
               Name;
             </Label>;
             <Input;
@@ -490,11 +493,11 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="company" className="text - zion - slate - light">;
+            <Label html_for="company" className="text - zion - slate-light">;
               Company;
             </Label>;
             <Input;
@@ -509,11 +512,11 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="email" className="text - zion - slate - light">;
+            <Label html_for="email" className="text - zion - slate-light">;
               Email;
             </Label>;
             <Input;
@@ -529,11 +532,11 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="phone" className="text - zion - slate - light">;
+            <Label html_for="phone" className="text - zion - slate-light">;
               Phone;
             </Label>;
             <Input;
@@ -548,19 +551,16 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
 
             />;
           </div>;
         </div>;
       </div>;
 
-    </div>);
-=======
-  );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
+    </div>);}
 
+<<<<<<< HEAD
 
   )
 
@@ -616,3 +616,6 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

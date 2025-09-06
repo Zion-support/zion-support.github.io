@@ -1,23 +1,8 @@
-export interface FraudRecord {
-  id: string;
-  type: string;
-  severity: "low" | "medium" | "high" | "critical";
-  description: string;
-  source: string;
-  timestamp: string;
-  status: "pending" | "investigating" | "resolved" | "false_positive";
-  adminId?: string;
-  resolution?: string;
-}
-
-
-class FraudStore {
-  private records: Map<string, FraudRecord> = new Map();
-
-  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
-    const id = Date.now().toString();
-    const newRecord: FraudRecord = {
-      ...record,
+  private records: Map < string, FraudRecord> = new Map ();
+;
+  create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
+    const id = Date.now ().to_string ();
+    const new_record: FraudRecord = {      ...record,
       id,
       timestamp: new Date().toISOString(),
     };
@@ -61,6 +46,5 @@ class FraudStore {
     };
   }
 }
-
-export const fraudStore = new FraudStore();
-export const getFraudStore = () => fraudStore;
+export const fraud_store = new FraudStore ();
+export const getFraudStore = () =>: any fraud_store;

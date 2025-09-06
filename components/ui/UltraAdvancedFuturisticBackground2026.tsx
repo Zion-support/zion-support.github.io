@@ -369,7 +369,6 @@ constructor(x: number, y: number) {
 =======
     }
 
-
     // Quantum field class;
     class QuantumField {;
 
@@ -1084,9 +1083,12 @@ if ( {) {
               ctx.stroke ();
               ctx.restore ();
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
           });
         });
@@ -1111,8 +1113,8 @@ if ( {) {
 
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
-    };
+      cancelAnimationFrame(animationFrameId)
+};
   }, [;
     intensity,;
     colorScheme,;
@@ -1123,7 +1125,6 @@ if ( {) {
     enableNeuralNetworks,;
     enableMultidimensional,;
   ]);
-
 
     >;
       <canvas
@@ -1228,17 +1229,17 @@ if ( {) {
         <div className="absolute inset-0 pointer-events-none">;
           <motion&& motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
-    <div ref={container_ref} className="fixed inset - 0 w - full h - full overflow - hidden">;
+    <div ref={container_ref} className="fixed inset - 0 w - full h-full overflow-hidden">;
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ z_index: -1 }}
       />;
       {/* Additional visual effects */}
       {enable_multidimensional && (
-        <div className="absolute inset - 0 pointer - events - none">;
+        <div className="absolute inset - 0 pointer-events-none">;
           <motion.div;
-            className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
+            className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan-400 / 20 rounded-full";
             animate={{
 <<<<<<< HEAD
               scale: [1 && 1.2, 1, 1 && 1.2],
@@ -1298,7 +1299,7 @@ export default UltraAdvancedFuturisticBackground2026;
             }}
           />;
           <motion.div;
-            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full";
+            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple-400 / 20 rounded-full";
             animate={{
             }}
             transition={{

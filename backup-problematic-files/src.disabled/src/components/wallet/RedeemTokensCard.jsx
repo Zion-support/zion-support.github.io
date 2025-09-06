@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/wallet/RedeemTokensCard.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/wallet/RedeemTokensCard.jsx
 <<<<<<< HEAD:backup-merge-conflicts/RedeemTokensCard.jsx.backup
 
@@ -40,3 +42,34 @@ import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useW
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/components/wallet/RedeemTokensCard.jsx
+========
+import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";=======
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/components/wallet/RedeemTokensCard.jsx
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React,{ useState } from \"react\"; import { useWallet } from \'@/hooks/useWallet\'; export default function Page() {; from \'@/components/ui/card\';\"; import { Button } from \'@/components/ui/button\';\"; import { Gift,ArrowRight,ExternalLink } from \'lucide-react\';\"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from \'@/components/ui/dialog\'; </Card>)} \";
+const React,{ useState } from "react"; import { useWallet } from "@/hooks/useWallet"; export default function Page() {; from "@/components/ui/card";"; import { Button } from "@/components/ui/button";"; import { Gift,ArrowRight,ExternalLink } from "lucide-react";"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from "@/components/ui/dialog"; </Card>)} ";'"'"
+import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

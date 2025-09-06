@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -19,6 +22,7 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -32,6 +36,8 @@ const next_config = {
 const fs = require('fs');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
@@ -59,6 +65,7 @@ emptyFiles.forEach(file => {if (fs.existsSync(file) && fs.statSync(file).size ==
 });
 console.log('🎉 Site fixes completed!');
 const fs = require('fs'),;
+<<<<<<< HEAD
 const fs = require('fs');
 <<<<<<< HEAD
 =======
@@ -244,3 +251,12 @@ console.log('🎉 Site fixes completed!'),;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const fs = require('fs');console.log('🔧 Fixing site loading issues...'),;
+// Fix Next.js configuration;
+const nextConfig = `/** @type {import('next').NextConfig} */;
+const nextConfig = {;],;
+];
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

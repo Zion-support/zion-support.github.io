@@ -35,6 +35,7 @@ interface SidebarSectionProps extends React && React.HTMLAttributes<HTMLDivEleme
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   className?: string;
 =======
@@ -74,6 +75,19 @@ export function SidebarSection({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
+=======
+  className?: string,
+  title?: string,
+  children?: React.ReactNode
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+  className?: string;import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;import React from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -86,6 +100,7 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
     <div className={cn("py-2", className)} {...props}>;
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -117,12 +132,17 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;          {title}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </h3>;
+=======
+
+          {title}        </h3>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       )}
       <div className="space-y-1">{children}</div>
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -205,3 +225,6 @@ children?: React.ReactNode
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
@@ -45,6 +45,8 @@ import React, { useState } from "react",
 import { Control } from "react-hook-form",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   FormField;
@@ -55,9 +57,8 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
@@ -101,11 +102,14 @@ import { Card, CardContent } from "@/components/ui/card",
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
   skills: string[],
   yearsExperience: number,
+<<<<<<< HEAD
   location?: string,
 <<<<<<< HEAD
 
@@ -169,6 +173,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  location?: string,}) => {
+  const handleSuggestionApplied = (rate: number) => {
+    setValue("hourlyRate", rate)
+
+  },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="space-y-4">
       <FormField
@@ -182,6 +194,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 type="number"
                 min="1"
                 step="0.01"
+<<<<<<< HEAD
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
 <<<<<<< HEAD
 
@@ -215,17 +228,18 @@ import { Card, CardContent } from "@/components/ui/card",;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface RateOptimizationSectionProps {;
+=======
+                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}interface RateOptimizationSectionProps {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
   yearsExperience: number,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   location?: string;
   rateType: "hourly" | "fixed";
 }
 
+<<<<<<< HEAD
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
 
@@ -278,10 +292,14 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+=======
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="space-y-4">;
       <FormField
         control={control}
         name="hourlyRate"
+<<<<<<< HEAD
 <<<<<<< HEAD
         render={({ field }) => (;
           <FormItem>;
@@ -366,10 +384,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormControl>;
+=======
+            <FormControl>;            <FormControl>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -384,6 +406,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {...field}
               />;
             </FormControl>;
@@ -391,14 +416,13 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
               Set a competitive rate based on your skills and experience;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
 
       <Card>;
         <CardContent className="pt-4">;
 
+<<<<<<< HEAD
           <TalentRateRecommender
 <<<<<<< HEAD
 =======
@@ -409,11 +433,15 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
           <TalentRateRecommender
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+          <TalentRateRecommender          <TalentRateRecommender
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </FormItem>)}
       />;
       <Card>;
-        <CardContent className="pt - 4">;
+        <CardContent className="pt-4">;
           <TalentRateRecommender;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -423,12 +451,15 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             skills={skills}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -495,6 +526,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
             rate_type={rate_type}
           />;
@@ -502,6 +535,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>;
     </div>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -550,3 +584,6 @@ return (<div className="space-y-4" > <FormField control= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

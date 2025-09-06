@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 
 <<<<<<< HEAD
@@ -15,12 +15,15 @@ import {Button} from "@/components/ui/button";
 import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -143,12 +146,22 @@ export function QuickActions() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",      color: "bg-blue-100 dark:bg-blue-900/20"
+    }
+    },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "schedule"
       label: "Schedule Interview"
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -192,52 +205,11 @@ import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function QuickActions() {;
-  const actions = [;
-    {;
-      id: "post-job",;
-      label: "Post New Job",;
-      icon: <FileText className="h-5 w-5 mr-2" />,;
-      description: "Create a new job posting",;
-      color: "bg-blue-100 dark:bg-blue-900/20";
-    },;
-    {;
-      id: "add-member",;
-      label: "Add Team Member",;
-      icon: <Plus className="h-5 w-5 mr-2" />,;
-      description: "Invite someone to your team",;
-      color: "bg-green-100 dark:bg-green-900/20";
-    },;
-    {;
-      id: "find-talent",;
-      label: "Find Talent",;
-      icon: <Search className="h-5 w-5 mr-2" />,;
-      description: "Search the talent pool",;
-      color: "bg-purple-100 dark:bg-purple-900/20";
-    },;
-    {;
-      id: "schedule",;
-      label: "Schedule Interview",;
-      icon: <Calendar className="h-5 w-5 mr-2" />,;
-      description: "Set up candidate interviews";
-      color: "bg-amber-100 dark:bg-amber-900/20";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-    }
-  ];
-  return (;
-
-    <Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
         <CardDescription>Fast access to common tasks</CardDescription>;
@@ -254,8 +226,7 @@ export function QuickActions() {;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
-              </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;              </div>;
             </Button>;
           ))}
         </div>;
@@ -263,6 +234,7 @@ export function QuickActions() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -432,16 +404,17 @@ export function QuickActions() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardHeader>;
         <CardTitle > Quick Actions</CardTitle>;
         <CardDescription > Fast access to common tasks</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-4">;
           {actions.map (action => (
-<<<<<<< HEAD
-=======
           {actions.map(action => (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -465,6 +438,8 @@ export function QuickActions() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
@@ -481,6 +456,7 @@ export function QuickActions() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -488,23 +464,12 @@ export function QuickActions() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           ))}
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  ),;}
- const actions = [ {
-  return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
-}</div> </CardContent> </Card>) 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

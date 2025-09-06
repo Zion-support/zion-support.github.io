@@ -262,12 +262,12 @@ if ( {) {
             The requested service could not be found.;
           </p>;
           <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services      <div className="min - h-screen bg - black flex items - center justify - center">;
-        <div className="text - center">;
-          <h1 className="text - 2xl font - bold text - white mb - 4">Service Not Found</h1>;
-          <p className="text - gray - 400 mb - 6">The requested service could not be found.</p>;
+            <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services      <div className="min - h-screen bg - black flex items-center justify-center">;
+        <div className="text-center">;
+          <h1 className="text - 2xl font - bold text-white mb-4">Service Not Found</h1>;
+          <p className="text - gray-400 mb-6">The requested service could not be found.</p>;
           <Button href="/services" variant="primary">;
-            <ArrowLeft className="w - 4 h - 4 mr - 2" />;
+            <ArrowLeft className="w - 4 h-4 mr-2" />;
           </Button>;
         </div>;
       </div>);
@@ -291,12 +291,12 @@ if ( {) {
             <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services;
           </Button>;
         </div>;
-      </div>);  }      <div className="min - h-screen bg - black flex items - center justify - center">;
-        <div className="text - center">;
-          <h1 className="text - 2xl font - bold text - white mb - 4">Service Not Found</h1>;
-          <p className="text - gray - 400 mb - 6">The requested service "{id}" could not be found.</p>;
+      </div>);  }      <div className="min - h-screen bg - black flex items-center justify-center">;
+        <div className="text-center">;
+          <h1 className="text - 2xl font - bold text-white mb-4">Service Not Found</h1>;
+          <p className="text - gray-400 mb-6">The requested service "{id}" could not be found.</p>;
           <Button href="/services" variant="primary">;
-            <ArrowLeft className="w - 4 h - 4 mr - 2" />;
+            <ArrowLeft className="w - 4 h-4 mr-2" />;
           </Button>;
         </div>;
       </div>));
@@ -331,18 +331,18 @@ if ( {) {
                 variant='primary';
                 size='sm';
                 icon={<ExternalLink className='w - 4 h - 4' />}              >      </Head>;
-      <div className="min - h-screen bg - black">;
+      <div className="min-h-screen bg-black">;
         {/* Navigation */}
-        <nav className="border - b border - gray - 800 bg - black / 50 backdrop - blur - sm sticky top - 0 z - 50">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <div className="flex items - center justify - between h - 16">;
+        <nav className="border - b border - gray - 800 bg - black / 50 backdrop - blur - sm sticky top-0 z-50">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+            <div className="flex items - center justify-between h-16">;
               <Button;
                 href="/services";
                 variant="ghost";
                 size="sm";
-                className="text - gray - 400 hover:text - white";
+                className="text - gray-400 hover:text-white";
               >;
-                <ArrowLeft className="w - 4 h - 4 mr - 2" />;
+                <ArrowLeft className="w - 4 h-4 mr-2" />;
                 Back to Services;
               </Button>;
               <Button;
@@ -351,7 +351,7 @@ if ( {) {
                 size='sm';
                 icon={<ExternalLink className='w - 4 h - 4' />}                variant="primary";
                 size="sm";
-                icon={<ExternalLink className="w - 4 h - 4" />}
+                icon={<ExternalLink className="w-4 h-4" />}
               >;
                 Visit Service;
               </Button>;
@@ -384,7 +384,7 @@ if ( {) {
                 className='border - white / 20 text - white hover:border - white / 40'              >                href="/services";
                 variant="primary";
                 size="lg";
-                className="shadow - 2xl shadow - blue - 500 / 25";
+                className="shadow - 2xl shadow-blue-500 / 25";
                 View All Services;
               </Button>;
               <Button;
@@ -394,7 +394,7 @@ if ( {) {
                 className='border - white / 20 text - white hover:border - white / 40'                href="/contact";
                 variant="outline";
                 size="lg";
-                className="border - white / 20 text - white hover:border - white / 40";
+                className="border - white / 20 text-white hover:border-white / 40";
                 Get Custom Solution;
               </Button>;
             </div>;

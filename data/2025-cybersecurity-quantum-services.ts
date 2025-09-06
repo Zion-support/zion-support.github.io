@@ -2,7 +2,7 @@ export interface CybersecurityQuantumService {
 export interface CybersecurityQuantumService {;
   id: string;
   name: string;
-  tagline: string;
+  tagline: string,
   description: string;
   category: string;
   price: {
@@ -12,10 +12,13 @@ export interface CybersecurityQuantumService {;
     trialDays: number;
     setupTime: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   {
 
@@ -42,10 +45,9 @@ export interface CybersecurityQuantumService {;
     ]
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
-    compliance: [
-<<<<<<< HEAD
-=======
+    compliance: [];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
@@ -381,6 +383,9 @@ export interface CybersecurityQuantumService {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+=======
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
@@ -445,6 +450,7 @@ export interface CybersecurityQuantumService {;
     support:;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
 <<<<<<< HEAD
 =======
@@ -471,19 +477,15 @@ export interface CybersecurityQuantumService {;
     icon: '🔍';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 500 to - emerald - 600';
+=======
+    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',    color: 'from - green - 500 to - emerald - 600';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
-<<<<<<< HEAD
     rating: 4.8,
-    reviews: 1900;
-  }
-;
-=======
-
-    rating: 4 && 4.8,
-
     reviews: 1900
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -518,8 +520,13 @@ export interface CybersecurityQuantumService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string,;
+=======
+};
+  }
+];  id: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   category: string,;
   price: {;
@@ -557,8 +564,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'quantum-resistant-encryption-platform',;
     name: 'Quantum-Resistant Encryption Platform',;
-    tagline: 'Future-proof security with post-quantum cryptography',;
-    description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',;
+    tagline: 'Future-proof security with post-quantum cryptography',,
+  description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',;
     category: 'Quantum Security & Cryptography',;
     price: {;
       monthly: 499,;
@@ -602,8 +609,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'ai-powered-threat-hunting-platform',;
     name: 'AI-Powered Threat Hunting Platform',;
-    tagline: 'Proactive threat detection with autonomous security intelligence',;
-    description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.',;
+    tagline: 'Proactive threat detection with autonomous security intelligence',,
+  description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.',;
     category: 'AI Cybersecurity & Threat Intelligence',;
     price: {;
       monthly: 399,;
@@ -647,8 +654,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'zero-trust-network-access-platform',;
     name: 'Zero-Trust Network Access Platform',;
-    tagline: 'Secure access with continuous verification and least privilege',;
-    description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.',;
+    tagline: 'Secure access with continuous verification and least privilege',,
+  description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.',;
     category: 'Zero-Trust Security & Access Control',;
     price: {;
       monthly: 299,;
@@ -692,8 +699,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'quantum-key-distribution-network',;
     name: 'Quantum Key Distribution Network',;
-    tagline: 'Unhackable communication with quantum entanglement',;
-    description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',;
+    tagline: 'Unhackable communication with quantum entanglement',,
+  description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',;
     category: 'Quantum Communications & Security',;
     price: {;
       monthly: 999,;
@@ -737,8 +744,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'ai-powered-vulnerability-assessment',;
     name: 'AI-Powered Vulnerability Assessment Platform',;
-    tagline: 'Intelligent security scanning with AI-driven risk analysis',;
-    description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',;
+    tagline: 'Intelligent security scanning with AI-driven risk analysis',,
+  description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',;
     category: 'Vulnerability Management & Security Testing',;
     price: {;
       monthly: 199,;
@@ -779,6 +786,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,;
     reviews: 1900;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -795,4 +803,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+    rating: 4.8,
+    reviews: 1900;  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];

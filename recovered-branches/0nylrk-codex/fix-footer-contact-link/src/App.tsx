@@ -7,7 +7,6 @@ import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,14 +29,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -136,13 +127,6 @@ const App = () => {;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
 import "./App.css";
@@ -150,6 +134,7 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -224,6 +209,8 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -237,7 +224,10 @@ import {
   CommunityRoutes,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -280,10 +270,11 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
-        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+        <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -355,6 +346,8 @@ const ContactPage = React.lazy(() => import("./pages/Contact"));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   DeveloperRoutes
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
@@ -371,6 +364,7 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   DeveloperRoutes,
@@ -459,6 +453,8 @@ export default App;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -545,7 +541,7 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
-        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+        <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
@@ -563,29 +559,15 @@ const App = () =>: any {
           </Routes>;
         </Suspense>;
         <Toaster />;
-<<<<<<< HEAD
-        <SonnerToaster position="top-right" />;
-      </ThemeProvider>;
-    </WhitelabelProvider>;
-  );
-},;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  )
+
+export default App;  )
 },
 
-
 export default App;
 
+=======export default App;
+export default App;
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <SonnerToaster position="top - right" />;
-      </ThemeProvider>;
-    </WhitelabelProvider>);
-}
-;
-export default App;
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -809,3 +791,5 @@ export default App;
 export default App;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

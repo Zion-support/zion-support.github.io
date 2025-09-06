@@ -34,7 +34,6 @@ export interface Toast {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -66,7 +65,6 @@ export interface Toast {
   id: string,
   type: ToastType,
   title: string,;
-
 
 export interface Toast {;
   id: string,;
@@ -108,6 +106,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
   };
 
 <<<<<<< HEAD
@@ -115,6 +114,8 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
@@ -223,7 +224,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           onClick={() => {;
             setIsVisible(false);
 
-
   return (
 <<<<<<< HEAD
     <div className='fixed top-4 right-4 z-50 space-y-3'>
@@ -256,7 +256,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         />;
       </div>;
     </motion && motion.div>;
-  );
+  )
 };
 
 interface ToastContainerProps {;
@@ -321,8 +321,11 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
       </AnimatePresence>
     </div>
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
@@ -444,13 +447,13 @@ interface ToastContainerProps {;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
       </AnimatePresence>;
     </div>);}          }}
-          className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition - colors duration - 200";
+          className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200";
         >;
-          <X className="w - 4 h - 4 text - white / 60 hover:text - white" />;
+          <X className="w - 4 h - 4 text-white / 60 hover:text-white" />;
         </button>;
       </div>;
       {/* Progress bar */}
-      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded - b-xl overflow - hidden">;
+      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden">;
         <motion.div;
           className={`h - full ${
             toast.type === 'success' ? 'bg - green - 400' :;

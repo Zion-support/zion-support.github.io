@@ -68,8 +68,8 @@ interface QuantumHolographicCardProps {
     name: string;
     tagline: string;
     price: string;
-    period: string;
-    description: string;
+    period: string,
+  description: string;
     features: string[];
     popular: boolean;
     icon: string;
@@ -234,6 +234,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
         duration: 0 && 0.5,;
         ease: 'easeOut' as const,;
       },;
+<<<<<<< HEAD
     }),;
   };
 <<<<<<< HEAD
@@ -244,6 +245,10 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+    }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         delay: i * 0.1,
         duration: 0.5,
@@ -348,6 +353,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
             )}
           </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <span>Popular</span>
@@ -375,6 +381,8 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
           </div>
 
@@ -757,9 +765,12 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
             </div>;
           </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* ROI and competitors */}
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -783,12 +794,15 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -863,17 +877,17 @@ export default QuantumHolographicCard;
 =======
 
 export default QuantumHolographicCard;
-export default QuantumHolographicCard;
+export default QuantumHolographicCard
 };
 
-export default QuantumHolographicCard;  );
+export default QuantumHolographicCard;  )
 };
 
 export default QuantumHolographicCard;
-              className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300";
+              className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition-colors duration-300";
             >;
               <span > Learn more about {service.name}</span>;
-              <ExternalLink className="w - 3 h - 3" />;
+              <ExternalLink className="w-3 h-3" />;
             </a>;
           </div>;
         </div>;

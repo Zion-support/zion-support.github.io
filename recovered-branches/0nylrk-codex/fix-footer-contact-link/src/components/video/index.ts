@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export * from './VideoCallRoom';
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -38,3 +42,10 @@ export * from './VideoCallRoom';
 =======
 export * from "./VideoCallRoom";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

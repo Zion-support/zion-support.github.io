@@ -135,11 +135,39 @@ export function TalentProfile({
   const availability: Availability = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    status:;
+      profile.availability_type === 'full_time';
+        ? 'available';
+        : profile.availability_type === 'part_time';
+          ? 'limited';
+          : 'unavailable',
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`,
+  }
+  // Create proper skills array for ProfileSkills component;
+  const skills_array =;
+    profile.skills?.map (skill => ({
+      name: skill,
+      level: 3, // Default level since we don't have this data;
+    })) || [];
+  // Create proper projects array for ProfileProjects component;
+  const projects_array =;
+    profile.key_projects?.map ((proj, i) => ({
+      id: `project-${i}`,
+      title: proj.title,
+      description: proj.description,
+      date: new Date ().toISOString (), // Default date since we don't have this data;
+    })) || [];
+  return (
+    <div className='container mx - auto px - 4 py - 8'>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
@@ -207,15 +235,23 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
+<<<<<<< HEAD
+        avatar_url={profile.profile_picture_url}
+        profile_type='talent';
+        rating={profile.average_rating}
+        review_count={profile.rating_count}      />;
+=======
         avatarUrl={profile.profile_picture_url}
         profileType="talent"
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Main content area */}
 <<<<<<< HEAD
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
@@ -269,18 +305,17 @@ export function TalentProfile({;
             </div>;
           </div>;
           {/* Projects Section */}
-          <ProfileProjects projects={projectsArray} />;
+          <ProfileProjects projects={projects_array} />;
           {/* Ratings Section */}
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center">
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />
-              Reviews & Ratings
-            </h2>
-            <ProfileRatings 
-              userId={profile.id}
-              averageRating={profile.average_rating}
-              ratingCount={profile.rating_count}
-            />;
+          <div className='bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6'>;
+            <h2 className='text - xl font - bold text - white mb - 4 flex items - center'>;
+              <Star className='mr - 2 h - 5 w - 5 text - yellow - 400' />;
+              Reviews & Ratings;
+            </h2>;
+            <ProfileRatings;
+              user_id={profile.id}
+              average_rating={profile.average_rating}
+              rating_count={profile.rating_count}            />;
           </div>;
 
           {/* Hire Now CTA */}

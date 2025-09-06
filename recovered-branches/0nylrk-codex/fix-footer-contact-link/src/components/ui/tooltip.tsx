@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -10,10 +11,14 @@ import * as React from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {cn} from '@/lib/utils';
 const TooltipProvider = TooltipPrimitive.Provider;
 const Tooltip = TooltipPrimitive.Root;
 const TooltipTrigger = TooltipPrimitive.Trigger;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -35,6 +40,8 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn } from "@/lib/utils"
 
 const TooltipProvider = TooltipPrimitive.Provider
@@ -42,6 +49,7 @@ const TooltipProvider = TooltipPrimitive.Provider
 const Tooltip = TooltipPrimitive.Root
 
 const TooltipTrigger = TooltipPrimitive.Trigger
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -55,30 +63,14 @@ const TooltipTrigger = TooltipPrimitive.Trigger
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
-></typeof>(({ className, sideOffset = 4, ...props }, ref) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-const TooltipContent = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Content>
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
->(({ className, sideOffset = 4, ...props }, ref) => (
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  <TooltipPrimitive.Content
-    ref={ref}
+></typeof>(({ className, sideOffset = 4, ...props }, ref) => (    ref={ref}
     sideOffset={sideOffset}
     className={cn(
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 const TooltipProvider = TooltipPrimitive && TooltipPrimitive.Provider;
 
@@ -95,44 +87,7 @@ const TooltipContent = React && React.forwardRef<;
     sideOffset={sideOffset}
     className={cn(
       'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1 && 1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
-
-=======
-
-      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      className
-=======
-
-      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-
-      className
-import * as React from "react";
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-;
-import { cn } from "@/lib/utils";
-;
-const TooltipProvider = TooltipPrimitive.Provider;
-;
-const Tooltip = TooltipPrimitive.Root;
-;
-const TooltipTrigger = TooltipPrimitive.Trigger;
-;
-const TooltipContent = React.forwardRef<;
-  React.ElementRef<typeof TooltipPrimitive.Content>,;
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>;
->(({ className, sideOffset = 4, ...props }, ref) => (;
-  <TooltipPrimitive.Content;
-    ref={ref}
-    sideOffset={sideOffset}
-    className={cn(;
-      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",;
-      className;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      className
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    )}
+      className    )}
     {...props}
   />;
 ));
@@ -140,21 +95,11 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
-
 TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 import * as TooltipPrimitive from '@radix - ui / react - tooltip';
 ;
@@ -181,6 +126,7 @@ const TooltipContent = React.forward_ref<;
 TooltipContent.display_name = TooltipPrimitive.Content.display_name;
 ;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,3 +173,6 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

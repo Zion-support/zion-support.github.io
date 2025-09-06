@@ -346,11 +346,12 @@ if ( {) {
         ctx.stroke ();
       }
 
-
-      animationRef && animationRef.current = requestAnimationFrame(animate);    };
+      animationRef && animationRef.current = requestAnimationFrame(animate)
+};
     const handleResize = () => {;
       canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };        ctx && ctx.beginPath();
+      canvas && canvas.height = window && window.innerHeight
+};        ctx && ctx.beginPath();
         ctx && ctx.moveTo(x, 0);
         ctx && ctx.lineTo(x, canvas && canvas.height);
         ctx && ctx.stroke();
@@ -455,11 +456,13 @@ if ( {) {
         />;
       </div>;
 
-
       {/* Energy Field Effects */}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />
       </div>
       {/* Energy Field Effects */}
@@ -513,8 +516,12 @@ if ( {) {
           transition={{
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
             ease: 'linear',        <motion.div;
+<<<<<<< HEAD
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan-500 / 5 to-transparent";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -562,7 +569,6 @@ if ( {) {
 =======
             duration: 20,
             repeat: Infinity,
-
 
           }}
 
@@ -637,10 +643,16 @@ export default UltraFuturisticBackground2026;
     </div>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="fixed inset - 0 pointer - events - none z - 40">;
         <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 400 / 2 to - transparent" />;
         <div className="absolute inset - 0 bg - gradient - to - tl from - transparent via - purple - 400 / 2 to - transparent" />;
+=======
+      <div className="fixed inset - 0 pointer - events-none z-40">;
+        <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan-400 / 2 to-transparent" />;
+        <div className="absolute inset - 0 bg - gradient - to - tl from - transparent via - purple-400 / 2 to-transparent" />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </div>;
     </div>);
 }
@@ -676,9 +688,11 @@ export default UltraFuturisticBackground2026;
 export default UltraFuturisticBackground2026;
 
 export default UltraFuturisticBackground2026;
-export default UltraFuturisticBackground2026;
-
+export default UltraFuturisticBackground2026
 };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

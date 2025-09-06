@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 };
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
+<<<<<<< HEAD
 =======
 
 const contact = {
@@ -34,15 +34,16 @@ const contact = {
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
   // ENTERPRISE SOLUTIONS;
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // ENTERPRISE SOLUTIONS
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Data governance',
       'Security standards',
       'Regulatory requirements',
+<<<<<<< HEAD
     ],
 <<<<<<< HEAD
 =======
@@ -245,6 +246,9 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Microsoft SharePoint'
+=======
+    ],      'Microsoft SharePoint'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Confluence'
       'Notion'
       'Slack'
@@ -260,10 +264,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai - enterprise - knowledge - management',
     name: 'AI Enterprise Knowledge Management',
     tagline: 'Intelligent knowledge discovery and management for enterprises',
@@ -285,6 +285,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Mobile access',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     icon: '🧠',
@@ -328,14 +329,16 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
       'Slack',
       'Box',
     ],
-<<<<<<< HEAD
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
+<<<<<<< HEAD
 
 =======
 
@@ -357,6 +360,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
     price: {
@@ -424,6 +429,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.', roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
     useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       'Process optimizationWorkflow automationCost reductionEfficiency improvementCompliance'
@@ -452,20 +458,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Integration capabilitiesMobile access'
     ];
     popular: true;
     icon: '🧠';
     color: 'from-purple-600 via-violet-600 to-indigo-600';
     textColor: 'text-purple-400';
-<<<<<<< HEAD
-=======
-
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-knowledge-management';
-    marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',
-
-    targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: contact,
   }, ];      'AI knowledge discovery_intelligent categorization_semantic search_knowledge graphs_collaborative workspaces_version control_access control_analytics dashboard';
       'Integration capabilities_mobile access';
@@ -485,12 +485,15 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.';
     competitors: ['Microsoft SharePointConfluenceNotionSlackBox'];
 <<<<<<< HEAD
+<<<<<<< HEAD
     marketSize: '$15.2B enterprise content management market';
     growthRate: '28% annual growth';
     customers: 29;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     customers: 29;
     rating: 4.6;
     reviews: 41
@@ -516,8 +519,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       trialDays: 30,;
       setupTime: '2-3 weeks',;
       enterprise: 'Custom enterprise pricing available';
-    },;
-    description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
+    },,
+  description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
     features: [;
       'Real-time risk monitoringAI risk assessmentAutomated mitigationCompliance trackingRisk scoringScenario modelingIncident responseReporting dashboard',;
       'Integration capabilitiesCustom workflows';
@@ -569,8 +572,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       trialDays: 21,;
       setupTime: '2-3 weeks',;
       enterprise: 'Custom enterprise pricing available';
-    },;
-    description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
+    },,
+  description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
     features: [;
       'Process analysis AIAutomated optimizationWorkflow automationPerformance monitoringCost optimizationCompliance automationIntegration capabilitiesReal-time analytics',;
       'Custom workflowsReporting dashboard';
@@ -616,8 +619,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     name: 'AI Enterprise Knowledge Management',;
     tagline: 'Intelligent knowledge discovery and management for enterprises',;
     price: '$799',;
-    period: '/month',;
-    description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',;
+    period: '/month',,
+  description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',;
     features: [;
       'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard',;
       'Integration capabilitiesMobile access';
@@ -644,20 +647,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: contact;
   }
 ];
-    contactInfo: contact
-=======
-
-    market_size: '$15.2B enterprise content management market';
-    growth_rate: '28% annual growth';
-
-    customers: 29;
-
-    rating: 4 && 4.6;
-    reviews: 41,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    contactInfo: contact  }
+];
+;  }
+];
   }
 ];
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -829,3 +825,5 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

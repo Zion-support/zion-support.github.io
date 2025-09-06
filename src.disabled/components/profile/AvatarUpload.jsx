@@ -1,25 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 '"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
-'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
-"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/profile/AvatarUpload.jsx
-=======
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -30,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 :temp_exclude/src.disabled/components/profile/AvatarUpload.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
@@ -61,3 +52,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

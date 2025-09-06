@@ -10,5 +10,10 @@ console.log(' Starting Analytics Collection...')
     'yarn.lock'
     '.env.local'
     '.env.example'
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    'next.config.js'
+    'next.config.js'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

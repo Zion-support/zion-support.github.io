@@ -17,13 +17,16 @@ export function Logo({ customLogo }: LogoProps) {
   
 =======
 return (
-      <Link href="/" className="flex items - center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
+      <Link href="/" className="flex items-center">;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
       </Link>);
   }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -43,13 +46,11 @@ return (
 ;
 =======
 
-
 interface LogoProps {;
   customLogo?: string;
 
 export function Logo(): any ({ customLogo }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
 
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
@@ -72,8 +73,8 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
     return (
       <Link href='/' className='flex items-center'>;
         <img
-    <Link href="/" className="flex items - center">;
-      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
+    <Link href="/" className="flex items-center">;
+      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
     </Link>);
   // Check condition
 if ( {) {
@@ -121,6 +122,10 @@ if ( {) {
       />;
     </Link>);
 }
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

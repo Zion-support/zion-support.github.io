@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -9,6 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -52,6 +56,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 
+=======
+
+  if (!requireSuperadminApi(req, res)) return;
+
+  const id = String(req.query.id |"");
+  const updates = readJsonFile("updates.json", [] as any[]);
+  const u = updates.find((x: any) => x.id === id);
+  if (!u) return res.status(404).json({ error: "Not found" });
+  res.status(200).json({ opens: u.opens |0 });
+  res.status(200).json({ opens: u.opens |0 });}
+
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!u) return res.status(404).json({ error: 'Not found' });
 
 }
@@ -61,7 +82,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ opens: u.opens || 0 })
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -81,15 +101,15 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
+  if (!u) return res.status(404).json({ error: 'Not found' });import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -143,6 +163,7 @@ function handler() {
 }
   if (!u) return res.status(404).json({ error: 'Not found' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -151,3 +172,6 @@ function handler() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -25,6 +26,11 @@ export function PartnerLeaderboard() {
 =======
 badges: string[]
 }
+=======
+  referrals: number,
+  earnings: number,
+  badges: string[]}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
@@ -41,9 +47,14 @@ export function PartnerLeaderboard() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
+=======
+    },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "2",
       rank: 2,
@@ -55,6 +66,7 @@ export function PartnerLeaderboard() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
@@ -65,13 +77,26 @@ export function PartnerLeaderboard() {
       avatar: "",
       referrals: 124,
       earnings: 3100,
+=======
+      id: "3"
+      rank: 3
+      name: "Neural Networks Pro"
+      avatar: ""
+      referrals: 124
+      earnings: 3100
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       badges: ["bronze"]
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
+=======
+    },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "4",
       rank: 4,
@@ -81,7 +106,10 @@ export function PartnerLeaderboard() {
       earnings: 2450,
       badges: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "5",
       rank: 5,
@@ -93,11 +121,15 @@ export function PartnerLeaderboard() {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
 import { Crown, Medal, Trophy } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface LeaderboardEntry {;
+=======
+import { Crown, Medal, Trophy } from 'lucide-react';interface LeaderboardEntry {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string,;
   rank: number,;
   name: string,;
@@ -166,6 +198,7 @@ export function PartnerLeaderboard() {;
       case 3:;
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
+<<<<<<< HEAD
         return <span className="text-sm font-semibold">{rank}</span>;
     }
   };
@@ -367,3 +400,6 @@ function PartnerLeaderboard() {
 
       badges: ["newcomer"]
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

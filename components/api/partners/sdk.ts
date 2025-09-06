@@ -22,7 +22,6 @@ export default async function handler(
   try {
   const type = (req && req.query.type as string) || 'rest';
 
-
 ) {;
   const type = (req.query.type as string) || 'rest';
 
@@ -59,12 +58,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from "next";
 
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   try {
   const type = (req && req.query.type as string) || "rest";
-
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const type = (req.query.type as string) || "rest";

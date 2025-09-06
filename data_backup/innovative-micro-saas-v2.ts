@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -51,12 +52,15 @@
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type InnovativeMicroSaasV2 = {
   "id": string;
-  title: string;
+  title: string,
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,8 +102,16 @@ export type InnovativeMicroSaasV2 = { id: string; title: string; description: st
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+=======
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -107,22 +119,28 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export type InnovativeMicroSaasV2 = {
   "id": string;
-  title: string;
+  title: string,
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = {
   "id": string;
-  title: string;
+  title: string,
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
@@ -181,3 +199,15 @@ export type InnovativeMicroSaasV2 = { id: string; title: string; description: st
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+export type InnovativeMicroSaasV2 = { id: string; title: string,
+  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/store/wishlistSlice.ts
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/store/wishlistSlice.ts
 >>>>>>> origin/main
 =======
@@ -8,11 +10,16 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/store/wishlistSlice.ts
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -22,14 +29,24 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     
     return this.props.children;
   }
 }
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/store/wishlistSlice.ts
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -41,6 +58,13 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/store/wishlistSlice.ts
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/store/wishlistSlice.ts
+=======
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react";
   );
 export default function Wishlistslice() {;
@@ -52,34 +76,24 @@ export default function Wishlistslice() {;
           This is a placeholder component for wishlistslice.;
         </p>;
       </div>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/store/wishlistSlice.ts
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/store/wishlistSlice.ts
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/store/wishlistSlice.ts
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );,}
   )}
->>>>>>> main
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
->>>>>>> main
->>>>>>> origin/main
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-  ),
 }
 import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );,}
   )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
-import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
-
 
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/store/wishlistSlice.ts
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
 ursor/add-new-services-and-deploy-updates-0462
@@ -108,3 +122,17 @@ import React from "react"; ); export default function Wishlistslice() {; return 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/store/wishlistSlice.ts
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/store/wishlistSlice.ts
+=======
+  ),
+}
+import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );,}
+  )}
+import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
+import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
+
+import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
+import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
+import React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white">; <div className="max-w-4xl mx-auto px-6 py-16">; <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>; <p className="text-lg text-gray-600 mb-8">; This is a placeholder component for wishlistslice.; </p>; </div>; ),}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

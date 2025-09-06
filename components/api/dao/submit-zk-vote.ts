@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 export default async function handler(
   req: NextApiRequest
@@ -83,6 +84,9 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export default async function handler(
   req: NextApiRequest,
@@ -107,9 +111,9 @@ export default async function handler(
     res.status(200).json({ ok: true, received: { proof, optionId } });
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'internal error' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -117,3 +121,6 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

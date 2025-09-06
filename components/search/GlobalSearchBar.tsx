@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +76,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -86,6 +89,7 @@ export default function GlobalSearchBar() {;
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
+<<<<<<< HEAD
       return;      return
 <<<<<<< HEAD
 =======
@@ -376,6 +380,9 @@ export default function GlobalSearchBar() {
       return
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+=======
+      return;      return    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
@@ -428,7 +435,6 @@ export default function GlobalSearchBar() {
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-<<<<<<< HEAD
           aria-label='Voice search'
         >
           🎤
@@ -476,16 +482,13 @@ export default function GlobalSearchBar() {
           <ul className="max-h-64 overflow-auto py-1 text-sm">
             {suggestions.map((s, i) => (
               <li key={i}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <button
                   type="button"
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
@@ -557,6 +560,9 @@ export default function GlobalSearchBar() {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_router } from 'next / router';
+=======
+                >import { use_router } from 'next / router';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default /**
  * GlobalSearchBar - Function description
  */
@@ -690,22 +696,22 @@ if (return) {
   }
 ;
   return (
-    <form on_submit={on_submit} className="relative w - full max - w-lg" role="search">;
+    <form on_submit={on_submit} className="relative w-full max-w-lg" role="search">;
       <input;
         value={query}
         on_change={(e) => set_query (e.target.value)}
         on_focus={() => set_open (suggestions.length > 0)}
-        className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 80 dark:bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm focus:outline - none focus:ring - 2 focus:ring - indigo - 500";
+        className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 80 dark:bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm focus:outline - none focus:ring - 2 focus:ring-indigo-500";
         placeholder="Search talent, jobs, projects...";
         aria - label="Search";
       />;
-      <div className="absolute inset - y-0 right - 2 flex items - center gap - 2">;
-        <button type="button" on_click={start_voice} className="inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text - gray - 200" aria - label="Voice search">🎤</button>;
-        <button type="submit" className="text - sm font - medium text - indigo - 600 hover:text - indigo - 700">Search</button>;
+      <div className="absolute inset - y-0 right - 2 flex items-center gap-2">;
+        <button type="button" on_click={start_voice} className="inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text-gray-200" aria - label="Voice search">🎤</button>;
+        <button type="submit" className="text - sm font - medium text - indigo - 600 hover:text-indigo-700">Search</button>;
       </div>;
       {open && suggestions.length > 0 && (
-        <div className="absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 shadow - lg">;
-          <ul className="max - h-64 overflow - auto py - 1 text - sm">;
+        <div className="absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray-900 shadow-lg">;
+          <ul className="max - h-64 overflow - auto py-1 text-sm">;
             {suggestions.map ((s, i) => (
               <li key={i}>;
                 <button;
@@ -715,7 +721,7 @@ if (return) {
                     set_open (false);
                     router.push (`/search?q=${encodeURIComponent (s)}`);
                   }}
-                  className="w - full text - left px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg - gray - 800";
+                  className="w - full text - left px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg-gray-800";
                 >;
                   {s}
                 </button>;
@@ -724,6 +730,7 @@ if (return) {
         </div>)}
     </form>));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -742,3 +749,6 @@ if (return) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

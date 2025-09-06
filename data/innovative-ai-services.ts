@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'autonomous - vehicle - ai - platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Complete self - driving AI system for commercial fleets',
@@ -9,12 +10,14 @@
     features: [;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface InnovativeAIService {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -40,11 +43,14 @@ export interface InnovativeAIService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   {
 
@@ -62,7 +68,7 @@ export interface InnovativeAIService {
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -84,6 +90,7 @@ export interface InnovativeAIService {
       'Performance analytics',
     ],
     popular: true,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -972,6 +979,8 @@ export interface InnovativeAIService {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67
@@ -987,10 +996,6 @@ export interface InnovativeAIService {
 <<<<<<< HEAD
 =======
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -1014,10 +1019,6 @@ export interface InnovativeAIService {
     popular: true,
     icon: '📦',
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -1076,10 +1077,6 @@ export interface InnovativeAIService {
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1139,7 +1136,7 @@ export interface InnovativeAIService {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1181,7 +1178,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     tagline: 'Revolutionary quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
     period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     features: [
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
@@ -1383,6 +1379,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ];      mobile: '+1 302 464 0950';
@@ -1903,9 +1900,16 @@ export interface InnovativeAIService {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

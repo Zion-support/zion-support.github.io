@@ -17,24 +17,38 @@ const DialogOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
+<<<<<<< HEAD
     ref={ref}
     className={cn(
 <<<<<<< HEAD
 =======
 
   />;
+=======
+  />
+))
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
+>(({ className, children, ...props }, ref) => (
+  <DialogPortal>
+    <DialogOverlay />
+    <DialogPrimitive.Content  />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ));
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
 
-const DialogContent = React && React.forwardRef<;
-  React && React.ElementRef<typeof DialogPrimitive && DialogPrimitive.Content>,;
-  React && React.ComponentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.C</typeof>ontent>;
->(({ className, children, ...props }, ref) => (;
-  <DialogPortal>;
-    <DialogOverlay />;
-    <DialogPrimitive&& DialogPrimitive.Content
-
-
+  />
+))
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
+>(({ className, children, ...props }, ref) => (
+  <DialogPortal>
+    <DialogOverlay />
+    <DialogPrimitive.Content
 
       ref={ref}
       className={cn(
@@ -65,6 +79,7 @@ const DialogContent = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
@@ -208,3 +223,5 @@ export {;
   DialogTitle;
   DialogDescription}
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

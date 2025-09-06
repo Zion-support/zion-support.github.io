@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/ProjectMilestones.jsx
 =======
 <<<<<<< HEAD
@@ -89,3 +90,6 @@ import _React from 'react';'''; import SEO from '@/components/SEO';'''; import {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'; function ProjectMilestones() {} return null} return (<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/> <ProjectMilestonesContent /> ></div> </ProtectedRoute>)} export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones };=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

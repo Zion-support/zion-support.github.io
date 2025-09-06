@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -79,12 +80,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface MainLayoutProps {
+<<<<<<< HEAD
+=======
+  title: string,
+  description: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   children: React.ReactNode;
 }
 
@@ -103,10 +111,6 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   return (
     <>
       <Head>
@@ -114,6 +118,7 @@ export default function MainLayout({
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -134,9 +139,31 @@ export default function MainLayout({
         {/* SEO */}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {canonical && <link rel="canonical" href={canonical} />}
       </Head>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
+=======
+      
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+import SEOHead from '../SEOHead';
+
+interface MainLayoutProps {
+  children: ReactNode;
+  title?: string;
+  description?: string;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
+  return (
+    <>
+      <SEOHead title={title} description={description} />
+      <div className="min-h-screen flex flex-col">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Header />
         <main className="flex-1">
           {children}
@@ -146,6 +173,7 @@ export default function MainLayout({
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,3 +202,6 @@ export default MainLayout;
 
 export default MainLayout;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

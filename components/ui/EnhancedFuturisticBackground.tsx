@@ -225,9 +225,12 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.restore()
         return this.life <= 0 || this.opacity < 0.01;      }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -425,7 +428,8 @@ if (> 0.975) {) {
           drops[i]++;
         }
       };
-      return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      return drawMatrix
+};          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
           }
@@ -550,6 +554,7 @@ if (> 0.975) {) {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -557,6 +562,8 @@ if (> 0.975) {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }
         }
       }
@@ -734,8 +741,8 @@ if ( {) {
 
 =======
       }
-      window && window.removeEventListener('resize', resizeCanvas);
-    };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
+      window && window.removeEventListener('resize', resizeCanvas)
+};  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
       }
       window && window.removeEventListener('resize', resizeCanvas);
     }
@@ -779,7 +786,6 @@ export default EnhancedFuturisticBackground;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
 
 export default EnhancedFuturisticBackground;
 

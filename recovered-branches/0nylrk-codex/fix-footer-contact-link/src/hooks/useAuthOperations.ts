@@ -53,7 +53,6 @@ function useAuthOperations() {
   }, []);
 ;
 
-
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
@@ -173,8 +172,11 @@ function useAuthOperations() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           description: error.message});
         return { data: null, error: error.message }
           title: "Error during signup",
@@ -216,14 +218,16 @@ if ( {) {
 =======
       const { error } = await supabase.auth.signOut(),
 
-
       if (error) {
         toast({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           description: error.message})
 
       } else {
@@ -331,8 +335,6 @@ if ( {) {
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
     try {
@@ -389,8 +391,11 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           return { ...prevUser, ...profileData }
       // Optimistically update the local user state;
       set_user ((prev_user) => {
@@ -454,15 +459,15 @@ if ( {) {
         return prevUser;
       }),;
       toast({;
-        title: "Profile updated!",;
-        description: "Your profile has been successfully updated."}),;
+        title: "Profile updated!",,
+  description: "Your profile has been successfully updated."}),;
       return { error: null }
     } catch (error) {;
       console.error("Profile update failed:", error),;
       toast({;
         variant: "destructive",;
-        title: "Profile update failed",;
-        description: "There was an issue updating your profile. Please try again."}),;
+        title: "Profile update failed",,
+  description: "There was an issue updating your profile. Please try again."}),;
       return { error: "Failed to update profile." }
     } finally {;
       setIsLoading(false);
@@ -476,8 +481,8 @@ if ( {) {
       if (error) {;
         toast({;
           variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
+          title: "Oh no! Something went wrong.",,
+  description: error.message});
       }
     } finally {;
       setIsLoading(false);
@@ -485,8 +490,11 @@ if ( {) {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -538,11 +546,16 @@ if ( {) {
       if (error) {;
         toast({;
           variant: "destructive",;
+<<<<<<< HEAD
           title: "Oh no! Something went wrong.",;
           description: error.message});
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+          title: "Oh no! Something went wrong.",,
+  description: error.message});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   }
   const loginWithGoogle = async () => {
@@ -593,8 +606,8 @@ if ( {) {
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
-          description: error.message});
-  };
+          description: error.message})
+};
   },
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -713,8 +726,8 @@ if ( {) {
     } catch (error: any) {;
       toast({;
         variant: 'destructive',;
-        title: 'Web3 login failed',;
-        description: error?.message || 'Unable to connect wallet';
+        title: 'Web3 login failed',,
+  description: error?.message || 'Unable to connect wallet';
       });
     } finally {;
       setIsLoading(false);

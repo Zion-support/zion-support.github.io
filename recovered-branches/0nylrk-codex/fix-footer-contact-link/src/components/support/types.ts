@@ -23,6 +23,7 @@ export interface HelpArticle {
   content: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   last_updated: string;
   tags: string[];
@@ -32,6 +33,8 @@ export interface HelpCategory {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -39,15 +42,22 @@ export interface HelpArticle {;
   content: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastUpdated: string,
   tags: string[]
 =======
   lastUpdated: string;
+=======
+}
+
+export interface HelpCategory {;  lastUpdated: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   tags: string[];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export interface HelpCategory {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -178,3 +188,5 @@ export interface SupportTicket {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

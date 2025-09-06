@@ -1,11 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -18,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!['views', 'likes', 'shares'].includes(metric))
     return res && res.status(400).json({ error: 'Invalid metric' });
   const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -76,6 +80,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -117,6 +123,7 @@ function handler() {
 }
   return res.status (200).json ({ ok: true, metrics: post.metrics });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -142,17 +149,19 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-}
-}
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
 }
 
+}
+
+<<<<<<< HEAD
 }
 
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

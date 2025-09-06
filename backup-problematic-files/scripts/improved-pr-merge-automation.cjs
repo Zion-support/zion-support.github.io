@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/improved-pr-merge-automation.cjs
 =======
 <<<<<<< HEAD
@@ -13,14 +14,19 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/improved-pr-merge-automation.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // console.log(' Improved PR Merge Automation System')
 console.log('===')
   log(message, type = 'info')
@@ -40,6 +46,11 @@ console.log('===')
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

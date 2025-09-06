@@ -85,6 +85,7 @@ function AIMatchingResults() {
       </div>
     )
   }
+<<<<<<< HEAD
   
   if (matches.length === 0) {
     return (
@@ -172,6 +173,8 @@ export function AIMatchingResults({;
     );
   }
   
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -285,6 +288,7 @@ export function AIMatchingResults({;
                                 </div>;
                               )}
 
+<<<<<<< HEAD
 
 
 
@@ -292,10 +296,13 @@ export function AIMatchingResults({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                                   </div>
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -322,6 +329,12 @@ export function AIMatchingResults({;
               <div className="text-center py-8 text-zion-slate-light">;
                 No {tab} matches found.;
               </div>;
+=======
+                        </div>;
+                      </div>;
+                    </div>;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
           </TabsContent>;
         ))}
@@ -331,18 +344,14 @@ export function AIMatchingResults({;
   );
 =======
 
-
 };
 ;
-
 
 }
       </Tabs>;
     </div>;
   );
 }
-
-
 
                   </Card>);
               })) : (
@@ -352,5 +361,9 @@ export function AIMatchingResults({;
           </TabsContent>))}
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

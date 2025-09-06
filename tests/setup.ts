@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
@@ -20,11 +21,47 @@ afterEach(() => {;
 =======
 =======
 import React from 'react';
+=======
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-interface SetupProps {
-  // Add props here as needed
-}
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 
+<<<<<<< HEAD
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -111,3 +148,23 @@ export default function Setup({ }: SetupProps) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+// Mock IntersectionObserver
+// @ts-ignore
+global.IntersectionObserver = class IntersectionObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+// @ts-ignore
+global.ResizeObserver = class ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock window.scrollTo
+global.window.scrollTo = jest.fn();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

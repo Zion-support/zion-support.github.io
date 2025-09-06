@@ -57,7 +57,6 @@ interface ReviewsListProps {
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
-<<<<<<< HEAD
 
 export function ReviewsList({
   reviews,
@@ -67,13 +66,21 @@ export function ReviewsList({
   if (isLoading) {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space - y-4">;
+=======
+      <div className="space-y-4">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {Array (3);
           .fill (0);
           .map ((_, i) => (
             <div;
+<<<<<<< HEAD
               key={i}
               className="border rounded-lg p-4 bg-card animate-pulse"
+=======
+              key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -228,6 +235,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
       </div>
     );
   }
+<<<<<<< HEAD
 
 =======
 =======
@@ -299,3 +307,8 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

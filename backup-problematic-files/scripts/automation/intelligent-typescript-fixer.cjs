@@ -23,5 +23,10 @@ console.log(' Starting intelligent TypeScript error fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(' Intelligent TypeScript error fixer failed to "start")
+  console.error(' Intelligent TypeScript error fixer failed to "start")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

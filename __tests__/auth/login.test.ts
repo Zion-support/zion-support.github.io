@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +88,8 @@ describe('Login', () => {
 });
 const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 });''
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +99,7 @@ import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 });''
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
 import { describe, it, expect } from 'vitest'
@@ -136,3 +140,5 @@ const { describe,it,expect } from "vitest"; describe('Login', () => { it("should
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

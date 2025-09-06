@@ -22,12 +22,6 @@ return (
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-interface ProjectHeaderProps {;
-  title: string;
 }
 <<<<<<< HEAD
 

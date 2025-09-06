@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -32,5 +38,10 @@ app.get("/ready")
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.log(" Monitoring setup completed!")
+    console.log(" Monitoring setup completed!")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

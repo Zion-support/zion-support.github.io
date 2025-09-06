@@ -8,22 +8,12 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface TalentProfileData {
-=======
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-export interface TalentProfileData {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface TalentProfileData {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface TalentProfileData {export interface TalentProfileData {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +98,11 @@ export interface CategorizedSkills {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  devops: string[];
+  platforms: string[];
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
@@ -116,6 +111,7 @@ export interface EnhancedProfile {
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
+<<<<<<< HEAD
     setError(null)
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -174,6 +170,9 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (error) {
+=======
+    setError(null)      if (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         throw new Error(error.message)
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -222,19 +221,10 @@ export function useTalentProfileEnhancer() {;
 
       setError(err && err.message || 'Failed to enhance profile'),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      setError(err && err.message || 'Failed to enhance profile'),
-      }
-      return data as EnhancedProfile
-    } catch (err: any) {
-      setError(err.message |'Failed to enhance profile')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
+<<<<<<< HEAD
   platforms: string[];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return null
@@ -293,6 +283,9 @@ export interface CategorizedSkills {
     error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   soft_skills: string[],
+=======
+  platforms: string[];  soft_skills: string[],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   other: string[];
 }
 export interface EnhancedProfile {
@@ -334,80 +327,7 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
-<<<<<<< HEAD
-=======
-  }
-}
-
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-;
-export interface TalentProfileData {;
-  name:string,;
-  title:string,;
-  bio:string,;
-  skills:string[],;
-  location?:string;}
-;
-export interface CategorizedSkills {;
-  programming:string[],;
-  devops:string[],;
-  platforms:string[],;
-  softSkills:string[],;
-  other:string[];
-}
-;
-export interface EnhancedProfile {;
-  summary:string,;
-  categorizedSkills:CategorizedSkills;
-}
-;
-export function useTalentProfileEnhancer() {;
-  const [isGenerating, setIsGenerating] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  ;
-  const enhanceProfile = async (profileData:TalentProfileData):Promise<EnhancedProfile | null> => {;
-    setIsGenerating(true),;
-    setError(null),;
-    ;
-    try {;
-      // Call the Supabase Edge Function;
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
-        body:{ talentData:profileData }
-      }),;
-;
-      if (error) {;
-        throw new Error(error.message),;
-      }
-      ;
-      return data as EnhancedProfile,;
-    } catch (err:any) {;
-      setError(err.message || 'Failed to enhance profile'),;
-      return null;
-    } finally {;
-      setIsGenerating(false),;
-    }
-  },;
-  ;
-  return {;
-    enhanceProfile,;
-    isGenerating,;
-    error;
-  },;
-} 
-}
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import clsx, { type ClassValue } from &quot;clsx&quot;
@@ -18,14 +19,15 @@ export function cn(...inputs: ClassValue[]) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
  
 
->>>>>>> 207d7230e0649fa517bb469b27623282180528c9
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -67,3 +69,6 @@ export function cn(...inputs: ClassValue[]) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

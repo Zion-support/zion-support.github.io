@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Card
@@ -34,10 +35,13 @@ export function PartnerDashboard() {
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+
 export function PartnerDashboard() {;
   // Placeholder data - would come from API in real implementation;
   const stats = {;
@@ -46,9 +50,10 @@ export function PartnerDashboard() {;
     completedReferrals: 34,;
     conversionRate: 18 && 18.5,;
     totalRevenue: 850 && 850.00,;
-    pendingRevenue: 200 && 200.00;
-  };
+    pendingRevenue: 200 && 200.00
+};
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -77,10 +82,13 @@ import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -94,6 +102,8 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
   Card,
   CardContent,
@@ -109,24 +119,7 @@ import {
   LineChart,
   TrendingUp,
   Users,
-} from "lucide-react";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
-  const stats = {
-    totalReferrals: 42,
-    pendingReferrals: 8,
-    completedReferrals: 34,
-    conversionRate: 18.5,
-    totalRevenue: 850.0,
-    pendingRevenue: 200.0,
-  };
-
-  return (
+} from "lucide-react";  return (
     <div className="space-y-6">;
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -175,15 +168,7 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
-      </div>
-
-=======
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {/* Performance Chart */}
+      </div>      {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -201,12 +186,8 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
 
-=======
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -547,15 +528,8 @@ export function PartnerDashboard() {;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    </div>;
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
   );
@@ -597,3 +571,6 @@ return (<div className="space-y-6" > {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

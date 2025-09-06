@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 
 <<<<<<< HEAD
@@ -18,10 +18,13 @@ import { Input } from "@/components/ui/input",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+<<<<<<< HEAD
 import {SearchSuggestion} from "@/types/search";
 <<<<<<< HEAD
 =======
@@ -181,6 +184,14 @@ export function EnhancedSearchInput({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
+=======
+import {SearchSuggestion} from "@/types/search";  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);  // Filter suggestions based on input value
+  useEffect(() => {
+    if (!value) {
+      // Show recent searches when input is emptyimport { Search, X } from "lucide-react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Input } from "@/components/ui/input",;
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
 import { SearchSuggestion } from "@/types/search",;
@@ -226,6 +237,7 @@ export function EnhancedSearchInput({;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -238,14 +250,9 @@ export function EnhancedSearchInput({;
     document.addEventListener("mousedown", handleClickOutside),
 =======
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -255,6 +262,7 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion);
     setIsFocused(false)
+<<<<<<< HEAD
     inputRef.current?.blur()
 <<<<<<< HEAD
   },
@@ -316,11 +324,12 @@ export function EnhancedSearchInput({ ;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter suggestions based on input value;
+=======
+    inputRef.current?.blur()  // Filter suggestions based on input value;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
-<<<<<<< HEAD
-<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions && searchSuggestions.filter(s => s && s.type === 'recent'));
       return;
     }
@@ -354,8 +363,8 @@ export function EnhancedSearchInput({ ;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion);
     setIsFocused(false),;
-    inputRef && inputRef.current?.blur();
-  };
+    inputRef && inputRef.current?.blur()
+};
 
   return (
     <div className="relative w-full" ref={containerRef}>;
@@ -363,6 +372,7 @@ export function EnhancedSearchInput({ ;
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Input
@@ -384,6 +394,14 @@ export function EnhancedSearchInput({ ;
           type="text"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <Input
+          ref={inputRef}
+          type="text"
+        <Input
+          ref={inputRef}
+          type="text"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -391,8 +409,8 @@ export function EnhancedSearchInput({ ;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion),;
     setIsFocused(false);
-    inputRef.current?.blur();
-  };
+    inputRef.current?.blur()
+};
   return (;
     <div className="relative w-full" ref={containerRef}>;
       <div className="relative">;
@@ -404,6 +422,7 @@ export function EnhancedSearchInput({ ;
           type="text";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -411,16 +430,24 @@ export function EnhancedSearchInput({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Input
           ref={inputRef}
+          type="text"        <Input
+          ref={inputRef}
           type="text"
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
           <button
+<<<<<<< HEAD
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
 <<<<<<< HEAD
 =======
@@ -536,6 +563,9 @@ export function EnhancedSearchInput({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from './react';
+=======
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"import React, { useState, useEffect, useRef } from './react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
 import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
@@ -601,10 +631,10 @@ function handleClickOutside() {
   }
 ;
   return (
-    <div className="relative w - full" ref={container_ref}>;
+    <div className="relative w-full" ref={container_ref}>;
       <div className="relative">;
         <Search;
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion-slate";
         />;
         <Input;
           ref={input_ref}
@@ -613,14 +643,14 @@ function handleClickOutside() {
           on_change={(e) => on_change (e.target.value)}
           on_focus={() => setIsFocused (true)}
           placeholder={placeholder}
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";
+          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion-slate";
         />;
         {value && (
           <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
+            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text-white";
             on_click={() => on_change ('')}
           >;
-            <X className="h - 4 w - 4" />;
+            <X className="h - 4 w-4" />;
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -630,6 +660,7 @@ function handleClickOutside() {
         visible={is_focused}
       />;
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -680,3 +711,6 @@ if (!value) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -44,5 +44,8 @@ function handler() {
   res.status (200).json ({ items });
   res.status (200).json ({ items });
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

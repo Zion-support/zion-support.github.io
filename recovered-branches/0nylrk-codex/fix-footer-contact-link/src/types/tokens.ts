@@ -31,10 +31,19 @@ export interface TokenTransaction {;
 =======
 export interface Wallet {
   user_id: string;
+<<<<<<< HEAD
   balance: number;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   updated_at: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  balance: number
+  updated_at: string
+}
+export type TransactionType = 'earn' | 'burn';
+  balance: number,  updated_at: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 <<<<<<< HEAD
 export type TransactionType = 'earn' | 'burn';
@@ -45,6 +54,7 @@ export type TransactionType = "earn" | "burn";
 
 =======
 export interface TokenTransaction {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -59,10 +69,13 @@ export interface TokenTransaction {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,21 +111,24 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   reason: string | null;
   created_at: string;
+=======
+  user_id: string,;
+  balance: number,;
+  updated_at: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
-
-
-export interface Wallet {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  created_at: string;
+export type TransactionType = 'earn' | 'burn',;
+export interface TokenTransaction {;
+  id: string,;
+  user_id: string,;
+  amount: number,;
+  transaction_type: TransactionType,;  created_at: string;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

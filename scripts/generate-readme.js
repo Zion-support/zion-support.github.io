@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -166,6 +167,11 @@ function generateReadme() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/main
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 
 /**
@@ -269,6 +275,7 @@ function generateReadme() {
     const existingContent = fs.readFileSync(outputPath, 'utf8'),
     if (existingContent.length > 1000) {
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
+<<<<<<< HEAD
       return
 <<<<<<< HEAD
 =======
@@ -314,6 +321,12 @@ module.exports = { generateReadme },// Simple README maintenance: append an auto
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
+=======
+      return    }
+  }
+
+  fs.writeFileSync(outputPath, README_TEMPLATE),import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Simple README "maintenance": append an automation run footer with timestamp
 import fs from 'fs';
 import path from 'path';
@@ -336,19 +349,10 @@ function main() {
 main();
 #!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {;,"});,"}) const repoRoot = process.cwd();,"});,"}) const readmePath = path.join(repoRoot,;,"});,"}) 'README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {;,"});,"}) content = fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {;,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content.includes(;,"});,"}) 'Automation summary:')) {;,"});,"}) content += footer;,"});,"}) } else {;,"});,"}) content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs.writeFileSync(readmePath,content,;,"});,"}) 'utf8');,"});,"}) console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs.readFileSync(readmePath,'utf8';)} catch (err) {; content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes(` 'Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs.writeFileSync(readmePath,content,';utf8'); console.log(','✅ README updated')} main();
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
 module.exports = { generateReadme },
   // // // console.log(`✅ README generated at: ${outputPath}`)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   // // // console.log(`✅ README generated at: ${outputPath}`)
@@ -358,10 +362,13 @@ module.exports = { generateReadme },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**;
  * Generate README;
  * Creates or updates the main README.md file;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs'),;
 const path = require('path'),;
@@ -373,10 +380,14 @@ Leading-edge technology solutions and autonomous innovation systems.;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
+const path = require('path');const fs = require('fs');
 const path = require('path');
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 Leading-edge technology solutions and autonomous innovation systems.;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -519,25 +530,34 @@ npm run automation:all;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======## 🚀 Quick Start;- \`styles/\` - Global CSS and Tailwind configuration;
+- \`automation/\` - Autonomous automation systems;
+- \`scripts/\` - Utility scripts and build tools;
+- \`public/\` - Static assets and generated content;### Automation;
+- \`npm run automation:all\` - Start all automation systems;
+- \`npm run redundancy:start\` - Start redundancy systems;
+- \`npm run pm2:start\` - Start PM2 process manager;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Maintenance;
+- \`npm run lint\` - Run ESLint;### Maintenance;
 - \`npm run lint\` - Run ESLint;
 - \`npm run type-check\` - Run TypeScript type checking;
 - \`npm run fix:all\` - Fix linting issues;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 🌟 Features;
 =======
 <<<<<<< HEAD
 
-
-## 🌟 Features;
-
-
 =======
-;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 ## 🌟 Features;
-;
+
 ### Maintenance;
 - \`npm run lint\` - Run ESLint;
+<<<<<<< HEAD
 - \`npm run type-check\` - Run TypeScript type checking;
 - \`npm run fix:all\` - Fix linting issues;
 ## 🌟 Features;
@@ -547,15 +567,20 @@ npm run automation:all;
 - \`npm run lint\` - Run ESLint;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 - **Autonomous Content Generation** - AI-powered content creation;
 - **Intelligent Automation** - Self-healing automation systems;
 - **Redundancy Management** - High-availability infrastructure;
 - **Performance Optimization** - Continuous performance monitoring;
 - **Modern UI/UX** - Responsive design with Tailwind CSS;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ;
 - **Autonomous Content Generation** - AI - powered content creation;
@@ -565,6 +590,7 @@ npm run automation:all;
 - **Modern UI / UX** - Responsive design with Tailwind CSS;
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ## 📚 Documentation;
 =======
@@ -723,13 +749,19 @@ if (require.main === module) {
 =======
 
 
+=======
+## 📚 Documentation;- [Architecture](./ARCHITECTURE.md) - System architecture overview;
+- [API Reference](./API.md) - API documentation;
+- [Deployment](./DEPLOYMENT.md) - Deployment instructions;
+- [Contributing](./CONTRIBUTING.md) - Contribution guidelines;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Simple README maintenance: append an automation run footer with timestamp
-
 
     }
   }
   fs.writeFileSync(outputPath, README_TEMPLATE)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
 =======
@@ -798,11 +830,16 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
 // Simple README "maintenance": append an automation run footer with timestamp;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import fs from 'fs';
+=======
+import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();// Simple README "maintenance": append an automation run footer with timestamp
+=======import fs from 'fs';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import path from 'path';
 /**
  * main - Function description
  */
 function main() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -820,6 +857,8 @@ origin/automation-improvements-final
 =======
 // Simple README maintenance: append an automation run footer with timestamp
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
 // Simple README "maintenance": append an automation run footer with timestamp
 import fs from 'fs';
@@ -848,51 +887,16 @@ import fs from 'fs'; import path from 'path'; function main() { const repoRoot =
 #!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {,"});,"}) const repoRoot = process.cwd();,"});,"}) const readmePath = path.join(repoRoot;,"});,"}) 'README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {,"});,"}) content = fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content.includes(;,"});,"}) 'Automation summary:')) {,"});,"}) content += footer;,"});,"}) } else {,"});,"}) content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs.writeFileSync(readmePath,content;,"});,"}) 'utf8');,"});,"}) console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs.readFileSync(readmePath,'utf8';)} catch (err) {content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes(` 'Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs.writeFileSync(readmePath,content,';utf8'); console.log(','✅ README updated')} main();
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
 // Simple README maintenance: append an automation run footer with timestamp
-
-
-
-
 
 module.exports = { generateReadme },
 
-<<<<<<< HEAD
-=======
-=======
 // Simple README maintenance: append an automation run footer with timestamp
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-// Simple README maintenance: append an automation run footer with timestamp
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 module.exports = { generateReadme }
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
-=======
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
-// Simple README maintenance: append an automation run footer with timestamp
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-module.exports = { generateReadme }
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-#!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {;,"});,"}) const repoRoot = process && process.cwd();,"});,"}) const readmePath = path && path.join(repoRoot,;,"});,"}) 'README && README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {;,"});,"}) content = fs && fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {;,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content && content.includes(;,"});,"}) 'Automation summary:')) {;,"});,"}) content += footer;,"});,"}) } else {;,"});,"}) content = content && content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs && fs.writeFileSync(readmePath,content,;,"});,"}) 'utf8');,"});,"}) console && console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs && fs.readFileSync(readmePath,'utf8';)} catch (err) {; content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes(` 'Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs && fs.writeFileSync(readmePath,content,';utf8'); console && console.log(','✅ README updated')} main();
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); console && console.log('✅ README updated')} main();
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); console && console.log('✅ README updated')} main();
-
-module && module.exports = { generateReadme },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const repo_root = process.cwd ();
   const readme_path = path.join (repo_root, 'README.md');
   const now = new Date ().toISOString ();
@@ -932,9 +936,6 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
   $2
 } console.log ('✅ README updated')} main ();
 ;
-<<<<<<< HEAD
-=======
-
 
 module.exports = { generate_readme },
 ;
@@ -962,11 +963,11 @@ if (require.main === module) {;
 }
 ;
 module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 module.exports = { generateReadme },
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 ursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1020,3 +1021,6 @@ module.exports = { generateReadme },;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

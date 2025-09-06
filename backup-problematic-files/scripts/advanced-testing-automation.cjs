@@ -76,5 +76,10 @@ const { execSync } = require('child_process')
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Advanced testing automation "failed")
+    console.error('Advanced testing automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,17 +1,24 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/industry.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
 =======
 import * as React from 'react';
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/industry.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+<<<<<<< HEAD
 const industries = [;
   {}
     name: 'Healthcare,',
@@ -266,3 +273,14 @@ export default function IndustrySolutionsPage() {
 
 export default Industry;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+const Industry: React.FC<IndustryProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Industry</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

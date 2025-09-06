@@ -238,5 +238,10 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

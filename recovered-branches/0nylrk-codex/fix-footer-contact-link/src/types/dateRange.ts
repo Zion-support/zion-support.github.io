@@ -17,18 +17,6 @@ export interface DateRange {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   to?: Date;
 }
-=======
-
-=======
-=======
-  to?: Date;
-
-}
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface DateRange {;
   from?: Date;
   to?: Date
@@ -36,6 +24,7 @@ export interface DateRange {;
   to?: Date;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -48,10 +37,13 @@ export interface DateRange {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface DateRange {
   from?: Date;
+}export interface DateRange {
+  from?: Date;
 }
-<<<<<<< HEAD
 export interface DateRange {;
   from?: Date;
   to?: Date
@@ -59,7 +51,11 @@ export interface DateRange {;
   to?: Date;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

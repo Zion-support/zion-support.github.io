@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
 =======
 import React, { useState } from "react",;
@@ -9,6 +10,8 @@ import { ;
   FormLabel, ;
   FormControl, ;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { Control, UseFormSetValue } from "react-hook-form",;
 import {;
@@ -16,7 +19,10 @@ import {;
   FormItem,;
   FormLabel,;
   FormControl,;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   FormDescription,;
   FormMessage;
 } from "@/components/ui/form",;
@@ -26,11 +32,15 @@ import { Card, CardContent } from "@/components/ui/card",;
 ;
 interface RateOptimizationSectionProps {;
   control:Control<any>,;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
   setValue:(name:string, value:any) => void,;
 =======
   setValue:UseFormSetValue<any>,;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
+=======
+  setValue:UseFormSetValue<any>,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   skills:string[],;
   yearsExperience:number,;
   location?:string,;
@@ -54,6 +64,7 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
       <FormField;
         control={control}
         name="hourlyRate";
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
         render={({ field }) => (;
           <FormItem>;
@@ -64,20 +75,49 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
           <FormItem>;
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
+=======
+        render={({ field } { field:any }) => (;
+          <FormItem>;
+            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <FormControl>;
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
 
+=======
+                {...field}
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Set a competitive rate based on your skills and experience;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+      />;
+;
+      <Card>;
+        <CardContent className="pt-4">;
+          <TalentRateRecommender;
+            skills={skills}            yearsExperience={yearsExperience}
+            location={location}
+            onSuggestionApplied={handleSuggestionApplied}
+            rateType={rateType}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />;
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;
 },; import {;
   FormField;
@@ -112,4 +152,7 @@ return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/RateOptimizationSection.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

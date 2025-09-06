@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+<<<<<<< HEAD
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -93,10 +94,13 @@ export const metadata: Metadata = {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  viewport: 'width=device-width, initial-scale=1';
+  themeColor: '#000000'}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
+  children}: {
+  children: React.ReactNode
 }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +112,7 @@ export default function RootLayout({
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
+<<<<<<< HEAD
     <html lang="en">
       <body className={inter.className}>
         <Navigation />
@@ -184,3 +189,13 @@ export default function RootLayout({
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
+      <body className={`${inter.class_name} bg - black text - white antialiased`}>;
+        <Navigation />;
+        <main className=&quot;min - h-screen & quot;>;
+          {children}
+        </main>;
+        <Footer />;
+      </body>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

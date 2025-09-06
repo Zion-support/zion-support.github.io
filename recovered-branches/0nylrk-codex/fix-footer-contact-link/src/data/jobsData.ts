@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
@@ -15,6 +16,8 @@ export const JOB_POSTS: Job[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 ];
@@ -22,18 +25,11 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -210,3 +206,6 @@ updated at: "2024 - 05 - 05";
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

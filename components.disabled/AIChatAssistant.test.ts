@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -6,14 +7,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -62,18 +61,11 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
   it('handles user interactions'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> origin/main
-import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import AIChatAssistant from './AIChatAssistant';
 describe('AIChatAssistant', () => {;
   it('renders without crashing', () => {;
@@ -84,22 +76,12 @@ describe('AIChatAssistant', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<AIChatAssistant />);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
->>>>>>> main
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    // Add interaction tests based on component functionality,
 }),
 });
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)});,});
+<<<<<<< HEAD
     // Add interaction tests based on component functionality})});
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,3 +129,6 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    // Add interaction tests based on component functionality})});import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -26,12 +26,15 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
@@ -128,7 +131,6 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 }
-
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })

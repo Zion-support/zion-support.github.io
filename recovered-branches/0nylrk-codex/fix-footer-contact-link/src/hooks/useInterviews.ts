@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,6 +8,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { supabase  } from '@/integrations/supabase/client';
@@ -17,6 +19,7 @@ export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -339,6 +342,19 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
+=======
+  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
+    if (!user) {
+      toast({    try {
+      // Insert the interview into the database
+      const { data, error: insertError } = await supabase
+        .from('interviews')
+        .insert({      return data
+    } catch (err: any) {
+      console && console.error("Error in requestInterview:", err);
+      setError(err && err.message);
+      return null    } finally {import { useState } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
@@ -352,21 +368,12 @@ export function useInterviews() {;
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {;
     if (!user) {;
       toast({;
-        title: "Authentication required",;
-        description: "You must be logged in to request interviews",;
+        title: "Authentication required",,
+  description: "You must be logged in to request interviews",;
         variant: "destructive";
       }),;
       return null;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      setIsLoading (false);
-    }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-;
   // Fetch interviews for the current user (as client or talent);
   const fetch_interviews = async (): Promise < Interview[]> => {
     // Check condition
@@ -379,11 +386,6 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
-
-
-
-<<<<<<< HEAD
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -432,6 +434,7 @@ if ( {) {
       setInterviews([]),;
       return [];
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -449,23 +452,27 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     setIsLoading (true);
+=======
+    setIsLoading(true),
+    setError(null),
+
+      setIsLoading (false);
+    }
+  }    setIsLoading (true);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     set_error (null);
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       setIsLoading (false);
     }
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
         .from ('interviews');
         .select (`;
           *;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -478,10 +485,14 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (fetchError) {
+=======
+        .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)      if (fetchError) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         console && console.error("Error fetching interviews:", fetchError);
         setError(fetchError && fetchError.message);
         return []
       }
+<<<<<<< HEAD
       // Transform the data to match Interview type
 <<<<<<< HEAD
 
@@ -532,6 +543,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         id: interview.id;
+=======
+      // Transform the data to match Interview type        id: interview.id;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         client_id: interview.client_id;
         talent_id: interview.talent_id;
         scheduled_date: interview.scheduled_date;
@@ -549,37 +563,9 @@ if ( {) {
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const formattedInterviews = data && data.map((interview: any): Interview => ({
-        id: interview && interview.id;
-        client_id: interview && interview.client_id;
-        talent_id: interview && interview.talent_id;
-        scheduled_date: interview && interview.scheduled_date;
-        end_time: interview && interview.end_time || '';
-        duration_minutes: interview && interview.duration_minutes;
-        status: interview && interview.status;
-        notes: interview && interview.notes;
-        meeting_link: interview && interview.meeting_link;
-        meeting_platform: interview && interview.meeting_platform;
-        created_at: interview && interview.created_at;
-        updated_at: interview && interview.updated_at;
-        title: interview && interview.title;
-        interview_type: interview && interview.interview_type;
-        client_name: interview && interview.clients?.display_name;
-        talent_name: interview && interview.talents?.full_name;
-        client_avatar: interview && interview.clients?.avatar_url,
-        talent_avatar: interview && interview.talents?.profile_picture_url}));
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setInterviews(formattedInterviews);
       const formattedInterviews = data.map((interview: any): Interview => ({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -677,12 +663,15 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
     response: InterviewResponse
   ): Promise<boolean> => {
     if (!user?.id) {
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
 
@@ -750,10 +739,20 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      toast({        title: "Authentication required",
+        description: "You must be logged in to respond to interviews",
+
+        variant: "destructive"
+    setIsLoading(true),
+    setError(null),
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
+<<<<<<< HEAD
         .update({
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -797,10 +796,14 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return false
       }
+=======
+        .update({      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Get the interview to notify the client
       const { data: interview, error: fetchError } = await supabase
         .from('interviews')
         .select('*')
+<<<<<<< HEAD
         .eq('id', interviewId)
 <<<<<<< HEAD
         .single();
@@ -1066,6 +1069,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
+=======
+        .eq('id', interviewId);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check condition
 if ( {) {
   $2
@@ -1095,35 +1101,16 @@ if ( {) {
       console.error ("Error in respondToInterview:", err);
       set_error (err.message);
       return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-  // Helper function to create interview notifications;
-
-=======
-;
-  // Helper function to create interview notifications;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const createInterviewNotification = async (
+  }  const createInterviewNotification = async (
     user_id: string;
     type: string;
     title: string;
     message: string;
     related_id: string) => {
+<<<<<<< HEAD
     try {
 <<<<<<< HEAD
 
@@ -1185,6 +1172,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+=======
+    try {    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
@@ -1261,6 +1251,7 @@ if ( {) {
         .single(),;
       if (fetchError) {;
         setError(fetchError.message),;
+<<<<<<< HEAD
         return false;
 <<<<<<< HEAD
       }
@@ -1284,6 +1275,9 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Check if user is part of this interview
+=======
+        return false;      // Check if user is part of this interview
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
         return false
@@ -1292,11 +1286,11 @@ if ( {) {
         ? interview.talent_id
         : interview.client_id;
 
-
       const notifyUserId = interview && interview.client_id === user && user.id
         ? interview && interview.talent_id
         : interview && interview.client_id;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1337,6 +1331,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -1358,6 +1354,7 @@ if ( {) {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1375,10 +1372,13 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1497,11 +1497,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return {
     interviews;
     is_loading;
     error;
     request_interview;
+<<<<<<< HEAD
     fetch_interviews;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1895,3 +1898,6 @@ export function useInterviews() {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    fetch_interviews;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

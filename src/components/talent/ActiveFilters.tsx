@@ -4,10 +4,34 @@ import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button",
 import { X } from 'lucide-react'
+=======
+  selectedSkills: string[]
+  toggleSkill: (skill: string) => void
+  selectedAvailability: string[]
+  toggleAvailability: (status: string) => void
+  selectedRegions: string[]
+  toggleRegion: (region: string) => void
+  priceRange: [number, number]
+  setPriceRange: (range: [number, number]) => void
+  experienceRange: [number, number]
+  setExperienceRange: (range: [number, number]) => void
+  clearFilters: () => void;interface ActiveFiltersProps {
+  selectedSkills: string[]
+  toggleSkill: (skill: string,) => void
+  selectedAvailability: string[]
+  toggleAvailability: (status: string,) => void
+  selectedRegions: string[]
+  toggleRegion: (region: string,) => void
+  priceRange: [number, number]
+  setPriceRange: (range: [number, number],) => void
+  experienceRange: [number, number]
+  setExperienceRange: (range: [number, number],) => void
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 interface ActiveFiltersProps {
   selectedSkills: string[],
@@ -23,6 +47,7 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ActiveFilters({
   selectedSkills,
@@ -46,6 +71,8 @@ export function ActiveFilters({
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
@@ -57,7 +84,6 @@ export function ActiveFilters({
     priceRange[0] !== 50 ||
 <<<<<<< HEAD
 =======
-
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
@@ -82,21 +108,31 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
 interface ActiveFiltersProps {;
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (status: string) => void;
+  selectedRegions: string[];
+  toggleRegion: (region: string) => void;
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+  clearFilters: () => void;interface ActiveFiltersProps {;
   selectedSkills: string[],;
-  toggleSkill: (skill: string) => void,;
+  toggleSkill: (skill: string,) => void,;
   selectedAvailability: string[],;
-  toggleAvailability: (status: string) => void,;
+  toggleAvailability: (status: string,) => void,;
   selectedRegions: string[],;
-  toggleRegion: (region: string) => void,;
+  toggleRegion: (region: string,) => void,;
   priceRange: [number, number],;
-  setPriceRange: (range: [number, number]) => void,;
+  setPriceRange: (range: [number, number],) => void,;
   experienceRange: [number, number],;
-  setExperienceRange: (range: [number, number]) => void,;
+  setExperienceRange: (range: [number, number],) => void,;
   clearFilters: () => void;
 }
-;
-export function ActiveFilters({;
-  selectedSkills,;
+
+export function ActiveFilters(): any ({;  selectedSkills,;
   toggleSkill,;
   selectedAvailability,;
   toggleAvailability,;
@@ -106,17 +142,17 @@ export function ActiveFilters({;
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
-  clearFilters;
+  clearFilters,;
 }: ActiveFiltersProps) {;
   // Check if any filters are active;
   const hasActiveFilters =;
-    selectedSkills.length > 0 ||;
-    selectedAvailability.length > 0 ||;
-    selectedRegions.length > 0 ||;
-    experienceRange[0] !== 0 ||;
+    selectedSkills && selectedSkills.length > 0 ||;
+    selectedAvailability && selectedAvailability.length > 0 ||;
+    selectedRegions && selectedRegions.length > 0 ||;    experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
+<<<<<<< HEAD
   if (!hasActiveFilters) return null;
   return (;
     <div className="mb-6 flex flex-wrap gap-2 items-center">;
@@ -130,6 +166,8 @@ export function ActiveFilters({;
           {skill}
           <X className="h-3 w-3" />
         </ClickableBadge>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ))}
 <<<<<<< HEAD
 ;
@@ -137,12 +175,12 @@ export function ActiveFilters({;
         <ClickableBadge;
 =======
 
-
       {selectedAvailability && selectedAvailability.map(status => (;
 
         <ClickableBadge
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           key={status}
+<<<<<<< HEAD
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
         >;
@@ -168,6 +206,24 @@ export function ActiveFilters({;
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
 =======
 
+=======
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleAvailability(status)}        >;
+          {status === 'full-time';
+            ? 'Full-time';
+            : status === 'part-time';
+              ? 'Part-time';
+              : 'Project-based'}
+          <X className='h-3 w-3' />;
+        </ClickableBadge>;      ))}
+
+      {selectedRegions && selectedRegions.map(region => (;
+
+        <ClickableBadge
+          key={region}
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleRegion(region)}        >;          {region}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
 
@@ -188,7 +244,6 @@ export function ActiveFilters({;
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 =======
 
-
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
 
         <ClickableBadge
@@ -207,12 +262,10 @@ export function ActiveFilters({;
 =======
           <X className="h-3 w-3" />
 
-
         </ClickableBadge>
       ))}
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
-
 
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
@@ -227,18 +280,15 @@ export function ActiveFilters({;
         </ClickableBadge>
       )}
 
-
-
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
 
-
         Clear All
       </Button>
     </div>
-  );
+  )
 };
 }
 
@@ -251,8 +301,6 @@ export function ActiveFilters({;
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
 
-
-
         Clear All
       </Button>
     </div>
@@ -262,8 +310,11 @@ export function ActiveFilters({;
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -298,12 +349,10 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
+
 }
 <<<<<<< HEAD
 =======
-
-
-
 
 import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';

@@ -88,8 +88,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 =======
 
-
-
   const section = String(req && req.query.section || "General");
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });
@@ -148,6 +146,7 @@ function handler() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
@@ -158,6 +157,8 @@ function handler() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const section = String(req.query.section || 'General');

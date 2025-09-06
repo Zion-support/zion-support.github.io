@@ -34,5 +34,10 @@ const { execSync } = require('child_process')
           "type"
           "type"
     console.log('\n Error Fixing "Summary")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Error fixing "failed")
+    console.error('Error fixing "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

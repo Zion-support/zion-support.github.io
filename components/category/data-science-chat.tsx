@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,8 @@ const DataScienceChat: NextPage = () => {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -37,6 +40,7 @@ const DataScienceChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>DataScienceChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
         <meta name="description" content="DataScienceChat blog post" />{" "}
 <<<<<<< HEAD
 
@@ -102,6 +106,9 @@ export default DataScienceChat;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from './next';
+=======
+        <meta name="description" content="DataScienceChat blog post" />{" "}import type { NextPage } from './next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Head from './next / head';
 import Link from './next / link';
 const DataScienceChat: NextPage = () => {
@@ -121,6 +128,7 @@ const DataScienceChat: NextPage = () => {
 ;
 export default DataScienceChat;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -173,3 +181,5 @@ export default DataScienceChat;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -9,10 +10,14 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
+<<<<<<< HEAD
 
   ratingDistribution?: Record<number, number>
 <<<<<<< HEAD
@@ -44,6 +49,9 @@ import { Progress } from "@/components/ui/progress",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReviewStatsProps {
+=======
+  ratingDistribution?: Record<number, number>interface ReviewStatsProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
@@ -54,6 +62,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+<<<<<<< HEAD
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -406,3 +415,9 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {  // Calculate percentages for distribution if available
+  const getPercentage = (count: number) => {
+    if (totalReviews === 0) return 0
+    return (count / totalReviews) * 100
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

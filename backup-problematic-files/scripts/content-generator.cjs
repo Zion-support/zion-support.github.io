@@ -27,5 +27,10 @@ const path = require("path")
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

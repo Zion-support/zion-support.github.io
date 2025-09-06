@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import react from '@vitejs/plugin-react';
@@ -337,19 +338,13 @@ export default defineConfig({
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'node:path';
->>>>>>> main
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-<<<<<<< HEAD
-=======
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -371,16 +366,15 @@ export default defineConfig({
     include: /src\/.*\.[jt]sx?$/,
     exclude: []
   },
->>>>>>> main
   server: {
     port: 3000,
     host: true
   },
   build: {
     outDir: 'dist',
-<<<<<<< HEAD
     sourcemap: true
   }
+<<<<<<< HEAD
 })
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -400,3 +394,6 @@ export default defineConfig({
 });
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

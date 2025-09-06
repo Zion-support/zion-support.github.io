@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -45,6 +45,8 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   getTalentRateSuggestion;
@@ -53,8 +55,6 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 import {Button} from "@/components/ui/button";
@@ -70,6 +70,7 @@ interface TalentRateRecommenderProps {;
   rateType: "hourly" | "fixed";
 }
 
+<<<<<<< HEAD
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 =======
 <<<<<<< HEAD
@@ -84,11 +85,13 @@ import { Sparkles } from './lucide-react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TalentRateRecommenderProps {
+=======
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;interface TalentRateRecommenderProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   skills;
   years_experience;
   location;
-<<<<<<< HEAD
 
   const generateSuggestion = async () => {;
     if (skills && skills.length === 0 || yearsExperience <= 0) {;
@@ -103,69 +106,7 @@ interface TalentRateRecommenderProps {
         yearsExperience,;
         location};
 
-
       const result = await getTalentRateSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {;
-      console && console.error("Error generating rate suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
-
-  };
-
-=======
-
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
-
-=======
-  skills;
-  years_experience;
-  location;
-  const generateSuggestion = async () => {;
-    if (skills && skills.length === 0 || yearsExperience <= 0) {;
-      return;
-    }
-    setIsLoading(true);
-    try {;
-      const params: TalentRateParams = {;
-        skills;
-        yearsExperience,;
-        location};
-      const result = await getTalentRateSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {;
-      console && console.error("Error generating rate suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
-
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
-
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from "lucide-react";
-interface TalentRateRecommenderProps {
-
-  skills: string[]
-  yearsExperience: number
-  location?: string;
-  onSuggestionApplied: (value: number) => void
-
-  rateType: "hourly" | "fixed"
-}
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills;
-  yearsExperience;
-  location;
-
-  onSuggestionApplied
-
-  rateType}) => {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
@@ -175,18 +116,21 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       const params: TalentRateParams = {;
         skills;
       const result = await getTalentRateSuggestion(params);
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TalentRateRecommenderProps {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
+<<<<<<< HEAD
   rateType: "hourly" | "fixed"
 <<<<<<< HEAD
 =======
@@ -251,6 +195,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       return
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   skills,;
+=======
+  rateType: "hourly" | "fixed"  skills,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   yearsExperience,;
   location,;
   onSuggestionApplied,;
@@ -260,6 +207,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const { user } = useAuth(),;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
+<<<<<<< HEAD
       return;
 <<<<<<< HEAD
 =======
@@ -276,6 +224,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+      return;    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     setIsLoading(true),
     try {
@@ -284,6 +235,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         yearsExperience,
         location},
 
+<<<<<<< HEAD
       const result = await getTalentRateSuggestion(params),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,6 +289,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+      const result = await getTalentRateSuggestion(params),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setIsLoading(true),;
     try {;
       const params: TalentRateParams = {;
@@ -353,6 +308,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -363,12 +319,13 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
       const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
-<<<<<<< HEAD
 
       // Track this suggestion application;
       if (user) {;
@@ -377,26 +334,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           suggestionType: 'talent',;
           suggestedMin: suggestion && suggestion.minRate,;
           suggestedMax: suggestion && suggestion.maxRate,;
-<<<<<<< HEAD
-=======
-  const handleApplySuggestion = () => {;
-    if (suggestion) {;
-      // We'll use the middle of the range as the suggested rate;
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),;
-      onSuggestionApplied(suggestedRate),;
-      // Track this suggestion application;
-      if (user) {;
-        trackPricingSuggestion({;
-          userId: user.id,;
-          suggestionType: 'talent',;
-          suggestedMin: suggestion.minRate,;
-          suggestedMax: suggestion.maxRate,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          actualValue: suggestedRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
+<<<<<<< HEAD
     }
 
 <<<<<<< HEAD
@@ -438,24 +379,16 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+    }  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="space-y-4">;
       <div>;
         {!suggestion && !isLoading ? (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  },
-
-  return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             type="button"
             variant="outline"
+<<<<<<< HEAD
             onClick={generateSuggestion}
 <<<<<<< HEAD
 =======
@@ -510,6 +443,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           <PricingSuggestionBox
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onSuggestionApplied,
+=======
+            onClick={generateSuggestion}  onSuggestionApplied,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   rate_type}) => {
   const [is_loading, setIsLoading] = useState (false);
   const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
@@ -565,7 +501,7 @@ if ( {) {
   }
 ;
   return (
-    <div className="space - y-4">;
+    <div className="space-y-4">;
       <div>;
         {!suggestion && !is_loading ? (
           <Button;
@@ -573,19 +509,16 @@ if ( {) {
             variant="outline";
             on_click={generate_suggestion}
             disabled={skills.length === 0 || years_experience <= 0}
-            className="w - full";
+            className="w-full";
           >;
-            <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
+            <Sparkles className="h - 4 w - 4 mr-2" /> Optimize Rate with AI;
           </Button>) : (
           <PricingSuggestionBox;
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
 
 
 
@@ -764,3 +697,5 @@ return (<div className="space-y-4" > <div> {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

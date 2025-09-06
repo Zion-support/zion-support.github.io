@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +11,8 @@ import {Badge} from "@/components/ui/badge";
 import {Search, Filter} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -23,11 +26,14 @@ import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -41,11 +47,14 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T14:30:00Z"
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
+<<<<<<< HEAD
 
 =======
   }
   },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -56,7 +65,10 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-14T09:15:00Z"
     lastUpdated: "2023-12-15T13:20:00Z"
     category: "billing"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1003"
     user: "tech.guru@startup.io"
@@ -67,7 +79,10 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T11:00:00Z"
     lastUpdated: "2023-12-15T11:00:00Z"
     category: "billing"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1004"
     user: "developer@codelab.dev"
@@ -78,7 +93,10 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-13T16:45:00Z"
     lastUpdated: "2023-12-13T16:45:00Z"
     category: "api"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1005"
     user: "maria.rodriguez@design.co"
@@ -89,7 +107,10 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-12T10:30:00Z"
     lastUpdated: "2023-12-15T09:15:00Z"
     category: "disputes"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1006"
     user: "alex.wong@datacompany.com"
@@ -100,7 +121,10 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z"
     lastUpdated: "2023-12-15T08:30:00Z"
     category: "verification"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1007"
     user: "jamie.taylor@tech.org"
@@ -112,7 +136,14 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
+<<<<<<< HEAD
 
+=======
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -121,10 +152,87 @@ const MOCK_SUPPORT_REQUESTS = [
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Search, Filter } from "lucide-react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+// Mock data for support requests;
+const MOCK_SUPPORT_REQUESTS = [;
+  {;
+    id: "SR-1001",;
+    userId: "user-123",;
+    issue: "Cannot access account after password reset",;
+    status: "open",;
+    priority: "high",;
+    createdAt: "2023-12-15T14:30:00Z",;
+    lastUpdated: "2023-12-15T15:45:00Z",;
+    category: "authentication";
+    userId: "user-456",;
+    issue: "Payment failed but funds were deducted",;
+    status: "in-progress",;
+    priority: "high",;
+    createdAt: "2023-12-14T09:15:00Z",;
+    lastUpdated: "2023-12-15T13:20:00Z",;
+    category: "billing";
+    userId: "user-789",;
+    issue: "Unable to download invoice PDF",;
+    status: "open",;
+    priority: "medium",;
+    createdAt: "2023-12-15T11:00:00Z",;
+    lastUpdated: "2023-12-15T11:00:00Z",;
+    category: "billing";
+    userId: "user-235",;
+    issue: "API integration documentation is outdated",;
+    status: "open",;
+    priority: "low",;
+    userId: "user-567",;
+    issue: "Dispute with freelancer over delivered work quality",;
+    status: "in-progress",;
+    priority: "high",;
+    createdAt: "2023-12-12T10:30:00Z",;
+    lastUpdated: "2023-12-15T09:15:00Z",;
+    category: "disputes";
+    userId: "user-890",;
+    issue: "Profile verification pending for over 7 days",;
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-08T13:20:00Z",;
+    lastUpdated: "2023-12-15T08:30:00Z",;
+    category: "verification";
+    userId: "user-345",;
+    issue: "Cannot upload portfolio images",;
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-10T15:10:00Z",;
+    lastUpdated: "2023-12-13T11:25:00Z",;
+    category: "profile";
+  }
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),;
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),;
+  // Apply filters to the request data;
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {;
+    // Apply search query filter;
+    if (searchQuery &&;
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
+      return false;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -138,6 +246,7 @@ const MOCK_SUPPORT_REQUESTS = [
     if (categoryFilter && request.category !== categoryFilter) {
       return false
     }
+<<<<<<< HEAD
 
   const resetFilters = () => {
     setSearchQuery(""),
@@ -145,6 +254,11 @@ const MOCK_SUPPORT_REQUESTS = [
     setPriorityFilter(null),
     setCategoryFilter(null)
 
+=======
+    return true
+  });
+  // Count by status for the summary dashboard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <AppLayout>
       <SEO
@@ -202,6 +316,98 @@ const MOCK_SUPPORT_REQUESTS = [
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
           <TabsContent value="all" className="mt-6">
+<<<<<<< HEAD
+=======
+
+  // Apply filters to the request data;
+  const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
+    // Apply search query filter;
+    if (searchQuery && ;
+        !request && request.issue.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
+        !request && request.user.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
+        !request && request.id.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())) {;
+      return false;
+    }
+    // Apply status filter;
+    if (statusFilter && request && request.status !== statusFilter) {;
+      return false;
+    }
+    // Apply priority filter;
+    if (priorityFilter && request && request.priority !== priorityFilter) {;
+      return false;
+    }
+    // Apply category filter;
+    if (categoryFilter && request && request.category !== categoryFilter) {;
+      return false;
+    }
+  // Count by status for the summary dashboard;
+  const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(r => r && r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(r => r && r.status === 'in-progress').length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(r => r && r.status === 'resolved').length;
+  const totalCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.length;
+  const resetFilters = () => {;
+    setSearchQuery("");
+    setStatusFilter(null);
+    setPriorityFilter(null);
+    setCategoryFilter(null)
+};
+  return (
+    <AppLayout>;
+      <SEO
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
+      />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
+          <div>;
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+              Support Requests;
+            </h1>;
+            <p className="text-zion-slate-light mt-2">;
+              Manage and respond to user support requests and issues;
+            </p>;
+          </div>;
+          <div className="mt-4 md:mt-0">;
+            <Button className="bg-zion-purple hover:bg-zion-purple-light">;
+              New Support Case;
+            </Button>;
+          </div>;
+        </div>;
+        {/* Status Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">;
+          <Card>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>;
+              <CardDescription>Open Requests</CardDescription>;
+            </CardHeader>;
+          </Card>;
+          <Card>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>;
+              <CardDescription>In Progress</CardDescription>;
+            </CardHeader>;
+          </Card>;
+          <Card>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>;
+              <CardDescription>Resolved</CardDescription>;
+            </CardHeader>;
+          </Card>;
+          <Card>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>;
+              <CardDescription>Total Requests</CardDescription>;
+            </CardHeader>;
+          </Card>;
+        </div>;
+        <Tabs defaultValue="all" className="mb-8">;
+          <TabsList>;
+            <TabsTrigger value="all">All Requests</TabsTrigger>;
+            <TabsTrigger value="escalated">Escalated</TabsTrigger>;
+            <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>;
+            <TabsTrigger value="need-response">Need Response</TabsTrigger>;
+          </TabsList>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="relative flex-1">;
@@ -209,6 +415,7 @@ const MOCK_SUPPORT_REQUESTS = [
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -218,6 +425,11 @@ const MOCK_SUPPORT_REQUESTS = [
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -228,8 +440,14 @@ const MOCK_SUPPORT_REQUESTS = [
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+=======
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -240,9 +458,15 @@ const MOCK_SUPPORT_REQUESTS = [
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -291,7 +515,10 @@ const MOCK_SUPPORT_REQUESTS = [
                               ? 'secondary'
                               : 'outline'
                           }>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -301,8 +528,11 @@ const MOCK_SUPPORT_REQUESTS = [
                               ? 'destructive'
                               : request.priority === 'medium'
                               ? 'default'
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                               : 'outline'
                           }>;
                             {request && request.status}
@@ -314,7 +544,10 @@ const MOCK_SUPPORT_REQUESTS = [
                               ? 'destructive' 
                               : request && request.priority === 'medium' 
                               ? 'default' 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                               : 'outline'
                           }>;
                             {request && request.priority}
@@ -327,6 +560,7 @@ const MOCK_SUPPORT_REQUESTS = [
                           <Button variant="ghost" size="sm">View</Button>;
                           <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;
+<<<<<<< HEAD
                       </TableRow>;
                     ))}
                   </TableBody>
@@ -363,3 +597,5 @@ const MOCK_SUPPORT_REQUESTS = [
     </AppLayout>
   )
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

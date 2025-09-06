@@ -23,6 +23,7 @@ export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -32,13 +33,14 @@ export type BudgetType = "fixed" | "hourly" | "range";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ListingItem {
   id: string;
   title: string;
   category: string
   image?: string
 }
-<<<<<<< HEAD
 export interface ContactInfo {
 
 <<<<<<< HEAD
@@ -60,9 +62,9 @@ export interface ContactInfo {;
   company: string
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export interface ListingItem {
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -143,6 +145,8 @@ export interface Budget {;
 =======
 export interface Budget {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -154,9 +158,9 @@ export interface QuoteFormData {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
 export interface QuoteFormData {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -167,12 +171,15 @@ export interface QuoteFormData {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
   projectName: string;
   projectDescription: string;
   startDate?: Date;
+<<<<<<< HEAD
   endDate?: Date;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,13 +218,13 @@ export type QuoteStatus =
   | "archived";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-export interface QuoteRequest {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
+  endDate?: Date;  timeline: TimelineType;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+export interface QuoteRequest {
 
 export interface QuoteRequest {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,6 +242,8 @@ export interface QuoteRequest {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   talent_id: string;
   talent_name?: string;
   requester_id?: string;
@@ -252,6 +261,7 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -353,3 +363,5 @@ export interface QuoteRequest {;
   updated_at: string;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

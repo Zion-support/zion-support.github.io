@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/fix_corrupted_files.js
 ========
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ const fs = require("fs"); const path = require("path"); function fixCorruptedFil
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require("fs");
 const path = require("path");
 // Function to fix corrupted TypeScript files
@@ -36,16 +39,20 @@ function fixCorruptedFile(filePath) {
     // Fix common corruption patterns
     content = content
       // Fix import statements with extra commas
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       .replace(
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g
         "import type { NextPage } from 'next'")
       .replace(
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -72,10 +79,13 @@ origin/automation-improvements-final
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       .replace(;
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
       .replace(;
+<<<<<<< HEAD
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
 origin/main
@@ -83,6 +93,12 @@ origin/automation-improvements-final
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+      .replace(;
+        /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
+        "import type { NextPage } from 'next'")
+      .replace(;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "import type { NextPage } from 'next'")
       // Fix component declarations
       .replace(
@@ -94,8 +110,11 @@ origin/automation-improvements-final
       // Fix text content with extra commas
       .replace(/(\w+),\s*(\w+),\s*(\w+)/g, "$1$2$3")
       .replace(/(\w+),\s*(\w+)/g, "$1$2")
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default $1;");
       // Fix return statements
       .replace(/retu,\s*r,\s*n\s*\(/g, "return (")
@@ -190,6 +209,7 @@ export default $1;");
     return true} catch (error) {
     console.error (`Error fixing ${file_path}:`, error.message);
     return false}
+<<<<<<< HEAD
 }
 }
 
@@ -219,17 +239,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Start fixing from the pages directory
 // // // // // // // console && console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Start fixing from the pages directory;
 // // // // // // // console.log ("Fixing corrupted TypeScript files...");
 fixCorruptedFiles ("./pages");
 fixCorruptedFiles ("./components");
 // // // // // // // console.log ("Finished fixing corrupted files.");
 console.log ("Finished fixing corrupted files.");
+<<<<<<< HEAD
 
 export default fixCorruptedFile;
 export default fixCorruptedFile;
@@ -244,6 +273,10 @@ export default fixCorruptedFile;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/automation-improvements-final
 =======
+=======
+const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
+const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // // // // // // // console.log("Finished fixing corrupted files.");
 console.log("Finished fixing corrupted files.");
 export default fixCorruptedFile;
@@ -253,6 +286,7 @@ export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/fix_corrupted_files.js
 ========
 <<<<<<< HEAD
@@ -285,3 +319,5 @@ const fs = require("fs"); const path = require("path"); function fixCorruptedFil
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/fix_corrupted_files.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/fix_corrupted_files.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

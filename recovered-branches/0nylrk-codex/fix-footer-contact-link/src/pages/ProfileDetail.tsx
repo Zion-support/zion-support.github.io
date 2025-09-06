@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -10,6 +11,8 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -23,6 +26,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge";
 import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function ProfileDetail() {;
@@ -39,6 +43,8 @@ export default function ProfileDetail() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -48,6 +54,7 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 
 import {
   MapPin;
@@ -97,10 +104,29 @@ import {
 } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { 
+  MapPin;
+  Clock;
+  Link as LinkIcon;
+  Github;
+  Twitter;
+  Linkedin;
+  CheckCircle2;
+  Mail;
+  Phone;
+  Globe
+} from "lucide-react",import { HireNowCTA } from "@/components/profile/HireNowCTA";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
+<<<<<<< HEAD
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -141,6 +167,35 @@ export default function ProfileDetail() {
     const fetchProfile = async () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true);
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const { profileId } = useParams(),
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true),
+      setError(null),
+      try {
+        if (!profileId) {
+          setError("Profile ID is missing."),
+          return
+        }
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+          .single();
+          .single(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setIsLoading(true);
       setError(null);
       try {;
@@ -152,17 +207,13 @@ export default function ProfileDetail() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
         }
-<<<<<<< HEAD
-
 
           .single(),
 
-
-
-=======
           .single();
           .single(),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
           .single();
@@ -170,6 +221,8 @@ export default function ProfileDetail() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if (error) {
           throw new Error(error.message);
         }
@@ -269,21 +322,10 @@ export default function ProfileDetail() {;
       } finally {
         setIsLoading(false);
       }
-
-
-=======
-
-=======
-    }
-    fetchProfile()
-  }, [profileId]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      } finally {
+    }      } finally {
         setIsLoading(false)
       }
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -357,6 +399,7 @@ if ( {) {
 =======
     fetchProfile();
   }, [profileId]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
@@ -365,6 +408,8 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -517,50 +562,18 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   if (error) {;
 
-    return (
-=======
-  if (error) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    return (
+    return (    return (
 ;
   if (error) {;
-    return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Error: {error}</p>;
-      </div>;
-    );
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  if (!profileData) {;
-
-=======
-  if (!profileData) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    return (
-;
-  if (!profileData) {;
-    return (;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <div className="min-h-screen flex items-center justify-center">;
+    return (;      <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -1065,21 +1078,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+=======
+      <Header />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-12 gap-6">            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
               </CardHeader>;
               <CardContent>;
-<<<<<<< HEAD
-                <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
-              </CardContent>;
-            </Card>;
-
-=======
-                <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -1087,26 +1097,17 @@ if ( {) {
               </CardHeader>;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
-<<<<<<< HEAD
-                  {profileData && profileData.skills?.map((skill: string, index: number) => (;
-=======
-                  {profileData.skills?.map((skill:string, index:number) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
+                  {profileData.skills?.map((skill:string, index:number) => (;                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            {/* Experience Section */}
+;            {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
               </CardHeader>;
+<<<<<<< HEAD
               <CardContent>;
 <<<<<<< HEAD
                 {profileData && profileData.experience ? (;
@@ -1395,10 +1396,13 @@ if ( {) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              <CardContent>;                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
               }}
             />;
             {/* Contact Information */}
@@ -1445,93 +1449,97 @@ if ( {) {
                 )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
                 <div className="flex flex - wrap gap - 4 text - sm">;
+=======
+                <div className="flex flex - wrap gap - 4 text-sm">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {profile_data.location && (
-                    <div className="flex items - center text - zion - slate - light">;
-                      <MapPin className="h - 4 w - 4 mr - 1" />;
+                    <div className="flex items - center text - zion - slate-light">;
+                      <MapPin className="h - 4 w - 4 mr-1" />;
                       <span>{profile_data.location}</span>;
                     </div>)}
                   {profile_data.availability && (
-                    <div className="flex items - center text - zion - slate - light">;
-                      <Clock className="h - 4 w - 4 mr - 1" />;
+                    <div className="flex items - center text - zion - slate-light">;
+                      <Clock className="h - 4 w - 4 mr-1" />;
                       <span>{profile_data.availability}</span>;
                     </div>)}
                   {profile_data.hourly_rate && (
-                    <div className="text - white font - bold">;
+                    <div className="text - white font-bold">;
                       ${profile_data.hourly_rate}
-                      <span className="text - zion - slate - light font - normal">/hr</span>;
+                      <span className="text - zion - slate - light font-normal">/hr</span>;
                     </div>)}
                 </div>;
               </CardContent>;
             </Card>;
             {/* About Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+            <Card className="mb - 6 bg - zion - blue border - zion - blue-light">;
               <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">About Me</CardTitle>;
+                <CardTitle className="text - xl font - bold text-white">About Me</CardTitle>;
               </CardHeader>;
               <CardContent>;
-                <p className="text - zion - slate - light">{profile_data.bio || "No bio provided."}</p>;
+                <p className="text - zion - slate-light">{profile_data.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
             {/* Skills Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+            <Card className="mb - 6 bg - zion - blue border - zion - blue-light">;
               <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">Skills</CardTitle>;
+                <CardTitle className="text - xl font - bold text-white">Skills</CardTitle>;
               </CardHeader>;
               <CardContent>;
-                <div className="flex flex - wrap gap - 2">;
+                <div className="flex flex - wrap gap-2">;
                   {profile_data.skills?.map ((skill: string, index: number) => (
-                    <Badge key={index} className="bg - zion - blue - light text - zion - slate - light border - none">{skill}</Badge>)) || <p className="text - zion - slate - light">No skills provided.</p>}
+                    <Badge key={index} className="bg - zion - blue - light text - zion - slate - light border-none">{skill}</Badge>)) || <p className="text - zion - slate-light">No skills provided.</p>}
                 </div>;
               </CardContent>;
             </Card>;
             {/* Experience Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+            <Card className="mb - 6 bg - zion - blue border - zion - blue-light">;
               <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">Experience</CardTitle>;
+                <CardTitle className="text - xl font - bold text-white">Experience</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 {profile_data.experience ? (
                   profile_data.experience.map ((exp: any, index: number) => (
-                    <div key={index} className="mb - 4">;
-                      <h4 className="font - bold text - white">{exp.title}</h4>;
-                      <p className="text - zion - cyan">{exp.company}</p>;
-                      <p className="text - sm text - zion - slate - light">{exp.start_date} - {exp.end_date || "Present"}</p>;
-                      <p className="text - zion - slate - light">{exp.description}</p>;
+                    <div key={index} className="mb-4">;
+                      <h4 className="font - bold text-white">{exp.title}</h4>;
+                      <p className="text - zion-cyan">{exp.company}</p>;
+                      <p className="text - sm text - zion - slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>;
+                      <p className="text - zion - slate-light">{exp.description}</p>;
                     </div>))) : (
-                  <p className="text - zion - slate - light">No experience provided.</p>)}
+                  <p className="text - zion - slate-light">No experience provided.</p>)}
               </CardContent>;
             </Card>;
             {/* Portfolio Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+            <Card className="mb - 6 bg - zion - blue border - zion - blue-light">;
               <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">Portfolio</CardTitle>;
+                <CardTitle className="text - xl font - bold text-white">Portfolio</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 {profile_data.portfolio_links ? (
-                  <div className="flex flex - col gap - 3">;
+                  <div className="flex flex - col gap-3">;
                     {profile_data.portfolio_links.map ((link: any, index: number) => (
                       <a;
                         key={index}
                         href={link.url}
                         target="_blank";
                         rel="noopener noreferrer";
-                        className="text - zion - cyan hover:text - white flex items - center gap - 2";
+                        className="text - zion - cyan hover:text - white flex items - center gap-2";
                       >;
-                        <LinkIcon className="h - 4 w - 4" />;
+                        <LinkIcon className="h - 4 w-4" />;
                         {link.title || link.url}
                       </a>))}
                   </div>) : (
-                  <p className="text - zion - slate - light">No portfolio links provided.</p>)}
+                  <p className="text - zion - slate-light">No portfolio links provided.</p>)}
               </CardContent>;
             </Card>;
           </div>;
           {/* Sidebar with HireNowCTA */}
-          <div className="col - span - 4 lg:col - span - 1">;
+          <div className="col - span - 4 lg:col - span-1">;
             <HireNowCTA;
               talent_profile={{
                 id: profile_data?.id || '',
@@ -1541,101 +1549,60 @@ if ( {) {
               }}
             />;
             {/* Contact Information */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt - 6">;
-              <h3 className="text - xl font - bold mb - 4">Contact</h3>;
-              <div className="flex flex - col space - y-3">;
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt-6">;
+              <h3 className="text - xl font - bold mb-4">Contact</h3>;
+              <div className="flex flex - col space-y-3">;
                 {profile_data.email && (
-                  <div className="flex items - center gap - 2 text - zion - slate - light">;
-                    <Mail className="h - 4 w - 4" />;
-                    <a href={`mailto:${profile_data.email}`} className="hover:text - zion - cyan">{profile_data.email}</a>;
+                  <div className="flex items - center gap - 2 text - zion - slate-light">;
+                    <Mail className="h - 4 w-4" />;
+                    <a href={`mailto:${profile_data.email}`} className="hover:text - zion-cyan">{profile_data.email}</a>;
                   </div>)}
                 {profile_data.phone && (
-                  <div className="flex items - center gap - 2 text - zion - slate - light">;
-                    <Phone className="h - 4 w - 4" />;
+                  <div className="flex items - center gap - 2 text - zion - slate-light">;
+                    <Phone className="h - 4 w-4" />;
                     <span>{profile_data.phone}</span>;
                   </div>)}
                 {profile_data.website && (
-                  <div className="flex items - center gap - 2 text - zion - slate - light">;
-                    <Globe className="h - 4 w - 4" />;
-                    <a href={profile_data.website} target="_blank" rel="noopener noreferrer" className="hover:text - zion - cyan">;
+                  <div className="flex items - center gap - 2 text - zion - slate-light">;
+                    <Globe className="h - 4 w-4" />;
+                    <a href={profile_data.website} target="_blank" rel="noopener noreferrer" className="hover:text - zion-cyan">;
                       Website;
                     </a>;
                   </div>)}
               </div>;
             </div>;
             {/* Social Links */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt - 6">;
-              <h3 className="text - xl font - bold mb - 4">Social</h3>;
-              <div className="flex flex - col space - y-3">;
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt-6">;
+              <h3 className="text - xl font - bold mb-4">Social</h3>;
+              <div className="flex flex - col space-y-3">;
                 {profile_data.github_url && (
-                  <a href={profile_data.github_url} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan">;
-                    <Github className="h - 4 w - 4" />;
+                  <a href={profile_data.github_url} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion-cyan">;
+                    <Github className="h - 4 w-4" />;
                     GitHub;
                   </a>)}
                 {profile_data.twitter_url && (
-                  <a href={profile_data.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan">;
-                    <Twitter className="h - 4 w - 4" />;
+                  <a href={profile_data.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion-cyan">;
+                    <Twitter className="h - 4 w-4" />;
                     Twitter;
                   </a>)}
                 {profile_data.linkedin_url && (
-                  <a href={profile_data.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan">;
-                    <Linkedin className="h - 4 w - 4" />;
+                  <a href={profile_data.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion-cyan">;
+                    <Linkedin className="h - 4 w-4" />;
                     LinkedIn;
                   </a>)}
 
-<<<<<<< HEAD
-=======
-=======
-              }}
-            />
-            {/* Contact Information */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
-              <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <div className="flex flex-col space-y-3">
-                {profileData.email && (
-                  <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Mail className="h-4 w-4" />
-                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
-                  </div>
+                {profileData.linkedin_url && (
+                  <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Linkedin className="h-4 w-4" />
+                    LinkedIn
+                  </Link>
                 )}
-                {profileData.phone && (
-                  <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Phone className="h-4 w-4" />
-                    <span>{profileData.phone}</span>
-                  </div>
-                )}
-                {profileData.website && (
-                  <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Globe className="h-4 w-4" />
-                    <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
-                      Website
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
               </div>;
             </div>;
-            {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
-              <h3 className="text-xl font-bold mb-4">Social</h3>
-              <div className="flex flex-col space-y-3">
-                {profileData.github_url && (
-                  <a href={profileData.github_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
-                    <Github className="h-4 w-4" />
-                    GitHub
-                  </Link>
-                )}
-                {profileData.twitter_url && (
-                  <a href={profileData.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
-                    <Twitter className="h-4 w-4" />
-                    Twitter
-                  </Link>
-                )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                {profileData.linkedin_url && (
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;                {profileData.linkedin_url && (
                   <a
                     href={profileData.linkedin_url}
                     target="_blank"
@@ -1644,8 +1611,6 @@ if ( {) {
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   </Link>
                 )}
@@ -1658,6 +1623,7 @@ if ( {) {
     </>
   );
 }
+<<<<<<< HEAD
 
 =======
 ;
@@ -1735,3 +1701,6 @@ try {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

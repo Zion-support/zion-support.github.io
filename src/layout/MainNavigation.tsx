@@ -35,7 +35,7 @@ interface MainNavigationProps {
   unreadCount?: number
   className?: string
 
-import Link from 'next / link';
+import Link from 'next/link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
 import { cn } from '@/lib / utils';
@@ -155,84 +155,105 @@ interface MainNavigationProps {;
   unreadCount?: number,;
   className?: string;
 }
-;
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const { count } = useFavorites(),;
-  const { items } = useCart(),;
-  const cartCount = items.length,;
-  const router = useRouter(), // Changed from useLocation;
-  const { t } = useTranslation(),;
-  const handleCartClick = (e: React.MouseEvent) => {;
+
+interface MainNavigationProps {;
+  isAdmin?: boolean;
+  unreadCount?: number;
+  className?: string;
+
+export function MainNavigation(): any ({;
+  isAdmin = false,;
+  unreadCount = 0,;
+  className,;
+}: MainNavigationProps) {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state;
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const [loginOpen, setLoginOpen] = useState(false);
+  const { count } = useFavorites();
+  const { items } = useCart();
+  const cartCount = items && items.length;
+  const router = useRouter(); // Changed from useLocation;
+  const { t } = useTranslation();
+
+  const handleCartClick = (e: React && React.MouseEvent,) => {;
     if (!isAuthenticated) {;
-      e.preventDefault(),;
-      setLoginOpen(true),;
+      e && e.preventDefault();
+      setLoginOpen(true);
       return;
     }
-    setIsMobileMenuOpen(false);
-  },;
+    setIsMobileMenuOpen(false)
+};
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-      matches: (path: string) => path === '/';
-    },;
+      matches: (path: string) => path === '/',    },;
     {;
       key: 'marketplace',;
       href: '/marketplace',;
-      matches: (path: string) => path.startsWith('/marketplace');
-    },;
+      matches: (path: string) => path && path.startsWith('/marketplace'),    },;
     {;
       key: 'categories',;
       href: '/categories',;
-      matches: (path: string) => path.startsWith('/categories');
-    },;
+      matches: (path: string) => path && path.startsWith('/categories'),    },;
     {;
       key: 'talent',;
       href: '/talent',;
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
-    },;
+      matches: (path: string) =>;
+        path && path.startsWith('/talent') && !path && path.includes('/talent-dashboard'),    },;
     {;
       key: 'equipment',;
       href: '/equipment',;
-      matches: (path: string) => path.startsWith('/equipment');
-    },;
+      matches: (path: string) => path && path.startsWith('/equipment'),    },;
     {;
       key: 'community',;
       href: '/community',;
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
-    }
-  ],;
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;
+      matches: (path: string) =>;
+        path && path.startsWith('/community') || path && path.startsWith('/forum'),;
+    },;
+  ];
+
+  const links = baseLinks && baseLinks.map(link => ({;
+    ...link,;
+    name: t(`nav.${link && link.key}`),;
+  }));
   // Add authenticated-only links;
   if (isAuthenticated) {;
-    links.push({;
+    links && links.push({;
       key: 'dashboard',;
-      name: t('nav.dashboard'),;
+      name: t('nav && nav.dashboard'),;
       href: '/dashboard',;
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
-    });
-  }
-;
+      matches: (path: string) =>;
+        path === '/dashboard' ||;
+        path === '/client-dashboard' ||;
+        path === '/talent-dashboard',;
+    });  }
+
   // Add admin-only links;
   if (isAdmin) {;
-    links.push({;
+    links && links.push({;
       key: 'analytics',;
+<<<<<<< HEAD
       name: t('nav.analytics'),;
       href: '/analytics',;
       matches: (path: string) => path.startsWith('/analytics');
     });
   }
   
+=======
+      name: t('nav && nav.analytics'),;      href: '/analytics',;
+      matches: (path: string) => path && path.startsWith('/analytics'),;
+    });  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
-    <>
+    <>;
       <button
-        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
+        className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
+<<<<<<< HEAD
         aria-controls="main-navbar-collapse"
         aria-label="Toggle navigation"
       >
@@ -258,16 +279,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               <li key={link.name} className="nav-item">
                 <Link 
 =======
+=======
+        aria-controls='main-navbar-collapse';
+        aria-label='Toggle navigation'      >;
+        <span className='navbar-toggler-icon'></span>;
+      </button>;      <nav
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
 
-
         <div
-          id="main-navbar-collapse"
-          className={cn(
-
-
+          id='main-navbar-collapse'          className={cn(
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   href={link.href}
@@ -277,10 +300,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   className={cn(
 =======
 
-
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
 
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
@@ -295,6 +316,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {link.name}
                 </Link>;
               </li>;
@@ -364,15 +389,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>;
               </li>;
             )}
-;
             {/* Cart icon with badge */}
-            <li className="nav-item">
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
+            <li className='nav-item'>;
+              <HoverCard openDelay={100}>;
+                <HoverCardTrigger asChild>;
                   <Link
-                    href="/cart"
-                    aria-label={t('nav.cart')}
-                    onClick={handleCartClick}
+                    href='/cart'
+                    aria-label={t('nav && nav.cart')}                    onClick={handleCartClick}
                     className={cn(
 
                       'nav-link',
@@ -391,8 +414,33 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-      matches: (path: string)  => path.startsWith('/contact')
-}
+      key: 'categories',
+      href: '/categories',
+      matches: (path: string) => path.starts_with ('/categories'),    },
+    {
+      key: 'talent',
+      href: '/talent',
+      matches: (path: string) =>;
+        path.starts_with ('/talent') && !path.includes ('/talent - dashboard'),    },
+    {
+      key: 'equipment',
+      href: '/equipment',
+      matches: (path: string) => path.starts_with ('/equipment'),    },
+    {
+      key: 'community',
+      href: '/community',
+      matches: (path: string) =>;
+        path.starts_with ('/community') || path.starts_with ('/forum'),
+    },
+  ];
+  const links = base_links.map (link => ({
+    ...link,
+    name: t (`nav.${link.key}`),
+  }));
+  // Add authenticated - only links;
+  // Check condition
+if ( {) {
+  $2}
     links.push ({
       key: 'dashboard',
       name: t ('nav.dashboard'),
@@ -699,7 +747,7 @@ export default function Page() {; []);
 },;
     {;
 
-      matches: (path: string)  => path && path.startsWith('/contact');
+      matches: (path: string)  => path && path.startsWith('/contact')
 };
       key: 'contact',;
       href: '/contact',;
@@ -733,7 +781,6 @@ export default function Page() {; []);
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
 
-
                 {link && link.name}
               </Link>;
 
@@ -761,9 +808,9 @@ export default function Page() {; []);
       {/* Mobile Menu Button */}
       <button;
         on_click={() => setIsMobileMenuOpen (!isMobileMenuOpen)}";
-        className="lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
+        className="lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition-colors";
 ";
-        {isMobileMenuOpen ? <X className="w - 6 h - 6"  /> : <Menu className="w - 6 h - 6"  />}      </button>;
+        {isMobileMenuOpen ? <X className="w - 6 h-6"  /> : <Menu className="w - 6 h-6"  />}      </button>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isMobileMenuOpen &&;
@@ -782,19 +829,19 @@ export default function Page() {; []);
 
 }}
             transition={{ duration: 0.3 }}";
-            className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50";
+            className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z-50";
 ";
-            <div className="p - 6">";
-              <div className="flex justify - between items - center mb - 8">";
-                <h2 className="text - xl font - bold text - white">Menu</h2>;
+            <div className="p-6">";
+              <div className="flex justify - between items - center mb-8">";
+                <h2 className="text - xl font - bold text-white">Menu</h2>;
                 <button;
                   on_click={() => setIsMobileMenuOpen (false)}";
-                  className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
+                  className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition-colors";
 ";
-                  <X className="w - 6 h - 6"  />                </button>;
+                  <X className="w - 6 h-6"  />                </button>;
               </div>;
 ";
-              <div className="space - y-2">;
+              <div className="space-y-2">;
                 {base_links.map (link: unknown <div key={link.key}>;
                     {link.children ? (
                       <div>;
@@ -805,8 +852,11 @@ export default function Page() {; []);
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
 }`}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
             {/* Wishlist link */}
             {isAuthenticated && (
@@ -893,7 +943,6 @@ export default function Page() {; []);
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
 
-
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
@@ -913,7 +962,7 @@ export default function Page() {; []);
                           {link.name}'`;
                           <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
                         {active_dropdown === link.key && (";
-                          <div className="ml - 4 mt - 2 space - y-1">;
+                          <div className="ml - 4 mt - 2 space-y-1">;
                             {link.children.map ((child: unknown (
                               <Link;
                                 key={child.key}
@@ -1009,6 +1058,10 @@ export default function Page() {; []);
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1018,7 +1071,7 @@ export default function Page() {; []);
               </HoverCard>
             </li>
           </ul>
-          <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">
+          <div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>
             <LanguageSelector />
           </div>
         </div>
@@ -1027,7 +1080,6 @@ export default function Page() {; []);
     </>
 <<<<<<< HEAD
 =======
-
 
                         {link && link.name}
                       </Link>;
@@ -1062,8 +1114,6 @@ export default function Page() {; []);
           </div>;
         </div>;
       </nav>;
-
-
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>));

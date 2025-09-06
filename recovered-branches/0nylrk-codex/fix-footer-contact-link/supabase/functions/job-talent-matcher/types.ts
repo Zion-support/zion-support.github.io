@@ -15,11 +15,12 @@ export interface JobData {;
 export interface JobData {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
-  title: string;
+  title: string,
   description: string;
   skills: string[];
   category: string;
   budget: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -48,6 +49,10 @@ export interface TalentProfile {;
     min: number;
     max: number;
   };
+=======
+    min: number,    max: number
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   deadline: string;
 }
 
@@ -58,6 +63,7 @@ export interface TalentProfile {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface TalentProfile {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -71,12 +77,15 @@ export interface TalentProfile {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   full_name: string;
   professional_title: string;
   bio?: string;
   skills: string[];
   years_experience: number;
+<<<<<<< HEAD
   hourly_rate?: number;
   availability_type?: string;
 }
@@ -102,6 +111,14 @@ export interface TalentMatch {
 export interface TalentMatch {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  talent_id: string;
+  job_id: string;
+  match_score: number;}
+export interface TalentMatch {
+
+export interface TalentMatch {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -111,6 +128,7 @@ export interface TalentMatch {;
 
 export interface MatchResult {
   talentId: string;
+<<<<<<< HEAD
   score: number;
   matchedSkills: string[];
   reason?: string;
@@ -219,3 +237,6 @@ export interface JobData {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  score: number;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

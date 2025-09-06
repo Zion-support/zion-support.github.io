@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 }};
@@ -20,15 +23,13 @@
 ; // TODO/FIXME comments; if (line && line.match(/TODO|FIXME|HACK|XXX/)) {; analysis && analysis.issues.push({; line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found',
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
-; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-; async walkDirectory(dir) {; const analyses = [];
+; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
 ; if (stat && stat.isDirectory()) {; if (!fullPath && fullPath.includes('node_modules') &&; !fullPath && fullPath.includes('.git') &&; !fullPath && fullPath.includes('dist') &&; !fullPath && fullPath.includes('build') &&; !fullPath && fullPath.includes('.next') &&; !fullPath && fullPath.includes('coverage') &&; !fullPath && fullPath.includes('logs')) {; const subAnalyses = await this && this.walkDirectory(fullPath); analyses && analyses.push(...subAnalyses)}} else if (stat && stat.isFile()) {; const ext = path && path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this && this.analyzeFile(fullPath); if (analysis) {; analyses && analyses.push(analysis)}}}}} catch (error) {; this && this.log(`Error walking directory ${dir}: ${error && error.message}`)};
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
+<<<<<<< HEAD
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 <<<<<<< HEAD
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
@@ -187,6 +188,10 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
   };
+=======
+; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
   async analyzeFile(filePath) {,
     try {,
@@ -259,8 +264,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
                 message: `Potentially unused import ${importName}`,
                 severity: 'medium',
               }),
-            };
-          };
+            }
+};
         };
       }),
 ,
@@ -268,8 +273,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     } catch (error) {,
       this.log(`Error analyzing file ${filePath}: ${error.message}`),
       return null,
-    };
-  };
+    }
+};
 ,
   async walkDirectory(dir) {,
     const analyses = [],
@@ -298,6 +303,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
             const analysis = await this.analyzeFile(fullPath),
             if (analysis) {,
               analyses.push(analysis),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -814,9 +820,12 @@ monitor.run().catch(error => {;
                 messag: e: `Potentially unused import ${importName}`,;
                 severit: y: 'medium';
               });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
-          }
+};
         }
+<<<<<<< HEAD
       }),;
 ,;
       return analysis;
@@ -1040,12 +1049,16 @@ monitor.run().catch(error => {,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     }),
+=======
+};    }),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
     const report = {,
       timestamp: new Date().toISOString(),
       summary: {,
         totalFiles,
         totalIssues,
+<<<<<<< HEAD
         issuesByType,
 <<<<<<< HEAD
 =======
@@ -1099,12 +1112,16 @@ monitor.run().catch(error => {,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     };
+=======
+        issuesByType,    };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
     if (issuesByType['console-statement'] > 0) {,
       recommendations.push({,
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Replace console statements with proper logging or remove them',
       }),
@@ -1121,11 +1138,16 @@ monitor.run().catch(error => {,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     };
+=======
+        action: 'Replace console statements with proper logging or remove them',
+      }),    };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
     if (issuesByType['unused-import'] > 0) {,
       recommendations.push({,
         type: 'unused-import',
         priority: 'medium',
+<<<<<<< HEAD
         message: 'Remove unused imports',
 <<<<<<< HEAD
         action: 'Clean up unused imports to reduce bundle size',
@@ -1172,10 +1194,14 @@ monitor.run().catch(error => {,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   };
+=======
+        message: 'Remove unused imports',  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
+<<<<<<< HEAD
       if (!fs.existsSync(reportDir)) {,
 <<<<<<< HEAD
 =======
@@ -1205,10 +1231,15 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     };
   };
+=======
+      if (!fs.existsSync(reportDir)) {,    }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
   async checkGitStatus() {,
     try {,
       const status = execSync('git status --porcelain', {,
+<<<<<<< HEAD
         cwd: this.projectRoot,
 <<<<<<< HEAD
         encoding: 'utf8',
@@ -1276,6 +1307,9 @@ monitor.run().catch(error => {,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       };
+=======
+        cwd: this.projectRoot,      };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       // Check git status,
       const isClean = await this.checkGitStatus(),
@@ -1306,9 +1340,9 @@ monitor.run().catch(error => {,;
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.summary.totalIssues > 0) {,
-<<<<<<< HEAD
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
+<<<<<<< HEAD
           this.log(`  ${type}: ${count}`),
 =======
 <<<<<<< HEAD
@@ -1321,10 +1355,14 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         }),
+=======
+          this.log(`  ${type}: ${count}`),        }),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+<<<<<<< HEAD
 <<<<<<< HEAD
           this.log(`    Action: ${rec.action}`),
 =======
@@ -1392,6 +1430,12 @@ monitor.run().catch(error => {,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }}
+=======
+          this.log(`    Action: ${rec.action}`),        }),
+,
+        // If there are many issues and git is clean, suggest running the lint fixer,
+        if (report.summary.totalIssues > 50 && isClean) {,}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
     issues: []}
@@ -1506,6 +1550,7 @@ if ( {) {
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -1521,6 +1566,9 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
   process.exit(1);
 });
+=======
+;});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   },;
 ,;
@@ -1804,9 +1852,12 @@ monitor.run().catch(error = > {; process.exit(1)});
         this.log('✨ Excellent! No code quality issues found!');
       }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       this.log(`❌ Error running code quality: monitor: ${error.message}`),;
       process.exit(1);
@@ -1827,10 +1878,13 @@ monitor.run().catch(error => {,;
 =======
 monitor.run().catch(error = > {; process.exit(1)});
 
-<<<<<<< HEAD
   process.exit(1)
 }),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

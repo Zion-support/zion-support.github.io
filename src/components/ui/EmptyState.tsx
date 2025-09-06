@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
 interface EmptyStateProps {;
@@ -9,10 +10,13 @@ interface EmptyStateProps {;
   icon?: React.ReactNode;
 }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function EmptyState({ 
   text = "No items available",
   description,
   onRetry,
+<<<<<<< HEAD
   showRetry = false,
 =======
 import { Button } from './button';
@@ -30,6 +34,9 @@ interface EmptyStateProps {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   icon
+=======
+  showRetry = false,  icon
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -52,10 +59,11 @@ export /**
  */
 function EmptyState() {
   return (
-    <div className="flex flex - col items - center justify - center py - 16 px - 4 text - center">;
-      <div className="mb - 4 text - gray - 400">;
-        {icon || <Package className="h - 16 w - 16" />}
+    <div className="flex flex - col items - center justify - center py - 16 px - 4 text-center">;
+      <div className="mb - 4 text - gray-400">;
+        {icon || <Package className="h - 16 w-16" />}
       </div>;
+<<<<<<< HEAD
       <h3 className="text - xl font - semibold text - white mb - 2">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {text}
@@ -66,6 +74,17 @@ function EmptyState() {
 export function EmptyState({;
   text = "No items available",;
   description,;
+=======
+      <h3 className="text - xl font - semibold text - white mb-2">;
+        {text}
+      </h3>
+      {description && (
+
+  icon?: React && React.ReactNode;
+
+export function EmptyState(): any ({;
+  text = 'No items available',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   onRetry;
   showRetry = false;
   icon;
@@ -117,6 +136,10 @@ export function EmptyState({;
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           Try Again
 
         </Button>
@@ -154,17 +177,21 @@ export function EmptyState({;
           variant='outline';
           className='flex items - center gap - 2';
         >;
-          <RefreshCw className='h - 4 w - 4' />        <p className="text - gray - 400 mb - 6 max - w-md">;
+          <RefreshCw className='h - 4 w - 4' />        <p className="text - gray - 400 mb - 6 max-w-md">;
           {description}
         </p>)}
       {show_retry && on_retry && (
         <Button;
           on_click={on_retry}
           variant="outline";
-          className="flex items - center gap - 2";
+          className="flex items - center gap-2";
         >;
-          <RefreshCw className="h - 4 w - 4" />;
+          <RefreshCw className="h - 4 w-4" />;
         </Button>)}
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

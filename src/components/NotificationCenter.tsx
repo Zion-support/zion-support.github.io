@@ -5,8 +5,11 @@ unreadCount, ;
 
   const handleFilterChange = (newFilter: FilterType,) => {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -25,6 +28,10 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -41,6 +48,9 @@ export const NotificationCenter: React.FC = () => {
   const enqueueSnackbar = useEnqueueSnackbar(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -103,6 +113,7 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, loadedOnce, fetchNotifications]),
+<<<<<<< HEAD
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -121,8 +132,20 @@ export const NotificationCenter: React.FC = () => {;
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+  const handleMarkAllAsRead = async () => {
+    try {
+      await markAllAsRead(),
+      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
+    } catch (err) {
+      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
+      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
+    }
+  },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
@@ -249,3 +272,15 @@ export const NotificationCenter: React.FC = () => {;
 
         <NotificationHeader
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const handleFilterChange = (newFilter: FilterType) => {
+    setFilter(newFilter as any)
+  },
+
+  return (
+    <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>      <PopoverTrigger asChild>
+        <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
+          <Bell className="h-5 w-5 text-zion-slate-light" />
+          {unreadCount > 0 && (
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

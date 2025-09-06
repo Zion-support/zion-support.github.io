@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 =======
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-performance-monitor.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -17,17 +20,26 @@
     log('info', `Server response "time": ${performanceMetrics.metrics.runtime.responseTime}ms`);
     log('info', `Total "alerts": ${performanceMetrics.summary.totalAlerts}`);
     log('info', `Performance "score": ${performanceMetrics.summary.performanceScore}/100`);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (performanceMetrics.alerts.length > 0) {
       log('warn', 'Performance "Alerts": ');
       performanceMetrics.alerts.forEach(alert => {
         log('warn', `- [${alert.level.toUpperCase()}] ${alert.message}`)})}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (performanceMetrics.recommendations.length > 0) {
       log('info', 'Performance "Recommendations": ');
       performanceMetrics.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
         log('info', `  "Action": ${rec.action}`)})}
+<<<<<<< HEAD
 
     // Save performance report
     const reportPath = path.join(process.cwd(), `enhanced-performance-report-${performanceMetrics.sessionId}.json`);
@@ -35,6 +47,15 @@
 
     log('info', `Enhanced performance report saved "to": enhanced-performance-report-${performanceMetrics.sessionId}.json`);
 
+=======
+    
+    // Save performance report
+    const reportPath = path.join(process.cwd(), `enhanced-performance-report-${performanceMetrics.sessionId}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(performanceMetrics, null, 2));
+    
+    log('info', `Enhanced performance report saved "to": enhanced-performance-report-${performanceMetrics.sessionId}.json`);
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Exit with appropriate status
     if (performanceMetrics.summary.performanceScore < 50) {
       log('error', 'Performance score is below 50% - immediate attention required');
@@ -43,13 +64,18 @@
       process.exit(0)} else {
       log('info', 'Performance monitoring completed successfully');
       process.exit(0)}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error) {
     log('error', 'Fatal error in enhanced performance monitor', error.message);
     process.exit(1)}
 }
 
 // Run the enhanced performance monitor
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 main();#!/usr/bin/env node;
 =======
@@ -65,6 +91,11 @@ main();
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-performance-monitor.cjs
+=======
+main();
+#!/usr/bin/env node;
+main();#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -116,6 +147,7 @@ console.log('=')
       "message"
       "action"
       log('warn', 'Performance "Alerts")
+<<<<<<< HEAD
 =======
       log('info', 'Performance "Recommendations")
 <<<<<<< HEAD
@@ -123,3 +155,7 @@ console.log('=')
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      log('info', 'Performance "Recommendations")
+      log('info', 'Performance "Recommendations")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

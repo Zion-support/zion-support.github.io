@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect,useCallback } from 'react, interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void, onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]), useEffect(() => { window.addEventListener('message',handleMessage), return () => { window.removeEventListener(message',handleMessage)}},[handleMessage])};
 ,
 =======
@@ -15,16 +16,16 @@ interface MessageEvent {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Type definition for MessageEvent
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface MessageEvent {
   data: unknown;
-=======
 import { useEffect, useCallback } from "react";
 
 // Define MessageEvent if not available
 interface Event {
   type: string;
   target: EventTarget | null;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 }
 
 type EventListener = (event: Event) => void;
@@ -67,6 +68,7 @@ export function useMessageChannelHandler({
 export function useMessageChannelHandler({
   onMessage,
 <<<<<<< HEAD
+<<<<<<< HEAD
   onError,
 =======
 >>>>>>> main
@@ -74,6 +76,9 @@ export function useMessageChannelHandler({
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }: MessageChannelHandlerProps = {}) {
+=======
+  onError,}: MessageChannelHandlerProps = {}) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {;
@@ -99,6 +104,7 @@ export function useMessageChannelHandler({
   useEffect(() => {
     window.addEventListener("message", handleMessage);
     return () => {
+<<<<<<< HEAD
       window.removeEventListener("message", handleMessage);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     };
@@ -140,3 +146,10 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      window.removeEventListener("message", handleMessage)
+};
+  }, [handleMessage]);
+}
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

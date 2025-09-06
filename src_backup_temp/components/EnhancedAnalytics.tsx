@@ -336,8 +336,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {;
   // TODO: Add dependencies if needed;
   return () => {;
-    // Cleanup function;
-  };
+    // Cleanup function
+};
 }, []);, []);
     if(!enabled) return;';
 ';';

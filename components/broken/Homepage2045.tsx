@@ -49,7 +49,6 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 
 =======
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -213,7 +212,8 @@ const LoadingFallback = () => (;
       'from-indigo-400 to-purple-500',;
       'from-yellow-400 to-orange-500',;
     ];
-    return colors[index % colors && colors.length];  };
+    return colors[index % colors && colors.length]
+};
     return (
 <<<<<<< HEAD
 
@@ -311,7 +311,6 @@ import { innovative2040FuturisticServices } from '../data/innovative-2040-futuri
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 
-
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
@@ -332,7 +331,7 @@ const LoadingFallback = () => (
       transition={{ duration: 0.5 }}
       className='text - center'// Loading fallback component;
 const LoadingFallback = () =>: any (
-  <div className="min - h-screen flex items - center justify - center bg - gray - 900">;
+  <div className="min - h-screen flex items - center justify - center bg-gray-900">;
     <motion.div;
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -350,11 +349,11 @@ const LoadingFallback = () =>: any (
         Preparing your futuristic digital transformation journey;
       </p>    </motion.div>    >;
       <div className="relative">;
-        <Loader2 className="w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4" />;
-        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse"></div>;
+        <Loader2 className="w - 16 h - 16 text - cyan - 400 animate - spin mx-auto mb-4" />;
+        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity-20 animate-pulse"></div>;
       </div>;
-      <p className="text - xl text - gray - 300 mb - 2">Loading Zion Tech Group 2045...</p>;
-      <p className="text - sm text - gray - 500">Preparing your futuristic digital transformation journey</p>;
+      <p className="text - xl text - gray-300 mb-2">Loading Zion Tech Group 2045...</p>;
+      <p className="text - sm text-gray-500">Preparing your futuristic digital transformation journey</p>;
     </motion.div>;
   </div>);
 ;
@@ -536,9 +535,8 @@ if ( {) {
         staggerChildren: 0.1,
         delayChildren: 0.2,
       },
-    },  };
-
-  };
+    },  }
+};
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
@@ -549,10 +547,13 @@ if ( {) {
               }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 duration: 6,
               animate={{
                 rotate: [45, 405];
@@ -565,6 +566,13 @@ if ( {) {
               }}
             />
           </div>
+<<<<<<< HEAD
+=======
+
+            />;
+          </div>;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Hero Content */}
           <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -653,10 +661,13 @@ if ( {) {
               </motion && motion.p>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -845,12 +856,12 @@ if ( {) {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className='mb - 8'            >          <div className="relative z - 10 text - center max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+              className='mb - 8'            >          <div className="relative z - 10 text - center max - w-6xl mx - auto px - 4 sm:px-6 lg:px-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className='mb - 8'              className="mb - 8";
+              className='mb - 8'              className="mb-8";
             >;
               <motion.h1;
                 initial={{ opacity: 0, coordinate_y: 20 }}
@@ -858,9 +869,9 @@ if ( {) {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className='text - 5xl md:text - 7xl font - bold mb - 6';
               >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>                  Future of Technology                className="text - 5xl md:text - 7xl font - bold mb - 6";
+                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>                  Future of Technology                className="text - 5xl md:text - 7xl font-bold mb-6";
               >;
-                <span className="bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent">;
+                <span className="bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip-text text-transparent">;
                   Future of Technology;
                 </span>;
               </motion.h1>;
@@ -872,7 +883,7 @@ if ( {) {
               >;
                 Transform your business with Zion Tech Group's revolutionary AI;
                 services, quantum computing, and cutting - edge emerging;
-                technologies. Leading the future of technology innovation.              </motion.p>                className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto";
+                technologies. Leading the future of technology innovation.              </motion.p>                className="text - xl md:text - 2xl text - gray - 300 mb - 8 max-w-4xl mx-auto";
               >;
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting - edge emerging technologies. Leading the future of technology innovation.;
               </motion.p>;
@@ -891,18 +902,18 @@ if ( {) {
               </Link>;
               <Link;
                 href='/services';
-                className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'              >              className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
+                className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'              >              className="flex flex - col sm:flex - row gap - 4 justify-center items-center";
             >;
               <Link;
                 href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105";
               >;
                 Get Started;
               </Link>;
               <Link;
                 href='/services';
                 className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'                href="/services";
-                className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105";
+                className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration-300 transform hover:scale-105";
               >;
                 Explore Services;
               </Link>;
@@ -931,25 +942,25 @@ if ( {) {
                   1000+;
                 </div>;
                 <div className='text - gray - 400'>Happy Clients</div>              </div>            >;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2">500+</div>;
-                <div className="text - gray - 400">Innovative Services</div>;
+              <div className="text-center">;
+                <div className="text - 3xl md:text - 4xl font - bold text - cyan-400 mb-2">500+</div>;
+                <div className="text-gray-400">Innovative Services</div>;
               </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2">4.9 / 5</div>;
-                <div className="text - gray - 400">Customer Rating</div>;
+              <div className="text-center">;
+                <div className="text - 3xl md:text - 4xl font - bold text - purple-400 mb-2">4.9 / 5</div>;
+                <div className="text-gray-400">Customer Rating</div>;
               </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - pink - 400 mb - 2">1000+</div>;
-                <div className="text - gray - 400">Happy Clients</div>;
+              <div className="text-center">;
+                <div className="text - 3xl md:text - 4xl font - bold text - pink-400 mb-2">1000+</div>;
+                <div className="text-gray-400">Happy Clients</div>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
         {/* Featured Services Section */}
         <section id='featured - services' className='py - 20 relative'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section id="featured - services" className="py - 20 relative">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section id="featured - services" className="py-20 relative">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1267,6 +1278,7 @@ className="group"
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1276,6 +1288,8 @@ className="group"
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1334,18 +1348,18 @@ className="group"
                 <ArrowRight className='ml - 2 w - 5 h - 5' />              </Link>            >;
               <Link;
                 href="/services";
-                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105";
+                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105";
               >;
                 View All Services;
-                <ArrowRight className="ml - 2 w - 5 h - 5" />;
+                <ArrowRight className="ml - 2 w-5 h-5" />;
               </Link>;
             </motion.div>;
           </div>;
         </section>;
         {/* Contact CTA Section */}
         <section id='contact - cta' className='py - 20 relative'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section id="contact - cta" className="py - 20 relative">;
-          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section id="contact - cta" className="py-20 relative">;
+          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1372,20 +1386,20 @@ className="group"
                   className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'                >                  Ready to Transform?;
                 </span>;
               </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
+              <p className="text - xl text - gray-300 mb-8">;
                 Let's discuss how our revolutionary technology solutions can drive your business into the future.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify-center items-center">;
                 <Link;
                   href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105";
+                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105";
                 >;
                   Get Started;
                 </Link>;
                 <a;
                   href='tel:+1 302 464 0950';
                   className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'                  href="tel:+1 302 464 0950";
-                  className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105";
+                  className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration-300 transform hover:scale-105";
                 >;
                   Call Now;
                 </a>;
@@ -1412,7 +1426,7 @@ className="group"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }</div> {
   /* View All Services CTA */;
-}<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > View All Services <ArrowRight className="ml - 2 w - 5 h - 5" /> </a> </motion.div> </div> </section> <motion.div initial= {
+}<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105" > View All Services <ArrowRight className="ml - 2 w-5 h-5" /> </a> </motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, coordinate_y: 30;
 }whileInView= {
@@ -1432,7 +1446,6 @@ className="group"
 
 export default Homepage2045;
 
-
   once: true
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
 };export default Homepage2045;export default Homepage2045;
@@ -1445,7 +1458,7 @@ export default Homepage2045;
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};export default Homepage2045;export default Homepage2045;
+};export default Homepage2045;export default Homepage2045
 };export default Homepage2045;
 
 <<<<<<< HEAD

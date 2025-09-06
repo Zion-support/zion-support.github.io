@@ -55,11 +55,17 @@ function BackToTopButton() {
     document.document_element.scroll_to (opts);
     document.body.scroll_to (opts);
   }
+<<<<<<< HEAD
+=======
       >;
       <ArrowUp className='h - 5 w - 5' />;
     </button>);
 }"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
@@ -112,6 +118,8 @@ export function BackToTopButton() {;
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >;
@@ -121,6 +129,7 @@ export function BackToTopButton() {;
 }
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
 =======
 ;
 <<<<<<< HEAD
@@ -128,3 +137,6 @@ export function BackToTopButton() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

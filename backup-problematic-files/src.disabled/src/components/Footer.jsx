@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/Footer.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/Footer.jsx
 <<<<<<< HEAD:backup-merge-conflicts/Footer.jsx.backup
 :backup-merge-conflicts/Footer.jsx.backup
@@ -44,3 +45,6 @@ import _React,{ useState } from 'react'; import { Link } from 'react-router-dom'
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/components/Footer.jsx
+========
+import _React,{ useState } from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from 'lucide-react'; export function FooterNewsletter() { const [email,setEmail] = useState(''); const [isSubscribed,setIsSubscribed] = useState(false); const [isLoading,setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true)}}=======
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/components/Footer.jsx

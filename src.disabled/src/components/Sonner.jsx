@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function Sonner({ position = \'bottom-right\',richColors = true,closeButton = true }) {}; return null} \'bottom - 4 right - 4\'} z - 50\"}> {} \"success\": (message) => error: (message) => Error: \',message),; \"info\": (message) => Info: \',message),; \"warning\": (message) => Warning: \',message),; \"loading\": (message) => Loading: \',message),; \"dismiss\": (toastId) => Dismiss:\',toastId); </div>)} export const toast = {}};}\'"
 <<<<<<< HEAD
 =======
@@ -33,3 +34,6 @@ export function Sonner({ position = 'bottom-right',richColors = true,closeButton
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

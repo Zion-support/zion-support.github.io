@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 
 import * as React from "react"
 import type { CSSProperties } from "react"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -35,6 +35,8 @@ import type { SidebarContext as SidebarContextType, SidebarState } from "../side
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 const SidebarContext = React.createContext<SidebarContextType | null>(null)
@@ -43,31 +45,24 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from './react';
 import type { CSSProperties } from './react';
 import { TooltipProvider } from '@/components / ui / tooltip';
 import { useIsMobile } from '@/hooks / use - mobile';
-import { cn } from '@/lib / utils';
-=======
-import * as React from "react";
-import type { CSSProperties } from "react";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { cn } from "@/lib/utils";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+import { cn } from '@/lib / utils';import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
 ;
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
-<<<<<<< HEAD
 const SidebarContext = React.create_context < SidebarContextType | null>(null);
 export function use_sidebar (): SidebarContextType {
   const context = React.useContext (SidebarContext);
@@ -80,15 +75,11 @@ if ( {) {
   return context as SidebarContextType;
 
 }
-=======
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   return context as SidebarContextType
 }
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -360,6 +351,12 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+  SidebarProviderProps
+>(
+  (
+    {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
       },;
@@ -381,6 +378,7 @@ if ( {) {
           event.preventDefault();
           toggleSidebar();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -388,13 +386,15 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         }
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -409,6 +409,8 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -416,6 +418,7 @@ if ( {) {
     // This makes it easier to style the sidebar with Tailwind classes.
     const state = open ? "expanded" : "collapsed" as SidebarState
     const contextValue = React.useMemo(
+<<<<<<< HEAD
 <<<<<<< HEAD
       (): SidebarContextType => ({
 =======
@@ -426,6 +429,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
       }
@@ -461,8 +466,8 @@ if (
       className;
       style;
       children;
-      ...props;
-    };
+      ...props
+};
     ref;
   ) => {;
     const isMobile = useIsMobile();
@@ -474,12 +479,6 @@ if (
     const setOpen = React && React.useCallback(;
       (value: boolean | ((value: boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) : value;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      defaultOpen = true,;
       open:openProp,;
       onOpenChange:setOpenProp,;
       className,;
@@ -499,6 +498,7 @@ if (
     const setOpen = React.useCallback(;
       (value:boolean | ((value:boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) :value;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -550,16 +550,18 @@ if (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         state;
         open;
         set_open;
         is_mobile;
         open_mobile;
         setOpenMobile;
-<<<<<<< HEAD
 
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
     );
+<<<<<<< HEAD
 
 
 =======
@@ -803,6 +805,8 @@ SidebarProviderProps > ( ({
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
               className
             )}
@@ -820,6 +824,7 @@ SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -832,3 +837,5 @@ export { SidebarContext }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -32,5 +32,10 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
+  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

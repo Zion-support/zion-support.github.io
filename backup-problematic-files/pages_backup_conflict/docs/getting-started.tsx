@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup_conflict/docs/getting-started.tsx
 =======
 <<<<<<< HEAD
@@ -145,3 +146,10 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_conflict/docs/getting-started.tsx
+=======
+import React from 'react';
+
+interface Getting-startedProps {
+  className?: string;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

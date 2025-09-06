@@ -59,6 +59,7 @@ useEffect ( () => {
         }
       }
       { threshold }
+<<<<<<< HEAD
     );
 <<<<<<< HEAD
 
@@ -69,6 +70,10 @@ useEffect ( () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   };
+=======
+    )
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <div className={`relative overflow-hidden ${className}`}>;
@@ -101,11 +106,14 @@ if ( {) {
       />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -154,7 +162,7 @@ export default LazyImage;
     </div>);
 }
 ;
-export default LazyImage;          className="w - full h - full object - cover";
+export default LazyImage;          className="w - full h-full object-cover";
           loading="lazy";
           style={{ width, height }}
         />)}

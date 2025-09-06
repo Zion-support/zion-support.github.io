@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useState  } from 'react';
-import { Check, Copy  } from 'lucide-react';
-import { cn } from "@/lib/utils";
-interface CodeBlockProps {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
   code: string
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
@@ -17,26 +8,14 @@ interface CodeBlockProps {;
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
-}
-<<<<<<< HEAD
+}  code;
 
-
-export function CodeBlock(): any ({ ;
-
-=======
-  language?: string;
-  showLineNumbers?: boolean;
-  className?: string;
-}
-export function CodeBlock(): any ({ ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  code;
   language = 'bash';
   showLineNumbers = false;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
@@ -130,20 +109,20 @@ export function CodeBlock({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function CodeBlock({ 
+=======
+
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";export function CodeBlock({ 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   code,
   language = 'bash',
   showLineNumbers = false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -186,6 +165,10 @@ export function CodeBlock({
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
+=======
+  },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className
@@ -198,6 +181,7 @@ export function CodeBlock({
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
             {code.split('\n').map((_, i) => (
               <div key={i} className="h-6 leading-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -227,19 +211,24 @@ export function CodeBlock({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {;
       setCopied(false);
-    }, 2000);
-  };
+    }, 2000)
+};
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
       className
@@ -257,6 +246,7 @@ export function CodeBlock({;
                 {i + 1}
 =======
                 {i + 1}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -323,6 +313,8 @@ export function CodeBlock({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </button>;
       {language && (;
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
@@ -330,10 +322,9 @@ export function CodeBlock({ ;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -346,9 +337,10 @@ export function CodeBlock({ ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ;
-
 
 export default CodeBlock;
 
@@ -368,6 +360,7 @@ function CodeBlock() {
   const [copied, set_copied] = useState (false);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 export default CodeBlock;
 <<<<<<< HEAD
 ;
@@ -457,3 +450,6 @@ export default CodeBlock;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default CodeBlock;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

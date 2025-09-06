@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,6 +18,9 @@ import {Slot} from '@radix-ui/react-slot';
 import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -26,6 +30,7 @@ type FormFieldContextValue = {
 const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
+<<<<<<< HEAD
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
 <<<<<<< HEAD
 =======
@@ -85,48 +90,20 @@ const useFormField = () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+=======
+const FormField = ({ ...props }: any) =></FormFieldContextValue> {  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
       <Controller {...props} />;
     </FormFieldContext && FormFieldContext.Provider>;
-  );
-<<<<<<< HEAD
+  )
 };
 const useFormField = () => {;
   const fieldContext = React && React.useContext(;
     FormFieldContext;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  ) as FormFieldContextValue;
-  const itemContext = React && React.useContext(;
-    FormItemContext;
-  ) as FormItemContextValue | null;
-  const { getFieldState, formState } = useFormContext();
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import { cn } from "@/lib/utils"
-import { Label } from "@/components/ui/label"
-
-const Form = FormProvider
-
-type FormFieldContextValue = {
-  name: string
-}
-
-const FormFieldContext = React.createContext<FormFieldContextValue>({
-  name: ""})
-
-const FormField = ({ ...props }: any) => {
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <FormFieldContext.Provider value={{ name: props.name }}>
       <Controller {...props} />
     </FormFieldContext.Provider>
 
-<<<<<<< HEAD
-=======
   );
 }
 const useFormField = () => {
@@ -138,7 +115,6 @@ const useFormField = () => {
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
   const fieldState = getFieldState(fieldContext.name, formState);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
 }
 
@@ -150,13 +126,11 @@ const useFormField = () => {
   const fieldState = getFieldState(fieldContext.name, formState)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-<<<<<<< HEAD
-
   if (!fieldContext) {
     throw new Error('useFormField should be used within <FormField>');
   }
   if (!itemContext) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -327,12 +301,16 @@ const FormItem = React && React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 FormItem && FormItem.displayName = 'FormItem';
 
+=======
+    throw new Error("useFormField should be used within <FormItem>")
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const FormLabel = React && React.forwardRef<;
   React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
   React && React.ComponentProp</typeof>sWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root>;
 >(({ className, ...props }, ref) => {;
   const { error, formItemId } = useFormField();
-
 
     />;
   );
@@ -346,7 +324,6 @@ const FormControl = React && React.forwardRef<;
   const { error, formItemId, formDescriptionId, formMessageId } =;
     useFormField();
 
-
     />;
   );
 });
@@ -357,7 +334,6 @@ const FormDescription = React && React.forwardRef<;
   React && React.HTMLAttributes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => {;
   const { formDescriptionId } = useFormField();
-
 
     />;
   );
@@ -374,8 +350,6 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
   if (!body) {;
     return null;
   }
-<<<<<<< HEAD
-
 
     >;
 
@@ -384,6 +358,7 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
   );
 });
 
+<<<<<<< HEAD
 FormMessage && FormMessage.displayName = 'FormMessage';
 =======
 <<<<<<< HEAD
@@ -530,6 +505,11 @@ const FormLabel = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     />
+=======
+FormMessage && FormMessage.displayName = 'FormMessage';    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+    </FormItemContext.Provider>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   )
 })
 FormLabel.displayName = "FormLabel"
@@ -541,6 +521,7 @@ const FormControl = React.forwardRef<
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -550,6 +531,8 @@ const FormControl = React.forwardRef<
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Slot
       ref={ref}
@@ -561,6 +544,7 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -608,6 +592,8 @@ const FormDescription = React.forwardRef<
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     />
   )
 })
@@ -627,6 +613,7 @@ const FormMessage = React.forwardRef<
     return null
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -945,3 +932,9 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+    >
+      {body}
+    </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

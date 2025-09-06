@@ -1,29 +1,11 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export { default as StarRating } from './StarRating',
-export { default as ReviewForm } from './ReviewForm',
-export { default as ReviewCard } from './ReviewCard',
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
 export { default as ReviewCard } from './ReviewCard',;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export { default as ReviewSummary } from './ReviewSummary';
-=======
+export { default as ReviewSummary } from './ReviewSummary';export { default as ReviewSummary } from './ReviewSummary';
 export { default as ReviewSummary } from './ReviewSummary';
 export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
@@ -37,6 +19,7 @@ export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
 export { default as ReviewCard } from './ReviewCard',;
 export { default as ReviewSummary } from './ReviewSummary';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -58,3 +41,6 @@ export { default as ReviewSummary } from './ReviewSummary';
 export { default as ReviewSummary } from './ReviewSummary';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { default as ReviewSummary } from './ReviewSummary';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

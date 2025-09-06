@@ -80,9 +80,7 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    
+    content = content.replace(/    content = content.replace(/    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -95,6 +93,7 @@ function fixMergeConflicts(filePath) {
     return false;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to get all files recursively;
 <<<<<<< HEAD
@@ -110,10 +109,14 @@ function getAllFiles(dir, extensions) {;
   let files = [];
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// Function to get all files recursively;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
+<<<<<<< HEAD
       const stat = fs.statSync(fullPath);
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -161,10 +164,14 @@ const path = require('path');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
+=======
+      const stat = fs.statSync(fullPath);console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const originalContent = content;
@@ -174,8 +181,12 @@ function fixMergeConflicts(filePath) {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;    const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -197,6 +208,9 @@ function fixMergeConflicts(filePath) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (content !== originalContent) {;
+=======
+    content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
       return true;
@@ -210,6 +224,7 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   let files = [];
@@ -229,9 +244,10 @@ function getAllFiles(dir, extensions) {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
   let files = [];
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -345,9 +361,57 @@ function main() {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {
         files = files.concat(getAllFiles(fullPath, extensions));
+<<<<<<< HEAD
       } else if (extensions.some(ext => item.endsWith(ext))) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         files.push(fullPath);
+=======
+      }
+    }
+  } catch (error) {
+    // Skip directories that can't be read;
+  }
+  return files;
+}
+// Main execution;
+async /**
+ * main - Function description
+ */
+function main() {
+  try {
+    // Check if we're in a git repository;
+    exec_sync ('git rev - parse --git - dir', { stdio: 'pipe' }),
+    console.log ('✅ Git repository detected');
+  } catch (error) {
+    console.error ('❌ Not in a git repository'),
+    process.exit (1);
+  }
+  try {
+    // Ensure clean working directory;
+    const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),
+    if () {) {
+  $2
+}
+      console.log ('⚠️  Working directory has changes. Stashing...'),
+      exec_sync ('git stash push -m "Auto - stash before merge process"');
+    }
+    // Fetch latest changes;
+    console.log ('📥 Fetching latest changes...'),
+    exec_sync ('git fetch --all --prune'),
+    // Switch to main branch;
+    console.log ('🔄 Switching to main branch...'),
+    exec_sync ('git checkout main'),
+    // Pull latest changes;
+    console.log ('📥 Pulling latest changes from main...'),
+    try {
+      exec_sync ('git pull origin main');
+    } catch (error) {
+      console.log ('⚠️  Merge conflicts detected. Resolving...'),
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
+        files = files.concat(getAllFiles(fullPath, extensions));
+
+      } else if (extensions.some(ext => item.endsWith(ext))) {;        files.push(fullPath);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     }
   } catch (error) {
@@ -387,6 +451,7 @@ async function main() {
     console.log('📥 Pulling latest changes from main...');
     try {
       execSync('git pull origin main');
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {;
       console.log('⚠️  Merge conflicts detected. Resolving...'),;
@@ -491,18 +556,79 @@ async function main() {
     let fixedCount = 0;
 <<<<<<< HEAD
     for (const file of files) {;
+=======
+    } catch (error) {;
+      console.log('⚠️  Merge conflicts detected. Resolving...'),;
+      // Find files with merge conflicts;
+
+        for (const file of files) {;
+          if (file.trim()) {;            }
+            execSync(`git add "${file}"`);
+          }
+        }
+        // Commit the merge;
+        execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+      }
+    }
+    let fixedCount = 0;    for (const file of files) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
-=======
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-          if (fixMergeConflicts(file)) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
             fixedCount++;
+          }
+        }
+      } catch (error) {;
+        // Skip files that can't be read;
+      }
+    }
+;
+;
+    if (fixedCount > 0) {;
+      console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),;
+      execSync('git add .'),;
+      execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"');
+    }
+;
+    // Get all branches;
+    console.log('🌿 Getting all branches...'),;
+    const branches = execSync('git branch -r', { encoding: 'utf8' }),;
+    const branchList = branches.split('\n');
+      .map(branch => branch.trim());
+      .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+    console.log(`Found ${branchList.length} branches to merge: `),;
+    branchList.forEach(branch => console.log(`  - ${branch}`)),;
+    // Merge each branch;
+    for (const branch of branchList) {;
+      try {;
+        const branchName = branch.replace('origin/', ''),;
+        console.log(`\n🔄 Merging branch: ${branchName}`),;
+        // Checkout the branch;
+        execSync(`git checkout ${branchName}`),;
+        // Merge into main;
+        execSync('git checkout main'),;
+        execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`),;
+        console.log(`✅ Successfully merged ${branchName}`);
+      } catch (error) {;
+        console.log(`⚠️  Error merging ${branch}: ${error.message}`),;
+        // Continue with other branches;
+      }
+    }
+;
+    // Push all changes;
+    console.log('📤 Pushing all changes to main...'),;
+    execSync('git push origin main'),;
+    console.log('🎉 All merge operations completed successfully!'),;
+    console.log('✅ All PRs have been merged into main branch'),;
+    console.log('✅ All merge conflicts have been resolved'),;
+    console.log('✅ Repository is now clean and up to date');
+  } catch (error) {;
+    console.error('❌ Error during merge process:', error.message),;
+    process.exit(1);
+  }
+}
+;
+main().catch(console.error),;            fixedCount++;
           }
         }
       } catch (error) {
@@ -560,7 +686,6 @@ async function main() {
   }
 }
 
-<<<<<<< HEAD
     console.log ('🔍 Scanning for merge conflicts in files...'),
     const files = getAllFiles (process.cwd (), ['.tsx.ts.jsx.js', '.json.md.css']),
     let fixed_count = 0,
@@ -571,6 +696,7 @@ async function main() {
 if (|| content.includes (') {
   $2
 }
+<<<<<<< HEAD
 
 =======
 
@@ -589,3 +715,6 @@ if (|| content.includes (') {
 main().catch(console.error);
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+main().catch(console.error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

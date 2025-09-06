@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -17,11 +17,14 @@ import {EmptyStateCard} from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
+<<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes",
 <<<<<<< HEAD
 
@@ -83,13 +86,16 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onToggleArchive
 }) => {
+=======
+import type { QuoteRequest } from "@/types/quotes",}) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (isLoading) {
     return (
-<<<<<<< HEAD
       <div className="text-center py-20">
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -109,12 +115,15 @@ import type { QuoteRequest } from "@/types/quotes",;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type QuoteRequestsListProps = {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   quotes: QuoteRequest[],;
   isLoading: boolean,;
   isArchived: boolean,;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -177,10 +186,13 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -195,6 +207,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   if (quotes && quotes.length === 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
@@ -202,6 +216,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -247,6 +262,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   );
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -260,8 +277,8 @@ if ( {) {
   $2
 }
     return (
-      <div className="text - center py - 20">;
-        <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+      <div className="text - center py-20">;
+        <p className="text - zion - slate-light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
       </div>);
   }
   // Check condition
@@ -271,38 +288,17 @@ if ( {) {
     return <EmptyStateCard type={is_archived ? 'archived' : 'active'} />;
   }
   return (
-    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
+    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-5">;
       {quotes.map (quote => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return (;
-      <div className="text-center py-20">;
-        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' :'your'} hire requests...</p>;
-      </div>;
-    ),;
-  }
-  ;
-  if (quotes.length === 0) {;
-    return <EmptyStateCard type={isArchived ? 'archived' :'active'} />,;
-  }
-  ;
-  return (;
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
-      {quotes.map(quote => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <QuoteRequestCard;
           key={quote.id}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           quote={quote}
           onViewDetails={onViewDetails}
-<<<<<<< HEAD
-<<<<<<< HEAD
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
 
+<<<<<<< HEAD
 
 
     </div>;
@@ -374,12 +370,18 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
   )
 }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
   );
     </div>;
   );
+<<<<<<< HEAD
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

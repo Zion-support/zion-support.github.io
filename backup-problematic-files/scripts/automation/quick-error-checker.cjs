@@ -66,5 +66,10 @@ const path = require("path")
           "file": ".eslintrc.js"
           "timestamp"
   type: "eslint-config-fix"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+          "file": "
+          "file": "
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

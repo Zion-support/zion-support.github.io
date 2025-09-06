@@ -74,7 +74,13 @@ export default function UltraAdvancedHero2026() {;
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+<<<<<<< HEAD
   }
+=======
+
+  };
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const containerVariants = {
     hidden: { opacity: 0 }
 <<<<<<< HEAD
@@ -256,7 +262,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import {motion} from 'framer-motion';
-import Link from 'next / link';
+import Link from 'next/link';
 import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ArrowRight,
@@ -360,11 +366,14 @@ function UltraAdvancedHero2026() {
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -940,7 +949,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute top - 20 right - 20 text - 6xl opacity - 20";
+          className="absolute top - 20 right - 20 text-6xl opacity-20";
         >;
           🚀;
         </motion.div>;
@@ -954,7 +963,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute bottom - 20 left - 20 text - 6xl opacity - 20";
+          className="absolute bottom - 20 left - 20 text-6xl opacity-20";
         >;
           ⚛️;
         </motion.div>;
@@ -968,7 +977,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute top - 1/3 left - 10 text - 5xl opacity - 20";
+          className="absolute top - 1/3 left - 10 text-5xl opacity-20";
         >;
           🧠;
         </motion.div>;
@@ -982,7 +991,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20";
+          className="absolute bottom - 1/3 right - 10 text-5xl opacity-20";
         >;
           🌐;
         </motion.div>;

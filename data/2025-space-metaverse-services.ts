@@ -2,7 +2,7 @@ export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {;
   id: string;
   name: string;
-  tagline: string;
+  tagline: string,
   description: string;
   category: string;
   price: {
@@ -12,10 +12,13 @@ export interface SpaceMetaverseService {;
     trialDays: number;
     setupTime: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   {
 
@@ -37,6 +40,7 @@ export interface SpaceMetaverseService {;
     integrations: [
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
+<<<<<<< HEAD
     support:
 <<<<<<< HEAD
 =======
@@ -475,19 +479,15 @@ export interface SpaceMetaverseService {;
     icon: '🥽';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - orange - 500 to - red - 600';
+=======
+    support:    color: 'from - orange - 500 to - red - 600';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     popular: true;
     launch_date: '2024 - 01 - 20';
     customers: 1800;
-<<<<<<< HEAD
     rating: 4.7,
-    reviews: 1400;
-  }
-;
-=======
-
-    rating: 4 && 4.7,
-
     reviews: 1400
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -522,8 +522,13 @@ export interface SpaceMetaverseService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string,;
+=======
+};
+  }
+];  id: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   category: string,;
   price: {;
@@ -561,8 +566,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {;
     id: 'ai-powered-space-resource-intelligence',;
     name: 'AI-Powered Space Resource Intelligence Platform',;
-    tagline: 'Discover and optimize space resources with AI-driven analytics',;
-    description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.',;
+    tagline: 'Discover and optimize space resources with AI-driven analytics',,
+  description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.',;
     category: 'Space Technology & Resource Intelligence',;
     price: {;
       monthly: 799,;
@@ -606,8 +611,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {;
     id: 'metaverse-development-platform',;
     name: 'Metaverse Development Platform',;
-    tagline: 'Build immersive virtual worlds with AI-powered tools',;
-    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.',;
+    tagline: 'Build immersive virtual worlds with AI-powered tools',,
+  description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.',;
     category: 'Metaverse & Virtual Reality',;
     price: {;
       monthly: 299,;
@@ -651,8 +656,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {;
     id: 'quantum-space-communications-network',;
     name: 'Quantum Space Communications Network',;
-    tagline: 'Ultra-secure space communications with quantum entanglement',;
-    description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.',;
+    tagline: 'Ultra-secure space communications with quantum entanglement',,
+  description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.',;
     category: 'Quantum Space Communications',;
     price: {;
       monthly: 1299,;
@@ -696,8 +701,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {;
     id: 'ai-powered-space-traffic-management',;
     name: 'AI-Powered Space Traffic Management Platform',;
-    tagline: 'Intelligent space traffic control with collision prevention',;
-    description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',;
+    tagline: 'Intelligent space traffic control with collision prevention',,
+  description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',;
     category: 'Space Traffic Management & Safety',;
     price: {;
       monthly: 599,;
@@ -741,8 +746,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {;
     id: 'virtual-reality-enterprise-platform',;
     name: 'Virtual Reality Enterprise Platform',;
-    tagline: 'Transform business operations with immersive VR solutions',;
-    description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',;
+    tagline: 'Transform business operations with immersive VR solutions',,
+  description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',;
     category: 'Enterprise VR & Immersive Technology',;
     price: {;
       monthly: 199,;
@@ -783,6 +788,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     rating: 4.7,;
     reviews: 1400;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -799,4 +805,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+    rating: 4.7,
+    reviews: 1400;  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];

@@ -142,6 +142,39 @@ if ( {) {
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function PrimaryNav() {;
+<<<<<<< HEAD
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const suggestions = generateSearchSuggestions();
+  let unreadCount = 0;
+  try {;
+    const messaging = useMessaging();
+    unreadCount = messaging && messaging.unreadCount;
+  } catch {;
+    // context not available;
+  }
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    const trimmed = query && query.trim();    if (trimmed) {;
+      logDebug('PrimaryNav search submit:', { query: trimmed });
+      router;
+        .push(`/search?q=${encodeURIComponent(trimmed)}`);
+        .then(() => setQuery(''));
+        .catch(err =>;
+          logErrorToProduction('Search navigation failed', err, {;
+            query: trimmed,;
+            component: 'PrimaryNav',;
+          });
+        );    }
+  };
+=======
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const { user } = useAuth(),;
@@ -170,6 +203,7 @@ export function PrimaryNav() {;
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
     }
   },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <>
@@ -192,9 +226,18 @@ export function PrimaryNav() {;
           </div>
           
           {/* Actions container with responsive layout */}
+<<<<<<< HEAD
+          <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
+            {/* Search form with clamped width */}
+            <form
+              onSubmit={handleSubmit}
+              className='flex-shrink-0'
+              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
+=======
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -266,6 +309,25 @@ if ( {) {
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
+<<<<<<< HEAD
+                    router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
+                  } else if (;
+                    sugg && sugg.type === 'doc' &&;
+                    sugg && sugg.slug &&;
+                    sugg && sugg.slug.startsWith('/');
+                  ) {;
+                    // Documentation suggestions navigate directly to their path;
+                    router && router.push(sugg && sugg.slug);
+                  } else if (sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
+                    // Blog posts navigate to blog detail page;
+                    router && router.push(`/blog/${sugg && sugg.slug}`);
+                  } else {;
+                    // Default: search results page with query parameter;
+                    router && router.push(`/search?q=${encodeURIComponent(sugg && sugg.text)}`);
+                  }
+                  setQuery('');
+
+=======
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
                     // Documentation suggestions navigate directly to their path;
@@ -279,6 +341,7 @@ if ( {) {
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
                   }
                   setQuery(''),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   // Track analytics event;
 <<<<<<< HEAD
                   if (typeof window !== 'undefined' && window.gtag) {;
@@ -448,12 +511,25 @@ if ( {) {
                   </Link>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Link
+<<<<<<< HEAD
+                    href='/signup'
+                    className='text-sm hover:text-primary whitespace-nowrap'>;
+                    {t('auth && auth.signup')}
+                  </Link>;
+                </>;
+=======
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
+<<<<<<< HEAD
                   </Link>;
                 </>;
+=======
+                  </Link>
+                </>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
               {isLoggedIn && <UserMenu />}
 <<<<<<< HEAD
@@ -570,11 +646,19 @@ if ( {) {
             ) : (
               <Menu className="h-6 w-6" />
             )}
+<<<<<<< HEAD
+          </button>;
+        </div>;
+      </header>;
+      {mobileMenuOpen && (;
+        <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
+=======
           </button>
         </div>
       </header>
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div
 <<<<<<< HEAD
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -749,6 +833,9 @@ setLoginOpen (true)
   isMobile && <MobileBottomNav unreadCount= {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   unreadCount
 
   unreadCount 
@@ -779,6 +866,7 @@ setLoginOpen (true)
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
       )}
@@ -789,6 +877,27 @@ setLoginOpen (true)
 }
 <<<<<<< HEAD
 =======
+=======
+        </div>;
+      </header>;
+      {mobileMenuOpen && (
+        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>;
+          <div;
+            className='absolute inset - 0 bg - black / 50 backdrop - blur - sm';
+            on_click={() => setMobileMenuOpen (false)}
+            aria - hidden='true'          />;
+          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>;
+            <MobileMenu;
+              unread_count={unread_count}
+              on_close={() => setMobileMenuOpen (false)}
+              openLoginModal={returnToPath => setLoginOpen (true)}            />;
+          </div>;
+        </div>)}
+      {is_mobile && <MobileBottomNav unread_count={unread_count} />}
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('');
 //Track analytics event;
@@ -905,7 +1014,13 @@ setLoginOpen (true);
 '"`;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -18,6 +18,8 @@ import {
 import type { QuoteStatus } from "@/types/quotes";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
@@ -28,6 +30,7 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -40,6 +43,8 @@ import type { QuoteStatus } from "@/types/quotes",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -47,6 +52,7 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
@@ -269,6 +275,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
+=======
+  setArchiveFilter;
+}) => {;
+  return (},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import {;
@@ -303,17 +314,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
               {unreadCount} New;
             </Badge>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 
@@ -378,6 +383,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <SelectValue placeholder="Active Only" />;
+=======
+      </div>;            <SelectValue placeholder="Active Only" />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value="active">Active Only</SelectItem>;
@@ -385,6 +393,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="all">All Requests</SelectItem>;
           </SelectContent>;
         </Select>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 
@@ -498,3 +507,6 @@ export default RequestsHeader;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

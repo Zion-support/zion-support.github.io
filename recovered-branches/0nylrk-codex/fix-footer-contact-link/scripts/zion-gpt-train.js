@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -25,6 +26,8 @@ import {createClient} from '@supabase/supabase-js';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -35,6 +38,7 @@ const {
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -47,6 +51,8 @@ const {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } = process.env
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
@@ -71,78 +77,28 @@ const {;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
   process.exit(1);
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
 
-<<<<<<< HEAD
-=======
-} = process && process.env,
-if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {
-  console && console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),
-  process && process.exit(1)
-}
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
-async function fetchData() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  try {
   const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
   const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
   const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return {
-    jobs: jobPosts && jobPosts.data || [],
-    resumes: resumes && resumes.data || [],
-    logs: supportLogs && supportLogs.data || []
-<<<<<<< HEAD
-
-  }
-}
-function stripPii(text) {
-
-  if (!text) return text
-  let result = text
-  // Emails
-
-=======
-  }
-}
-function stripPii(text) {
-  if (!text) return text
-  let result = text
-  // Emails
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
   // US-style phone numbers
   result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
   // Naive full name removal (two capitalized words)
   result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),
 
-<<<<<<< HEAD
   return result
 }
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-function buildTrainingPairs(records) {
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -169,6 +125,7 @@ function buildTrainingPairs(records) {
       prompt: `Create a job description titled "${stripPii(job.title)}"`
 
       completion: stripPii(job.description)
+<<<<<<< HEAD
     })
 <<<<<<< HEAD
   }
@@ -370,6 +327,13 @@ async function createFineTune(filePath) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // // // console.log('Fine-tune job created:', job.id)
+=======
+    })    })
+  }
+  return pairs
+}
+async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 async function createFineTune(filePath) {;
   const formData = new FormData(),;
@@ -397,6 +361,7 @@ async function createFineTune(filePath) {;
     });
   }),;
   const job = await jobRes.json(),;
+<<<<<<< HEAD
   // // // console.log('Fine-tune job created:', job.id);
 <<<<<<< HEAD
 
@@ -574,6 +539,9 @@ main ().catch ((err) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+  // // // console.log('Fine-tune job created:', job.id);}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 async function main() {
 
   const records = await fetchData()
@@ -585,20 +553,16 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err)
 
-<<<<<<< HEAD
-});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+}),
+;
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -787,3 +751,5 @@ await createFineTune ('training-data.jsonl')
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

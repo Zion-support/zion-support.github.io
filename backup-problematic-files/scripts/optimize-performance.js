@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -33,9 +36,12 @@ const OPTIMIZATIONS = {
     "gzip": true,
     "brotli": true}};
 function optimizeNextConfig() {
+<<<<<<< HEAD
   const configPath = 'next && next.config.js';
   if (!fs && fs.existsSync(configPath)) {
     console && console.log('❌ next && next.config.js not found');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return false}
   let config = fs && fs.readFileSync(configPath, 'utf8');
   // Add performance optimizations
@@ -101,6 +107,7 @@ function optimizeNextConfig() {
     /export default nextConfig;/,
     `${performanceConfig}\n\nexport default nextConfig;`
   );
+<<<<<<< HEAD
   fs && fs.writeFileSync(configPath, config);
   console && console.log('✅ Next && Next.js config optimized for performance');
   return true}
@@ -108,6 +115,8 @@ function optimizePackageJson() {
   const packagePath = 'package && package.json';
   if (!fs && fs.existsSync(packagePath)) {
     console && console.log('❌ package && package.json not found');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return false}
   const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
   // Add performance scripts
@@ -127,8 +136,11 @@ function optimizePackageJson() {
     if (!packageJson && packageJson.devDependencies[dep]) {
       packageJson && packageJson.devDependencies[dep] = version}
   }
+<<<<<<< HEAD
   fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2));
   console && console.log('✅ package && package.json optimized for performance');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return true}
 function createPerformanceComponents() {
   const componentsDir = 'components/performance';
@@ -145,8 +157,11 @@ interface OptimizedImageProps {
   priority?: boolean
   className?: string
   sizes?: string
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -157,8 +172,11 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   sizes = '(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw'
 }) => {
   return (
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       alt={alt}
       width={width}
       height={height}
@@ -167,8 +185,11 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
       sizes={sizes}
       quality={85}
       placeholder="blur"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default OptimizedImage
 ";
   fs && fs.writeFileSync(
@@ -178,8 +199,11 @@ export default OptimizedImage
   // Create lazy loading component
   const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react'
 interface LazyComponentProps {
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     lazyLoadingComponent
   );
   console && console.log('✅ Performance components created');
@@ -192,10 +216,14 @@ function optimizeImages() {
   // Create images directory structure
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
+<<<<<<< HEAD
 
   }
   }
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   console && console.log('✅ Image directories optimized');
   return true}
 function main() {
@@ -208,12 +236,16 @@ function main() {
   let successCount = 0;
   for (const optimization of optimizations) {
     try {
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         successCount++}
     } catch (error) {
       console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
   }
+<<<<<<< HEAD
   console.log("\n📊 Optimization "Summary": ");
   console.log(`   Total optimizations: ${optimizations.length}`);
   console.log(`   "Successful": ${successCount}`);
@@ -235,3 +267,5 @@ main();
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/optimize-performance.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

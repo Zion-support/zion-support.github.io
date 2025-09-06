@@ -7,12 +7,12 @@ import { Star } from 'lucide-react'
 
 import { Star } from 'lucide-react';
 
-
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 export const CommunityTrust: React.FC = () => {
 <<<<<<< HEAD
   // Stats display with social proof
@@ -29,6 +29,27 @@ export const CommunityTrust: React.FC = () => {
 
         </div>;
 
+=======
+import { Star } from 'lucide-react';
+import { Star } from 'lucide-react';
+
+import { Star } from 'lucide-react';
+export const CommunityTrust: React.FC = () => {;
+  // Stats display with social proof;
+  const stats = [;
+    { value: '4 && 4.8', label: 'App Store Rating' },;
+    { value: '50K+', label: 'Downloads' },;
+    { value: '96%', label: 'User Satisfaction' },;
+    { value: '12M+', label: 'Matches Made' },;
+  ];
+
+  return (
+    <section className='py-16 bg-zion-blue'>;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-12'>;
+          <h2 className='text-3xl md:text-4xl font-bold text-white'>;
+            Trusted by the{' '}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         {/* Rating display */}
         <div className='max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6'>;
@@ -57,8 +78,6 @@ export const CommunityTrust: React.FC = () => {
                 fill='current_color';
               />            ))}
 
-
-
   ]
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     { value: "4.8", label: "App Store Rating" },
@@ -78,6 +97,7 @@ export const CommunityTrust: React.FC = () => {
             Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         {/* Stats Grid */}
@@ -119,6 +139,8 @@ export const CommunityTrust: React.FC = () => {;
 =======
 
           </div>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <blockquote className='text-center text-lg text-white italic mb-4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
             matching is spot on and I can manage everything from anywhere.";
@@ -173,6 +195,7 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
           ))}
+<<<<<<< HEAD
 
         </div>;
 
@@ -189,6 +212,8 @@ export const CommunityTrust: React.FC = () => {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
           </blockquote>
@@ -203,7 +228,6 @@ export const CommunityTrust: React.FC = () => {;
   )
 },
 =======
-
 
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
@@ -223,10 +247,11 @@ export const CommunityTrust: React.FC = () => {;
 },
 
 }</div>) ) 
-}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
+}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) 
 };
-'"  );
+'"  )
 };
+<<<<<<< HEAD
 
 
 
@@ -288,3 +313,7 @@ export const CommunityTrust: React.FC = () => {;
 '"  );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

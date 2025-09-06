@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -78,3 +79,6 @@ import _React from 'react" import { render,screen } from '@testing-library/react
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import sitemap from '../pages/sitemap" describe('sitemap Integration Tests',() => {' test('page renders correctly',() => {' render(<sitemap / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<sitemap / />) }) test('page content is accessible',() => {' render(<sitemap / />) }) test('page loads with correct data',() => {' render(<sitemap / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

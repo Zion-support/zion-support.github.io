@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
-
-=======
-=======
-import {Education} from '@/types / resume';
-import {format} from 'date - fns';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -35,6 +26,8 @@ interface EducationSectionProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
 import {Education} from '@/types/resume';
@@ -63,6 +56,7 @@ interface EducationSectionProps {
 
   const sortedEducation = [...education].sort((a, b) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -73,6 +67,8 @@ interface EducationSectionProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (a.is_current && !b.is_current) return -1;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
@@ -81,6 +77,7 @@ interface EducationSectionProps {
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
+<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy')
 <<<<<<< HEAD
 =======
@@ -104,6 +101,9 @@ interface EducationSectionProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Education } from '@/types/resume',;
+=======
+      return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
   education: Education[];
@@ -121,6 +121,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
   const formatDate = (date: Date | string | undefined) => {;
     if (!date) return '',;
     if (typeof date === 'string') {;
+<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
 
@@ -346,3 +347,9 @@ if (return null) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      return format(new Date(date), 'MMM yyyy');    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedEducation.length === 0) return null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -68,11 +68,14 @@ export const MobileAppHero: React.FC = () => {
             </Link>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
 
@@ -100,6 +103,7 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -215,10 +219,13 @@ export const MobileAppHero:React.FC = () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="flex-1 flex justify-center">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="relative w-64 h-auto">;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
               <Phone className="w-full h-auto text-white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -298,4 +305,10 @@ export const MobileAppHero: React.FC = () => {
     </section>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };

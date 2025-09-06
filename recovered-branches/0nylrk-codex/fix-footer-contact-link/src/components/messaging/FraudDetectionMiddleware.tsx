@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {check_message, monitor_content} from '@/services / fraud';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
@@ -18,17 +20,8 @@ interface FraudDetectionMiddlewareProps {
   children: React.ReactNode;
 }
 
-
-
-
-=======
-=======
-import React, { useCallback } from 'react';
-import { checkMessage, monitorContent  } from '@/services/fraud';
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-// Props for the middleware component
 interface FraudDetectionMiddlewareProps {
+<<<<<<< HEAD
   children: React.ReactNode
 =======
 interface FraudDetectionMiddlewareProps {
@@ -73,6 +66,9 @@ interface FraudDetectionMiddlewareProps {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+  children: React.ReactNode}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -87,6 +83,7 @@ interface FraudDetectionContextType {;
   }>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -98,6 +95,8 @@ interface FraudDetectionContextType {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     userId: string
     messageId: string
     content: string
@@ -112,6 +111,7 @@ interface FraudDetectionContextType {;
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 
+<<<<<<< HEAD
 export const FraudDetectionContext = React.createContext(
 <<<<<<< HEAD
 
@@ -135,6 +135,9 @@ export const FraudDetectionContext = React.createContext(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+=======
+export const FraudDetectionContext = React.createContext(export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
     userId: string
@@ -143,6 +146,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -229,12 +233,17 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+      // First do a quick local check using the fraud detection service
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           userId;
           userEmail;
           'message';
           messageId;
           content;
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -431,11 +440,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
           toast({;
-            title: "Message Flagged",;
-            description: "Your message contains content that may violate our terms of service.",;
+            title: "Message Flagged",,
+  description: "Your message contains content that may violate our terms of service.",;
             variant: "destructive",;
             duration: 5000;
           });
@@ -461,8 +472,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       if (data && data.classification === 'dangerous') {;
         toast({;
-          title: "Message Blocked",;
-          description: data && data.explanation || "This message contains prohibited content.",;
+          title: "Message Blocked",,
+  description: data && data.explanation || "This message contains prohibited content.",;
           variant: "destructive";
         });
         return { ;
@@ -472,6 +483,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       */;
       return { isSafe: true }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -523,6 +535,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
       return { isSafe: true }
@@ -535,14 +549,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     <FraudDetectionContext.Provider value={contextValue}>;
       {children}
     </FraudDetectionContext.Provider>;
-<<<<<<< HEAD
-
-=======
-=======
-
-
-      return { isSafe: true }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -552,26 +558,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   return (
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
-<<<<<<< HEAD
     </FraudDetectionContext && FraudDetectionContext.Provider>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  );
+  )
 };
 
 // Hook to use the fraud detection context;
 export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
-<<<<<<< HEAD
-=======
-  );
-},;
-// Hook to use the fraud detection context;
-export const useFraudDetection = () => {;
-  const context = React.useContext(FraudDetectionContext);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  if (context === undefined) {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
+<<<<<<< HEAD
   return context;
 <<<<<<< HEAD
 =======
@@ -874,3 +870,7 @@ explanation: data.explanation
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return context
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

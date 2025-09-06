@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Trophy } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
 ;
@@ -37,7 +40,10 @@ export const ReputationDisplay = ({ ;
   },;
   ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
@@ -47,4 +53,27 @@ export const ReputationDisplay = ({ ;
       <Progress value={progress} className={sizeClasses[size].progress} />;
       <div className="text-xs text-muted-foreground">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+      </div>;
+    </div>;
+  ),;
+},;
+;
+export default ReputationDisplay,; interface ReputationDisplayProps {;
+  reputation: number;
+size?: 'sm' | 'md' | 'lg' ;
+}export const ReputationDisplay = ({;
+  reputation;';
+size = 'md' ;
+}: ReputationDisplayProps) => {;
+  //Calculate next milestone const currentLevel = Math.floor (reputation / 100);
+const nextMilestone = (currentLevel + 1) * 100;
+const progress = ( (reputation % 100) /100) * 100;
+sm: {;
+  </div> </div>) 
+};
+export default ReputationDisplay;
+'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -13,18 +13,6 @@ import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
-=======
-
-=======
-
-} from "@/components/ui/card";
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
-import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-import { useJobMatches } from "@/hooks/useJobMatches";
-import { Skeleton } from "@/components/ui/skeleton";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 import React from "react";
 import {
   Card
@@ -41,7 +29,6 @@ import {
   CardContent,;
 <<<<<<< HEAD
 =======
-
 
 import {;
   Card,;
@@ -67,6 +54,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
+<<<<<<< HEAD
 import { Skeleton } from "@/components/ui/skeleton",
 <<<<<<< HEAD
 =======
@@ -117,6 +105,13 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
+
+  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
+  
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (isLoading) {
     return (
       <Card>
@@ -136,6 +131,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-48" />
                 <Skeleton className="h-4 w-32" />
               </div>
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
 =======
@@ -169,117 +165,29 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
+=======
+            </div>import React from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
-import { Skeleton } from "@/components/ui/skeleton",;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface JobMatchesProps {;
+import { Skeleton } from "@/components/ui/skeleton",;interface JobMatchesProps {;
   jobId: string;
 }
-
 
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
-
-=======
-export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     useJobMatches(jobId);
 
   if (isLoading) {;
-    return (
-<<<<<<< HEAD
-=======
-
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
-import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
-import { useJobMatches } from "@/hooks/useJobMatches",;
-import { Skeleton } from "@/components/ui/skeleton",;
-;
-interface JobMatchesProps {;
-  jobId:string;
-}
-;
-export function JobMatches({ jobId } JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),;
-  ;
-  if (isLoading) {;
-    return (;
-interface JobMatchesProps {;
-  jobId: string;
-}
-;
-export function JobMatches({ jobId }: JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);
-  if (isLoading) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-interface JobMatchesProps {;
-  jobId: string;
-}
-    useJobMatches(jobId);
-
-  if (isLoading) {;
-    return (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <Skeleton className="h-4 w-24" />;
-          </CardTitle>;
-          <CardDescription>;
-            <Skeleton className="h-4 w-full" />;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          {[1, 2, 3].map((i) => (;
-            <div key={i} className="flex items-center gap-4">;
-              <Skeleton className="h-12 w-12 rounded-full" />;
-              <div className="space-y-2">;
-                <Skeleton className="h-4 w-48" />;
-                <Skeleton className="h-4 w-32" />;
-              </div>;
-            </div>;
-          ))}
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    );
-  }
-
-
-  if (matches && matches.length === 0) {;
-
-=======
-  if (matches && matches.length === 0) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    return (
+    return (    return (
       <EmptyMatchesCard
         onRefresh={triggerAIMatching}
         isProcessing={isProcessing}
       />;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    );
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
@@ -299,7 +207,6 @@ interface JobMatchesProps {;
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
         <JobMatchCard
-<<<<<<< HEAD
 
           key={match && match.id}
           matchId={match && match.id}
@@ -313,12 +220,6 @@ interface JobMatchesProps {;
           matchPercent={match && match.match_score || 0}
           skills={match && match.talent_profile?.skills || []}
         />;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ))}
     </div>;
   );
@@ -351,20 +252,20 @@ if ( {) {
     return (
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <Skeleton className="h - 4 w - 24" />;
+          <CardTitle className="flex items - center gap-2">;
+            <Skeleton className="h - 4 w-24" />;
           </CardTitle>;
           <CardDescription>;
-            <Skeleton className="h - 4 w - full" />;
+            <Skeleton className="h - 4 w-full" />;
           </CardDescription>;
         </CardHeader>;
-        <CardContent className="space - y-4">;
+        <CardContent className="space-y-4">;
           {[1, 2, 3].map ((i) => (
-            <div key={i} className="flex items - center gap - 4">;
-              <Skeleton className="h - 12 w - 12 rounded - full" />;
-              <div className="space - y-2">;
-                <Skeleton className="h - 4 w - 48" />;
-                <Skeleton className="h - 4 w - 32" />;
+            <div key={i} className="flex items - center gap-4">;
+              <Skeleton className="h - 12 w - 12 rounded-full" />;
+              <div className="space-y-2">;
+                <Skeleton className="h - 4 w-48" />;
+                <Skeleton className="h - 4 w-32" />;
               </div>;
             </div>))}
         </CardContent>;
@@ -381,11 +282,12 @@ if ( {) {
       />);
   }
   return (
-    <div className="space - y-4">;
+    <div className="space-y-4">;
       {matches.map ((match) => (
         <JobMatchCard;
           key={match.id}
           match_id={match.id}
+<<<<<<< HEAD
           talent_id={match.talent_profile?.id || ""}
 <<<<<<< HEAD
 
@@ -493,6 +395,9 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Sk
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     </div>
+=======
+          talent_id={match.talent_profile?.id || ""}    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -501,4 +406,4 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Sk
         />))}
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD

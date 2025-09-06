@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,12 +19,16 @@
 
 <<<<<<< HEAD
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+=======
+'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";======='const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 
 'const EnhancedLoading = ({ variant = \'spinner\',size = \'md\',text,className = \' }) => {\' const sizeClasses = { \"sm\": \'w: - 4 h - 4,\',\"md\": \'w: - 8 h - 8,\',\' \"lg\": \'w: - 12 h - 12,\',\''\';\"";
 "const EnhancedLoading = ({ variant = "spinner",size = "md",text,className = " }) => {" const sizeClasses = { sm: "w: - 4 h - 4,",md: "w: - 8 h - 8,"," lg: "w: - 12 h - 12,",""";"";"""
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = ' }) => {' const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -35,12 +40,15 @@
 "const EnhancedLoading = ({ variant = "spinner",size = "md",text,className = " }) => {" const sizeClasses = { sm: "w: - 4 h - 4,",md: "w: - 8 h - 8,"," lg: "w: - 12 h - 12,",""";"";"""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 ursor/add-new-services-and-deploy-updates-0462
 'const EnhancedLoading = ({ variant = \'spinner\',size = \'md\',text,className = \' }) => {\' const sizeClasses = { \"sm\": \'w: - 4 h - 4,\',\"md\": \'w: - 8 h - 8,\',\' \"lg\": \'w: - 12 h - 12,\',\''\';\"";
 "const EnhancedLoading = ({ variant = "spinner",size = "md",text,className = " }) => {" const sizeClasses = { sm: "w: - 4 h - 4,",md: "w: - 8 h - 8,"," lg: "w: - 12 h - 12,",""";"";"""
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = ' }) => {' const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+<<<<<<< HEAD
 <<<<<<< HEAD
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
@@ -76,3 +84,5 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

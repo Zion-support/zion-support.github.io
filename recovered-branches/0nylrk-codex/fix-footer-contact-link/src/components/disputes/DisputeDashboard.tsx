@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import {;
@@ -8,14 +7,9 @@ import {;
   CardHeader,;
   CardTitle,;
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
 =======
@@ -113,6 +107,12 @@ export function DisputeDashboard() {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {
+=======
+import {} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     refetch()
   }, [refetch]),
 
@@ -121,14 +121,11 @@ export function DisputeDashboard() {
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-
-
   return (
-
 
         
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -153,10 +150,15 @@ import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -181,6 +183,11 @@ import { ShieldAlert } from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+      
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -190,6 +197,7 @@ import { ShieldAlert } from "lucide-react";
             </CardTitle>
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent>
 <<<<<<< HEAD
 
@@ -316,23 +324,17 @@ export function DisputeDashboard() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Card>
+=======
+          <CardContent>        <Card>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className="text-xl font-bold">
-                {underReviewDisputes.length}
-              </span>
-=======
-              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent>
 <<<<<<< HEAD
 
@@ -728,16 +730,18 @@ function DisputeDashboard() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
+=======
+          <CardContent>            </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <DisputesList disputes={disputes} is_loading={is_loading} />;
     </div>);
 
 }
+<<<<<<< HEAD
 =======
 }
 ;
@@ -783,3 +787,5 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

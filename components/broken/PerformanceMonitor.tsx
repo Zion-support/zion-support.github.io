@@ -7,15 +7,10 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -86,6 +81,8 @@ if (ms < 1000) return `$ {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 //Get device icon const getDeviceIcon = (deviceType: string) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   switch (deviceType) {
   case 'mobile': return Smartphone;
 case 'tablet': return Tablet;
@@ -96,6 +93,7 @@ const getPerformanceScore = () => {
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,11 +123,14 @@ else if (metrics.cls < 0.4) score += 50;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 else score += 25 
 
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -345,3 +346,5 @@ export default PerformanceMonitor;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

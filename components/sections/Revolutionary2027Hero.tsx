@@ -123,7 +123,22 @@ const Revolutionary2027Hero = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 30 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.8,;
+        ease: 'easeOut' as const,;
+      },;
+    },
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>
       {/* Enhanced Background Effects */}
@@ -195,11 +210,14 @@ const Revolutionary2027Hero = () => {;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
 
   return (
@@ -264,7 +282,6 @@ const Revolutionary2027Hero = () => {;
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
 <<<<<<< HEAD
 =======
-
 
           }}          transition={{
             rotate: [0, 5, -5, 0]}}
@@ -709,14 +726,10 @@ const Revolutionary2027Hero = () => {;
         </div>;
       </motion && motion.div>;
 
-
       {/* Particle Effects */}
-
 
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>
-
-
 
         {[...Array(20)].map((_, i) => (
           <motion.div

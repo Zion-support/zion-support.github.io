@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -102,12 +103,15 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function Quantumcomputing({ }: QuantumcomputingProps) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div>
       <h1>Quantumcomputing</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -162,3 +166,8 @@ export default function Quantumcomputing({ }: QuantumcomputingProps) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

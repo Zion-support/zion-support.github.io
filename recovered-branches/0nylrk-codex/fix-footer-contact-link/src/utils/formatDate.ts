@@ -16,8 +16,11 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -118,7 +121,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
-
 
 },
 };
@@ -270,6 +272,7 @@ if ( {) {
   }
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
@@ -277,6 +280,9 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

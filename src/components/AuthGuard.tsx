@@ -1,5 +1,5 @@
-const redirectTo = options?.redirectTo |'/login'
-      const returnUrl = options?.returnUrl |router.asPath
+
+      const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
     requireAuth
@@ -8,6 +8,7 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
+<<<<<<< HEAD
 
 export function AuthGuard({
   children,
@@ -19,6 +20,11 @@ export function AuthGuard({
   allowGuest = false}: AuthGuardProps) {
   const { user, isAuthenticated, isLoading } = useAuth(),
   const router = useRouter(),
+=======
+      const redirectTo = options?.redirectTo || '/login';
+      const returnUrl = options?.returnUrl || router && router.asPath;
+          if (!requireAuth({ showToast: false })) return false,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   useEffect(() => {
     // Don't redirect while auth is still loading
@@ -260,6 +266,7 @@ export function useAuthGuard() {;
     isLoading}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -279,3 +286,6 @@ export function useAuthGuard() {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

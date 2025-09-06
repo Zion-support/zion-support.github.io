@@ -2,7 +2,6 @@ import * as React from "react"
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
 import { Check, ChevronRight, Circle } from 'lucide-react'
 
-
 const ContextMenu = ContextMenuPrimitive.Root
 
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
@@ -44,12 +43,15 @@ const ContextMenuSubTrigger = React.forward_ref<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
       className
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
   >;
@@ -57,9 +59,14 @@ const ContextMenuSubTrigger = React.forward_ref<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ChevronRight className="ml-auto h-4 w-4" />
+=======
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   </ContextMenuPrimitive.SubTrigger>
 ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
@@ -74,10 +81,13 @@ const ContextMenuSubContent = React.forwardRef<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
       className
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
     {...props}
   />;
@@ -87,9 +97,14 @@ const ContextMenuContent = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof ContextMenuPrimitive.Content>,;
+=======
+  React.ElementRef<typeof ContextMenuPrimitive.Content>,;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>;
 >(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Portal>;
@@ -98,11 +113,14 @@ const ContextMenuContent = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
         className
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       )}
       {...props}
     />;
@@ -110,9 +128,52 @@ const ContextMenuContent = React.forwardRef<;
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
-  React.ElementRef<typeof ContextMenuPrimitive.Item>,;
+<<<<<<< HEAD
+=======
 
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </ContextMenuPrimitive.SubTrigger>));
+ContextMenuSubTrigger.display_name = ContextMenuPrimitive.SubTrigger.display_name;
+const ContextMenuSubContent = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <ContextMenuPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+ContextMenuSubContent.display_name = ContextMenuPrimitive.SubContent.display_name;
+const ContextMenuContent = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Content>;
+>(({ class_name, ...props }, ref) => (
+  <ContextMenuPrimitive.Portal>;
+    <ContextMenuPrimitive.Content;
+      ref={ref}
+className={cn (
+        &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md animate - in fade - in - 80 data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+        class_name)}
+      {...props}
+    />;
+  </ContextMenuPrimitive.Portal>));
+ContextMenuContent.display_name = ContextMenuPrimitive.Content.display_name;
+const ContextMenuItem = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  React.ElementRef<typeof ContextMenuPrimitive.Item>,;
+  React.ElementRef<typeof ContextMenuPrimitive.Item>,;  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
@@ -121,11 +182,18 @@ const ContextMenuItem = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
+=======
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className
     )}
     {...props}
@@ -136,20 +204,29 @@ const ContextMenuCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, children, checked, ...props }, ref) => (;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+=======
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className
     )}
 <<<<<<< HEAD
@@ -188,20 +265,29 @@ ContextMenuCheckboxItem.displayName =;
 const ContextMenuRadioItem = React.forwardRef<;
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+=======
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className
     )}
     {...props}
@@ -212,6 +298,7 @@ const ContextMenuRadioItem = React.forwardRef<;
       </ContextMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </ContextMenuPrimitive.RadioItem>;
 ));
 ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
@@ -219,6 +306,8 @@ const ContextMenuLabel = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
@@ -227,11 +316,18 @@ const ContextMenuLabel = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
+=======
+    className={cn(
+      "px-2 py-1.5 text-sm font-semibold text-foreground",
+      inset && "pl-8",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className
     )}
     {...props}
@@ -242,13 +338,17 @@ const ContextMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof ContextMenuPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -265,16 +365,28 @@ ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
 
 const ContextMenuShortcut = ({
   className,
+=======
+    {...props}
+/>
+))
+ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
+const ContextMenuShortcut = ({
+  className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
       className={cn(
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "ml-auto text-xs tracking-widest text-muted-foreground",
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         className
       )}
 <<<<<<< HEAD
@@ -298,9 +410,12 @@ const ContextMenuShortcut = ({
 ContextMenuShortcut.displayName = "ContextMenuShortcut"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export {
   ContextMenu,
   ContextMenuTrigger,
@@ -315,6 +430,7 @@ export {
   ContextMenuPortal,
   ContextMenuSub,
 <<<<<<< HEAD
+<<<<<<< HEAD
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuRadioGroup}
@@ -322,3 +438,6 @@ export {
 =======
   ContextMenuSubContent,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  ContextMenuSubContent,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

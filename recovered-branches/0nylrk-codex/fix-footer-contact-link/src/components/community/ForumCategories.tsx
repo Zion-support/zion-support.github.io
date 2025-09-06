@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,6 +16,10 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -31,6 +36,7 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -69,12 +75,18 @@ const categories: ForumCategoryInfo[] = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
+=======
+    icon: "Briefcase"
+  }
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
+<<<<<<< HEAD
     icon: "MessageSquare"
 <<<<<<< HEAD
 
@@ -331,6 +343,9 @@ const iconMap = {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from './react-router-dom';
+=======
+    icon: "MessageSquare"import { Link } from './react-router-dom';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
@@ -379,6 +394,7 @@ const icon_map = {
   MessageSquare;
   Code;
   FileText;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -584,3 +600,7 @@ export default ForumCategories;
 export default ForumCategories;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export default ForumCategories;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -20,13 +20,11 @@ interface MobileHeaderProps {
   className?: string;
   onNotificationsClick?: () => void;
 
-
   onSettingsClick?: () => void
 <<<<<<< HEAD
 }
 =======
 export function MobileHeader({
-
 
   title,
   showBack = false,
@@ -41,9 +39,12 @@ export function MobileHeader({
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function MobileHeader({
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title,
   showBack = false,
   showNotifications = false,
@@ -64,14 +65,16 @@ export function MobileHeader({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Button 
               variant="ghost" 
               size="icon" 
               className="mr-2" 
               onClick={() => router.back()}
-
 
             >
               <ChevronLeft className="h-5 w-5" />
@@ -139,11 +142,10 @@ export function MobileHeader(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               size="icon"
-              onClick={onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
+              onClick = {onNotificationsClick,}>;
+              <Bell className="h-5 w-5" />;
+              <span className="sr-only">Notifications</span>;
+            </Button>;
           )}
           {showSettings && (
             <Button 
@@ -152,8 +154,11 @@ export function MobileHeader(): any ({;
               <span className='sr-only'>Settings</span>            </Button>            <Button 
             <Button 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               variant="ghost" 
               size="icon"
               onClick={onSettingsClick}
@@ -194,6 +199,7 @@ export function MobileHeader({;
   onNotificationsClick,;
   onSettingsClick}: MobileHeaderProps) {;
   const router = useRouter();
+<<<<<<< HEAD
   return (;
     <header className={cn(;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
@@ -201,6 +207,12 @@ export function MobileHeader({;
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
+=======
+
+    >;
+      <div className='flex items-center justify-between h-14 px-4'>;
+        <div className='flex items-center'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {showBack && (;
             <Button;
               variant="ghost";
@@ -258,6 +270,9 @@ export function MobileHeader({;
 }
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;

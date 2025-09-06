@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -22,6 +25,7 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -101,6 +105,8 @@ export function ContractForm(): any ({;
 
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
   startDate: z.date({
 
@@ -112,46 +118,7 @@ const formSchema = z && z.object({;
   endDate: z && z.date().optional(),;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
-  additionalClauses: z && z.array(z && z.string()).default([])}),;
-
-const formSchema = z.object({
-  projectName: z.string().min(1, "Project name is required"),
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
-  startDate: z.date({
-    required_error: "Start date is required"})
-  endDate: z.date().optional()
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
-  paymentAmount: z.string().min(1, "Payment amount is required");
-  additionalClauses: z.array(z.string()).default([])})
-export type ContractFormValues = z.infer<typeof formSchema>;
-interface ContractFormProps {
-  talent: TalentProfile
-  clientName: string
-  initialValues?: ContractFormValues;
-  onFormValuesChange?: (values: ContractFormValues) => void
-  onContractGenerated: (contractContent: string) => void
-  deployOptions?: DeploymentOptions;
-    required_error: "Start date is required"}),
-  endDate: z.date().optional(),
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
-  paymentAmount: z.string().min(1, "Payment amount is required"),
-  additionalClauses: z.array(z.string()).default([])}),
-
-export type ContractFormValues = z && z.infer<typeof formSchema>;
-interface ContractFormProps {;
-  talent: TalentProfile,;
-  clientName: string,;
-  initialValues?: ContractFormValues;
-  onFormValuesChange?: (values: ContractFormValues) => void,;
-  onContractGenerated: (contractContent: string) => void,;
-  deployOptions?: DeploymentOptions;
-  onDeployOptionsChange?: (options: DeploymentOptions) => void;
-}
-export function ContractForm(): any ({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  talent;
+  additionalClauses: z && z.array(z && z.string()).default([])}),;  talent;
   clientName;
   initialValues;
   onFormValuesChange;
@@ -162,6 +129,7 @@ export function ContractForm(): any ({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -229,6 +197,8 @@ export function ContractForm({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { toast } = useToast(),
 
   const form = useForm<ContractFormValues>({
@@ -241,22 +211,22 @@ export function ContractForm({
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
   
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -415,6 +385,11 @@ export function ContractForm({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          const typedKey = key as keyof ContractFormValues,
+        form.setValue(typedKey, initialValues[typedKey])
+      })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -422,6 +397,7 @@ export function ContractForm({;
         values
         talent
         clientName
+<<<<<<< HEAD
         generatedMilestones
 <<<<<<< HEAD
 
@@ -447,11 +423,15 @@ export function ContractForm({;
       console.error("Error generating contract:", error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       );
+=======
+        generatedMilestones      );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ),
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       onContractGenerated(contract)
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error generating contract:", error),
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -796,10 +776,13 @@ if (!== "milestone") {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <PaymentTermsFields
             form={form}
+=======
+      console.error("Error generating contract:", error),            form={form}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
           />;
 
           <AdditionalClausesFields
@@ -988,6 +971,8 @@ export function ContractForm({;
           <Button 
             type="submit" 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -997,6 +982,7 @@ export function ContractForm({;
               </>;
             ) : (;
               "Generate Contract";
+<<<<<<< HEAD
             )}
 <<<<<<< HEAD
 
@@ -1148,13 +1134,15 @@ export function ContractForm({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         >;
+=======
+            )}        >;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           Reset Form;
         </Button>;
       </DialogFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
+<<<<<<< HEAD
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1217,3 +1205,6 @@ talent.full name
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

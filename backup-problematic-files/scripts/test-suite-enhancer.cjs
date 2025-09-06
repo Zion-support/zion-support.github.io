@@ -12,5 +12,10 @@ function log(message, level = 'INFO')
   "text"
   "sender"
   const jestSetupContent = "
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    log(` Test suite enhancement "failed"`)
+    log(` Test suite enhancement "failed"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

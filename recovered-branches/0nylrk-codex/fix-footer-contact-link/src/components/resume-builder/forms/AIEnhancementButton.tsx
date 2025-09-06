@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -41,11 +41,18 @@ import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AIEnhancementButtonProps {
+=======
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2  } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';interface AIEnhancementButtonProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   currentContent: string
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general'
   context?: string;
   onEnhanced: (enhancedContent: string) => void
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   buttonText?: string;
@@ -83,12 +90,14 @@ import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonText?: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   className?: string;
 }
-<<<<<<< HEAD
 export function AIEnhancementButton({
 
 export function AIEnhancementButton({;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -101,9 +110,13 @@ export function AIEnhancementButton({;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  enhancementType;
+  context;
+  onEnhanced;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   buttonText = "Enhance with AI";
-
 
   const handleEnhance = async () => {;
     if (!currentContent || currentContent && currentContent.trim().length < 10) {;
@@ -111,8 +124,6 @@ export function AIEnhancementButton({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-
-
 
     setError(null);
     const enhancedContent = await enhanceContent(;
@@ -121,30 +132,10 @@ export function AIEnhancementButton({;
       context;
     );
 
-
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
-
-
-=======
-
-=======
-=======
-  buttonText = "Enhance with AI";
-
-
-  const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
-
-      setError('Please enter at least some basic content before enhancing');
-      return;
-    }
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   buttonText = "Enhance with AI";
   className;
@@ -161,12 +152,12 @@ export function AIEnhancementButton({;
       context;
     );
 
-
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   buttonText = "Enhance with AI";
@@ -249,6 +240,8 @@ export function AIEnhancementButton({
   };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -260,6 +253,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -273,10 +267,14 @@ export function AIEnhancementButton({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Button
+=======
+      <Button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       type="button"
       variant="ghost"
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+<<<<<<< HEAD
       onClick={handleEnhance}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -372,6 +370,9 @@ export function AIEnhancementButton({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
+=======
+      onClick={handleEnhance}import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface AIEnhancementButtonProps {
   current_content: string,
   enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
@@ -387,9 +388,8 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -454,3 +454,5 @@ context);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

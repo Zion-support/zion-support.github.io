@@ -1,6 +1,7 @@
 #!/usr/bin/env node;
 // Accessibility Implementation Script;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const fs = require ('fs'),
@@ -20,11 +21,14 @@ console.log ('✅ Accessibility implementation completed'),
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🚀 Implementing Accessibility Improvements...'),
 // This script would add ARIA labels, keyboard navigation, and color contrast fixes;
 console.log ('✅ Accessibility implementation completed'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -63,3 +67,5 @@ console.log('✅ Accessibility implementation completed'),;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

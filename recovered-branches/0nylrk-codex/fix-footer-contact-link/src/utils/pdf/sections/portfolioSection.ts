@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -40,11 +40,18 @@ export function addPortfolioSection(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   doc: jsPDF;
+=======
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(  doc: jsPDF;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   projects: PortfolioProject[];
   colors: PdfThemeColors;
   startY: number;
 
   maxProjects: number = 2
+<<<<<<< HEAD
 ): number {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,6 +372,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+): number {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
     doc.setFontSize(10),;
@@ -372,6 +382,7 @@ if ( {) {
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -380,6 +391,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
@@ -410,11 +423,14 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Check condition
 if ( {) {
   $2
@@ -470,6 +486,7 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -594,3 +611,6 @@ yPos += 4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

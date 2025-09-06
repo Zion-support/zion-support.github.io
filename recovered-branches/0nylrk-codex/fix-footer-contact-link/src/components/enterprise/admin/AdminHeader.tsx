@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
@@ -94,15 +93,17 @@ export function AdminHeader() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+export function AdminHeader() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function AdminHeader() {;
-
-
 
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -111,6 +112,8 @@ export function AdminHeader() {;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from "lucide-react",;
@@ -119,16 +122,6 @@ export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (;
-<<<<<<< HEAD
-
-=======
-;
-export function AdminHeader() {;
-  const { user } = useAuth(),;
-  const { company } = useCompanyWorkspace(),;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -143,6 +136,7 @@ export function AdminHeader() {;
             Settings;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
+<<<<<<< HEAD
             <Download className="h-4 w-4" />;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -242,6 +236,13 @@ function AdminHeader() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
+=======
+            <Download className="h-4 w-4" />;            Export Data;
+          </Button>;
+        </div>;
+      </div>;
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 
 }
@@ -282,8 +283,9 @@ function AdminHeader() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

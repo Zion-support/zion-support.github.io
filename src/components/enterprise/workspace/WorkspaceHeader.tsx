@@ -7,8 +7,11 @@ import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
   company: Company;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
@@ -17,9 +20,6 @@ import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
   company: Company
 }
-
-
-
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
@@ -31,9 +31,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 <<<<<<< HEAD
 =======
 
-
               src={company.logoUrl || '/placeholder.svg'}
-
 
               alt={company.name}
               className='max-h-10 max-w-10'
@@ -84,8 +82,8 @@ function WorkspaceHeader() {
             </p>;
           </div>;
         </div>;
-            <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;
-            <p className="text - muted - foreground">;
+            <h1 className="text - 3xl font - bold tracking-tight">{company.name} Workspace</h1>;
+            <p className="text - muted-foreground">;
 interface WorkspaceHeaderProps {
   company: Company;
 }
@@ -138,8 +136,11 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </div>
           <div>
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
               {company.plan} Plan · {company.teamSize} team members
@@ -149,10 +150,13 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -161,10 +165,13 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
           </Button>
@@ -177,11 +184,13 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
       
 =======
 
-
       
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -233,7 +242,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
           </Button>;
 =======
 
-
 }          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
@@ -258,9 +266,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
         </div>
       </div>
     </div>;
-  );
+  )
 };
-
 
 }
               src={company && company.logoUrl || "/placeholder && placeholder.svg"}
@@ -342,6 +349,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -430,3 +438,6 @@ function WorkspaceHeader() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

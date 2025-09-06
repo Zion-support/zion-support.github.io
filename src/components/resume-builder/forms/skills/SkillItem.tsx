@@ -32,11 +32,18 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
     <Badge
       key = {skill && skill.id,}
       variant="secondary"
+<<<<<<< HEAD
+      className="flex items-center gap-1 py-1 && 1.5 px-3">;
+      {skill && skill.name}
+      {skill && skill.proficiency && (;
+        <span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
+=======
       className="flex items-center gap-1 py-1.5 px-3"
     >
       {skill.name}
       {skill.proficiency && (
         <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}
       <Button
         variant="ghost"
@@ -102,11 +109,14 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
       </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Badge>
   )
 },
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </Badge>
   )
 
@@ -115,7 +125,12 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
 
     </Badge>;
   );
+<<<<<<< HEAD
 } };
+=======
+};},;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 
@@ -172,6 +187,11 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
     </Badge>);
 } },
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

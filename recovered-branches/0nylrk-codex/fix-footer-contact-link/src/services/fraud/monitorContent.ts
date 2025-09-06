@@ -4,6 +4,7 @@
 
 export const monitorContent = async (;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ export const monitorContent = async (;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -34,21 +37,15 @@ export const monitorContent = async (;
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-    
-=======
-if (analysis && analysis.isSuspicious) {
-    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    // If contains highly suspicious phrases, mark as dangerous
+        // If contains highly suspicious phrases, mark as dangerous
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
+<<<<<<< HEAD
       r && r.includes('bypass')
 <<<<<<< HEAD
 
@@ -122,6 +119,9 @@ export const monitorContent = async (;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+=======
+      r && r.includes('bypass')    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -149,6 +149,7 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -183,6 +184,8 @@ export const monitorContent = async (;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -220,6 +223,7 @@ if (||) {
       content;
       severity;
       analysis.reasons.join ();
+<<<<<<< HEAD
       undefined // IP address would be added in a real implementation);
 <<<<<<< HEAD
 =======
@@ -364,3 +368,6 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      undefined // IP address would be added in a real implementation);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

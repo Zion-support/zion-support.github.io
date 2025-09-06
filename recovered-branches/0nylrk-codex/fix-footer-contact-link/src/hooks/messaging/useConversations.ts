@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -40,10 +40,17 @@ import {toast} from '@/hooks/use-toast';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Allow either UserProfile or UserDetails
+=======
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
+<<<<<<< HEAD
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,15 +74,18 @@ export function use_conversations (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   user: UserWithProfile;
+=======
+ */  user: UserWithProfile;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
       if (error) throw error;
       // Format conversations
-<<<<<<< HEAD
 
       const formattedConversations: Conversation[] = data && data.map(conv => {
         const isUserOne = conv && conv.user_one_id === user && user.id;
         const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
+<<<<<<< HEAD
         
 
 <<<<<<< HEAD
@@ -167,58 +177,18 @@ export function useConversations(;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
+=======
+                  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             content: conv.last_message,
-            created_at: conv.last_message_time;
-
-=======
-            content: conv.last_message,
-            created_at: conv.last_message_time;
-            content: conv.last_message
-            created_at: conv.last_message_time
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          } : undefined;
-          updated_at: conv.updated_at |conv.created_at;
-          unread_count: conv.unread_count |0;
-          context_type: conv.context_type;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
-            avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar,
-            user_type: isUserOne ? conv && conv.user_two_type : conv && conv.user_one_type
-          };
-          name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
-          avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar;
-          last_message: conv && conv.last_message ? {
-            content: conv && conv.last_message,
-            created_at: conv && conv.last_message_time
-          } : undefined;
-          updated_at: conv && conv.updated_at || conv && conv.created_at;
-          unread_count: conv && conv.unread_count || 0;
-          context_type: conv && conv.context_type;
-          context_id: conv && conv.context_id,
-          context_data: conv && conv.context_data
-<<<<<<< HEAD
-
-=======
-          context_id: conv.context_id
-          context_data: conv.context_data
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        }
+            created_at: conv.last_message_time;        }
       });
       setConversations(formattedConversations);
+<<<<<<< HEAD
       // Calculate total unread count
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -552,23 +522,28 @@ export function useConversations(;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-      }
-      
-      }
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+      // Calculate total unread count      }
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
+      
+      }
+      
+      }
+<<<<<<< HEAD
       
       }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -586,6 +561,8 @@ export function useConversations(;
       await fetchConversations();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -597,8 +574,6 @@ export function useConversations(;
       // Update conversations list
       await fetchConversations(),
       
-<<<<<<< HEAD
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -611,17 +586,14 @@ export function useConversations(;
       console && console.error('Error creating conversation:', error);
       toast({
 
-
-=======
-=======
           read: false
         });
       // Update conversations list
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
         title: "Failed to create conversation";
@@ -1063,3 +1035,6 @@ conversationId = newConversation.id
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      toast({}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

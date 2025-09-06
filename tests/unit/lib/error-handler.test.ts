@@ -1,25 +1,40 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/tests/unit/lib/error-handler.test.ts
 
 =======
 import { AppError, errorHandler, asyncHandler } from '../../lib/error-handler';
 import { NextApiRequest, NextApiResponse } from 'next';
+=======
+import { AppError, errorHandler, asyncHandler } from '../../../lib/error-handler';
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 describe('Error Handler', () => {
   let mockReq: Partial<NextApiRequest>;
-  let mockRes: Partial<NextApiResponse>;
+  let mockRes: any;
   let mockJson: jest.Mock;
   let mockStatus: jest.Mock;
 
   beforeEach(() => {
     mockJson = jest.fn();
     mockStatus = jest.fn().mockReturnValue({ json: mockJson });
-    mockReq = { url: '/test', method: 'GET', headers: {} };
-    mockRes = { status: mockStatus, json: mockJson };
+
+    mockReq = {
+      url: '/test',
+      method: 'GET',
+      headers: {},
+    };
+
+    mockRes = {
+      status: mockStatus,
+      json: mockJson,
+    };
   });
 
   describe('AppError', () => {
     it('creates error with status code', () => {
       const error = new AppError('Test error', 400);
+
       expect(error.message).toBe('Test error');
       expect(error.statusCode).toBe(400);
       expect(error.isOperational).toBe(true);
@@ -27,6 +42,7 @@ describe('Error Handler', () => {
 
     it('defaults to 500 status code', () => {
       const error = new AppError('Test error');
+
       expect(error.statusCode).toBe(500);
     });
   });
@@ -34,27 +50,31 @@ describe('Error Handler', () => {
   describe('errorHandler', () => {
     it('handles AppError correctly', () => {
       const error = new AppError('Test error', 400);
-      errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+
+      errorHandler(error, mockReq as NextApiRequest, mockRes as unknown as NextApiResponse);
+
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
           message: 'Test error',
           statusCode: 400,
-          timestamp: expect.any(String)
-        }
+          timestamp: expect.any(String),
+        },
       });
     });
 
     it('handles unknown errors', () => {
       const error = new Error('Unknown error');
-      errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+
+      errorHandler(error, mockReq as NextApiRequest, mockRes as unknown as NextApiResponse);
+
       expect(mockStatus).toHaveBeenCalledWith(500);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
           message: 'Internal Server Error',
           statusCode: 500,
-          timestamp: expect.any(String)
-        }
+          timestamp: expect.any(String),
+        },
       });
     });
   });
@@ -63,16 +83,24 @@ describe('Error Handler', () => {
     it('handles async function errors', async () => {
       const asyncFn = jest.fn().mockRejectedValue(new Error('Async error'));
       const wrappedFn = asyncHandler(asyncFn);
-      await wrappedFn(mockReq, mockRes, jest.fn());
+
+      await wrappedFn(mockReq as any, mockRes as any, jest.fn());
+
       expect(mockStatus).toHaveBeenCalledWith(500);
     });
 
     it('passes through successful async functions', async () => {
       const asyncFn = jest.fn().mockResolvedValue('success');
       const wrappedFn = asyncHandler(asyncFn);
-      await wrappedFn(mockReq, mockRes, jest.fn());
+
+      await wrappedFn(mockReq as any, mockRes as any, jest.fn());
+
       expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function));
     });
   });
+<<<<<<< HEAD
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/unit/lib/error-handler.test.ts
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -113,17 +113,18 @@ return (
           onDelete={handleDelete}        />;
       )}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {certifications.length > 0 && (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
-
-
 
       )}
 
@@ -133,28 +134,32 @@ return (
         </h3>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
             <CertificationFormFields form={form} />
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-
             <div className="flex justify-between pt-2">
               <Button
-                type="button"
-                variant="outline"
+                type='button'
+                variant='outline'
                 onClick={() => {
                   if (editingId) {
 <<<<<<< HEAD
                     setEditingId(null),
 =======
 
-
                     setEditingId(null),
                     setEditingId(null),
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     form.reset({
                       name: '',
                       issuing_organization: '',
@@ -163,7 +168,6 @@ return (
                       credential_id: '',
 <<<<<<< HEAD
 =======
-
 
                     setEditingId(null),
                     setEditingId(null),
@@ -185,8 +189,11 @@ return (
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -194,6 +201,10 @@ return (
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   Next
                 </Button>
               </div>

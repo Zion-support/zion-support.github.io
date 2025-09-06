@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -34,19 +35,20 @@ import {NavigationButtonsProps} from "./types";
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
-import {NavigationButtonsProps} from "./types";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export const NavigationButtons = ({;
+import {NavigationButtonsProps} from "./types";export const NavigationButtons = ({;
   onBack;
   onNext;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
@@ -59,28 +61,31 @@ import { NavigationButtonsProps } from "./types",
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { NavigationButtonsProps } from "./types",
-
-
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const NavigationButtons = ({
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   onBack,
   onNext,
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -92,10 +97,13 @@ export const NavigationButtons = ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
+<<<<<<< HEAD
         <Button variant="outline" onClick={onBack}>
 <<<<<<< HEAD
 
@@ -121,6 +129,9 @@ export const NavigationButtons = ({;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isLoading = false}: NavigationButtonsProps) => {;
+=======
+        <Button variant="outline" onClick={onBack}>  isLoading = false}: NavigationButtonsProps) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="flex justify-between">;
       {onBack && (;
@@ -128,20 +139,12 @@ export const NavigationButtons = ({;
 <<<<<<< HEAD
 =======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {backLabel}
         </Button>;
       )}
 
       {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isLoading = false}: NavigationButtonsProps) => {;
   return (;
     <div className="flex justify-between">;
@@ -179,8 +182,11 @@ export const NavigationButtons = ({;
       {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {onNext && (
 
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -188,6 +194,7 @@ export const NavigationButtons = ({;
         </Button>
       )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -201,16 +208,15 @@ export const NavigationButtons = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {nextLabel}
         </Button>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
     </div>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 };
@@ -224,10 +230,10 @@ export const NavigationButtons = ({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
-  );
-
-
+  )
 };
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -240,18 +246,19 @@ export const NavigationButtons = ({
   next_label = "Next";
   is_loading = false}: NavigationButtonsProps) =>: any {
   return (
-    <div className="flex justify - between">;
+    <div className="flex justify-between">;
       {on_back && (
         <Button variant="outline" on_click={on_back}>;
           {back_label}
         </Button>)}
       {on_next && (
         <Button on_click={on_next} disabled={isNextDisabled || is_loading}>;
-          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
           {next_label}
         </Button>)}
     </div>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -297,3 +304,6 @@ isLoading = false
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

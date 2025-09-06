@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -55,6 +56,18 @@ export function MobileResumeBuilder() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
+=======
+
+
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Label} from "@/components/ui/label";
+import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";import React, { useState } from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -68,6 +81,7 @@ import {
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +89,8 @@ import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -201,15 +217,17 @@ import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
-
 
 export function MobileResumeBuilder() {
 <<<<<<< HEAD
@@ -269,44 +287,12 @@ function MobileResumeBuilder() {
       default:
         return <BasicsStep />;
     }
-<<<<<<< HEAD
-
-  };
-
-  return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function MobileResumeBuilder() {;
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
-  const renderStepContent = () => {;
-    switch (currentStep) {;
-      case "basics": return <BasicsStep />,;
-      case "experience":;
-        return <ExperienceStep />,;
-      case "education":;
-        return <EducationStep />,;
-      case "skills":;
-        return <SkillsStep />,;
-      default:;
-        return <BasicsStep />;
-    }
-  },;
-  return (;
-    <div className="space-y-6 px-4 pb-24">;
-      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
-        <Button;
-          variant={currentStep === "basics" ? "default" : "outline"}
-          className="flex-1 rounded-full";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setCurrentStep("basics")}
 <<<<<<< HEAD
         >
@@ -318,20 +304,15 @@ export function MobileResumeBuilder() {;
         </Button>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Button
           variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
-        <Button;
-          variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <Button
+          className="flex-1 rounded-full"        <Button
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setCurrentStep("experience")}
 <<<<<<< HEAD
         >
@@ -343,20 +324,15 @@ export function MobileResumeBuilder() {;
         </Button>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Button
           variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
-        <Button;
-          variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <Button
+          className="flex-1 rounded-full"        <Button
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setCurrentStep("education")}
 <<<<<<< HEAD
         >
@@ -368,11 +344,15 @@ export function MobileResumeBuilder() {;
         </Button>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Button
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -424,6 +404,8 @@ export function MobileResumeBuilder() {;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {renderStepContent()}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
@@ -546,6 +528,7 @@ function BasicsStep() {;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -947,6 +930,8 @@ function SkillsStep() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="space-y-4">
       <Card>
         <CardContent className="p-4">
@@ -985,6 +970,7 @@ function SkillsStep() {
                   >
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1076,39 +1062,28 @@ function EducationStep() {;
                 <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>;
                 <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
 
       <Button
         variant="outline" 
         className="w-full gap-2" 
-        onClick={addEducation}>;
-=======
-;
-      <Button;
-        variant="outline";
-        className="w-full gap-2";
-        onClick={addEducation}
-      >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <Plus className="h-4 w-4" /> Add Another Education;
+        onClick={addEducation}>;        <Plus className="h-4 w-4" /> Add Another Education;
       </Button>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
-    { id: '1', name: "", proficiency: "beginner" }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  ]);
+    { id: '1', name: "", proficiency: "beginner" }  ]);
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 =======
@@ -1390,3 +1365,6 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

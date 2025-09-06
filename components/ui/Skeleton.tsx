@@ -74,6 +74,7 @@ export type SkeletonProps = {;
   rounded?: boolean}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -83,6 +84,8 @@ export type SkeletonProps = {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const Skeleton: React.FC<SkeletonProps> = ({ ",;
   className = ",;
   width,;
@@ -148,5 +151,8 @@ export default Component;
 
       `}</style>
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

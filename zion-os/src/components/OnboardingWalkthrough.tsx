@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -123,45 +124,93 @@ export function OnboardingWalkthrough() {;
               <button;
                 onClick={handleSkip}
                 className="text-zinc-400 hover:text-zinc-300 text-sm";
+=======
+    <>;
+      {/* Overlay */}
+      <div className="fixed inset - 0 bg - black / 50 z-40" on_click={handle_skip} />;
+      {/* Walkthrough Modal */}
+      <div className="fixed z - 50 inset - 0 flex items - center justify - center p-4">;
+        <div className="bg - zinc - 800 rounded - xl border border - zinc - 700 max - w-md w - full p - 6 shadow-2xl">;
+          {/* Progress Bar */}
+          <div className="mb-6">;
+            <div className="flex justify - between items - center mb-2">;
+              <span className="text - sm text - zinc-400">;
+                Step {current_step + 1} of {walkthrough_steps.length}
+              </span>;
+              <button;
+                on_click={handle_skip}
+                className="text - zinc - 400 hover:text - zinc - 300 text-sm";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >;
                 Skip tour;
               </button>;
             </div>;
+<<<<<<< HEAD
             <div className="w-full bg-zinc-700 rounded-full h-2">;
               <div;
                 className="bg-blue-500 h-2 rounded-full transition-all duration-300";
                 style={{ width: `${((currentStep + 1) / walkthroughSteps.length) * 100}%` }}
+=======
+            <div className="w - full bg - zinc - 700 rounded - full h-2">;
+              <div;
+                className="bg - blue - 500 h - 2 rounded - full transition - all duration-300";
+                style={{ width: `${((current_step + 1) / walkthrough_steps.length) * 100}%` }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />;
             </div>;
           </div>;
           {/* Step Content */}
+<<<<<<< HEAD
           <div className="text-center mb-6">;
             <h3 className="text-xl font-semibold text-white mb-3">;
               {currentStepData.title}
             </h3>;
             <p className="text-zinc-300 leading-relaxed">;
+=======
+          <div className="text - center mb-6">;
+            <h3 className="text - xl font - semibold text - white mb-3">;
+              {currentStepData.title}
+            </h3>;
+            <p className="text - zinc - 300 leading-relaxed">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {currentStepData.description}
             </p>;
           </div>;
           {/* Navigation Buttons */}
+<<<<<<< HEAD
           <div className="flex justify-between items-center">;
             <button;
               onClick={handlePrevious}
               disabled={currentStep === 0}
               className="px-4 py-2 text-zinc-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors";
+=======
+          <div className="flex justify - between items-center">;
+            <button;
+              on_click={handle_previous}
+              disabled={current_step === 0}
+              className="px - 4 py - 2 text - zinc - 400 hover:text - white disabled:opacity - 50 disabled:cursor - not - allowed transition-colors";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >;
               Previous;
             </button>;
             <button;
+<<<<<<< HEAD
               onClick={handleNext}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors";
             >;
               {currentStep === walkthroughSteps.length - 1 ? "Complete" : "Next"}
+=======
+              on_click={handle_next}
+              className="px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - medium transition-colors";
+            >;
+              {current_step === walkthrough_steps.length - 1 ? "Complete" : "Next"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </button>;
           </div>;
         </div>;
       </div>;
       {/* Highlight Target Element */}
+<<<<<<< HEAD
       {currentStepData.target && (;
         <div;
 <<<<<<< HEAD
@@ -180,10 +229,15 @@ export function OnboardingWalkthrough() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      {currentStepData.target && (
+        <div;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -258,5 +312,15 @@ export function useWalkthroughTarget(id: string) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              width: "300px";
+              height: "200px"}}
+          />;
+        </div>)}
+    </>);
+}
+    "data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;    "data-walkthrough-target": id;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id}
 }

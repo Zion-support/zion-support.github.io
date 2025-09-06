@@ -10,6 +10,7 @@ class DependencyMonitor {}
   async start() {}
     console.log('Starting Dependency Monitor...');
     this.isRunning = true;
+<<<<<<< HEAD
 
     // Initial dependency check;
     await this.runDependencyCheck();
@@ -19,12 +20,28 @@ class DependencyMonitor {}
       this.runDependencyCheck()}, this.interval);
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    // Initial dependency check;
+    await this.runDependencyCheck();
+    
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runDependencyCheck()}, this.interval);
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -41,9 +58,15 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -51,8 +74,12 @@ class DependencyMonitor {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
           console.log('"Output": ', output);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
@@ -63,8 +90,14 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -75,8 +108,12 @@ class DependencyMonitor {}
   async checkPackageIntegrity() {}
     try {}
       console.log('Checking package integrity...');
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -92,6 +129,12 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -105,7 +148,11 @@ class DependencyMonitor {}
   stop() {}
     console.log('Stopping Dependency Monitor...');
     this.isRunning = false;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')) {}
@@ -118,19 +165,34 @@ if ( {})
   const monitor = new DependencyMonitor) {}
      {}
   const monitor = new DependencyMonitor}(;);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
 });
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   process.on('SIGTERM', () => {}
     monitor.stop();
     process.exit(0)}
 });
+<<<<<<< HEAD
 
   monitor.start().catch(console.error)};
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  
+  monitor.start().catch(console.error)};
+module.exports = DependencyMonitor;
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

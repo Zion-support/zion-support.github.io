@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type WatchlistMatch = {
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
@@ -16,6 +17,8 @@ export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface AmlMatch {
   list: string;
   name: string;
@@ -52,12 +55,9 @@ class MockAmlProvider implements AmlProvider {
 let provider: AmlProvider = new MockAmlProvider();
 
 export type { AmlProvider, AmlResult, AmlMatch };
-export { provider };
-=======
-<<<<<<< HEAD
-export type WatchlistMatch = {
-<<<<<<< HEAD
+export { provider };export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -79,6 +79,10 @@ export type WatchlistMatch = {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
 
   score: number; // 0 - 1 match confidence;
@@ -95,6 +99,7 @@ class MockAmlProvider implements AmlProvider {
 
 =======
 export type AmlCheckResult = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,9 +171,12 @@ export type AmlCheckResult = {;
   status: 'clear' | 'match' | 'review' | 'unknown';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+  status: "clear" | "match" | "review" | "unknown";  status: 'clear' | 'match' | 'review' | 'unknown';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
-  provider: "mock" | "remote";
+  provider: "mock" | "remote"
 };
 export interface AmlProvider {
   checkPerson(params: {
@@ -186,6 +194,7 @@ export interface AmlProvider {
   check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
+<<<<<<< HEAD
 class MockAmlProvider implements AmlProvider {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -504,6 +513,9 @@ class AmlManager {
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     }
+=======
+class MockAmlProvider implements AmlProvider {    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { status: "clear" };
   }
 
@@ -522,24 +534,14 @@ class AmlManager {
     return { status: "clear" };
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-}
+=======}
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
+<<<<<<< HEAD
 =======
 
 
@@ -622,3 +624,9 @@ export function getAmlProvider (): AmlProvider {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======}
+export function getAmlProvider (): AmlProvider {
+  return new MockAmlProvider ();
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

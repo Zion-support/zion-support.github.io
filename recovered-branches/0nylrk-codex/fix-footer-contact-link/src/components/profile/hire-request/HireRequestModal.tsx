@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -241,9 +242,16 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     onClose();
   };
+=======
 
-  if (!talent) return null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+
+<<<<<<< HEAD
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>;
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
@@ -262,6 +270,13 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             Hire {talent.full_name}
+=======
+import React from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { HireRequestForm } from "./HireRequestForm",
+import { TalentProfile } from "@/types/talent",
+import { UserProfile } from "@/types/auth",            Hire {talent.full_name}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </DialogTitle>
         </DialogHeader>
 <<<<<<< HEAD
@@ -285,23 +300,19 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
-<<<<<<< HEAD
-        <HireRequestForm 
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <HireRequestForm
+        <HireRequestForm         <HireRequestForm
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -334,9 +345,6 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
         <DialogHeader>;
           <DialogTitle className="text-xl font-bold text-white">;
             Hire {talent.full_name}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;

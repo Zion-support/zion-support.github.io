@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
 #!/usr/bin/env node
@@ -30,10 +31,13 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * PM2 Continuous Automation Script
  * Replaces GitHub Actions continuous automation workflow
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,10 +53,16 @@ const path = require('path')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,10 +79,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ContinuousAutomation {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'continuous-automation.log');
     this.reportFile = path.join(__dirname, 'reports', 'continuous-automation-report.json');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +93,8 @@ class ContinuousAutomation {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.ensureDirectories()}
   ensureDirectories() {
     const dirs = ['logs', 'reports'];
@@ -159,12 +174,16 @@ class ContinuousAutomation {
         "skipped": results.filter(r => r.skipped).length
       }
    };
+<<<<<<< HEAD
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.ensureDirectories();
+=======
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));    this.ensureDirectories();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
   ensureDirectories() {
@@ -239,6 +258,7 @@ class ContinuousAutomation {
       }
     };
 
+<<<<<<< HEAD
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
 
@@ -309,6 +329,9 @@ module.exports = ContinuousAutomation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     this.ensureDirectories()}
+=======
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));    this.ensureDirectories()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ensureDirectories() {
     const dirs = ['logs', 'reports'];
     dirs.forEach(dir => {
@@ -388,8 +411,6 @@ module.exports = ContinuousAutomation;
       }
    };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     return report}
   async run() {
     this.log('🚀 Starting Continuous Automation Pipeline');
@@ -416,6 +437,7 @@ module.exports = ContinuousAutomation;
     const report = this.generateReport(results;);
     this.log("📊 Continuous Automation Pipeline completed with "status": ${report.status}`);
     return report}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -468,3 +490,6 @@ module.exports = ContinuousAutomation;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}=======#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,9 +15,30 @@ import _React,{ useState } from 'react';import * as _React from 'react'; const T
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React,{ useState } from \'react\';import * as React from \'react\'; const ThemeContext = React && React.createContext({; \"theme\": \'dark\',; \"setTheme\": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = React && React.useState(\'dark\'); React && React.useEffect(() => {; return () => {};},[]);,[]); const root = window && window.document.documentElement; root && root.classList.remove(\'light\',dark\'); root && root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext && ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) ;}; const context = React && React.useContext(ThemeContext) ; if(context === null) {}} return context;};
 const React,{ useState } from "react";import * as React from "react"; const ThemeContext = React && React.createContext({; theme: "dark",; setTheme: () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = React && React.useState("dark"); React && React.useEffect(() => {; return () => {};},[]);,[]); const root = window && window.document.documentElement; root && root.classList.remove("light",dark"); root && root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext && ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) ;}; const context = React && React.useContext(ThemeContext) ; if(context === null) {}} return context;};"""
+=======
+import _React,{ useState } from 'react';import * as _React from 'react'; const ThemeContext = _React.createContext({; "theme": 'dark',; "setTheme": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = _React.useState('dark'); _React.useEffect(() => {; return () => {};},[]);,[]); const root = window.document.documentElement; root.classList.remove('light',dark'); root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext.Provider value={value}>{children}></div> )
+}; const value = {; theme,; setTheme,
+}; return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) 
+}; const context = _React.useContext(ThemeContext) ; if(context === null) {}} return context
+};import React,{ useState } from \'react\';import * as React from \'react\'; const ThemeContext = React && React.createContext({; \"theme\": \'dark\',; \"setTheme\": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = React && React.useState(\'dark\'); React && React.useEffect(() => {; return () => {};},[]);,[]); const root = window && window.document.documentElement; root && root.classList.remove(\'light\',dark\'); root && root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext && ThemeContext.Provider value={value}>{children}></div> )
+}; const value = {; theme,; setTheme,
+}; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) 
+}; const context = React && React.useContext(ThemeContext) ; if(context === null) {}} return context
+};
+const React,{ useState } from "react";import * as React from "react"; const ThemeContext = React && React.createContext({; theme: "dark",; setTheme: () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = React && React.useState("dark"); React && React.useEffect(() => {; return () => {};},[]);,[]); const root = window && window.document.documentElement; root && root.classList.remove("light",dark"); root && root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext && ThemeContext.Provider value={value}>{children}></div> )
+}; const value = {; theme,; setTheme,
+}; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) 
+}; const context = React && React.useContext(ThemeContext) ; if(context === null) {}} return context
+};"""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-import _React,{ useState } from 'react';import * as _React from 'react'; const ThemeContext = _React && _React.createContext({; "theme": 'dark',; "setTheme": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = _React && _React.useState('dark'); _React && _React.useEffect(() => {; return () => {};},[]);,[]); const root = window && window.document.documentElement; root && root.classList.remove('light',dark'); root && root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext && ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) ;}; const context = _React && _React.useContext(ThemeContext) ; if(context === null) {}} return context;};
+import _React,{ useState } from 'react';import * as _React from 'react'; const ThemeContext = _React && _React.createContext({; "theme": 'dark',; "setTheme": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = _React && _React.useState('dark'); _React && _React.useEffect(() => {; return () => {};},[]);,[]); const root = window && window.document.documentElement; root && root.classList.remove('light',dark'); root && root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext && ThemeContext.Provider value={value}>{children}></div> )
+}; const value = {; theme,; setTheme,
+}; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) 
+}; const context = _React && _React.useContext(ThemeContext) ; if(context === null) {}} return context
+};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +73,5 @@ import _React,{ useState } from 'react';import * as _React from 'react'; const T
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

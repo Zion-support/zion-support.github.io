@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -16,6 +17,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -23,17 +26,21 @@ import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
+<<<<<<< HEAD
 import {useIsMobile} from '@/hooks/use-mobile';
 <<<<<<< HEAD
 =======
@@ -73,6 +80,12 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
+  resume: Resume;
+  onBack: () => void;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleBrowserPrint = () => {
@@ -94,6 +107,7 @@ interface PreviewHeaderProps {;
   onBack: () => void;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -193,6 +207,8 @@ function PreviewHeader() {
     style.innerHTML = `
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       @media print {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         body * {
           visibility: hidden;
         }
@@ -207,7 +223,6 @@ function PreviewHeader() {
         }
         .no - print {
           display: none !important;
-<<<<<<< HEAD
         }
       }
 <<<<<<< HEAD
@@ -273,11 +288,10 @@ function PreviewHeader() {
 
     // Remove the temporary style element after printing
     setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
-
+      document.head.removeChild(style),
+      setIsPrinting(false)
+    }, 1000)
+  },
   return (
     <div
       className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}
@@ -286,6 +300,7 @@ function PreviewHeader() {
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
@@ -323,12 +338,13 @@ function PreviewHeader() {
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
+=======
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <PdfExportButton resume={resume} />
-
-        <Button
-          variant="outline"
-          onClick={handleBrowserPrint}
-          disabled={isPrinting}
+        <Button 
+          variant="outline" 
+          onClick={handleBrowserPrint}           disabled={isPrinting}
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
@@ -340,22 +356,7 @@ function PreviewHeader() {
           Add to Profile
         </Button>
       </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    document.head.append_child (style);
-;
-
-
-
-=======
-  );
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    document.head.append_child (style);
+    </div>    document.head.append_child (style);
 ;
     // Trigger print dialog;
     window.print ();
@@ -371,8 +372,8 @@ function PreviewHeader() {
     <div;
       className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
     >;
-      <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;
-        <ArrowLeft className="h - 4 w - 4" />;
+      <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
+        <ArrowLeft className="h - 4 w-4" />;
         Back;
       </Button>;
       <div;
@@ -383,19 +384,18 @@ function PreviewHeader() {
           variant="outline";
           on_click={handleBrowserPrint}
           disabled={is_printing}
-          className="gap - 2";
+          className="gap-2";
         >;
-          <FileText className="h - 4 w - 4" />;
+          <FileText className="h - 4 w-4" />;
           Print;
         </Button>;
-        <Button variant="outline" className="gap - 2">;
-          <Link className="h - 4 w - 4" />;
+        <Button variant="outline" className="gap-2">;
+          <Link className="h - 4 w-4" />;
           Add to Profile;
         </Button>;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
   ),;}
  
 }`;
@@ -426,5 +426,3 @@ document.head.appendChild (style);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

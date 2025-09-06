@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,10 @@ import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
   Dialog;
   DialogContent;
@@ -24,6 +29,7 @@ import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -185,6 +191,8 @@ export function ScoreDialog({;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
@@ -199,10 +207,10 @@ export function ScoreDialog({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
           <ApplicationScoreCard
-<<<<<<< HEAD
 
           <ApplicationScoreCard 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -212,16 +220,17 @@ export function ScoreDialog({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -300,3 +309,6 @@ onScoreUpdated
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

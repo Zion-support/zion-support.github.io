@@ -1,21 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -30,6 +27,7 @@ const corsHeaders = {
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -49,6 +47,10 @@ const corsHeaders = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -61,6 +63,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 const corsHeaders = {
@@ -95,30 +98,28 @@ const cors_headers = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ContentGenerationRequest {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   auto_publish?: boolean,
   include_image?: boolean;
 
+  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
 <<<<<<< HEAD
-=======
-interface ContentGenerationRequest {
-  content_type: 'blog' | 'newsletter';
-  prompt?: string;
-  topic?: string;
-  auto_publish?: boolean,
-  include_image?: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  content_type: 'blog' | 'newsletter';
-  prompt?: string;
-  topic?: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -228,6 +229,8 @@ interface GeneratedNewsletterContent {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
@@ -235,6 +238,7 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
   try {
 <<<<<<< HEAD
     const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -293,11 +297,14 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (contentType === 'blog') {
+=======
+  try {    if (contentType === 'blog') {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -351,6 +358,8 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -367,33 +376,18 @@ serve(async (req) => {
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
-<<<<<<< HEAD
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
 
-
       body: JSON.stringify({
         model: "gpt-4o"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
-<<<<<<< HEAD
-
-=======
-          { role: "system", content: systemPrompt }
-          { role: "user", content: userPrompt }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     const data = await response.json(),
     const generatedContent = JSON.parse(data.choices[0].message.content),
     
@@ -411,7 +405,6 @@ serve(async (req) => {
         messages: [
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   tweet_summary?: string,
   image_prompt?: string;
 }
@@ -479,10 +472,9 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         ];
+<<<<<<< HEAD
 
 
 =======
@@ -501,10 +493,13 @@ if ( {) {
         temperature: 0.7})});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           { role: "system", content: systemPrompt },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -513,11 +508,14 @@ if ( {) {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -541,36 +539,26 @@ if ( {) {
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
-<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
         temperature: 0 && 0.7})});
-
-=======
-        ];
-        temperature: 0 && 0.7})});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
 
     const data = await response && response.json();
     const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
-    
-=======
-    const data = await response && response.json();
-    const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    // If image is requested for blog post, generate an image prompt
+        // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -580,6 +568,7 @@ if ( {) {
         body: JSON && JSON.stringify({
           model: "gpt-4o-mini",
           messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -613,6 +602,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }
+=======
+=======            }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
@@ -704,6 +696,7 @@ serve(async (req) => {;
           max_tokens: 100})}),;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 =======
@@ -790,42 +783,12 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Create slug from title
+=======
+    }      // Create slug from title
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const slug = generatedContent && generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
-      const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
-      
-
-<<<<<<< HEAD
-=======
-
-=======
-
-
-    // If autoPublish is true, save the content to the database
-    if (autoPublish && contentType === 'blog') {
-      const supabaseUrl = Deno.env.get("SUPABASE_URL"),
-      const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY"),
-      
-      if (!supabaseUrl || !supabaseKey) {
-        throw new Error("Supabase credentials are not set in environment variables")
-      }
-      
-      const supabase = createClient(supabaseUrl, supabaseKey),
-      
-      // Create slug from title
-      const slug = generatedContent.title
-        .toLowerCase()
-        .replace(/[^\w\s]/g, '')
-        .replace(/\s+/g, '-');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
@@ -833,10 +796,8 @@ if ( {) {
         year: 'numeric'
       });
       // Auto-calculate read time (rough estimate: 200 words per minute)
-<<<<<<< HEAD
       const wordCount = generatedContent.body.split(/\s+/).length
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .replace(/\s+/g, '-'),
       
       // Get current date formatted
@@ -851,19 +812,19 @@ if ( {) {
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read",
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-        .replace(/\s+/g, '-');
-      // Get current date formatted
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
         day: 'numeric'
         year: 'numeric'
       });
+<<<<<<< HEAD
       // Auto-calculate read time (rough estimate: 200 words per minute)
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
@@ -916,6 +877,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           featured_image: "", // To be updated if image is generated
+=======
+      // Auto-calculate read time (rough estimate: 200 words per minute)          featured_image: "", // To be updated if image is generated
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           is_featured: false;
           is_published: true;
           created_by: "system"
@@ -923,6 +887,7 @@ if ( {) {
         })
         .select()
         .single();
+<<<<<<< HEAD
       if (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1135,10 +1100,18 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
+=======
+      if (error) {        // Create notification about new blog post
+        await supabase
+          .from('notifications')
+          .insert({
+            user_id: null, // System notification visible to admins            message: `AI-generated blog post "${generatedContent.title}" has been published.`,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             type: "system",
             read: false,
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1150,37 +1123,20 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             action_text: "View Post"
           })
       }
     }
-    return new Response(JSON.stringify(generatedContent), {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-      status: 200})
-  } catch (error) {
-    console.error("Error in generate-content function:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-      status: 500})
-  }
-});
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    return new Response(JSON.stringify(generatedContent), {      headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
     console.error("Error in generate-content function:", error),
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
       status: 500})
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1289,6 +1245,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return new Response (JSON.stringify (generated_content), {
+=======
+      status: 500})    return new Response (JSON.stringify (generated_content), {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
   } catch (error) {
@@ -1299,8 +1258,8 @@ if ( {) {
       status: 500});
   }
 });
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1583,3 +1542,5 @@ action text: "View Post"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

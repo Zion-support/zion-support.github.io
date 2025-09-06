@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -11,7 +14,11 @@ import { Sparkles, ArrowRight } from "@/components/icons",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge",;
 ;
+<<<<<<< HEAD
 interface GeneratedContent {;
+=======
+interface GeneratedContent {,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description:string,;
   tags:string[],;
   suggestedPrice:{;
@@ -60,8 +67,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
+<<<<<<< HEAD
         title:"Missing required fields",;
         description:"Please provide at least a title and category.",;
+=======
+        title:"Missing required fields",,
+  description:"Please provide at least a title and category.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive";
       }),;
       return,;
@@ -84,14 +96,24 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 ;
       setGeneratedContent(data.generated),;
       toast({;
+<<<<<<< HEAD
         title:"Content Generated",;
         description:"AI has created optimized listing content for you.";
+=======
+        title:"Content Generated",,
+  description:"AI has created optimized listing content for you.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
     } catch (error) {;
       console.error("Error generating content:", error),;
       toast({;
+<<<<<<< HEAD
         title:"Generation Failed",;
         description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+=======
+        title:"Generation Failed",,
+  description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive";
       }),;
     } finally {;
@@ -103,8 +125,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
+<<<<<<< HEAD
         title:"Content Applied",;
         description:"The generated content has been applied to your listing.";
+=======
+        title:"Content Applied",,
+  description:"The generated content has been applied to your listing.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
     }
   },;
@@ -128,6 +155,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
               id="title";
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
+<<<<<<< HEAD
 <<<<<<< HEAD
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
@@ -247,3 +275,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
             <Button;
 
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

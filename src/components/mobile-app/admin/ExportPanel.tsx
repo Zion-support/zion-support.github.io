@@ -6,6 +6,7 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
@@ -26,6 +27,34 @@ interface ExportPanelProps {
 export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
+=======
+interface ExportPanelProps {
+  platform: AppPlatform,
+  metadata: AppMetadataValues;
+}
+export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
+  const handle_export = (format: 'json' | 'csv', ) =>: any {
+    try {
+      let content: string
+      let fileName: string
+      if (format === 'json') {
+        content = JSON.stringify(metadata, null, 2)
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+      } else {
+        // Convert object to CSV format;
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const values = [;
+          metadata.app_title;
+          metadata.short_description;
+          metadata.long_description;
+          metadata.version;
+          metadata.platform;
+        ];
+        content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
+        // Add keywords as additional rows;
+        content += '\n\nKeywords:\n' + metadata.keywords.join();
+};        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       let content: string,
       let file_name: string,
       // Check condition
@@ -36,6 +65,7 @@ if ( {) {
         file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
 
       } else {
+<<<<<<< HEAD
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform']
         const values = [
@@ -85,17 +115,41 @@ import { Download } from 'lucide-react';
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",;
 import { toast } from "sonner",;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+=======
+        // Convert object to CSV format;
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const values = [;
+          metadata.app_title;
+          metadata.short_description;
+          metadata.long_description;
+          metadata.version;
+          metadata.platform;
+        ];
+        content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
+        // Add keywords as additional rows;
+        content += '\n\n_keywords:\n' + metadata.keywords.join ();
+}        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
+      }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ExportPanelProps {;
   platform: AppPlatform,;
   metadata: AppMetadataValues;
 }
+<<<<<<< HEAD
 ;
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
   const handleExport = (format: 'json' | 'csv') => {;
+=======
+
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },) => {;
+  const handleExport = (format: 'json' | 'csv',) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       let content: string,;
       let fileName: string,;
       if (format === 'json') {;
+<<<<<<< HEAD
         content = JSON.stringify(metadata, null, 2),;
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`;
       } else {;
@@ -136,6 +190,62 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     toast.success("Analytics tracking enabled")
   },
   
+=======
+        content = JSON && JSON.stringify(metadata, null, 2);
+        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
+      } else {;
+        // Convert object to CSV format;
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const values = [;
+          metadata && metadata.appTitle;
+          metadata && metadata.shortDescription;
+          metadata && metadata.longDescription;
+          metadata && metadata.version;
+          metadata && metadata.platform;
+        ];
+
+        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+
+        // Add keywords as additional rows;
+        content += '\n\nKeywords:\n' + metadata && metadata.keywords.join();
+
+};        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.csv`;
+      }
+
+      // Create download link;
+      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),;
+      const url = URL && URL.createObjectURL(blob),;
+      const link = document && document.createElement('a'),;
+      link && link.href = url,;
+      link && link.download = fileName,;
+      document && document.body.appendChild(link),;
+      link && link.click(),;
+      document && document.body.removeChild(link),;
+      URL && URL.revokeObjectURL(url),;
+
+      toast && toast.success(`Exported ${format && format.toUpperCase()} file successfully`);
+    } catch (error) {;
+      logErrorToProduction('Export failed:', { data: error }),;
+      toast && toast.error(`Failed to export ${format && format.toUpperCase()} file`);
+    }
+  },;
+
+  const trackAnalytics = () => {;
+    logInfo("Tracking app installation analytics..."),;
+    toast && toast.success("Analytics tracking enabled");
+  },;
+
+  return (
+    } catch (error) {
+      logErrorToProduction('Export failed:', { data: error })
+      toast.error(`Failed to export ${format.toUpperCase()} file`)
+    }
+  }
+  const trackAnalytics = () => {
+    logInfo("Tracking app installation analytics...")
+    toast.success("Analytics tracking enabled")
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -149,7 +259,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
               Export your app metadata for submission to app stores
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
+<<<<<<< HEAD
               <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">
+=======
+              <Button variant="outline" onClick={(,) => handleExport('json')} className="flex-1">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Download className="mr-2 h-4 w-4" />
                 JSON
               </Button>
@@ -159,7 +273,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="border-t border-zion-purple/20 pt-4">
             <h4 className="font-medium mb-2">Installation Analytics</h4>
             <p className="text-sm text-gray-400 mb-3">
@@ -172,6 +289,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 },
   },;
@@ -283,12 +401,21 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   );
 };
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 
     </Card>);
 },
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

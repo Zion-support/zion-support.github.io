@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -61,11 +64,17 @@ export function IntegrationsSyncLog() {;
       case "success":return <Badge className="bg-green-500">Success</Badge>,;
       case "error":;
         return <Badge variant="destructive">Error</Badge>,;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case "warning":;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;
         return <Badge variant="outline">Unknown</Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

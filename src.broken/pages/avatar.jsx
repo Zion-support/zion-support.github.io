@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.broken/pages/avatar.jsx
 <<<<<<< HEAD:backup-merge-conflicts/avatar.jsx.backup
 :backup-merge-conflicts/avatar.jsx.backup
 import React from \'react\'; \"export\": function Avatar({ children,className = \'' }) {\'; \"return\": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = \'',className = \'' }) {\'; \"return\": ( <img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`} />)} export function AvatarFallback({ children,className = \'' }) {\'; \"return\": ( <div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`} >{children} </div> )}`import _React from 'react'; "export": function Avatar({ children,className = '' }) {'; "return": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = '',className = '' }) {'; "return": ( <img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`} />)} export function AvatarFallback({ children,className = '' }) {'; "return": ( <div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`} >{children} </div> )}`
@@ -26,3 +27,7 @@ import _React from 'react'; "export": function Avatar({ children,className = '' 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/ui/avatar.jsx
+=======
+import React from \'react\'; \"export\": function Avatar({ children,className = \'' }) {\'; \"return\": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = \'',className = \'' }) {\'; \"return\": ( 
+import _React from 'react'; "export": function Avatar({ children,className = '' }) {'; "return": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = '',className = '' }) {'; "return": ( 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/ui/avatar.jsx

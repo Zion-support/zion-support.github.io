@@ -8,5 +8,10 @@ const { execSync } = require('child_process')
 // console.log(`NPM "Audit"`)
     console.log(`Security "Headers": ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured
 // console.log(`Environment "Files"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.log(`Vulnerable "Packages"`)
+    console.log(`Vulnerable "Packages"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -13,6 +13,7 @@ import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type, VariantProps } from "class-variance-authority";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 
 
 
@@ -31,10 +32,13 @@ import {cn} from "@/lib/utils"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -93,13 +97,17 @@ export { Label };
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { cn } from "@/lib/utils";    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 const labelVariants = cva(;
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
-<<<<<<< HEAD
 
 );
 ;
@@ -126,18 +134,7 @@ const Label = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root> &;
     VariantProps<typeof labelVariants>;
 >(({ className, ...props }, ref) => (;
-  <LabelPrimitive&& LabelPrimitive.Root
-=======
-
-export { Label }
-;
-
-=======
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    ref={ref}
+  <LabelPrimitive&& LabelPrimitive.Root    ref={ref}
     className={cn (label_variants (), class_name)}
     {...props}
 import * as React from "react";
@@ -145,7 +142,6 @@ import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 const labelVariants = cva(;
-<<<<<<< HEAD
   "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
 );
 ;
@@ -173,10 +169,6 @@ Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 export { Label }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -195,6 +187,7 @@ export { Label }
 Label.display_name = LabelPrimitive.Root.display_name;
 ;
 export { Label }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,3 +213,6 @@ export { Label }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

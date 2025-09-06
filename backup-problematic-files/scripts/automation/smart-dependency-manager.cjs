@@ -135,5 +135,10 @@ console.log(" Applied ${updatesApplied} smart updates")
       "dependencies"
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(` Smart Dependency Manager "failed": "`)
+  console.error(` Smart Dependency Manager "failed": "`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

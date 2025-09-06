@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -39,10 +40,14 @@ import { X } from "lucide-react"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { cn } from "@/lib/utils"
 
 const ToastProvider = ToastPrimitives.Provider
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -59,11 +64,14 @@ const ToastProvider = ToastPrimitives.Provider
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
 ></typeof>(({ className, ...props }, ref) => (
   <ToastPrimitives.Viewport
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +155,8 @@ const toastVariants = cva(
   }
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
@@ -164,17 +174,9 @@ const toastVariants = cva(
 )
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
-<<<<<<< HEAD
-=======
-  
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
-<<<<<<< HEAD
     VariantProps<typeof toastVa</typeof>riants>
 >(({ className, variant, ...props }, ref) => {
 <<<<<<< HEAD
@@ -182,21 +184,13 @@ const Toast = React.forwardRef<
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
   
 
-
-=======
-=======
-const Toast = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Root>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     VariantProps<typeof toastVariants>
 >(({ className, variant, ...props }, ref) => {
 
-
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -205,6 +199,8 @@ const Toast = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     />
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 });
 Toast.displayName = ToastPrimitives.Root.displayName;
@@ -213,6 +209,7 @@ const ToastAction = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPr</typeof>imitives.Action>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Action
+<<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
     className={cn(
@@ -226,6 +223,8 @@ const ToastAction = React.forwardRef<
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ToastViewport && ToastViewport.displayName = ToastPrimitives && ToastPrimitives.Viewport.displayName;
 
 const toastVariants = cva(;
@@ -250,9 +249,8 @@ const Toast = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Root> &;
     VariantProps<typeof toastVa</typeof>riants>;
 >(({ className, variant, ...props }, ref) => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 
@@ -265,6 +263,8 @@ const Toast = React && React.forwardRef<;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <ToastPrimitives.Root
       ref={ref}
@@ -279,30 +279,23 @@ const ToastAction = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Action>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPr</typeof>imitives && imitives.Action>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   <ToastPrimitives.Action;
 =======
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   <ToastPrimitives.Action;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import React from 'react';
 import * as React from 'react';
 import * as ToastPrimitives from '@radix - ui / react - toast';
 import {cva, type, VariantProps} from 'class - variance - authority';
 import {X} from 'lucide-react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ref={ref}
     className={cn(
       'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]'
@@ -311,6 +304,7 @@ import {X} from 'lucide-react';
     {...props}
   />;
 ));
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
@@ -394,11 +388,14 @@ ToastAction.displayName = ToastPrimitives.Action.displayName;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const ToastClose = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Close>
   React.ComponentPropsWithoutRef<type</typeof>of ToastPrimitives.Close>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Close
+<<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
     className={cn(
@@ -418,6 +415,8 @@ const ToastClose = React.forwardRef<
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ToastAction && ToastAction.displayName = ToastPrimitives && ToastPrimitives.Action.displayName;
 
 const ToastClose = React && React.forwardRef<;
@@ -425,6 +424,7 @@ const ToastClose = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<type</typeof>of ToastPrimitives && ToastPrimitives.Close>;
 >(({ className, ...props }, ref) => (;
   <ToastPrimitives&& ToastPrimitives.Close
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -520,12 +520,15 @@ ToastClose.displayName = ToastPrimitives.Close.displayName;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const ToastTitle = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Title>
   React.ComponentPropsWithou</typeof>tRef<typeof ToastPrimitives.Title>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
   <ToastPrimitives.Title
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -647,10 +650,14 @@ const ToastTitle = React.forwardRef<;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
+=======
+  <ToastPrimitives.Title    ref={ref}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     className={cn('text-sm font-semibold', className)}
     {...props}
   />
 ));
+<<<<<<< HEAD
 ToastTitle.displayName = ToastPrimitives.Title.displayName;
 <<<<<<< HEAD
 
@@ -768,6 +775,13 @@ export {
     className={cn('text-sm opacity-90', className)}
     {...props}
   />
+=======
+ToastTitle.displayName = ToastPrimitives.Title.displayName;const ToastDescription = React.forwardRef<
+  React.ElementRef<typeof ToastPrimitives.Description>
+  React.ComponentPropsWit</typeof>houtRef<typeof ToastPrimitives.Description>
+>(({ className, ...props }, ref) => (
+  <ToastPrimitives.Description  />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
@@ -788,24 +802,6 @@ export {
   ToastClose
   ToastAction
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    ref={ref}
-    className={cn ('text - sm font - semibold', class_name)}
-    {...props}
-  />));
-ToastTitle.display_name = ToastPrimitives.Title.display_name;
-;
-const ToastDescription = React.forward_ref<;
-  React.ElementRef < typeof ToastPrimitives.Description>,
-  React.ComponentPropsWit</typeof > hout_ref < typeof ToastPrimitives.Description>;
->(({ class_name, ...props }, ref) => (
-  <ToastPrimitives.Description;
-    ref={ref}
-    className={cn ('text - sm opacity - 90', class_name)}
-    {...props}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   type ToastProps,
   type ToastActionElement,
   ToastProvider,
@@ -814,31 +810,6 @@ const ToastDescription = React.forward_ref<;
   ToastTitle,
   ToastDescription,
   ToastClose,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  ToastAction,
-}
-;
-// Add use_toast hook export;
-export /**
- * use_toast - Function description
- */
-function use_toast() {
-
-  return {
-    // Accept a loosely typed props object to allow custo</typeof > m fields like `description`;
-    toast: (props: any) => {
-
-<<<<<<< HEAD
-=======
-  return {
-    // Accept a loosely typed props object to allow custo</typeof > m fields like `description`;
-    toast: (props: any) => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ToastDescription && ToastDescription.displayName = ToastPrimitives && ToastPrimitives.Description.displayName;
 
 type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
@@ -848,6 +819,7 @@ type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
 // Using the base `ReactElement` type here avoids compilation errors while;
 // still representing a valid React element returned by `ToastAction`.;
 type ToastActionElement = React && React.ReactElement;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -903,8 +875,10 @@ export {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ToastDescription,;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ToastClose,;
-  ToastAction,;
+  ToastAction,
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -921,22 +895,15 @@ export function useToast() {;
 =======
 =======
       console && console.log('Toast:', props);
-    },;
-  };
-<<<<<<< HEAD
-<<<<<<< HEAD
+    },
+};
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Implementation of toast functionality;
       console.log ('Toast:', props);
     },
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -946,12 +913,15 @@ export function useToast() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const ToastDescription = React.forwardRef<;
   React.ElementRef<typeof ToastPrimitives.Description>,;
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>;
 >(({ className, ...props }, ref) => (;
   <ToastPrimitives.Description;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -965,12 +935,15 @@ const ToastDescription = React.forwardRef<;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     className={cn('text-sm opacity-90', className)}
     {...props}
   />
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1011,3 +984,5 @@ export function useToast() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

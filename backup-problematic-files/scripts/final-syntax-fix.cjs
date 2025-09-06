@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
+=======
+console.log('====');
+
+console.log('🔧 Final Syntax Fix');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -52,9 +58,15 @@ const filesToFix = [
   'components/layout/MainLayout.tsx'
 ];
 let totalFixed = 0;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -62,6 +74,10 @@ for (const file of filesToFix) {
       continue;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixSpecificErrors(content);
@@ -75,5 +91,10 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+console.log('🎉 Final syntax fix completed!');
+console.log('🎉 Final syntax fix completed!');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -5,8 +5,11 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface LoadingState {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isLoading: boolean;
   error: Error | null;
   retryCount: number;
@@ -29,6 +32,7 @@ interface DynamicLoaderProps {;
   prefetch?: boolean;
   className?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   children?: React.ReactNode;
   [key: string]: any;
 }
@@ -43,6 +47,8 @@ const EnhancedLoading: React.FC<{
   children?: React && React.ReactNode;
   [key: string]: any;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
   progress?: number;
@@ -71,6 +77,7 @@ const EnhancedLoading: React.FC<{;
   message = 'Loading component...', 
   showProgress = true 
 }) => (
+<<<<<<< HEAD
   <Card className="w-full max-w-md mx-auto">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -78,10 +85,13 @@ const EnhancedLoading: React.FC<{;
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+<<<<<<< HEAD
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -159,17 +169,22 @@ const EnhancedError: React.FC<{
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button 
+=======
+
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-primary"
+              style={{          <Button 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             onClick={retry} 
             variant="outline" 
             size="sm"
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-
-
             Try Again
           </Button>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -235,11 +250,17 @@ const useNetworkStatus = () =>: any {
     window.addEventListener ('offline', updateOnlineStatus);
 
     return () => {
+=======
+      </div>
+    </CardContent>
+  </Card>    return () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       window.removeEventListener ('online', updateOnlineStatus);
       window.removeEventListener ('offline', updateOnlineStatus);
     }
   }, []);
   return is_online;
+<<<<<<< HEAD
 }
 
 
@@ -530,28 +551,40 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 =======
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
     <DynamicComponentLoader
+=======
+}    <DynamicComponentLoader
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       importFn = {importFn,}
       {...(options |{})}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {...(props as any)}
+<<<<<<< HEAD
     />;
   );
 }
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 <<<<<<< HEAD
 =======
 // export const DynamicChartComponent = createDynamicComponent(
-
+//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // export const DynamicChartComponent = createDynamicComponent(
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 //   {
+=======
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+// export const DynamicChartComponent = createDynamicComponent(//   {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
@@ -562,6 +595,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // )
 
 // export const DynamicThreeComponent = createDynamicComponent(
+<<<<<<< HEAD
 <<<<<<< HEAD
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 =======
@@ -748,14 +782,16 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 //   {
-//     loading_component: () => (
-//       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
-//         <span className="text - muted - foreground">Loading chart...</span>;
-//       </div>;
-//     ),
-//     prefetch: true;
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
 //   }
+<<<<<<< HEAD
 // );
 <<<<<<< HEAD
 =======
@@ -809,3 +845,8 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default DynamicComponentLoader;
+=======
+// )
+export default DynamicComponentLoader; export default DynamicComponentLoader
+// );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

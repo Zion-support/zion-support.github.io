@@ -51,10 +51,10 @@ if ( {) {
           .update({ active: false });
           .eq('purpose', purpose);
 
-
       }
 
       // Update this model;
+<<<<<<< HEAD
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -120,6 +120,18 @@ if ( {) {
     }
   },;
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
+=======
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig  } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string
+}        .order('createdAt', { ascending: false }),;
+
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       // If activating, deactivate all other models with the same purpose;
       if (!currentActive) {;
@@ -144,6 +156,7 @@ if ( {) {
 
 =======
   },;
+<<<<<<< HEAD
 
   },
 
@@ -252,6 +265,8 @@ if ( {) {
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       >
                         {model.active ? (
                           <>
@@ -263,8 +278,12 @@ if ( {) {
                           </>
                         )}
                       </Button>
+<<<<<<< HEAD
                     ) : (
                       <Button
+=======
+                    ) : (                      <Button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
@@ -289,6 +308,7 @@ if ( {) {
                       </Button>
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </TableCell>;
                 </TableRow>;
 =======
@@ -297,6 +317,8 @@ if ( {) {
                 </TableRow>;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </TableBody>;
           </Table>;
@@ -309,13 +331,12 @@ if ( {) {
 ;
 =======
 
-
 }
 
   },
   return (
-    <Card className="w - full">;
-      <CardHeader className="flex flex - row items - center justify - between">;
+    <Card className="w-full">;
+      <CardHeader className="flex flex - row items - center justify-between">;
         <div>;
           <CardTitle > ZionGPT Models</CardTitle>;
           <CardDescription>;
@@ -323,13 +344,13 @@ if ( {) {
           </CardDescription>;
         </div>;
         <Button on_click={fetch_models} variant="outline" size="sm">;
-          <RefreshCw className="h - 4 w - 4 mr - 2" /> Refresh;
+          <RefreshCw className="h - 4 w - 4 mr-2" /> Refresh;
         </Button>;
       </CardHeader>;
       <CardContent>;
         {is_loading ? (
-          <div className="flex items - center justify - center h - 24">;
-            <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+          <div className="flex items - center justify - center h-24">;
+            <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
           </div>) : (
           <Table>;
             <TableHeader>;
@@ -340,26 +361,26 @@ if ( {) {
                 <TableHead > Base Model</TableHead>;
                 <TableHead > Status</TableHead>;
                 <TableHead > Created</TableHead>;
-                <TableHead className="text - right">Actions</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
               </TableRow>;
             </TableHeader>;
             <TableBody>;
               {models.map ((model, ) => (
                 <TableRow key={model.id}>;
-                  <TableCell className="font - medium">{model.id}</TableCell>;
+                  <TableCell className="font-medium">{model.id}</TableCell>;
                   <TableCell > v{model.version}</TableCell>;
                   <TableCell>{model.purpose}</TableCell>;
                   <TableCell>{model.base_model}</TableCell>;
                   <TableCell>;
                     {model.training_status === 'succeeded' ? (
-                      <Badge className="bg - green - 500">Ready</Badge>) : model.training_status === 'failed' ? (
-                      <Badge className="bg - red - 500">Failed</Badge>) : model.training_status === 'running' ? (
-                      <Badge className="bg - blue - 500">Training</Badge>) : (
-                      <Badge className="bg - yellow - 500">Queued</Badge>)}
-                    {model.active && <Badge className="ml - 2 bg - purple - 500">Active</Badge>}
+                      <Badge className="bg - green-500">Ready</Badge>) : model.training_status === 'failed' ? (
+                      <Badge className="bg - red-500">Failed</Badge>) : model.training_status === 'running' ? (
+                      <Badge className="bg - blue-500">Training</Badge>) : (
+                      <Badge className="bg - yellow-500">Queued</Badge>)}
+                    {model.active && <Badge className="ml - 2 bg - purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
-                  <TableCell className="text - right">;
+                  <TableCell className="text-right">;
                     {model.training_status === 'queued' || model.training_status === 'running' ? (
                       <Button;
                         variant="ghost";
@@ -368,9 +389,9 @@ if ( {) {
                         disabled = {active_jobs[model.id], }
                       >;
                         {active_jobs[model.id] ? (
-                          <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-                          <RefreshCw className="h - 4 w - 4" />)}
-                        <span className="ml - 1">Check</span>;
+                          <Loader2 className="h - 4 w - 4 animate-spin" />) : (
+                          <RefreshCw className="h - 4 w-4" />)}
+                        <span className="ml-1">Check</span>;
                       </Button>) : model.training_status === 'succeeded' ? (
                       <Button;
                         variant = {model.active ? "outline" : "default", }
@@ -379,19 +400,19 @@ if ( {) {
                       >;
                         {model.active ? (
                           <>;
-                            <CheckCircle className="h - 4 w - 4 mr - 1" /> Active;
+                            <CheckCircle className="h - 4 w - 4 mr-1" /> Active;
                           </>) : (
                           <>;
-                            <Play className="h - 4 w - 4 mr - 1" /> Activate;
+                            <Play className="h - 4 w - 4 mr-1" /> Activate;
                           </>)}
                       </Button>) : (
                       <Button;
                         variant="ghost";
                         size="sm";
-                        className="text - red - 500";
+                        className="text - red-500";
                         title = {model.error_message || "Training failed", }
                       >;
-                        <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
+                        <AlertCircle className="h - 4 w - 4 mr-1" /> Error;
                       </Button>)}
                   </TableCell>;
                 </TableRow>))}
@@ -400,5 +421,9 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

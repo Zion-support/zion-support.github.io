@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,6 +23,8 @@ export interface FontConfig {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -44,6 +40,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
   try {
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
+<<<<<<< HEAD
     switch (fontFamily) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,16 +142,8 @@ if (return, ) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    switch (fontFamily) {    doc.set_font ('helvetica');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    doc.set_font ('helvetica');
-  }
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -17,71 +17,17 @@ interface OptimizedImageProps {
   alt: string;
   width?: number;
   height?: number;
-
-  class_name?: string;
-  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
-  placeholder_color?: string;
-  priority?: boolean;
-  quality?: number;
-  sizes?: string;
-  on_load?: () => void;
-  on_error?: () => void;
-  fallback_src?: string;
-  aspect_ratio?: string;
-  object_fit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale - down';
-  lazy?: boolean;
-  retry_count?: number;
-  showLoadingProgress?: boolean;
-  fill?: boolean;
-  blurDataURL?: string;
-  loading?: 'lazy' | 'eager';
-  style?: React.CSSProperties;
-  object_position?: string;
-export const OptimizedImage: React.FC < OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  class_name,
-  placeholder = 'shimmer',
-  placeholder_color = '#f3f4f6',
-  priority = false,
-  quality = 75,
-  sizes,
-  on_load,
-  on_error,
-  fallback_src,
-  aspect_ratio,
-  object_fit = 'cover',
-  lazy = true,
-  retry_count = 3,
-  showLoadingProgress = false,
-  fill = false,
-  blurDataURL,
-  loading = 'lazy',
-  style,
-  object_position = 'center',
-  ...props;
-}) => {
-  const [is_loading, setIsLoading] = useState (true);
-  const [has_error, setHasError] = useState (false);
-  const [isInView, setIsInView] = useState (!lazy || priority);
-  const [current_src, setCurrentSrc] = useState (src);
-  const [retries, set_retries] = useState (0);
-  const [load_progress, setLoadProgress] = useState (0);
-  const img_ref = useRef < HTMLImageElement>(null);
-  const observer_ref = useRef < IntersectionObserver>();
-  const [metrics, set_metrics] = useState < ImageMetrics | null>(null);
-  const loadStartTime = useRef < number>(0);
-  // Intersection Observer for lazy loading;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    observer_ref.current = new IntersectionObserver (
-
-      entries => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+  const [isInView, setIsInView] = useState(!lazy |priority)
+  const [currentSrc, setCurrentSrc] = useState(src)
+  const [retries, setRetries] = useState(0)
+  const [loadProgress, setLoadProgress] = useState(0)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const observerRef = useRef<IntersectionObserver>()
+  const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
+  const loadStartTime = useRef<number>(0)
+  // Intersection Observer for lazy loading      entries => {
         const [entry] = entries;        // Check condition
 if ( {) {
   $2
@@ -100,11 +46,6 @@ if ( {) {
         }
       }
       {
-
-        root_margin: '50px', // Start loading 50px before image comes into view;
-        threshold: 0.1,
-
-      }
     )
     if (imgRef.current) {
       observerRef.current.observe(imgRef.current)
@@ -112,14 +53,18 @@ if ( {) {
     return () => {
       observerRef.current?.disconnect()
     }
-
-
-            const fileSize = null;
-              resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
-            const loadTime = null;
-
-
-              resourceEntry.responseEnd - resourceEntry.requestStart
+  }, [lazy, priority, isInView])
+  // Start load time tracking
+  useEffect(() => {
+    loadStartTime.current = performance.now()
+  }, [src])
+  // Monitor image performance
+  useEffect((,) => {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver(list => {
+        const entries = list.getEntries()
+        entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming              resourceEntry.responseEnd - resourceEntry.requestStart
             setMetrics({
               loadTime
               fileSize
@@ -243,12 +188,8 @@ if ( {) {
       onError?.()
     }
   }
-
-
-    if (!isLoading || !showLoadingProgress) return;
-
-
-    const interval = setInterval((,) => {
+  // Simulate loading progress for demo purposes
+  useEffect(() => {    const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
           clearInterval(interval)
@@ -276,8 +217,11 @@ if ( {) {
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -308,6 +252,7 @@ interface OptimizedImageProps {;
   blurDataURL?: string,;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
+<<<<<<< HEAD
   objectPosition?: string;
 }
 ;
@@ -319,6 +264,9 @@ interface ImageMetrics {;
 }
 ;
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+=======
+  objectPosition?: string;export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   src,;
   alt,;
   width,;
@@ -343,76 +291,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   style,;
   objectPosition = 'center',;
   ...props;
-}) => {;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [hasError, setHasError] = useState(false),;
-  const [isInView, setIsInView] = useState(!lazy || priority),;
-  const [currentSrc, setCurrentSrc] = useState(src),;
-  const [retries, setRetries] = useState(0),;
-  const [loadProgress, setLoadProgress] = useState(0),;
-  const imgRef = useRef<HTMLImageElement>(null),;
-  const observerRef = useRef<IntersectionObserver>(),;
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null),;
-  const loadStartTime = useRef<number>(0),;
-  // Intersection Observer for lazy loading;
-  useEffect(() => {;
-    if (!lazy || priority || isInView) return,;
-    observerRef.current = new IntersectionObserver(;
-      (entries) => {;
-        const [entry] = entries,;
-        if (entry && entry.isIntersecting) {;
-          setIsInView(true),;
-          observerRef.current?.disconnect();
-        }
-      },;
-      {;
-        rootMargin: '50px', // Start loading 50px before image comes into view;
-        threshold: 0.1;
-      }
-    ),;
-    if (imgRef.current) {;
-      observerRef.current.observe(imgRef.current);
-    }
-;
-    return () => {;
-      observerRef.current?.disconnect();
-    }
-  }, [lazy, priority, isInView]),;
-  // Start load time tracking;
-  useEffect(() => {;
-    loadStartTime.current = window.window.window.performance.now();
-  }, [src]),;
-  // Monitor image performance;
-  useEffect(() => {;
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {;
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries(),;
-        entries.forEach((entry) => {;
-          if (entry.name === src && entry.entryType === 'resource') {;
-            const resourceEntry = entry as PerformanceResourceTiming,;
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0,;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart,;
-            setMetrics({;
-              loadTime,;
-              fileSize,;
-              format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other',;
-              wasOptimized: src.includes('/_next/image');
-            }),;
-            // Log slow or large images;
-            if (loadTime > 2000) {;
-              logWarn('Slow image loading:', {;
-                src,;
-                loadTime: `${loadTime.toFixed(2)}ms`,;
-                size: `${(fileSize / 1024).toFixed(2)}KB`;
-              });
-            }
-;
-            if (fileSize > 500 * 1024) {;
+}) => {;            if (fileSize > 500 * 1024) {;
               logWarn('Large image detected:', {;
                 src,;
                 size: `${(fileSize / 1024).toFixed(2)}KB`,;
-                loadTime: `${loadTime.toFixed(2)}ms`;
-              });
             }
           }
         });
@@ -481,10 +363,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         />;
       );
 
-
-
     }
 
+<<<<<<< HEAD
     return (
 <<<<<<< HEAD
       <div className={placeholderClassName}>
@@ -622,25 +503,45 @@ if ( {) {
 
 
           >
+=======
+    if (placeholder === 'color') {;
+      return (;
+        <div;
+          className={placeholderClassName}
+          style={{ backgroundColor: placeholderColor }}
+        />;
+      );
+    }
+            className="absolute inset-0"
+          >
+            {generatePlaceholder()}
+;          >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <span className="text-xs mt-1">Retried {retries} times</span>
             )}
           </motion.div>;
+=======
+          </motion.div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         )}
 ;
         {/* Actual image */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {isInView && !hasError && (;
+=======
           <motion.img;
             src={optimizedSrc}
             srcSet={srcSet}
@@ -653,6 +554,26 @@ if ( {) {
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';
             )}
+          </motion && motion.div>;
+        )}
+        {/* Actual image */}        {isInView && !hasError && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          <motion.img;
+            src={optimizedSrc}
+            srcSet={srcSet}
+            alt={alt}
+            loading={priority ? 'eager' : 'lazy'}
+            onLoad={handleLoad}
+            onError={handleError}
+            className={cn(;
+              'w-full h-full transition-opacity duration-300',;
+              `object-${objectFit}`,;
+              isLoading ? 'opacity-0' : 'opacity-100';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            )}
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
             transition={{ duration: 0.3 }}
@@ -661,11 +582,13 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
-
   opacity: 0 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </AnimatePresence>;
     </div>;
   );
@@ -684,27 +607,37 @@ interface ImageGalleryProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
 <<<<<<< HEAD
+<<<<<<< HEAD
   onImageClick
 }) => {
   const [loadedCount, setLoadedCount] = useState(0),
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  onImageClick
+}) => {
+  const [loadedCount, setLoadedCount] = useState(0),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   },
+<<<<<<< HEAD
 
   return (
     <div className={cn('space-y-4', className)}>
@@ -728,6 +661,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         {images.map((image, index) => (;
           <motion.div;
             key={index}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -746,6 +681,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
@@ -847,13 +783,25 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 
 
 },;
+=======
+                </div>              )}
+            </div>
+          </motion.div>
+        ))}          className="rounded-full"
+        />
+      ) : (
+        <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
+
+          {initials}
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 }
 
-
     </div>;
-  );
+  )
 };
+<<<<<<< HEAD
 
 
 
@@ -1040,3 +988,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 },
 },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

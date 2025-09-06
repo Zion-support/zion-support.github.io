@@ -32,7 +32,11 @@ class TypeScriptSyntaxFixer {}
         this.log('Running TypeScript type check...');
         try {}
             const result = execSync('npm run type-check', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -56,7 +60,11 @@ class TypeScriptSyntaxFixer {}
         this.log('Running ESLint with auto-fix...');
         try {}
             const result = execSync('npm run "lint": fix', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -188,5 +196,10 @@ if ( {})
      {}
     const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = TypeScriptSyntaxFixer;
+module.exports = TypeScriptSyntaxFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

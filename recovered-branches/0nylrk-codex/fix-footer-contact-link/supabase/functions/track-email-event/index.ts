@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+<<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -43,6 +49,11 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+const supabase = createClient(supabaseUrl, supabaseServiceKey);// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -50,6 +61,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -75,30 +87,23 @@ serve(async (req) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
-
-
 
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
-  // Parse the URL to get the tracking parameters
-<<<<<<< HEAD
-  const url = new URL(req.url),
-  const type = url.searchParams.get("type"), // "open" or "click"
-  const campaignId = url.searchParams.get("cid");
-  const userId = url.searchParams.get("uid");
-  const redirectUrl = url.searchParams.get("redirect");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const campaignId = url.searchParams.get("cid"),
+  // Parse the URL to get the tracking parameters  const campaignId = url.searchParams.get("cid"),
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -107,6 +112,8 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -174,6 +181,7 @@ if ( {) {
           0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
+<<<<<<< HEAD
           headers: {
 <<<<<<< HEAD
 
@@ -219,12 +227,16 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             "Expires": "0"}}
+=======
+          headers: {            "Expires": "0"}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       )
     } else if (type === "click") {
       await supabase
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -264,19 +276,17 @@ if ( {) {
 =======
 
         .eq("user_id", userId),
+=======
+        headers: {
+          Location: destination}})
+    }        .eq("user_id", userId),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
       return new Response(null, {
         status: 302
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            "Content - Type": "image / gif",
             "Cache - Control": "no - store, no - cache, must - revalidate, proxy - revalidate";
             "Pragma": "no - cache";
             "Expires": "0"}}
@@ -295,40 +305,28 @@ if ( {) {
       const destination = redirect_url || `${supabase_url}/dashboard`;
       return new Response (null, {
         status: 302,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         headers: {
           Location: destination}});
     }
-<<<<<<< HEAD
 
     console && console.error("Error tracking email event:", error);
     
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
     console.error("Error tracking email event:", error),
     
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    console && console.error("Error tracking email event:", error);
-    console.error("Error tracking email event:", error);
-    console.error("Error tracking email event:", error),
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        headers: {
           Location: destination}})
     }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -344,6 +342,8 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return new Response ("Invalid event type", { status: 400 });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error) {
     console.error ("Error tracking email event:", error);
 ;
@@ -354,25 +354,11 @@ if ( {) {
 }
       return new Response (null, {
         status: 302,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         headers: {
           Location: redirect_url}});
-    }
-<<<<<<< HEAD
-=======
-        headers: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-    return new Response ("Error processing event", { status: 500 });
-
-
-<<<<<<< HEAD
-=======
-=======
-
-
-  }
+    }  }
 });
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -576,3 +562,5 @@ headers: {
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

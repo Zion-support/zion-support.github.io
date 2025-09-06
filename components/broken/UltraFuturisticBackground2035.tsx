@@ -202,7 +202,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
         }
-      });    };            ctx && ctx.stroke();
+      })
+};            ctx && ctx.stroke();
           }
         }
     window.addEventListener('resize', handleResize);
@@ -374,7 +375,6 @@ if ( {) {
 
         />;
 
-
         {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div
@@ -403,12 +403,15 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }}
             transition={{
               duration: 4

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -9,11 +10,14 @@ function fixDoubleCommas(filePath) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -23,6 +27,11 @@ function fixDoubleCommas(filePath) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    const fixedContent = content && content.replace(doubleCommaRegex, ",");
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;
@@ -50,30 +59,6 @@ if ( {) {
     }
     return modified;
   } catch (error) {
-<<<<<<< HEAD
-=======
-
-    const items = fs && fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path && path.join(currentDir, item);
-      const stat = fs && fs.statSync(fullPath);
-      if (stat && stat.isDirectory()) {
-        // Skip certain directories
-        if (
-          [
-            "node_modules",
-            ".git",
-            ".next",
-            "dist",
-            "build",
-            "out",
-            "ai-optimization-backups",
-            "apps && apps.backup",
-            "backup-merge-conflicts",
-            "apps",
-            "temp_exclude",
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ].includes(item)
         ) {
           continue;
@@ -127,28 +112,12 @@ if (
       }
     }
   }
-<<<<<<< HEAD
-=======
-
-
-console && console.log(`Found ${files && files.length} files to check for double commas...`);
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
-<<<<<<< HEAD
-=======
-
-
-console && console.log(`\nFixed double commas in ${fixedCount} files.`);
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   traverse (dir);
   return files;
 }

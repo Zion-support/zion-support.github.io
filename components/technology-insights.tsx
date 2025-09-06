@@ -20,6 +20,7 @@ export default function TechnologyInsightsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
+<<<<<<< HEAD
       featured: true;
     };
 <<<<<<< HEAD
@@ -29,6 +30,10 @@ export default function TechnologyInsightsPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      featured: true
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -50,8 +55,8 @@ export default function TechnologyInsightsPage() {
 
   const researchAreas = [;
     {;
-      title: 'Autonomous Systems Research',;
-      description:;
+      title: 'Autonomous Systems Research',,
+  description:;
         'Pioneering research in building truly autonomous systems that can operate independently.',;
       focus: [;
         'Decision Making',;
@@ -61,15 +66,15 @@ export default function TechnologyInsightsPage() {
       ],;
       icon: '🔬',;
     },;
-      title: 'AI Ethics & Governance',;
-      description:;
+      title: 'AI Ethics & Governance',,
+  description:;
         'Research into responsible AI development and ethical considerations for autonomous systems.',;
       focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],;
       icon: '⚖️',;
     },;
     {;
-      title: 'Human-AI Collaboration',;
-      description:;
+      title: 'Human-AI Collaboration',,
+  description:;
         'Exploring how humans and AI can work together effectively and safely.',;
       focus: [;
         'Human-AI Interface',;
@@ -78,7 +83,8 @@ export default function TechnologyInsightsPage() {
         'Trust Building',;
       ],;
       icon: '🤝',;
-    },  ];      description: 'Exploring how humans and AI can work together effectively and safely.',;
+    },  ],
+  description: 'Exploring how humans and AI can work together effectively and safely.',;
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
       icon: '🤝';
     }
@@ -301,11 +307,13 @@ export default function TechnologyInsightsPage() {
               </div>;
             </div>;
 
-
             {/* Whitepapers */}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -374,11 +382,14 @@ export default function TechnologyInsightsPage() {
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>

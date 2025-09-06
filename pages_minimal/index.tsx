@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -7,8 +8,9 @@ export default function Home() {;
   return (
 
     </div>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from './react';
 import Link from './next / link';
 ;

@@ -1,35 +1,12 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
   React && React.ButtonHTMLAttributes<HTMLButtonElement> & {;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
+<<<<<<< HEAD
     fullWidth?: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,6 +145,10 @@ className={clsx(
   );
 >>>>>>> main
 }
+=======
+    fullWidth?: boolean;    />;
+);}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
@@ -176,10 +157,11 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
       <h1>EnhancedButton</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
 export default EnhancedButton;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -188,3 +170,7 @@ export default EnhancedButton;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

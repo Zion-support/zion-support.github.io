@@ -40,12 +40,15 @@ import {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function DemosPage() {
 <<<<<<< HEAD
 
@@ -718,7 +721,7 @@ export default function DemosPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {activeDemoData?.title}
             </h2>;
-            <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
+            <p className="text - lg text - gray - 400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
 <<<<<<< HEAD
             </p>
@@ -790,6 +793,7 @@ export default function DemosPage() {;
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -797,6 +801,8 @@ export default function DemosPage() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -921,7 +927,7 @@ export default function DemosPage() {;
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>;
             </p>;
           </div>;
-          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">;
+          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;
         </div>;

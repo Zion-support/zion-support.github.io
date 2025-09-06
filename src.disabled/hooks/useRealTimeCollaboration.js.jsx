@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
 
@@ -52,3 +53,6 @@ const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { us
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

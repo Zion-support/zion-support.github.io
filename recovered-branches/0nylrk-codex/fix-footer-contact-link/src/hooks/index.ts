@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -40,6 +41,16 @@ export * from './useReactId';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+
+export * from './useReactId';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Export all hooks from messaging directory;
 export * from './messaging',;
 export * from './use-toast',;
@@ -47,6 +58,7 @@ export * from './useAuth',;
 export * from './useOnboardingStatus',;
 export * from './usePageViewTracking',;
 export * from './useReactId';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -59,11 +71,14 @@ export * from './useReactId';
 export * from './useReactId';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Export all hooks from messaging directory;
 export * from './messaging';
 export * from './use - toast';
 export * from './use_auth';
 export * from './useOnboardingStatus';
+<<<<<<< HEAD
 export * from './usePageViewTracking';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -76,3 +91,6 @@ export * from "./useOnboardingStatus";
 export * from "./usePageViewTracking";
 export * from "./useReactId";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export * from './usePageViewTracking';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,13 +27,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const {
     slug
     name
@@ -43,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     caseStudies
   } = req.body |{}
   if (!slug |!name)
+<<<<<<< HEAD
     return res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +152,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     verification_docs,
+=======
+    return res.status(400).json({ error: 'Missing required fields' });    verification_docs,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     case_studies,
   } = req.body || {}
   if (
@@ -183,18 +193,11 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   }    res.status (500).json ({ error: e.message });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-    res.status(500).json({ error: e.message });
-  }    res.status(500).json({ error: e.message })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

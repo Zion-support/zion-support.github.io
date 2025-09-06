@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import _React from 'react'; export const InstallPrompt = () => { export default 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+import _React from 'react'; export const InstallPrompt = () => { export default InstallPrompt; const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = (e) => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ const React from "react"; export const InstallPrompt = () => { export default In
 
 import _React from 'react'; export const InstallPrompt = () => { export default InstallPrompt; const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = (e) => { e && e.preventDefault(); setDeferred(e)}; window && window.addEventListener("beforeinstallprompt",handler); return () => window && window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred && deferred.prompt(); const result = await deferred && deferred.userChoice; if(result && result.outcome !== "accepted") {}}}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,3 +79,5 @@ import _React from 'react'; export const InstallPrompt = () => { export default 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

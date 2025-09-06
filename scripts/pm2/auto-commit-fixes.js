@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +20,6 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 
 =======
-
 
 }
 }
@@ -45,6 +47,7 @@ class AutoCommitFixes {,;
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {,;
       console.error('Error writing to log: file:', error.message);
+<<<<<<< HEAD
     },;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -139,3 +142,6 @@ class AutoCommitFixes {,
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    },;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

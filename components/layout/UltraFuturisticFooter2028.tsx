@@ -152,7 +152,7 @@ const serviceCategories = [
       { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
     ]
   };
-import Link from 'next / link';
+import Link from 'next/link';
 import {
   Phone
   Mail
@@ -742,7 +742,7 @@ export default function UltraFuturisticFooter2028() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                           href={service.href}
-                          className="text - sm text - purple - 200 hover:text - white transition - colors hover:underline";
+                          className="text - sm text - purple - 200 hover:text-white transition-colors hover:underline";
                         >;
                           {service.name}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -899,8 +899,11 @@ export default function UltraFuturisticFooter2028() {;
               </ul>;
             </div>;
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Newsletter Signup */}
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>

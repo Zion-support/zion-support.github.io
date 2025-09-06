@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export interface VerifiedRealService2025Batch2 {;
@@ -13,9 +14,12 @@ export interface VerifiedRealService2025Batch2 {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+export interface VerifiedRealService2025Batch2 {  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -24,6 +28,7 @@ export interface VerifiedRealService2025Batch2 {
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -39,6 +44,8 @@ export interface VerifiedRealService2025Batch2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     address: string;
   }
@@ -79,12 +86,12 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   },
 ];      mobile: "+1 302 464 0950";
 
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 =======
 
 =======
@@ -117,14 +124,12 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -137,6 +142,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -158,6 +164,11 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     features: [
+=======
+    id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
+    tagline: "Automated testing and quality control", price: "$79/month",
+    description: "AI-powered quality assurance platform that automates testing and ensures software quality.",    features: [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "Automated testing";
       "AI defect detection";
       "Performance monitoring";
@@ -168,10 +179,10 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 
@@ -228,3 +239,9 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     }
   }
 ];
+=======
+];      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

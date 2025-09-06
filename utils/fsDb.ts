@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,76 +108,47 @@ export const fsDb = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   read: (path: string) => null
+=======
+import path from "path";
+
+const DATA_DIR = path.join(process.cwd(), "data");
+=======  read: (path: string) => null
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   write: (path: string, data: any) => null
   exists: (path: string) => false
   delete: (path: string) => null
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
 
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
-  delete: (path: string) => null;
+  delete: (path: string) => null
 };
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  read: (path: string) => null,
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-
-
 
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
-  delete: (path: string) => null;
+  delete: (path: string) => null
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { promises as fs } from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 =======
-export function readJson<T>(filePath: string, defaultValue: T): T {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+  try {
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, "utf8");
@@ -186,21 +158,6 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -240,6 +197,7 @@ export async function writeJsonAsync<T>(
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -252,10 +210,9 @@ export function writeJson<T>(relativePath: string, value: T): void {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
-
-
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
@@ -264,11 +221,10 @@ export const fs_db = {
   exists: (path: string) => false,
   delete: (path: string) => null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -296,3 +252,5 @@ export const fs_db = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

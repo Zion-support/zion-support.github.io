@@ -23,6 +23,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
+<<<<<<< HEAD
 /// <reference path="./.next/types/routes.d.ts" />
 
 // NOTE: This file should not be edited
@@ -63,3 +64,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+/// <reference types="next/navigation-types/compat/navigation" />
+/// <reference path="./.next/types/routes.d.ts" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

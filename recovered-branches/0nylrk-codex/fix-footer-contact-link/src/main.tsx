@@ -72,12 +72,16 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App ;
@@ -85,6 +89,7 @@ import './index ;
 import {HelmetProvider} from 'react-helmet-async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +99,8 @@ import {BrowserRouter, as, Router} from 'react-router-dom';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -113,6 +120,7 @@ import {NotificationProvider} from './context';
 import {AnalyticsProvider} from './context/AnalyticsContext';
 // Render the app with proper provider structure;
 ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).render(<React && React.StrictMode>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,6 +148,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <HelmetProvider>;
       <WhitelabelProvider>;
         <Router>;
@@ -148,12 +158,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
               <AnalyticsProvider>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <LanguageProvider authState={{ isAuthenticated:false, user:null }}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <App />;
                   <LanguageDetectionPopup />;
                 </LanguageProvider>;
@@ -163,6 +176,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   </React.StrictMode>);
 =======
@@ -174,6 +188,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import ReactDOM from 'react-dom / client';
 import App from './App.tsx';
@@ -182,6 +199,7 @@ import {HelmetProvider} from 'react - helmet - async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
 // Import i18n configuration;
 import './i18n';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { LanguageProvider } from '@/context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
@@ -220,6 +238,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 =======
  // Render the app with proper provider structure ReactDOM.createRoot (document.getElementById ('root') !) .render (<React.StrictMode> <HelmetProvider> <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <LanguageProvider authState= {
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {LanguageProvider} from '@/context / LanguageContext';
 import {LanguageDetectionPopup} from './components / LanguageDetectionPopup';
 import {WhitelabelProvider} from '@/context / WhitelabelContext';
@@ -246,6 +266,7 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -279,3 +300,6 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
   </React.StrictMode>,
 );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  </React.StrictMode>);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

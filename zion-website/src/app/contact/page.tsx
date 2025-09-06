@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
@@ -176,6 +177,32 @@ function ContactPage() {
         </div>;
       </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  {
+    name: 'Email'
+    description: 'Get in touch with our team'
+    value: 'contact@ziontechgroup.com'
+    href: 'mailto:contact@ziontechgroup.com'
+    icon: EnvelopeIcon}
+  {
+  {
+    question: 'What industries do you serve?'
+    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
+  {
+  {
+    question: 'Do you provide ongoing support?'
+    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
+  {
+  return (
+    <div className="bg-black">
+
+      {/* Hero section */}
+      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
+          <div className=&quot;text - center & quot;>;
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+              Get in{' '}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Contact methods */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -190,6 +217,7 @@ function ContactPage() {
               <div key={method.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+<<<<<<< HEAD
                   {method.name}
 <<<<<<< HEAD
 =======
@@ -248,6 +276,9 @@ import React from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function ContactPage() {
+=======
+                  {method.name}export default function ContactPage() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -484,11 +515,45 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-            <form className="space-y-6">
-              <div>
+        </div>
+      </div>
+      {/* Contact methods */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Multiple ways to reach us
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {contactMethods.map((method) => (
+              <div key={method.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {method.name}
+                </dt>
+                    >
+                      {method.value} <span aria-hidden="true">→</span>
+                    </Link>
+                  </p>
+                </dd>
+              </div>
+            ))}
+          </dl>;
+        </div>;
+      </div>;
+      {/* Contact form */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Let's start a conversation
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">              <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name
                 </label>
@@ -516,6 +581,7 @@ export default function ContactPage() {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
+<<<<<<< HEAD
                 <textarea
                   id="message"
                   name="message"
@@ -577,10 +643,72 @@ export default function ContactPage() {
                 </div>;
               </div>;
             ))}
+=======
+                <div className="mt-2.5">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={4}
+
+                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
+                    default_value={''}
+                  />;
+                </div>;
+              </div>;
+            </div>;
+            <div className=&quot;mt - 8 flex justify - end & quot;>;
+              <button;
+                type=&quot;submit & quot;
+                className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - center text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
+              >;
+                Send message;
+              </button>;
+            </div>;
+          </form>;
+        </div>;
+      </div>;
+
+      {/* Office locations */}
+      <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
+          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Global Presence</h2>;
+          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
+            Visit our offices worldwide;
+          </p>;
+        </div>;
+        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
+          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 3&quot;>;
+            {office_locations.map ((office) => (
+              <div key={office.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 & quot;>;
+                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
+                  <MapPinIcon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
+                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{office.name}</h3>;
+                </div>;
+                <div className=&quot;space - y-3 text - gray - 300 & quot;>;
+                  <p className=&quot;flex items - start gap - 2&quot;>;
+                    <MapPinIcon className=&quot;h - 5 w - 5 text - blue - 400 mt - 0.5 flex - shrink - 0&quot; />;
+                    {office.address}
+                  </p>;
+                  <p className=&quot;flex items - center gap - 2&quot;>;
+                    <PhoneIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+                    {office.phone}
+                  </p>;
+                  <p className=&quot;flex items - center gap - 2&quot;>;
+                    <EnvelopeIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+                    {office.email}
+                  </p>;
+                  <p className=&quot;flex items - center gap - 2&quot;>;
+                    <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+                    {office.hours}
+                  </p>;
+                </div>;
+              </div>))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </div>;
       </div>;
       {/* FAQ */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -589,12 +717,17 @@ export default function ContactPage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Common questions
           </p>
         </div>
@@ -603,6 +736,7 @@ export default function ContactPage() {
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {faq.question}
                 </dt>;
@@ -630,6 +764,11 @@ export default function ContactPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  {faq.question}
+                </dt>;
+                <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Common questions
           </p>
         </div>
@@ -643,12 +782,17 @@ export default function ContactPage() {
                 <dd className="text-base leading-7 text-gray-300">
                   {faq.answer}
                 </dd>;
+<<<<<<< HEAD
               </div>;
             ))}
+=======
+              </div>))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </dl>;
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -665,6 +809,8 @@ export default function ContactPage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -679,6 +825,7 @@ export default function ContactPage() {
             </Link>
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
+<<<<<<< HEAD
             </Link>
 =======
             </form>
@@ -704,3 +851,13 @@ export default Page;
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+            </Link>          </div>
+        </div>
+      </div>
+    </div>
+  )
+};
+
+export default Page;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

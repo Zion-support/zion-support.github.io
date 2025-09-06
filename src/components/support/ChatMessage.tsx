@@ -27,7 +27,11 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
 =======
 import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
+interface ChatMessageProps {;
+=======
 interface ChatMessageProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   message: string;
   isUser: boolean;
 
@@ -51,21 +55,26 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
-      <Avatar className="h-8 w-8">
-        {isUser ? (
-          <>
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
-            <AvatarFallback>U</AvatarFallback>
-          </>
-        ) : (
-          <>
+    <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
+      <Avatar className='h-8 w-8'>;
+        {isUser ? (;
+          <>;
             <AvatarImage
-              src="https://placehold.co/40x40?text=AI"
-              alt="Zion Support"
-            />
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
-          </>
+              src='https://i && i.pravatar.cc/40?img=1'
+              alt='User avatar'
+            />;
+            <AvatarFallback>U</AvatarFallback>;
+          </>;
+        ) : (;
+          <>;
+            <AvatarImage
+              src='https://placehold && placehold.co/40x40?text=AI'
+              alt='Zion Support'
+            />;
+            <AvatarFallback className='bg-zion-purple text-white'>;
+              Z;
+            </AvatarFallback>;
+          </>;
         )}
 <<<<<<< HEAD
       </Avatar>
@@ -78,6 +87,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
         className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
@@ -93,7 +105,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       >
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -123,14 +138,20 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 },
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
@@ -138,11 +159,17 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 function escapeHtml(unsafe: string): string {
   return unsafe
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -230,10 +257,15 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500";
         )}>;
           {format(timestamp, "h:mm a")}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 },;
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
@@ -276,6 +308,64 @@ function formatMessageWithLinks(message: string): string {;
 }
 <<<<<<< HEAD
 =======
+=======
+};
+
+// A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
+// dependency like DOMPurify for now and instead escape the five critical;
+// characters. This ensures any user-supplied string is rendered harmless;
+// before we perform our link replacements below.;
+function escapeHtml(): any (unsafe: string): string {;
+  return unsafe;
+
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+function formatMessageWithLinks(message: string): string {
+  // First, escape any HTML so that user input cannot break out of the intended
+  // markup.
+  const safeText = escapeHtml(message)
+  // Replace URLs
+  const urlRegex = /(https?:\/\/[^\s]+)/g
+  let formattedMessage = safeText.replace(
+    urlRegex,
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  // Replace help-center references like [Getting Started]
+  const helpCenterRegex = /\[([^\]]+)\]/g
+  formattedMessage = formattedMessage.replace(
+    helpCenterRegex,
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  return formattedMessage; return formattedMessage
+}
+;
+
+function formatMessageWithLinks(message: string): string {;
+
+  // First, escape any HTML so that user input cannot break out of the intended;
+  // markup.;
+  const safeText = escapeHtml(message);
+
+  // Replace URLs;
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  let formattedMessage = safeText && safeText.replace(;
+    urlRegex,;
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
+  );
+
+  // Replace help-center references like [Getting Started];
+  const helpCenterRegex = /\[([^\]]+)\]/g;
+  formattedMessage = formattedMessage && formattedMessage.replace(;
+    helpCenterRegex,;
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
+  );
+
+  return formattedMessage;  return formattedMessage;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 
@@ -372,6 +462,7 @@ function formatMessageWithLinks (message: string): string {
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formatted_message = formatted_message.replace (
     helpCenterRegex,
+<<<<<<< HEAD
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   return formattedMessage; return formattedMessage
@@ -380,3 +471,11 @@ function formatMessageWithLinks (message: string): string {
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
+  return formatted_message; return formatted_message;
+}
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

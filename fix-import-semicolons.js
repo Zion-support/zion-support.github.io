@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
@@ -16,19 +17,14 @@ files && files.forEach((file) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
     // Fix import statements missing semicolons;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-<<<<<<< HEAD
-=======
-
-    const matches = content && content.match(importRegex);
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -69,13 +65,6 @@ if (.ends_with (") {
         }
       });
     }
-<<<<<<< HEAD
-=======
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -122,14 +111,6 @@ if (&&) {
         return match;
       }
     );
-<<<<<<< HEAD
-=======
-
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     // Check condition
 if ( {) {

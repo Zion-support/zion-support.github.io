@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
@@ -40,7 +43,11 @@ class AggressiveSyntaxFixer {;
     }
 ;
     async fixAllSyntaxErrors() {;
+<<<<<<< HEAD
         this.log('🔧 Starting aggressive syntax error fixing...'),;
+=======
+        this.log(' Starting aggressive syntax error fixing...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
         try {;
             // Get all TypeScript and JavaScript files;
@@ -48,15 +55,25 @@ class AggressiveSyntaxFixer {;
                 ignore:['node_modules/**.next/**', 'dist/**build/**'];
             }),;
 ;
+<<<<<<< HEAD
             this.log(`📁 Found ${files.length} files to check`),;
+=======
+            this.log(` Found ${files.length} files to check`),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
             for (const file of files) {;
                 await this.fixFile(file),;
             }
 ;
+<<<<<<< HEAD
             this.log(`✅ Fixed ${this.fixedFiles.length} files`),;
             if (this.errors.length > 0) {;
                 this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`),;
+=======
+            this.log(` Fixed ${this.fixedFiles.length} files`),;
+            if (this.errors.length > 0) {;
+                this.log(`  ${this.errors.length} files had errors that couldn't be auto-fixed`),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
 ;
             return {;
@@ -65,7 +82,11 @@ class AggressiveSyntaxFixer {;
             },;
 ;
         } catch (error) {;
+<<<<<<< HEAD
             this.log(`❌ Error fixing syntax:${error.message}`),;
+=======
+            this.log(` Error fixing syntax:${error.message}`),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             throw error,;
         }
     }
@@ -81,12 +102,20 @@ class AggressiveSyntaxFixer {;
                 const fixedContent = this.createValidFile(filePath),;
                 fs.writeFileSync(fullPath, fixedContent),;
                 this.fixedFiles.push(filePath),;
+<<<<<<< HEAD
                 this.log(`✅ Fixed:${filePath}`),;
+=======
+                this.log(` Fixed:${filePath}`),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
 ;
         } catch (error) {;
             this.errors.push({ file:filePath, error:error.message }),;
+<<<<<<< HEAD
             this.log(`❌ Error fixing ${filePath} ${error.message}`),;
+=======
+            this.log(` Error fixing ${filePath} ${error.message}`),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
     }
 ;
@@ -175,24 +204,40 @@ async function main() {;
         const result = await fixer.fixAllSyntaxErrors(),;
         const report = await fixer.generateReport(),;
         ;
+<<<<<<< HEAD
         logger.info('\n📊 Aggressive Syntax Fix Report:'),;
+=======
+        logger.info('\n Aggressive Syntax Fix Report:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         logger.info(`Files Fixed:${report.summary.totalFixed}`),;
         logger.info(`Errors:${report.summary.totalErrors}`),;
         logger.info(`Success Rate:${report.summary.successRate.toFixed(1)}%`),;
         ;
         if (result.fixedFiles.length > 0) {;
+<<<<<<< HEAD
             logger.info('\n✅ Fixed Files:'),;
+=======
+            logger.info('\n Fixed Files:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             result.fixedFiles.forEach(file => logger.info(`  - ${file}`)),;
         }
         ;
         if (result.errors.length > 0) {;
+<<<<<<< HEAD
             logger.info('\n❌ Files with Errors:'),;
+=======
+            logger.info('\n Files with Errors:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             result.errors.forEach(({ file, error }) => logger.info(`  - ${file} ${error}`)),;
         }
         ;
         process.exit(0),;
     } catch (error) {;
+<<<<<<< HEAD
         logger.error('❌ Aggressive syntax fixing failed:', error.message),;
+=======
+        logger.error(' Aggressive syntax fixing failed:', error.message),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         process.exit(1),;
     }
 }
@@ -205,13 +250,21 @@ module.exports = AggressiveSyntaxFixer, ;
 ;
 // Graceful shutdown handling;
 process.on('SIGINT', () => {;
+<<<<<<< HEAD
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
+=======
+  // // // console.log('\n Received SIGINT, shutting down gracefully...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Add cleanup logic here;
   process.exit(0),;
 }),;
 ;
 process.on('SIGTERM', () => {;
+<<<<<<< HEAD
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),;
+=======
+  // // // console.log('\n Received SIGTERM, shutting down gracefully...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Add cleanup logic here;
   process.exit(0),;
 }),;
@@ -259,4 +312,7 @@ new winston.transports.File ({
 process.on ('SIGTERM', () => {
   // Add cleanup logic here process.exit (0) 
 });
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

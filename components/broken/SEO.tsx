@@ -473,9 +473,12 @@ const SEO: React.FC < SEOProps> = ({
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -649,6 +652,7 @@ const SEO: React.FC < SEOProps> = ({
         }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -665,6 +669,8 @@ const SEO: React.FC < SEOProps> = ({
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -704,6 +710,7 @@ const SEO: React.FC < SEOProps> = ({
         />;
       )}
     </Head>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
       />
@@ -730,6 +737,9 @@ const SEO: React.FC < SEOProps> = ({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData)
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
@@ -743,9 +753,10 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-export default SEO;  );
+export default SEO;  )
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default SEO;
@@ -756,6 +767,8 @@ export default SEO;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </Head>
     </Head>
 

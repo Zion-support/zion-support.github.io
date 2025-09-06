@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
 =======
 import { useState } from 'react',;
@@ -9,6 +10,11 @@ import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
+=======
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 ;
 interface AIEnhancementButtonProps {;
@@ -61,13 +67,29 @@ export function AIEnhancementButton({;
       {isEnhancing ? (;
         <Loader2 className="h-3 w-3 animate-spin" />;
       ) :(;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Sparkles className="h-3 w-3" />;
       )}
       <span className="text-xs">{buttonText}</span>;
     </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
 
+=======
+  ),;}
+ currentContent;
+enhancementType;
+context);
+) : (<Sparkles className="h-3 w-3" />) ;
+:temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
+}</Button>) ;"}"
+}</Button>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/AIEnhancementButton.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

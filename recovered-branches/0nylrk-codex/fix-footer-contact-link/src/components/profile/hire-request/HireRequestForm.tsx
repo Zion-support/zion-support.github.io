@@ -13,30 +13,9 @@ import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ProjectDetailsField} from "./ProjectDetailsField";
 import {TimelineField} from "./TimelineField";
 import {BudgetFields} from "./BudgetFields";
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface HireRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  initialJobTitle?: string;
-  userDetails?: {;
-    name?: string;
-    email?: string;
-<<<<<<< HEAD
-
-
-
-
-=======
-export interface HireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,;
-  initialJobTitle?: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -53,6 +32,7 @@ export interface HireRequestFormProps {
   talent: TalentProfile
   onClose: () => void
 
+<<<<<<< HEAD
   initialJobTitle?: string;
 <<<<<<< HEAD
 import { TimelineField } from "./TimelineField",
@@ -112,9 +92,16 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     talent
     onClose: onSubmitSuccess |onClose
 
+=======
+  initialJobTitle?: string;  onSubmitSuccess?: () => void
+}
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     initialJobTitle;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     userDetails
+<<<<<<< HEAD
   }),
 <<<<<<< HEAD
 
@@ -127,6 +114,11 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  });    initialJobTitle;
+    userDetails
+  });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -147,6 +139,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             disabled={isSubmitting}
           >
             Cancel
+<<<<<<< HEAD
           </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -486,3 +479,6 @@ return (<Form {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </Button>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

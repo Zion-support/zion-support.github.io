@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,8 +13,11 @@ export interface EmergingTechService2029V2 {
 export interface EmergingTechService2029V2 {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
-  name: string;
+  name: string,
   description: string;
   category: string[];
   price: string;
@@ -48,9 +52,6 @@ export interface EmergingTechService2029V2 {;
     website: string;
 <<<<<<< HEAD
 =======
-
-
-<<<<<<< HEAD
 
     address: string;
   }
@@ -114,32 +115,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       'Implementation team',
     ],
     compliance: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise - grade, global deployment',    roi: '600% within 24 months',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    deployment: 'Hardware appliances, cloud options',
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
     documentation: 'Security guides, best practices',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    api: 'Security management APIs',
-    mobile: 'Mobile security apps',    security: 'Quantum - safe encryption, zero - trust',    backup: 'Secure backup, disaster recovery',
-    monitoring: 'Real - time security monitoring',
-=======
-
-    api: 'Security management APIs', mobile: 'Mobile security apps',
-    security: 'Quantum-safe encryption, zero-trust',
-    backup: 'Secure backup, disaster recovery',
-    monitoring: 'Real-time security monitoring',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     analytics: 'Security insights, threat intelligence',
     customization: 'Custom security policies, integration',
     whiteLabel: 'Available for security providers', affiliate: '20% commission for referrals',
@@ -601,12 +579,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
     documentation: 'Security guides, best practices',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    api: 'Security management APIs', mobile: 'Mobile security apps',
     security: 'Quantum-safe encryption, zero-trust',
     backup: 'Secure backup, disaster recovery',
     monitoring: 'Real-time security monitoring',
@@ -642,6 +614,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     support: ['24/7 research supportBiotech expertsImplementation team'], compliance: ['FDAISO 13485GMPResearch ethics'],
     scalability: 'Research-grade, scalable deployment',
     roi: '800% within 36 months',
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1049,12 +1022,14 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 ];
 export interface EmergingTechService2029V2 {;
   id: string,;
-  name: string,;
+  name: string,,
   description: string,;
   category: string[],;
   price: string,;
@@ -1097,8 +1072,8 @@ export interface EmergingTechService2029V2 {;
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   {;
     id: 'quantum-internet-security-gateway',;
-    name: 'Quantum Internet Security Gateway',;
-    description: 'Next-generation quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.',;
+    name: 'Quantum Internet Security Gateway',,
+  description: 'Next-generation quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.',;
     category: ['CybersecurityQuantum ComputingInternet SecurityEncryptionNetwork Security'],;
     price: '$15,999/month',;
     features: [;
@@ -1144,8 +1119,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   },;
   {;
     id: 'biotech-dna-computing-platform',;
-    name: 'Biotech DNA Computing Platform',;
-    description: 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.',;
+    name: 'Biotech DNA Computing Platform',,
+  description: 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.',;
     category: ['BiotechnologyComputingData StorageResearchInnovation'],;
     price: '$25,999/month',;
     features: [;
@@ -1191,8 +1166,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   },;
   {;
     id: 'quantum-financial-trading-platform',;
-    name: 'Quantum Financial Trading Platform',;
-    description: 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.',;
+    name: 'Quantum Financial Trading Platform',,
+  description: 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.',;
     category: ['FintechQuantum ComputingTradingFinanceAnalytics'],;
     price: '$35,999/month',;
     features: [;
@@ -1238,8 +1213,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   },;
   {;
     id: 'quantum-creativity-studio',;
-    name: 'Quantum Creativity Studio',;
-    description: 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',;
+    name: 'Quantum Creativity Studio',,
+  description: 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',;
     category: ['CreativityQuantum ComputingAIDesignArt'],;
     price: '$1,999/month',;
     features: [;
@@ -1294,6 +1269,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1367,3 +1343,5 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface SpaceTechService {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -61,23 +64,6 @@ export interface SpaceTechService {
     realService: true
     technology: [
   {
-=======
-
-
-  {
-
-      'Multi-satellite coordination',
-    id: 'satellite - constellation - management',
-    name: 'Satellite Constellation Management System',
-    tagline: 'Manage large satellite networks with AI - powered optimization',
-    price: '$3, 999',
-    period: '/month',
-    description:;
-      'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
-    features: [;
-      'Multi - satellite coordination',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -89,6 +75,7 @@ export interface SpaceTechService {
       'API for integration',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛰️',
 <<<<<<< HEAD
 =======
@@ -912,6 +899,9 @@ export interface SpaceTechService {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true
+=======
+    icon: '🛰️',    realImplementation: true
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
     launchDate: '2024-01-15'
@@ -1184,8 +1174,6 @@ export interface SpaceTechService {;
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-=======
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1193,12 +1181,12 @@ export interface SpaceTechService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
     launchDate: '2024-03-10'
     customers: 500
     rating: 4.9
     reviews: 250
+<<<<<<< HEAD
   }
 =======
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
@@ -1210,6 +1198,9 @@ export interface SpaceTechService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+  }];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1221,6 +1212,7 @@ export interface SpaceTechService {;
     rating: 4.9
 
     reviews: 250
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1235,10 +1227,14 @@ export interface SpaceTechService {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string,;
+=======
+  }
+];  id: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1280,8 +1276,8 @@ export const spaceTechServices: SpaceTechService[] = [;
     name: 'Space Mission Management Platform',;
     tagline: 'Complete space mission planning and execution platform',;
     price: '$5,999',;
-    period: '/month',;
-    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
+    period: '/month',,
+  description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
     features: [;
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',;
       'Regulatory compliance toolsMulti-satellite operations';
@@ -1325,18 +1321,14 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500;
     rating: 4.9,
     reviews: 250;
-<<<<<<< HEAD
 
   }
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
+;  }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

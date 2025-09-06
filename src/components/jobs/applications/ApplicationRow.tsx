@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -11,15 +12,14 @@ import { ApplicationActions } from "./ApplicationActions",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ApplicationRowProps {
-  application: JobApplication;
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
-
-
-
-
 export function ApplicationRow({
 
   application
@@ -30,6 +30,7 @@ export function ApplicationRow({
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface ApplicationRowProps {
@@ -38,6 +39,35 @@ interface ApplicationRowProps {
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
   onViewScore: (application: JobApplication) => void
+=======
+import { formatDistanceToNow } from 'date-fns';
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict;
+import { TableRow, TableCell } from '@/components/ui/table';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+import { StatusBadge } from './StatusBadge';
+import { ScoreBadge } from './ScoreBadge';
+import { ApplicationActions } from './ApplicationActions';
+import Image from 'next/image'; // Import next/image;
+import React, { useState } from 'react'; // Import useState;
+
+interface ApplicationRowProps {;
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (;
+    applicationId: string,;
+    newStatus: ApplicationStatus;
+  ) => Promise<void>;
+  onViewScore: (application: JobApplication) => void;
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string,) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
+  onViewScore: (application: JobApplication,) => void;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export function ApplicationRow({
@@ -50,12 +80,17 @@ export function ApplicationRow({
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Unknown",
 
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+
   return (
-    <TableRow key={application.id}>
+  const talentName = application.talent_profile?.full_name |'Unknown'
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'    <TableRow key={application.id}>
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
+<<<<<<< HEAD
               <Image
 <<<<<<< HEAD
 =======
@@ -99,23 +134,28 @@ export function ApplicationRow({
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
 
         </div>
+=======
+              <Image        </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Button 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           variant="ghost" 
           size="sm" 
           onClick={() => onViewScore(application)}
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-
 
           <ScoreBadge application={application} />
         </Button>
@@ -281,11 +321,14 @@ export function ApplicationRow({;
         </Button>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
         {application.resume ? (;
           <Button variant="ghost" size="sm" asChild>;
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h-4 w-4 mr-1" /> View;
             </a>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
@@ -327,5 +370,9 @@ export function ApplicationRow({;
       </TableCell>;
     </TableRow>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

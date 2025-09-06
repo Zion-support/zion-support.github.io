@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -33,3 +34,323 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+class SecurityEnhancer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.securityIssues = [];
+    this.improvements = [];
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runSecurityAudit() {
+    this.log('🔒 Running security audit...');
+    
+    try {
+      const auditResult = execSync('npm audit --json', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      
+      const auditData = JSON.parse(auditResult);
+      
+      if (auditData.vulnerabilities) {
+        Object.entries(auditData.vulnerabilities).forEach(([packageName, vuln]) => {
+          this.securityIssues.push({
+            type: 'vulnerability',
+            package: packageName,
+            severity: vuln.severity,
+            description: vuln.description,
+            recommendation: 'Update package to fix vulnerability'
+          });
+        });
+      }
+      
+      this.log(`✅ Security audit completed - found ${this.securityIssues.length} vulnerabilities`, 'SUCCESS');
+    } catch (error) {
+      this.log('⚠️ Security audit failed, continuing...', 'WARNING');
+    }
+  }
+
+  async checkEnvironmentVariables() {
+    this.log('🔐 Checking environment variables...');
+    
+    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
+    
+    for (const envFile of envFiles) {
+      const envPath = path.join(this.projectRoot, envFile);
+      if (fs.existsSync(envPath)) {
+        try {
+          const content = fs.readFileSync(envPath, 'utf8');
+          const lines = content.split('\n');
+          
+          lines.forEach((line, index) => {
+            if (line.includes('PASSWORD') || line.includes('SECRET') || line.includes('KEY')) {
+              if (line.includes('=') && !line.includes('#')) {
+                const [key] = line.split('=');
+                this.securityIssues.push({
+                  type: 'sensitive-env',
+                  file: envFile,
+                  line: index + 1,
+                  key: key.trim(),
+                  recommendation: 'Ensure sensitive environment variables are properly secured'
+                });
+              }
+            }
+          });
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+    
+    this.log('✅ Environment variables check completed', 'SUCCESS');
+  }
+
+  async checkDependencies() {
+    this.log('📦 Checking dependencies for security issues...');
+    
+    const packageJsonPath = path.join(this.projectRoot, 'package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      try {
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+        const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+        
+        // Check for known vulnerable packages
+        const vulnerablePackages = [
+          'lodash', 'moment', 'jquery', 'express', 'mongoose'
+        ];
+        
+        Object.keys(dependencies).forEach(dep => {
+          if (vulnerablePackages.includes(dep)) {
+            this.securityIssues.push({
+              type: 'potentially-vulnerable',
+              package: dep,
+              version: dependencies[dep],
+              recommendation: 'Check for security updates and consider alternatives'
+            });
+          }
+        });
+        
+        this.log('✅ Dependencies check completed', 'SUCCESS');
+      } catch (error) {
+        this.log('❌ Failed to check dependencies', 'ERROR');
+      }
+    }
+  }
+
+  async checkCodeSecurity() {
+    this.log('🔍 Checking code for security issues...');
+    
+    const srcDir = path.join(this.projectRoot, 'src');
+    const pagesDir = path.join(this.projectRoot, 'pages');
+    const appDir = path.join(this.projectRoot, 'app');
+    
+    const directories = [srcDir, pagesDir, appDir].filter(dir => fs.existsSync(dir));
+    
+    for (const dir of directories) {
+      const files = this.getAllFiles(dir, ['.js', '.jsx', '.ts', '.tsx']);
+      
+      for (const file of files) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          
+          // Check for dangerous patterns
+          const dangerousPatterns = [
+            { pattern: /eval\s*\(/, message: 'eval() usage detected - security risk' },
+            { pattern: /innerHTML\s*=/, message: 'innerHTML usage detected - XSS risk' },
+            { pattern: /document\.write/, message: 'document.write usage detected - XSS risk' },
+            { pattern: /localStorage\.setItem.*password/i, message: 'Password stored in localStorage - security risk' },
+            { pattern: /sessionStorage\.setItem.*password/i, message: 'Password stored in sessionStorage - security risk' }
+          ];
+          
+          dangerousPatterns.forEach(({ pattern, message }) => {
+            if (pattern.test(content)) {
+              this.securityIssues.push({
+                type: 'code-security',
+                file: file,
+                issue: message,
+                recommendation: 'Review and fix security vulnerability'
+              });
+            }
+          });
+          
+          // Check for proper input validation
+          if (content.includes('useState') && !content.includes('validation')) {
+            this.securityIssues.push({
+              type: 'input-validation',
+              file: file,
+              issue: 'Missing input validation',
+              recommendation: 'Add proper input validation for user inputs'
+            });
+          }
+          
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+    
+    this.log('✅ Code security check completed', 'SUCCESS');
+  }
+
+  getAllFiles(dir, extensions) {
+    const files = [];
+    if (!fs.existsSync(dir)) return files;
+    
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files.push(...this.getAllFiles(fullPath, extensions));
+      } else if (stat.isFile()) {
+        const ext = path.extname(item).toLowerCase();
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    return files;
+  }
+
+  async createSecurityConfigurations() {
+    this.log('🛡️ Creating security configurations...');
+    
+    // Create Content Security Policy
+    const cspConfig = {
+      "directives": {
+        "default-src": ["'self'"],
+        "script-src": ["'self'", "'unsafe-inline'"],
+        "style-src": ["'self'", "'unsafe-inline'"],
+        "img-src": ["'self'", "data:", "https:"],
+        "connect-src": ["'self'"],
+        "font-src": ["'self'"],
+        "object-src": ["'none'"],
+        "media-src": ["'self'"],
+        "frame-src": ["'none'"]
+      }
+    };
+    
+    fs.writeFileSync('csp-config.json', JSON.stringify(cspConfig, null, 2));
+    
+    // Create security headers configuration
+    const securityHeaders = {
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "origin-when-cross-origin",
+      "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+    };
+    
+    fs.writeFileSync('security-headers.json', JSON.stringify(securityHeaders, null, 2));
+    
+    this.improvements.push({
+      type: 'configuration',
+      name: 'Content Security Policy',
+      status: 'created'
+    });
+    
+    this.improvements.push({
+      type: 'configuration',
+      name: 'Security Headers',
+      status: 'created'
+    });
+    
+    this.log('✅ Security configurations created', 'SUCCESS');
+  }
+
+  async generateSecurityReport() {
+    this.log('📊 Generating security report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      securityIssues: this.securityIssues,
+      improvements: this.improvements,
+      summary: {
+        totalIssues: this.securityIssues.length,
+        vulnerabilities: this.securityIssues.filter(i => i.type === 'vulnerability').length,
+        codeIssues: this.securityIssues.filter(i => i.type === 'code-security').length,
+        envIssues: this.securityIssues.filter(i => i.type === 'sensitive-env').length,
+        improvements: this.improvements.length
+      },
+      recommendations: this.generateRecommendations()
+    };
+    
+    fs.writeFileSync('security-enhancement-report.json', JSON.stringify(report, null, 2));
+    this.log('✅ Security report generated', 'SUCCESS');
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    const vulnerabilities = this.securityIssues.filter(i => i.type === 'vulnerability');
+    if (vulnerabilities.length > 0) {
+      recommendations.push(`Fix ${vulnerabilities.length} security vulnerabilities`);
+    }
+    
+    const codeIssues = this.securityIssues.filter(i => i.type === 'code-security');
+    if (codeIssues.length > 0) {
+      recommendations.push(`Address ${codeIssues.length} code security issues`);
+    }
+    
+    const envIssues = this.securityIssues.filter(i => i.type === 'sensitive-env');
+    if (envIssues.length > 0) {
+      recommendations.push(`Secure ${envIssues.length} sensitive environment variables`);
+    }
+    
+    recommendations.push('Implement Content Security Policy');
+    recommendations.push('Add security headers');
+    recommendations.push('Regular security audits');
+    recommendations.push('Input validation and sanitization');
+    
+    return recommendations;
+  }
+
+  async run() {
+    this.log('🚀 Starting Security Enhancer');
+    this.log('='.repeat(50));
+    
+    await this.runSecurityAudit();
+    await this.checkEnvironmentVariables();
+    await this.checkDependencies();
+    await this.checkCodeSecurity();
+    await this.createSecurityConfigurations();
+    await this.generateSecurityReport();
+    
+    this.log('\n📊 Security Enhancement Summary');
+    this.log(`Total security issues: ${this.securityIssues.length}`);
+    this.log(`Vulnerabilities: ${this.securityIssues.filter(i => i.type === 'vulnerability').length}`);
+    this.log(`Code issues: ${this.securityIssues.filter(i => i.type === 'code-security').length}`);
+    this.log(`Environment issues: ${this.securityIssues.filter(i => i.type === 'sensitive-env').length}`);
+    this.log(`Improvements made: ${this.improvements.length}`);
+    
+    this.log('\n✅ Security enhancement completed!');
+  }
+}
+
+const enhancer = new SecurityEnhancer();
+enhancer.run().catch(console.error);
+
+module.exports = SecurityEnhancer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

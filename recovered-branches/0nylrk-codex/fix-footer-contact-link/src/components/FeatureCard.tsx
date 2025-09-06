@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ interface FeatureCardProps {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   key?: string | number; // Added key prop;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -44,6 +47,7 @@ import React from "react",
 =======
 
     <div
+<<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
 
@@ -88,6 +92,9 @@ import React from "react",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FeatureCardProps {
+=======
+      className={cn(interface FeatureCardProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -105,66 +112,26 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         {icon}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    </div>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  );
-}
-  )
-import { cn } from "@/lib/utils",;
-import React from "react",;
-interface FeatureCardProps {;
-  title: string,;
-  description: string,;
-  icon: React.ReactNode,;
-  className?: string,;
-  key?: string | number, // Added key prop;
-}
-;
-export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {;
-  return (;
-    <div className={cn(;
-      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300";
-      className;
-    )}>;
-      <div className="mr-4 text-zion-cyan p-2">;
-        {icon}
-      </div>;
-<<<<<<< HEAD
-  return (
-    <div
-      className={cn(
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300",
-        className,
+      </div>        className,
       )}>;
       <div className="mr-4 text-zion-cyan p-2">{icon}</div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div>;
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 
@@ -191,10 +158,13 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      </div>;  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn  } from '@/lib / utils';
 import React from './react';
 interface FeatureCardProps {
-  title: string;
+  title: string,
   description: string;
   icon: React.ReactNode;
   class_name?: string;
@@ -211,24 +181,15 @@ function FeatureCard() {
         class_name,
       )}
     >;
-      <div className="mr - 4 text - zion - cyan p - 2">{icon}</div>;
+      <div className="mr - 4 text - zion - cyan p-2">{icon}</div>;
       <div>;
-        <h3 className="text - lg font - bold mb - 2 text - white">{title}</h3>;
-        <p className="text - zion - slate - light">{description}</p>;
+        <h3 className="text - lg font - bold mb - 2 text-white">{title}</h3>;
+        <p className="text - zion - slate-light">{description}</p>;
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
-=======
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-
 
 }
 
@@ -236,7 +197,7 @@ import { cn } from "@/lib/utils",;
 import React from "react",;
 ;
 interface FeatureCardProps {;
-  title:string,;
+  title:string,,
   description:string,;
   icon:React.ReactNode,;
   className?:string,;
@@ -259,8 +220,8 @@ export function FeatureCard({ title, description, icon, className } FeatureCardP
     </div>;
   ),;}
  interface FeatureCardProps {
-  title: string;
-description: string;
+  title: string,
+  description: string;
 icon: React.ReactNode;
 className?: string;
 key?: string | number, //Added key prop 
@@ -273,8 +234,11 @@ key?: string | number, //Added key prop
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

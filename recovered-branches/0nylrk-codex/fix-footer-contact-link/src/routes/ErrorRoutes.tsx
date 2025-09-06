@@ -45,6 +45,7 @@ import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const ErrorRoutes = () => {
 =======
@@ -52,11 +53,15 @@ const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+=======
+const ErrorRoutes = () => {  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 },;
@@ -71,17 +76,15 @@ export default ErrorRoutes;
 export default ErrorRoutes;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
-
-=======
-=======
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import NotFound from "@/pages/NotFound";
@@ -98,44 +101,20 @@ import { Route, Routes } from "react-router-dom",;
 import NotFound from "@/pages/NotFound",;
 import Unauthorized from "@/pages/Unauthorized",;
 
-
-
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />;
-      <Route path="*" element={<NotFound />} />;
+      <Route path="*" element={<NotFound />} />
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 },
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default ErrorRoutes;
-
-=======
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import NotFound from "@/pages / NotFound";
-import Unauthorized from "@/pages / Unauthorized";
-const ErrorRoutes = () =>: any {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Routes>;
       {/* Error Routes */}
+<<<<<<< HEAD
 export default ErrorRoutes;
 <<<<<<< HEAD
 ;
@@ -169,3 +148,6 @@ export default ErrorRoutes;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default ErrorRoutes;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

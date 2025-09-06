@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -56,6 +56,11 @@ export function useConversationState() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from 'react';
 import {Conversation, Message} from '@/types / messaging';
 /**;
@@ -82,6 +87,7 @@ function useConversationState() {
     conversations;
     set_conversations;
     unread_count;
+<<<<<<< HEAD
     setUnreadCount;
 <<<<<<< HEAD
 
@@ -106,6 +112,9 @@ function useConversationState() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+    setUnreadCount;    activeConversation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 /**;
@@ -134,47 +143,4 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-
-import { useState } from 'react',;
-import { Conversation, Message } from '@/types/messaging',;
-;
-/**;
- * Hook to manage messaging state;
- */;
-export function useConversationState() {;
-  const [messages, setMessages] = useState<Message[]>([]),;
-  const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
-  const [conversations, setConversations] = useState<Conversation[]>([]),;
-  const [unreadCount, setUnreadCount] = useState(0),;
-  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
-  const [isLoading, setIsLoading] = useState(false),;
-;
-  return {;
-    // State;
-    messages,;
-    setMessages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    setIsLoading},;
-} /** * Hook to manage messaging state */ 
-}
-    setActiveConversation;
-    isLoading;
-    setIsLoading}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}}

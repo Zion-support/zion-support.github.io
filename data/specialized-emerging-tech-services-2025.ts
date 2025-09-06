@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -8,11 +9,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -38,21 +41,12 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   market_advantage: string;
@@ -585,10 +579,13 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
     }
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },;
+<<<<<<< HEAD
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
 =======
 <<<<<<< HEAD
@@ -608,14 +605,18 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  ],
+  description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
     ];
-<<<<<<< HEAD
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
+<<<<<<< HEAD
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1015,3 +1016,13 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
+=======
+    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];  }
+];
+;    ];
+
+    popular: true, icon: '🧠',
+
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

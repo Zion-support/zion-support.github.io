@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@ import { cn } from '@/lib/utils';'''; import * as _React from 'react'; const Tex
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { cn } from \'@/lib/utils\';\''\'; import * as React from \'react\'; const Textarea = React && React.forwardRef(({ className,...props },ref) => {} return (); <textarea\' className={cn(\'' \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\', className )} ref={ref} {...props} /> );});\'; Textarea && Textarea.displayName = \'Textarea\'; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea };
+=======
+import { cn } from '@/lib/utils';'''; import * as _React from 'react'; const Textarea = _React.forwardRef(({ className,...props },ref) => {} return(); <textarea'; className={cn(''; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )} ref={ref} {...props} /> );});'; Textarea.displayName = 'Textarea'; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea };import { cn } from \'@/lib/utils\';\''\'; import * as React from \'react\'; const Textarea = React && React.forwardRef(({ className,...props },ref) => {} return (); <textarea\' className={cn(\'' \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\', className )} ref={ref} {...props} /> );});\'; Textarea && Textarea.displayName = \'Textarea\'; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { cn } from "@/lib/utils";"""; import * as React from "react"; const Textarea = React && React.forwardRef(({ className,.props },ref) => {} return (); <textarea" className={cn("" "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50", className )} ref={ref} {.props} /> );});"; Textarea && Textarea.displayName = "Textarea"; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea };"""
 
 import { cn } from '@/lib/utils';'''; import * as _React from 'react'; const Textarea = _React && _React.forwardRef(({ className,...props },ref) => {} return (); <textarea' className={cn('' 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50, className )} ref={ref} {...props} /> );});'; Textarea && Textarea.displayName = 'Textarea'; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea }; export { Textarea };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +56,5 @@ import { cn } from '@/lib/utils';'''; import * as _React from 'react'; const Tex
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

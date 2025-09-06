@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+totalSize = getDirectorySize(buildDir);
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')      return size}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -76,7 +83,11 @@ async function runSimpleAutomation() {
         const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio": 'pipe' };);
         const auditData = JSON.parse(result;);
         return { ;
+<<<<<<< HEAD
           "status": 'success',
+=======
+          "status": 'success', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           "vulnerabilities": auditData.vulnerabilities || 0,
           "advisories": auditData.advisories || 0
         }} catch (error) {
@@ -90,7 +101,11 @@ async function runSimpleAutomation() {
     ) {
         const stats = analyzeBuildSize(buildDi}r;);
         return { ;
+<<<<<<< HEAD
           "status": 'success',
+=======
+          "status": 'success', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           "totalSize": stats.totalSize,
           "recommendations": stats.recommendations
         }} else {
@@ -140,7 +155,16 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -228,6 +252,7 @@ async function runSimpleAutomation() {
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
+<<<<<<< HEAD
 
       this.generateReport();
       this.log('✅ Automation completed successfully');
@@ -245,6 +270,10 @@ async function runSimpleAutomation() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      
+      return size}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     totalSize = getDirectorySize(buildDir);
     const recommendations = [];
     if ( { // > 1MB
@@ -270,6 +299,7 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -278,6 +308,13 @@ module.exports = { runSimpleAutomation }) {
   runSimpleAutomation().catch(console.error)}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+module.exports = SimpleAutomationRunner;
+module.exports = SimpleAutomationRunner;
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -306,6 +343,7 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+<<<<<<< HEAD
 
         "status"
         "status"
@@ -316,3 +354,13 @@ const { execSync } = require('child_process')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

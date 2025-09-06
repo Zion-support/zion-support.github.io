@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -28,6 +29,12 @@ interface NotificationListProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 =======
 <<<<<<< HEAD
@@ -42,7 +49,11 @@ interface NotificationListProps {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
@@ -217,8 +228,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -275,6 +293,7 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Bell } from 'lucide-react';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -422,8 +441,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -431,6 +454,10 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -510,14 +537,26 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

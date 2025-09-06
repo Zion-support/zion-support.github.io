@@ -108,14 +108,17 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
         {/* Header */}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <motion.div
   const formatPrice = (price: string) => {;
-    return price && price.replace('$', '').replace(, '');
-  };
+    return price && price.replace('$', '').replace(, '')
+};
 
   return (
         {/* Header */}
@@ -319,10 +322,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Search and Filters */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -431,10 +437,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Category Filter */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -511,13 +520,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 <motion.div
                 <span className='text - xs bg - white / 20 px - 2 py - 1 rounded - full'>;
                   {category.count}
-                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">{category.count}</span>;
+                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py-1 rounded-full">{category.count}</span>;
               </button>))}
           </div>;
         </motion.div>;
         {/* Services Display */}
         {view_mode === 'grid' ? (
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             <AnimatePresence>;
               {filtered_services.map ((service, index) => (
                 <motion.div;
@@ -620,7 +629,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
@@ -708,7 +716,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
 
                     {/* CTA */}
                     <a
@@ -1025,11 +1032,11 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
             </p>          </motion.div>
 
           </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1040,6 +1047,8 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         )}
 
         )}
@@ -1110,7 +1119,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
     </section>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-
 
                 Call +1 302 464 0950;
               </a>;

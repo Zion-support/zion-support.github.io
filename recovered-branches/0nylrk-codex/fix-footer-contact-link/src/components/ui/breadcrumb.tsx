@@ -1,19 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import * as React from "react"
 
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
+<<<<<<< HEAD
 
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
@@ -61,21 +55,18 @@ const Breadcrumb = React && React.forwardRef<;
  
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
-<<<<<<< HEAD
 >(({ className, separator, ...props }, ref) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->(({ className, separator, ...props }, ref) => (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  <nav
     ref={ref}
     aria-label="breadcrumb"
+<<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -490,11 +481,15 @@ export {;
 export {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    className={cn(export {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -508,10 +503,13 @@ export {;
 export {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
+<<<<<<< HEAD
   BreadcrumbSeparator,
 <<<<<<< HEAD
   BreadcrumbEllipsis}
@@ -569,3 +567,6 @@ return (<Comp ref= {
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  BreadcrumbSeparator,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

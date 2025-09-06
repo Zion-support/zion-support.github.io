@@ -66,8 +66,8 @@ import { motion } from 'framer-motion';
           accent: '#ffff00',;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;
           glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
-          glow: 'rgba(0, 255, 255, 0 && 0.3)';
-        };
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'
+};
       case 'neon-cyber':;
         return {;
           primary: '#ff0080',;
@@ -75,8 +75,8 @@ import { motion } from 'framer-motion';
           accent: '#8000ff',;
           background: 'rgba(0, 0, 0, 0 && 0.9)',;
           glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)';
-          glow: 'rgba(255, 0, 128, 0 && 0.4)';
-        };
+          glow: 'rgba(255, 0, 128, 0 && 0.4)'
+};
       case 'holographic-matrix':;
         return {;
           primary: '#00ff41',;
@@ -84,8 +84,8 @@ import { motion } from 'framer-motion';
           accent: '#0040ff',;
           background: 'rgba(0, 0, 0, 0 && 0.92)',;
           glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)';
-          glow: 'rgba(0, 255, 65, 0 && 0.35)';
-        };
+          glow: 'rgba(0, 255, 65, 0 && 0.35)'
+};
       case 'space-time':;
         return {;
           primary: '#ff6b35',;
@@ -93,16 +93,16 @@ import { motion } from 'framer-motion';
           accent: '#45b7d1',;
           background: 'rgba(0, 0, 0, 0 && 0.88)',;
           glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)';
-          glow: 'rgba(255, 107, 53, 0 && 0.3)';
-        };
+          glow: 'rgba(255, 107, 53, 0 && 0.3)'
+};
       default:;
         return {;
           primary: '#00ffff',;
           secondary: '#ff00ff',;
           accent: '#ffff00',;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;
-          glow: 'rgba(0, 255, 255, 0 && 0.3)',;
-        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',
+};    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 <<<<<<< HEAD
 
@@ -117,6 +117,7 @@ import { motion } from 'framer-motion';
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
+<<<<<<< HEAD
       particlesRef.current = [];
 <<<<<<< HEAD
 
@@ -149,6 +150,10 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     };
+=======
+      particlesRef.current = []
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -364,11 +369,11 @@ import { motion } from 'framer-motion';
                 scale_x: [0, 1, 0],              }}          }}
         />;
         {/* Holographic scan lines */}
-        <div className="absolute inset - 0 opacity - 20">;
+        <div className="absolute inset-0 opacity-20">;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
               key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via-current to-transparent";
               style={{
 <<<<<<< HEAD
 
@@ -420,7 +425,6 @@ import { motion } from 'framer-motion';
                 opacity: [0, 1, 0];
               }}
 
-
               transition={{
                 duration: 3
                 delay: i * 0.1
@@ -428,18 +432,17 @@ import { motion } from 'framer-motion';
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
 
-
-
-
-
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />
 
           ))}

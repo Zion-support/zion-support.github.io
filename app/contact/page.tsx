@@ -10,6 +10,7 @@ export const metadata = {
 =======
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
@@ -18,6 +19,11 @@ export const metadata = {
   description:
     "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  title: "Contact | Zion Tech Group",
+  description: "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
+  keywords: "contact, support, AI services, micro SaaS, IT services, consulting"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default function ContactPage() {

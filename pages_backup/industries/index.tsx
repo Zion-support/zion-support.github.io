@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -6,6 +7,8 @@
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -13,6 +16,7 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
 import React from 'react';
@@ -91,6 +95,20 @@ const industries = [
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/finance,',
+=======
+  Building,;
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import SimpleLayout from '../../components/SimpleLayout';
+  Brain;
+} from 'lucide-react';
+import Layout from '../../components/Layout';';
+  Brain;
+} from 'lucide-react';
+  Brain;
+} from 'lucide-react';    href: '/industries/finance,',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
   },
@@ -177,6 +195,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
     icon: Building,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -200,10 +219,108 @@ const stats = [
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
+=======
+    href: '/industries/government',
+    features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
+    color: 'from-gray-500 to-slate-500'
+  Brain;
+} from 'lucide-react';
+import SimpleLayout from '../../components/SimpleLayout';
+  Brain;
+} from 'lucide-react';
+import Layout from '../../components/Layout';';
+const industries = [;
+  {;
+    name: 'Healthcare',,
+  description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
+    icon: Heart,;
+    href: '/industries/healthcare',;
+    features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;
+    color: 'from-red-500 to-pink-500';
+    href: '/industries/healthcare,',;
+    features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;
+    color: 'from-red-500 to-pink-500'',;
+  },;
+  {;
+    name: 'Finance',,
+  description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',;
+    icon: DollarSign,;
+    href: '/industries/finance',;
+    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
+    color: 'from-green-500 to-emerald-500';
+    href: '/industries/finance',;
+    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
+    color: 'from-green-500 to-emerald-500';
+    href: '/industries/finance',;
+    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
+    color: 'from-green-500 to-emerald-500';
+    href: '/industries/finance,',;
+    features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',;
+    color: 'from-green-500 to-emerald-500'',;
+  },;
+  {;
+    name: 'Manufacturing',,
+  description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',;
+    icon: Settings,;
+    href: '/industries/manufacturing',;
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
+    color: 'from-blue-500 to-cyan-500';
+    href: '/industries/manufacturing',;
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
+    color: 'from-blue-500 to-cyan-500';
+    href: '/industries/manufacturing',;
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
+    color: 'from-blue-500 to-cyan-500';
+    href: '/industries/manufacturing,',;
+    features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',;
+    color: 'from-blue-500 to-cyan-500'',;
+  },;
+  {;
+    name: 'Retail',,
+  description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',;
+    icon: ShoppingCart,;
+    href: '/industries/retail',;
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
+    color: 'from-purple-500 to-violet-500';
+    href: '/industries/retail',;
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
+    color: 'from-purple-500 to-violet-500';
+    href: '/industries/retail',;
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
+    color: 'from-purple-500 to-violet-500';
+    href: '/industries/retail,',;
+    features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',;
+    color: 'from-purple-500 to-violet-500'',;
+  },;
+  {;
+    name: 'Education',,
+  description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',;
+    icon: BookOpen,;
+    href: '/industries/education',;
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
+    color: 'from-orange-500 to-yellow-500';
+    href: '/industries/education',;
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
+    color: 'from-orange-500 to-yellow-500';
+    href: '/industries/education',;
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
+    color: 'from-orange-500 to-yellow-500';
+    href: '/industries/education,',;
+    features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',;
+    color: 'from-orange-500 to-yellow-500'',;
+  },;
+  {;
+    name: 'Government',,
+  description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',;
+    icon: Building,;
+    href: '/industries/government',;
+    features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],;
+    color: 'from-gray-500 to-slate-500';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-;];
-
+];
 const stats = [;
+<<<<<<< HEAD
   { number: '500+, label: 'Industry Projects' },',
   { number: '50+, label: 'Fortune 500 Clients' },',
   { number: '99.9%, label: 'Uptime Guarantee' },',
@@ -229,6 +346,13 @@ export default function IndustriesPage() {
     <Layout);
       title="Industry Solutions - Zion Tech Group"";
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
+=======
+  { number: '500+', label: 'Industry Projects' },;
+  { number: '50+', label: 'Fortune 500 Clients' },;
+  { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
+  { number: '24/7', label: 'Industry Support' }
+];      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -277,6 +401,7 @@ const industries = [
     href: '/industries/government',
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
+<<<<<<< HEAD
 ]
 
 export default function Industries() {
@@ -310,9 +435,15 @@ export default function Industries() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-          <div className="absolute inset-0">";
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
@@ -347,6 +478,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
                 Industry Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -370,13 +502,54 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Industry-Specific{' '}',
+=======
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Industry-Specific{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
+                  Technology Solutions;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                We understand the unique challenges and requirements of different industries. Our specialized solutions ;
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
+                  View All Solutions;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Industries Grid */}
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center mb-16"
+              className="text-center"">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+                Industry-Specific{' '}',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
                   Technology Solutions;
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
                 We understand the unique challenges and requirements of different industries. Our specialized solutions;
+<<<<<<< HEAD
                 are designed to address sector-specific needs while ensuring compliance, security, and scalability.,
+=======
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
@@ -386,6 +559,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   View All Solutions;
                 </Link>;
               </div>;
+<<<<<<< HEAD
             </motion.div>;
           </div>;
         </section>;
@@ -418,19 +592,53 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </motion.div>
           </div>
         </section>
+=======
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Industries Grid */}
+        <section className="py-20 bg-gray-50">";
+          <div className="container mx-auto px-4">";
+                Industry-Specific{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
+                  Technology Solutions;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                We understand the unique challenges and requirements of different industries. Our specialized solutions ;
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
+                  View All Solutions;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Industries Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
               className="text-center"">;
+<<<<<<< HEAD
               <h1 className="text-4xl md: text-6xl font-bold mb-6">",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Industry-Specific{' '}',;
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
                   Technology Solutions;
                 </span>;
               </h1>;
+<<<<<<< HEAD
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">", We understand the unique challenges and requirements of different industries. Our specialized solutions,;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 are designed to address sector-specific needs while ensuring compliance, security, and scalability.,;
               </p>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">",;
@@ -457,9 +665,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Industries Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -467,6 +678,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
@@ -488,6 +700,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >,
+=======
+                return (
+                  <motion&& motion.div
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Industries We Serve;
               </h2>;
@@ -495,6 +713,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
                 and drive measurable business outcomes.;
               </p>;
+<<<<<<< HEAD
             </motion.div>;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -522,7 +741,30 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </motion.div>;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Industries We Serve
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges 
+                and drive measurable business outcomes.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => {
+                const IconComponent = industry.icon;
+                
+            >,
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
+                Industries We Serve;
+              </h2>;
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">";
+                Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
+                and drive measurable business outcomes.;
+              </p>;
+            </motion.div>;            >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industries We Serve
               </h2>
@@ -593,6 +835,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -685,10 +928,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         </section>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
               className="text-center mb-16"
 
 =======
@@ -731,10 +977,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 bg-white">"
+=======
+              className="text-center mb-16"        <section className="py-20 bg-white">"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -846,24 +1096,46 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <motion.div
+=======
+              whileInView={{ opacity: 1, y: 0 }}              <motion.div
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Cloud className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
                 <p className="text-gray-600">
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >,
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
+              </motion && motion.div>;
+
+              <motion&& motion.div
+                className="text-center p-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+                viewport={{ once: true }}>;
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">;
+                  <Cloud className="w-8 h-8 text-purple-600" />;
+                </div>;
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>;
+                <p className="text-gray-600">;
+              >,;                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Cloud className="w-8 h-8 text-purple-600" />";
                 </div>;
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>";
@@ -878,12 +1150,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
         {/* Stats Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
+<<<<<<< HEAD
                   key={index}
                   className="text-center"
 
@@ -899,9 +1175,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   key={index}
+                  className="text-center"                  key={index}
                   className="text-center""
                   initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -925,6 +1205,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >,
+=======
+                  whileInView={{ opacity: 1, y: 0 }}                >,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
                   </div>,
@@ -932,6 +1215,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>;
               ))}
             </div>,
+<<<<<<< HEAD
           </div>;
         </section>;
 
@@ -1090,3 +1374,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>
   );
 }
+=======
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  viewport={{ once: true }}>;
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
+                    {stat && stat.number}
+                  </div>;
+                  <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

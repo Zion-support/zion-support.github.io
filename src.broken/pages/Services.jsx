@@ -30,8 +30,13 @@ const Services = ({ className }) => {
       <h1>Services</h1>
       <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
+=======
+  )
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/NeonGlow.jsx

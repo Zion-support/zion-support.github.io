@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -28,6 +29,21 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
       <svg 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  className?: string;
+}
+export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4'
+    md: 'w-6 h-6'
+    lg: 'w-8 h-8'
+  }
+  return (
+    <div className={`flex items-center gap-3 ${className}`}>
+
+      <svg 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
@@ -35,13 +51,17 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   class_name?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -56,6 +76,9 @@ interface LoadingSpinnerProps {;
   className?: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======  className?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export default /**
  * LoadingSpinner - Function description
@@ -65,6 +88,7 @@ function LoadingSpinner() {
     sm: 'w - 4 h - 4',
     md: 'w - 6 h - 6',
     lg: 'w - 8 h - 8';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
@@ -104,6 +128,10 @@ function LoadingSpinner() {
         viewBox="0 0 24 24"
         fill="none"
       >
+=======
+  },
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <circle 
           className="opacity-25" 
           cx="12" 
@@ -122,9 +150,13 @@ function LoadingSpinner() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

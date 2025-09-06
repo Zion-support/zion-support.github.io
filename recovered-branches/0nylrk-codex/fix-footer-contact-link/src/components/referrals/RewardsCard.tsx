@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Card
@@ -51,35 +52,14 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-} from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
-import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSign, Badge } from "lucide-react";
-interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean;
-}
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from '@/components / ui / card';
 import { ReferralReward  } from '@/types / referrals';
 import { format_date  } from '@/utils / referral_utils';
@@ -114,6 +94,7 @@ if ( {) {
         </CardContent>
       </Card>
     );
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 
@@ -248,6 +229,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardHeader>;
+=======
+  }        <CardHeader>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardTitle className="flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5" />;
             Your Rewards;
@@ -260,17 +244,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
 
   if (rewards && rewards.length === 0) {;
-    return (
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    ),;
+    return (    ),;
   }
 ;
   if (rewards.length === 0) {;
@@ -279,39 +257,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   }
 ;
   if (rewards.length === 0) {;
-    return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <BadgeDollarSign className="h-5 w-5" />;
-            Your Rewards;
-          </CardTitle>;
-          <CardDescription>Rewards earned from successful referrals</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="flex flex-col items-center justify-center p-4 text-center">;
-            <p className="text-muted-foreground">No rewards yet</p>;
-            <p className="text-sm text-muted-foreground mt-1">;
-              Refer users to earn rewards once they complete onboarding;
-            </p>;
-          </div>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    );
+    return (;    );
   }
   return (
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
@@ -319,8 +267,8 @@ if ( {) {
     return (
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <BadgeDollarSign className="h - 5 w - 5" />;
+          <CardTitle className="flex items - center gap-2">;
+            <BadgeDollarSign className="h - 5 w-5" />;
             Your Rewards;
           </CardTitle>;
           <CardDescription>;
@@ -328,9 +276,9 @@ if ( {) {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <div className="flex flex - col items - center justify - center p - 4 text - center">;
-            <p className="text - muted - foreground">No rewards yet</p>;
-            <p className="text - sm text - muted - foreground mt - 1">;
+          <div className="flex flex - col items - center justify - center p - 4 text-center">;
+            <p className="text - muted-foreground">No rewards yet</p>;
+            <p className="text - sm text - muted - foreground mt-1">;
               Refer users to earn rewards once they complete onboarding;
             </p>;
           </div>;
@@ -340,8 +288,8 @@ if ( {) {
   return (
     <Card>;
       <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <BadgeDollarSign className="h - 5 w - 5" />;
+        <CardTitle className="flex items - center gap-2">;
+          <BadgeDollarSign className="h - 5 w-5" />;
           Your Rewards;
         </CardTitle>;
         <CardDescription>;
@@ -349,139 +297,39 @@ if ( {) {
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className="space - y-4">;
+        <div className="space-y-4">;
           {rewards.map ((reward, index) => (
             <div;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               key={reward.id}
               className={`flex justify - between items - start ${
                 index !== rewards.length - 1 ? "border - b pb - 3" : "";
               }`}
             >;
               <div>;
-                <div className="flex items - center gap - 2">;
+                <div className="flex items - center gap-2">;
                   {reward.reward_type === "credit" ? (
-                    <BadgeDollarSign className="h - 4 w - 4 text - green - 600" />) : (
-                    <Badge className="h - 4 w - 4 text - blue - 600" />)}
-                  <p className="font - medium">;
+                    <BadgeDollarSign className="h - 4 w - 4 text - green-600" />) : (
+                    <Badge className="h - 4 w - 4 text - blue-600" />)}
+                  <p className="font-medium">;
                     {reward.reward_type === "credit";
                       ? `$${reward.amount?.to_fixed (2)} Credit`;
                       : "Visibility Boost"}
                   </p>;
                 </div>;
-                <p className="text - xs text - muted - foreground mt - 1">;
+                <p className="text - xs text - muted - foreground mt-1">;
                   Earned on {format_date (reward.created_at)}
                 </p>;
-                {reward.expires_at && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <BadgeDollarSign className="h-5 w-5" />;
-          Your Rewards;
-        </CardTitle>;
-        <CardDescription>Rewards earned from successful referrals</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space-y-4">;
-          {rewards && rewards.map((reward, index) => (;
-            <div
-              key={reward && reward.id}
-              className={`flex justify-between items-start ${
-                index !== rewards && rewards.length - 1 ? "border-b pb-3" : ""
-              }`}>;
-              <div>;
-                <div className="flex items-center gap-2">;
-                  {reward && reward.reward_type === 'credit' ? (;
-                    <BadgeDollarSign className="h-4 w-4 text-green-600" />;
-                  ) : (;
-                    <Badge className="h-4 w-4 text-blue-600" />;
-                  )}
-                  <p className="font-medium">;
-                    {reward && reward.reward_type === 'credit';
-                      ? `$${reward && reward.amount?.toFixed(2)} Credit`;
-                      : 'Visibility Boost'}
-                  </p>;
-                </div>;
-                <p className="text-xs text-muted-foreground mt-1">;
-                  Earned on {formatDate(reward && reward.created_at)}
-                </p>;
-                {reward && reward.expires_at && (;
-                  <p className="text-xs text-muted-foreground">;
-                    Expires on {formatDate(reward && reward.expires_at)}
-<<<<<<< HEAD
-                  </p>;
-
-=======
-    ),;
-  }
-    );
-  }
-;
-  return (;
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <BadgeDollarSign className="h-5 w-5" />;
-          Your Rewards;
-        </CardTitle>;
-        <CardDescription>Rewards earned from successful referrals</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space-y-4">;
-          {rewards.map((reward, index) => (;
-            <div;
-              key={reward.id}
-              className={`flex justify-between items-start ${;
-                index !== rewards.length - 1 ? "border-b pb-3" : "";
-              }`}
-            >;
-              <div>;
-                <div className="flex items-center gap-2">;
-                  {reward.reward_type === 'credit' ? (;
-                    <BadgeDollarSign className="h-4 w-4 text-green-600" />;
-                  ) : (;
-                    <Badge className="h-4 w-4 text-blue-600" />;
-                  )}
-                  <p className="font-medium">;
-                    {reward.reward_type === 'credit';
-                      ? `$${reward.amount?.toFixed(2)} Credit`;
-                      : 'Visibility Boost'}
-                  </p>;
-                </div>;
-                <p className="text-xs text-muted-foreground mt-1">;
-                  Earned on {formatDate(reward.created_at)}
-                </p>;
-                {reward.expires_at && (;
-                  <p className="text-xs text-muted-foreground">;
-                    Expires on {formatDate(reward.expires_at)}
-                  </p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                )}
+                {reward.expires_at && (                )}
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        </div>;
+}
+import {        </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -490,12 +338,14 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
   );
 
 }
-                  <p className="text - xs text - muted - foreground">;
+                  <p className="text - xs text - muted-foreground">;
                     Expires on {format_date (reward.expires_at)}
                   </p>)}
               </div>;
@@ -530,24 +380,14 @@ isLoading: boolean
         </div>;
       </CardContent>;
     </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-
-  );
-}
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 }
 import {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

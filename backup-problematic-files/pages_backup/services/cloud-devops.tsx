@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -7,6 +10,7 @@ import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'l
 const features = [;
   {}
     icon: Cloud,;
+<<<<<<< HEAD
     title: 'Cloud Migration,',;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
@@ -15,16 +19,29 @@ import React from 'react';
 =======
 import * as React from 'react';
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
+=======
+    title: 'Cloud Migration,',,
+  description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
+import Layout from '../../components/Layout';
+import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
 import React from 'react';
@@ -35,6 +52,7 @@ import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} fro
 const features = [;
   {;
     icon: Cloud,;
+<<<<<<< HEAD
     title: 'Cloud Migration',;
     description: 'Seamless migration to cloud platforms with zero downtime';
   },;
@@ -57,6 +75,30 @@ const features = [;
     icon: Zap,;
     title: 'CI/CD Pipelines,',;
     description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
+=======
+    title: 'Cloud Migration',,
+  description: 'Seamless migration to cloud platforms with zero downtime';
+  },;
+  {}
+    icon: Server,;
+    title: 'Infrastructure as Code,',,
+  description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',;
+  },;
+  {}
+    icon: Database,;
+    title: 'Database Management,',,
+  description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',;
+  },;
+  {}
+    icon: Shield,;
+    title: 'Security & Compliance,',,
+  description: 'Implement robust security measures and maintain compliance with industry standards.'',;
+  },;
+  {}
+    icon: Zap,;
+    title: 'CI/CD Pipelines,',,
+  description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ;];
 const services = [;
@@ -163,6 +205,7 @@ export default function CloudDevOpsPage() {;
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
@@ -183,10 +226,17 @@ export default function CloudDevOpsPage() {;
     title: 'Database Management',
     description: 'Comprehensive database administration and optimization services.',
     benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening', 'Monitoring']
+=======
+  {
+    icon: GitBranch,
+    title: 'CI/CD Pipelines',
+    description: 'Automated build, test, and deployment processes'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   {
     icon: Shield,
     title: 'Security & Compliance',
+<<<<<<< HEAD
     description: 'Implement security best practices and maintain compliance standards.',
     benefits: ['Security audits', 'Compliance reporting', 'Vulnerability scanning', 'Access control']
   },
@@ -204,6 +254,21 @@ export default function CloudDevOpsPage() {;
   }
 ];
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+=======
+    description: 'Enterprise-grade security and compliance frameworks'
+  },
+  {
+    icon: Zap,
+    title: 'Performance Optimization',
+    description: 'Optimized cloud resources for maximum performance'
+  },
+  {
+    icon: CheckCircle,
+    title: 'Monitoring & Alerting',
+    description: '24/7 monitoring and proactive alerting systems'
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -213,6 +278,7 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
+<<<<<<< HEAD
 =======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
@@ -299,10 +365,39 @@ export default function CloudDevOpsPage() {
                     ))}
                   </div>
                 </motion.div>
+=======
+  return (
+    <Layout
+      title="Cloud & DevOps Services - Zion Tech Group"
+      description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
+    >
+      <div className="min-h-screen bg-white">
+      keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization">;
+      <div className="min-h-screen bg-white">;
+        {/* Hero Section */}
+            </div>
+            </div>
+            </motion.div>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
         {/* Benefits Section */}
         <section className="py-20">;
@@ -340,6 +435,9 @@ export default function CloudDevOpsPage() {
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+        {/* Benefits Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Tools Section */}
         <section className="py-16 bg-white">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -406,6 +504,7 @@ export default function CloudDevOpsPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -447,3 +546,28 @@ export default function CloudDevOpsPage() {
     </>
 <<<<<<< HEAD
 
+=======
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Infrastructure?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our cloud and DevOps team to discuss your specific requirements
+              and discover how we can help modernize your infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Contact Cloud Team
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                Download Cloud Brochure
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+    </Layout>
+    </>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

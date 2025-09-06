@@ -56,5 +56,10 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ImportExtensionFixer;
+module.exports = ImportExtensionFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -3,9 +3,15 @@
  * Final Automation Report Generator;
  * Generates a comprehensive report of all automation activities;
  */
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -54,5 +60,10 @@ const path = require('path')
     this.log(`� New Scripts "Created"`)
       this.log(` Final Automation Report "failed"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Final Automation Report "failed")
+    console.error('Final Automation Report "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

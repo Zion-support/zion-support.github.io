@@ -81,8 +81,11 @@ const AvatarMenu = () => {
     <div>
       {/* AvatarMenu component */}
     </div>
-  );
+  )
 };
 
 export default AvatarMenu;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

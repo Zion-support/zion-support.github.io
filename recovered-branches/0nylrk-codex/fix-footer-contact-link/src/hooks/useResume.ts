@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './resume / useResumeBasic';
 ;
@@ -26,12 +27,21 @@ export * from './resume/useResumeBasic';
 export * from './resume/useResumeBasic';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+// UseResume utility
+export const UseResume = () => {
+  // Implementation here
+  return null
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export * from './resume/useResumeBasic';
 // This file re-exports all resume hooks to maintain backward compatibility;
 export * from './resume',;
 // This file re-exports all resume hooks to maintain backward compatibility;
 export * from './resume',;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -64,3 +74,8 @@ export * from './resume';
 export * from "./resume";
 export * from "./resume/useResumeBasic";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export * from './resume/useResumeBasic';
+// This file re - exports all resume hooks to maintain backward compatibility;
+export * from './resume';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

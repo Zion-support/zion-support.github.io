@@ -235,20 +235,20 @@ const mainNavItems = [
     services: [;
       {;
         name: 'AI Personalized Medicine Platform',;
-        href: '/ai-personalized-medicine-platform',;
-        description: 'AI-powered personalized treatment',;
+        href: '/ai-personalized-medicine-platform',,
+  description: 'AI-powered personalized treatment',;
         price: '$8,999/month',;
       },;
       {;
         name: 'AI Healthcare Diagnosis Platform',;
-        href: '/ai-healthcare-diagnosis-platform',;
-        description: 'Revolutionary medical diagnosis',;
+        href: '/ai-healthcare-diagnosis-platform',,
+  description: 'Revolutionary medical diagnosis',;
         price: '$3,999/month',;
       },;
       {;
         name: 'Biotech Research Automation',;
-        href: '/biotech-research-automation',;
-        description: 'Automated biotechnology research',;
+        href: '/biotech-research-automation',,
+  description: 'Automated biotechnology research',;
         price: '$4,999/month',;
       },;
     ],;
@@ -259,29 +259,29 @@ const mainNavItems = [
     description: 'Advanced healthcare solutions',
       { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' };
       { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
-    ];
-  };
+    ]
+};
     title: '🏙️ Smart City & Infrastructure',;
     icon: Building,;
-    color: 'from-slate-600 to-gray-600',;
-    description: 'Intelligent urban management',;
+    color: 'from-slate-600 to-gray-600',,
+  description: 'Intelligent urban management',;
     services: [;
       {;
         name: 'AI Smart City Orchestrator',;
-        href: '/ai-smart-city-orchestrator',;
-        description: 'Comprehensive city infrastructure AI',;
+        href: '/ai-smart-city-orchestrator',,
+  description: 'Comprehensive city infrastructure AI',;
         price: '$12,999/month',;
       },;
       {;
         name: 'Smart Traffic Management',;
-        href: '/smart-traffic-management',;
-        description: 'AI-powered traffic optimization',;
+        href: '/smart-traffic-management',,
+  description: 'AI-powered traffic optimization',;
         price: '$3,999/month',;
       },;
       {;
         name: 'Energy Grid Optimization',;
-        href: '/energy-grid-optimization',;
-        description: 'Smart energy management',;
+        href: '/energy-grid-optimization',,
+  description: 'Smart energy management',;
         price: '$5,999/month',;
       },;
     ],;
@@ -292,29 +292,29 @@ const mainNavItems = [
     description: 'Intelligent urban management',
       { name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/month' };
       { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/month' }
-    ];
-  };
+    ]
+};
     title: '🔬 Research & Development',;
     icon: Microscope,;
-    color: 'from-blue-600 to-indigo-600',;
-    description: 'Advanced research tools and platforms',;
+    color: 'from-blue-600 to-indigo-600',,
+  description: 'Advanced research tools and platforms',;
     services: [;
       {;
         name: 'AI Research Assistant',;
-        href: '/ai-research-assistant',;
-        description: 'AI-powered research acceleration',;
+        href: '/ai-research-assistant',,
+  description: 'AI-powered research acceleration',;
         price: '$1,999/month',;
       },;
       {;
         name: 'Data Analysis Platform',;
-        href: '/data-analysis-platform',;
-        description: 'Advanced data analytics',;
+        href: '/data-analysis-platform',,
+  description: 'Advanced data analytics',;
         price: '$2,499/month',;
       },;
       {;
         name: 'Research Collaboration Hub',;
-        href: '/research-collaboration-hub',;
-        description: 'Global research collaboration',;
+        href: '/research-collaboration-hub',,
+  description: 'Global research collaboration',;
         price: '$1,799/month',;
       },;
     ],;
@@ -325,29 +325,29 @@ const mainNavItems = [
     description: 'Advanced research tools and platforms',
       { name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/month' };
       { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/month' }
-    ];
-  };
+    ]
+};
     title: '💼 Enterprise & Business Solutions',;
     icon: Briefcase,;
-    color: 'from-emerald-600 to-blue-600',;
-    description: 'Corporate and business automation',;
+    color: 'from-emerald-600 to-blue-600',,
+  description: 'Corporate and business automation',;
     services: [;
       {;
         name: 'Enterprise AI Operations Center',;
-        href: '/enterprise-ai-operations-center',;
-        description: 'Centralized AI operations',;
+        href: '/enterprise-ai-operations-center',,
+  description: 'Centralized AI operations',;
         price: '$15,999/month',;
       },;
       {;
         name: 'Business Process Automation',;
-        href: '/business-process-automation',;
-        description: 'End-to-end process automation',;
+        href: '/business-process-automation',,
+  description: 'End-to-end process automation',;
         price: '$4,999/month',;
       },;
       {;
         name: 'Corporate Intelligence Platform',;
-        href: '/corporate-intelligence-platform',;
-        description: 'AI-powered business intelligence',;
+        href: '/corporate-intelligence-platform',,
+  description: 'AI-powered business intelligence',;
         price: '$7,999/month',;
       },;
     ],;
@@ -401,11 +401,11 @@ export default function UltraFuturisticNavigation2029() {;
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {;
     const handleScroll = () => {;
-      setScrolled(window && window.scrollY > 50);
-    };
+      setScrolled(window && window.scrollY > 50)
+};
     window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50);
-    };
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50)
+};
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -575,6 +575,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             {/* Desktop Navigation */}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -592,6 +593,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -721,6 +724,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
       </nav>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='text-gray-300 hover:text-white transition-colors'              >
 
               >
@@ -736,6 +740,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>;
             </div>;
@@ -743,6 +749,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
         </div>;
       </nav>;
 
+<<<<<<< HEAD
 
 
 
@@ -752,6 +759,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -912,6 +921,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -924,6 +934,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             </Link>
                   ))}
                 {/* Mobile Services */}
@@ -1068,17 +1080,17 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     on_click={close_menu}
                     className='text - gray - 400 hover:text - white';
                   >                    <X size={24} />          >;
-            <div className="absolute inset - 0 bg - black / 80 backdrop - blur - sm" on_click={close_menu} />;
-            <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 30 overflow - y-auto">;
-              <div className="p - 6">;
-                <div className="flex items - center justify - between mb - 8">;
-                  <div className="flex items - center space - x-3">;
-                    <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items - center justify - center">;
-                      <Rocket className="w - 5 h - 5 text - white" />;
+            <div className="absolute inset - 0 bg - black / 80 backdrop-blur-sm" on_click={close_menu} />;
+            <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan-500 / 30 overflow-y-auto">;
+              <div className="p-6">;
+                <div className="flex items - center justify-between mb-8">;
+                  <div className="flex items-center space-x-3">;
+                    <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items-center justify-center">;
+                      <Rocket className="w - 5 h-5 text-white" />;
                     </div>;
-                    <span className="text - lg font - bold text - white">Zion Tech</span>;
+                    <span className="text - lg font-bold text-white">Zion Tech</span>;
                   </div>;
-                  <button on_click={close_menu} className="text - gray - 400 hover:text - white">;
+                  <button on_click={close_menu} className="text - gray-400 hover:text-white">;
                     <X size={24} />;
                   </button>;
                 </div>;
@@ -1090,7 +1102,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                       on_click={close_menu}
                       className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
                     >;
-                      <item.icon size={20} className='text - cyan - 400' />                      <span>{item.name}</span>                <div className="space - y-4">;
+                      <item.icon size={20} className='text - cyan - 400' />                      <span>{item.name}</span>                <div className="space-y-4">;
                   {mainNavItems.map ((item) => (
                     <Link;
                       key={item.name}
@@ -1098,9 +1110,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                       on_click={close_menu}
                       className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
                     >;
-                      <item.icon size={20} className='text - cyan - 400' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200";
+                      <item.icon size={20} className='text - cyan - 400' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition-all duration-200";
                     >;
-                      <item.icon size={20} className="text - cyan - 400" />;
+                      <item.icon size={20} className="text-cyan-400" />;
                       <span>{item.name}</span>;
                     </Link>))}
                 </div>;
@@ -1125,14 +1137,14 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                           {category.services.slice (0, 2).map (service => (                            <Link;
                               key={service.name}
                               href={service.href}
-                              on_click={close_menu}                <div className="mt - 8">;
-                  <h3 className="text - lg font - semibold text - white mb - 4">Our Services</h3>;
-                  <div className="space - y-3">;
+                              on_click={close_menu}                <div className="mt-8">;
+                  <h3 className="text - lg font - semibold text-white mb-4">Our Services</h3>;
+                  <div className="space-y-3">;
                     {service_categories.slice (0, 6).map ((category) => (
-                      <div key={category.title} className="p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border - cyan - 500 / 20">;
-                        <h4 className="font - medium text - white mb - 2">{category.title}</h4>;
-                        <p className="text - sm text - gray - 400 mb - 3">{category.description}</p>;
-                        <div className="space - y-2">;
+                      <div key={category.title} className="p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border-cyan-500 / 20">;
+                        <h4 className="font - medium text-white mb-2">{category.title}</h4>;
+                        <p className="text - sm text - gray-400 mb-3">{category.description}</p>;
+                        <div className="space-y-2">;
                           {category.services.slice (0, 2).map ((service) => (
                               key={service.name}
                               href={service.href}
@@ -1145,11 +1157,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 </span>;
                                 <span className='text - xs text - cyan - 400 font - mono'>;
                                   {service.price}
-                                </span>                              </div>                              className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200";
+                                </span>                              </div>                              className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition-all duration-200";
                             >;
-                              <div className="flex items - center justify - between">;
-                                <span className="text - sm text - gray - 300">{service.name}</span>;
-                                <span className="text - xs text - cyan - 400 font - mono">{service.price}</span>;
+                              <div className="flex items-center justify-between">;
+                                <span className="text - sm text-gray-300">{service.name}</span>;
+                                <span className="text - xs text - cyan-400 font-mono">{service.price}</span>;
                             </Link>))}
                         </div>;
                       </div>))}
@@ -1160,11 +1172,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   <motion.button;
                     while_hover={{ scale: 1.02 }}
                     while_tap={{ scale: 0.98 }}
-                    className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  >                <div className="mt - 8">;
+                    className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  >                <div className="mt-8">;
                   <motion.button;
                     while_hover={{ scale: 1.02 }}
                     while_tap={{ scale: 0.98 }}
-                    className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
+                    className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
                     Get Started;
                   </motion.button>;
                 </div>;
@@ -1174,7 +1186,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h - 20' />;
-    </>);      <div className="h - 20" />;
+    </>);      <div className="h-20" />;
     </>);
 }
 

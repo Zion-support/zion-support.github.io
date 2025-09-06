@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,9 +55,10 @@ import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,creat
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, createRequest, createResponse } from 'node-mocks-http'
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 import productHandler from '@/pages/api/products/index'
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
@@ -204,6 +206,7 @@ describe('/api/products API Endpoint', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 <<<<<<< HEAD
@@ -227,6 +230,9 @@ describe('/api/products API Endpoint', () => {
 =======
           "id"
 
+=======
+          "id"});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +240,7 @@ describe('/api/products API Endpoint', () => {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 });
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
           "id"
@@ -275,3 +282,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

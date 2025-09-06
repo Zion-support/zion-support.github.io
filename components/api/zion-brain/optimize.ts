@@ -27,8 +27,11 @@ export default async function handler(
     return !superToken || token === superToken;
   }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -42,9 +45,12 @@ export default async function handler(
     const superToken = process.env.SUPERADMIN_TOKEN;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   export default async function handler(
     req: NextApiRequest

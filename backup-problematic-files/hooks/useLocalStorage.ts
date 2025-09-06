@@ -1,13 +1,17 @@
 
+<<<<<<< HEAD
 import { useState } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
+<<<<<<< HEAD
 
     try {
 
@@ -30,6 +34,8 @@ main:hooks/useLocalStorage.ts
       console.error(`Error reading localStorage key "${key}":`, error);
 main:hooks/useLocalStorage.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   });
 
@@ -43,11 +49,15 @@ main:hooks/useLocalStorage.ts
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 
   return [storedValue, setValue] as const;
 }
+<<<<<<< HEAD
 
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
@@ -58,3 +68,12 @@ main:hooks/useLocalStorage.ts
 };
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      console.error(`Error setting localStorage key "${key}":`, error)}
+};
+  return [storedValue, setValue] as const}
+};
+}
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

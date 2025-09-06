@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -30,6 +31,8 @@ interface SEOHeadProps {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import Head from 'next/head';
 
@@ -156,9 +159,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
     </Head>
-  );
+  )
 };
 
+<<<<<<< HEAD
 export default SEOHead;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -317,3 +321,6 @@ export default SEOHead;
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export default SEOHead;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -47,7 +47,7 @@ const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ en
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
 interface SmartNotificationSystemProps {
-  // Add your props here: any;
+  // Add your props here: any
 };
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
   if(!enabled) return null;

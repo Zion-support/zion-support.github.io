@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -19,10 +19,16 @@ type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' |
 export function useResumeEnhancer() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export function useResumeEnhancer() {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
+<<<<<<< HEAD
 export function useResumeEnhancer() {;
 <<<<<<< HEAD
 =======
@@ -66,34 +72,12 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           context
+=======
+export function useResumeEnhancer() {;          context
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       });
-      if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        throw new Error(error && error.message)
-      }
-
-      
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      return data && data.enhancedContent
-    } catch (err: any) {
-      setError(err && err.message || 'Failed to enhance content'),
-      console && console.error('Enhancement error:', err);
-<<<<<<< HEAD
-
-=======
-        throw new Error(error.message)
-      }
-      return data.enhancedContent
-    } catch (err: any) {
-      setError(err.message |'Failed to enhance content')
-      console.error('Enhancement error:', err);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      return null
+      if (error) {      return null
     } finally {
       setIsEnhancing(false)
     }
@@ -102,6 +86,7 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
     enhanceContent;
     isEnhancing;
 
+<<<<<<< HEAD
     error
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +143,9 @@ function useResumeEnhancer() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           context;
+=======
+    error          context;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       });
 ;
@@ -182,6 +170,7 @@ if ( {) {
     is_enhancing;
     error;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -195,6 +184,8 @@ if ( {) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 
@@ -271,7 +262,3 @@ try {
     error;
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

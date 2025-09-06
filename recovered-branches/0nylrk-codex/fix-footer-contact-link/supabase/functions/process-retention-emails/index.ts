@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -62,6 +62,16 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Initialize Supabase client
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",// Initialize Supabase client
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
@@ -69,6 +79,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -147,11 +158,14 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Fetch pending retention email jobs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -162,12 +176,14 @@ serve(async (req) => {
       .limit(50);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (jobsError) {
       throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
     }
-<<<<<<< HEAD
     const processedJobs = [];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       .limit(50),
 
     if (jobsError) {
@@ -177,9 +193,8 @@ serve(async (req) => {
     const processedJobs = [],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-=======
     if (pendingJobs && pendingJobs.length > 0) {
+<<<<<<< HEAD
       for (const job of pendingJobs) {
         try {
           // Call the send-retention-email function for each job
@@ -274,21 +289,14 @@ if ( {) {
         try {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // Call the send - retention - email function for each job;
+=======
+      for (const job of pendingJobs) {          // Call the send - retention - email function for each job;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           const reminder_response = await fetch (
             `${supabase_url}/functions / v1 / send - retention - email`;
             {
               method: "POST";
               headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${supabaseServiceKey}`};
@@ -298,9 +306,8 @@ if ( {) {
           if (!reminderResponse && reminderResponse.ok) {
             const errorText = await reminderResponse && reminderResponse.text();
             console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
             
+<<<<<<< HEAD
 
 
 
@@ -330,10 +337,14 @@ if ( {) {
             
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             // Update job status to failed
             await supabase
               .from("scheduled_jobs")
               .update({
+<<<<<<< HEAD
                 status: "failed"})
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -384,22 +395,18 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           // Update job status to failed
+=======
+                status: "failed"})          // Update job status to failed
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           await supabase
             .from("scheduled_jobs")
             .update({
               status: "failed"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-            .eq("id", job && job.id)
-=======
-            .eq("id", job.id)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-            .eq("id", job && job.id)
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            .eq("id", job && job.id)            .eq("id", job && job.id)
         }
       }
     }
+<<<<<<< HEAD
     return new Response(
 <<<<<<< HEAD
 
@@ -428,21 +435,27 @@ if ( {) {
         job_ids: processedJobs});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         message: "Retention emails processed successfully",
+=======
+    return new Response(        message: "Retention emails processed successfully",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         emails_scheduled: scheduledCount,
         emails_processed: processedJobs.length,
         job_ids: processedJobs}),
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
 =======
@@ -513,103 +526,20 @@ if ( {) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  } catch (error) {      });        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "Content - Type": "application / json",
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify (job)}
           );
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
-  }
-});
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            const error_text = await reminder_response.text ();
-            console.error (`Failed to process job ${job.id}: ${error_text}`);
-;
-            // Update job status to failed;
-            await supabase;
-              .from ("scheduled_jobs");
-              .update ({
-                status: "failed"});
-              .eq ("id", job.id);
-          } else {
-            processed_jobs.push (job.id);
-          }
-        } catch (error) {
-          console.error (`Error processing job ${job.id}:`, error);
-;
-          // Update job status to failed;
-          await supabase;
-            .from ("scheduled_jobs");
-            .update ({
-              status: "failed"});
-            .eq ("id", job.id);
-        }
-      }
-    }
-    return new Response (
-      JSON.stringify ({
-        message: "Retention emails processed successfully";
-        emails_scheduled: scheduled_count;
-        emails_processed: processed_jobs.length,
-        job_ids: processed_jobs});
-      {
-        status: 200,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-  } catch (error) {
-    console.error ("Error in process - retention - emails function:", error);
-;
-    return new Response (
-      JSON.stringify ({
-        error: "Internal server error",
-        details: error.message;
-      });
-      {
-        status: 500,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -619,6 +549,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
 ;
@@ -734,7 +666,10 @@ serve(async (req) => {;
     );
   }
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -75,7 +75,6 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-
 export default function URLShortenerPage() {;
 <<<<<<< HEAD
 =======
@@ -116,7 +115,8 @@ export default function URLShortenerPage() {;
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
   }
   const getTotalUrls = () => {
-    return shortenedUrls.length;  };    setIsShortening(true);
+    return shortenedUrls.length
+};    setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     const alias = customAlias.trim() |generateRandomAlias();
@@ -472,8 +472,11 @@ import {
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">

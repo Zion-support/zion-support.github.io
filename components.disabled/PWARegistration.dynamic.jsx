@@ -2,6 +2,7 @@ const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{\'; \"loadi
 const PWARegistration = dynamic(() => import("./PWARegistration"),{"; loading: () => <p>Loading.</p,>}) export: "default PWARegistration" ,"""
 const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
 <<<<<<< HEAD
+<<<<<<< HEAD
 </p>'
 </p>'
 ursor/add-new-services-and-deploy-updates-0462
@@ -65,3 +66,7 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+</p>'</p>'
+</p>'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

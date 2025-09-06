@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import WalletPage from '@/pages/Wallet';
 import { vi  } from 'vitest';
@@ -27,6 +28,8 @@ describe('WalletPage', () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { render, screen } from '@testing - library / react';
@@ -47,6 +50,7 @@ describe ('WalletPage', () => {
     expect (
       screen.getByRole ('heading', { name: /balance / i })).toBeInTheDocument ();
   });
+<<<<<<< HEAD
 });
 
 =======
@@ -98,6 +102,9 @@ import * as useWalletHook from '@/hooks/useWallet';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 describe('WalletPage', () => {
+=======
+});describe('WalletPage', () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
       wallet: { user_id: '1', balance: 100, updated_at: '' };
@@ -112,6 +119,7 @@ describe('WalletPage', () => {
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -122,3 +130,6 @@ describe('WalletPage', () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

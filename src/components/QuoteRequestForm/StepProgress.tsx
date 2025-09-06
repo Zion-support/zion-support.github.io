@@ -7,7 +7,6 @@ return (
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
 
-
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -17,8 +16,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -28,8 +30,6 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-    { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
@@ -37,7 +37,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
@@ -57,6 +56,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <div className="flex justify-between relative">
@@ -88,6 +88,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           const status = getStepStatus(step && step.id);
 
           return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
                 className={cn(
@@ -115,10 +117,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 
+<<<<<<< HEAD
 
                   "text-zion-slate-light"
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 )}
               </div>
               <span 
@@ -127,6 +132,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { QuoteRequestSteps } from "../QuoteRequestForm",;
 import { CheckIcon } from 'lucide-react';
@@ -138,6 +144,12 @@ interface StepProgressProps {;
 =======
 
 }/> </div>
+=======
+                ) : (
+                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
+                )}
+              </div>}/> </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
 }</span>)
@@ -153,7 +165,6 @@ interface StepProgressProps {;
     </div>
   )
 }
-
 
                 ),}>;
                 {step && step.label}
@@ -236,6 +247,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
   (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;
 
@@ -330,3 +342,6 @@ if (return "current", ) {
   );
 }
 ;
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

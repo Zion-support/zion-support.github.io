@@ -8,7 +8,6 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
       {children}
 =======
 import React from 'react';
-<<<<<<< HEAD
   return (
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
@@ -19,35 +18,6 @@ import React from 'react';
   defaultLocale: 'en'
   domainLocales: []
   isPreview: false
-=======
-
-import { render, RenderOptions } from '@testing - library / react';
-import { ThemeProvider } from 'next - themes';
-;
-const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
-
-  return (
-    <ThemeProvider attribute="class" defaultTheme="light">
-      {children}
-
-    </ThemeProvider>);
-}
-;
-const custom_render = (
-  ui: React.ReactElement,
-  options?: Omit < RenderOptions, 'wrapper'>) =>: any render (ui, { wrapper: AllTheProviders, ...options });
-;
-export * from '@testing - library / react';
-export { custom_render as render }
-;
-export const mockNextRouter = () =>: any ({
-  push: jest.fn (),
-  replace: jest.fn (),
-  prefetch: jest.fn (),
-  back: jest.fn (),
-  beforePopState: jest.fn (),
-  events: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     on: jest.fn (),
     off: jest.fn (),
     emit: jest.fn ();
@@ -58,7 +28,6 @@ export const mockNextRouter = () =>: any ({
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
-<<<<<<< HEAD
 
   },
   isFallback: false,
@@ -71,8 +40,11 @@ export const mockNextRouter = () =>: any ({
 });
 export const createMockProps = (overrides = {}) => ({
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </ThemeProvider>;
   );
 },;
@@ -99,6 +71,7 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -155,6 +128,10 @@ export const createMockProps = (overrides = {}) => ({;
 
 
 
+=======
+});
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 });

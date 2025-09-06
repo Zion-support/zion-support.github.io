@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -138,6 +139,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 =======
 }
               onClose(), // Close mobile menu on any click
+=======
+              }              onClose(), // Close mobile menu on any click
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }}
           >
             <div className="relative mr-4">
@@ -159,7 +163,6 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
   )
 
-
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
 }
 <<<<<<< HEAD
@@ -167,13 +170,15 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
   );
 }
 
-
-
 name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
 }
   );
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

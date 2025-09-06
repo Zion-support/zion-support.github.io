@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
   try {;
@@ -12,6 +13,8 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
@@ -34,8 +37,6 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
   try {
     const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || '') : '');
     if (!refCode) return;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
 export async /**
@@ -53,6 +54,7 @@ if (return, ) {
       headers: { 'Content - Type': 'application / json' }
       body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 
+<<<<<<< HEAD
   } catch {}
 <<<<<<< HEAD
 =======
@@ -96,3 +98,6 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  } catch {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

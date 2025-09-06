@@ -36,7 +36,11 @@ class IntelligentDependencyManager {}
             const dependencies = {}
                 "production": Object.keys(packageJson.dependencies || {}),
                 "development": Object.keys(packageJson.devDependencies || {}),
+<<<<<<< HEAD
                 "total": Object.keys(packageJson.dependencies || {}).length +
+=======
+                "total": Object.keys(packageJson.dependencies || {}).length + 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                        Object.keys(packageJson.devDependencies || {}).length;
            };
             this.log(`Found ${dependencies.total} total dependencies`);
@@ -48,7 +52,11 @@ class IntelligentDependencyManager {}
         this.log('Checking for outdated packages...');
         try {}
             const outdatedResult = execSync('npm outdated --json', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -77,7 +85,11 @@ class IntelligentDependencyManager {}
         this.log('Checking for security vulnerabilities...');
         try {}
             const auditResult = execSync('npm audit --json', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -97,7 +109,11 @@ class IntelligentDependencyManager {}
         try {}
             // Update minor and patch versions;
             execSync('npm update', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
@@ -110,7 +126,11 @@ class IntelligentDependencyManager {}
         this.log('Fixing security issues...');
         try {}
             execSync('npm audit fix', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
@@ -164,5 +184,10 @@ if ( {})
      {}
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = IntelligentDependencyManager;
+module.exports = IntelligentDependencyManager;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

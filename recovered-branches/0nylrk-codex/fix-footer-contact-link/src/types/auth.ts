@@ -24,11 +24,14 @@ export interface UserDetails {
 
   permissions?: string[];
   company_id?: string;
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -56,12 +59,6 @@ export interface UserProfile {;
 
   permissions?: string[];
   company_id?: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  bio?: string;
   created_at?: string;
   updated_at?: string;
 }
@@ -83,6 +80,7 @@ export interface UserProfile {;
 }
 
   permissions?: string[],
+<<<<<<< HEAD
   company_id?: string;
 =======
   permissions?: string[],
@@ -136,6 +134,9 @@ export interface AuthContextType {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+  company_id?: string;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface UserDetails {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string,;
@@ -169,6 +170,7 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -240,6 +242,8 @@ export interface UserDetails {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface UserDetails {;
 
 }
@@ -296,15 +300,16 @@ export interface AuthContextType {;
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 ;
 }
+;
 <<<<<<< HEAD
-;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

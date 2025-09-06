@@ -377,12 +377,17 @@ const serviceCategories = [
       { name: 'Quantum Consciousness Interface', href: '/quantum-consciousness-interface', description: 'Bridge quantum computing with consciousness', price: '$15,999/month' };
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform', description: 'Create AI civilizations', price: '$19,999/month' };
       { name: 'Quantum Time Manipulation', href: '/quantum-time-manipulation-platform', description: 'Manipulate time through quantum computing', price: '$25,999/month' }
-    ];
-  };
+    ]
+};
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ];
   };
+=======
+    ]
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   {
@@ -577,169 +582,169 @@ export default function UltraFuturisticNavigation2027() {;
   const navigation = [;
     {;
       name: 'AI & Machine Learning',;
-      href: '/services?category=AI%20%26%20Machine%20Learning',;
-      description: '200+ AI & ML Solutions',;
+      href: '/services?category=AI%20%26%20Machine%20Learning',,
+  description: '200+ AI & ML Solutions',;
       icon: <Brain className='w-5 h-5' />,;
       color: 'from-purple-500 to-indigo-600',;
       children: [;
         {          name: 'AI Consciousness Platform',;
-          href: '/services/ai-consciousness-platform',;
-          description: 'Advanced AI consciousness simulation',;
+          href: '/services/ai-consciousness-platform',,
+  description: 'Advanced AI consciousness simulation',;
           price: '$5,999/month',;
         },;
         {          name: 'Quantum Machine Learning',;
-          href: '/services/quantum-machine-learning',;
-          description: 'Quantum-powered ML platform',;
+          href: '/services/quantum-machine-learning',,
+  description: 'Quantum-powered ML platform',;
           price: '$12,999/month',;
         },;
         {          name: 'Autonomous AI Agents',;
-          href: '/services/autonomous-ai-agents',;
-          description: 'Self-operating AI systems',;
+          href: '/services/autonomous-ai-agents',,
+  description: 'Self-operating AI systems',;
           price: '$4,999/month',;
         },;
         {          name: 'AI Content Factory',;
-          href: '/services/ai-content-factory',;
-          description: 'Automated content creation',;
+          href: '/services/ai-content-factory',,
+  description: 'Automated content creation',;
           price: '$299/month',      icon: <Brain className="w-5 h-5" />,;
       color: 'from-purple-500 to-indigo-600',;
       children: [;
         { ;
           name: 'AI Consciousness Platform',;
-          href: '/services/ai-consciousness-platform',;
-          description: 'Advanced AI consciousness simulation',;
-          price: '$5,999/month';
-        };
+          href: '/services/ai-consciousness-platform',,
+  description: 'Advanced AI consciousness simulation',;
+          price: '$5,999/month'
+};
         { ;
           name: 'Quantum Machine Learning',;
-          href: '/services/quantum-machine-learning',;
-          description: 'Quantum-powered ML platform',;
-          price: '$12,999/month';
-        };
+          href: '/services/quantum-machine-learning',,
+  description: 'Quantum-powered ML platform',;
+          price: '$12,999/month'
+};
         { ;
           name: 'Autonomous AI Agents',;
-          href: '/services/autonomous-ai-agents',;
-          description: 'Self-operating AI systems',;
-          price: '$4,999/month';
-        };
+          href: '/services/autonomous-ai-agents',,
+  description: 'Self-operating AI systems',;
+          price: '$4,999/month'
+};
         { ;
           name: 'AI Content Factory',;
-          href: '/services/ai-content-factory',;
-          description: 'Automated content creation',;
+          href: '/services/ai-content-factory',,
+  description: 'Automated content creation',;
           price: '$299/month',;
         },;
         {;
           name: 'View All AI Services',;
-          href: '/services?category=AI%20%26%20Machine%20Learning',;
-          description: 'Explore 200+ AI solutions',;
+          href: '/services?category=AI%20%26%20Machine%20Learning',,
+  description: 'Explore 200+ AI solutions',;
         },;
       ],;
     },    {;
       name: 'Quantum Technology',;
       href: '/services?category=Quantum%20Computing',;
         }
-      ];
-    };
+      ]
+};
       name: 'Quantum Technology',;
-      href: '/services?category=Quantum%20Computing',;
-      description: '50+ Quantum Solutions',;
+      href: '/services?category=Quantum%20Computing',,
+  description: '50+ Quantum Solutions',;
       icon: <Atom className='w-5 h-5' />,;
       color: 'from-blue-500 to-cyan-600',;
       children: [;
         {          name: 'Quantum Neural Interface',;
-          href: '/services/quantum-neural-interface',;
-          description: 'Quantum + Neural Networks',;
+          href: '/services/quantum-neural-interface',,
+  description: 'Quantum + Neural Networks',;
           price: '$8,999/month',;
         },;
         {          name: 'Quantum Financial Trading',;
-          href: '/services/quantum-financial-trading',;
-          description: 'Quantum-powered trading',;
+          href: '/services/quantum-financial-trading',,
+  description: 'Quantum-powered trading',;
           price: '$9,999/month',;
         },;
         {          name: 'Quantum Internet Protocol',;
-          href: '/services/quantum-internet-protocol',;
-          description: 'Quantum communication network',;
+          href: '/services/quantum-internet-protocol',,
+  description: 'Quantum communication network',;
           price: '$7,999/month',;
         },;
         {          name: 'Quantum Sensors Network',;
-          href: '/services/quantum-sensors-network',;
-          description: 'Ultra-precise quantum sensors',;
+          href: '/services/quantum-sensors-network',,
+  description: 'Ultra-precise quantum sensors',;
           price: '$9,999/month',;
         },;
         {;
           name: 'View All Quantum Services',;
-          href: '/services?category=Quantum%20Computing',;
-          description: 'Explore quantum solutions',;
+          href: '/services?category=Quantum%20Computing',,
+  description: 'Explore quantum solutions',;
         },;
       ],;
     },    {;
       name: 'Emerging Tech',;
       href: '/services?category=Emerging%20Technology',;
         }
-      ];
-    };
+      ]
+};
       name: 'Emerging Tech',;
-      href: '/services?category=Emerging%20Technology',;
-      description: '100+ Future Solutions',;
+      href: '/services?category=Emerging%20Technology',,
+  description: '100+ Future Solutions',;
       icon: <Rocket className='w-5 h-5' />,;
       color: 'from-green-500 to-emerald-600',;
       children: [;
         {          name: 'Holographic Metaverse',;
-          href: '/services/holographic-metaverse-platform',;
-          description: '3D immersive experiences',;
+          href: '/services/holographic-metaverse-platform',,
+  description: '3D immersive experiences',;
           price: '$3,999/month',;
         },;
         {          name: 'Neuromorphic Computing',;
-          href: '/services/neuromorphic-computing',;
-          description: 'Brain-inspired computing',;
+          href: '/services/neuromorphic-computing',,
+  description: 'Brain-inspired computing',;
           price: '$8,999/month',;
         },;
         {          name: 'Synthetic Biology',;
-          href: '/services/synthetic-biology-platform',;
-          description: 'AI-powered bioengineering',;
+          href: '/services/synthetic-biology-platform',,
+  description: 'AI-powered bioengineering',;
           price: '$15,999/month',;
         },;
         {          name: 'Brain-Computer Interface',;
-          href: '/services/brain-computer-interface',;
-          description: 'Direct brain communication',;
+          href: '/services/brain-computer-interface',,
+  description: 'Direct brain communication',;
           price: '$19,999/month',;
         },;
         {;
           name: 'View All Emerging Tech',;
-          href: '/services?category=Emerging%20Technology',;
-          description: 'Explore future solutions',;
+          href: '/services?category=Emerging%20Technology',,
+  description: 'Explore future solutions',;
         },;
       ],;
     },    {;
       name: 'Business Solutions',;
-      href: '/services?category=Business%20Operations',;
-      description: '150+ Business Tools',;
+      href: '/services?category=Business%20Operations',,
+  description: '150+ Business Tools',;
       icon: <Target className='w-5 h-5' />,;
       color: 'from-orange-500 to-red-600',;
       children: [;
         {          name: 'Smart Inventory Manager',;
-          href: '/services/smart-inventory-manager',;
-          description: 'AI-powered inventory optimization',;
+          href: '/services/smart-inventory-manager',,
+  description: 'AI-powered inventory optimization',;
           price: '$199/month',;
         },;
         {          name: 'Customer Success Automation',;
-          href: '/services/customer-success-automation',;
-          description: 'Automated customer retention',;
+          href: '/services/customer-success-automation',,
+  description: 'Automated customer retention',;
           price: '$399/month',;
         },;
         {          name: 'AI Sales Coach',;
-          href: '/services/ai-sales-coach',;
-          description: 'Intelligent sales training',;
+          href: '/services/ai-sales-coach',,
+  description: 'Intelligent sales training',;
           price: '$249/month',;
         },;
         {          name: 'Smart HR Assistant',;
-          href: '/services/smart-hr-assistant',;
-          description: 'AI-powered HR automation',;
+          href: '/services/smart-hr-assistant',,
+  description: 'AI-powered HR automation',;
         }
-      ];
-    };
+      ]
+};
       name: 'Business Solutions',;
-      href: '/services?category=Business%20Operations',;
-      description: '150+ Business Tools',;
+      href: '/services?category=Business%20Operations',,
+  description: '150+ Business Tools',;
       icon: <Target className='w-5 h-5' />,;
       color: 'from-orange-500 to-red-600',;
       children: [;
@@ -747,88 +752,88 @@ export default function UltraFuturisticNavigation2027() {;
       color: 'from-orange-500 to-red-600',;
       children: [;
         { ;
-          href: '/services/smart-inventory-manager',;
-          description: 'AI-powered inventory optimization',;
-          price: '$199/month',;
-        };
+          href: '/services/smart-inventory-manager',,
+  description: 'AI-powered inventory optimization',;
+          price: '$199/month',
+};
         { ;
           name: 'Customer Success Automation',;
-          href: '/services/customer-success-automation',;
-          description: 'Automated customer retention',;
-          price: '$399/month',;
-        };
+          href: '/services/customer-success-automation',,
+  description: 'Automated customer retention',;
+          price: '$399/month',
+};
         { ;
           name: 'AI Sales Coach',;
-          href: '/services/ai-sales-coach',;
-          description: 'Intelligent sales training',;
-          price: '$249/month',;
-        };
+          href: '/services/ai-sales-coach',,
+  description: 'Intelligent sales training',;
+          price: '$249/month',
+};
         { ;
           name: 'Smart HR Assistant',;
-          href: '/services/smart-hr-assistant',;
-          description: 'AI-powered HR automation',;
+          href: '/services/smart-hr-assistant',,
+  description: 'AI-powered HR automation',;
           price: '$349/month',;
         },;
         {;
           name: 'View All Business Solutions',;
-          href: '/services?category=Business%20Operations',;
-          description: 'Explore business tools',;
+          href: '/services?category=Business%20Operations',,
+  description: 'Explore business tools',;
         },;
       ],;
     },    {;
       name: 'Cybersecurity',;
       href: '/services?category=Cybersecurity',;
         }
-      ];
-    };
+      ]
+};
       name: 'Cybersecurity',;
-      href: '/services?category=Cybersecurity',;
-      description: '75+ Security Solutions',;
+      href: '/services?category=Cybersecurity',,
+  description: '75+ Security Solutions',;
       icon: <Shield className='w-5 h-5' />,;
       color: 'from-red-500 to-pink-600',;
       children: [;
         {          name: 'Cyber-Physical Security',;
-          href: '/services/cyber-physical-security',;
-          description: 'Digital + Physical protection',;
+          href: '/services/cyber-physical-security',,
+  description: 'Digital + Physical protection',;
           price: '$6,999/month',;
         },;
         {          name: 'Quantum Internet Security',;
-          href: '/services/quantum-internet-security',;
-          description: 'Unhackable quantum security',;
+          href: '/services/quantum-internet-security',,
+  description: 'Unhackable quantum security',;
           price: '$7,999/month',;
         },;
         {          name: 'Zero Trust Architecture',;
-          href: '/services/zero-trust-network-architecture',;
-          description: 'Continuous verification',;
+          href: '/services/zero-trust-network-architecture',,
+  description: 'Continuous verification',;
           price: '$4,999/month',;
         },;
         {          name: 'AI Threat Detection',;
-          href: '/services/ai-threat-detection',;
-          description: 'Intelligent security monitoring',;
+          href: '/services/ai-threat-detection',,
+  description: 'Intelligent security monitoring',;
           price: '$3,999/month',;
         },;
         {;
           name: 'View All Security Solutions',;
-          href: '/services?category=Cybersecurity',;
-          description: 'Explore security tools',;
+          href: '/services?category=Cybersecurity',,
+  description: 'Explore security tools',;
         },;
       ],;
     },    {;
       name: 'Enterprise IT',;
-      href: '/services?category=Enterprise%20IT',;
-      description: '100+ Enterprise Solutions',;
+      href: '/services?category=Enterprise%20IT',,
+  description: '100+ Enterprise Solutions',;
       icon: <Building className='w-5 h-5' />,;
       color: 'from-indigo-500 to-purple-600',;
       children: [;
         {          name: 'Cloud Platform',;
-          href: '/cloud-platform',;
-          description: 'Scalable cloud infrastructure',;
+          href: '/cloud-platform',,
+  description: 'Scalable cloud infrastructure',;
         }
-      ];
-    };
+      ]
+};
       name: 'Enterprise IT',;
-      href: '/services?category=Enterprise%20IT',;
-      description: '100+ Enterprise Solutions',;
+      href: '/services?category=Enterprise%20IT',,
+  description: '100+ Enterprise Solutions',;
       icon: <Building className='w-5 h-5' />,;
       color: 'from-indigo-500 to-purple-600',;
       children: [;
@@ -836,29 +841,29 @@ export default function UltraFuturisticNavigation2027() {;
       color: 'from-indigo-500 to-purple-600',;
       children: [;
         { ;
-          href: '/cloud-platform',;
-          description: 'Scalable cloud infrastructure',;
+          href: '/cloud-platform',,
+  description: 'Scalable cloud infrastructure',;
           price: 'Custom',;
         },;
         {          name: 'Edge Computing Orchestration',;
-          href: '/services/edge-computing-orchestration',;
-          description: 'Distributed edge management',;
+          href: '/services/edge-computing-orchestration',,
+  description: 'Distributed edge management',;
           price: '$3,499/month',;
         },;
         {          name: 'AI Operations Center',;
-          href: '/services/enterprise-ai-operations-center',;
-          description: 'Centralized AI management',;
+          href: '/services/enterprise-ai-operations-center',,
+  description: 'Centralized AI management',;
           price: '$8,999/month',;
         },;
         {          name: 'Infrastructure Drift Detection',;
-          href: '/services/infrastructure-drift-detector',;
-          description: 'Automated infrastructure monitoring',;
+          href: '/services/infrastructure-drift-detector',,
+  description: 'Automated infrastructure monitoring',;
           price: '$2,999/month',;
         },;
         {;
           name: 'View All Enterprise Solutions',;
-          href: '/services?category=Enterprise%20IT',;
-          description: 'Explore enterprise tools',;
+          href: '/services?category=Enterprise%20IT',,
+  description: 'Explore enterprise tools',;
           {/* Logo */}
           <Link
             href='/'
@@ -983,7 +988,6 @@ export default function UltraFuturisticNavigation2027() {;
           description: 'Automated content creation',
           price: '$299/month',
 
-
           name: 'Smart Inventory Manager',
           href: '/services/smart-inventory-manager',
           description: 'AI-powered inventory optimization',
@@ -1072,7 +1076,6 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/cloud-platform',
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
-
 
   ];
 
@@ -1175,10 +1178,13 @@ export default function UltraFuturisticNavigation2027() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
@@ -1188,6 +1194,7 @@ export default function UltraFuturisticNavigation2027() {;
                       animate={{ opacity: 1, y: 0, scale: 1 }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1195,6 +1202,8 @@ export default function UltraFuturisticNavigation2027() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
@@ -1205,11 +1214,11 @@ export default function UltraFuturisticNavigation2027() {;
             {navigation.map (item => (
               <div key={item.name} className='relative group'>;
                 <motion.button;
-                  className='flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20'                  onMouseEnter={() => setActiveDropdown (item.name)}          <nav className="hidden xl:flex items - center space - x-1">;
+                  className='flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20'                  onMouseEnter={() => setActiveDropdown (item.name)}          <nav className="hidden xl:flex items-center space-x-1">;
             {navigation.map ((item) => (
               <div key={item.name} className="relative group">;
                 <motion.button;
-                  className="flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20";
+                  className="flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow-cyan-500 / 20";
                   onMouseLeave={() => setActiveDropdown (null)}
                   while_hover={{ coordinate_y: -2 }}
                   while_tap={{ scale: 0.95 }}
@@ -1223,8 +1232,8 @@ export default function UltraFuturisticNavigation2027() {;
                   <ChevronDown className='w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300' />                </motion.button>                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`}>;
                     {item.icon}
                   </div>;
-                  <span className="font - medium">{item.name}</span>;
-                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300" />;
+                  <span className="font-medium">{item.name}</span>;
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition-transform duration-300" />;
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {active_dropdown === item.name && (
@@ -1451,10 +1460,13 @@ export default function UltraFuturisticNavigation2027() {;
                 href="/contact"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300">;
                 <Rocket className="w-4 h-4" />;
                 <span>Get Started</span>;
@@ -1462,12 +1474,15 @@ export default function UltraFuturisticNavigation2027() {;
             </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1587,7 +1602,7 @@ export default function UltraFuturisticNavigation2027() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                           href={item.href}
-                          className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
+                          className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition-all duration-200";
                         >;
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`}>;
                             {item.icon}
@@ -1596,6 +1611,7 @@ export default function UltraFuturisticNavigation2027() {;
 
                 <div className='space-y-6'>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1606,6 +1622,8 @@ export default function UltraFuturisticNavigation2027() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -1647,7 +1665,7 @@ export default function UltraFuturisticNavigation2027() {;
 =======
                           key={link.name}
                           href={link.href}
-                          className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
+                          className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition-all duration-200";
                         >;
                           {link.icon}
                       <a
@@ -1714,7 +1732,7 @@ export default UltraFuturisticNavigation2027;
     </header>);
 ;
 `fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 500 $ {
-  is_scrolled ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20' > <Zap className="w - 7 h - 7 text - white" /> </motion.div> <div className="hidden sm:block" > <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent group - hover:from - cyan - 300 group - hover:via - purple - 300 group - hover:to - pink - 300 transition - all duration - 300" > Zion Tech Group </div> <div className="text - xs text - gray - 400 group - hover:text - cyan - 300 transition - colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
+  is_scrolled ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20' > <Zap className="w - 7 h-7 text-white" /> </motion.div> <div className="hidden sm:block" > <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent group - hover:from - cyan - 300 group - hover:via - purple - 300 group - hover:to - pink - 300 transition-all duration-300" > Zion Tech Group </div> <div className="text - xs text - gray - 400 group - hover:text - cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
   `p - 2 rounded - lg bg - gradient - to - br $ {
   item.color;
 }shadow - lg`;
@@ -1733,7 +1751,7 @@ export default UltraFuturisticNavigation2027;
 }while_tap= {
   {
   scale: 0.95;
-}> <Link href="/contact" className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300" > <Rocket className="w - 4 h - 4" /> <span > Get Started</span> </a> </motion.div> {
+}> <Link href="/contact" className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span > Get Started</span> </a> </motion.div> {
   /* Mobile Menu Button */;
 }<button </button> </div> </div> </div> {
   /* Mobile Menu */;
@@ -1745,7 +1763,7 @@ export default UltraFuturisticNavigation2027;
   item.icon;
 }</div> <div> </div> </a> </div>) );
 }</div> </div>) );
-}</div> </div> <div> <h3 className="text - lg font - semibold text - white mb - 4" >Contact Info</h3> <div className="space - y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300" > <Rocket className="w - 4 h - 4 mr - 2" /> Get Started Today </a> </div> </div> </motion.div>);
+}</div> </div> <div> <h3 className="text - lg font - semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition-all duration-300" > <Rocket className="w - 4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>);
 }</AnimatePresence> </header>);
 }export default UltraFuturisticNavigation2027);
 }

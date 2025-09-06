@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,10 +14,14 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -27,6 +32,8 @@ import * as SwitchPrimitives from "@radix-ui/react-switch"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { cn } from "@/lib/utils"
 
@@ -37,12 +44,12 @@ const Switch = React.forwardRef<
 ></typeof>(({ className, ...props }, ref) => (
   <SwitchPrimitives.Root
 
-
 const Switch = React && React.forwardRef<;
   React && React.ElementRef<typeof SwitchPrimitives && SwitchPrimitives.Root>,;
   React && React.ComponentPropsWithoutRef<typeof SwitchPrimitives && SwitchPrimitives.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
   <SwitchPrimitives&& SwitchPrimitives.Root
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -202,3 +209,5 @@ export { Switch }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

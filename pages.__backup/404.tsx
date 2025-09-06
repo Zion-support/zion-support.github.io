@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,9 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Cus
 =======
 =======
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -68,8 +72,8 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Cus
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 ursor/add-new-services-and-deploy-updates-0462
@@ -111,3 +115,6 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Cus
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

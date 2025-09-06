@@ -29,14 +29,6 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -48,6 +40,7 @@ import {StatusBadge} from "./StatusBadge";
 import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
 =======
@@ -111,10 +104,14 @@ interface ApplicationsTableProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export function ApplicationsTable({
+=======
+import {toast} from "@/hooks/use-toast";export function ApplicationsTable({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   applications
   processingId
   onViewApplication
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -148,25 +145,18 @@ export function ApplicationsTable({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ApplicationsTable(): any ({ ;
   applications, ;
   processingId, ;
   onViewApplication, ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onStatusChange;
   onViewScore;
 }: ApplicationsTableProps) {;
   const [hireModalOpen, setHireModalOpen] = useState(false);
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 export function ApplicationsTable({ 
   applications, 
@@ -175,6 +165,7 @@ export function ApplicationsTable({
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
     setHireModalOpen(true)
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -420,6 +411,8 @@ export function ApplicationsTable({;
     });
   };
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <>;
       <div className="rounded-md border">;
@@ -433,6 +426,7 @@ export function ApplicationsTable({;
               <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
+<<<<<<< HEAD
           <TableBody>;
             {applications && applications.map((application) => (;
               <TableRow key={application && application.id}>;
@@ -472,6 +466,9 @@ export function ApplicationsTable({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <ClickableBadge
                       variant="outline"
+=======
+          <TableBody>;                      variant="outline"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >;
@@ -480,27 +477,12 @@ export function ApplicationsTable({;
                   ) : (;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                </TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex items-center justify-end gap-2">;
-                    <ClickableBadge
-                      variant="outline" 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -566,6 +548,8 @@ export function ApplicationsTable({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -573,12 +557,10 @@ export function ApplicationsTable({;
                     />;
                   </div>;
                 </TableCell>;
-<<<<<<< HEAD
 
           </TableBody>;
         </Table>;
       </div>;
-
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
@@ -586,6 +568,7 @@ export function ApplicationsTable({;
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication |undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
 
       />;
     </>;
@@ -739,18 +722,15 @@ export function ApplicationsTable({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hire Confirmation Modal */}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
-<<<<<<< HEAD
       />;
     </>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              </TableRow>))}
           </TableBody>;
         </Table>;
       </div>;
@@ -762,6 +742,7 @@ export function ApplicationsTable({ ;
         on_confirm={handleHireConfirmed}
       />;
     </>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -824,3 +805,6 @@ export function ApplicationsTable({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

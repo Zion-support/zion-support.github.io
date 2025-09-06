@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function securityMiddleware("request": NextRequest) {;
   const response = NextResponse && NextResponse.next();
   // Apply security headers;
@@ -15,11 +16,13 @@ export function securityMiddleware(request: NextRequest) {;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function securityMiddleware("request": NextRequest) {;
   const response = NextResponse && NextResponse.next();
   // Apply security headers;
-<<<<<<< HEAD
   securityHeaders.forEach(({ key, value }) => {;
+<<<<<<< HEAD
     response.headers.set(key, value)});
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -36,9 +39,15 @@ export function securityMiddleware("request": NextRequest) {;
   // Apply Content Security Policy;
   const cspString = Object.entries(contentSecurityPolicy.directives);
     .map(([key, values]) => `${key} ${values.join(" ")}`);
+=======
+    response.headers.set(key, value)});  // Apply Content Security Policy;
+  const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives);
+    .map(([key, values]) => `${key} ${values && values.join(" ")}`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     .join("; ");
   response.headers.set("Content-Security-Policy", cspString);
   // Rate limiting headers;
+<<<<<<< HEAD
   response.headers.set("X-RateLimit-Limit", "100");
   response.headers.set("X-RateLimit-Remaining", "99");
   response.headers.set("X-RateLimit-Reset", new Date(Date.now() + 3600000).toISOString());
@@ -65,18 +74,15 @@ export function securityMiddleware(request: NextRequest) {; const response = Nex
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
-export function securityMiddleware(request: NextRequest) {const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
+  response && response.headers.set("X-RateLimit-Limit", "100");
+  response && response.headers.set("X-RateLimit-Remaining", "99");
+  response && response.headers.set("X-RateLimit-Reset", new Date(Date && Date.now() + 3600000).toISOString());
+  return response}export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function securityMiddleware(request: NextRequest) {const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 export const config = {;
   "matcher": [;
-<<<<<<< HEAD
     "/((?!api|_next/static|_next/image|favicon && favicon.ico).*)",
   ],,
 }
@@ -118,6 +124,7 @@ function security_middleware() { const response = NextResponse.next (); security
 export /**
  * security_middleware - Function description
  */
+<<<<<<< HEAD
 function security_middleware() { const response = NextResponse.next (); security_headers.for_each (({ key, value }) => { response.headers.set (key, value)}); const csp_string = Object.entries (contentSecurityPolicy.directives); .map (([key, values]) => `${key} ${values.join (" ")}`); .join ("; "); response.headers.set ("Content - Security - Policy", csp_string); response.headers.set ("X - RateLimit - Limit", "100"); response.headers.set ("X - RateLimit - Remaining", "99"); response.headers.set ("X - RateLimit - Reset", new Date (Date.now () + 3600000).toISOString ()); return response} export const config = { matcher: [; "/((?!api | _next / static | _next / image | favicon.ico).*)", ], ,}
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -152,3 +159,6 @@ export function securityMiddleware(request: NextRequest) {; const response = Nex
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+function security_middleware() { const response = NextResponse.next (); security_headers.for_each (({ key, value }) => { response.headers.set (key, value)}); const csp_string = Object.entries (contentSecurityPolicy.directives); .map (([key, values]) => `${key} ${values.join (" ")}`); .join ("; "); response.headers.set ("Content - Security - Policy", csp_string); response.headers.set ("X - RateLimit - Limit", "100"); response.headers.set ("X - RateLimit - Remaining", "99"); response.headers.set ("X - RateLimit - Reset", new Date (Date.now () + 3600000).toISOString ()); return response} export const config = { matcher: [; "/((?!api | _next / static | _next / image | favicon.ico).*)", ], ,}>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -2,12 +2,11 @@
 export interface Job {
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Job {;
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -19,21 +18,28 @@ export interface Job {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Job {;
 
+=======
+export interface Job {export interface Job {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export interface Job {
-<<<<<<< HEAD
 export interface Job {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   title: string;
+=======
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
   company_name?: string;
   budget?: string;
   client_id: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -74,9 +80,11 @@ export interface ApplyToJobModalProps {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Job {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   company_name?: string,;
   budget?: string,;
@@ -85,6 +93,7 @@ export interface Job {;
 ;
 export interface ApplyToJobModalProps {;
   job: Job,;
+<<<<<<< HEAD
   isOpen: boolean,;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -99,6 +108,9 @@ export interface ApplyToJobModalProps {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onClose: () => void;
+=======
+  isOpen: boolean,;  onClose: () => void;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
@@ -109,27 +121,11 @@ export interface ApplyToJobModalProps {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  is_open: boolean;
-  on_close: () => void;
-  onApplySuccess?: (job_id: string) => Promise < void>;
-}
-
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-
-;
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export interface ApplyToJobModalProps {
+<<<<<<< HEAD
   job: Job;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  job: Job;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

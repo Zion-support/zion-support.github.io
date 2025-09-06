@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import _React from 'react'; export default function ForumCategories() { const ca
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+import _React from 'react'; export default function ForumCategories() { const categories = [{ "id": "1","name": "General Discussion","description": "General topics and discussions","postCount": '150',"adminOnly": 'false',"icon": "message-circle","lastPost": { title: "Welcome to the community!","author": "Admin","date": "2024-01-15" },{ "id": "2","name": "Technical Support","description": "Get help with technical issues","postCount": '89',"adminOnly": 'false',"icon": "code","lastPost": { title: "API integration question","author": "Developer123","date": "2024-01-14" ]; return(<div className="space-y-4">" {categories.map((category) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>"Last": {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} ";"}}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ const React from "react"; export default function ForumCategories() { const cate
 
 import _React from 'react'; export default function ForumCategories() { const categories = [{ "id": "1","name": "General Discussion","description": "General topics and discussions","postCount": '150',"adminOnly": 'false',"icon": "message-circle","lastPost": { title: "Welcome to the community!","author": "Admin","date": "2024-01-15" },{ "id": "2","name": "Technical Support","description": "Get help with technical issues","postCount": '89',"adminOnly": 'false',"icon": "code","lastPost": { title: "API integration question","author": "Developer123","date": "2024-01-14" ]; return (<div className="space-y-4">" {categories && categories.map((category) => (<div key={category && category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category && category.name}</h3>" <p className="text-zion-slate-light mb-2">{category && category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category && category.postCount} posts</span> {category && category.lastPost && (<span>"Last": {category && category.lastPost.title} by {category && category.lastPost.author}</span>)} </div> </div>))} </div>)} ";"}}}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,3 +79,5 @@ import _React from 'react'; export default function ForumCategories() { const ca
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

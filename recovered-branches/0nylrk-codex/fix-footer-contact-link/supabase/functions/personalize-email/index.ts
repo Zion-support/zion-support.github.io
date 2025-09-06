@@ -1,42 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
-
-<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-
-=======
-=======
-
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
+<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
@@ -56,10 +44,13 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -203,10 +194,13 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -231,33 +225,26 @@ serve(async (req) => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
 
-
-
     // Call OpenAI API to generate personalized content
-
 
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
 
-
       body: JSON.stringify({
         model: "gpt-4o-mini"
-<<<<<<< HEAD
-=======
-=======
-    userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
-    // Call OpenAI API to generate personalized content
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+=======    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
 <<<<<<< HEAD
@@ -522,6 +509,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+=======
+        messages: [import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
 const corsHeaders = {;
@@ -628,6 +618,7 @@ serve(async (req) => {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   }
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 ;
@@ -817,3 +808,6 @@ if (jsonMatch) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

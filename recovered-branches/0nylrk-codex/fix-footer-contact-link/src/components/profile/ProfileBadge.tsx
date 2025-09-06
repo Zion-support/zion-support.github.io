@@ -1,15 +1,19 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -45,6 +49,8 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -64,6 +70,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "New"
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -88,6 +95,8 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       icon: Award,
       text: "Top Rated",
@@ -98,6 +107,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -321,3 +331,6 @@ className)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

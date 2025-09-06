@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -8,10 +9,14 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 export function useFetchResume() {
 <<<<<<< HEAD
 =======
@@ -42,6 +47,9 @@ export function useFetchResume() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
+=======
+export function useFetchResume() {  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -55,64 +63,11 @@ export function useFetchResume() {;
     setError(null);
     try {
       // If resumeId is provided, fetch that specific resume
-      // Otherwise, fetch the user's active resume or most recent resume
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
-      
-
-=======
-let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      if (resumeId) {
-        resumeQuery = resumeQuery && resumeQuery.eq('id', resumeId)
-      } else {
-        resumeQuery = resumeQuery
-          .eq('user_id', user && user.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      let resumeQuery = supabase.from('talent_resumes').select('*');
-      if (resumeId) {
-        resumeQuery = resumeQuery.eq('id', resumeId)
-      } else {
-        resumeQuery = resumeQuery
-          .eq('user_id', user.id)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          .order('is_active', { ascending: false })
-          .order('created_at', { ascending: false })
-          .limit(1)
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      
-      const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
-      
-
-      if (resumeError) {
-        if (resumeError && resumeError.code === 'PGRST116') {
-=======
-      const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
-      if (resumeError) {
-        if (resumeError && resumeError.code === 'PGRST116') {
-      const { data: resumeData, error: resumeError } = await resumeQuery.single();
-      if (resumeError) {
-        if (resumeError.code === 'PGRST116') {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      if (resumeError) {
-        if (resumeError && resumeError.code === 'PGRST116') {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          // No resume found, this is not a critical error for a new user
+      // Otherwise, fetch the user's active resume or most recent resume          // No resume found, this is not a critical error for a new user
           setResume(null);
           setIsLoading(false);
           return null
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         }
@@ -137,6 +92,8 @@ export function useFetchResume() {;
       setError('You must be logged in to access resumes'),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -154,6 +111,7 @@ function useFetchResume() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       set_error ('You must be logged in to access resumes');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -280,50 +238,16 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (skillsError) throw skillsError;
+=======
+      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
         .select('*')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         .eq('resume_id', resumeData && resumeData.id);
-        
-
-=======
-        .eq('resume_id', resumeData && resumeData.id);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      if (certError) throw certError;
-      const fullResume: Resume = {
-        id: resumeData && resumeData.id;
-        user_id: resumeData && resumeData.user_id;
-        basic_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          id: resumeData && resumeData.id;
-          title: resumeData && resumeData.title;
-          headline: resumeData && resumeData.headline,
-          summary: resumeData && resumeData.summary
-        };
-        work_experience: workData || [];
-        education: educationData || [];
-        skills: skillsData || [];
-        certifications: certData || [],
-        is_active: resumeData && resumeData.is_active
-      };
-<<<<<<< HEAD
-      
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      setResume(fullResume);
+              setResume(fullResume);
       return fullResume
     } catch (e: any) {
       console && console.error('Error fetching resume:', e);
@@ -402,17 +326,11 @@ if (throw cert_error) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    is_loading;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    error;
     resume;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -669,3 +587,6 @@ is active: resumeData.is active
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

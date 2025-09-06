@@ -30,6 +30,7 @@ export type IntegrationStatus = "connected" | "warning" | "disconnected";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Integration {
@@ -124,10 +125,13 @@ export interface SyncLog {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface SyncLog {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   timestamp: string
@@ -153,11 +157,16 @@ export interface SyncLog {
   details: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+
+  details: string}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export type CrmIntegrationEvents =
   | "contact_synced"
   | "deal_created"
   | "deal_updated"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -249,16 +258,48 @@ export type AtsIntegrationEvents =;
 
 
   | "resume_uploaded";
-  | "job_posted";
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-  | "resume_uploaded";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  | "job_posted";
+
+  | "job_posted",
+export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",;
+export type IntegrationStatus = "connected" | "warning" | "disconnected",;
+export interface Integration {;
+  id: string,;
+  name: string,,
+  description: string,;
+  logoUrl: string,;
+  status: IntegrationStatus,;
+  lastSync?: string,;
+  type: IntegrationType;
+}
+;
+export interface SyncLog {;
+  id: string,;
+  integration: string,;
+  event: string,;
+  status: "success" | "error" | "warning",;
+  timestamp: string,;
+  timestamp: string,
+  details: string;
+}
+export type CrmIntegrationEvents =;
+  | "contact_synced";
+  | "deal_created";
+  | "deal_updated";
+  | "note_added";
+export type AtsIntegrationEvents =;
+  | "applicant_created";
+  | "candidate_status_changed";
+  | "interview_scheduled";  | "resume_uploaded";
   | "job_posted";
   | "resume_uploaded";
   | "job_posted";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

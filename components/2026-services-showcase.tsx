@@ -42,8 +42,11 @@ import {
   Sparkles,;
   Target,;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import {;
   Search,;
@@ -516,6 +519,7 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -526,8 +530,9 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Sort By */}
-
 
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
@@ -577,8 +582,8 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                     {/* Service Header */}
-                    <div className="flex items - start justify - between mb - 4">;
-                      <div className="text - 4xl">{service.icon}</div>;
+                    <div className="flex items - start justify-between mb-4">;
+                      <div className="text-4xl">{service.icon}</div>;
                       {service.popular && (
 <<<<<<< HEAD
 
@@ -679,7 +684,6 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 
-
                       {service.name}
                     </h3>
 
@@ -702,6 +706,7 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                       </ul>
                     </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -717,6 +722,11 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                          </li>
+                        ))}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {/* Category and Technology */}
 
                     <div className="flex items-center justify-between mb-4">
@@ -818,13 +828,13 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                     {/* Description */}
                     <p className='text - gray - 400 text - sm mb - 4 line - clamp - 3'>                      {service.description}
                     </p>;
-                    {/* Features */}                      <div className="flex items - center space - x-1">;
-                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                        <span className="text - white text - sm">{service.rating}</span>;
-                        <span className="text - gray - 400 text - sm">({service.reviews})</span>;
+                    {/* Features */}                      <div className="flex items-center space-x-1">;
+                        <Star className="w - 4 h - 4 text - yellow-400 fill-current" />;
+                        <span className="text-white text-sm">{service.rating}</span>;
+                        <span className="text - gray-400 text-sm">({service.reviews})</span>;
                     </div>;
                     {/* Description */}
-                    <p className='text - gray - 400 text - sm mb - 4 line - clamp - 3'>                    <p className="text - gray - 400 text - sm mb - 4 line - clamp - 3">;
+                    <p className='text - gray - 400 text - sm mb - 4 line - clamp - 3'>                    <p className="text - gray - 400 text - sm mb - 4 line-clamp-3">;
                       {service.description}
                     </p>;
                     {/* Features */}
@@ -838,12 +848,12 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                             key={idx}
                             className='text - gray - 400 text - xs flex items - center';
                           >;
-                            <Zap className='w - 3 h - 3 text - cyan - 400 mr - 2 flex - shrink - 0' />                            {feature}                    <div className="mb - 4">;
-                      <h4 className="text - white font - semibold mb - 2 text - sm">Key Features:</h4>;
-                      <ul className="space - y-1">;
+                            <Zap className='w - 3 h - 3 text - cyan - 400 mr - 2 flex - shrink - 0' />                            {feature}                    <div className="mb-4">;
+                      <h4 className="text - white font - semibold mb-2 text-sm">Key Features:</h4>;
+                      <ul className="space-y-1">;
                         {service.features.slice (0, 3).map ((feature, idx) => (
-                          <li key={idx} className="text - gray - 400 text - xs flex items - center">;
-                            <Zap className="w - 3 h - 3 text - cyan - 400 mr - 2 flex - shrink - 0" />;
+                          <li key={idx} className="text - gray - 400 text-xs flex items-center">;
+                            <Zap className="w - 3 h - 3 text - cyan - 400 mr - 2 flex-shrink-0" />;
                           </li>))}
                       </ul>;
                     </div>;
@@ -852,17 +862,17 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                       <span className='text - xs text - gray - 500 bg - gray - 700 / 50 px - 2 py - 1 rounded'>;
                         {service.category}
                       </span>;
-                      <span className='text - xs text - gray - 500'>                        {service.customers}+ customers                    <div className="flex items - center justify - between mb - 4">;
-                      <span className="text - xs text - gray - 500 bg - gray - 700 / 50 px - 2 py - 1 rounded">;
+                      <span className='text - xs text - gray - 500'>                        {service.customers}+ customers                    <div className="flex items - center justify-between mb-4">;
+                      <span className="text - xs text - gray - 500 bg - gray - 700 / 50 px-2 py-1 rounded">;
                         {service.category}
                       </span>;
-                      <span className="text - xs text - gray - 500">;
+                      <span className="text - xs text-gray-500">;
                       </span>;
                     </div>;
                     {/* CTA Button */}
                     <a;
                       href={service.link}
-                      className='w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 3 px - 4 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 text - center block'                    >                      className="w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 3 px - 4 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 text - center block";
+                      className='w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 3 px - 4 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 text - center block'                    >                      className="w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 3 px - 4 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale-105 text-center block";
                     >;
                       Learn More;
                     </a>;
@@ -882,17 +892,17 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                 </h3>;
                 <p className='text - gray - 400'>;
                   Try adjusting your search terms or filters;
-                </p>              </motion.div>                className="text - center py - 16";
+                </p>              </motion.div>                className="text-center py-16";
               >;
-                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-                <p className="text - gray - 400">Try adjusting your search terms or filters</p>)}
+                <div className="text-6xl mb-4">🔍</div>;
+                <h3 className="text - 2xl font - bold text-white mb-2">No services found</h3>;
+                <p className="text-gray-400">Try adjusting your search terms or filters</p>)}
           </div>;
         </section>;
         {/* Contact Section */}
         <section className='relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
+          <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 sm:px-6 lg:px-8">;
+          <div className="max - w-4xl mx-auto text-center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1013,7 +1023,6 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
     </UltraAdvancedFuturisticBackground>
   );
 
-
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
                   View Pricing;
                 </a>;
@@ -1062,35 +1071,35 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                 <a;
                   href='/pricing';
                   className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                >            >;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Ready to Transform Your Business?</h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
+              <h2 className="text - 3xl font - bold text-white mb-6">Ready to Transform Your Business?</h2>;
+              <p className="text - xl text - gray-300 mb-8">;
                 Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions;
               </p>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
-                <div className="flex items - center justify - center space - x-3 text - cyan - 300">;
-                  <span className="text - 2xl">📱</span>;
-                  <span className="font - semibold">{contact_info.mobile}</span>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 mb-8">;
+                <div className="flex items - center justify - center space - x-3 text-cyan-300">;
+                  <span className="text-2xl">📱</span>;
+                  <span className="font-semibold">{contact_info.mobile}</span>;
                 </div>;
-                <div className="flex items - center justify - center space - x-3 text - purple - 300">;
-                  <span className="text - 2xl">✉️</span>;
-                  <span className="font - semibold">{contact_info.email}</span>;
+                <div className="flex items - center justify - center space - x-3 text-purple-300">;
+                  <span className="text-2xl">✉️</span>;
+                  <span className="font-semibold">{contact_info.email}</span>;
                 </div>;
-                <div className="flex items - center justify - center space - x-3 text - pink - 300">;
-                  <span className="text - 2xl">📍</span>;
-                  <span className="font - semibold text - sm">{contact_info.address}</span>;
+                <div className="flex items - center justify - center space - x-3 text-pink-300">;
+                  <span className="text-2xl">📍</span>;
+                  <span className="font-semibold text-sm">{contact_info.address}</span>;
                 </div>;
               </div>;
-              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+              <div className="flex flex - col sm: flex - row gap-4 justify-center">;
                 <a;
                   href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
+                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration-300 transform hover:scale-105";
                 >;
                   Contact Us Now;
                 </a>;
                 <a;
                   href='/pricing';
                   className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                  href="/pricing";
-                  className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                  className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
                 >;
                   View Pricing;
                 </a>;

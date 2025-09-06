@@ -7,6 +7,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +41,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -83,6 +89,8 @@ class CodeQualityMonitor {
   }
   log(message, level = 'INFO') {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -90,6 +98,7 @@ class CodeQualityMonitor {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -97,10 +106,12 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 ;
+<<<<<<< HEAD
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0; maintainability: 0; testCoverage: 0; performance: 0; lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 =======
 <<<<<<< HEAD
@@ -178,18 +189,26 @@ const { execSync } = require("child_process");
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 
 =======
+<<<<<<< HEAD
 
 =======
 
@@ -199,6 +218,14 @@ const { execSync } = require("child_process");
 =======
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -220,6 +247,12 @@ class CodeQualityMonitor {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   }
   async runQualityChecks() {
     this.log('Running code quality checks...');
@@ -234,6 +267,8 @@ class CodeQualityMonitor {;
     try {
       execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
       results.lint.status = 'pass';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -265,6 +300,7 @@ class CodeQualityMonitor {;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       this.log('"ESLint": PASS');
     } catch (error) {
       results.lint.status = 'fail';
@@ -523,6 +559,8 @@ if (require.main === module) {
   monitor.run().catch(console.error);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -558,6 +596,10 @@ module.exports = CodeQualityMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 ;
   async analyzeCodeQuality() {;
@@ -594,13 +636,20 @@ class CodeQualityMonitor {,
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
 }
 =======
+<<<<<<< HEAD
 =======
 
 =======
@@ -614,11 +663,16 @@ class CodeQualityMonitor {,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -636,6 +690,17 @@ class CodeQualityMonitor {,
     fs.appendFileSync(this.logFile, logMessage),
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    fs.appendFileSync(this.logFile, logMessage),
+  };
+=======
+<<<<<<< HEAD
+=======
+    fs.appendFileSync(this.logFile, logMessage),
+  };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -649,6 +714,7 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1017,8 +1083,23 @@ module.exports = CodeQualityMonitor;
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return this.metrics,
     } catch (error) {,
+=======
+<<<<<<< HEAD
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+      return this.metrics
+    } catch (error) {,
+=======
+      return this.metrics,
+    } catch (error) {,
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 <<<<<<< HEAD
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null,
@@ -1027,10 +1108,16 @@ module.exports = CodeQualityMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
       return null
     },
 
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -1063,6 +1150,7 @@ class CodeQualityMonitor { constructor () { this.metrics = { complexity: 0, main
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 #!/usr/bin/env node,;
 const fs = require("fs"),;
@@ -1106,6 +1194,8 @@ class CodeQualityMonitor {,;
       return null;
     },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -1137,4 +1227,11 @@ module.exports = CodeQualityMonitor;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

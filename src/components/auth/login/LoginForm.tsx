@@ -42,7 +42,7 @@ import {
   FormMessage,
 } from '@/components / ui / form';
 import { Alert, AlertDescription } from '@/components / ui / alert';
-import Link from 'next / link';
+import Link from 'next/link';
 import { Checkbox } from '@/components / ui / checkbox';// Form validation schema;
 const login_schema = z.object ({
   email: z;
@@ -119,30 +119,52 @@ import {
 <<<<<<< HEAD
 =======
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any,
+    resolver: zodResolver(loginSchema) as any
     defaultValues: {
-      email: '',
-      password: '',
-      rememberMe: false,
-    },
+      email: ''
+      password: ''
+      rememberMe: false
+    }
   })
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+    if (isSubmitting) return
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true)
       // Pass email and password to the login function
-      const result = await login(data.email, data.password, data.rememberMe);
-      if (result?.error) {;
-        let errorMessage = 'Login failed. Please try again.'; // Default generic error
+      const result = await login(data.email, data.password, data.rememberMe)
+      if (result?.error) {        let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
           if (
             result.error.message.toLowerCase().includes('email not confirmed')
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   FormMessage} from "@/components/ui/form",
+=======
+} from '@/components/ui/form'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
+import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
+const loginSchema = z.object({
+  email: z
+    .string()
+    .email('Please enter a valid email')
+    .min(1, 'Email is required')
+  password: z.string().min(6, 'Password must be at least 6 characters')
+  rememberMe: z.boolean()
+})
+type LoginFormValues = z.infer<typeof loginSchema>
+export function LoginForm() {
+  const { isLoading, login } = useAuth()
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isResending, setIsResending] = useState(false)
+  const [verificationMessage, setVerificationMessage] = useState('')
+  const router = useRouter()  FormMessage} from "@/components/ui/form",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -151,7 +173,6 @@ const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
   rememberMe: z.boolean()}),
-
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
@@ -164,6 +185,7 @@ export function LoginForm() {
   const router = useRouter(),
   
   const form = useForm<LoginFormValues>({
+<<<<<<< HEAD
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
 <<<<<<< HEAD
@@ -248,11 +270,16 @@ import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import {;
+=======
+    resolver: zodResolver(loginSchema) as any
+    defaultValues: {import {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import Link from "next/link",;
@@ -293,6 +320,8 @@ export function LoginForm() {;
         }
         form.setError("root", { message: errorMessage });
       } else {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fireEvent('login', { method: 'email' });
       }
     } finally {;
@@ -311,6 +340,7 @@ export function LoginForm() {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
         body: JSON.stringify({ email });
       }),;
       const data = await response.json(),;
@@ -319,6 +349,8 @@ export function LoginForm() {;
       } else {;
         setVerificationMessage(data.message || 'Failed to resend verification email.');
       }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
@@ -331,11 +363,16 @@ export function LoginForm() {;
       form.setError('root', { message: 'Please enter your email address.' }),;
       return;
     }
+<<<<<<< HEAD
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   },
 
 <<<<<<< HEAD
 =======
+=======
+    router && router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         onSubmit={form && form.handleSubmit(onSubmit, errors => {;
           const firstError = Object && Object.keys(errors)[0] as keyof LoginFormValues;
@@ -372,9 +409,12 @@ if ( {) {
             field
           }: {
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -383,10 +423,13 @@ if ( {) {
         </Alert>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <form;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {;
@@ -404,6 +447,7 @@ if ( {) {
               <FormControl>
                 <div className="relative">
                   <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     type={showPassword ? 'text' : 'password'}
@@ -426,6 +470,8 @@ if ( {) {
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
@@ -467,9 +513,12 @@ if ( {) {
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />;
         <FormField;
           control={form.control}
@@ -555,6 +604,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormControl>
+<<<<<<< HEAD
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
@@ -568,6 +618,16 @@ if ( {) {
 
 
               </FormControl>
+=======
+            field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
+          }) => (;
+            <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
+              <FormControl>;
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}              </FormControl>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
@@ -577,8 +637,12 @@ if ( {) {
         <div className="flex items-center justify-between">
           <div className="text-sm">
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
+<<<<<<< HEAD
             {/* If "Remember me" was previously here, it's moved. */}
           </div>
+=======
+            {/* If "Remember me" was previously here, it's moved. */}          </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
               Forgot password?
@@ -586,6 +650,7 @@ if ( {) {
           </div>
         </div>
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -639,24 +704,17 @@ if ( {) {
           </p>;
         )}
         <div className="flex justify-between mt-4">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Button
-            type="button"
-            variant="secondary"
-            className="w-1/2 mr-2"
+            type='button'
+            variant='secondary'
+            className='w-1/2 mr-2'
             onClick={handleResendEmail}
-            disabled={isResending}
-          >;
-            {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
-          </Button>
           <Button
-            type="button"
-            variant="outline"
-            className="w-1/2 ml-2"
-            onClick={handleCheckStatus}
-          >
-
-
-            Check status
+            type='button'
+            variant='outline'
+            className='w-1/2 ml-2'            Check status
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
@@ -666,6 +724,7 @@ if ( {) {
         </p>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
           </Button>;
@@ -864,3 +923,10 @@ return;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+  )            Create account;
+          </Link>;
+        </p>;
+      </form>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

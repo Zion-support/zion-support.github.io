@@ -9,5 +9,10 @@ const { execSync } = require('child_process')
       { "name": 'Lint Check', "cmd"}
         execSync(step.cmd, { "stdio"})
           "status"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+          "status"
+          "status"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

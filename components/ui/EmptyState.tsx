@@ -30,7 +30,7 @@ export default function EmptyState({
 =======
 =======
   primaryAction?: { label: string; href: string };
-  secondaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string }
 };
 import React from 'react';
 
@@ -42,9 +42,8 @@ export default function EmptyState(): any ({;
   secondaryAction,;
 }: EmptyStateProps) {;
 
-
   primaryAction?: { label: string; href: string };
-  secondaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string }
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -99,7 +98,6 @@ function EmptyState() {
             <Link href={primary_action.href}>;
               <a>;
                 <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {
-
 
   title: string,;
   title: string,

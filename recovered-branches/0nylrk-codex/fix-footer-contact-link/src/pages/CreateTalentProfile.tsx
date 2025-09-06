@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,6 +42,14 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
+import React from "react",
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
+import React from "react",
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
@@ -48,6 +57,7 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -55,6 +65,8 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 import React from "react";
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -73,6 +85,7 @@ export default function CreateTalentProfile() {
         <TalentRegistrationForm />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -157,18 +170,26 @@ function CreateTalentProfile() {
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-
 =======
-;
+  )
+import React from "react",;
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </div>);
+export default function CreateTalentProfile() {;
+  return (
+    <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
+      <div className="container mx-auto px-4">;
+        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Talent Network</h1>;
+          <p className="text-zion-slate-light max-w-2xl mx-auto">;
+            Showcase your skills to top clients and employers. Create a professional profile;
+            to get discovered for AI and tech projects on the Zion Marketplace.;
+          </p>;
+        </div>;    </div>);
 }
 
 ;
-
 
         ;
         <TalentRegistrationForm />;
@@ -187,7 +208,10 @@ function CreateTalentProfile() {
 =======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

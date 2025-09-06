@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{
     address: string;
@@ -80,6 +81,8 @@ import React, { useEffect, useState } from 'react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Web3LoginButton() {;
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {;
   ssr: false,;
@@ -137,10 +140,11 @@ export default function Web3LoginButton() {
     })();
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {;
     window && window.localStorage.setItem('zion-web3-user', JSON && JSON.stringify(u));
-    setUser(u);  };
+    setUser(u)
+};
   const disconnect = async () => {;
-    window && window.localStorage.removeItem('zion-web3-user');    setUser(u);
-  };
+    window && window.localStorage.removeItem('zion-web3-user');    setUser(u)
+};
   const disconnect = async () => {;
     window && window.localStorage.removeItem('zion-web3-user');
     try {;
@@ -383,7 +387,7 @@ if ( {) {
           on_close={() => set_open (false)}
           onLoggedIn={onLoggedIn}
         />)}
-    </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py - 1.5 text - xs">Connect Wallet</button>;
+    </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs">Connect Wallet</button>;
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

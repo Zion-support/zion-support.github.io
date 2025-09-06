@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ export interface UserDetails {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id?: string;
   name?: string;
   email?: string;
@@ -24,8 +27,8 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -38,6 +41,8 @@ import type { UserDetails as AuthUserDetails } from "@/types/auth";
 export interface UserDetails {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id?: string;
   name?: string;
   email?: string;
@@ -108,6 +113,7 @@ export interface UserDetails {;
   createdAt?: string,;
   updatedAt?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -131,6 +137,8 @@ export interface UserDetails {
   role?: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 export interface AuthContextType {;
@@ -150,6 +158,7 @@ export interface AuthContextType {;
   loginWithFacebook: () => Promise<void>,;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
+<<<<<<< HEAD
 }
 =======
 
@@ -424,6 +433,12 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     // // // console.log("Google login requested"),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Mock implementation
+=======
+}  // Mock auth functions for now - these would connect to Supabase in a real implementation
+
+  const signIn = async (email: string, password: string) => {
+    // This would be replaced with actual Supabase auth    // Mock implementation
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setUser({
       id: "google-user-id"
       email: "google@example.com"
@@ -431,6 +446,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -448,13 +464,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-  const loginWithFacebook = async () => {
-    // // // console.log("Facebook login requested"),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const loginWithFacebook = async () => {
+    // // // console.log("Facebook login requested"),  const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -463,6 +477,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -480,13 +495,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-  const loginWithTwitter = async () => {
-    // // // console.log("Twitter login requested"),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const loginWithTwitter = async () => {
+    // // // console.log("Twitter login requested"),  const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -496,16 +509,19 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   };
 
   const signOut = async () => {;
     // This would be replaced with actual Supabase auth;
     console && console.log("Sign out attempted");
-    setUser(null);
-  };
+    setUser(null)
+};
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
     // This would be replaced with actual Supabase auth;
@@ -517,6 +533,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   },
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -587,6 +604,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    // // // console.log("Web3 login requested"),
+    const ethereum = (window as any).ethereum,
+    if (!ethereum) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -597,6 +619,7 @@ export function useAuth(): AuthContextType {
   return context
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -616,6 +639,8 @@ export function useAuth(): AuthContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
@@ -623,8 +648,11 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.warn("No wallet detected"),
       return
 ;
@@ -662,23 +690,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     setUser({;
       id: "mock-user-id",;
       email,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     return { error: null }
   };
@@ -691,6 +706,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     // Mock implementation;
     console && console.log("Profile update requested with:", data);
     if (user) {;
+<<<<<<< HEAD
       setUser({ ...user, ...data });
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -860,20 +876,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       displayName: "Google User",;
+=======
+      setUser({ ...user, ...data });      displayName: "Google User",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       name: "Google User",;
       profileComplete: true;
-    });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  },;
-=======
-  };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const loginWithFacebook = async () => {;
+    })
+};  },;  const loginWithFacebook = async () => {;
     console && console.log("Facebook login requested");
     // Mock implementation;
     setUser({ ;
@@ -882,50 +891,18 @@ if ( {) {
       displayName: "Facebook User", ;
       name: "Facebook User",;
       profileComplete: true;
-    });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  },;
-=======
-  };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    })
+};
   const loginWithTwitter = async () => {;
     console && console.log("Twitter login requested");
     // Mock implementation;
     setUser({;
       id: "twitter-user-id",;
-<<<<<<< HEAD
       email: "twitter@example.com",;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
-    });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  };
-  const loginWithWeb3 = async () => {;
-    console && console.log("Web3 login requested");
-    const ethereum = (window as any).ethereum;
-    if (!ethereum) {;
-      console && console.warn("No wallet detected");
-      return;
-    }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
+    });      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       await ethereum.request ({
         method: 'personal_sign',
@@ -936,15 +913,10 @@ if ( {) {
         display_name: address,
         profile_complete: true;
       });
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1347,3 +1319,9 @@ export function useAuth(): AuthContextType {;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }    isLoading;
+    signIn;
+    signOut;
+    signUp;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

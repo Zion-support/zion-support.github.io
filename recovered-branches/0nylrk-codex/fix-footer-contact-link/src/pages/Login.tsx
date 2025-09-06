@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -31,11 +32,20 @@ import { LoginContent } from "@/components/auth/login";
 export default function Login() {
   const { isAuthenticated, user } = useAuth();
 <<<<<<< HEAD
+=======
+import { Navigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { Header } from "@/components/Header",import { Footer } from "@/components/Footer";
+import { LoginContent } from "@/components/auth/login";
+export default function Login() {
+  const { isAuthenticated, user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Footer } from "@/components/Footer",
 import { LoginContent } from "@/components/auth/login",
 export default function Login() {
   const { isAuthenticated, user } = useAuth(),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -49,13 +59,16 @@ export default function Login() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" />
   }
-
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return <Navigate to="/onboarding" />
 <<<<<<< HEAD
@@ -101,25 +114,20 @@ export default function Login() {;
 =======
     return <Navigate to="/onboarding" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  }
-<<<<<<< HEAD
-
 =======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+    return <Navigate to="/onboarding" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  }
+  }  // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-<<<<<<< HEAD
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-  }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Navigate } from './react-router-dom';
+=======import { Navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -145,8 +153,6 @@ if ( {) {
     return <Navigate to="/onboarding" />;
   }
   return (
-<<<<<<< HEAD
-=======
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Header } from "@/components/Header",;
@@ -169,6 +175,7 @@ export default function Login() {;
   return (;
 ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -186,11 +193,14 @@ export default function Login() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </>);
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -218,3 +228,5 @@ export default function Login() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

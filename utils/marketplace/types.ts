@@ -20,6 +20,7 @@ export type Offer = {;
 =======
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -54,17 +55,20 @@ export interface Offer {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   createdAtIso: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   scopeSummary: string;
   paymentTerms: PaymentTerms;
   agreementUrl?: string;
@@ -84,6 +88,7 @@ export interface PaymentTerms {
   }>;
 }
 
+<<<<<<< HEAD
 
 
 =======
@@ -152,12 +157,15 @@ export interface Project {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,10 +210,12 @@ export type MarketplaceDb = {;
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   timeline: any[];
+=======
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
-
 
 export interface ProjectNote {
   id: string;
@@ -214,6 +224,7 @@ export interface ProjectNote {
   content: string;
   createdAtIso: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -243,3 +254,6 @@ export interface ProjectNote {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

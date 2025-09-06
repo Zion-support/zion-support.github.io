@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface LoadingSpinnerProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -31,9 +34,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <span className="sr-only">Loading...</span>
       </div>
     </div>
-  );
+  )
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -189,3 +193,6 @@ export default function LoadingSpinner() {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export default LoadingSpinner;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

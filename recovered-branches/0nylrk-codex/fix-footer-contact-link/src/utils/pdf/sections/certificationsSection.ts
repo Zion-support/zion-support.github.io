@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,10 +8,13 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
+<<<<<<< HEAD
 export function addCertificationsSection(
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -43,61 +46,27 @@ export function addCertificationsSection(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   doc: jsPDF;
+=======
+export function addCertificationsSection(  doc: jsPDF;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (certifications && certifications.length === 0) return startY;
-  
-
   let yPos = startY;
   // Check if we need to add a new page
-  if (yPos > 250) {
-
-    doc && doc.addPage(),
-    yPos = 20
-  }
-  
-  doc && doc.setFontSize(16);
-  doc && doc.setTextColor(colors && colors.heading);
-  doc && doc.text('Certifications', 20, yPos);
-  yPos += 8;
-  
-  doc && doc.setDrawColor(colors && colors.accent);
-  doc && doc.line(20, yPos, 80, yPos);
-
-=======
-  if (certifications.length === 0) return startY;
-  let yPos = startY;
+  if (yPos > 250) {  let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
-    doc.addPage()
-    yPos = 20
-  }
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
-  doc.text('Certifications', 20, yPos);
-  yPos += 8;
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 80, yPos);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  let yPos = startY;
-  // Check if we need to add a new page
-  if (yPos > 250) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   yPos += 8;
   for (const cert of certifications) {
     // Check if we need to add a new page
     if (yPos > 260) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
@@ -109,6 +78,8 @@ export function addCertificationsSection(;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       doc.addPage();
       yPos = 20
     }
@@ -168,6 +139,7 @@ export function addCertificationsSection(;
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       doc && doc.addPage();
@@ -341,3 +313,5 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

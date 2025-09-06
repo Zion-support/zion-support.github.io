@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -141,6 +142,8 @@ if (require.main === module) {
 
 module.exports = EnhancedErrorFixingAutomation;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 #!/usr/bin/env node;
@@ -316,4 +319,8 @@ export default function"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -488,6 +488,7 @@ if (return []) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
+<<<<<<< HEAD
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
                   <CardHeader className="pb-3">;
@@ -599,3 +600,7 @@ if (return []) {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

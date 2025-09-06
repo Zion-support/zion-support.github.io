@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 
 
@@ -15,17 +15,19 @@ import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "../components/ContractForm";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "../components/ContractForm";
 interface Milestone {
-  title: string;
+  title: string,
   description: string;
-
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -147,6 +149,12 @@ export async function generateContract(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: m.title,
+=======
+interface Milestone {
+  title: string,
+  description: string,
+  dueDate: string,        title: m.title,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         description: m.description,
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours
@@ -164,22 +172,14 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (data.success && data.contract) {
-    return data.contract
-=======
-  
-  if (data && data.success && data && data.contract) {
-    return data && data.contract
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  } else {
+    return data.contract  } else {
     throw new Error("Failed to generate contract")
+<<<<<<< HEAD
 
 =======
       milestones: milestoneData}
@@ -190,12 +190,14 @@ export async function generateContract(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
 import { ContractFormValues } from "../components/ContractForm",;
 interface Milestone {;
-  title: string,;
+  title: string,,
   description: string,;
   dueDate: string,;
   estimatedHours: number;
@@ -211,8 +213,8 @@ export async function generateContract(;
   // Prepare milestone data if we have AI-generated milestones;
   const milestoneData = generatedMilestones.length > 0;
     ? generatedMilestones.map(m => ({;
-        title: m.title,;
-        description: m.description,;
+        title: m.title,,
+  description: m.description,;
         dueDate: m.dueDate,;
         estimatedHours: m.estimatedHours;
       }));
@@ -251,6 +253,7 @@ export async function generateContract(;
   if (data && data.success && data && data.contract) {
     return data && data.contract
   } else {
+<<<<<<< HEAD
     throw new Error("Failed to generate contract")
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -349,10 +352,13 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } else {
+=======
+    throw new Error("Failed to generate contract")  }
+}  } else {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     throw new Error ("Failed to generate contract");
   }
 }
-<<<<<<< HEAD
 ;
   if (data.success && data.contract) {;
     return data.contract;
@@ -361,7 +367,11 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

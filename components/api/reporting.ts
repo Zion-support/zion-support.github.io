@@ -22,9 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
   const method = (req.method || 'GET').toUpperCase(),;
-
 
   const method = (req.method |'GET').toUpperCase()
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

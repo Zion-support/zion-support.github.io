@@ -35,11 +35,10 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface AccessibilityProps {
   // Add props here as needed
-<<<<<<< HEAD
-
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -47,6 +46,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Accessibility({ }: AccessibilityProps) {
   return (
     <div>
@@ -55,13 +56,14 @@ export default function Accessibility({ }: AccessibilityProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-
-
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 
 =======
 
@@ -83,14 +85,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 :src.pages.disabled/Accessibility.jsx
 }
 }
 }
 }
 }
-<<<<<<< HEAD
 :temp_exclude/src.pages.disabled/Accessibility.jsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -112,3 +116,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

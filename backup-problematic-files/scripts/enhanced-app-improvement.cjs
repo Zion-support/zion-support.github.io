@@ -45,5 +45,10 @@ const path = require('path')
         "name"
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log(` Process "failed"`)
+      this.log(` Process "failed"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

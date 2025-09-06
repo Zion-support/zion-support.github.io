@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,10 +8,13 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 export function useResumeList() {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -42,6 +45,9 @@ export function useResumeList() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
+=======
+export function useResumeList() {  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -58,31 +64,10 @@ export function useResumeList() {;
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        .eq('user_id', user && user.id)
-        .order('is_active', { ascending: false })
-        .order('created_at', { ascending: false });
-      if (resumeError) throw resumeError;
-<<<<<<< HEAD
-
-      
-      if (!resumeData || resumeData && resumeData.length === 0) {
-
-=======
-        .eq('user_id', user.id)
-        .order('is_active', { ascending: false })
-        .order('created_at', { ascending: false });
-      if (resumeError) throw resumeError;
-      if (!resumeData |resumeData.length === 0) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setResumes([]);
         return []
       }
+<<<<<<< HEAD
       // Transform data to match Resume type
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +198,10 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }));
+=======
+      // Transform data to match Resume type  }
+}      }));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {
@@ -226,7 +215,6 @@ if ( {) {
     resumes;
   }
 }
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -325,6 +313,3 @@ is active: resume.is active
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

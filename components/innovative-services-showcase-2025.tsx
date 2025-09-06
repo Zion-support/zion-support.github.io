@@ -231,6 +231,7 @@ const serviceCategories = [
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
+<<<<<<< HEAD
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(
       service =>
@@ -241,6 +242,11 @@ const serviceCategories = [
             .toLowerCase()
             .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category =>
+=======
+
+  const filteredServices = serviceCategories.flatMap(category => 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     category.services.filter(service =>
       (selectedCategory === 'all' |category.id === selectedCategory) &&
       (searchTerm === '' |
@@ -633,6 +639,7 @@ function InnovativeServicesShowcase2025() {
               </div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50"
                 >
                   <option value="name">Sort by Name</option>
@@ -650,6 +657,8 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {/* Sort By */}
               <div>;
                 <select
@@ -747,9 +756,9 @@ function InnovativeServicesShowcase2025() {
       {/* Services Grid */}
       <section className='py - 20 bg - slate - 900'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {sorted_services.map ((service, index) => (      <section className="py - 20 bg - slate - 900">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {sorted_services.map ((service, index) => (      <section className="py - 20 bg-slate-900">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             {sorted_services.map ((service, index) => (
               <motion.div;
                 key={service.id}
@@ -780,21 +789,21 @@ function InnovativeServicesShowcase2025() {
                   </h3>;
                   <p className='text - gray - 300 text - sm leading - relaxed'>                    {service.description}              >;
                 {/* Service Header */}
-                <div className="mb - 6">;
-                  <div className="flex items - center justify - between mb - 4">;
-                    <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center">;
-                      <Target className="w - 6 h - 6 text - white" />;
+                <div className="mb-6">;
+                  <div className="flex items - center justify-between mb-4">;
+                    <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items-center justify-center">;
+                      <Target className="w - 6 h-6 text-white" />;
                     </div>;
-                                      <div className="text - right">;
-                    <div className="text - sm text - gray - 400">{service.category}</div>;
-                    <div className="text - 2xl font - bold text - white">${service.pricing?.starter?.price || 'Custom'}</div>;
-                    <div className="text - sm text - gray - 400">/month</div>;
+                                      <div className="text-right">;
+                    <div className="text - sm text-gray-400">{service.category}</div>;
+                    <div className="text - 2xl font-bold text-white">${service.pricing?.starter?.price || 'Custom'}</div>;
+                    <div className="text - sm text-gray-400">/month</div>;
                   </div>;
                   </div>;
-                  <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+                  <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan-400 transition-colors">;
                     {service.name}
                   </h3>;
-                  <p className="text - gray - 300 text - sm leading - relaxed">;
+                  <p className="text - gray - 300 text-sm leading-relaxed">;
                     {service.description}
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
 
@@ -934,11 +943,14 @@ function InnovativeServicesShowcase2025() {
             ))}
           </div>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -1074,9 +1086,12 @@ function InnovativeServicesShowcase2025() {
             </p>;
           </motion && motion.div>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1189,7 +1204,6 @@ function InnovativeServicesShowcase2025() {
 
 =======
 
-
             >
               className='text-center'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1253,16 +1267,16 @@ function InnovativeServicesShowcase2025() {
                           {feature}
                         </li>))}
                     {service.features.length > 3 && (
-                      <li className='text - sm text - cyan - 400'>                        +{service.features.length - 3} more features                <div className="mb - 6">;
-                  <h4 className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wide">Key Features</h4>;
-                  <ul className="space - y-2">;
+                      <li className='text - sm text - cyan - 400'>                        +{service.features.length - 3} more features                <div className="mb-6">;
+                  <h4 className="text - sm font - semibold text - gray - 400 mb-3 uppercase tracking-wide">Key Features</h4>;
+                  <ul className="space-y-2">;
                     {service.features.slice (0, 3).map ((feature, feature_index) => (
-                      <li key={feature_index} className="flex items - center text - sm text - gray - 300">;
-                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0" />;
+                      <li key={feature_index} className="flex items - center text - sm text-gray-300">;
+                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex-shrink-0" />;
                         {feature}
                       </li>))}
                     {service.features.length > 3 && (
-                      <li className="text - sm text - cyan - 400">;
+                      <li className="text - sm text-cyan-400">;
                       </li>)}
                   </ul>;
                 </div>;
@@ -1285,31 +1299,31 @@ function InnovativeServicesShowcase2025() {
                   <a;
                     href={service.website}
                     className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300'                  >                  <div>;
-                    <div className="text - gray - 400">Market Size</div>;
-                    <div className="text - white font - semibold">{service.market_size}</div>;
+                    <div className="text-gray-400">Market Size</div>;
+                    <div className="text-white font-semibold">{service.market_size}</div>;
                   </div>;
                   <div>;
-                    <div className="text - gray - 400">Target Audience</div>;
-                    <div className="text - white font - semibold truncate">{service.target_audience}</div>;
+                    <div className="text-gray-400">Target Audience</div>;
+                    <div className="text-white font-semibold truncate">{service.target_audience}</div>;
                   </div>;
                 </div>;
                 {/* CTA */}
                 <div className='flex gap - 3'>;
                   <a;
                     href={service.website}
-                    className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300'                <div className="flex gap - 3">;
+                    className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300'                <div className="flex gap-3">;
                   <a;
                     href={service.website}
-                    className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300";
+                    className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition-all duration-300";
                     Learn More;
                   </a>;
                   <a;
                     href={`mailto:${service.contact.email}`}
                     className='px - 4 py - 3 border border - cyan - 500 / 30 text - cyan - 400 rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300';
                   >;
-                    <Mail className='w - 5 h - 5' />                  </a>                    className="px - 4 py - 3 border border - cyan - 500 / 30 text - cyan - 400 rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                    <Mail className='w - 5 h - 5' />                  </a>                    className="px - 4 py - 3 border border - cyan - 500 / 30 text - cyan - 400 rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
                   >;
-                    <Mail className="w - 5 h - 5" />;
+                    <Mail className="w-5 h-5" />;
                   </a>;
                 </div>;
               </motion.div>))}
@@ -1325,16 +1339,16 @@ function InnovativeServicesShowcase2025() {
               </div>;
               <div className='text - gray - 500'>;
                 Try adjusting your search or filter criteria;
-              </div>            </motion.div>              className="text - center py - 20";
+              </div>            </motion.div>              className="text-center py-20";
             >;
-              <div className="text - gray - 400 text - xl mb - 4">No services found</div>;
-              <div className="text - gray - 500">Try adjusting your search or filter criteria</div>)}
+              <div className="text - gray - 400 text-xl mb-4">No services found</div>;
+              <div className="text-gray-500">Try adjusting your search or filter criteria</div>)}
         </div>;
       </section>;
       {/* Contact Section */}
       <section className='py - 20 bg - gradient - to - b from - slate - 900 to - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - slate-900 to-black">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1351,14 +1365,14 @@ function InnovativeServicesShowcase2025() {
             </p>;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">;
+            <h2 className="text - 3xl md:text - 5xl font - bold text-white mb-6">;
               Ready to Transform Your Business?;
             </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1371,11 +1385,11 @@ function InnovativeServicesShowcase2025() {
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
               <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Phone className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Phone className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Phone</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Phone</h3>;
+              <p className="text-gray-300">{contact_info.mobile}</p>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1389,11 +1403,11 @@ function InnovativeServicesShowcase2025() {
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
               <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Mail className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Email</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Email</h3>;
+              <p className="text-gray-300">{contact_info.email}</p>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1407,11 +1421,11 @@ function InnovativeServicesShowcase2025() {
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
               <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <MapPin className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <MapPin className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Address</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Address</h3>;
+              <p className="text-gray-300">{contact_info.address}</p>;
             </motion.div>;
           </div>;
         </div>;

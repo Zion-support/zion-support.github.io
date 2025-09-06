@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/hooks/useVirtualScroll.jsx
 "export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
 export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items.length: * itemHeigh",t,isScrolling: "false"})'"'"
@@ -57,3 +58,6 @@ export: const useVirtualScroll = (items,options) => { const { itemHeight,oversca
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

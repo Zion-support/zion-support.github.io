@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         const originalLog = console.log;
 
@@ -141,28 +142,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 <<<<<<< HEAD
 <<<<<<<< HEAD:scripts/automation/temp-error-fixer.js
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
-========
-            process.exit(0)}, 5000)} catch (error) {
-          console.error('Script "error": ', error.message);
-          process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 =======
+        const originalLog = console.log;
+        try {
+          // // require('/workspace/scripts/automation/console-error-fixer.cjs');
+          setTimeout(() => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
-=======
->>>>>>>> main:corrupted_backup/temp-error-fixer.js
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-            process.exit(0)}, 5000)} catch (error) {
+const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}            process.exit(0)}, 5000)} catch (error) {
           console.error('Script "error": ', error.message);
           process.exit(1)}
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -191,3 +185,5 @@ const originalLog = console.log; let fixCount = 0; console.log = (...args) => { 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

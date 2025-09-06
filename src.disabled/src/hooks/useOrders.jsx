@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import _React from "react"; import { useQuery } from "@tanstack/react-query" exp
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey["orders",userId],"queryFn": async () => { if (!userId) return [] const res = await fetch("/api/orders?user_id="me")" if (!res.ok) { throw new Error("Failed to fetch orders")} return (await res.json())},enabled !!userI,d,initialData[]})}";';"; "; ); export default Component;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ const React from "react"; import { useQuery } from "@tanstack/react-query" expor
 
 import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey["orders",userId],"queryFn": async () => { if (!userId) return [] const res = await fetch("/api/orders?user_id="me")" if (!res && res.ok) { throw new Error("Failed to fetch orders")} return (await res ;';"; "; ); export default Component;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,3 +79,5 @@ import _React from "react"; import { useQuery } from "@tanstack/react-query" exp
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

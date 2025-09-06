@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,10 +8,13 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 export function useFraudPreventionSignup() {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -167,22 +170,22 @@ export function useFraudPreventionSignup() {;
         const { error } = await supabase && supabase.from('fraud_flags').insert({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           user_email: email;
+=======
+export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
+  // Get the user's IP address (in a real app, you'd do this server-side)
+
+  const getIP = async (): Promise<string | undefined> => {
+    try {          user_email: email;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           content_type: 'signup'
           content_id: email, // Using email as content ID for signup attempts
           content_excerpt: `Signup attempt for ${email}`;
           severity: 'suspicious';
-<<<<<<< HEAD
-<<<<<<< HEAD
-          reason: fraudCheck && fraudCheck.reasons.join();
-=======
-          reason: fraudCheck.reasons.join();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          reason: fraudCheck && fraudCheck.reasons.join();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          reason: fraudCheck && fraudCheck.reasons.join();          reason: fraudCheck && fraudCheck.reasons.join();
           ip_address: ipAddress;
           timestamp: new Date().toISOString()
           status: 'pending'
+<<<<<<< HEAD
         });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,10 +219,12 @@ export function useFraudPreventionSignup() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (error) {
           console && console.error('Error creating fraud flag:', error)
+=======
+        });          console && console.error('Error creating fraud flag:', error)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
         // Depending on how strict we want to be, we could block the signup
         // If the check is very suspicious, block the signup
-<<<<<<< HEAD
 
         if (fraudCheck && fraudCheck.reasons.some(r => 
           r && r.includes('Multiple accounts') || 
@@ -227,6 +232,7 @@ export function useFraudPreventionSignup() {;
 
         )) {
           toast({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -245,6 +251,10 @@ export function useFraudPreventionSignup() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             title: "Signup blocked";
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
+=======
+            title: "Signup blocked",
+  description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             variant: "destructive"});
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
@@ -309,16 +319,14 @@ export function useFraudPreventionSignup() {;
           r.includes('suspicious email domain');
         )) {;
           toast({;
-            title: "Signup blocked",;
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
+            title: "Signup blocked",,
+  description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
             variant: "destructive"}),;
-<<<<<<< HEAD
         if (fraudCheck && fraudCheck.reasons.some(r => 
           r && r.includes('Multiple accounts') || 
           r && r.includes('suspicious email domain')
         )) {
           toast({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services / fraud / signup_check';
 import {supabase} from '@/integrations / supabase / client';
@@ -382,19 +390,6 @@ if (||) {
 }
           r.includes ('suspicious email domain'))) {
           toast ({
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            title: "Signup blocked";
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
-            variant: "destructive"});
-          return false;
-        }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         // Otherwise, allow but flag for review;
         return true;
       }
@@ -404,14 +399,6 @@ if (||) {
       console.error ('Error in fraud check:', error);
       // On error, allow the signup but log the error;
       return true;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          return false;
-        }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsCheckingFraud (false);
     }
@@ -419,13 +406,10 @@ if (||) {
 
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return {
+  return {  return {
 
+<<<<<<< HEAD
 
     isCheckingFraud;
 <<<<<<< HEAD
@@ -556,11 +540,12 @@ status: 'pending'
   return {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     isCheckingFraud;
 
     checkFraudBeforeSignup}
+}    isCheckingFraud;
+
+    checkFraudBeforeSignup}
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

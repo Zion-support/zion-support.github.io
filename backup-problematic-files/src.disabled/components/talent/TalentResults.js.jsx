@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentResults.js.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentResults.js.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,3 +24,7 @@ export function TalentResults({" talents,totalCount,isLoading,viewProfile,handle
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/talent/TalentResults.js.jsx
+=======
+export function TalentResults({\" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className=\"flex-1\">\" {}\" 
+export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/talent/TalentResults.js.jsx

@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-syntax-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -9,6 +10,9 @@
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-syntax-fixer.cjs
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
   processDirectory(dirPath)
@@ -44,6 +48,7 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-syntax-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -56,6 +61,8 @@ module.exports = { fixFile, scanAndFixDirectory }}}}}}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-syntax-fixer.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -148,6 +155,7 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
   if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
+<<<<<<< HEAD
 =======
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
 <<<<<<< HEAD
@@ -155,3 +163,7 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

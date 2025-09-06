@@ -13,8 +13,11 @@ export default async function handler(
   try {
     const raw = null;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     res.status(200).json({ items })
   } catch {
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");

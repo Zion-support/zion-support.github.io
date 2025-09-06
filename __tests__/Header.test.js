@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -74,3 +75,6 @@ import _React from 'react"  import '@testing-library/jest-dom import Header from
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react"  import '@testing-library/jest-dom import Header from '../components/Header" describe('Header',() => {' test('renders without crashing',() => {' render(<Header / / />) expect(screen.getByTestId("header")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Header / / />) }) test('handles user interactions',() => {' render(<Header / / />) }) test('applies correct styling',() => {' render(<Header / / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

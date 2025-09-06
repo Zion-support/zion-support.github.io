@@ -251,5 +251,10 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    this.logError("Unhandled rejection")
+    this.logError("Unhandled rejection")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Cybersecurity Best Practices</h1>;
@@ -20,6 +21,7 @@
       <h1 className="text-2xl font-semibold">Cybersecurity Best Practices</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>;
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -40,6 +42,9 @@
 import React from 'react';
 
 
+=======
+  );import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CybersecurityBestPracticesPage() {
@@ -74,29 +79,17 @@ function CybersecurityBestPracticesPage() {
  */
 function CybersecurityBestPracticesPage() {
   return (
-    <div className="container mx - auto px - 4 py - 10">;
-      <h1 className="text - 2xl font - semibold">Cybersecurity Best Practices</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Article coming soon.</p>;
+    <div className="container mx - auto px-4 py-10">;
+      <h1 className="text-2xl font-semibold">Cybersecurity Best Practices</h1>;
+      <p className="mt - 2 text - gray - 600 dark: text-gray-300">Article coming soon.</p>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
 
   )
 }
 
 import React from 'react';
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function CybersecurityBestPracticesPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -110,11 +103,11 @@ export default function CybersecurityBestPracticesPage() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Cybersecurity Best Practices</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
-<<<<<<< HEAD
 
     </div>
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -139,3 +132,5 @@ export default function CybersecurityBestPracticesPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

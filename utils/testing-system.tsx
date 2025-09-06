@@ -29,9 +29,13 @@ import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): v
 // Testing system utilities
 export const testingSystem = {
   // Add testing utilities here
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 };
 ;import "@testing-library/jest-dom;
@@ -53,8 +57,8 @@ export class TestingSystem {,
         break,
       default:,
         throw new Error(`Unknown action: ${action}`)
-    };
-  };
+    }
+};
 };
 // Type definition for HTMLElement,
 interface HTMLElement {,
@@ -76,8 +80,8 @@ export class TestingSystem {,
         break,
       default: ,
         break
-    };
-  };
+    }
+};
 };
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -159,8 +163,8 @@ export class TestingSystem {,
         break,
       default:,
         throw new Error(`Unknown action: ${action}`)
-    };
-  };
+    }
+};
 };
 // Type definition for HTMLElement,
 interface HTMLElement {,
@@ -182,8 +186,8 @@ export class TestingSystem {,
         break,
       default: ,
         break
-    };
-  };
+    }
+};
 };
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -208,7 +212,7 @@ origin/automation-improvements-final
 export const testingSystem = {
 // Testing system utilities;
 export const testing_system = {
-  // Add testing utilities here;
+  // Add testing utilities here
 };
 }};
 },;

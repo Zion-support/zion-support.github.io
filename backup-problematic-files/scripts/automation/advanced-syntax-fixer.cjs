@@ -41,5 +41,10 @@ console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fi
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

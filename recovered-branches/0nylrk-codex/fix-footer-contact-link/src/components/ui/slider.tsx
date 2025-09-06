@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,10 +14,14 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -27,6 +32,8 @@ import * as SliderPrimitive from "@radix-ui/react-slider"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { cn } from "@/lib/utils"
 
@@ -53,9 +60,9 @@ const Slider = React && React.forwardRef<;
 =======
       "relative flex w-full touch-none select-none items-center",
 
-<<<<<<< HEAD
 Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
 
+<<<<<<< HEAD
 export { Slider };
 
 =======
@@ -162,6 +169,9 @@ const Slider = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className
     )}
+=======
+export { Slider };    )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {...props}
   >
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
@@ -173,6 +183,7 @@ const Slider = React.forwardRef<
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -215,3 +226,5 @@ export { Slider }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

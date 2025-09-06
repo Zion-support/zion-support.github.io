@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
 =======
@@ -85,6 +86,12 @@ export default function AutomationStatusPage() {;
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
+=======
+
+}</div>) import { useEffect, useState } from 'react';
+
+</div>) : (<div className="text - sm text-gray-500" >No status available yet.</div>);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }</div>) import { useEffect, useState } from 'react';
 export default /**
  * AutomationStatusPage - Function description
@@ -100,16 +107,17 @@ function AutomationStatusPage() {
   }, []);
 ;
   return (
-    <div className="space - y-4">;
-      <h1 className="text - xl font - semibold">Autonomous Automation Status</h1>;
+    <div className="space-y-4">;
+      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (
-        <div className="rounded - lg border p - 4 text - sm">;
+        <div className="rounded - lg border p-4 text-sm">;
           <div > Last Run: {new Date (status.run_at || '').toLocaleString () || '—'}</div>;
           <div > Health: {status.ok ? 'OK' : 'Unknown'}</div>;
-          <div className="mt - 2"><a className="underline" href="/metrics / latest.json">View latest metrics JSON</a></div>;
+          <div className="mt-2"><a className="underline" href="/metrics / latest.json">View latest metrics JSON</a></div>;
         </div>) : (
-        <div className="text - sm text - gray - 500">No status available yet.</div>)}
+        <div className="text - sm text-gray-500">No status available yet.</div>)}
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,3 +140,8 @@ function AutomationStatusPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}  );
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

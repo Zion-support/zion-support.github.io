@@ -16,10 +16,10 @@ import { LegacyRef, Ref } from './react';
 // A type that safely handles all possible reference types;
 export type SafeRef < T> = LegacyRef < T> | Ref < T>;
 
-
 import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,12 +33,15 @@ import {LegacyRef, Ref} from "react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { LegacyRef, Ref } from "react",
 
 // A type that safely handles all possible reference types
 export type SafeRef<T> = LegacyRef<T> | Ref<T>,
 import { LegacyRef, Ref } from "react",;
 // A type that safely handles all possible reference types;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -59,3 +62,6 @@ export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

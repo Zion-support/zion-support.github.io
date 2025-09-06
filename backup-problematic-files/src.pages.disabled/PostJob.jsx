@@ -1,14 +1,39 @@
+<<<<<<< HEAD
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
 }
 export default function PostJob({ }: PostJobProps) {
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+const PostJob = ({ className }) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
       <h1>PostJob</h1>
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.pages.disabled/PostJob.jsx
 ========
 <<<<<<< HEAD:src.pages.disabled/PostJob.jsx
@@ -32,3 +57,5 @@ export default function PostJob({ }: PostJobProps) {
 =======
 }
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/PostJob.jsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

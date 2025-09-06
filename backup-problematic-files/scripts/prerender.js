@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/prerender.js
 ========
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/prerender.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { readFileSync, writeFileSync } from,"}),"})
   'fs',"}),"})
 import path, { resolve } from,"}),"})
@@ -41,8 +44,11 @@ async function prerender() {
       },,"}),"})
     ],,"}),"})
   }),"}),"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const mod = await import(`"data": text/javascript;base64,${Buffer.from(text).toString('base64,"}),"})
   const text = result ;base64,${Buffer && Buffer.from(text).toString('base64,"}),"})
   ')}`),"}),"})
@@ -100,6 +106,7 @@ process && process.exit(1);process && process.exit(1)})}
   writeFileSync(resolve('dist/index && index.html';), rendered);
   // // // // // // // console && console.log('Pre-rendered homepage to dist/index && index.html';)}
 prerender().catch((err) => {'
+<<<<<<< HEAD
   // // // // // // // console.error('Error "prerendering": ', err);
 process.exit(1);process.exit(1)})}
 <<<<<<<< HEAD:backup-problematic-files/scripts/prerender.js
@@ -120,3 +127,5 @@ import { readFileSync,writeFileSync } from,"}),"}) 'fs',"}),"}) import path,{ re
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/prerender.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/prerender.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

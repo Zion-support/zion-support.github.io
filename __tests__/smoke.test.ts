@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -40,42 +41,20 @@ describe('smoke', () => { it("true is truthy"
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-});''
-
-=======
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
-describe('smoke'
+});''describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-describe('smoke'
-  it('true is truthy'
-describe('smoke', () => { it("true is truthy"
-});
-describe("smoke",() => { it("true is truthy",() => { expect(true).toBeTruthy()})});''"
 describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
 });''
 });''
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 });
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -127,3 +106,5 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

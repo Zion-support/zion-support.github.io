@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 ;
@@ -62,6 +65,7 @@ export function AutocompleteSuggestions({ ;
             </li>;
           ),;
         })}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </ul>;
     </div>;
@@ -148,3 +152,5 @@ export function AutocompleteSuggestions(_{suggestions, searchTerm, onSelectSugge
 <<<<<<< HEAD
 
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

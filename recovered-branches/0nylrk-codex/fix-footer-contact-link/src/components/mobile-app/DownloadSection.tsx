@@ -48,6 +48,7 @@ export const DownloadSection: React.FC = () => {
                 needs to the next level. Available on iOS and Android.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <AppStoreButtons
                 className="mb-8"
 =======
@@ -106,6 +107,8 @@ export const DownloadSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log("App Store button clicked")}
@@ -128,10 +131,13 @@ export const DownloadSection: React.FC = () => {;
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -165,6 +171,7 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -201,17 +208,11 @@ export const DownloadSection: React.FC = () => {;
 =======
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
-
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  );
+  )
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -219,6 +220,7 @@ export const DownloadSection: React.FC = () => {;
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -276,12 +278,15 @@ export const DownloadSection:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
               </div>;
               <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -307,10 +312,13 @@ export const DownloadSection:React.FC = () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </section>);
@@ -349,3 +357,7 @@ export default DownloadSection;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

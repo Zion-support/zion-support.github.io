@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-test-runner.cjs
 =======
 <<<<<<< HEAD
@@ -13,23 +14,31 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-test-runner.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const testReport = {}
   "timestamp": new Date().toISOString(),
   "sessionId": Date.now().toString(),
@@ -251,3 +260,7 @@ async function main() {}
     process.exit(1)};
 };
 main();
+<<<<<<< HEAD
+=======
+main();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

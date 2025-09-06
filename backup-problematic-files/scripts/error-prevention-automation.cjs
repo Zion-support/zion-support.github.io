@@ -9,5 +9,10 @@ const fs = require("$1")
 const path = require("path")";console.log("� Error Prevention & Automation System");console.log("""Process": ", process.env.PM2_PROCESS || "unknown");"
         "encoding"
         "stdio"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log(` ${description} "failed"`)
+      this.log(` ${description} "failed"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

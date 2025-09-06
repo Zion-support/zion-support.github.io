@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'
@@ -29,6 +32,7 @@ export type DisputeReason =
   | 'Other';
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -43,12 +47,18 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+<<<<<<< HEAD
 <<<<<<< HEAD
   | 'Other';
 export type DisputeAttachment = {;
@@ -193,9 +203,12 @@ export type UserSummary = {;
 =======
 export interface Dispute {
   id: string;
+=======
+export type DisputeAttachment = {  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   orderId: string;
   userId: string;
-  reason: string;
+  reason: string,
   description: string;
   status: 'open' | 'in_progress' | 'resolved' | 'closed';
   createdAt: Date;
@@ -204,6 +217,7 @@ export interface Dispute {
   resolvedAt?: Date;
 }
 
+<<<<<<< HEAD
 export interface DisputeResolution {
   disputeId: string;
   resolution: string;
@@ -212,3 +226,8 @@ export interface DisputeResolution {
   refundAmount?: number;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  role: 'admin' | 'client' | 'talent';
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

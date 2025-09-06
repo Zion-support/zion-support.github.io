@@ -12,8 +12,6 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ApplicationCardProps {;
   application: JobApplication;
 }
@@ -23,20 +21,11 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
   const handleDownloadResume = () => {;
     // This would typically download the resume file;
-    toast && toast.info("Resume download functionality will be implemented soon");
-  };
+    toast && toast.info("Resume download functionality will be implemented soon")
+};
 
   const renderActionButtons = () => {;
     switch (application && application.status) {;
-
-=======
-
-
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -51,6 +40,7 @@ import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -98,10 +88,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ApplicationCard({ application }: ApplicationCardProps) {
+=======
+}export function ApplicationCard({ application }: ApplicationCardProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
+<<<<<<< HEAD
     toast.info("Resume download functionality will be implemented soon")
 <<<<<<< HEAD
 =======
@@ -123,6 +117,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "shortlisted": return (
+=======
+    toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
@@ -142,63 +139,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       case "rejected":;
         return (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { JobApplication } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",;
-import { Link } from "react-router-dom",;
-import { StatusBadge } from "./StatusBadge",;
-import { ApplicationProgress } from "./ApplicationProgress",;
-import { toast } from "sonner",;
-;
-interface ApplicationCardProps {;
-  application:JobApplication;
-}
-;
-export function ApplicationCard({ application } ApplicationCardProps) {;
-  const [expanded, setExpanded] = useState(false),;
-;
-  const handleDownloadResume = () => {;
-    // This would typically download the resume file;
-    toast.info("Resume download functionality will be implemented soon"),;
-  },;
-;
-  const renderActionButtons = () => {;
-    switch (application.status) {;
-      case "shortlisted":return (;
-          <Button variant="default" size="sm">;
-            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
-          </Button>;
-        ),;
-      case "interview":;
-        return (;
-          <Button variant="default" size="sm">;
-            <Calendar className="h-4 w-4 mr-1" /> View Interview Details;
-          </Button>;
-        ),;
-      case "hired":;
-        return (;
-          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900">;
-            <FileText className="h-4 w-4 mr-1" /> View Offer;
-          </Button>;
-        ),;
-      case "rejected":;
-        return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <Button variant="outline" size="sm">;
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>;
         ),;
       default:;
         return null;
-<<<<<<< HEAD
 
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -207,10 +155,14 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
+=======
+  }    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -398,145 +350,30 @@ function ApplicationCard() {
           </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
         {expanded && (
-          <div className="mt - 4 space - y-3">;
-            {application.cover_letter && (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { JobApplication } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",;
-import { Link } from "react-router-dom",;
-import { StatusBadge } from "./StatusBadge",;
-import { ApplicationProgress } from "./ApplicationProgress",;
-import { toast } from "sonner",;
-interface ApplicationCardProps {;
-  application: JobApplication;
-}
-;
-export function ApplicationCard({ application }: ApplicationCardProps) {;
-  const [expanded, setExpanded] = useState(false),;
-  const handleDownloadResume = () => {;
-    // This would typically download the resume file;
-    toast.info("Resume download functionality will be implemented soon");
-  },;
-  const renderActionButtons = () => {;
-    switch (application.status) {;
-      case "shortlisted": return (;
-          <Button variant="default" size="sm">;
-            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
-          </Button>;
-        ),;
-      case "interview":;
-        return (;
-          <Button variant="default" size="sm">;
-            <Calendar className="h-4 w-4 mr-1" /> View Interview Details;
-          </Button>;
-        ),;
-      case "hired":;
-        return (;
-          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">;
-            <FileText className="h-4 w-4 mr-1" /> View Offer;
-          </Button>;
-        ),;
-      case "rejected":;
-        return (;
-          <Button variant="outline" size="sm">;
-            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
-          </Button>;
-        );
-      default:;
-        return null;
-    }
-  };
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        {expanded && (
-          <div className="mt - 4 space - y-3">;
-            {application.cover_letter && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Card className="overflow-hidden">;
-      <CardHeader className="pb-3">;
-        <div className="flex justify-between items-start">;
-          <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <CardTitle>{application && application.job?.title || "Unknown Job"}</CardTitle>;
-            <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
-            </div>;
-          </div>;
-          <StatusBadge status={application && application.status} />;
-        </div>;
-      </CardHeader>;
-
-      <CardContent className="pb-3">;
-        <ApplicationProgress status={application && application.status} className="my-4" />;
-
-        {expanded && (;
-          <div className="mt-4 space-y-3">;
-            {application && application.cover_letter && (;
-              <div>;
-                <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>;
-                <p className="text-sm text-muted-foreground">{application && application.cover_letter}</p>;
-              </div>;
-            )}
-
-            {application && application.resume && (;
-<<<<<<< HEAD
-=======
-      ;
-      <CardContent className="pb-3">;
-        <ApplicationProgress status={application.status} className="my-4" />;
-        ;
-            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
-            <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-            </div>;
+          <div className="mt - 4 space-y-3">;
+            {application.cover_letter && (            </div>;
           </div>;
           <StatusBadge status={application.status} />;
         </div>;
       </CardHeader>;
       <CardContent className="pb-3">;
         <ApplicationProgress status={application.status} className="my-4" />;
-        {expanded && (;
-          <div className="mt-4 space-y-3">;
-            {application.cover_letter && (;
-              <div>;
-                <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>;
-                <p className="text-sm text-muted-foreground">{application.cover_letter}</p>;
-              </div>;
-            )}
-;
-            {application.resume && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+        {expanded && (
+          <div className="mt - 4 space-y-3">;
+            {application.cover_letter && (    <Card className="overflow-hidden">;
+      <CardHeader className="pb-3">;
+        <div className="flex justify-between items-start">;
+          <div>;
               <div className="border rounded-md p-3 bg-muted/20">;
                 <div className="flex justify-between items-center">;
                   <div className="flex items-center">;
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
-=======
-                    <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>;
-                    <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
                   </div>;
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>;
                     <Download className="h-3 w-3 mr-1" /> Download;
@@ -544,39 +381,21 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                 </div>;
               </div>;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             {application && application.match_score && (;
-=======
-            ;
-            {application.match_score && (;
-;
-            {application.match_score && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
             {application && application.match_score && (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div>;
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>;
                 <div className="flex items-center">;
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {application && application.match_score}%;
-=======
-                    {application.match_score}%;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                    {application && application.match_score}%;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                    {application && application.match_score}%;                    {application && application.match_score}%;
                   </div>;
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;
                 </div>;
               </div>;
             )}
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -604,11 +423,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {expanded ? "Show Less" : "Show More"}
           </Button>;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -643,10 +465,13 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         <Button 
           variant="secondary" 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -659,6 +484,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           size="sm"
           className="w-full"
           asChild
@@ -669,6 +496,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -824,3 +652,6 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

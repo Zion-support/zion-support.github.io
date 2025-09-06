@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
 =======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react",;
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
+import { Briefcase } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 interface ProfileExperienceProps {;
   experience:ProfileExperienceType[];
@@ -30,6 +35,7 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
               </div>;
               <p className="text-zion-slate">{exp.description}</p>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
           </div>;
         ))}
@@ -49,6 +55,8 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;        ))}
       </div>;
     </div>;
@@ -73,4 +81,7 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }</div> </div>);
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileExperience.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/ProfileExperience.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

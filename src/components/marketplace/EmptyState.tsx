@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import * as React from 'react';
@@ -16,19 +17,25 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
+=======
+import * as React from 'react'
+import * as React from 'react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
+  RefreshCw
+  Wifi
+  Server
+  ShoppingCart
+  Users
+  Wrench
+  Lightbulb
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+
 export interface EmptyStateProps {
+<<<<<<< HEAD
   type:;
     | 'products';
     | 'categories';
@@ -42,6 +49,16 @@ export interface EmptyStateProps {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from 'react',;
+=======
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  title?: string;
+  description?: string;
+  action?: {
+    label: string;
+    onClick: () => void
+  }
+  icon?: React.ReactNodeimport * as React from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
@@ -58,12 +75,15 @@ export interface EmptyStateProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -119,10 +139,25 @@ export function EmptyState({
       </div>
 =======
 
-
+      
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        {displayTitle}
+      </h3>
+      
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
+        {displayDescription}
+      </p>;
+      {action && (;
+        <Button;
+          onClick={action.onClick}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="w-4 h-4" />
           {action.label}
         </Button>
       )}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
@@ -143,6 +178,8 @@ export function EmptyState({
           {action.label}
         </Button>;
       )}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
@@ -150,6 +187,7 @@ export function EmptyState({
         </div>
       )}
 
+<<<<<<< HEAD
 
       
 
@@ -443,6 +481,8 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -466,5 +506,9 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

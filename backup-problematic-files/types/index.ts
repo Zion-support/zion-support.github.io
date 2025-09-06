@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+// Contact information
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ContactInfo {
   phone: string;
   email: string;
@@ -8,21 +12,41 @@ export interface ContactInfo {
 
 // Service interfaces
 export interface Service {
+<<<<<<< HEAD
 
+=======
+  id: string;
+  name: string,
+  description: string;
+  category: 'micro-saas' | 'ai-services' | 'it-services';
+  price: {
+    min: number;
+    max: number;
+    currency: string
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   features: string[];
   technologies: string[];
   deliveryTime: string;
   support: string;
   image?: string;
   popular?: boolean;
+<<<<<<< HEAD
 
 export interface SEOProps {
   title: string;
+=======
+}
+
+export interface ServiceCategory {
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
   count: number;
   features: string[];
   href: string;
   color: string;
+<<<<<<< HEAD
   title: string, description: string,
   features: string[], href: string,
   icon: string, color: string,
@@ -89,13 +113,33 @@ export interface AnimationState {,
 };
 }
 
+=======
+}
+
+// SEO and performance
+export interface SEOProps {
+}
+
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
+// Loading and error states
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface LoadingState {
   isLoading: boolean;
   error?: string;
   progress?: number;
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ErrorInfo {
   message: string;
   code?: string;
@@ -103,7 +147,10 @@ export interface ErrorInfo {
   timestamp: string;
   userAgent?: string;
   url?: string;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 // Form interfaces
@@ -129,10 +176,141 @@ export interface FormField {
     min?: number;
     max?: number;
     pattern?: string;
+<<<<<<< HEAD
     message?: string;
   };
 }
 
+=======
+    message?: string
+};
+}
+
+// Team and company
+export interface TeamMember {
+  id: string;
+  name: string;
+  position: string;
+  bio: string;
+  image: string;
+  skills: string[];
+  linkedin?: string;
+  github?: string;
+  twitter?: string;
+}
+
+export interface CompanyInfo {
+  name: string;
+  tagline: string,
+  description: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string
+};
+  contact: {
+    phone: string;
+    email: string;
+    website: string
+};
+  certifications: string[];
+}
+
+// Content interfaces
+export interface Testimonial {
+  id: string;
+  name: string;
+  company: string;
+  position: string;
+  content: string;
+  rating: number;
+  image?: string;
+  project?: string;
+}
+
+export interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  technologies: string[];
+  duration: string;
+  teamSize: number;
+  image: string;
+  featured?: boolean;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+  updatedAt: string;
+  tags: string[];
+  category: string;
+  image: string;
+  featured?: boolean;
+  readTime: number;
+}
+
+// Pricing
+export interface PricingTier {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  period: 'month' | 'year' | 'one-time';
+  features: string[];
+  limitations?: string[];
+  popular?: boolean;
+  cta: string,
+  description: string;
+}
+
+// API interfaces
+export interface ApiRequest {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    hasNext: boolean;
+    hasPrev: boolean
+};
+}
+
+// User and preferences
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface User {
   id: string;
   email: string;
@@ -146,7 +324,10 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
+<<<<<<< HEAD
   };
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -154,6 +335,7 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
+<<<<<<< HEAD
     };
   };
   activity: {
@@ -171,6 +353,43 @@ export interface User {
   };
 }
 
+=======
+}
+
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean
+};
+}
+
+export interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
+// Navigation
+export interface NavigationItem {
+  name: string;
+  href: string;
+  submenu?: NavigationItem[];
+  external?: boolean;
+}
+
+export interface SocialLink {
+  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
+  url: string;
+  label: string;
+}
+
+// Notifications
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
@@ -181,12 +400,16 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
+<<<<<<< HEAD
   };
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
 }
 
+<<<<<<< HEAD
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
@@ -199,19 +422,88 @@ export interface BaseComponentProps {
 
 export interface InputProps {
   className?: string;
+=======
+// Project management
+export interface Project {
+  id: string;
+  name: string,
+  description: string;
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  startDate: Date;
+  endDate: Date;
+  budget: {
+    allocated: number;
+    spent: number;
+    currency: string
+};
+  team: {
+    lead: string;
+    members: string[];
+    external: string[]
+};
+  client: {
+    name: string;
+    contact: string;
+    industry: string
+};
+  deliverables: {
+    name: string,
+  description: string;
+    status: 'pending' | 'in-progress' | 'completed' | 'review';
+    dueDate: Date;
+  }[];
+  risks: {
+    description: string;
+    probability: 'low' | 'medium' | 'high';
+    impact: 'low' | 'medium' | 'high';
+    mitigation: string;
+  }[];
+  dependencies: {
+    project: string;
+    type: 'blocking' | 'influencing',
+  description: string;
+  }[];
+  metrics: {
+    name: string;
+    value: number;
+    unit: string;
+    target: number;
+  }[];
+  lessons: {
+    learned: string;
+    category: 'technical' | 'process' | 'communication' | 'management';
+    impact: 'positive' | 'negative' | 'neutral';
+  }[];
+}
+
+// Component props
+export interface BaseComponentProps {
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+<<<<<<< HEAD
   onClick?: () => void;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   error?: string;
   required?: boolean;
 }
 
+<<<<<<< HEAD
+=======
+// Environment
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
@@ -219,4 +511,7 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

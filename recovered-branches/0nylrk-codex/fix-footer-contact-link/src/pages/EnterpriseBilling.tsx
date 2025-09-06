@@ -155,31 +155,76 @@ export default function EnterpriseBilling() {;
   if (!hasBillingAccess) {;
 =======
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {BillingDashboard} from "@/components/enterprise/billing/BillingDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {;
+  const { user } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
   const { user } = useAuth();
-<<<<<<< HEAD
 
   // Check if user has billing permissions
-  const hasBillingAccess =
-    user?.role === "enterprise_admin" ||
-    (user?.permissions && user.permissions.includes("billing_access"));
 
+<<<<<<< HEAD
   if (!hasBillingAccess) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" || ;
+                          (user?.permissions && user && user.permissions.includes('billing_access'));
+
+  if (!hasBillingAccess) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return <Navigate to="/unauthorized" />;
+
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function EnterpriseBilling() {
+  const { user } = useAuth(),
+  
+  // Check if user has billing permissions
+  const hasBillingAccess = user?.role === "enterprise_admin" || 
+                          (user?.permissions && user.permissions.includes('billing_access')),
+  
+  if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />
   }
   return (
-    <ProtectedRoute>
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+export default function EnterpriseBilling() {;
+  const { user } = useAuth();
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" ||;
+                          (user?.permissions && user.permissions.includes('billing_access'));
+  if (!hasBillingAccess) {;
+    return <Navigate to="/unauthorized" />;
+  }
+;
+  return (;
+    <ProtectedRoute>;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +262,8 @@ export default function EnterpriseBilling() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -224,6 +271,7 @@ export default function EnterpriseBilling() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -255,6 +303,8 @@ export default function EnterpriseBilling() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
   }
@@ -273,7 +323,6 @@ export default /**
 function EnterpriseBilling() {
   const { user } = use_auth ();
 ;
-<<<<<<< HEAD
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" ||;
                           (user?.permissions && user.permissions.includes ('billing_access'));
@@ -291,12 +340,13 @@ if ( {) {
         description="Manage your subscription, view invoice history, and download billing statements.";
       />;
       <Header />;
-      <main className="min - h-screen bg - background">;
+      <main className="min - h-screen bg-background">;
         <BillingDashboard />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -315,3 +365,5 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -5,14 +5,22 @@
 =======
 <<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "extends": [
     "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -25,13 +33,27 @@ origin/automation-improvements-final
 =======
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+origin/automation-improvements-final
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
+<<<<<<< HEAD
+    "jest": true
+    "es6": true,
+    "jest": true
+    "es6": true,
+    "jest": true
+=======
     "jest": true,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "es2021": true
   },
   "globals": {
@@ -43,6 +65,9 @@ origin/automation-improvements-final
     "alert": "readonly"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "es6": true,
     "jest": true
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -52,18 +77,44 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 =======
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
+<<<<<<< HEAD
+    "no-console": "warn"
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "error",
+    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
     "no-console": "warn",
     "react/react-in-jsx-scope": "off",
 <<<<<<< HEAD
@@ -93,7 +144,11 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     "no-undef": "error"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   "ignorePatterns": [
     "node_modules/",
@@ -421,15 +476,19 @@ origin/automation-improvements-final
     "backup-problematic-files/**"
     "pages.disabled_auto/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 =======
+<<<<<<< HEAD
 
     "pages.disabled_auto/"
 
@@ -438,5 +497,8 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ]
 }

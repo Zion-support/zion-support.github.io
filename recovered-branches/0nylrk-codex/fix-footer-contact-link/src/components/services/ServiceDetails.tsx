@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -50,6 +50,10 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Server, Clock, MapPin } from './lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -64,14 +68,13 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
-
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
 
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -107,6 +110,8 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
@@ -114,6 +119,7 @@ export /**
 function ServiceDetails() {
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const get_datacenters = (country: string): string[] => {
+<<<<<<< HEAD
     const data_centers: Record < string, string[]> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,6 +142,9 @@ function ServiceDetails() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const dataCenters: Record<string string[]> = {
+=======
+    const data_centers: Record < string, string[]> = {    const dataCenters: Record<string string[]> = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -143,6 +152,7 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -165,12 +175,15 @@ function ServiceDetails() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
+=======
+    }
+    return regions[country] |regions["default"]
+  }    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     
     return dataCenters[country] || dataCenters["default"]
   },
   
-<<<<<<< HEAD
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -189,99 +202,16 @@ function ServiceDetails() {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      // Default for other countries;
-      "default": ["Major metropolitan areas"];
-    };
-
-    return dataCenters[country] || dataCenters["default"];
-  };
-
-  // Get region-specific image;
-  const getRegionalImage = (country: string): string => {;
-    // In a real app, you'd have specific images for each region;
-    const regions: Record<string, string> = {;
-      "United States": "https://source && source.unsplash.com/featured/900x700/?datacenter,usa";
-      "United Kingdom": "https://source && source.unsplash.com/featured/900x700/?datacenter,uk";
-      "Germany": "https://source && source.unsplash.com/featured/900x700/?datacenter,germany";
-      "Japan": "https://source && source.unsplash.com/featured/900x700/?datacenter,japan";
-      "Australia": "https://source && source.unsplash.com/featured/900x700/?datacenter,australia";
-      "Singapore": "https://source && source.unsplash.com/featured/900x700/?datacenter,singapore";
-      // Default placeholder;
-      "default": "https://source && source.unsplash.com/featured/900x700/?datacenter";
-    };
-
-    return regions[country] || regions["default"];
-  };
-
-  // Get region-specific instructions;
-  const getRegionalInstructions = (country: string): string => {;
-    // In a real implementation, this would be much more detailed and specific;
-    const timeZones: Record<string, string> = {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "United States": "EST/CST/PST depending on location";
       "United Kingdom": "GMT/BST";
-      "Germany": "CET/CEST";
-=======
-      // Default for other countries;
-      "default": ["Major metropolitan areas"];
-    }
-;
-    return data_centers[country] || data_centers["default"];
-  }
-;
-  // Get region - specific image;
-  const getRegionalImage = (country: string): string => {
-    // In a real app, you'd have specific images for each region;
-    const regions: Record < string, string> = {
-      "United States": "https://source.unsplash.com / featured / 900x700/?datacenter, usa";
-      "United Kingdom": "https://source.unsplash.com / featured / 900x700/?datacenter, uk";
-      "Germany": "https://source.unsplash.com / featured / 900x700/?datacenter, germany";
-      "Japan": "https://source.unsplash.com / featured / 900x700/?datacenter, japan";
-      "Australia": "https://source.unsplash.com / featured / 900x700/?datacenter, australia";
-      "Singapore": "https://source.unsplash.com / featured / 900x700/?datacenter, singapore";
-      // Default placeholder;
-      "default": "https://source.unsplash.com / featured / 900x700/?datacenter";
-    }
-;
-    return regions[country] || regions["default"];
-  }
-;
-  // Get region - specific instructions;
-  const getRegionalInstructions = (country: string): string => {
-    // In a real implementation, this would be much more detailed and specific;
-    const time_zones: Record < string, string> = {
-      "United States": "EST / CST / PST depending on location";
-      "United Kingdom": "GMT / BST";
-      "Germany": "CET / CEST";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      "Japan": "JST";
+      "Germany": "CET/CEST";      "Japan": "JST";
       "Australia": "AEST / ACDT / AWST depending on location";
       "Singapore": "SGT";
-<<<<<<< HEAD
 
-
-=======
-  // Get region-specific image
-  const getRegionalImage = (country: string): string => {
-    // In a real app, you'd have specific images for each region
-    const regions: Record<string string> = {
-      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
-      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
-      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
-      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
-      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
-      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
-      // Default placeholder
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
     }
     return regions[country] |regions["default"]
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     }
@@ -289,11 +219,14 @@ function ServiceDetails() {
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
     
     return regions[country] || regions["default"]
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -306,6 +239,8 @@ function ServiceDetails() {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -317,6 +252,7 @@ function ServiceDetails() {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -675,10 +611,16 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
+<<<<<<< HEAD
                 >;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -690,10 +632,14 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {dc}
                 </div>;
+=======
+                >;                </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
 
             </div>;
           </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -875,3 +821,5 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

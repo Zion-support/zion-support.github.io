@@ -1,14 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
  
  
 }function getAllServices () : Service[] {
@@ -25,21 +23,6 @@ fallback: false
   service: Service
 }) {
   return (<Layout> <Head> <title> {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}function getAllServices () : Service[] {
-
-
-2) 
-  service.name 
-}| Zion Tech Group</title> ;
-};
-null;
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   service.name
 }| Zion Tech Group</title>
 }
@@ -48,18 +31,23 @@ null;
 }/> </Head> </li>) )
 }</ul> </div>) )
 }</ul> </div> <div>) )
+<<<<<<< HEAD
 2) 
 <<<<<<< HEAD
 =======
 }function getAllServices () : Service[] {
 
+=======
+2) }function getAllServices () : Service[] {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 2) 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   service.name 
-}| Zion Tech Group</title> ;
+}| Zion Tech Group</title> 
 };
 null;
+<<<<<<< HEAD
 2)
 2) 
 <<<<<<< HEAD
@@ -194,6 +182,8 @@ type Service = typeof enhancedRealMicroSaasServices[number];
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
 export default ServiceDetail
@@ -211,7 +201,7 @@ export default ServiceDetail
 }) {;
   return (<Layout> <Head> <title> {;
   service && service.name ;
-}| Zion Tech Group</title> ;
+}| Zion Tech Group</title> 
 };
 null;
 2) ;
@@ -251,35 +241,17 @@ null;
   service && service.competitors?.length ? () : null ;
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {;
   service && service.name ;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> ;
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
 };
 export default ServiceDetail ;
 export default ServiceDetail;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
-
 export default ServiceDetail
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-export default ServiceDetail
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
 export default ServiceDetail 
 export default ServiceDetail
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 
@@ -297,6 +269,9 @@ export default ServiceDetail
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {
@@ -318,19 +293,19 @@ null;
 }/> </Head> </li>) );
 }</ul> </div>) );
 }</ul> </div> <div>) );
-}</div> </div> </div> </div> </div> </div> </div> <div className="p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg" > <h3 className="text - white font - semibold mb - 3" >Contact</h3> <div className="space - y-3 text - sm" > <div className="flex items - center gap - 2 text - cyan - 400" ><Phone className="w - 4 h - 4" /><a href= {
+}</div> </div> </div> </div> </div> </div> </div> <div className="p - 6 bg - black / 40 border border - gray-700 / 50 rounded-lg" > <h3 className="text - white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items - center gap - 2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contact_info.mobile.replace (/[^+\\d]/g, '');
 }`;
 }className="hover:underline" > {
   contact_info.mobile;
-}</a></div> <div className="flex items - center gap - 2 text - purple - 400" ><Mail className="w - 4 h - 4" /><a href= {
+}</a></div> <div className="flex items - center gap - 2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {
   `mailto:$ {
   contact_info.email;
 }`;
 }className="hover:underline" > {
   contact_info.email;
-}</a></div> <div className="flex items - center gap - 2 text - green - 400" ><MapPin className="w - 4 h - 4" /><a href= {
+}</a></div> <div className="flex items - center gap - 2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {
   `https://maps.google.com/?q=$ {
   encodeURIComponent (contact_info.address);
 }`;
@@ -338,22 +313,25 @@ null;
   contact_info.address;
 }</a></div> </div> </div> {
   /* Market Position & ROI */;
-}<div className="p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg" > <h3 className="text - white font - semibold mb - 3" >Market & ROI</h3> <div className="space - y-3 text - sm text - gray - 300" > {
-  service.market_position && <p className="leading - relaxed" ><span className="text - gray - 400" >Position:</span> {
+}<div className="p - 6 bg - black / 40 border border - gray-700 / 50 rounded-lg" > <h3 className="text - white font-semibold mb-3" >Market & ROI</h3> <div className="space - y-3 text - sm text-gray-300" > {
+  service.market_position && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
   service.market_position;
 }</p>;
 }{
-  service.roi && <p className="leading - relaxed" ><span className="text - gray - 400" >ROI:</span> {
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi;
 }</p>;
 }{
   service.competitors?.length ? () : null;
-}<a href="/market - pricing" className="inline - block mt - 2 text - cyan - 300 hover: text - cyan - 200">See average market prices →</a> return (<EnhancedLayout> <Head> <title > Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+}<a href="/market - pricing" className="inline - block mt - 2 text - cyan - 300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title > Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
   service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text - sm text - blue - 600 hover:underline">Back to Services</a></Link>;
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text - sm text-blue-600 hover:underline">Back to Services</a></Link>;
 }
 export default ServiceDetail;
 export default ServiceDetail;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

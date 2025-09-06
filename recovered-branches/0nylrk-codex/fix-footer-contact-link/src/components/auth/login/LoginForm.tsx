@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -29,18 +30,13 @@ const loginSchema = z.object({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
 =======
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {LogIn, User, Eye, EyeOff} from "lucide-react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { useState } from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+<<<<<<< HEAD
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
 <<<<<<< HEAD
 =======
@@ -164,10 +160,17 @@ export function LoginForm() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
+<<<<<<< HEAD
       setIsSubmitting(false)
 <<<<<<< HEAD
 
@@ -411,10 +414,14 @@ export function LoginForm() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
+=======
+      setIsSubmitting(false)                  />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
             </FormItem>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -778,3 +785,10 @@ await login (data.email, data.password)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            </FormItem>;
+
+        <FormField
+          control={form && form.control}
+          name="password"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

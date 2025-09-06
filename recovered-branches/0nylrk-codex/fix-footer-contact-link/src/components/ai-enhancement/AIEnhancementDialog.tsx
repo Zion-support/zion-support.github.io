@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 =======
@@ -21,6 +21,8 @@ interface AIEnhancementDialogProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -35,6 +37,7 @@ import React from 'react';
   isOpen;
   onClose;
   onApply;
+<<<<<<< HEAD
   defaultOptions;
 <<<<<<< HEAD
 =======
@@ -52,6 +55,9 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
+=======
+  defaultOptions;import React from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {;
   Dialog,;
   DialogContent,;
@@ -69,6 +75,7 @@ interface AIEnhancementDialogProps {;
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -159,81 +166,32 @@ export function AIEnhancementDialog(): any ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+}: AIEnhancementDialogProps) {;
+  const handleApply = (content: string) => {;
+    onApply(content),;
+    onClose()
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import React from 'react',;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle} from '@/components/ui/dialog',;
-import { AIEnhancementPanel } from './AIEnhancementPanel',;
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
-;
-interface AIEnhancementDialogProps {;
-  title:string,;
-  isOpen:boolean,;
-  onClose:() => void,;
-  onApply:(content:string) => void,;
-  defaultOptions:AIEnhancementOptions,;
-  initialContent?:string;
-}
-;
-export function AIEnhancementDialog({;
-  title,;
-  isOpen,;
-  onClose,;
-  onApply,;
-  defaultOptions,;
-  initialContent;
-} AIEnhancementDialogProps) {;
-  const handleApply = (content:string) => {;
-    onApply(content),;
-    onClose();
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        <AIEnhancementPanel;
-  }
-  },
-
-  return (
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-        </DialogHeader>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <AIEnhancementPanel
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -305,3 +263,6 @@ function AIEnhancementDialog() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

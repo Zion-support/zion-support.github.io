@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 =======
@@ -13,12 +12,6 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
-
-<<<<<<< HEAD
-=======
-import {useState, useEffect} from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -26,6 +19,7 @@ import { format  } from 'date-fns';
 import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -63,6 +57,9 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',
+=======
+import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { format } from 'date-fns',
@@ -70,8 +67,8 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -152,110 +149,17 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: '';
+=======
+export interface JobPostingProps {
+  job_id?: string;
+  on_success?: () => void;
+}      title: '';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       company: '';
       location: '';
       job_type: '';
-      salary_range: '';
-      description: '';
-      responsibilities: '';
-      qualifications: '';
-      benefits: '';
-      application_instructions: '';
-      contact_email: '';
-      published_date: '';
-      expiry_date: '';
-      is_remote: false;
-      category: '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      toast && toast.error("You must be logged in to post a job");
-      navigate("/login"),
-
-=======
-      status: ''
-      external_apply_link: ''}
-    mode: "onChange"});
-  // Function to create/update jobs that will be implemented by parent component
-  const submitJob = async (values: JobSchemaType) => {
-    if (!user) {
-      toast.error("You must be logged in to post a job");
-      navigate("/login")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      return
-    }
-    setIsLoading(true);
-    try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      const publishedDate = startDate ? startDate && startDate.toString() : '';
-      const expiryDate = endDate ? endDate && endDate.toString() : '';
-
-
-=======
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      const jobData = {
-        ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        is_remote: isRemote,
-        user_id: user && user.id};
-
-
-=======
-        is_remote: isRemote
-        user_id: user.id}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      if (onSuccess) {
-        onSuccess()
-      }
-      return jobData
-    } catch (error: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      console.error("Error in job form submission:", error);
-      toast.error(error.message |"Failed to process form");
-      throw error
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  return {
-    form;
-    isLoading;
-    startDate;
-    setStartDate;
-    endDate
-    setEndDate;
-    isRemote;
-    setIsRemote;
-    initialValues;
-    setInitialValues;
-    submitJob
-  }
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-      title: '',
-      company: '',
-      location: '',
-      job_type: '',
       salary_range: '',
+<<<<<<< HEAD
       description: '',
       responsibilities: '',
       qualifications: '',
@@ -369,6 +273,9 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       job_type: '';
       salary_range: '';
       description: '';
+=======
+  description: '';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       responsibilities: '';
       qualifications: '';
       benefits: '';
@@ -380,24 +287,14 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       category: '';
 
       toast && toast.error("You must be logged in to post a job");
-      navigate("/login"),
-
-      return
-    }
-    setIsLoading(true);
-    try {
-
-      const publishedDate = startDate ? startDate && startDate.toString() : '';
-      const expiryDate = endDate ? endDate && endDate.toString() : '';
-
-
-      const jobData = {
+      navigate("/login"),      const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
 
         is_remote: isRemote,
         user_id: user && user.id};
+<<<<<<< HEAD
 
 
       if (onSuccess) {
@@ -485,6 +382,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       return job_data;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -493,6 +392,7 @@ if ( {) {
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -507,6 +407,10 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setIsLoading (false);
     }
   }
@@ -519,6 +423,7 @@ if ( {) {
     is_remote;
     setIsRemote;
     initial_values;
+<<<<<<< HEAD
     setInitialValues;
 <<<<<<< HEAD
 =======
@@ -563,6 +468,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
+=======
+    setInitialValues;;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return jobData;
     } catch (error: any) {;
       console.error("Error in job form submission:", error),;
@@ -617,7 +525,6 @@ if ( {) {
 };
   }
 }
-<<<<<<< HEAD
 
 ;
 
@@ -634,7 +541,11 @@ if ( {) {
 };
   }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

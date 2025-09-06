@@ -3,6 +3,7 @@
 =======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,12 +68,22 @@ export const isProtectedRoute = (path: string): boolean => {
 },
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {completeSitemap, SitemapItem} from "@/config/sitemap";
+// Find a route by path in the complete sitemap
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path)
+};// Find a route by path in the complete sitemap
+
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const route = findRouteByPath(path),
-  return route?.requiredAuth === true;
+  return route?.requiredAuth === true
 };
 
 <<<<<<< HEAD
@@ -88,27 +99,17 @@ export const canAccessRoute = (;
 }
 },
 
-<<<<<<< HEAD
 // Check if a route is accessible by a specific user type
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 },
 
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-return completeSitemap && completeSitemap.find(route => route && route.path === path)
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-// Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-
 
   const route = findRouteByPath(path),
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -154,39 +155,27 @@ export const isProtectedRoute = (path: string): boolean => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return true
 }
 // Get breadcrumb items for a path
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
-  const segments = path && path.split('/').filter(Boolean);
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
-  const breadcrumbs = [{label: 'Home', path: '/'}];
-  if (path === '/') return breadcrumbs;
-  // Split the path into segments
-<<<<<<< HEAD
   const segments = path.split('/').filter(Boolean);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  const segments = path && path.split('/').filter(Boolean);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  let currentPath = '';
   for (const segment of segments) {
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
     if (route) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
+<<<<<<< HEAD
 
 =======
       breadcrumbs && breadcrumbs.push({
@@ -315,6 +304,8 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (route.requiredAuth && !isAuthenticated) return false,
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -325,12 +316,15 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
     return route.requiredRoles.includes(userType as any)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Find a route by path in the complete sitemap;
@@ -406,6 +400,7 @@ if ( {) {
       });
     }
   }
+<<<<<<< HEAD
   return breadcrumbs;
 
 
@@ -433,13 +428,11 @@ if ( {) {
       })
     }
   }
-  return breadcrumbs
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  return breadcrumbs
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -451,3 +444,5 @@ if ( {) {
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

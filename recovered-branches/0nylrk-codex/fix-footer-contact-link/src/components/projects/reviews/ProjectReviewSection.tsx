@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Star } from "lucide-react";
@@ -23,6 +24,8 @@ import { useReviews } from "@/hooks/useReviews";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -32,6 +35,7 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -158,6 +162,28 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
+=======
+
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
+
+import { useState } from "react",
+import { Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
+import { useReviews } from "@/hooks/useReviews",
+import { Project } from "@/types/projects",
+import { useAuth } from "@/hooks/useAuth",  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
@@ -174,29 +200,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
-<<<<<<< HEAD
-=======
-
-  const isCompleted = project.status === "completed";
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-
-  const clientProfile = project.client_profile;
-  const talentProfile = project.talent_profile;
-
-  // Determine who the current user needs to review
-  const revieweeId = isClient ? project.talent_id : project.client_id;
-  const revieweeName = isClient
-    ? talentProfile?.full_name || "Talent"
-    : clientProfile?.display_name || "Client";
-
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
-  const hasLeftReview = userReview != null;
-
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -215,11 +218,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
                     <p className="text-sm text-muted-foreground mb-3">
@@ -238,6 +236,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       Your review is{" "}
                       {userReview.status === "approved"
                         ? "published"
+<<<<<<< HEAD
                         : "pending approval"}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {canLeaveReview ? (
@@ -565,12 +564,14 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Review Modal */}
       {(isClient || isTalent) && (;
+=======
+                        : "pending approval"}      {(isClient || isTalent) && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       {(isClient || isTalent) && (
 
         <LeaveReviewModal
           projectId={project && project.id}
-<<<<<<< HEAD
       ;
       {/* Review Modal */}
       {(isClient || isTalent) && (;
@@ -596,6 +597,7 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
       {(isClient || isTalent) && (
         <LeaveReviewModal
           projectId={project.id}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -615,6 +617,8 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;
@@ -631,11 +635,11 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
               onReportReview={report_review}
             />;
           </div>) : (
-          <div className="bg - muted / 20 rounded - lg p - 6 text - center">;
-            <h3 className="font - medium mb - 2">;
+          <div className="bg - muted / 20 rounded - lg p - 6 text-center">;
+            <h3 className="font - medium mb-2">;
               Reviews will be available once the project is completed;
             </h3>;
-            <p className="text - sm text - muted - foreground">;
+            <p className="text - sm text - muted-foreground">;
               After the project is marked as completed, both parties will be;
               able to leave reviews;
             </p>;

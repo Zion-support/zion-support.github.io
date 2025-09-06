@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
 interface SEOProps {
   title?: string;
   description?: string;
@@ -73,6 +73,8 @@ origin/automation-improvements-final
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import React from './react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Head from './next / head';
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -189,7 +191,10 @@ export default SEO;
 }
 export default SEO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

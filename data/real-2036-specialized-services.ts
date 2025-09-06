@@ -1,23 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type Real2036SpecializedService = {
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 export type Real2036SpecializedService = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
-  tagline: string;
+  tagline: string,
   description: string;
   category: string;
   price: string;
@@ -30,6 +36,7 @@ export type Real2036SpecializedService = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   features: string[];
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1800,21 +1807,19 @@ export type Real2036SpecializedService = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+=======
+=======  marketSize?: string;
+  targetAudience?: string;
+  competitiveAdvantage?: string;
+  integration?: string[];
+  useCases?: string[];  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
 ;
-=======
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export type Real2036SpecializedService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string,;
+=======  id: string,;
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   category: string,;
   price: string,;
@@ -1835,8 +1840,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'neuromorphic-computing-platform',;
     name: 'Neuromorphic Computing Platform',;
-    tagline: 'Brain-inspired computing for next-generation AI applications',;
-    description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.',;
+    tagline: 'Brain-inspired computing for next-generation AI applications',,
+  description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.',;
     category: 'Emerging Technology',;
     price: '$3,999',;
     period: '/month',;
@@ -1857,8 +1862,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'synthetic-biology-platform',;
     name: 'Synthetic Biology Platform',;
-    tagline: 'Design and engineer biological systems with AI',;
-    description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.',;
+    tagline: 'Design and engineer biological systems with AI',,
+  description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.',;
     category: 'Biotechnology',;
     price: '$5,999',;
     period: '/month',;
@@ -1879,8 +1884,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'quantum-internet-protocol-suite',;
     name: 'Quantum Internet Protocol Suite',;
-    tagline: 'Next-generation internet protocols for quantum networks',;
-    description: 'Comprehensive suite of protocols and standards for building and operating quantum internet networks, enabling secure quantum communication worldwide.',;
+    tagline: 'Next-generation internet protocols for quantum networks',,
+  description: 'Comprehensive suite of protocols and standards for building and operating quantum internet networks, enabling secure quantum communication worldwide.',;
     category: 'Quantum Technology',;
     price: '$2,999',;
     period: '/month',;
@@ -1901,8 +1906,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'brain-computer-interface-platform',;
     name: 'Brain-Computer Interface Platform',;
-    tagline: 'Direct neural interface for human-computer interaction',;
-    description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.',;
+    tagline: 'Direct neural interface for human-computer interaction',,
+  description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.',;
     category: 'Human-Computer Interaction',;
     price: '$4,999',;
     period: '/month',;
@@ -1923,8 +1928,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'metaverse-development-studio-pro',;
     name: 'Metaverse Development Studio Pro',;
-    tagline: 'Professional metaverse creation and management platform',;
-    description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.',;
+    tagline: 'Professional metaverse creation and management platform',,
+  description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.',;
     category: 'Metaverse',;
     price: '$1,999',;
     period: '/month',;
@@ -1945,8 +1950,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'autonomous-vehicle-ai-platform',;
     name: 'Autonomous Vehicle AI Platform',;
-    tagline: 'Advanced AI for self-driving vehicles and transportation',;
-    description: 'Comprehensive AI platform for autonomous vehicles, providing perception, decision-making, and control systems for safe and efficient self-driving operations.',;
+    tagline: 'Advanced AI for self-driving vehicles and transportation',,
+  description: 'Comprehensive AI platform for autonomous vehicles, providing perception, decision-making, and control systems for safe and efficient self-driving operations.',;
     category: 'Autonomous Systems',;
     price: '$3,999',;
     period: '/month',;
@@ -1967,8 +1972,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'quantum-materials-discovery-platform',;
     name: 'Quantum Materials Discovery Platform',;
-    tagline: 'AI-powered discovery of next-generation materials',;
-    description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.',;
+    tagline: 'AI-powered discovery of next-generation materials',,
+  description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.',;
     category: 'Quantum Technology',;
     price: '$4,999',;
     period: '/month',;
@@ -1989,8 +1994,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'ai-climate-modeling-platform',;
     name: 'AI Climate Modeling Platform',;
-    tagline: 'Advanced climate prediction and analysis with AI',;
-    description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.',;
+    tagline: 'Advanced climate prediction and analysis with AI',,
+  description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.',;
     category: 'Climate Technology',;
     price: '$2,499',;
     period: '/month',;
@@ -2011,8 +2016,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'quantum-neural-network-platform',;
     name: 'Quantum Neural Network Platform',;
-    tagline: 'Quantum-enhanced neural networks for advanced AI',;
-    description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.',;
+    tagline: 'Quantum-enhanced neural networks for advanced AI',,
+  description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.',;
     category: 'Quantum Technology',;
     price: '$3,499',;
     period: '/month',;
@@ -2033,8 +2038,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'space-tourism-platform',;
     name: 'Space Tourism Platform',;
-    tagline: 'Comprehensive platform for space tourism operations',;
-    description: 'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',;
+    tagline: 'Comprehensive platform for space tourism operations',,
+  description: 'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',;
     category: 'Space Technology',;
     price: '$6,999',;
     period: '/month',;
@@ -2050,19 +2055,14 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
-<<<<<<< HEAD
 ;
 
 export type Real2036SpecializedService = {;
   id: string,;
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   category: string,;
   price: string,;
@@ -2083,8 +2083,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'neuromorphic-computing-platform',;
     name: 'Neuromorphic Computing Platform',;
-    tagline: 'Brain-inspired computing for next-generation AI applications',;
-    description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.',;
+    tagline: 'Brain-inspired computing for next-generation AI applications',,
+  description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.',;
     category: 'Emerging Technology',;
     price: '$3,999',;
     period: '/month',;
@@ -2105,8 +2105,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'synthetic-biology-platform',;
     name: 'Synthetic Biology Platform',;
-    tagline: 'Design and engineer biological systems with AI',;
-    description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.',;
+    tagline: 'Design and engineer biological systems with AI',,
+  description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.',;
     category: 'Biotechnology',;
     price: '$5,999',;
     period: '/month',;
@@ -2127,8 +2127,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'quantum-internet-protocol-suite',;
     name: 'Quantum Internet Protocol Suite',;
-    tagline: 'Next-generation internet protocols for quantum networks',;
-    description: 'Comprehensive suite of protocols and standards for building and operating quantum internet networks, enabling secure quantum communication worldwide.',;
+    tagline: 'Next-generation internet protocols for quantum networks',,
+  description: 'Comprehensive suite of protocols and standards for building and operating quantum internet networks, enabling secure quantum communication worldwide.',;
     category: 'Quantum Technology',;
     price: '$2,999',;
     period: '/month',;
@@ -2149,8 +2149,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'brain-computer-interface-platform',;
     name: 'Brain-Computer Interface Platform',;
-    tagline: 'Direct neural interface for human-computer interaction',;
-    description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.',;
+    tagline: 'Direct neural interface for human-computer interaction',,
+  description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.',;
     category: 'Human-Computer Interaction',;
     price: '$4,999',;
     period: '/month',;
@@ -2171,8 +2171,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'metaverse-development-studio-pro',;
     name: 'Metaverse Development Studio Pro',;
-    tagline: 'Professional metaverse creation and management platform',;
-    description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.',;
+    tagline: 'Professional metaverse creation and management platform',,
+  description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.',;
     category: 'Metaverse',;
     price: '$1,999',;
     period: '/month',;
@@ -2193,8 +2193,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'autonomous-vehicle-ai-platform',;
     name: 'Autonomous Vehicle AI Platform',;
-    tagline: 'Advanced AI for self-driving vehicles and transportation',;
-    description: 'Comprehensive AI platform for autonomous vehicles, providing perception, decision-making, and control systems for safe and efficient self-driving operations.',;
+    tagline: 'Advanced AI for self-driving vehicles and transportation',,
+  description: 'Comprehensive AI platform for autonomous vehicles, providing perception, decision-making, and control systems for safe and efficient self-driving operations.',;
     category: 'Autonomous Systems',;
     price: '$3,999',;
     period: '/month',;
@@ -2215,8 +2215,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'quantum-materials-discovery-platform',;
     name: 'Quantum Materials Discovery Platform',;
-    tagline: 'AI-powered discovery of next-generation materials',;
-    description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.',;
+    tagline: 'AI-powered discovery of next-generation materials',,
+  description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.',;
     category: 'Quantum Technology',;
     price: '$4,999',;
     period: '/month',;
@@ -2237,8 +2237,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'ai-climate-modeling-platform',;
     name: 'AI Climate Modeling Platform',;
-    tagline: 'Advanced climate prediction and analysis with AI',;
-    description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.',;
+    tagline: 'Advanced climate prediction and analysis with AI',,
+  description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.',;
     category: 'Climate Technology',;
     price: '$2,499',;
     period: '/month',;
@@ -2259,8 +2259,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'quantum-neural-network-platform',;
     name: 'Quantum Neural Network Platform',;
-    tagline: 'Quantum-enhanced neural networks for advanced AI',;
-    description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.',;
+    tagline: 'Quantum-enhanced neural networks for advanced AI',,
+  description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.',;
     category: 'Quantum Technology',;
     price: '$3,499',;
     period: '/month',;
@@ -2281,8 +2281,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   {;
     id: 'space-tourism-platform',;
     name: 'Space Tourism Platform',;
-    tagline: 'Comprehensive platform for space tourism operations',;
-    description: 'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',;
+    tagline: 'Comprehensive platform for space tourism operations',,
+  description: 'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',;
     category: 'Space Technology',;
     price: '$6,999',;
     period: '/month',;
@@ -2315,9 +2315,13 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     competitive_advantage: 'Space expertise, Safety focus, Comprehensive management';
     integration: ['Spacecraft systems_training facilities_booking systems_safety systems'];
     use_cases: ['Space tourism_training programs_safety management_customer experience'],
+<<<<<<< HEAD
     technology: ['Space systems_safety protocols_training technology_customer management'];
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    technology: ['Space systems_safety protocols_training technology_customer management'];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

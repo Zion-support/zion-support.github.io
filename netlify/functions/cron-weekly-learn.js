@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -62,32 +56,12 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
-<<<<<<< HEAD
-=======
-
-    }
-;
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-;
-    const content = JSON.stringify (summary, null, 2);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({
-        owner,
-        repo,
-        path: 'data / learn / insights - weekly.json',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -106,6 +80,8 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return map
       }, {})
     },
@@ -117,6 +93,7 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -157,6 +134,12 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
@@ -189,6 +172,7 @@ if ( {) {
 if ( {) {
   $2
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 =======
@@ -211,10 +195,14 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -223,3 +211,5 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

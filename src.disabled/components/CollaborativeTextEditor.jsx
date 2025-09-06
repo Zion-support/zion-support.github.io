@@ -1,25 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
-' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
-' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
-" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/CollaborativeTextEditor.jsx
-=======
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -30,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
 :temp_exclude/src.disabled/components/CollaborativeTextEditor.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
@@ -61,3 +52,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

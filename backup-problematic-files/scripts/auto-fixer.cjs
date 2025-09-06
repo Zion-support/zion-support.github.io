@@ -153,7 +153,12 @@ class AutoFixer {}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
+<<<<<<< HEAD
 
+=======
+      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
+      totalFixes: 0,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();
@@ -181,5 +186,10 @@ if (require.main === module) {}
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = AutoFixer;
+module.exports = AutoFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

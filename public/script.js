@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Zion Tech Group Website JavaScript
 })
 //Zion Tech Group Website JavaScript 
@@ -11,6 +12,8 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
         })
@@ -66,15 +69,19 @@
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -92,6 +99,8 @@ function performSearch(query) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
@@ -99,11 +108,14 @@ function performSearch(query) {
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         )
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
@@ -392,6 +404,7 @@ function performSearch(query) {;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
 <<<<<<< HEAD
+<<<<<<< HEAD
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
 =======
@@ -521,6 +534,12 @@ function initializeModals() {
     // Close modal on escape key
 <<<<<<< HEAD
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
+=======
+        ].filter(item => 
+            item && item.title.toLowerCase().includes(query)
+        ),
+                    { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ].filter(item => 
             item.title.toLowerCase().includes(query)
         ),
@@ -640,6 +659,7 @@ function initializeTooltips() {;
         element.addEventListener('mouseleave', function() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -663,6 +683,8 @@ if ( {) {
   $2
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const results = [;
             { title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform' },
@@ -729,7 +751,6 @@ if ( {) {
   $2
 }
                 this.tooltip.remove (),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 this.tooltip = null;
 <<<<<<< HEAD
 
@@ -743,6 +764,7 @@ if ( {) {
         });
     });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // Modal initialization
@@ -792,6 +814,8 @@ function initializeModals() {
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -832,6 +856,7 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Modal initialization;
@@ -897,11 +922,14 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }
             });
         }
     });
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     modal.classList.remove('active')
@@ -942,21 +970,23 @@ function logPerformance() {
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ('performance' in window) {
     }
 }
 // Error tracking
 window.addEventListener('error', function(e) {
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 // Error tracking
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     console.error('JavaScript Error:', e.error)
 
@@ -970,17 +1000,16 @@ function trackEvent(eventName, eventData = {}) {
 }
 =======
 
-
     // Implement your analytics tracking here
 }
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
-<<<<<<< HEAD
 });
 //Form handling for contact forms submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
+<<<<<<< HEAD
 =======
 
   entries && entries.forEach (entry => {
@@ -1055,6 +1084,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }//Newsletter subscription submit_btn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
 //Reset button after delay //Initialize tooltips initialize_tooltips ();
@@ -1088,12 +1119,12 @@ function if() {
   console && console.error ('JavaScript Error:', e && e.error);
 //Send to error tracking service 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
 }) {
   //Implement your analytics tracking here
 }//Track page views trackEvent ('page view', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 //Track button clicks document.addEventListener ('click', function (e) {
@@ -1290,3 +1321,9 @@ window.addEventListener('load', logPerformance),;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    // // // console.log('Event tracked:', eventName, eventData),
+    // Implement your analytics tracking here
+
+window.addEventListener('load', logPerformance),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

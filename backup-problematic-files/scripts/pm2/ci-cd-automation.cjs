@@ -11,14 +11,22 @@ const path = require('path');
 
 const log = (message) => {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 const runCommand = (command, description) => {}
   try {}
     log(`"Starting": ${description}`);
     const output = execSync(command, { })
+<<<<<<< HEAD
       "encoding": 'utf8',
+=======
+      "encoding": 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "stdio": 'pipe',
       "cwd": process.cwd(),
       "maxBuffer": 1024 * 1024 * 10, // 10MB buffer;
@@ -35,7 +43,11 @@ const runCommand = (command, description) => {}
 
 const main = async () => {}
   log('Starting CI/CD Automation Process');
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Install dependencies;
   const installResult = runCommand('npm ci', 'Installing dependencies');
   if (!installResult.success) {}
@@ -45,7 +57,11 @@ const main = async () => {}
   // Lint and type-check;
   runCommand('npm run lint', 'Running linting');
   runCommand('npm run type-check', 'Running type checking');
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Build project;
   const buildResult = runCommand('npm run build', 'Building project');
   if (!buildResult.success) {}
@@ -61,7 +77,11 @@ const main = async () => {}
   };
   // Run tests if available;
   runCommand('npm test --if-present', 'Running tests');
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Check for any pending changes;
   try {}
     const gitStatus = execSync('git status --porcelain', { "encoding": 'utf8' }
@@ -98,5 +118,10 @@ main().catch(error => {})
   log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

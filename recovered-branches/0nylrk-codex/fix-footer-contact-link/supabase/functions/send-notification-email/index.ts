@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -11,10 +12,13 @@ import {createClient} from "https: //esm ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
@@ -34,17 +38,16 @@ import {createClient} from "https: //esm ;
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,6 +118,11 @@ serve(async (req) => {
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -126,6 +134,7 @@ serve(async (req) => {
 
     ),
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -137,10 +146,13 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Get notification details and user email
     const { data: notification, error: notificationError } = await supabaseClient
       .from('notifications')
       .select('title, message, type')
+<<<<<<< HEAD
       .eq('id', notification_id)
 <<<<<<< HEAD
 
@@ -175,64 +187,15 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { data: userProfile, error: userError } = await supabaseClient
       .from('profiles')
+=======
+      .eq('id', notification_id)      .from('profiles')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       .select('display_name, email')
       .eq('id', user_id)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       .single(),
 
-      
-<<<<<<< HEAD
-=======
-      .single();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    if (userError) throw new Error(`Error fetching user: ${userError && userError.message}`);
-
-    // In a real implementation, here you would use a service like Resend, SendGrid, etc.
-    // to send the actual email. For this example, we'll simulate the email sending.
-    console && console.log(`Email would be sent to ${userProfile && userProfile.email}`);
-    console && console.log(`Subject: ${notification && notification.title}`);
-    console && console.log(`Body: ${notification && notification.message}`);
-    console && console.log(`Type: ${notification && notification.type}`);
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    return new Response(
-      JSON && JSON.stringify({ success: true });
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-        status: 200}
-    )
-  } catch (error) {
-    console && console.error("Error sending email notification:", error && error.message);
-    return new Response(
-      JSON && JSON.stringify({ error: error && error.message });
-      {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-        status: 500}
-    )
-  }
-});
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+      import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -244,6 +207,7 @@ interface EmailRequest {
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 500}
     )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,6 +263,8 @@ interface EmailRequest {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         headers: { ...corsHeaders, "Content-Type": "application/json" },
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
@@ -308,6 +274,7 @@ const corsHeaders = {;
 interface EmailRequest {;
   user_id: string,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -378,6 +345,8 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
 ;
@@ -418,9 +387,6 @@ serve(async (req) => {;
       .eq('id', user_id);
       .single(),;
 
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 });
 <<<<<<< HEAD
@@ -435,34 +401,14 @@ serve(async (req) => {;
 
 ;
 
-<<<<<<< HEAD
-=======
-    if (userError) throw new Error(`Error fetching user: ${userError.message}`),;
-    // In a real implementation, here you would use a service like Resend, SendGrid, etc.;
-    // to send the actual email. For this example, we'll simulate the email sending.;
-    // // // console.log(`Email would be sent to ${userProfile.email}`),;
-    // // // console.log(`Subject: ${notification.title}`),;
-    // // // console.log(`Body: ${notification.message}`),;
-    // // // console.log(`Type: ${notification.type}`),;
-    return new Response(;
-      JSON.stringify({ success: true }),;
-      {;
-        headers: { ...corsHeaders, "Content-Type": "application/json" },;
-        status: 200}
-    );
-  } catch (error) {;
-    console.error("Error sending email notification:", error.message),;
-    return new Response(;
-      JSON.stringify({ error: error.message }),;
-      {;
-        headers: { ...corsHeaders, "Content-Type": "application/json" },;
-        status: 500}
-    );
   }
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
 
@@ -82,3 +83,7 @@ import _React,{ useState } from 'react';'''; import { Link } from 'react-router-
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229>>>>>>>> main:corrupted_backup/ComprehensiveServicesOverview2025.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

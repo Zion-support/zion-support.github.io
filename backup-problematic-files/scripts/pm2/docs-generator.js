@@ -1,6 +1,24 @@
 }};
+<<<<<<< HEAD
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
 
+=======
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name}}};
+;
+  async generateReadme() {;
+    try {;
+      this.log(' Generating README.md...');
+;
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const readmeContent = `# ${packageJson.name};
+;
+${packageJson.description || 'A modern web application built with Next.js'};
+;
+##  Getting Started;
+### Prerequisites;
+- Node.js ${process.version};
+- npm ${execSync('npm --version', { encodin:g:'utf8' }).trim()};;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Installation;
 \`\`\`bash;
 npm install;
@@ -9,11 +27,16 @@ npm install;
 \`\`\`bash;
 npm run dev;
 \`\`\`;
+<<<<<<< HEAD
 
+=======
+Open [htt:p://localhos:t:3000](htt:p://localhos:t:3000) with your browser to see the result.;### Build;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 \`\`\`bash;
 npm run build;
 npm start;
 \`\`\`;
+<<<<<<< HEAD
 ## 📁 Project Structure;
 \`\`\`;
 ${this.projectRoot}/;
@@ -28,12 +51,28 @@ ${this.projectRoot}/;
 
 ;
 ## 📦 Dependencies;
+=======
+##  Project Structure;
+\`\`\`;
+${this.projectRoot}/;
+ pages/                 # Next.js pages;
+ components/            # React components;
+ styles/               # CSS styles;
+ public/               # Static assets;
+ scripts/              # Build and utility scripts;
+ package.json          # Dependencies and scripts;
+\`\`\`;
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**:\`${value}\``).join('\n')};
+;
+##  Dependencies;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies;
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ;
 ### Development Dependencies;
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ;
+<<<<<<< HEAD
 ## 🔧 Configuration;
 
 - ESLint for code quality;
@@ -41,10 +80,20 @@ ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n
 - PM2 for process management;
 ## 📊 Monitoring;
 
+=======
+This project uses Next.js with the following:configuration:;This project uses Next.js with the following configuration: ;
+- TypeScript support;
+- ESLint for code quality;
+- Prettier for code formatting;
+- PM2 for process management;
+The project includes automated monitoring with:PM2:;The project includes automated monitoring with PM2:;
+- Code quality monitoring;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 - Performance monitoring;
 - Security scanning;
 - Health checks;
 - Automated testing;
+<<<<<<< HEAD
 ## 🤝 Contributing;
 1. Fork the repository;
 
@@ -52,6 +101,17 @@ ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n
 ## 📄 License;
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
 ## 📞 Support;
+=======
+##  Contributing;
+1. Fork the repository;
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`);
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
+4. Push to the branch (\`git push origin feature/AmazingFeature\`);
+5. Open a Pull Request;
+##  License;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
+##  Support;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 For support, email support@example.com or create an issue in the repository.;
 ---;
 Generated on ${new Date().toISOString()};
@@ -60,6 +120,7 @@ Generated on ${new Date().toISOString()};
       fs.writeFileSync('README.md', readmeContent);
 ;
       return {;
+<<<<<<< HEAD
 
     };
   };
@@ -67,13 +128,81 @@ Generated on ${new Date().toISOString()};
   async generateReadme() {,
     try {,
       this.log('📝 Generating README.md...'),
+=======
+        succes:s:true;
+        messag:e:'README.md generated successfully';
+      ;
+    } catch (error) {;
+      return {;
+        succes:s:false;
+        erro:r:error.message
+};
+        succes: s: true,
+        messag: e: 'README.md generated successfully'
+      
+    } catch (error) {;
+      return {;
+        succes: s: false,
+        erro: r: error.message
+      
+}
+};
+;
+  async generateApiDocs() {;
+    try {;
+;
+      const apiDocs = {;
+        titl:e:'API Documentation';
+        versio:n:'1.0.0';
+        descriptio:n:'API endpoints and documentation';
+        baseUr:l:'htt:p://localhos:t:3000';
+        endpoint:s:[];
+        generatedA:t:new Date().toISOString();        title: 'API Documentation';
+        version: '1.0.0',
+  description: 'API endpoints and documentation';
+        baseUrl: 'http://localhost:3000';
+        endpoints: [];
+        generatedAt: new Date().toISOString();
+      // Scan for API routes;
+      const pagesDir = path.join(this.projectRoot, 'pages/api');
+      if (fs.existsSync(pagesDir)) {;
+        const apiFiles = this.getApiFiles(pagesDir);
+;
+        apiFiles.forEach(file => {;
+          const content = fs.readFileSync(file, 'utf8');
+          const endpoint = this.extractApiEndpoint(file, content);
+          if (endpoint) {;
+            apiDocs.endpoints.push(endpoint)
+          }
+        })
+      };
+;
+      const docsContent = `# API Documentation;
+## Overview;
+- **Base URL**:${apiDocs.baseUrl};
+- **Version**:${apiDocs.version};
+- **Generated**:${apiDocs.generatedAt};
+;
+## Endpoints;
+${apiDocs.endpoints.map(endpoint => `
+}
+};
+,
+  async generateReadme() {,
+    try {,
+      this.log(' Generating README.md...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name};
 ,
 ${packageJson.description || 'A modern web application built with Next.js'};
 ,
+<<<<<<< HEAD
 ## 🚀 Getting Started,
+=======
+##  Getting Started,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Prerequisites,
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
@@ -92,6 +221,7 @@ Open [http: //localhost:3000](http://localhost:3000) with your browser to see th
 npm run build,
 npm start,
 \`\`\`,
+<<<<<<< HEAD
 ## 📁 Project Structure,
 \`\`\`,
 ${this.projectRoot}/,
@@ -106,34 +236,68 @@ ${this.projectRoot}/,
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
 ,
 ## 📦 Dependencies,
+=======
+##  Project Structure,
+\`\`\`,
+${this.projectRoot}/,
+ pages/                 # Next.js pages,
+ components/            # React components,
+ styles/               # CSS styles,
+ public/               # Static assets,
+ scripts/              # Build and utility scripts,
+ package.json          # Dependencies and scripts,
+\`\`\`,
+##  Available Scripts,
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
+,
+##  Dependencies,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies,
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,
 ### Development Dependencies,
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,
+<<<<<<< HEAD
 ## 🔧 Configuration,
+=======
+##  Configuration,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 This project uses Next.js with the following configuration:  ,
 - TypeScript support,
 - ESLint for code quality,
 - Prettier for code formatting,
 - PM2 for process management,
+<<<<<<< HEAD
 ## 📊 Monitoring,
+=======
+##  Monitoring,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 The project includes automated monitoring with PM2:,
 - Code quality monitoring,
 - Performance monitoring,
 - Security scanning,
 - Health checks,
 - Automated testing,
+<<<<<<< HEAD
 ## 🤝 Contributing,
+=======
+##  Contributing,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 1. Fork the repository,
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),
 5. Open a Pull Request,
+<<<<<<< HEAD
 ## 📄 License,
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
 ## 📞 Support,
+=======
+##  License,
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
+##  Support,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 For support, email support@example.com or create an issue in the repository.,
 ---,
 Generated on ${new Date().toISOString()};
@@ -149,6 +313,7 @@ Generated on ${new Date().toISOString()};
       return {,
         success: false,
         error: error.message
+<<<<<<< HEAD
       };
     };
   };
@@ -156,6 +321,15 @@ Generated on ${new Date().toISOString()};
   async generateApiDocs() {,
     try {,
       this.log('🔌 Generating API documentation...'),
+=======
+      }
+}
+};
+,
+  async generateApiDocs() {,
+    try {,
+      this.log(' Generating API documentation...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       const apiDocs = {,
         title: 'API Documentation',
@@ -233,17 +407,29 @@ Generated by Docs Generator on ${new Date().toISOString();
     } catch (error) {;
       return {;
         succes:s:false;
+<<<<<<< HEAD
         erro:r:error.message;      ;
+=======
+        erro:r:error.message
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
         succes: s: true,
         messag: e: 'API documentation generated successfully';
         endpoint: s: apiDocs.endpoints.length
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {;
       return {;
         succes: s: false,
         erro: r: error.message
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 };
 ;
@@ -286,7 +472,12 @@ Generated by Docs Generator on ${new Date().toISOString();
       parameter:s:[];
       respons:e:{;
         succes:s:true;
+<<<<<<< HEAD
         dat:a:{;      };
+=======
+        dat:a:{
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
       metho: d: method,
       pat: h: path,
@@ -301,7 +492,11 @@ Generated by Docs Generator on ${new Date().toISOString();
 ;
   async generateComponentDocs() {;
     try {;
+<<<<<<< HEAD
       this.log('🧩 Generating component documentation...');
+=======
+      this.log(' Generating component documentation...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       const componentsDir = path.join(this.projectRoot, 'components');
       const componentDocs = [];
@@ -350,17 +545,29 @@ Generated by Docs Generator on ${new Date().toISOString()};
     } catch (error) {;
       return {;
         succes:s:false;
+<<<<<<< HEAD
         erro:r:error.message;      ;
+=======
+        erro:r:error.message
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
         succes: s: true,
         messag: e: 'Component documentation generated successfully';
         component: s: componentDocs.length
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {;
       return {;
         succes: s: false,
         erro: r: error.message
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 };
 ;
@@ -404,9 +611,15 @@ Generated by Docs Generator on ${new Date().toISOString()};
           props.push({;
             nam:e:propMatch[1];
             typ:e:propMatch[2];
+<<<<<<< HEAD
             descriptio:n:'Component prop';          });
         };
       });
+=======
+            descriptio:n:'Component prop';          })
+};
+      })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
     return {;
@@ -414,7 +627,12 @@ Generated by Docs Generator on ${new Date().toISOString()};
       fil:e:filePath.replace(this.projectRoot + '/', '');
       descriptio:n:description;
       prop:s:props;
+<<<<<<< HEAD
       usag:e:`<${componentName} />`;};
+=======
+      usag:e:`<${componentName} />`
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             nam: e: propMatch[1];
             typ: e: propMatch[2];
             descriptio: n: 'Component prop'
@@ -457,7 +675,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       });        priority: 'high';
         message: 'README generation failed';
         action: 'Check file permissions and try again';
+<<<<<<< HEAD
       });
+=======
+      })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
     if (!apiResult.success) {;
@@ -468,7 +690,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       });        priority: 'medium';
         message: 'API documentation generation failed';
         action: 'Check API route files and try again';
+<<<<<<< HEAD
       });
+=======
+      })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
     if (!componentResult.success) {;
@@ -479,7 +705,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       });        priority: 'medium';
         message: 'Component documentation generation failed';
         action: 'Check component files and try again';
+<<<<<<< HEAD
       });
+=======
+      })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
     if (report.summary.totalEndpoints === 0) {;
@@ -490,7 +720,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       });        priority: 'low';
         message: 'No API endpoints found';
         action: 'Consider adding API routes for better documentation';
+<<<<<<< HEAD
       });
+=======
+      })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
     return report
@@ -500,13 +734,23 @@ Generated by Docs Generator on ${new Date().toISOString()};
     try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
+<<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursiv:e:true });
       };
+=======
+        fs.mkdirSync(reportDir, { recursiv:e:true })
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
+<<<<<<< HEAD
       this.log(`Error saving:report:${error.message}`);};
+=======
+      this.log(`Error saving:report:${error.message}`)
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.mkdirSync(reportDir, { recursiv: e: true })
       };
 ;
@@ -518,20 +762,34 @@ Generated by Docs Generator on ${new Date().toISOString()};
 };
 ;
   async run() {;
+<<<<<<< HEAD
     this.log('📚 Starting Docs Generator...');
+=======
+    this.log(' Starting Docs Generator...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Project:root:${this.projectRoot}`);;
     try {;
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true });
       };
+=======
+        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true })
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       // Create docs directory if it doesn't exist;
       const docsDir = path.join(this.projectRoot, 'docs');
       if (!fs.existsSync(docsDir)) {;
+<<<<<<< HEAD
         fs.mkdirSync(docsDir, { recursiv:e:true });        fs.mkdirSync(docsDir, { recursive: true });
       };
+=======
+        fs.mkdirSync(docsDir, { recursiv:e:true });        fs.mkdirSync(docsDir, { recursive: true })
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       // Generate all documentation;
       const readmeResult = await this.generateReadme();
@@ -539,7 +797,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const componentResult = await this.generateComponentDocs();
 ;
       // Generate report;
+<<<<<<< HEAD
       this.log('📊 Generating documentation report...');
+=======
+      this.log(' Generating documentation report...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(readmeResult, apiResult, componentResult);
 ;
       // Save report;
@@ -548,7 +810,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
+<<<<<<< HEAD
       this.log('\n📊 Docs Generator:Summary:');
+=======
+      this.log('\n Docs Generator:Summary:');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`READM:E:${report.summary.readmeGenerated ? 'Generated' :'Failed'}`);
       this.log(`API:Docs:${report.summary.apiDocsGenerated ? 'Generated' :'Failed'}`);
       this.log(`Component:Docs:${report.summary.componentDocsGenerated ? 'Generated' :'Failed'}`);
@@ -557,13 +823,18 @@ Generated by Docs Generator on ${new Date().toISOString()};
       this.log(`Duratio:n:${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
+<<<<<<< HEAD
         this.log('\n💡 Recommendation:s:');
+=======
+        this.log('\n Recommendation:s:');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
           this.log(`    Actio: n: ${rec.action}`)
         })
       } else {;
+<<<<<<< HEAD
         this.log('\n✨ Documentation generated successfully!')
       }
 
@@ -572,6 +843,16 @@ Generated by Docs Generator on ${new Date().toISOString()};
 };
 };
       this.log(`❌ Error running docs: generator: ${error.message}`);
+=======
+        this.log('\n Documentation generated successfully!')
+      }
+
+    } catch (error) {;
+      this.log(` Error running docs:generator:${error.message}`);      process.exit(1)
+}
+};
+      this.log(` Error running docs: generator: ${error.message}`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       process.exit(1)
 }
 }
@@ -581,6 +862,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
 const docsGenerator = new DocsGenerator();
 docsGenerator.run().catch(error => {;
   process.exit(1);
+<<<<<<< HEAD
 });
     };
   };
@@ -588,13 +870,26 @@ docsGenerator.run().catch(error => {;
   async generateReadme() {,;
     try {,;
       this.log('📝 Generating README.md...'),;
+=======
+})
+}
+};
+,;
+  async generateReadme() {,;
+    try {,;
+      this.log(' Generating README.md...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
       const readmeContent = `# ${packageJson.name};
 ,;
 ${packageJson.description || 'A modern web application built with Next.js'};
 ,;
+<<<<<<< HEAD
 ## 🚀 Getting Started,;
+=======
+##  Getting Started,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Prerequisites,;
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encodin:g:'utf8' }).trim()};
@@ -613,6 +908,7 @@ Open [htt:p://localhos:t:3000](htt:p://localhos:t:3000) with your browser to see
 npm run build,;
 npm start,;
 \`\`\`,;
+<<<<<<< HEAD
 ## 📁 Project Structure,;
 \`\`\`,;
 ${this.projectRoot}/,;
@@ -627,34 +923,68 @@ ${this.projectRoot}/,;
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**:\`${value}\``).join('\n')};
 ,;
 ## 📦 Dependencies,;
+=======
+##  Project Structure,;
+\`\`\`,;
+${this.projectRoot}/,;
+ pages/                 # Next.js pages,;
+ components/            # React components,;
+ styles/               # CSS styles,;
+ public/               # Static assets,;
+ scripts/              # Build and utility scripts,;
+ package.json          # Dependencies and scripts,;
+\`\`\`,;
+##  Available Scripts,;
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**:\`${value}\``).join('\n')};
+,;
+##  Dependencies,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies,;
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,;
 ### Development Dependencies,;
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,;
+<<<<<<< HEAD
 ## 🔧 Configuration,;
+=======
+##  Configuration,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 This project uses Next.js with the following:configuration: ,;
 - TypeScript support,;
 - ESLint for code quality,;
 - Prettier for code formatting,;
 - PM2 for process management,;
+<<<<<<< HEAD
 ## 📊 Monitoring,;
+=======
+##  Monitoring,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 The project includes automated monitoring with:PM2:,;
 - Code quality monitoring,;
 - Performance monitoring,;
 - Security scanning,;
 - Health checks,;
 - Automated testing,;
+<<<<<<< HEAD
 ## 🤝 Contributing,;
+=======
+##  Contributing,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 1. Fork the repository,;
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),;
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),;
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),;
 5. Open a Pull Request,;
+<<<<<<< HEAD
 ## 📄 License,;
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,;
 ## 📞 Support,;
+=======
+##  License,;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,;
+##  Support,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 For support, email support@example.com or create an issue in the repository.,;
 ---,;
 Generated on ${new Date().toISOString()};
@@ -664,6 +994,7 @@ Generated on ${new Date().toISOString()};
 ,;
       return {,;
         succes:s:true,;
+<<<<<<< HEAD
         messag:e:'README.md generated successfully',;
       };
     } catch (error) {,;
@@ -677,6 +1008,21 @@ Generated on ${new Date().toISOString()};
   async generateApiDocs() {,;
     try {,;
       this.log('🔌 Generating API documentation...'),;
+=======
+        messag:e:'README.md generated successfully',
+};
+    } catch (error) {,;
+      return {,;
+        succes:s:false,;
+        erro:r:error.message,
+};
+    }
+};
+,;
+  async generateApiDocs() {,;
+    try {,;
+      this.log(' Generating API documentation...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const apiDocs = {,;
         titl:e:'API Documentation',;
@@ -684,8 +1030,13 @@ Generated on ${new Date().toISOString()};
         descriptio:n:'API endpoints and documentation',;
         baseUr:l:'htt:p://localhos:t:3000',;
         endpoint:s:[],;
+<<<<<<< HEAD
         generatedA:t:new Date().toISOString(),;
       };
+=======
+        generatedA:t:new Date().toISOString(),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       // Scan for API routes,;
       const pagesDir = path.join(this.projectRoot, 'pages/api'),;
@@ -696,10 +1047,17 @@ Generated on ${new Date().toISOString()};
           const content = fs.readFileSync(file, 'utf8'),;
           const endpoint = this.extractApiEndpoint(file, content),;
           if (endpoint) {,;
+<<<<<<< HEAD
             apiDocs.endpoints.push(endpoint),;
           };
         }),;
       };
+=======
+            apiDocs.endpoints.push(endpoint),
+};
+        }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const docsContent = `# API Documentation,;
 ## Overview,;
@@ -740,6 +1098,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       return {,;
         succes:s:true,;
         messag:e:'API documentation generated successfully',;
+<<<<<<< HEAD
         endpoint:s:apiDocs.endpoints.length,;
       };
     } catch (error) {,;
@@ -749,6 +1108,17 @@ Generated by Docs Generator on ${new Date().toISOString()};
       };
     };
   };
+=======
+        endpoint:s:apiDocs.endpoints.length,
+};
+    } catch (error) {,;
+      return {,;
+        succes:s:false,;
+        erro:r:error.message,
+};
+    }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
   getApiFiles(dir) {,;
     const files = [],;
@@ -762,6 +1132,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
         if (stat.isDirectory()) {,;
           scanDirectory(fullPath),;
         } else if (item.endsWith('.js') || item.endsWith('.ts')) {,;
+<<<<<<< HEAD
           files.push(fullPath),;
         };
       }),;
@@ -770,6 +1141,16 @@ Generated by Docs Generator on ${new Date().toISOString()};
     scanDirectory(dir),;
     return files,;
   };
+=======
+          files.push(fullPath),
+};
+      }),
+};
+,;
+    scanDirectory(dir),;
+    return files,
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
   extractApiEndpoint(filePath, content) {,;
     const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''),;
@@ -789,6 +1170,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       parameter:s:[],;
       respons:e:{,;
         succes:s:true,;
+<<<<<<< HEAD
         dat:a:{};
       };
     };
@@ -797,6 +1179,16 @@ Generated by Docs Generator on ${new Date().toISOString()};
   async generateComponentDocs() {,;
     try {,;
       this.log('🧩 Generating component documentation...'),;
+=======
+        dat:a:{}
+};
+    }
+};
+,;
+  async generateComponentDocs() {,;
+    try {,;
+      this.log(' Generating component documentation...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const componentsDir = path.join(this.projectRoot, 'components'),;
       const componentDocs = [],;
@@ -808,10 +1200,17 @@ Generated by Docs Generator on ${new Date().toISOString()};
           const content = fs.readFileSync(file, 'utf8'),;
           const componentInfo = this.extractComponentInfo(file, content),;
           if (componentInfo) {,;
+<<<<<<< HEAD
             componentDocs.push(componentInfo),;
           };
         }),;
       };
+=======
+            componentDocs.push(componentInfo),
+};
+        }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const docsContent = `# Component Documentation,;
 ## Overview,;
@@ -841,6 +1240,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       return {,;
         succes:s:true,;
         messag:e:'Component documentation generated successfully',;
+<<<<<<< HEAD
         component:s:componentDocs.length,;
       };
     } catch (error) {,;
@@ -850,6 +1250,17 @@ Generated by Docs Generator on ${new Date().toISOString()};
       };
     };
   };
+=======
+        component:s:componentDocs.length,
+};
+    } catch (error) {,;
+      return {,;
+        succes:s:false,;
+        erro:r:error.message,
+};
+    }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
   getComponentFiles(dir) {,;
     const files = [],;
@@ -863,6 +1274,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
         if (stat.isDirectory()) {,;
           scanDirectory(fullPath),;
         } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {,;
+<<<<<<< HEAD
           files.push(fullPath),;
         };
       }),;
@@ -871,6 +1283,16 @@ Generated by Docs Generator on ${new Date().toISOString()};
     scanDirectory(dir),;
     return files,;
   };
+=======
+          files.push(fullPath),
+};
+      }),
+};
+,;
+    scanDirectory(dir),;
+    return files,
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
   extractComponentInfo(filePath, content) {,;
     const fileName = path.basename(filePath, path.extname(filePath)),;
@@ -892,19 +1314,32 @@ Generated by Docs Generator on ${new Date().toISOString()};
             nam:e:propMatch[1],;
             typ:e:propMatch[2],;
             descriptio:n:'Component prop',;
+<<<<<<< HEAD
           }),;
         };
       }),;
     };
+=======
+          }),
+};
+      }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
     return {,;
       nam:e:componentName,;
       fil:e:filePath.replace(this.projectRoot + '/', ''),;
       descriptio:n:description,;
       prop:s:props,;
+<<<<<<< HEAD
       usag:e:`<${componentName} />`,;
     };
   };
+=======
+      usag:e:`<${componentName} />`,
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
   async generateReport(readmeResult, apiResult, componentResult) {,;
     const report = {,;
@@ -921,8 +1356,13 @@ Generated by Docs Generator on ${new Date().toISOString()};
         ap:i:apiResult,;
         component:s:componentResult,;
       },;
+<<<<<<< HEAD
       recommendation:s:[],;
     };
+=======
+      recommendation:s:[],
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
     // Generate recommendations,;
     if (!readmeResult.success) {,;
@@ -930,66 +1370,113 @@ Generated by Docs Generator on ${new Date().toISOString()};
         priorit:y:'high',;
         messag:e:'README generation failed',;
         actio:n:'Check file permissions and try again',;
+<<<<<<< HEAD
       }),;
     };
+=======
+      }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
     if (!apiResult.success) {,;
       report.recommendations.push({,;
         priorit:y:'medium',;
         messag:e:'API documentation generation failed',;
         actio:n:'Check API route files and try again',;
+<<<<<<< HEAD
       }),;
     };
+=======
+      }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
     if (!componentResult.success) {,;
       report.recommendations.push({,;
         priorit:y:'medium',;
         messag:e:'Component documentation generation failed',;
         actio:n:'Check component files and try again',;
+<<<<<<< HEAD
       }),;
     };
+=======
+      }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
     if (report.summary.totalEndpoints === 0) {,;
       report.recommendations.push({,;
         priorit:y:'low',;
         messag:e:'No API endpoints found',;
         actio:n:'Consider adding API routes for better documentation',;
+<<<<<<< HEAD
       }),;
     };
 ,;
     return report,;
   };
+=======
+      }),
+};
+,;
+    return report,
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
   async saveReport(report) {,;
     try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
+<<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursiv:e:true }),;
       };
+=======
+        fs.mkdirSync(reportDir, { recursiv:e:true }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
       this.log(`Report saved:to:${this.reportFile}`),;
     } catch (error) {,;
+<<<<<<< HEAD
       this.log(`Error saving:report:${error.message}`),;
     };
   };
 ,;
   async run() {,;
     this.log('📚 Starting Docs Generator...'),;
+=======
+      this.log(`Error saving:report:${error.message}`),
+}
+};
+,;
+  async run() {,;
+    this.log(' Starting Docs Generator...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Project:root:${this.projectRoot}`),;
 ,;
     try {,;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursiv:e:true }),;
       };
+=======
+        fs.mkdirSync(logsDir, { recursiv:e:true }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       // Create docs directory if it doesn't exist,;
       const docsDir = path.join(this.projectRoot, 'docs'),;
       if (!fs.existsSync(docsDir)) {,;
+<<<<<<< HEAD
         fs.mkdirSync(docsDir, { recursiv:e:true }),;
       };
+=======
+        fs.mkdirSync(docsDir, { recursiv:e:true }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       // Generate all documentation,;
       const readmeResult = await this.generateReadme(),;
@@ -997,7 +1484,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const componentResult = await this.generateComponentDocs(),;
 ,;
       // Generate report,;
+<<<<<<< HEAD
       this.log('📊 Generating documentation report...'),;
+=======
+      this.log(' Generating documentation report...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(readmeResult, apiResult, componentResult),;
 ,;
       // Save report,;
@@ -1006,7 +1497,11 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
+<<<<<<< HEAD
       this.log('\n📊 Docs Generator:Summary:'),;
+=======
+      this.log('\n Docs Generator:Summary:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`READM:E:${report.summary.readmeGenerated ? 'Generated' :'Failed'}`),;
       this.log(`API:Docs:${report.summary.apiDocsGenerated ? 'Generated' :'Failed'}`),;
       this.log(`Component:Docs:${report.summary.componentDocsGenerated ? 'Generated' :'Failed'}`),;
@@ -1015,12 +1510,17 @@ Generated by Docs Generator on ${new Date().toISOString()};
       this.log(`Duratio:n:${duration}ms`),;
 ,;
       if (report.recommendations.length > 0) {,;
+<<<<<<< HEAD
         this.log('\n💡 Recommendation:s:'),;
+=======
+        this.log('\n Recommendation:s:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
+<<<<<<< HEAD
         this.log('\n✨ Documentation generated successfully!'),;
       };
 ,;
@@ -1029,6 +1529,16 @@ Generated by Docs Generator on ${new Date().toISOString()};
       process.exit(1),;
     };
   };
+=======
+        this.log('\n Documentation generated successfully!'),
+};
+,;
+    } catch (error) {,;
+      this.log(` Error running docs:generator:${error.message}`),;
+      process.exit(1),
+};
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,;
 // Run the docs generator,;
@@ -1037,7 +1547,11 @@ docsGenerator.run().catch(error => {,;
   process.exit(1),;
 }),;,
   async run() {,
+<<<<<<< HEAD
     this.log('📚 Starting Docs Generator...'),
+=======
+    this.log(' Starting Docs Generator...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -1059,7 +1573,11 @@ docsGenerator.run().catch(error => {,;
       const componentResult = await this.generateComponentDocs(),
 ,
       // Generate report,
+<<<<<<< HEAD
       this.log('📊 Generating documentation report...'),
+=======
+      this.log(' Generating documentation report...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(readmeResult, apiResult, componentResult),
 ,
       // Save report,
@@ -1068,7 +1586,11 @@ docsGenerator.run().catch(error => {,;
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
+<<<<<<< HEAD
       this.log('\n📊 Docs Generator Summary: '),
+=======
+      this.log('\n Docs Generator Summary: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`README: ${report.summary.readmeGenerated ? 'Generated' : 'Failed'}`),
       this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated' : 'Failed'}`),
       this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated' : 'Failed'}`),
@@ -1077,12 +1599,17 @@ docsGenerator.run().catch(error => {,;
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
+<<<<<<< HEAD
         this.log('\n💡 Recommendations: '),
+=======
+        this.log('\n Recommendations: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Action: ${rec.action}`)
         })
       } else {,
+<<<<<<< HEAD
         this.log('\n✨ Documentation generated successfully!')
       }
     } catch (error) {,
@@ -1090,6 +1617,15 @@ docsGenerator.run().catch(error => {,;
       process.exit(1)
     };
   };
+=======
+        this.log('\n Documentation generated successfully!')
+      }
+    } catch (error) {,
+      this.log(` Error running docs generator: ${error.message}`),
+      process.exit(1)
+    }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
 // Run the docs generator,
@@ -1102,14 +1638,22 @@ docsGenerator.run().catch(error => {,
 ,
   async generateReadme() {,
     try {,
+<<<<<<< HEAD
       this.log('📝 Generating README.md...'),
+=======
+      this.log(' Generating README.md...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name},
 ,
 ${packageJson.description || 'A modern web application built with Next.js'},
 ,
+<<<<<<< HEAD
 ## 🚀 Getting Started,
+=======
+##  Getting Started,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Prerequisites,
 - Node.js ${process.version},
 - npm ${execSync('npm --version', { encodin: g: 'utf8' }).trim()},
@@ -1128,6 +1672,7 @@ Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser t
 npm run build,
 npm start,
 \`\`\`,
+<<<<<<< HEAD
 ## 📁 Project Structure,
 \`\`\`,
 ${this.projectRoot}/,
@@ -1142,34 +1687,68 @@ ${this.projectRoot}/,
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},
 ,
 ## 📦 Dependencies,
+=======
+##  Project Structure,
+\`\`\`,
+${this.projectRoot}/,
+ pages/                 # Next.js pages,
+ components/            # React components,
+ styles/               # CSS styles,
+ public/               # Static assets,
+ scripts/              # Build and utility scripts,
+ package.json          # Dependencies and scripts,
+\`\`\`,
+##  Available Scripts,
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},
+,
+##  Dependencies,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies,
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')},
 ,
 ### Development Dependencies,
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')},
 ,
+<<<<<<< HEAD
 ## 🔧 Configuration,
+=======
+##  Configuration,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 This project uses Next.js with the following: configuration:  ,
 - TypeScript support,
 - ESLint for code quality,
 - Prettier for code formatting,
 - PM2 for process management,
+<<<<<<< HEAD
 ## 📊 Monitoring,
+=======
+##  Monitoring,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 The project includes automated monitoring with: PM2:,
 - Code quality monitoring,
 - Performance monitoring,
 - Security scanning,
 - Health checks,
 - Automated testing,
+<<<<<<< HEAD
 ## 🤝 Contributing,
+=======
+##  Contributing,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 1. Fork the repository,
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),
 5. Open a Pull Request,
+<<<<<<< HEAD
 ## 📄 License,
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
 ## 📞 Support,
+=======
+##  License,
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
+##  Support,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 For support, email support@example.com or create an issue in the repository.,
 ---,
 Generated on ${new Date().toISOString()},
@@ -1191,7 +1770,11 @@ Generated on ${new Date().toISOString()},
 ,
   async generateApiDocs() {,
     try {,
+<<<<<<< HEAD
       this.log('🔌 Generating API documentation...'),
+=======
+      this.log(' Generating API documentation...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       const apiDocs = {,
         titl: e: 'API Documentation',
@@ -1311,7 +1894,11 @@ Generated by Docs Generator on ${new Date().toISOString()},
 ,
   async generateComponentDocs() {,
     try {,
+<<<<<<< HEAD
       this.log('🧩 Generating component documentation...'),
+=======
+      this.log(' Generating component documentation...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       const componentsDir = path.join(this.projectRoot, 'components'),
       const componentDocs = [],
@@ -1490,7 +2077,11 @@ Generated by Docs Generator on ${new Date().toISOString()},
   },
 ,
   async run() {,
+<<<<<<< HEAD
     this.log('📚 Starting Docs Generator...'),
+=======
+    this.log(' Starting Docs Generator...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Project: root: ${this.projectRoot}`),
 ,
     try {,
@@ -1512,7 +2103,11 @@ Generated by Docs Generator on ${new Date().toISOString()},
       const componentResult = await this.generateComponentDocs(),
 ,
       // Generate report,
+<<<<<<< HEAD
       this.log('📊 Generating documentation report...'),
+=======
+      this.log(' Generating documentation report...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(readmeResult, apiResult, componentResult),
 ,
       // Save report,
@@ -1521,7 +2116,11 @@ Generated by Docs Generator on ${new Date().toISOString()},
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
+<<<<<<< HEAD
       this.log('\n📊 Docs Generator: Summary: '),
+=======
+      this.log('\n Docs Generator: Summary: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`READM: E: ${report.summary.readmeGenerated ? 'Generated' : 'Failed'}`),
       this.log(`API: Docs: ${report.summary.apiDocsGenerated ? 'Generated' : 'Failed'}`),
       this.log(`Component: Docs: ${report.summary.componentDocsGenerated ? 'Generated' : 'Failed'}`),
@@ -1530,17 +2129,29 @@ Generated by Docs Generator on ${new Date().toISOString()},
       this.log(`Duratio: n: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
+<<<<<<< HEAD
         this.log('\n💡 Recommendation: s: '),
+=======
+        this.log('\n Recommendation: s: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Actio: n: ${rec.action}`)
         })
       } else {,
+<<<<<<< HEAD
         this.log('\n✨ Documentation generated successfully!')
       }
 
     } catch (error) {,
       this.log(`❌ Error running docs: generator: ${error.message}`),
+=======
+        this.log('\n Documentation generated successfully!')
+      }
+
+    } catch (error) {,
+      this.log(` Error running docs: generator: ${error.message}`),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       process.exit(1)
     }
   }
@@ -1551,4 +2162,9 @@ const docsGenerator = new DocsGenerator(),
 docsGenerator.run().catch(error => {,
   process.exit(1)
 }),
+<<<<<<< HEAD
 
+=======
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error = > {_; process.exit(1)});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

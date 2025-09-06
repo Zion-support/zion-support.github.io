@@ -170,6 +170,15 @@ interface SearchResponse {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   hasMore: boolean;
+<<<<<<< HEAD
+
+// Highlight search terms in text;
+const HighlightText: React.FC<{;
+  text: string;
+  searchTerm: string;
+  className?: string;
+}> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm && searchTerm.trim()) {;
+=======
 }
 ;
 // Highlight search terms in text;
@@ -179,6 +188,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
   className = '';
 }) => {;
   if (!searchTerm.trim()) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return <span className={className}>{text}</span>;
   }
 
@@ -374,29 +384,9 @@ const SearchResultCard: React.FC<{;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
-      )}
-;
-      <div className="flex-1">;
-        <div className="flex items-start justify-between mb-2">;
-          <div>;
-            <h3 className="font-semibold text-lg mb-1">;
-              <HighlightText text={result.title} searchTerm={searchTerm} />;
-            </h3>;
-            <Badge variant="secondary" className="text-xs">;
-              {result.type}
-            </Badge>;
-          </div>;
-          {result.price && (;
-            <div className="text-right">;
-              <span className="font-bold text-primary">;
-                {result.currency === 'USD' ? '$' : ''}{result.price}
-              </span>;
-              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
-            </div>;
-          )}
-        </div>;
-        <p className="text-muted-foreground mb-3 line-clamp-2">;
-          <HighlightText text={result.description} searchTerm={searchTerm} />;
+
+        <p className='text-muted-foreground mb-3 line-clamp-2'>;
+          <HighlightText text={result && result.description} searchTerm={searchTerm} />;
         </p>;
         <div className="flex items-center justify-between">;
           <div className="flex gap-2 flex-wrap">;
@@ -426,6 +416,28 @@ const SearchResultCard: React.FC<{;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+};
+
+// Filter Sidebar Component;
+const FilterSidebar: React.FC<{;
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  availableCategories: string[];
+}> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [;
+    { id: 'product', label: 'Products' },;
+    { id: 'talent', label: 'Talent' },;
+    { id: 'service', label: 'Services' },;
+    { id: 'blog', label: 'Blog Posts' },;
+  ];
+
+  const handleTypeChange = (typeId: string, checked: boolean) => {;
+    const newTypes = checked      ? [...filters && filters.types, typeId];
+      : filters && filters.types.filter(t => t !== typeId);
+
+    onFiltersChange({ ...filters, types: newTypes });
+  };
+=======
 },;
 // Filter Sidebar Component;
 const FilterSidebar: React.FC<{;
@@ -455,6 +467,7 @@ const FilterSidebar: React.FC<{;
       maxPrice: values[1] ?? 10000 
     })
   },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="space-y-6">
@@ -625,12 +638,12 @@ const FilterSidebar: React.FC<{;
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="0">Any Rating</SelectItem>
-            <SelectItem value="1">1+ Stars</SelectItem>
-            <SelectItem value="2">2+ Stars</SelectItem>
-            <SelectItem value="3">3+ Stars</SelectItem>
-            <SelectItem value="4">4+ Stars</SelectItem>
-            <SelectItem value="4.5">4.5+ Stars</SelectItem>
+            <SelectItem value='0'>Any Rating</SelectItem>
+            <SelectItem value='1'>1+ Stars</SelectItem>
+            <SelectItem value='2'>2+ Stars</SelectItem>
+            <SelectItem value='3'>3+ Stars</SelectItem>
+            <SelectItem value='4'>4+ Stars</SelectItem>
+            <SelectItem value='4.5'>4.5+ Stars</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -697,12 +710,13 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-    <div className="text-center py-12">
-      <div className="mb-6">
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
-        <h2 className="text-2xl font-semibold mb-2">No results found</h2>
-        <p className="text-muted-foreground mb-6">
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
+    <div className='text-center py-12'>
+      <div className='mb-6'>
+        <Search className='mx-auto h-16 w-16 text-muted-foreground mb-4' />
+        <h2 className='text-2xl font-semibold mb-2'>No results found</h2>
+        <p className='text-muted-foreground mb-6'>
+          We couldn't find anything matching "{searchTerm}". Try adjusting your
+          search or filters.
         </p>
       </div>
 
@@ -733,41 +747,44 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
             <SelectValue />;
           </SelectTrigger>;
           <SelectContent>;
-            <SelectItem value="0">Any Rating</SelectItem>;
-            <SelectItem value="1">1+ Stars</SelectItem>;
-            <SelectItem value="2">2+ Stars</SelectItem>;
-            <SelectItem value="3">3+ Stars</SelectItem>;
-            <SelectItem value="4">4+ Stars</SelectItem>;
-            <SelectItem value="4.5">4.5+ Stars</SelectItem>;
+            <SelectItem value='0'>Any Rating</SelectItem>;
+            <SelectItem value='1'>1+ Stars</SelectItem>;
+            <SelectItem value='2'>2+ Stars</SelectItem>;
+            <SelectItem value='3'>3+ Stars</SelectItem>;
+            <SelectItem value='4'>4+ Stars</SelectItem>;
+            <SelectItem value='4 && 4.5'>4 && 4.5+ Stars</SelectItem>;
           </SelectContent>;
         </Select>;
       </div>;
     </div>;
   );
-},;
+};
+
 // No Results Component;
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({;
-  searchTerm,;
-  onNewSearch;
-}) => {;
-  const suggestions = [;
-    "AI & Machine Learning",;
-    "Web Development",;
-    "Mobile App Development",;
-    "Data Analysis",;
-    "UI/UX Design",;
-    "Blockchain Development";
-  ],;
-  return (;
-    <div className="text-center py-12">;
-      <div className="mb-6">;
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />;
-        <h2 className="text-2xl font-semibold mb-2">No results found</h2>;
-        <p className="text-muted-foreground mb-6">;
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.;
+const NoResultsState: React.FC<{;
+  searchTerm: string;
+  onNewSearch: (term: string) => void;
+}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [;
+    'AI & Machine Learning',;
+    'Web Development',;
+    'Mobile App Development',;
+    'Data Analysis',;
+    'UI/UX Design',;
+    'Blockchain Development',;
+  ];
+
+  return (
+    <div className='text-center py-12'>;
+      <div className='mb-6'>;
+        <Search className='mx-auto h-16 w-16 text-muted-foreground mb-4' />;
+        <h2 className='text-2xl font-semibold mb-2'>No results found</h2>;
+        <p className='text-muted-foreground mb-6'>;
+          We couldn't find anything matching "{searchTerm}". Try adjusting your;
+          search or filters.;
         </p>;
       </div>;
-      <div className="max-w-md mx-auto space-y-4">;
+
+      <div className='max-w-md mx-auto space-y-4'>;
         <div>;
           <h3 className="font-semibold mb-3">Search Suggestions:</h3>;
           <div className="flex flex-wrap gap-2 justify-center">;
@@ -895,7 +912,7 @@ export const AdvancedSearchResults: React.FC = () => {
   }, [results]),
 
   // Sync search term with URL
-  useEffect(() => {
+  useEffect((,) => {
     if (router.isReady && router.query.q) {
 <<<<<<< HEAD
       const urlTerm = router.query.q as string,
@@ -1048,9 +1065,16 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
         </div>;
+<<<<<<< HEAD
+
+        <div className='text-sm text-muted-foreground'>;
+          <p>Tips for better results:</p>;
+          <ul className='mt-2 space-y-1'>;
+=======
         <div className="text-sm text-muted-foreground">;
           <p>Tips for better results: </p>;
           <ul className="mt-2 space-y-1">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <li>• Try different keywords</li>;
             <li>• Check your spelling</li>;
             <li>• Use fewer filters</li>;
@@ -1060,6 +1084,22 @@ if ( {) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+};
+
+// Main Search Results Page Component;
+export const AdvancedSearchResults: React.FC = () => {;
+  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [totalCount, setTotalCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [showFilters, setShowFilters] = useState(false);
+
+=======
 },;
 // Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {;
@@ -1072,12 +1112,96 @@ export const AdvancedSearchResults: React.FC = () => {;
   const [hasMore, setHasMore] = useState(false),;
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
   const [showFilters, setShowFilters] = useState(false),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [filters, setFilters] = useState<SearchFilters>({;
     types: [],;
     category: '',;
     minPrice: 0,;
     maxPrice: 10000,;
     minRating: 0,;
+<<<<<<< HEAD
+    sort: 'relevance',;
+  });
+
+  const suggestions = generateSearchSuggestions();
+
+  // Extract available categories from results for filter;
+  const availableCategories = useMemo(() => {;
+    const categories = new Set<string>();    results && results.forEach(result => {;
+      if (result && result.category) categories && categories.add(result && result.category);
+    });
+    return Array && Array.from(categories).sort();
+  }, [results]);
+
+  // Sync search term with URL;
+  useEffect((,) => {;
+    if (router && router.isReady && router && router.query.q) {;
+      const urlTerm = router && router.query.q as string;
+      setSearchTerm(urlTerm);
+    }
+  }, [router && router.isReady, router && router.query.q]);
+
+  // Search function;
+  const performSearch = async (;
+    term: string,;
+    page: number = 1,;
+    newFilters?: SearchFilters;
+  ) => {    if (!term && term.trim()) {;
+      setResults([]);
+      setTotalCount(0);
+      return;
+    }
+
+    setLoading(true);
+    try {;
+      const searchFilters = newFilters || filters;
+      const params = new URLSearchParams({;
+        query: term,;
+        page: page && page.toString(),;
+        limit: '20',;
+      });
+
+      if (searchFilters && searchFilters.types.length > 0) {;
+        params && params.append('type', searchFilters && searchFilters.types.join(','));
+      }
+      if (searchFilters && searchFilters.category) {;
+        params && params.append('category', searchFilters && searchFilters.category);
+      }
+      if (searchFilters && searchFilters.minPrice > 0) {;
+        params && params.append('minPrice', searchFilters && searchFilters.minPrice.toString());
+      }
+      if (searchFilters && searchFilters.maxPrice < 10000) {;
+        params && params.append('maxPrice', searchFilters && searchFilters.maxPrice.toString());
+      }
+      if (searchFilters && searchFilters.minRating > 0) {;
+        params && params.append('minRating', searchFilters && searchFilters.minRating.toString());
+      }
+      if (searchFilters && searchFilters.sort !== 'relevance') {;
+        params && params.append('sort', searchFilters && searchFilters.sort);
+      }
+
+      const response = await fetch(`/api/search?${params}`);
+      const data: SearchResponse = await response && response.json();
+
+      if (page === 1) {;
+        setResults(data && data.results);
+      } else {;
+        setResults(prev => [...prev, ...data && data.results]);
+      }
+
+      setTotalCount(data && data.totalCount);
+      setCurrentPage(data && data.page);
+      setHasMore(data && data.hasMore);
+
+      logInfo('Search completed', {;
+        term,;
+        resultCount: data && data.results.length,;
+        totalCount: data && data.totalCount,;
+      });
+    } catch (error) {;
+      logErrorToProduction('Search failed', { data: error });
+      setResults([]);
+=======
     sort: 'relevance';
   }),;
   const suggestions = generateSearchSuggestions(),;
@@ -1150,10 +1274,35 @@ export const AdvancedSearchResults: React.FC = () => {;
     } catch (error) {;
       logErrorToProduction('Search failed', { data: error }),;
       setResults([]),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setTotalCount(0);
     } finally {;
       setLoading(false);
     }
+<<<<<<< HEAD
+  };
+
+  // Search when term or filters change;
+  useEffect((,) => {;
+    if (searchTerm && searchTerm.trim()) {;
+      performSearch(searchTerm, 1, filters);
+      setCurrentPage(1);
+    }
+  }, [searchTerm, filters]);
+
+  // Handle search input;
+  const handleSearch = (term: string) => {;
+    setSearchTerm(term);
+    router && router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {;
+      shallow: true,;
+    });
+  };
+
+  // Handle filter changes;
+  const handleFiltersChange = (newFilters: SearchFilters) => {;
+    setFilters(newFilters);
+  };
+=======
   },;
   // Search when term or filters change;
   useEffect(() => {;
@@ -1171,12 +1320,24 @@ export const AdvancedSearchResults: React.FC = () => {;
   const handleFiltersChange = (newFilters: SearchFilters) => {;
     setFilters(newFilters);
   },;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Load more results;
   const loadMore = () => {;
     if (hasMore && !loading) {;
       performSearch(searchTerm, currentPage + 1);
     }
+<<<<<<< HEAD
+  };
+
+  // Active filters count;
+  const activeFiltersCount =;
+    filters && filters.types.length +;
+    (filters && filters.category ? 1 : 0) +;
+    (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000 ? 1 : 0) +;
+    (filters && filters.minRating > 0 ? 1 : 0);
+=======
   },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Active filters count
   const activeFiltersCount = filters.types.length + 
@@ -1185,11 +1346,19 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minRating > 0 ? 1 : 0),
 
   return (
+<<<<<<< HEAD
+    <div className='container mx-auto px-4 py-6'>;
+      {/* Search Header */}
+      <div className='mb-6'>;
+        <div className='flex gap-4 mb-4'>;
+          <div className='flex-1'>;
+=======
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
       <div className="mb-6">
         <div className="flex gap-4 mb-4">
           <div className="flex-1">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <EnhancedSearchInput
               value={searchTerm}
               onChange={setSearchTerm}
@@ -1211,11 +1380,13 @@ export const AdvancedSearchResults: React.FC = () => {;
         </div>
 
         {searchTerm && (
-          <div className="flex items-center justify-between">
+          <div className='flex items-center justify-between'>
             <div>
-              <h1 className="text-2xl font-bold">Search Results</h1>
-              <p className="text-muted-foreground">
-                {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
+              <h1 className='text-2xl font-bold'>Search Results</h1>
+              <p className='text-muted-foreground'>
+                {loading
+                  ? 'Searching...'
+                  : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
 <<<<<<< HEAD
@@ -1262,10 +1433,10 @@ export const AdvancedSearchResults: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="relevance">Relevance</SelectItem>
-                  <SelectItem value="price_asc">Price: Low to High</SelectItem>
-                  <SelectItem value="price_desc">Price: High to Low</SelectItem>
-                  <SelectItem value="rating">Highest Rated</SelectItem>
+                  <SelectItem value='relevance'>Relevance</SelectItem>
+                  <SelectItem value='price_asc'>Price: Low to High</SelectItem>
+                  <SelectItem value='price_desc'>Price: High to Low</SelectItem>
+                  <SelectItem value='rating'>Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
 <<<<<<< HEAD
@@ -1399,11 +1570,19 @@ export const AdvancedSearchResults: React.FC = () => {;
       {searchTerm && (
         <div className="flex gap-6">
           {/* Desktop Filters Sidebar */}
+<<<<<<< HEAD
+          <div className='hidden lg:block w-64 flex-shrink-0'>;
+            <div className='bg-card border rounded-lg p-4 sticky top-4'>;
+              <div className='flex items-center justify-between mb-4'>;
+                <h2 className='font-semibold'>Filters</h2>;
+                {activeFiltersCount > 0 && (;
+=======
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Button
 <<<<<<< HEAD
 =======
@@ -1461,7 +1640,52 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 
                 {/* Load More Button */}
+<<<<<<< HEAD
+                {hasMore && (;
+                  <div className='text-center'>;
+                    <Button
+                      onClick={loadMore}
+                      disabled={loading}
+                      variant='outline'>;
+                      {loading ? (;
+                        <>;
+                          <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+                          Loading...;
+                        </>;
+                      ) : (;
+                        'Load More Results';
+          <div className="flex-1">
+
+            {loading && results.length === 0 ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin" />
+              </div>
+            ) : results.length === 0 && searchTerm ? (
+
+              <NoResultsState 
+                searchTerm={searchTerm} 
+                onNewSearch={handleSearch}
+              />;
+            ) : (;
+              <>;
+                {/* Results Grid/List */}
+                <div className={viewMode === 'grid' 
+                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
+                  : "space-y-4 mb-6"
+                }>
+                  {results.map((result) => (
+                    <SearchResultCard
+                      key={`${result.type}-${result.id}`}
+                      result={result}
+                      searchTerm={searchTerm}
+                      viewMode={viewMode}
+                    />;
+
+                  ))}
+                </div>
+                {/* Load More Button */}
                 {hasMore && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div className='text-center'>
@@ -1514,12 +1738,19 @@ export const AdvancedSearchResults: React.FC = () => {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
                       disabled={loading}
                       variant="outline"
                     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1537,11 +1768,14 @@ export const AdvancedSearchResults: React.FC = () => {;
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 };
 export default AdvancedSearchResults;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 setCurrentPage (data.page);
@@ -1608,6 +1842,10 @@ export default AdvancedSearchResults;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default AdvancedSearchResults;
 
 
@@ -1750,6 +1988,12 @@ export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
 export default AdvancedSearchResults,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+                {hasMore && (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

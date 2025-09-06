@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,11 +8,14 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 export function useSkills() {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -44,12 +47,16 @@ export function useSkills() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
+=======
+export function useSkills() {  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add skills')
+<<<<<<< HEAD
       return false
 <<<<<<< HEAD
     }
@@ -197,6 +204,12 @@ export function useSkills() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('resume_skills')
+        .insert({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -222,6 +235,7 @@ export function useSkills() {;
       setError('You must be logged in to delete skills'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -231,10 +245,14 @@ export function useSkills() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -350,20 +368,13 @@ export function useSkills() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+=======
+          return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
-      setIsLoading(false)
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {useState} from 'react';
+      setIsLoading(false)import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -381,6 +392,7 @@ function use_skills() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
       set_error ('You must be logged in to add skills'),
@@ -561,3 +573,6 @@ deleteSkill
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

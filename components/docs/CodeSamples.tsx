@@ -42,12 +42,13 @@ export default function CodeSamples({ samples }: Props) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export default function CodeSamples({ samples }: Props) {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
@@ -58,11 +59,9 @@ export default function CodeSamples({ samples }: Props) {;
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 =======
 
-
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
 }
-
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
@@ -203,8 +202,8 @@ function CodeSamples() {
   const sample_map = Object.from_entries (samples.map ((s) => [s.language, s.code]));
 ;
   return (
-    <div className="w - full">;
-      <div className="flex gap - 2 mb - 2">;
+    <div className="w-full">;
+      <div className="flex gap-2 mb-2">;
         {tabs.map ((t) => (
           <button;
             key={t.key}
@@ -217,7 +216,7 @@ function CodeSamples() {
       <pre className='p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm'>        <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
-}      <pre className="p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm">;
+}      <pre className="p - 3 rounded bg - high - contrast - tertiary overflow-auto text-sm">;
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);

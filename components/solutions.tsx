@@ -81,27 +81,27 @@ import React from 'react';
  const SolutionsPage: React.FC = () => {;
   const industrySolutions = [ {;
   category: 'Healthcare & Life Sciences', solutions: [ {;
-  ] ;
+  ] 
 };
 {;
   category: 'Financial Services', solutions: [ {;
-  ] ;
+  ] 
 };
 {;
   category: 'Manufacturing & Industry', solutions: [ {;
-  ] ;
+  ] 
 };
 {;
   category: 'Retail & E-commerce', solutions: [ {;
-  ] ;
+  ] 
 };
 {;
   category: 'Government & Public Sector', solutions: [ {;
-  ] ;
+  ] 
 };
 {;
   category: 'Education & Training', solutions: [ {;
-  ] ;
+  ] 
 };
 {;
   category: 'Sustainability & Energy', solutions: [ {;
@@ -607,7 +607,7 @@ export default Solutions;
 }viewport= {
   {
   once: true;
-}> <h2 className="text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Industry? </h2> <p className="text - xl text - gray - 300 mb - 8" > Let's discuss how our industry - specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition - all duration - 300" > Start Your Transformation <ArrowRight className="inline - block ml - 2 w - 5 h - 5" /> </a> <Link href="/services" className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur - md hover:bg - white / 10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>);
+}> <h2 className="text - 4xl font - bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text - xl text - gray-300 mb-8" > Let's discuss how our industry - specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline - block ml - 2 w-5 h-5" /> </a> <Link href="/services" className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur-md hover:bg-white / 10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>);
 }
 export default Solutions;}
 ;

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -29,13 +32,17 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
   const getSuggestionColor = (suggestion:string | undefined) => {;
     switch (suggestion) {;
       case "Strongly Recommended":return "bg-green-100 text-green-800",;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
     }
   },;
 <<<<<<< HEAD
@@ -99,3 +106,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
       </CardContent>;
     </Card>;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

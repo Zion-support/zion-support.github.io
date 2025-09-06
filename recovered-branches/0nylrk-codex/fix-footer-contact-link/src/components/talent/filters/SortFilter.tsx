@@ -63,6 +63,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
@@ -81,6 +82,8 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {;
   Select,;
   SelectContent,;
@@ -91,12 +94,15 @@ import { SortFilterProps } from "@/types/filters";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -108,29 +114,22 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
         <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
+<<<<<<< HEAD
           <SelectItem value="experience">Most Experienced</SelectItem>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
+=======
+          <SelectItem value="experience">Most Experienced</SelectItem>;  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  );
->>>>>>> main
 }
 <<<<<<< HEAD
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Select,
   SelectContent,
   SelectItem,
@@ -143,15 +142,15 @@ export /**
  */
 function SortFilter() {
   return (
-    <div className="mb - 6">;
-      <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;
+    <div className="mb-6">;
+      <label className="text - sm font - medium text - zion - slate - light mb-2 block">;
         Sort by;
       </label>;
       <Select value={sort_option} onValueChange={setSortOption}>;
-        <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
+        <SelectTrigger className="bg - zion - blue border - zion - blue - light text-white">;
           <SelectValue placeholder="Sort by" />;
         </SelectTrigger>;
-        <SelectContent className="bg - zion - blue border - zion - blue - light text - white">;
+        <SelectContent className="bg - zion - blue border - zion - blue - light text-white">;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
@@ -161,16 +160,6 @@ function SortFilter() {
       </Select>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
   )
 
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
@@ -195,6 +184,7 @@ function SortFilter() {
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -203,3 +193,5 @@ function SortFilter() {
 import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

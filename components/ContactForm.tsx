@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       });
@@ -102,6 +103,8 @@
             <option value="cloud - solutions">Cloud Solutions</option>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -132,8 +135,8 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -290,9 +293,10 @@ const ContactForm: React.FC = () => {
         </button>
       </form>
     </div>
-  );
+  )
 };
 
+<<<<<<< HEAD
 export default ContactForm;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -336,3 +340,6 @@ export default ContactForm;
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export default ContactForm;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

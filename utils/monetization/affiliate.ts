@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function affiliate (url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {
   // Check condition
@@ -14,18 +17,7 @@ if (return url, ) {
   u.search_params.set ('ref', code);
   return u.to_string ();
 
-}
-=======
-=======
-export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE |''): string {if (!code) return url;
-  const u = new URL(url);
-  u.searchParams.set('ref', code);
-  return u.toString();
-}
-export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
+}export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
   if (!code) return url,;
   const u = new URL(url),;
   u.searchParams.set('ref', code);
@@ -42,6 +34,7 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 }
@@ -87,3 +80,6 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

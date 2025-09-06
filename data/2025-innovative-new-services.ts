@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -12,10 +13,13 @@ import { ServiceVariant } from '../types/service-variants';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface InnovativeNewService2025 {
 =======
+=======
+export interface InnovativeNewService2025 {export interface InnovativeNewService2025 {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export interface InnovativeNewService2025 {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -29,11 +33,14 @@ export interface InnovativeNewService2025 {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface InnovativeNewService2025 {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -59,27 +66,10 @@ export interface InnovativeNewService2025 {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-  {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
-<<<<<<< HEAD
-=======
-
-    market_size: '$32.1B financial technology market',
-    growth_rate: '22% annual growth',
-    variant: 'quantum - financial - enterprise',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -96,25 +86,11 @@ export interface InnovativeNewService2025 {;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.';
     launch_date: '2025 - 01 - 08';
-<<<<<<< HEAD
-=======
-
-    customers: 12;
-
-    rating: 4 && 4.9,
-
-    reviews: 6
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeNewService {
   id: string, name: string,
   tagline: string, price: string,
@@ -256,6 +232,7 @@ export interface InnovativeNewService {
     variant: 'quantum-financial-enterprise',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -266,10 +243,13 @@ export interface InnovativeNewService {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 6,
   },;
@@ -277,6 +257,8 @@ export interface InnovativeNewService {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -294,6 +276,7 @@ export interface InnovativeNewService {
     customers: 12;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.9
 =======
 =======
@@ -304,13 +287,15 @@ export interface InnovativeNewService {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -353,8 +338,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     name: 'AI Legal Document Analyzer',;
     tagline: 'Transform legal document review with AI-powered analysis and insights',;
     price: '$199',;
-    period: '/month',;
-    description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',;
+    period: '/month',,
+  description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',;
     features: [;
       'AI-powered contract analysis and risk assessmentAutomated compliance checkingLegal document summarizationRisk scoring and alertsTemplate generation and customizationMulti-language supportIntegration with legal management systemsAudit trail and version control',;
       'Real-time collaboration toolsMobile-responsive interface';
@@ -397,8 +382,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     name: 'Quantum-Secure Communication Platform',;
     tagline: 'Unbreakable encryption for the quantum computing era',;
     price: '$499',;
-    period: '/month',;
-    description: 'Next-generation communication platform using quantum key distribution and post-quantum cryptography to ensure unbreakable security.',;
+    period: '/month',,
+  description: 'Next-generation communication platform using quantum key distribution and post-quantum cryptography to ensure unbreakable security.',;
     features: [;
       'Quantum key distribution (QKD)Post-quantum cryptography algorithmsEnd-to-end encryptionReal-time threat detectionMulti-channel communication supportCompliance with NIST standardsAPI for third-party integrationsAdvanced audit logging',;
       'Zero-knowledge architectureGlobal quantum network access';
@@ -441,8 +426,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     name: 'AI Healthcare Diagnostics Platform',;
     tagline: 'Revolutionary AI-powered medical imaging and diagnostic analysis',;
     price: '$299',;
-    period: '/month',;
-    description: 'Advanced AI platform that analyzes medical images, lab results, and patient data to provide accurate diagnostic insights and treatment recommendations.',;
+    period: '/month',,
+  description: 'Advanced AI platform that analyzes medical images, lab results, and patient data to provide accurate diagnostic insights and treatment recommendations.',;
     features: [;
       'AI-powered medical image analysisDiagnostic accuracy validationPatient data integrationTreatment recommendation engineClinical decision supportHIPAA complianceMulti-modality imaging supportReal-time analysis',;
       'Integration with EHR systemsMobile diagnostic tools';
@@ -485,8 +470,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     name: 'Autonomous Supply Chain Optimization',;
     tagline: 'Self-optimizing supply chains with AI and predictive analytics',;
     price: '$399',;
-    period: '/month',;
-    description: 'Intelligent supply chain platform that automatically optimizes inventory, routes, and logistics using AI and machine learning.',;
+    period: '/month',,
+  description: 'Intelligent supply chain platform that automatically optimizes inventory, routes, and logistics using AI and machine learning.',;
     features: [;
       'AI-powered demand forecastingAutonomous inventory optimizationRoute optimization algorithmsReal-time supply chain monitoringPredictive maintenance alertsSupplier performance analyticsCost optimization recommendationsSustainability tracking',;
       'Multi-warehouse managementIntegration with ERP systems';
@@ -529,8 +514,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     name: 'Quantum Financial Trading Platform',;
     tagline: 'Quantum computing-powered algorithmic trading and risk management',;
     price: '$999',;
-    period: '/month',;
-    description: 'Advanced financial trading platform leveraging quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading.',;
+    period: '/month',,
+  description: 'Advanced financial trading platform leveraging quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading.',;
     features: [;
       'Quantum-powered market analysisUltra-fast algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsCompliance monitoringMulti-exchange integrationAdvanced analytics dashboard',;
       'API for custom strategies24/7 market monitoring';
@@ -568,6 +553,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     reviews: 6;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
@@ -586,10 +572,16 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
+];  }
 ];
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

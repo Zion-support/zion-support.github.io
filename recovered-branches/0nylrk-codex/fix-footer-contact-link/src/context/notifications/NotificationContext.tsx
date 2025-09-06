@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
+<<<<<<< HEAD
 import {NotificationContextType} from './types';
 =======
 
@@ -40,6 +39,9 @@ const NotificationContext = createContext(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useNotifications = (): NotificationContextType => {
+=======
+import {NotificationContextType} from './types';export const useNotifications = (): NotificationContextType => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
@@ -51,48 +53,26 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const notificationOps = useNotificationOperations(user?.id);
   // Load notifications when user changes
   useEffect(() => {
-    notificationOps.fetchNotifications();
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-export const useNotifications = (): NotificationContextType => {;
-  const context = useContext(NotificationContext) as NotificationContextType;
-  if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import {supabase} from '@/integrations/supabase/client';
+    notificationOps.fetchNotifications();import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
 import {NotificationContextType} from './types';
 
-
 export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
+<<<<<<< HEAD
     throw new Error('useNotifications must be used within a NotificationProvider')
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+=======
+    throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;
 // `createContext` call returns `{}` instead of the expected shape.;
@@ -106,6 +86,7 @@ const defaultContext: NotificationContextType = {;
   markAllAsRead: async () => {},;
   dismissNotification: async () => {},;
   setFilter: () => {},;
+<<<<<<< HEAD
   fetchNotifications: async () => {}},;
 <<<<<<< HEAD
 
@@ -183,11 +164,15 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+=======
+  fetchNotifications: async () => {}},;export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { user } = useAuth(),
   const notificationOps = useNotificationOperations(user?.id),
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Load notifications when user changes
+<<<<<<< HEAD
   useEffect(() => {
 <<<<<<< HEAD
     notificationOps.fetchNotifications(),
@@ -201,6 +186,9 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Set up real-time subscription for new notifications
     if (user) {
+=======
+  useEffect(() => {    if (user) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const channel = supabase
         .channel('notifications-changes')
         .on('postgres_changes'
@@ -208,6 +196,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             event: '*'
             schema: 'public'
             table: 'notifications'
+<<<<<<< HEAD
             filter: `user_id=eq.${user.id}`
 <<<<<<< HEAD
 =======
@@ -341,21 +330,23 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Set up real-time subscription for new notifications;
+=======
+            filter: `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (user) {;
       const channel = supabase;
         .channel('notifications-changes');
-<<<<<<< HEAD
-<<<<<<< HEAD
         .on('postgres_changes', ;
           {;
             event: '*', ;
             schema: 'public',;
             table: 'notifications',;
-            filter: `user_id=eq.${user && user.id}`;
-          };
+            filter: `user_id=eq.${user && user.id}`
+};
           (payload) => {;
             console && console.log('Notification change received:', payload);
             notificationOps && notificationOps.fetchNotifications();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
@@ -486,13 +477,17 @@ if ( {) {
       {children}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
+=======
+          }
+        );
+        .subscribe();;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <NotificationContext.Provider value={notification_ops}>;
       {children}
     </NotificationContext.Provider>);
 }
 ;
-<<<<<<< HEAD
             event:'*', ;
             schema:'public',;
             table:'notifications',;
@@ -533,9 +528,13 @@ if ( {) {
     <NotificationContext.Provider value={notificationOps}>;
       {children}
     </NotificationContext.Provider>;
-  );
+  )
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

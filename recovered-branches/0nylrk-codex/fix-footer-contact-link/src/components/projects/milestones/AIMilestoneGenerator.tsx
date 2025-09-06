@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -14,6 +15,8 @@ export function AIMilestoneGenerator({;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
@@ -32,45 +35,12 @@ interface AIMilestoneGeneratorProps {;
 
 export function AIMilestoneGenerator(): any ({;
 
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
+export function AIMilestoneGenerator({;
 
 export function AIMilestoneGenerator({;
+import React, { useState } from 'react';  },
 
 <<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-import React, { useState } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger } from '@/components/ui/accordion';
-import { Loader2, Sparkles, Plus, Calendar  } from 'lucide-react';
-import { format, parseISO  } from 'date-fns';
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Badge } from '@/components/ui/badge';
-interface AIMilestoneGeneratorProps {
-
-  scope: string
-  startDate: string
-  endDate: string | null
-  projectType: string
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void
-
-  onAddMilestone: (milestone: GeneratedMilestone) => void
-}
-export function AIMilestoneGenerator({
-
-export function AIMilestoneGenerator({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
 export function AIMilestoneGenerator({;
 import React, { useState } from 'react';
@@ -408,59 +378,36 @@ export function AIMilestoneGenerator({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     }
+=======
+  return (    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-medium flex items-center">;
           <Sparkles className="w-5 h-5 mr-2 text-primary" />;
           AI Milestone Generator;
         </h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-
-          disabled={isGenerating || !scope || !startDate || !projectType}>;
-=======
-          disabled={isGenerating || !scope || !startDate || !projectType}>;
-        <Button;
-          variant="outline";
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scope || !startDate || !projectType}
-        >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          {isGenerating ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating...;
             </>;
-<<<<<<< HEAD
-          ) : (;
-=======
-          ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            <>;
+          ) : (;            <>;
               <Sparkles className="mr-2 h-4 w-4" />;
               Generate Milestones;
             </>;
           )}
         </Button>;
       </div>;
-<<<<<<< HEAD
 
-      {generatedMilestones && generatedMilestones.length > 0 && (;
-=======
-;
-      {generatedMilestones.length > 0 && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <Card>;
+      {generatedMilestones && generatedMilestones.length > 0 && (;        <Card>;
           <CardContent className="pt-6">;
             <div className="flex justify-between items-center mb-4">;
               <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
                 {generatedMilestones && generatedMilestones.length} milestones generated based on your project scope;
               </p>;
               <Button
@@ -477,30 +424,9 @@ export function AIMilestoneGenerator({;
                     <div className="flex items-center flex-1">;
 
                       <input
-                        type="checkbox"
-=======
-                      <input
-                        type="checkbox"
-                {generatedMilestones.length} milestones generated based on your project scope;
-              </p>;
-              <Button ;
-                onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}
-              >;
-                Add Selected to Project;
-              </Button>;
-            </div>;
-;
-            <Accordion type="multiple" className="w-full">;
-              {generatedMilestones.map((milestone, index) => (;
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">;
-                  <div className="flex items-center justify-between">;
-                    <div className="flex items-center flex-1">;
-                      <input;
-                        type="checkbox";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                        id={`milestone-${index}`}
+                        type="checkbox"                        id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
+<<<<<<< HEAD
                         onChange={() => toggleMilestoneSelection(index)}
                         className="mr-2 w-4 h-4 rounded text-primary";
                       />;
@@ -658,14 +584,16 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             AI Suggested;
+=======
+                        onChange={() => toggleMilestoneSelection(index)}                            AI Suggested;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       onClick={(e) => {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -673,21 +601,17 @@ if ( {) {
                       onClick={(e) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+                        e.stopPropagation(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         handleAddSingleMilestone(milestone)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      onClick={(e) => {;
-                        e && e.stopPropagation();
-                        handleAddSingleMilestone(milestone);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                     <Button;
                       variant="ghost";
                       size="sm";
                       onClick={(e) => {;
                         e.stopPropagation(),;
                         handleAddSingleMilestone(milestone),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -935,3 +859,5 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
 
@@ -60,10 +59,14 @@ default define_config ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+=======
+    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       name: Mobile Safari',      use: {
         browser_name: webkit',        ...devices['i_phone 12']}
     }
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 });
@@ -95,23 +98,21 @@ default define_config ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+  ];    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       name: Mobile Safari',      use: {
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
-<<<<<<< HEAD
-=======
-  reporter: [
-    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 });
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -127,3 +128,5 @@ default define_config ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

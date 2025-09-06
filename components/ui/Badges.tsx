@@ -1,11 +1,34 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+  type: 'Verified' | 'Pro' | 'Top Rated';
+}) {
+  const colorMap = {
+    Verified:
+      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'
+    'Top Rated':
+      'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
+  } as const;
+    >
+      <span className='leading-none'>{type}</span>
+    </span>
+  );
+export function MicroTestimonial({
+  quote
+  author
+}: {
+  quote,
+  author,
+}: {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   quote: string;
   author: string;
 }) {;
@@ -14,18 +37,6 @@ import React from 'react';
       <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
-  const colorMap = {
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export /**
  * TrustBadge - Function description
@@ -56,17 +67,11 @@ function MicroTestimonial() {
     </figure>);  const color_map = {
     Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
-      <span className="leading - none">{type}</span>;
+      <span className="leading-none">{type}</span>;
     </span>);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      </figcaption>;
     </figure>;
   );  const colorMap = {;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
@@ -77,16 +82,12 @@ function MicroTestimonial() {
     </span>;
   );
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export /**
  * MicroTestimonial - Function description
  */
 function MicroTestimonial() {
   return (
+<<<<<<< HEAD
     <figure className="border rounded - md p - 3 text - sm">;
       <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
       <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
@@ -143,6 +144,9 @@ export function TrustBadge({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   type: 'Verified' | 'Pro' | 'Top Rated';
+=======
+    <figure className="border rounded - md p-3 text-sm">;  type: 'Verified' | 'Pro' | 'Top Rated';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }) {
   const colorMap = {
     Verified:
@@ -184,10 +188,25 @@ export function MicroTestimonial({
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
     <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>
       <span className="leading-none">{type}</span>
     </span>
   )
+=======
+    <figure className='border rounded - md p - 3 text - sm'>;
+      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
+      <figcaption className='mt - 2 font - medium opacity - 80'>;
+        — {author}
+      </figcaption>;
+    </figure>);  const color_map = {
+    Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
+    Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
+  return (
+    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
+      <span className="leading-none">{type}</span>;
+    </span>);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 <<<<<<< HEAD
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
@@ -221,10 +240,11 @@ export /**
  */
 function MicroTestimonial() {
   return (
-    <figure className="border rounded - md p - 3 text - sm">;
+    <figure className="border rounded - md p-3 text-sm">;
     </figure>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -232,3 +252,5 @@ function MicroTestimonial() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

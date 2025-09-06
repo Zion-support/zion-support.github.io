@@ -1,15 +1,19 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 const testimonials = [
 =======
@@ -74,10 +78,13 @@ const testimonials = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
+<<<<<<< HEAD
 <<<<<<< HEAD
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
@@ -122,6 +129,9 @@ import { Quote } from "lucide-react",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -147,6 +157,7 @@ const testimonials = [
     role: "Operations Manager, EcoTech Systems",
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -159,6 +170,8 @@ const testimonials = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -169,6 +182,7 @@ export function TestimonialCarousel() {
             Discover how Zion is transforming the tech and AI marketplace ecosystem
           </p>
         </div>
+<<<<<<< HEAD
         <div className="max-w-5xl mx-auto px-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -531,8 +545,16 @@ export function TestimonialCarousel() {;
 <<<<<<< HEAD
     </section>);
 =======
+=======
+        <div className="max-w-5xl mx-auto px-8">            </div>;
+          </Carousel>;
+        </div>;
+      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+    </section>);}
 ;
+<<<<<<< HEAD
     </section>;
   );}
  const testimonials = [ {
@@ -577,3 +599,5 @@ company: "AI Systems"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

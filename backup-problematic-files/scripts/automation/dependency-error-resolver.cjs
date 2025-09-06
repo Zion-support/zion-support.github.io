@@ -357,8 +357,13 @@ throw error}
       execSync('npm ci --dry-run', { "stdio": 'pipe' });
       return { "success": true, "issues": [] }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
+<<<<<<< HEAD
       return {
         "success": false,
+=======
+      return { 
+        "success": false, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
@@ -396,8 +401,13 @@ throw error}
       }
       return { "success": duplicates.length === 0, duplicates }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
+<<<<<<< HEAD
       return {
         "success": false,
+=======
+      return { 
+        "success": false, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
@@ -414,7 +424,11 @@ throw error}
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()
       ]);
+<<<<<<< HEAD
       const totalIssues = vulnCheck.count + outdatedCheck.count +
+=======
+      const totalIssues = vulnCheck.count + outdatedCheck.count + 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
         this.log('No dependency issues found', 'INFO');
@@ -424,7 +438,11 @@ throw error}
       let resolutionsApplied = 0;
       // Fix vulnerabilities and outdated dependencies
       resolutionsApplied += await this.resolveDependencyIssues(
+<<<<<<< HEAD
         vulnCheck.vulnerabilities,
+=======
+        vulnCheck.vulnerabilities, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         outdatedCheck.outdated
       );
       // Fix package-lock issues
@@ -504,3 +522,7 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = DependencyErrorResolver
+<<<<<<< HEAD
+=======
+module.exports = DependencyErrorResolver
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

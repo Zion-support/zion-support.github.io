@@ -6,8 +6,8 @@ import React from';react' "export": interface ServiceContact {';
   id: number;
    name: string;
    category: string;
-   pricing: string;
-   description: string;
+   pricing: string,
+  description: string;
    price: number;
    pricingModel: string;
    userLimit: string;
@@ -25,8 +25,8 @@ import React from';react' "export": interface ServiceContact {';
    trialPeriod: strin,g} "export": interface ITService {
   id: number;
    name: string;
-   category: string;
-   description: string;
+   category: string,
+  description: string;
    hourlyRate: number;
    projectRate: number;
    features: string[];
@@ -42,8 +42,8 @@ import React from';react' "export": interface ServiceContact {';
    support: strin,g} "export": interface AIService {
   id: number;
    name: string;
-   category: string;
-   description: string;
+   category: string,
+  description: string;
    pricing: string;
    price: number;
    pricingModel: string;
@@ -58,8 +58,12 @@ import React from';react' "export": interface ServiceContact {';
    trainingData: string;
    compliance: string[];
    aiScore: number;
-import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string} address: 'strin',g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean} trialPeriod: 'strin',g} export: interface ITService { id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string} support: 'strin',g} export: interface AIService { id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number} useCases: 'string[]'} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''';,;
+import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string} address: 'strin',g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string,
+  description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean} trialPeriod: 'strin',g} export: interface ITService { id: number; name: string; category: string,
+  description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string} support: 'strin',g} export: interface AIService { id: number; name: string; category: string,
+  description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number} useCases: 'string[]'} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''';,;
    useCases: string[]} "export": const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string; address: strin,g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean; trialPeriod: strin,g} export: interface ITService { id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string; support: strin,g} export: interface AIService { id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number; useCases: string[]} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''',
@@ -93,3 +97,9 @@ import React from';react' export: interface ServiceContact {'; phone: string; em
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string; address: strin,g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string,
+  description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean; trialPeriod: strin,g} export: interface ITService { id: number; name: string; category: string,
+  description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string; support: strin,g} export: interface AIService { id: number; name: string; category: string,
+  description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number; useCases: string[]} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

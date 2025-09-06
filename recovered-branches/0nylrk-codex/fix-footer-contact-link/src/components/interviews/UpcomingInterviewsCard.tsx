@@ -23,6 +23,7 @@ import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,6 +46,10 @@ export function UpcomingInterviewsCard() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react",
+=======
+
+  const { fetchInterviews } = useInterviews();import React, { useEffect, useState } from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -62,6 +67,7 @@ import { Avatar } from "@/components/ui/avatar",
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -75,18 +81,19 @@ export function UpcomingInterviewsCard() {
     const loadInterviews = async () => {;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      setIsLoading(true);
+  const [isLoading, setIsLoading] = useState(true);      setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -190,11 +197,14 @@ function UpcomingInterviewsCard() {
     loadInterviews()
   }, []);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
 
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -227,6 +237,8 @@ function UpcomingInterviewsCard() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -246,7 +258,6 @@ export function UpcomingInterviewsCard() {;
       try {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
-<<<<<<< HEAD
 
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
@@ -257,45 +268,17 @@ export function UpcomingInterviewsCard() {;
             parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
           .slice (0, 3), // Take only the next 3 interviews;
         setUpcomingInterviews (upcoming);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter(interview => ;
-            interview && interview.status === 'confirmed' && ;
-            !isPast(parseISO(interview && interview.scheduled_date));
-          );
-          .sort((a, b) => ;
-            parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
-<<<<<<< HEAD
-=======
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter(interview =>;
-            interview.status === 'confirmed' &&;
-            !isPast(parseISO(interview.scheduled_date));
-          );
-          .sort((a, b) =>;
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           );
           .slice(0, 3), // Take only the next 3 interviews;
 
         setUpcomingInterviews(upcoming);
       } catch (error) {;
-<<<<<<< HEAD
         console && console.error("Error loading upcoming interviews:", error);
       } finally {;
         setIsLoading(false);
@@ -307,69 +290,7 @@ export function UpcomingInterviewsCard() {;
 
   if (isLoading) {;
 
-    return (
-=======
-    return (
-
-import React, { useEffect, useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { format, isPast, parseISO } from "date-fns",;
-import { Link } from "react-router-dom",;
-import { Calendar, Clock, Video } from "lucide-react",;
-import { Avatar } from "@/components/ui/avatar",;
-;
-export function UpcomingInterviewsCard() {;
-  const { fetchInterviews } = useInterviews(),;
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-;
-  useEffect(() => {;
-    const loadInterviews = async () => {;
-      setIsLoading(true),;
-      try {;
-        const interviews = await fetchInterviews(),;
-        const now = new Date(),;
-        ;
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter(interview => ;
-            interview.status === 'confirmed' && ;
-            !isPast(parseISO(interview.scheduled_date));
-          );
-          .sort((a, b) => ;
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
-          );
-          .slice(0, 3), // Take only the next 3 interviews;
-        ;
-        setUpcomingInterviews(upcoming),;
-      } catch (error) {;
-        console.error("Error loading upcoming interviews:", error),;
-      } finally {;
-        setIsLoading(false),;
-      }
-    },;
-;
-    loadInterviews(),;
-  }, []),;
-;
-  if (isLoading) {;
-    return (;
-        console.error("Error loading upcoming interviews:", error);
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    loadInterviews();
-  }, []),;
-  if (isLoading) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    return (    return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -386,6 +307,7 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
+<<<<<<< HEAD
               </div>;
 <<<<<<< HEAD
 =======
@@ -438,6 +360,9 @@ export function UpcomingInterviewsCard() {;
 =======
     return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+              </div>;    return (    return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -455,44 +380,9 @@ export function UpcomingInterviewsCard() {;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
   return (
-
-=======
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    )
-  }
-
-  if (upcomingInterviews.length === 0) {
-    return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="text-center py-6">
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
-            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
-            <Button asChild className="mt-4" variant="outline" size="sm">
-              <Link to="/interviews">Schedule Interview</Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    )
-  }
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
           <Video className="h-5 w-5 mr-2 text-zion-purple" />
@@ -501,6 +391,7 @@ export function UpcomingInterviewsCard() {;
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
+<<<<<<< HEAD
           {upcomingInterviews.map(interview => {
 <<<<<<< HEAD
 =======
@@ -646,31 +537,19 @@ export function UpcomingInterviewsCard() {;
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>;
+=======
+          {upcomingInterviews.map(interview => {                    </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   )}
                 </Avatar>;
                 <div className="flex-1">;
                   <div className="flex justify-between items-start">;
                     <p className="font-medium line-clamp-1">;
-<<<<<<< HEAD
                       {interview && interview.title || "Interview"}
                     </p>;
                     {isStartingSoon && (;
-                      <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
-=======
-                      {interview.title || "Interview"}
-                    </p>;
-                    {isStartingSoon && (;
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                        Soon;
+                      <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;                        Soon;
                       </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-          {upcomingInterviews && upcomingInterviews.map(interview => {;
-            const interviewDate = parseISO(interview && interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    )}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1" />;
@@ -678,9 +557,8 @@ export function UpcomingInterviewsCard() {;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             );
+<<<<<<< HEAD
           })}
 
 =======
@@ -869,3 +747,6 @@ return (<img src= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          })}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

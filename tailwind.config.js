@@ -3,6 +3,7 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   darkMode: "class",
   content: [
 <<<<<<< HEAD
@@ -34,6 +35,13 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ],
   theme: {
     extend: {
@@ -623,6 +631,7 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         mono: ['JetBrains Mono', 'monospace'],
 =======
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
@@ -630,10 +639,14 @@ module.exports = {
 =======
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        mono: ['JetBrains Mono', 'monospace'],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'slide-down': 'slideDown 0.5s ease-out',
@@ -656,6 +669,8 @@ module.exports = {
 =======
         'spin-slow': 'spin 8s linear infinite',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       },
       keyframes: {
         fadeIn: {
@@ -664,6 +679,7 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
 <<<<<<< HEAD
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
@@ -715,6 +731,10 @@ module.exports = {
     }
 =======
         'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+=======
+          '100%': { transform: 'translateY(0)', opacity: '1' }
+        },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       },
     },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
@@ -724,6 +744,7 @@ module.exports = {
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   },
+<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
@@ -753,3 +774,7 @@ module.exports = {
   ],
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  plugins: [],
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

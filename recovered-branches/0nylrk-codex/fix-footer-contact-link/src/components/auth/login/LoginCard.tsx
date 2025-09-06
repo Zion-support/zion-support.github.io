@@ -1,11 +1,9 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-
-
 
 export function LoginCard() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -19,6 +17,9 @@ import { SocialLogin } from "./SocialLogin";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",
+=======
+  return (import { Link } from "react-router-dom",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function LoginCard() {
   return (
@@ -30,6 +31,7 @@ import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin";
 export function LoginCard() {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -107,26 +109,19 @@ export function LoginCard() {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function LoginCard() {
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <div className="mx-auto w-full max-w-sm lg:w-96">;
+  return (    <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
           Welcome back;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
-          Don't have an account?{" "}
-<<<<<<< HEAD
-          <Link to="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-          <Link to="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            Sign up;
-          </Link>;
+          Don't have an account?{" "}          </Link>;
         </p>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,3 +165,11 @@ export function LoginCard() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      </div>;      <div className="bg - zion - blue - dark rounded - lg p-6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

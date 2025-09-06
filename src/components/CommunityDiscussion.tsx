@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -37,8 +38,20 @@ const initial_posts: DiscussionPost[] = [;
   body: string
 }
 
+=======
+  id: number,
+  author: string,
+  avatar?: string,
+  time: string,  title: string,
+  body: string;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const initialPosts: DiscussionPost[] = [
   {
+    author: "Anna Zhou",
+    time: "2h ago",
+    title: "What AI trends are you most excited for in 2025?",
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},  {
 
     id: 1,
 <<<<<<< HEAD
@@ -67,108 +80,17 @@ export const CommunityDiscussion: React.FC = () => {
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
     id: 2,
-    author: 'David Kim',
-    time: '50m ago',
-    title: 'Quick tip: How to rank your Zion listing higher',
-    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
-  },
-];
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, set_posts] = useState (initial_posts);
-  const [show_new, setShowNew] = useState (false);
-  const [new_title, setNewTitle] = useState ('');
-  const [new_body, setNewBody] = useState ('');  const [new_title, setNewTitle] = useState ("");
-  const [new_body, setNewBody] = useState ("");
-  const handleAddPost = () =>: any {
-    if (|| !new_body.trim ()) return) {
-  $2
-}
-    set_posts ([;
-      {
-        id: Date.now (),
-        author: 'You',
-        time: 'Now',
-        title: new_title,
-        body: new_body,
-      },
-      ...posts,
-    ]);
-    setNewTitle ('');
-    setNewBody ('');
-    setShowNew (false);
-
-  }
-import React, { useState, useMemo } from 'react';
-import { MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-
-interface DiscussionPost {;
-  id: number;
-  author: string;
-  avatar?: string;
-  time: string;
-  title: string;
-  body: string;
-const initialPosts: DiscussionPost[] = [;
-  {;
-    id: 1,  time: string,;
-  title: string,;
-  body: string;
-}
-const initialPosts: DiscussionPost[] = [;
-  {;
-    id: 1,;
-    author: 'Anna Zhou',;
-    time: '2h ago',;
-    title: 'What AI trends are you most excited for in 2025?',;
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",;
-  },;
-    id: 2,;
-    author: 'David Kim',;
-    time: '50m ago',;
-    title: 'Quick tip: How to rank your Zion listing higher',;
-    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',;
-  },;
-];
-
-export const CommunityDiscussion: React.FC = () => {;
+export const CommunityDiscussion: React.FC = () => {export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
-  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("");
-  const [newBody, setNewBody] = useState("");
 
-  const handleAddPost = () => {;
-    if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
-    setPosts([;
-      {;
-        id: Date && Date.now(),;
-        author: 'You',;
-        time: 'Now',;
-        title: newTitle,;
-        body: newBody,;
-      },;
-      ...posts,;
-    ]);
-    setNewTitle('');
-    setNewBody('');
-    setShowNew(false);
-  };
-
-  return (
-
-              className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'        title: newTitle,
-
-        body: newBody},
-      ...posts])
-    setNewTitle("")
-    setNewBody("")
-    setShowNew(false)
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+  const handleAddPost = () => {    setShowNew(false)
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
         <MessageCircle size={28} className='text - zion - cyan' />;
@@ -209,16 +131,9 @@ export const CommunityDiscussion: React.FC = () => {;
     setShowNew (false);
   }
 
-
-
   return (
 
-
     id: 1,
-
-
-
-
 
   const handleAddPost = () => {
 
@@ -257,9 +172,28 @@ export const CommunityDiscussion: React.FC = () => {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
+          onClick={() => setShowNew((v) => !v)}
+        >
+          {showNew ? "Cancel" : "New Post"}
+        </Button>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      </div>
+      {showNew && (
+        <Card className="mb-6 animate-scale-in">
+          <CardContent className="py-5">
+            <Input
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+=======
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
@@ -268,12 +202,8 @@ export const CommunityDiscussion: React.FC = () => {;
       {showNew && (
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
-            <Input
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+            <Input              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
@@ -329,8 +259,8 @@ export const CommunityDiscussion: React.FC = () => {;
       ...posts]),;
     setNewTitle(""),;
     setNewBody(""),;
-    setShowNew(false);
-  };
+    setShowNew(false)
+};
   return (;
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
@@ -347,6 +277,10 @@ export const CommunityDiscussion: React.FC = () => {;
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           onClick={() => setShowNew((v) => !v)}
         >;
           {showNew ? "Cancel" : "New Post"}
@@ -359,6 +293,7 @@ export const CommunityDiscussion: React.FC = () => {;
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
               value={newTitle}
+<<<<<<< HEAD
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
             />;
@@ -384,15 +319,22 @@ export const CommunityDiscussion: React.FC = () => {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Cancel
               </Button>
               <Button
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 size="sm"
+=======
+                size="sm"
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
 <<<<<<< HEAD
@@ -401,6 +343,7 @@ export const CommunityDiscussion: React.FC = () => {;
 
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
                 onClick = {handleAddPost,}
+<<<<<<< HEAD
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
@@ -459,6 +402,8 @@ export const CommunityDiscussion: React.FC = () => {;
 <<<<<<< HEAD
         </Card>;
       )}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
@@ -470,6 +415,7 @@ export const CommunityDiscussion: React.FC = () => {;
                     .map((s) => s[0])
                     .join("")
                     .toUpperCase()
+<<<<<<< HEAD
                     .slice(0, 2)}
 =======
 
@@ -480,12 +426,15 @@ export const CommunityDiscussion: React.FC = () => {;
   )
 
       </div>;
+=======
+                    .slice(0, 2)}      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
         🚀 Stay engaged! Top contributors are regularly featured on the;
         homepage.;
       </div>;
     </div>;
-  );
+  )
 };
   newTitle ;
 }onChange= {;
@@ -503,13 +452,13 @@ export const CommunityDiscussion: React.FC = () => {;
 }</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;
   post && post.body ;
 }</p> </div> </CardContent> </Card>) ) ";
-}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
+}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
 };
 '"      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>;
-  );
+  )
 };
 
         </Card>)}
@@ -525,10 +474,10 @@ export const CommunityDiscussion: React.FC = () => {;
                   {post.author;
                     .split (' ');
                     .map (string => s[0]);
-                    .join ('')                    .toUpperCase ()      <div className="flex flex - col gap - 6">;
+                    .join ('')                    .toUpperCase ()      <div className="flex flex - col gap-6">;
         {posts.map ((post, ) => (
-          <Card key={post.id} className="bg - zion - blue border - zion - slate - dark shadow - lg">;
-            <CardContent className="py - 4 flex gap - 4">;
+          <Card key={post.id} className="bg - zion - blue border - zion - slate - dark shadow-lg">;
+            <CardContent className="py - 4 flex gap-4">;
               <Avatar>;
                 <AvatarFallback>;
                   {post.author;
@@ -550,6 +499,7 @@ export const CommunityDiscussion: React.FC = () => {;
             </CardContent>;
           </Card>;
         ))}
+<<<<<<< HEAD
       </div>;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
@@ -562,3 +512,6 @@ export const CommunityDiscussion: React.FC = () => {;
     </div>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

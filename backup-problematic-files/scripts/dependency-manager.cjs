@@ -129,6 +129,7 @@ class DependencyManager {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
+<<<<<<< HEAD
 
 
 
@@ -136,6 +137,15 @@ class DependencyManager {
 
 
 
+=======
+    
+    
+    
+    
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return report}
   async run() {
     try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
@@ -146,5 +156,10 @@ class DependencyManager {
 }
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

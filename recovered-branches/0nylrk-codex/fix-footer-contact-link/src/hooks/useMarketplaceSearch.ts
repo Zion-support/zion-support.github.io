@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,6 +14,8 @@ export function useMarketplaceSearch() {
   const [searchQuery, setSearchQuery] = useState("");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -35,6 +37,7 @@ export function useMarketplaceSearch() {
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
     [];
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 import { SearchSuggestion, FilterOptions } from "@/types/search",
@@ -100,6 +103,9 @@ export function useMarketplaceSearch() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const matchesSearch = !searchQuery || 
+=======
+  );      const matchesSearch = !searchQuery || 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -116,8 +122,8 @@ export function useMarketplaceSearch() {
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -133,26 +139,15 @@ export function useMarketplaceSearch() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
       return matchesSearch &&
         matchesProductType &&
         matchesLocation &&
-        matchesAvailability &&
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      const matchesSearch = !searchQuery || 
-=======
-      const matchesSearch = !searchQuery || 
-const matchesSearch = !searchQuery || 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      const matchesSearch = !searchQuery || 
-const matchesSearch = !searchQuery || 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+        matchesAvailability &&        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       // Product type filter
@@ -170,12 +165,11 @@ const matchesSearch = !searchQuery ||
         matchesAvailability && 
         matchesRating
     })
-<<<<<<< HEAD
-
 
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -188,31 +182,13 @@ const matchesSearch = !searchQuery ||
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
-        setSelectedProductTypes((prev: string[]) =>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
-        );
-        break;
-      case 'locations':
-        setSelectedLocations((prev: string[]) =>
-          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
-        );
-        break;
-      case 'availability':
-        setSelectedAvailability((prev: string[]) =>
-
-=======
-          prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
-        );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState, useMemo } from './react';
+        setSelectedProductTypes((prev: string[]) =>import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from '@/data / marketplace_data';
@@ -283,39 +259,10 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
       default: break;
     }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-;
-  // Clear all filters;
-  const clearAllFilters = () =>: any {
-    setSearchQuery ("");
-    setSelectedProductTypes ([]);
-    setSelectedLocations ([]);
-    setSelectedAvailability ([]);
-    setSelectedRating (null);
-  }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return {
+  }  return {
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -327,10 +274,9 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     filter_options;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -347,15 +293,17 @@ function useMarketplaceSearch() {
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
       default: break
     }
-<<<<<<< HEAD
 
   },
   
+<<<<<<< HEAD
 
 =======
   },
@@ -366,6 +314,8 @@ function useMarketplaceSearch() {
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -373,6 +323,7 @@ function useMarketplaceSearch() {
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -395,6 +346,8 @@ function useMarketplaceSearch() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   
   return {
@@ -412,17 +365,23 @@ function useMarketplaceSearch() {
     filterOptions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
+<<<<<<< HEAD
 }
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useMemo } from "react",;
+=======
+}import { useState, useMemo } from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
@@ -528,11 +487,14 @@ export function useMarketplaceSearch() {;
   }
 }
 ;
-<<<<<<< HEAD
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -16,7 +19,6 @@ const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   ];
-
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
@@ -165,22 +167,23 @@ const Navigation = () => {
         </AnimatePresence>
       </div>
     </nav>
-  );
+  )
 };
 
+<<<<<<< HEAD
 export default Navigation;
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useState } from "react";
+=======
+export default Navigation;import React, { useState } from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
-
-
-
 
   Menu
   X
@@ -308,22 +311,22 @@ export default function Navigation() {;
                         {services && services.map((service, index) => {;
                           const IconComponent = service && service.icon;
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items - center space - x-8">;
+            <div className="hidden lg:flex items-center space-x-8">;
               <Link;
                 href="/";
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                className="text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
               >;
                 Home;
               </Link>;
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button;
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                  className="flex items - center text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
                   onMouseEnter={() => setIsServicesOpen (true)}
                   onMouseLeave={() => setIsServicesOpen (false)}
                 >;
                   Services;
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />;
+                  <ChevronDown className="w - 4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isServicesOpen && (
@@ -331,11 +334,11 @@ export default function Navigation() {;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
-                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
+                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray-200 py-4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
                     >;
-                      <div className="grid grid - cols - 2 gap - 4 px - 6">;
+                      <div className="grid grid - cols - 2 gap-4 px-6">;
                         {services.map ((service, index) => {
                           const IconComponent = service.icon;
                           return (
@@ -365,27 +368,27 @@ export default function Navigation() {;
                         {solutions && solutions.map((solution, index) => {;
                           const IconComponent = solution && solution.icon;
                               href={service.href}
-                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
+                              className="p - 3 rounded - lg hover:bg - blue-50 transition-colors group";
                             >;
-                              <div className="flex items - center mb - 2">;
-                                <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />;
-                                <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
+                              <div className="flex items-center mb-2">;
+                                <IconComponent className="w - 5 h - 5 text - blue-600 mr-2" />;
+                                <div className="font - medium text - gray - 900 group - hover:text-blue-600">;
                                   {service.name}
                                 </div>;
                               </div>;
-                              <div className="text - sm text - gray - 500">;
+                              <div className="text - sm text-gray-500">;
                                 {service.description}
                               </div>;
                             </Link>);
                         })}
                       </div>;
-                      <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
+                      <div className="border - t border - gray - 200 mt - 4 pt-4 px-6">;
                         <Link;
                           href="/services";
-                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
+                          className="flex items - center text - blue - 600 hover:text - blue-700 font-medium";
                         >;
                           View All Services;
-                          <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                          <ArrowRight className="w - 4 h-4 ml-2" />;
                         </Link>;
                       </div>;
                     </motion.div>)}
@@ -394,12 +397,12 @@ export default function Navigation() {;
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button;
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                  className="flex items - center text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
                   onMouseEnter={() => setIsSolutionsOpen (true)}
                   onMouseLeave={() => setIsSolutionsOpen (false)}
                 >;
                   Solutions;
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />;
+                  <ChevronDown className="w - 4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isSolutionsOpen && (
@@ -407,11 +410,11 @@ export default function Navigation() {;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
-                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
+                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray-200 py-4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
                     >;
-                      <div className="grid grid - cols - 2 gap - 4 px - 6">;
+                      <div className="grid grid - cols - 2 gap-4 px-6">;
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
                           return (
@@ -491,7 +494,6 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
-
 
                 </AnimatePresence>;
               </div>;
@@ -634,27 +636,27 @@ export default function Navigation() {;
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
                               href={solution.href}
-                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
+                              className="p - 3 rounded - lg hover:bg - blue-50 transition-colors group";
                             >;
-                              <div className="flex items - center mb - 2">;
-                                <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />;
-                                <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
+                              <div className="flex items-center mb-2">;
+                                <IconComponent className="w - 5 h - 5 text - blue-600 mr-2" />;
+                                <div className="font - medium text - gray - 900 group - hover:text-blue-600">;
                                   {solution.name}
                                 </div>;
                               </div>;
-                              <div className="text - sm text - gray - 500">;
+                              <div className="text - sm text-gray-500">;
                                 {solution.description}
                               </div>;
                             </Link>);
                         })}
                       </div>;
-                      <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
+                      <div className="border - t border - gray - 200 mt - 4 pt-4 px-6">;
                         <Link;
                           href="/solutions";
-                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
+                          className="flex items - center text - blue - 600 hover:text - blue-700 font-medium";
                         >;
                           View All Solutions;
-                          <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                          <ArrowRight className="w - 4 h-4 ml-2" />;
                         </Link>;
                       </div>;
                     </motion.div>)}
@@ -663,12 +665,12 @@ export default function Navigation() {;
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button;
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                  className="flex items - center text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
                   onMouseEnter={() => setIsIndustriesOpen (true)}
                   onMouseLeave={() => setIsIndustriesOpen (false)}
                 >;
                   Industries;
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />;
+                  <ChevronDown className="w - 4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isIndustriesOpen && (
@@ -676,21 +678,21 @@ export default function Navigation() {;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
-                      className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
+                      className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray-200 py-4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
                     >;
-                      <div className="px - 6">;
+                      <div className="px-6">;
                         {industries.map ((industry, index) => (
                           <Link;
                             key={index}
                             href={industry.href}
-                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
+                            className="block p - 3 rounded - lg hover:bg - blue-50 transition-colors group";
                           >;
-                            <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
+                            <div className="font - medium text - gray - 900 group - hover:text-blue-600">;
                               {industry.name}
                             </div>;
-                            <div className="text - sm text - gray - 500">;
+                            <div className="text - sm text-gray-500">;
                               {industry.description}
                             </div>;
                           </Link>))}
@@ -701,12 +703,12 @@ export default function Navigation() {;
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button;
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                  className="flex items - center text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
                   onMouseEnter={() => setIsResourcesOpen (true)}
                   onMouseLeave={() => setIsResourcesOpen (false)}
                 >;
                   Resources;
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />;
+                  <ChevronDown className="w - 4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isResourcesOpen && (
@@ -714,21 +716,21 @@ export default function Navigation() {;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
-                      className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
+                      className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray-200 py-4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
                     >;
-                      <div className="px - 6">;
+                      <div className="px-6">;
                         {resources.map ((resource, index) => (
                           <Link;
                             key={index}
                             href={resource.href}
-                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
+                            className="block p - 3 rounded - lg hover:bg - blue-50 transition-colors group";
                           >;
-                            <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
+                            <div className="font - medium text - gray - 900 group - hover:text-blue-600">;
                               {resource.name}
                             </div>;
-                            <div className="text - sm text - gray - 500">;
+                            <div className="text - sm text-gray-500">;
                               {resource.description}
                             </div>;
                           </Link>))}
@@ -738,41 +740,41 @@ export default function Navigation() {;
               </div>;
               <Link;
                 href="/pricing";
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                className="text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
               >;
                 Pricing;
               </Link>;
             </div>;
             {/* Search and CTA Buttons */}
-            <div className="hidden lg:flex items - center space - x-4">;
+            <div className="hidden lg:flex items-center space-x-4">;
               <button;
                 on_click={() => setIsSearchOpen (true)}
-                className="p - 2 text - gray - 700 hover:text - blue - 600 transition - colors";
+                className="p - 2 text - gray - 700 hover:text - blue-600 transition-colors";
                 aria - label="Search";
               >;
-                <Search className="w - 5 h - 5" />;
+                <Search className="w-5 h-5" />;
               </button>;
               <Link;
                 href="/contact";
-                className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
+                className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font-medium transition-colors";
               >;
                 Get Started;
               </Link>;
               <a;
                 href="tel:+13024640950";
-                className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
+                className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font-medium transition-colors";
               >;
                 Call Now;
               </a>;
             </div>;
             {/* Mobile Menu Button */}
             <button;
-              className="lg:hidden p - 2";
+              className="lg:hidden p-2";
               on_click={() => setIsMenuOpen (!isMenuOpen)}
             >;
               {isMenuOpen ? (
-                <X className="w - 6 h - 6" />) : (
-                <Menu className="w - 6 h - 6" />)}
+                <X className="w-6 h-6" />) : (
+                <Menu className="w-6 h-6" />)}
             </button>;
           </div>;
           {/* Mobile Menu */}
@@ -782,27 +784,27 @@ export default function Navigation() {;
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="lg:hidden border - t border - gray - 200";
+                className="lg:hidden border - t border-gray-200";
               >;
-                <div className="py - 4 space - y-2">;
+                <div className="py-4 space-y-2">;
                   <Link;
                     href="/";
-                    className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
+                    className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue-600 rounded-lg";
                     on_click={() => setIsMenuOpen (false)}
                   >;
                     Home;
                   </Link>;
                   {/* Mobile Services */}
-                  <div className="px - 4 py - 2">;
-                    <div className="font - medium text - gray - 900 mb - 2">;
+                  <div className="px-4 py-2">;
+                    <div className="font - medium text - gray-900 mb-2">;
                       Services;
                     </div>;
-                    <div className="space - y-1 ml - 4">;
+                    <div className="space-y-1 ml-4">;
                       {services.map ((service, index) => (
                         <Link;
                           key={index}
                           href={service.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
+                          className="block py - 1 text - sm text - gray - 600 hover:text-blue-600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {service.name}
@@ -810,16 +812,16 @@ export default function Navigation() {;
                     </div>;
                   </div>;
                   {/* Mobile Solutions */}
-                  <div className="px - 4 py - 2">;
-                    <div className="font - medium text - gray - 900 mb - 2">;
+                  <div className="px-4 py-2">;
+                    <div className="font - medium text - gray-900 mb-2">;
                       Solutions;
                     </div>;
-                    <div className="space - y-1 ml - 4">;
+                    <div className="space-y-1 ml-4">;
                       {solutions.map ((solution, index) => (
                         <Link;
                           key={index}
                           href={solution.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
+                          className="block py - 1 text - sm text - gray - 600 hover:text-blue-600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {solution.name}
@@ -827,16 +829,16 @@ export default function Navigation() {;
                     </div>;
                   </div>;
                   {/* Mobile Industries */}
-                  <div className="px - 4 py - 2">;
-                    <div className="font - medium text - gray - 900 mb - 2">;
+                  <div className="px-4 py-2">;
+                    <div className="font - medium text - gray-900 mb-2">;
                       Industries;
                     </div>;
-                    <div className="space - y-1 ml - 4">;
+                    <div className="space-y-1 ml-4">;
                       {industries.map ((industry, index) => (
                         <Link;
                           key={index}
                           href={industry.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
+                          className="block py - 1 text - sm text - gray - 600 hover:text-blue-600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {industry.name}
@@ -844,16 +846,16 @@ export default function Navigation() {;
                     </div>;
                   </div>;
                   {/* Mobile Resources */}
-                  <div className="px - 4 py - 2">;
-                    <div className="font - medium text - gray - 900 mb - 2">;
+                  <div className="px-4 py-2">;
+                    <div className="font - medium text - gray-900 mb-2">;
                       Resources;
                     </div>;
-                    <div className="space - y-1 ml - 4">;
+                    <div className="space-y-1 ml-4">;
                       {resources.map ((resource, index) => (
                         <Link;
                           key={index}
                           href={resource.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
+                          className="block py - 1 text - sm text - gray - 600 hover:text-blue-600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {resource.name}
@@ -862,22 +864,22 @@ export default function Navigation() {;
                   </div>;
                   <Link;
                     href="/pricing";
-                    className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
+                    className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue-600 rounded-lg";
                     on_click={() => setIsMenuOpen (false)}
                   >;
                     Pricing;
                   </Link>;
-                  <div className="px - 4 py - 2 space - y-2">;
+                  <div className="px - 4 py-2 space-y-2">;
                     <Link;
                       href="/contact";
-                      className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font - medium text - center";
+                      className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font-medium text-center";
                       on_click={() => setIsMenuOpen (false)}
                     >;
                       Get Started;
                     </Link>;
                     <a;
                       href="tel:+13024640950";
-                      className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center";
+                      className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font-medium text-center";
                       on_click={() => setIsMenuOpen (false)}
                     >;
                       Call Now;
@@ -902,6 +904,7 @@ export default function Navigation() {;
       />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -1077,3 +1080,5 @@ export default Navigation;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

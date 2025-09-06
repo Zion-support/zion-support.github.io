@@ -23,6 +23,7 @@ export interface TalentProfile {
   summary?: string;
   location?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: string,
     description: string;
   }[];
@@ -106,10 +107,14 @@ export interface HireRequest {
     title: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     description: string;
+=======
+    title: string,    description: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }[];
 }
 export interface TalentProfileFilters {
   search?: string;
+<<<<<<< HEAD
   skills?: string[];
   availabilities?: string[];
   regions?: string[];
@@ -268,3 +273,6 @@ export interface HireRequest {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  skills?: string[];}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

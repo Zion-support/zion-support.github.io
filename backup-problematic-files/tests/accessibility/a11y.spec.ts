@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   test('contact form is accessible', async ({ page }) => {
     await page.goto('/contact');
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;);
@@ -40,5 +43,8 @@ export default function A11y.spec({ }: A11y.specProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

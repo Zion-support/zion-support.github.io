@@ -1,11 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ResearchDevelopmentService2029 {
 export interface ResearchDevelopmentService2029 {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
-  name: string;
+  name: string,
   description: string;
   category: string[];
   price: string;
@@ -306,12 +309,6 @@ export interface ResearchDevelopmentService2029 {;
 <<<<<<< HEAD
 =======
 
-
-=======
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -419,6 +416,7 @@ export interface ResearchDevelopmentService2029 {;
     price: '$6, 999 / month',    features: [;
       'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -469,6 +467,12 @@ export interface ResearchDevelopmentService2029 {;
 export interface ResearchDevelopmentService2029 {;
   id: string,;
   name: string,;
+=======
+    }
+  }
+];  id: string,;
+  name: string,,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string,;
   category: string[],;
   price: string,;
@@ -511,8 +515,8 @@ export interface ResearchDevelopmentService2029 {;
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
   {;
     id: 'advanced-research-automation',;
-    name: 'Advanced Research Automation',;
-    description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.',;
+    name: 'Advanced Research Automation',,
+  description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.',;
     category: ['ResearchAutomationAIData ScienceScientific Computing'],;
     price: '$4,999/month',;
     features: [;
@@ -558,8 +562,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   },;
   {;
     id: 'quantum-research-platform',;
-    name: 'Quantum Research Platform',;
-    description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.',;
+    name: 'Quantum Research Platform',,
+  description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.',;
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],;
     price: '$8,999/month',;
     features: [;
@@ -605,8 +609,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   },;
   {;
     id: 'ai-research-assistant',;
-    name: 'AI Research Assistant',;
-    description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',;
+    name: 'AI Research Assistant',,
+  description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',;
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],;
     price: '$2,999/month',;
     features: [;
@@ -652,8 +656,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   },;
   {;
     id: 'biotech-research-suite',;
-    name: 'Biotech Research Suite',;
-    description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.',;
+    name: 'Biotech Research Suite',,
+  description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.',;
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],;
     price: '$6,999/month',;
     features: [;
@@ -695,6 +699,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -710,10 +715,13 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 export interface ResearchDevelopmentService2029 {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -965,12 +973,17 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

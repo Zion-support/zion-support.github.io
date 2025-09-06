@@ -16,5 +16,10 @@ const path = require('path')
         return { "status": 'merged', "message"}
         return { "status"}
       return { "status"}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Bulk PR merger "failed")
+    console.error('Bulk PR merger "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

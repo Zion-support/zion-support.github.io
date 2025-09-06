@@ -62,5 +62,10 @@ const path = require("path")
       this.log("� Website analysis completed successfully")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

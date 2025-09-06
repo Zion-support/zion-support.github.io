@@ -30,16 +30,17 @@ export default function QuantumSecureCloudInfrastructure() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

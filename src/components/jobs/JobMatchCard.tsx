@@ -162,7 +162,6 @@ export function JobMatchCard({;
 =======
 }
 
-
   talentId
   name
   title
@@ -175,7 +174,6 @@ export function JobMatchCard({;
 }
 }
 
-
   talent_id,
   name,
   title,
@@ -186,4 +184,7 @@ export function JobMatchCard({;
   match_percent,
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

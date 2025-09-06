@@ -34,6 +34,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 }
@@ -46,8 +47,10 @@ export default async function handler(
 
 =======
 =======
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
-  };
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });

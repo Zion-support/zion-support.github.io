@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -41,6 +42,8 @@ interface InterviewRequestFormProps {
       const duration_minutes = parse_int (values.duration);
       await request_interview ({
 import React, { useState } from "react",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
@@ -65,10 +68,13 @@ interface InterviewRequestFormProps {
   userDetails?: UserProfile
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -115,7 +121,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const durationMinutes = parseInt(values.duration),
 =======
 
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -155,8 +160,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 
         meeting_link: values.meetingLink,
-
-
 
     } finally {
       setIsSubmitting (false);
@@ -201,8 +204,8 @@ export function InterviewRequestForm(): any ({;
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
-        title: 'Authentication required',;
-        description: 'Please log in to schedule an interview',;
+        title: 'Authentication required',,
+  description: 'Please log in to schedule an interview',;
         variant: 'destructive',;
       });
       return;
@@ -231,15 +234,15 @@ export function InterviewRequestForm(): any ({;
       });
 
       toast({;
-        title: 'Interview requested',;
-        description: `Your interview request with ${talent && talent.full_name} has been sent.`,;
+        title: 'Interview requested',,
+  description: `Your interview request with ${talent && talent.full_name} has been sent.`,;
       });
       onClose();
     } catch (error) {;
       logErrorToProduction('Failed to schedule interview:', { data: error });
       toast({;
-        title: 'Failed to schedule interview',;
-        description:;
+        title: 'Failed to schedule interview',,
+  description:;
           'An error occurred while scheduling the interview. Please try again.',;
         variant: 'destructive',;
       });
@@ -274,7 +277,6 @@ export function InterviewRequestForm(): any ({;
     '20:00',;
   ];
 
-
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-5'>;
@@ -283,7 +285,6 @@ export function InterviewRequestForm(): any ({;
             <img
 
   const time_slots = [;
-
 
     '09:00',
     '09:30',
@@ -309,7 +310,6 @@ export function InterviewRequestForm(): any ({;
     '19:30',
     '20:00',
 
-
   ]
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
@@ -317,9 +317,6 @@ export function InterviewRequestForm(): any ({;
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
-
-
-
 
   return (
     <Form {...form}>
@@ -341,6 +338,10 @@ export function InterviewRequestForm(): any ({;
               className="h-full w-full object-cover"
               loading="lazy"
             />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -369,7 +370,6 @@ export function InterviewRequestForm(): any ({;
           name="title"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
-
 
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
@@ -413,24 +413,36 @@ export function InterviewRequestForm(): any ({;
               field
             }: {
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
                         )}
                       >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {field.value ? (
                           format(field.value, "PPP")
                         ) : (
                           <span>Pick a date</span>
+<<<<<<< HEAD
                         )}
                         <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
                       </Button>;
@@ -449,6 +461,9 @@ export function InterviewRequestForm(): any ({;
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     />
                   </PopoverContent>
                 </Popover>
@@ -518,8 +533,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   async function onSubmit(values: z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
-        title: "Authentication required",;
-        description: "Please log in to schedule an interview",;
+        title: "Authentication required",,
+  description: "Please log in to schedule an interview",;
         variant: "destructive"}),;
       return;
     }
@@ -543,14 +558,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         title: values.title;
       }),;
       toast({;
-        title: "Interview requested",;
-        description: `Your interview request with ${talent.full_name} has been sent.`}),;
+        title: "Interview requested",,
+  description: `Your interview request with ${talent.full_name} has been sent.`}),;
       onClose();
     } catch (error) {;
       logErrorToProduction('Failed to schedule interview:', { data: error }),;
       toast({;
-        title: "Failed to schedule interview",;
-        description: "An error occurred while scheduling the interview. Please try again.",;
+        title: "Failed to schedule interview",,
+  description: "An error occurred while scheduling the interview. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -676,7 +691,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
 
-
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -705,7 +719,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -740,24 +753,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field,
             }: {
               field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'duration'
-              >
-            }) => (              <FormItem>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="duration"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
-              <FormItem>
-                <FormLabel>Duration</FormLabel>
-                z && z.infer<typeof formSchema>,;
-                'duration';
-              >;
-            }) => (              <FormItem>;
-                <FormLabel>Duration</FormLabel>;
-                <Select
+                <FormLabel>Duration</FormLabel>                <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
               field: ControllerRenderProps<;
@@ -786,7 +782,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
           />;
 
-
           <FormField
             control={form && form.control}
             name='platform'
@@ -794,6 +789,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
           <FormField;
             control={form.control}
+<<<<<<< HEAD
             name='platform';
             render={({
               field
@@ -930,6 +926,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
         )}
 ;
+=======
+            name='platform';;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <FormField;
           control={form.control}
           name="notes"
@@ -941,8 +940,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
 
-
-
                   {...field}
                 />;
               </FormControl>;
@@ -951,6 +948,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           )}
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -958,6 +956,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
             Cancel
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>
           <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
@@ -969,12 +969,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 <<<<<<< HEAD
 =======
 
-
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
 }";
-
 
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
@@ -1013,9 +1011,6 @@ toast ({;
 }/> </Button> </div> </form> </Form>)
 }'"}
 
-
-
-
             </FormItem>)}
         />;
         <div className='flex justify - end gap - 4 pt - 4'>;
@@ -1041,15 +1036,15 @@ toast ({
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
 "18:00", "18:30", "19:00", "19:30", "20: 00" ];";
-}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Pick a date</span>) ";
-}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus className="p - 3 pointer - events - auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4" > <FormField <FormLabel > Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Pick a date</span>) ";
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p-0" align="start" > <Calendar initial_focus className="p - 3 pointer - events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {
   field.on_change;
 }default_value= {
   field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) );
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ";
-}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {
+}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {
   field.on_change;
 }default_value= {
   field.value ";

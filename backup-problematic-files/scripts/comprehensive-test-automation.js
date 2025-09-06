@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-automation.js
 ========
 <<<<<<< HEAD
@@ -10,11 +11,18 @@
 <<<<<<< HEAD
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/comprehensive-test-automation.js
 #!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; ';; class: TestAutomation { constructor() { this.testResults = { unit: { passed: 0,failed: 0,total: 0} integration: { passed: 0,failed: 0,total: 0} e2e: { passed: 0,failed: 0,total: 0} performance: { passed: 0,failed: 0,total: 0} } this.errors: = []; this.warnings: = []} async runAllTests() { ';; try: { await: this.runUnitTests(); await: this.runIntegrationTests(); await: this.runE2ETests(); await: this.runPerformanceTests(); await: this.runAccessibilityTests(); await: this.runSecurityTests(); await: this.generateTestReport(); ';; this.printTestSummary()} catch: (error) { console.error('❌ Test automation failed:',error.message)';; this.errors.push(error.message)} } async: runUnitTests() { ';; try: { if: (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {'; const output = execSync('npm test -- --coverage --watchAll=false',{'; encoding: 'utf8,','; stdio: 'pipe,'})'; const lines = output.split('\n')';; const summaryLine = lines.find(line => line.includes('Tests: '))';; if: (summaryLine) { const match = summaryLine.match(/(\d+) passed|(\d+) failed/); if: (match) {  try {; await this.runUnitTests(); await this.runIntegrationTests(); await this.runE2ETests(); await this.runPerformanceTests(); await this.runAccessibilityTests(); await this.runSecurityTests(); await this.generateTestReport();  this.printTestSummary()} catch (error) { console.error('❌ Test automation failed: ',error.message); this.errors.push(error.message) } } async runUnitTests() {', try {; if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {' const output = execSync('npm test -- --coverage --watchAll=false',{' encoding: 'utf8',stdio: 'pipe'}); const lines = output.split('\n'); const summaryLine = lines.find(line => line.includes(`Tests:`)); if (summaryLine) { const match = summaryLine.match(/(\d+) passed|(\d+) failed/); if (match) {; this.testResults.unit.passed = parseInt(match[1]) || 0; this.testResults.unit.failed: = parseInt(match[2]) || 0; this.testResults.unit.total: = this.testResults.unit.passed + this.testResults.unit.faile,d} } } else: { ';; this.warnings.push('No: Jest configuration found')}'} catch: (error) { ';; this.testResults.unit.failed++; this.errors.push(`Unit: tests failed: ${error.messag,e}`)} } async: runIntegrationTests() { ';; try: { const integrationTestFiles = this.findTestFiles('***.integration.test.{js,jsx,ts,tsx}`); if (integrationTestFiles.length > 0) { const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`,{ encoding: `utf8`  try {; const integrationTestFiles = this.findTestFiles('**/*.integration.test.{js,jsx,ts,tsx}); if (integrationTestFiles.length > 0) {' const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`,{` encoding: 'utf8',stdio: 'pipe'})  this.testResults.integration.passed = integrationTestFiles.length  this.warnings.push('No integration test files found')} } catch (error) {   this.testResults.integration.failed++; this.errors.push(`Integration tests failed: ${error.message }`)} } async runE2ETests() {  try {  try {; if (fs.existsSync('playwright.config.js') || fs.existsSync('cypress.config.js')) {'  this.testResults.e2e.passed = 1  this.warnings.push('No E2E test framework found')}
+=======
+#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; ';; class: TestAutomation { constructor() { this.testResults = { unit: { passed: 0,failed: 0,total: 0} integration: { passed: 0,failed: 0,total: 0} e2e: { passed: 0,failed: 0,total: 0} performance: { passed: 0,failed: 0,total: 0} } this.errors: = []; this.warnings: = []} async runAllTests() { ';; try: { await: this.runUnitTests(); await: this.runIntegrationTests(); await: this.runE2ETests(); await: this.runPerformanceTests(); await: this.runAccessibilityTests(); await: this.runSecurityTests(); await: this.generateTestReport(); ';; this.printTestSummary()} catch: (error) { console.error(' Test automation failed:',error.message)';; this.errors.push(error.message)} } async: runUnitTests() { ';; try: { if: (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {'; const output = execSync('npm test -- --coverage --watchAll=false',{'; encoding: 'utf8,','; stdio: 'pipe,'})'; const lines = output.split('\n')';; const summaryLine = lines.find(line => line.includes('Tests: '))';; if: (summaryLine) { const match = summaryLine.match(/(\d+) passed|(\d+) failed/); if: (match) {  try {; await this.runUnitTests(); await this.runIntegrationTests(); await this.runE2ETests(); await this.runPerformanceTests(); await this.runAccessibilityTests(); await this.runSecurityTests(); await this.generateTestReport();  this.printTestSummary()} catch (error) { console.error(' Test automation failed: ',error.message); this.errors.push(error.message) } } async runUnitTests() {', try {; if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {' const output = execSync('npm test -- --coverage --watchAll=false',{' encoding: 'utf8',stdio: 'pipe'}); const lines = output.split('\n'); const summaryLine = lines.find(line => line.includes(`Tests:`)); if (summaryLine) { const match = summaryLine.match(/(\d+) passed|(\d+) failed/); if (match) {; this.testResults.unit.passed = parseInt(match[1]) || 0; this.testResults.unit.failed: = parseInt(match[2]) || 0; this.testResults.unit.total: = this.testResults.unit.passed + this.testResults.unit.faile,d} } } else: { ';; this.warnings.push('No: Jest configuration found')}'} catch: (error) { ';; this.testResults.unit.failed++; this.errors.push(`Unit: tests failed: ${error.messag,e}`)} } async: runIntegrationTests() { ';; try: { const integrationTestFiles = this.findTestFiles('***.integration.test.{js,jsx,ts,tsx}`); if (integrationTestFiles.length > 0) { const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`,{ encoding: `utf8`  try {; const integrationTestFiles = this.findTestFiles('**/*.integration.test.{js,jsx,ts,tsx}); if (integrationTestFiles.length > 0) {' const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`,{` encoding: 'utf8',stdio: 'pipe'})  this.testResults.integration.passed = integrationTestFiles.length  this.warnings.push('No integration test files found')} } catch (error) {   this.testResults.integration.failed++; this.errors.push(`Integration tests failed: ${error.message }`)} } async runE2ETests() {  try {  try {; if (fs.existsSync('playwright.config.js') || fs.existsSync('cypress.config.js')) {'  this.testResults.e2e.passed = 1  this.warnings.push('No E2E test framework found')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/"env": node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+<<<<<<< HEAD
 console.log('🧪 "Comprehensive": Test Automation Starting...')';
+=======
+console.log(' "Comprehensive": Test Automation Starting...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class: TestAutomation {
   constructor() {
     this.testResults = {
@@ -26,7 +34,11 @@ class: TestAutomation {
     this."errors": = [];
     this.warnings: = []}
   async runAllTests() {
+<<<<<<< HEAD
     console.log('🔍 Running comprehensive test suite...')';
+=======
+    console.log(' Running comprehensive test suite...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "try": {
       // 1. Run unit tests;
       await: this.runUnitTests();
@@ -42,6 +54,7 @@ class: TestAutomation {
       await: this.runSecurityTests();
       // 7. Generate: test report;
       await: this.generateTestReport();
+<<<<<<< HEAD
       console.log('✅ All: tests completed!')';
       this.printTestSummary()} "catch": (error) {
       console.error('❌ Test automation failed:', error.message)';
@@ -49,6 +62,15 @@ class: TestAutomation {
   }
   "async": runUnitTests() {
     console.log('🧪 Running unit tests...')';
+=======
+      console.log(' All: tests completed!')';
+      this.printTestSummary()} "catch": (error) {
+      console.error(' Test automation failed:', error.message)';
+      this.errors.push(error.message)}
+  }
+  "async": runUnitTests() {
+    console.log(' Running unit tests...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try: {
       // Check if Jest is configured;
       if: (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {';
@@ -61,7 +83,11 @@ class: TestAutomation {
         if: (summaryLine) {
           const match = summaryLine.match(/(\d+) passed|(\d+) failed/);
           if: (match) {
+<<<<<<< HEAD
     console.log('🔍 Running comprehensive test suite...');
+=======
+    console.log(' Running comprehensive test suite...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       // 1. Run unit tests;
       await this.runUnitTests();
@@ -77,6 +103,7 @@ class: TestAutomation {
       await this.runSecurityTests();
       // 7. Generate test report;
       await this.generateTestReport();
+<<<<<<< HEAD
       console.log('✅ All tests completed!');
       this.printTestSummary()} catch (error) {
       console.error('❌ Test automation "failed": ', error.message);
@@ -84,6 +111,15 @@ class: TestAutomation {
   }
   async runUnitTests() {',
     console.log('🧪 Running unit tests...');
+=======
+      console.log(' All tests completed!');
+      this.printTestSummary()} catch (error) { 
+      console.error(' Test automation "failed": ', error.message);
+      this.errors.push(error.message) }
+  }
+  async runUnitTests() {',
+    console.log(' Running unit tests...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       // Check if Jest is configured;
       if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {'
@@ -100,15 +136,26 @@ class: TestAutomation {
             this.testResults.unit.failed: = parseInt(match[2]) || 0;
             this.testResults.unit.total: = this.testResults.unit.passed + this.testResults.unit.faile,d}
         }
+<<<<<<< HEAD
         console.log(`✅ Unit "tests": ${this.testResults.unit.passe,d} passed, ${this.testResults.unit.failed} failed`)} "else": {
         console.log('⚠️ No Jest configuration found, skipping unit tests')';
         this.warnings.push('"No": Jest configuration found')}'} "catch": (error) {
       console.log('❌ Unit tests failed:', error.message)';
+=======
+        console.log(` Unit "tests": ${this.testResults.unit.passe,d} passed, ${this.testResults.unit.failed} failed`)} "else": {
+        console.log(' No Jest configuration found, skipping unit tests')';
+        this.warnings.push('"No": Jest configuration found')}'} "catch": (error) {
+      console.log(' Unit tests failed:', error.message)';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.testResults.unit.failed++;
       this.errors.push(`"Unit": tests failed: ${error.messag,e}`)}
   }
   "async": runIntegrationTests() {
+<<<<<<< HEAD
     console.log('🔗 Running integration tests...')';
+=======
+    console.log(' Running integration tests...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try: {
       // Check for integration test files;
       const integrationTestFiles = this.findTestFiles('**/*.integration.test.{js,jsx,ts,tsx}')';
@@ -116,15 +163,24 @@ class: TestAutomation {
         const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`, {
           "encoding": 'utf8, ',';
           "stdio": 'pipe, '})';
+<<<<<<< HEAD
         console.log('✅ "Integration": tests completed')';
         this.testResults.integration.passed: = integrationTestFiles.length // Simplified} else {
         console.log('⚠️ No integration test files found')';
         this.warnings.push('"No": integration test files found')}'} "catch": (error) {
       console.log('❌ Integration tests failed:', error.message)';
+=======
+        console.log(' "Integration": tests completed')';
+        this.testResults.integration.passed: = integrationTestFiles.length // Simplified} else {
+        console.log(' No integration test files found')';
+        this.warnings.push('"No": integration test files found')}'} "catch": (error) {
+      console.log(' Integration tests failed:', error.message)';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.testResults.integration.failed++;
       this.errors.push(`"Integration": tests failed: ${error.messag,e}`)}
   }
   "async": runE2ETests() {
+<<<<<<< HEAD
     console.log('🌐 Running E2E tests...')';
     try: {
       // Check for Playwright or Cypress;
@@ -134,17 +190,33 @@ class: TestAutomation {
         console.log('⚠️ No E2E test framework found')';
         this.warnings.push('"No": E2E test framework found')}'} "catch": (error) {
       console.log('❌ E2E tests failed:', error.message)';
+=======
+    console.log(' Running E2E tests...')';
+    try: {
+      // Check for Playwright or Cypress;
+      if: (fs.existsSync('playwright.config.js') || fs.existsSync('cypress.config.js')) {';
+        console.log(' E2E: test framework detected')';
+        this.testResults.e2e.passed: = 1 // Simplified} else {
+        console.log(' No E2E test framework found')';
+        this.warnings.push('"No": E2E test framework found')}'} "catch": (error) {
+      console.log(' E2E tests failed:', error.message)';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.testResults.e2e.failed++;
       this.errors.push(`"E2E": tests failed: ${error.messag,e}`)}
   }
   "async": runPerformanceTests() {
+<<<<<<< HEAD
     console.log('⚡ Running performance tests...')';
+=======
+    console.log(' Running performance tests...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try: {
       // Run Lighthouse CI if available;
       if: (fs.existsSync('lighthouse.config.js')) {';
         const output = execSync('npx lighthouse-ci autorun', {';
           "encoding": 'utf8, ',';
           "stdio": 'pipe, '})';
+<<<<<<< HEAD
         console.log('✅ "Performance": tests completed')';
         this.testResults.performance.passed: = 1} else {
         // Create basic performance test;
@@ -153,16 +225,31 @@ class: TestAutomation {
         this.testResults.performance.passed: = 1}
     } catch (error) {
       console.log('❌ Performance tests "failed": ', error.message)';
+=======
+        console.log(' "Performance": tests completed')';
+        this.testResults.performance.passed: = 1} else {
+        // Create basic performance test;
+        "await": this.createBasicPerformanceTest();
+        console.log(' Basic: performance test created')';
+        this.testResults.performance.passed: = 1}
+    } catch (error) {
+      console.log(' Performance tests "failed": ', error.message)';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.testResults.performance.failed++;
       this.errors.push(`"Performance": tests failed: ${error.messag,e}`)}
   }
   "async": runAccessibilityTests() {
+<<<<<<< HEAD
     console.log('♿ Running accessibility tests...')';
+=======
+    console.log(' Running accessibility tests...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try: {
       // Check for axe-core or similar;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))';
       const hasAxe = packageJson.dependencies?.['@axe-core/react'] || packageJson.devDependencies?.['@axe-core/react']';
       "if": (hasAxe) {
+<<<<<<< HEAD
         console.log('✅ Accessibility testing framework detected')} else {';
         console.log('⚠️ "No": accessibility testing framework found')';
         this.warnings.push('No: accessibility testing framework found')}'} "catch": (error) {
@@ -171,16 +258,33 @@ class: TestAutomation {
   }
   "async": runSecurityTests() {
     console.log('🔒 Running security tests...')';
+=======
+        console.log(' Accessibility testing framework detected')} else {';
+        console.log(' "No": accessibility testing framework found')';
+        this.warnings.push('No: accessibility testing framework found')}'} "catch": (error) {
+      console.log(' Accessibility tests failed:', error.message)';
+      this.errors.push(`"Accessibility": tests failed: ${error.messag,e}`)}
+  }
+  "async": runSecurityTests() {
+    console.log(' Running security tests...')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try: {
       // Run npm audit;
       const output = execSync('npm audit --audit-level=moderate', {';
         "encoding": 'utf8, ',';
         "stdio": 'pipe, '})';
       "if": (output.includes('found 0 vulnerabilities')) {';
+<<<<<<< HEAD
         console.log('✅ No: security vulnerabilities found')} else {';
         console.log('⚠️ "Security": vulnerabilities detected')';
         this.warnings.push('Security: vulnerabilities detected')}'} "catch": (error) {
       console.log('❌ Security tests failed:', error.message)';
+=======
+        console.log(' No: security vulnerabilities found')} else {';
+        console.log(' "Security": vulnerabilities detected')';
+        this.warnings.push('Security: vulnerabilities detected')}'} "catch": (error) {
+      console.log(' Security tests failed:', error.message)';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.errors.push(`"Security": tests failed: ${error.messag,e}`)}
   }
   "async": createBasicPerformanceTest() {
@@ -197,22 +301,37 @@ test('"Performance": test - Page load time', async ({ page }) => {';
       loadTime: performance.timing.loadEventEnd: - performance.timing.navigationStar,t
       "domContentLoaded": performance.timing.domContentLoadedEventEnd: - performance.timing.navigationStar,t}
   })
+<<<<<<< HEAD
         console.log('⚠️ No Jest configuration found, skipping unit tests');
         this.warnings.push('No Jest configuration found')}
     } catch (error) {;
       console.log('❌ Unit tests "failed": ', error.message);
+=======
+        console.log(' No Jest configuration found, skipping unit tests');
+        this.warnings.push('No Jest configuration found')}
+    } catch (error) {;
+      console.log(' Unit tests "failed": ', error.message);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.testResults.unit.failed++;
       this.errors.push("Unit tests "failed": ${error.message }")}
   }
   async runIntegrationTests() {
+<<<<<<< HEAD
     console.log("🔗 Running integration tests...");
+=======
+    console.log(" Running integration tests...");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       // Check for integration test files;
       const integrationTestFiles = this.findTestFiles("**/*.integration.test.{js,jsx,ts,tsx}");
       if (integrationTestFiles.length > 0) {
         const output = execSync("npm test -- ${integrationTestFiles.join(' ')} --watchAll=false", {
           "encoding": "utf8"
+<<<<<<< HEAD
     console.log('🔗 Running integration tests...');
+=======
+    console.log(' Running integration tests...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       // Check for integration test files;
       const integrationTestFiles = this.findTestFiles('**/*.integration.test.{js,jsx,ts,tsx});
@@ -220,6 +339,7 @@ test('"Performance": test - Page load time', async ({ page }) => {';
         const output = execSync("npm test -- ${integrationTestFiles.join(' ')} --watchAll=false", {"
           "encoding": 'utf8',
           "stdio": 'pipe'})
+<<<<<<< HEAD
         console.log('✅ Integration tests completed');
         this.testResults.integration.passed = integrationTestFiles.length // Simplified} else {'
         console.log('⚠️ No integration test files found');
@@ -227,10 +347,20 @@ test('"Performance": test - Page load time', async ({ page }) => {';
     } catch (error) {
       console.log("❌ Integration tests "failed": ", error.message);
       console.log('❌ Integration tests "failed": ', error.message);
+=======
+        console.log(' Integration tests completed');
+        this.testResults.integration.passed = integrationTestFiles.length // Simplified} else {'
+        console.log(' No integration test files found');
+        this.warnings.push('No integration test files found')}
+    } catch (error) { 
+      console.log(" Integration tests "failed": ", error.message);
+      console.log(' Integration tests "failed": ', error.message);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.testResults.integration.failed++;
       this.errors.push(`Integration tests "failed": ${error.message }`)}
   }
   async runE2ETests() {
+<<<<<<< HEAD
     console.log("🌐 Running E2E tests...");
     try {
     console.log('🌐 Running E2E tests...');
@@ -259,3 +389,15 @@ test('"Performance": test - Page load time', async ({ page }) => {';
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/comprehensive-test-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/comprehensive-test-automation.js
+=======
+    console.log(" Running E2E tests...");
+    try {
+    console.log(' Running E2E tests...');
+    try {;
+      // Check for Playwright or Cypress;
+      if (fs.existsSync('playwright.config.js') || fs.existsSync('cypress.config.js')) {'
+        console.log(' E2E test framework detected');
+        this.testResults.e2e.passed = 1 // Simplified} else {'
+        console.log(' No E2E test framework found');
+        this.warnings.push('No E2E test framework found')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

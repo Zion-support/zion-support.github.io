@@ -14,7 +14,8 @@ const completion = await client.chat.completions.create ({
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+  analysis: string
+};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -82,15 +83,16 @@ export default async function handler(
 };
 
 export type AnalyzeResponse = {;
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+  analysis: string
+};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
-  context?: Record<string, unknown>;
+  context?: Record<string, unknown>
 };
 
 export type AnalyzeResponse = {
-  analysis: string;
+  analysis: string
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

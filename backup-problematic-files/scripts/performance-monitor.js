@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
 #!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim();  const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { } else { } } try {  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' });  performanceChecks.bundleAnalysis = true} catch (error) { ')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { ,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: * 1000}ms`); if (parseFloat(responseTime) < 1) { } else { } performanceChecks.loadTime = true} else { ,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); `); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
 =======
@@ -6,13 +7,19 @@
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+#!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim();  const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { } else { } } try {  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' });  performanceChecks.bundleAnalysis = true} catch (error) { ')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { ,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: * 1000}ms`); if (parseFloat(responseTime) < 1) { } else { } performanceChecks.loadTime = true} else { ,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); `); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
+<<<<<<< HEAD
     this.metrics = {
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       bundleSize: 0,
       memoryUsage: 0,
       timestamp: new Date().toISOString()
@@ -23,6 +30,7 @@ const performanceChecks = {
   bundleAnalysis: false,
   lighthouseScore: false,
   loadTime: false,
+<<<<<<< HEAD
   memoryUsage: false;
 };
 =======
@@ -31,6 +39,10 @@ const performanceChecks = {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+  memoryUsage: false
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "bundleSize": 0,
       "memoryUsage": 0,
       "timestamp": new Date().toISOString()
@@ -45,6 +57,7 @@ try {
   // Check build size
   if (fs && fs.existsSync('.next')) {
     const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim();
+<<<<<<< HEAD
     console && console.log(`✅ Build "size": ${buildSize}`);
     // Check if build size is reasonable (less than 50MB)
     const sizeInMB = parseInt(buildSize && buildSize.split('\t')[0]);
@@ -52,26 +65,37 @@ try {
       console && console.log('✅ Build size is within acceptable limits');
     } else {
       console && console.log('⚠️  Build size is large, consider optimization');
+=======
+    // Check if build size is reasonable (less than 50MB)
+    const sizeInMB = parseInt(buildSize && buildSize.split('\t')[0]);
+    if (sizeInMB < 50) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 try {
   // Bundle analysis
+<<<<<<< HEAD
   console && console.log('📋 Analyzing bundle...');
   const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
   console.log('✅ Bundle analysis completed');
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   performanceChecks.bundleAnalysis = true;
   console && console.log('✅ Bundle analysis completed');
   performanceChecks && performanceChecks.bundleAnalysis = true;
 } catch (error) {
   console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   performanceChecks.bundleAnalysis = true} catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
   performanceChecks && performanceChecks.bundleAnalysis = true} catch (error) {
@@ -80,6 +104,7 @@ try {
   // Check if app is running and get basic metrics
   const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" "http": //localhost:3000', { "encoding": 'utf8' });
   if (isRunning === '200') {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
     console.log('✅ Application is running on localhost: 3000');,
 =======
@@ -88,6 +113,8 @@ try {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log('✅ Application is running on "localhost": 3000'),
     console && console.log('✅ Application is running on localhost: 3000');,
     console && console.log('✅ Application is running on localhost: 3000');,
@@ -98,7 +125,10 @@ try {
     const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { "encoding": 'utf8' });
     console && console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
     if (parseFloat(responseTime) < 1) {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.log('✅ Response time is good');
       console && console.log('✅ Response time is good');
     } else {
@@ -106,6 +136,7 @@ try {
     }
     performanceChecks && performanceChecks.loadTime = true;
   } else {
+<<<<<<< HEAD
     console.log('⚠️  Application not running on localhost: 3000');,
   }
 =======
@@ -114,6 +145,8 @@ try {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.log('✅ Response time is good')} else {
       console.log('⚠️  Response time could be improved')}
     performanceChecks.loadTime = true} else {
@@ -134,6 +167,7 @@ try {
       "metrics": this && this.metrics,
       "recommendations": this && this.generateRecommendations()
     }
+<<<<<<< HEAD
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
@@ -145,11 +179,16 @@ try {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log('Performance report "generated": ', reportPath)}
   generateRecommendations() {
     const recommendations = [];
     if (this.metrics.bundleSize > 1000000) {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       recommendations.push('Consider code splitting to reduce bundle size');
     const reportPath = path && path.join(process && process.cwd(), 'performance-report && report.json');
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
@@ -172,12 +211,15 @@ try {
     }
     return recommendations;
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (this.metrics.memoryUsage > 100) {
       recommendations.push('High memory usage detected, consider optimization')}
@@ -185,8 +227,11 @@ try {
     if (this && this.metrics.memoryUsage > 100) {
       recommendations && recommendations.push('High memory usage detected, consider optimization')}
     return recommendations}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Generate performance report
 const totalChecks = Object && Object.keys(performanceChecks).length;
 const passedChecks = Object && Object.values(performanceChecks).filter(Boolean).length;
@@ -194,6 +239,7 @@ const performanceScore = Math && Math.round((passedChecks / totalChecks) * 100);
 console && console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
 // Save performance report
 const report = {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor.js
   timestamp: new Date().toISOString(),
   score: performanceScore,
@@ -212,11 +258,20 @@ module.exports = PerformanceMonitor;
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+  timestamp: new Date().toISOString(),
+  score: performanceScore,
+  checks: performanceChecks,
+  recommendations: []
+};
+if (performanceScore < 80) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "timestamp": new Date().toISOString(),
   "score": performanceScore,
   "checks": performanceChecks,
   "recommendations": []};
 if (performanceScore < 80) {
+<<<<<<< HEAD
   report.recommendations.push('Consider optimizing build size');
   report.recommendations.push('Review bundle composition');
   report.recommendations.push('Implement code splitting')}
@@ -231,3 +286,5 @@ module.exports = PerformanceMonitor;
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-monitor.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

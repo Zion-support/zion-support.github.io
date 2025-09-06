@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/targeted-syntax-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -23,6 +24,11 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
       const content = fs.readFileSync(filePath, 'utf8')
@@ -30,10 +36,13 @@ console.log('===')
         if (trimmedLine.includes('function ') || trimmedLine.includes('=> {'})
         if (inFunction && braceCount === 0 && trimmedLine === '}')
           const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : ''
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           if (nextLine === '' || nextLine.startsWith('export') || nextLine.startsWith('}')
         if (line.includes('content="The page you"re looking for doesn"t exist.")
           fixedLines.push(line.replace('content="The page you"re looking for doesn"t exist."', 'content="The page you\'re looking for doesn\'t exist.')
@@ -49,6 +58,11 @@ console.log('===')
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    console.log('\n� Report saved "to")
+    console.log('\n� Report saved "to")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

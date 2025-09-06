@@ -2,9 +2,15 @@
 /**
  * Fix Team Page - Targeted fix for team.tsx;
  */
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -86,5 +92,10 @@ const fs = require('fs')
               "display"
               "border"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+              "transition"
+              "transition"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

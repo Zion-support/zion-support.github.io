@@ -228,8 +228,6 @@ if ( {) {
   },
   
 
-
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -238,11 +236,14 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
               <FormLabel>Template Name</FormLabel>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
               </FormControl>
@@ -284,10 +285,15 @@ if ( {) {
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
+<<<<<<< HEAD
                   onCheckedChange={field && field.onChange}                />;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
+=======
+                  onCheckedChange={field && field.onChange}                />
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -303,6 +309,7 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />;
         <FormField;
           control={form.control}
@@ -381,3 +388,14 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+            Cancel
+          </Button>
+          <Button type="submit" disabled={saving}>
+            {saving ? (              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Saving...
+              </>
+            ) : (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

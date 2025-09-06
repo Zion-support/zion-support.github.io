@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -38,11 +39,14 @@ const "CategoryIndexPage": NextPage = () => {;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextPage } from 'next';
 import EnhancedLayout from '../../components/EnhancedLayout';
 import Link from 'next/link';
 const "CategoryIndexPage": NextPage = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <EnhancedLayout>
       <section>
@@ -153,6 +157,9 @@ import type { NextPage } from 'next'; import EnhancedLayout from '../../componen
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextPage } from 'next';
 import EnhancedLayout from '../../components/EnhancedLayout';
 import Link from 'next/link';
@@ -160,8 +167,12 @@ const "CategoryIndexPage": NextPage = () => {;
   return (
 import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
 import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

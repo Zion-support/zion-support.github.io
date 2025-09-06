@@ -17,8 +17,11 @@ export default async function handler(
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);

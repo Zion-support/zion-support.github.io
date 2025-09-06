@@ -556,7 +556,6 @@ const quickLinks = [
     color: 'from-indigo-500 to-blue-600',
     services: [
 
-
       {
 
         name: 'Swarm Robotics Platform',
@@ -571,7 +570,6 @@ const quickLinks = [
     color: 'from-blue-500 to-cyan-600',
     services: [
 
-
       {
 
         name: 'AI IT Operations Center',
@@ -585,7 +583,6 @@ const quickLinks = [
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     services: [
-
 
       {
 
@@ -608,7 +605,6 @@ const quickLinks = [
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
@@ -765,6 +761,7 @@ export default function UltraFuturisticNavigation2033() {
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
 
+<<<<<<< HEAD
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
@@ -774,6 +771,8 @@ export default function UltraFuturisticNavigation2033() {
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {/* Services Mega Menu */}
@@ -882,10 +881,10 @@ export default function UltraFuturisticNavigation2033() {
                 <button;
                   onMouseEnter={() => setActiveCategory ('services')}
                   onMouseLeave={() => setActiveCategory (null)}
-                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
+                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg-gray-800 / 50";
                 >;
                   <span > Services</span>;
-                  <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180" />;
+                  <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group-hover:rotate-180" />;
                 </button>;
                 {/* Mega Menu */}
                 <AnimatePresence>;
@@ -931,16 +930,16 @@ export default function UltraFuturisticNavigation2033() {
                                     <p className='text - sm text - gray - 400'>;
                                       {service.description}
                                     </p>                                  </div>                    >;
-                      <div className="grid grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+                      <div className="grid grid - cols - 2 lg:grid - cols-4 gap-8">;
                         {service_categories.map ((category) => (
-                          <div key={category.title} className="space - y-4">;
-                            <div className="flex items - center space - x-3">;
+                          <div key={category.title} className="space-y-4">;
+                            <div className="flex items-center space-x-3">;
                               <div className={`w - 10 h - 10 rounded - lg bg - gradient - to - r ${category.color} flex items - center justify - center`}>;
-                                <category.icon className="w - 5 h - 5 text - white" />;
+                                <category.icon className="w - 5 h-5 text-white" />;
                               </div>;
-                              <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                              <h3 className="text - lg font-semibold text-white">{category.title}</h3>;
                             </div>;
-                            <div className="space - y-3">;
+                            <div className="space-y-3">;
                               {category.services.map ((service) => (
                                 <Link;
 
@@ -948,13 +947,19 @@ export default function UltraFuturisticNavigation2033() {
                                   href={service.href}
                                   className="block group";
                                 >;
+<<<<<<< HEAD
                                   <div className="p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200">;
                                     <div className="flex items - center justify - between mb - 2">;
                                       <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                                  <div className="p - 3 rounded - lg hover:bg - gray - 800 / 50 transition-all duration-200">;
+                                    <div className="flex items - center justify-between mb-2">;
+                                      <h4 className="font - medium text - white group - hover:text - cyan-400 transition-colors">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                                         {service.name}
                                       </h4>;
-                                      <span className="text - sm text - purple - 400 font - medium">;
+                                      <span className="text - sm text - purple-400 font-medium">;
                                         {service.price}
 <<<<<<< HEAD
 
@@ -1238,7 +1243,6 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Mobile Quick Links */}
 
-
                     ))}
 <<<<<<< HEAD
                   </div>
@@ -1249,12 +1253,15 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     ))}
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>;
@@ -1295,17 +1302,17 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                             key={service.name}
                             href={service.href}
                             on_click={close_menu}
-                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space - y-4">;
-                  <h3 className="text - lg font - semibold text - white">Services</h3>;
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space-y-4">;
+                  <h3 className="text - lg font-semibold text-white">Services</h3>;
                   {service_categories.map ((category) => (
-                    <div key={category.title} className="ml - 4 space - y-2">;
-                      <h4 className="font - medium text - purple - 300">{category.title}</h4>;
-                      <div className="ml - 4 space - y-1">;
+                    <div key={category.title} className="ml-4 space-y-2">;
+                      <h4 className="font - medium text-purple-300">{category.title}</h4>;
+                      <div className="ml-4 space-y-1">;
                         {category.services.map ((service) => (
                             key={service.name}
                             href={service.href}
                             on_click={close_menu}
-                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan-400 transition-colors";
                           >;
                             {service.name}
                           </Link>))}
@@ -1322,14 +1329,14 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                         key={link.name}
                         href={link.href}
                         on_click={close_menu}
-                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;
-                  <h3 className="text - lg font - semibold text - white">Quick Links</h3>;
-                  <div className="grid grid - cols - 2 gap - 2">;
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space-y-4">;
+                  <h3 className="text - lg font-semibold text-white">Quick Links</h3>;
+                  <div className="grid grid - cols-2 gap-2">;
                     {quick_links.map ((link) => (
                         key={link.name}
                         href={link.href}
                         on_click={close_menu}
-                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan-400 transition-colors";
                       >;
                         {link.name}
                       </Link>))}
@@ -1343,7 +1350,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                     className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;
                     href="/contact";
                     on_click={close_menu}
-                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition-all duration-200";
                   >;
                     Get Started;
                   </Link>;

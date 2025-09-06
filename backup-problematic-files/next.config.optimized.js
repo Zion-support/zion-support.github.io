@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
 <<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
 /** @type {import('next').NextConfig} */
@@ -136,11 +137,23 @@ const nextConfig = {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:next.config.optimized.js
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true
+  swcMinify: true
+  compress: true
+  poweredByHeader: false
+  eslint: { ignoreDuringBuilds: false }
+  typescript: { ignoreBuildErrors: false }
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Performance optimizations
   experimental: {
     scrollRestoration: true
     optimizeCss: true
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+<<<<<<< HEAD
   },
 <<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
   // Image optimization
@@ -190,6 +203,13 @@ const nextConfig = {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:next.config.optimized.js
+=======
+  }
+  // Image optimization
+  images: {
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Security headers
   async headers() {
     return [{
@@ -203,6 +223,7 @@ const nextConfig = {
         ]
       }
     ];
+<<<<<<< HEAD
   },
 <<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
 =======
@@ -221,6 +242,12 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
 
+=======
+  }
+  // Bundle analyzer
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const withBundleAnalyzer = require ('@next / bundle - analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -270,23 +297,33 @@ const next_config = {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       config.resolve.fallback = {
         ...config.resolve.fallback
         fs: false
         net: false
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       config && config.resolve.fallback = {
         ...config && config.resolve.fallback,
         fs: false,
         net: false,
+<<<<<<< HEAD
 
         tls: false;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     }
     return config;
   }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
 =======
@@ -377,6 +414,46 @@ module.exports = withBundleAnalyzer({
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  "enabled": process.env.ANALYZE === 'true'});
+module.exports = withBundleAnalyzer({
+  "reactStrictMode": true
+  "swcMinify": true
+  "compress": true
+  "poweredByHeader": false
+  "generateEtags": false
+  "images": {    domains: ['images.unsplash.com', 'via.placeholder.com']
+    formats: ['image/webp', 'image/avif']
+  }
+module && module.exports = nextConfig;
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  "enabled": process && process.env.ANALYZE === 'true'});
+module && module.exports = withBundleAnalyzer({
+}
+;
+module.exports = next_config;
+const withBundleAnalyzer = require ('@next / bundle - analyzer')({
+  "enabled": process.env.ANALYZE === 'true'});
+module.exports = withBundleAnalyzer ({
+  "reactStrictMode": true,
+  "swc_minify": true,
+  "compress": true,
+  "poweredByHeader": false,
+      config && config.optimization.splitChunks = {
+    optimize_css: true,
+    optimizePackageImports: ['@mui / material', '@mui / icons - material'],
+  },
+  webpack: (config, { dev, is_server }) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      config.optimization.split_chunks = {
+        chunks: 'all',
+        cache_groups: {
+          vendor: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             test: /[\\/]node_modules[\\/]/
 name: 'vendors'
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
@@ -385,6 +462,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
           }
           common: {
             name: 'common',
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
 =======
 <<<<<<< HEAD
@@ -447,14 +525,25 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:next.config.optimized.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             minChunks: 2,
+=======
+            minChunks: 2,
+name: 'vendors',
+const withBundleAnalyzer = require ('@next / bundle - analyzer')({ enabled: process.env.ANALYZE === 'true', }); module.exports = withBundleAnalyzer ({ reactStrictMode: 'true', swc_minify: 'true', compress: 'true', poweredByHeader: 'false', generate_etags: 'false', images: { domains: ['images.unsplash.com', 'via.placeholder.com'], formats: ['image / webp', 'image / avif'], }, experimental: { optimize_css: true, optimizePackageImports: ['@mui / material', '@mui / icons - material'], }, webpack: (config, { dev, is_server }) => { if ( { config.optimization.split_chunks = { chunks: 'all', cache_groups: { vendor: { test: /[\\/]node_modules[\\/]/, name: 'vendors', chunks: 'all', }, common: { name: 'common', min_chunks: '2', chunks: 'all', enforce: 'true', }, }, }} return config}, })) {
+  $2
+}
+            min_chunks: 2,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             chunks: 'all',
             enforce: true,
           },
@@ -462,6 +551,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }}
     return config},
 });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -592,3 +682,22 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:next.config.optimized.js
+=======
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+            "minChunks": 2,
+            "chunks": 'all',
+            "enforce": true}}}}
+    return config}});
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},})
+};
+    }
+    return config;
+  },
+});
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

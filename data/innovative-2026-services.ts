@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   customers: number;
@@ -401,6 +402,8 @@ export const innovative2026Services: Innovative2026Service[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -440,7 +443,6 @@ export const innovative2026Services: Innovative2026Service[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovative2026Services: Innovative2026Service[] = [
@@ -477,6 +479,7 @@ export const innovative2026Services: Innovative2026Service[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
     reviews: 234
 =======
       website: 'https://ziontechgroup.com';
@@ -1283,3 +1286,7 @@ export const innovative2026Services: Innovative2026Service[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    reviews: 234;  }
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

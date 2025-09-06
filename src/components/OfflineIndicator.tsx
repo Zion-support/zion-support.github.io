@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
@@ -9,19 +10,41 @@ export const OfflineIndicator = () => {
 =======
 import { useState, useEffect } from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { WifiOff, Wifi } from 'lucide-react'
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
 
+import { Alert, AlertDescription } from '@/components/ui/alert'
+export const OfflineIndicator = () => {
+import { WifiOff, Wifi } from 'lucide-react'
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
 
+import { Alert, AlertDescription } from '@/components/ui/alert'
+export const OfflineIndicator = () => {
+  const [isOnline, setIsOnline] = useState(true),
+  const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine,
       setIsOnline(online),
+<<<<<<< HEAD
       
       if (!online) {
+=======
+            if (!online) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
@@ -34,6 +57,7 @@ export const OfflineIndicator = () => {;
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),;
   useEffect(() => {;
     const updateOnlineStatus = () => {;
+<<<<<<< HEAD
       const online = navigator.onLine,;
       setIsOnline(online),;
       if (!online) {;
@@ -69,19 +93,27 @@ export const OfflineIndicator = () => {;
 
 
 
+=======
+      const online = navigator && navigator.onLine;
+      setIsOnline(online);
+        setShowOfflineAlert(true);
+      } else if (showOfflineAlert) {;
+        // Show brief "back online" message then hide;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
-  }, [showOfflineAlert]);
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
+  }, [showOfflineAlert]),
 
-
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (!showOfflineAlert) return null,
 
+=======
+  }, [showOfflineAlert]),
+
+  if (!showOfflineAlert) return null;
+  if (!showOfflineAlert) return null,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
       <Alert variant={isOnline ? "default" : "destructive"}>
@@ -97,6 +129,7 @@ if (return null) {
             ) : (;
               'You are offline. Some features may not work.';
             )}
+<<<<<<< HEAD
           </AlertDescription>;
         </div>;
       </Alert>;
@@ -123,4 +156,18 @@ if (return null) {
     </div>);
 } }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </AlertDescription>
+        </div>
+      </Alert>
+    </div>
+
+  )
+} }
+
+        </div>;
+      </Alert>;
+    </div>;
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };

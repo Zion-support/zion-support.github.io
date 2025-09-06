@@ -19,6 +19,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const AuthRoutes = () => {
 =======
@@ -27,6 +28,9 @@ const AuthRoutes = () => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Fragment} from "react";
+=======
+const AuthRoutes = () => {import {Fragment} from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
@@ -36,8 +40,6 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -108,16 +110,9 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 const AuthRoutes = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const AuthRoutes = () => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
     <Routes>;
       {/* Auth Routes */}
       <Route path="/login" element={<Login />} />
@@ -146,6 +141,7 @@ const AuthRoutes = () => {;
         path="/service-onboarding"
         element={
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProtectedRoute>;
             <TalentOnboarding />;
@@ -170,11 +166,14 @@ const AuthRoutes = () => {;
         path="/service-onboarding" 
         element={
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
     </Routes>;
 <<<<<<< HEAD
   );
@@ -201,46 +200,17 @@ export default AuthRoutes;
     </Routes>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-};
-
-
 =======
-=======
+    </Routes>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-};
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default AuthRoutes;
-
-=======
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import Login from "@/pages / Login";
-import Signup from "@/pages / Signup";
-import ForgotPassword from "@/pages / ForgotPassword";
-import UpdatePassword from "@/pages / UpdatePassword";
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import Onboarding from "@/pages / Onboarding";
-import TalentOnboarding from "@/pages / TalentOnboarding";
-import ServiceOnboarding from "@/pages / ServiceOnboarding";
-const AuthRoutes = () =>: any {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Routes>;
       {/* Auth Routes */}
+<<<<<<< HEAD
 export default AuthRoutes;
 <<<<<<< HEAD
 ;
@@ -275,3 +245,6 @@ export default AuthRoutes;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default AuthRoutes;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

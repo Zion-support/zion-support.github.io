@@ -57,6 +57,7 @@ function RoleManagement() {
       },
     },
 
+<<<<<<< HEAD
     {
       id: 2
       name: 'Jamie Smith'
@@ -279,24 +280,44 @@ export function RoleManagement() {;
   },
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <div className="space-y-6">
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
+=======
+        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div
+              key={role}
+              className='bg-card rounded-lg p-4 border border-border'
+            >
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
+                  {role}
+                </Badge>              </div>
+              <p className='text-sm text-muted-foreground'>{description}</p>        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
@@ -304,6 +325,7 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
             </div>
           ))}
 <<<<<<< HEAD
@@ -315,6 +337,54 @@ export function RoleManagement() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className="rounded-md border">
+=======
+
+import React from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+    {
+        manageBilling: false}}],
+
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
+    // In a real app, this would make an API call to update permissions
+    toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+
+  return (
+    <div className="space-y-6">
+      <div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Table>
           <TableHeader>
             <TableRow>
@@ -406,6 +476,7 @@ export function RoleManagement() {;
                   <div className="text-sm text-muted-foreground">
 =======
 
+<<<<<<< HEAD
 
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
@@ -434,15 +505,20 @@ export function RoleManagement() {;
                     <option value="Viewer">Viewer</option>
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     aria-label="View candidates"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
@@ -553,8 +629,8 @@ export function RoleManagement() {;
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {;
     // In a real app, this would make an API call to update permissions;
     toast({;
-      title: "Permission updated",;
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+      title: "Permission updated",,
+  description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   },;
   const roleDescriptions: Record<string string> = {;
     "Admin": "Full access to all features and settings",;
@@ -588,8 +664,11 @@ export function RoleManagement() {;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can view candidate profiles and applications;
                       </TooltipContent>;
@@ -603,8 +682,11 @@ export function RoleManagement() {;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can edit candidate information and status;
                       </TooltipContent>;
@@ -618,8 +700,11 @@ export function RoleManagement() {;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can create and publish job listings;
                       </TooltipContent>;
@@ -633,8 +718,11 @@ export function RoleManagement() {;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can add, edit, and remove team members;
                       </TooltipContent>;
@@ -648,8 +736,11 @@ export function RoleManagement() {;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can view and manage billing information;
                       </TooltipContent>;
@@ -682,6 +773,7 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
+<<<<<<< HEAD
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewCandidates", checked);
@@ -713,32 +805,54 @@ export function RoleManagement() {;
                     }                  />;
                 </TableCell>;
                 <TableCell className='text-center'>;
+=======
+
+                    checked={member.permissions.viewCandidates}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(
+                        member.id
+                        'viewCandidates'
+                        checked
+                      )
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
+                  <Switch
+                    aria-label='Edit candidates'
+                    checked={member.permissions.editCandidates}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(
+                        member.id
+                        'editCandidates'
+                        checked
+                      )
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Switch
                     aria-label='Create jobs'
-                    checked={member && member.permissions.createJobs}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange(member && member.id, 'createJobs', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text-center'>;
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'createJobs', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
                   <Switch
                     aria-label='Manage team'
-                    checked={member && member.permissions.manageTeam}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange(member && member.id, 'manageTeam', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text-center'>;
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'manageTeam', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
                   <Switch
-                    aria-label='View billing'
-
-                    checked={member.permissions.viewBilling}
-
-      </div>;
+                    aria-label='View billing'      </div>;
     </div>;
-  );
+  )
 };
 
+<<<<<<< HEAD
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -825,3 +939,6 @@ export function RoleManagement() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+=======
+                    checked={member.permissions.viewBilling}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

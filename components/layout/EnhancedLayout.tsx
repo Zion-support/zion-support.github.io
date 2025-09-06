@@ -38,7 +38,8 @@ export type EnhancedLayoutProps = {
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
     const lng = i18n.resolvedLanguage |i18n.language;
-  children: React.ReactNode;};
+  children: React.ReactNode
+};
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 export type EnhancedLayoutProps = {
@@ -101,11 +102,12 @@ export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 }
-  children: React.ReactNode;};
+  children: React.ReactNode
+};
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 export type EnhancedLayoutProps = {
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
@@ -114,7 +116,6 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
   }, []);
-
 
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
@@ -127,13 +128,13 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 }
   );
 }
-    <div className="min - h-screen flex flex - col">;
+    <div className="min-h-screen flex flex-col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
       </header>;
       <main id='main' className='flex - 1 container mx - auto px - 4 py - 6'>;
         {children}
-      </main>      <main id="main" className="flex - 1 container mx - auto px - 4 py - 6">{children}</main>;
+      </main>      <main id="main" className="flex - 1 container mx - auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
@@ -143,6 +144,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   );
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type EnhancedLayoutProps = {
   children: React.ReactNode;}
@@ -154,3 +156,5 @@ export type EnhancedLayoutProps = {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

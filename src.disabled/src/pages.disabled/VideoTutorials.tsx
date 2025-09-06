@@ -14,6 +14,7 @@ const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {
       <h1>VideoTutorials</h1>
       <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD:backup-problematic-files/tests/AddToCart.test.tsx
 <<<<<<< HEAD:backup-problematic-files/tests/AddToCart.test.tsx
@@ -25,6 +26,9 @@ const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default VideoTutorials;

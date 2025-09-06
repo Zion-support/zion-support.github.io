@@ -138,7 +138,8 @@ if (return) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       }
-      requestAnimationFrame(animate);    };          const dx = particles[i].x - particles[j].x;
+      requestAnimationFrame(animate)
+};          const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
 <<<<<<< HEAD
 
@@ -511,9 +512,6 @@ if ( {) {
             delay: 4,          }}
         />;
 
-
-
-
             scale: [1, 1 && 1.3, 1],
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{
             scale: [1, 1 && 1.3, 1]
@@ -646,7 +644,6 @@ if ( {) {
         />;
       </div>;
 
-
         />
       </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -717,7 +714,7 @@ if ( {) {
         <motion && motion.div
           className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
         <motion.div;
-          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45";
+          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";
           animate={{
             rotate: [45, 405]
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
@@ -753,8 +750,11 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           transition={{
             duration: 15
             repeat: Infinity
@@ -773,6 +773,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -783,6 +784,8 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Circle */}
         <motion&& motion.div
           className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
@@ -860,16 +863,19 @@ if ( {) {
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0],        {[...Array(3)].map((_, i) => (;
           <motion&& motion.div
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               scale: [1, 1.5, 2, 2.5],
               opacity: [0.3, 0.2, 0.1, 0],        {[...Array (3)].map ((_, i) => (
           <motion.div;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             key={i}
-            className="absolute inset - 0 border border - cyan - 500 / 10 rounded - full";
+            className="absolute inset - 0 border border - cyan-500 / 10 rounded-full";
             animate={{
               scale: [1, 1 && 1.5, 2, 2 && 2.5]
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0]}}
@@ -1038,7 +1044,7 @@ if ( {) {
           className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
           animate={{
             opacity: [0.3, 0.6, 0.3],        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5";
+          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
           animate={{
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
@@ -1047,7 +1053,6 @@ if ( {) {
             ease: "easeInOut";
           }}
 };
-
 
     </div>);
 }export default UltraFuturisticBackground2043);

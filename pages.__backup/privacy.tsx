@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
 =======
 =======
@@ -16,11 +17,13 @@ import Head from; \'next/head\'; export default function PrivacyPage() { return 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 interface PrivacyProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -46,19 +49,22 @@ import React from 'react';
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from 'react';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 interface PrivacyProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Privacy({ }: PrivacyProps) {
   return (
     <div>
@@ -66,6 +72,7 @@ export default function Privacy({ }: PrivacyProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -180,3 +187,6 @@ export default function Privacy(): any ({ }: PrivacyProps) {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

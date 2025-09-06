@@ -3,9 +3,15 @@
  * Predictive Analytics Engine;
  * Advanced ML-powered prediction system for system failures and optimization;
  */
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -46,5 +52,10 @@ const { execSync } = require('child_process')
       "level"
       this.log(` ML model update "failed"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log(` Fatal "error"`)
+      this.log(` Fatal "error"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

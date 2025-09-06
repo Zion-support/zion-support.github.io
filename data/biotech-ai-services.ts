@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface BiotechAIService {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -74,22 +77,6 @@ export interface BiotechAIService {
     reviews: 60,
   },
   {
-=======
-
-
-  {
-
-=======
-    id: 'ai - genetic - engineering - suite',
-    name: 'AI Genetic Engineering Suite',
-    tagline: 'Revolutionary genetic engineering with AI precision',
-    price: '$4, 999',
-    period: '/month',
-    description:;
-      'Advanced AI - powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI gene editing algorithms',
       'Synthetic biology design',
       'CRISPR optimization',
@@ -102,6 +89,7 @@ export interface BiotechAIService {
       'API for lab integration',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔬',
 <<<<<<< HEAD
 =======
@@ -924,6 +912,9 @@ export interface BiotechAIService {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true
+=======
+    icon: '🔬',    realImplementation: true
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
     launchDate: '2024-01-15'
@@ -1196,8 +1187,6 @@ export interface BiotechAIService {;
     growthRate: '210% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-=======
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1205,12 +1194,12 @@ export interface BiotechAIService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
     launchDate: '2024-03-10'
     customers: 90
     rating: 4.9
     reviews: 45
+<<<<<<< HEAD
   }
 =======
       'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',
@@ -1222,6 +1211,9 @@ export interface BiotechAIService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+  }];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1233,6 +1225,7 @@ export interface BiotechAIService {;
     rating: 4.9
 
     reviews: 45
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1247,10 +1240,14 @@ export interface BiotechAIService {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string,;
+=======
+  }
+];  id: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1292,8 +1289,8 @@ export const biotechAIServices: BiotechAIService[] = [;
     name: 'AI Drug Discovery Platform',;
     tagline: 'Accelerate drug development with AI-powered discovery',;
     price: '$3,999',;
-    period: '/month',;
-    description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.',;
+    period: '/month',,
+  description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.',;
     features: [;
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',;
       'API for research integrationMulti-omics data analysis';
@@ -1337,18 +1334,14 @@ export const biotechAIServices: BiotechAIService[] = [;
     customers: 90;
     rating: 4.9,
     reviews: 45;
-<<<<<<< HEAD
 
   }
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
+;  }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

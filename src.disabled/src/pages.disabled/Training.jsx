@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/Training.jsx
 =======
 <<<<<<< HEAD
@@ -89,3 +90,6 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export defa
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react'; import { Link } from 'react-router-dom'; export default function Training() {}; return null} }; export default Training; export { Training }; export { Training }; export { Training }; export { Training }; export { Training };=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

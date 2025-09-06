@@ -8,7 +8,11 @@ class HealthMonitor {
       { "name": 'Process Status', "command": 'ps aux | grep node' }
     ]}
   async runChecks() {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const check of this.checks) {
       try {
         const result = execSync(check.command, { "encoding": 'utf8' };);
@@ -18,5 +22,10 @@ class HealthMonitor {
     }
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+new HealthMonitor().runChecks();
+new HealthMonitor().runChecks();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

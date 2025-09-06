@@ -47,5 +47,10 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

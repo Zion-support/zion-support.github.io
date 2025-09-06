@@ -12,14 +12,6 @@ interface LazyLoadProps {
 <<<<<<< HEAD
 =======
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
@@ -36,8 +28,8 @@ import { Skeleton } from "@/components/ui/skeleton",
 =======
   className?: string;
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 export function LazyLoad(): any ({;
 
@@ -81,23 +73,13 @@ import { Skeleton } from "@/components/ui/skeleton",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LazyLoadProps {
+=======
+export function LazyLoad(): any ({;interface LazyLoadProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   height?: string | number,
   width?: string | number,
   children: ReactNode,
-  loadingComponent?: ReactNode,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  className?: string
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  className?: string
+  loadingComponent?: ReactNode,  className?: string
 }
 
 export function LazyLoad({
@@ -107,6 +89,7 @@ export function LazyLoad({
   const [isLoaded, setIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -148,6 +131,8 @@ export function LazyLoad({
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         threshold: 0.1}
     );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -176,9 +161,6 @@ export function LazyLoad({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-<<<<<<< HEAD
-
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -201,6 +183,7 @@ export function LazyLoad({;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -250,10 +233,10 @@ if ( {) {
         root_margin: "200px", // Start loading when element is within 200px of viewport;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         threshold: 0.1}
 
-<<<<<<< HEAD
-=======
           setIsVisible(true),;
           observer.disconnect(),;
         }
@@ -283,24 +266,6 @@ if ( {) {
     );
 
     );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      observer.observe (container_ref.current);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           setIsVisible(true),
           observer.disconnect()
         }
@@ -311,6 +276,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -318,11 +284,14 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -420,11 +389,17 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  }, []),;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -477,6 +452,8 @@ if ( {) {
       className={cn("transition-opacity duration-500", 
         isLoaded ? "opacity-100" : "opacity-0"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         className
       )}>;
       {isVisible ? (;
@@ -494,6 +471,7 @@ if ( {) {
 }
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -545,6 +523,11 @@ if ( {) {
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   useEffect (() => {
     // Check condition
@@ -563,7 +546,7 @@ if ( {) {
   const defaultLoadingComponent = (
     <Skeleton;
       style={{ height, width }}
-      className="rounded - md bg - zion - blue - light / 20";
+      className="rounded - md bg - zion - blue-light / 20";
     />);
 ;
   return (
@@ -581,7 +564,6 @@ if ( {) {
         loading_component || defaultLoadingComponent)}
     </div>);
 }
-<<<<<<< HEAD
 }, [isVisible]);
 const defaultLoadingComponent = (<Skeleton />);
 return (<div) 
@@ -593,7 +575,11 @@ return (<div)
 }</>) : (loadingComponent || defaultLoadingComponent) 
 }</div>) 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

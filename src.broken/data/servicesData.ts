@@ -2,43 +2,43 @@ import { ServiceCategory, ITService, AIService, MicroSAAS } from '@/types/servic
 export const SERVICE_CATEGORIES: ServiceCategory[] = [;
   {;
     id: 'ai-services',;
-    name: 'AI & Machine Learning',;
-    description: 'Cutting-edge artificial intelligence solutions for business automation and insights',;
+    name: 'AI & Machine Learning',,
+  description: 'Cutting-edge artificial intelligence solutions for business automation and insights',;
     icon: '',;
     color: 'bg-gradient-to-r from-purple-500 to-pink-500';
   },;
   {;
     id: 'it-services',;
-    name: 'IT Infrastructure & Support',;
-    description: 'Comprehensive IT services for modern business operations',;
+    name: 'IT Infrastructure & Support',,
+  description: 'Comprehensive IT services for modern business operations',;
     icon: '',;
     color: 'bg-gradient-to-r from-blue-500 to-cyan-500';
   },;
   {;
     id: 'micro-saas',;
-    name: 'Micro SAAS Solutions',;
-    description: 'Specialized software-as-a-service tools for specific business needs',;
+    name: 'Micro SAAS Solutions',,
+  description: 'Specialized software-as-a-service tools for specific business needs',;
     icon: '',;
     color: 'bg-gradient-to-r from-green-500 to-emerald-500';
   },;
   {;
     id: 'cybersecurity',;
-    name: 'Cybersecurity & Compliance',;
-    description: 'Advanced security solutions to protect your digital assets',;
+    name: 'Cybersecurity & Compliance',,
+  description: 'Advanced security solutions to protect your digital assets',;
     icon: '',;
     color: 'bg-gradient-to-r from-red-500 to-orange-500';
   },;
   {;
     id: 'data-analytics',;
-    name: 'Data Analytics & BI',;
-    description: 'Transform data into actionable business intelligence',;
+    name: 'Data Analytics & BI',,
+  description: 'Transform data into actionable business intelligence',;
     icon: '',;
     color: 'bg-gradient-to-r from-indigo-500 to-purple-500';
   },;
   {;
     id: 'cloud-solutions',;
-    name: 'Cloud & DevOps',;
-    description: 'Scalable cloud infrastructure and development operations',;
+    name: 'Cloud & DevOps',,
+  description: 'Scalable cloud infrastructure and development operations',;
     icon: '',;
     color: 'bg-gradient-to-r from-sky-500 to-blue-500';
   }
@@ -46,8 +46,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [;
 export const AI_SERVICES: AIService[] = [;
   {;
     id: 'ai-customer-service',;
-    title: 'AI Customer Service Automation',;
-    description: 'Intelligent chatbot system with natural language processing for 24/7 customer support',;
+    title: 'AI Customer Service Automation',,
+  description: 'Intelligent chatbot system with natural language processing for 24/7 customer support',;
     category: 'AI & Machine Learning',;
     provider: {;
       id: 'zion-ai',;
@@ -107,8 +107,8 @@ export const AI_SERVICES: AIService[] = [;
   },;
   {;
     id: 'ai-content-generation',;
-    title: 'AI Content Generation Suite',;
-    description: 'Advanced AI-powered content creation for blogs, marketing materials, and social media',;
+    title: 'AI Content Generation Suite',,
+  description: 'Advanced AI-powered content creation for blogs, marketing materials, and social media',;
     category: 'AI & Machine Learning',;
     provider: {;
       id: 'zion-content',;
@@ -168,8 +168,8 @@ export const AI_SERVICES: AIService[] = [;
   },;
   {;
     id: 'ai-data-analytics',;
-    title: 'AI-Powered Business Intelligence',;
-    description: 'Intelligent data analysis and predictive insights for data-driven decision making',;
+    title: 'AI-Powered Business Intelligence',,
+  description: 'Intelligent data analysis and predictive insights for data-driven decision making',;
     category: 'AI & Machine Learning',;
     provider: {;
       id: 'zion-analytics',;
@@ -231,8 +231,8 @@ export const AI_SERVICES: AIService[] = [;
 export const IT_SERVICES: ITService[] = [;
   {;
     id: 'onsite-it-support',;
-    title: 'Onsite IT Support & Infrastructure',;
-    description: 'Comprehensive onsite IT services including network setup, hardware maintenance, and technical support',;
+    title: 'Onsite IT Support & Infrastructure',,
+  description: 'Comprehensive onsite IT services including network setup, hardware maintenance, and technical support',;
     category: 'IT Infrastructure & Support',;
     provider: {;
       id: 'zion-it',;
@@ -291,8 +291,8 @@ export const IT_SERVICES: ITService[] = [;
   },;
   {;
     id: 'cloud-migration',;
-    title: 'Cloud Migration & Optimization',;
-    description: 'Seamless migration to cloud platforms with optimization for performance and cost efficiency',;
+    title: 'Cloud Migration & Optimization',,
+  description: 'Seamless migration to cloud platforms with optimization for performance and cost efficiency',;
     category: 'IT Infrastructure & Support',;
     provider: {;
       id: 'zion-cloud',;
@@ -353,8 +353,8 @@ export const IT_SERVICES: ITService[] = [;
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   {;
     id: 'project-management-saas',;
-    title: 'Smart Project Management Platform',;
-    description: 'Intelligent project management with AI-powered task automation, team collaboration, and progress tracking',;
+    title: 'Smart Project Management Platform',,
+  description: 'Intelligent project management with AI-powered task automation, team collaboration, and progress tracking',;
     category: 'Micro SAAS Solutions',;
     provider: {;
       id: 'zion-projects',;
@@ -414,8 +414,8 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   },;
   {;
     id: 'crm-saas',;
-    title: 'AI-Powered CRM System',;
-    description: 'Intelligent customer relationship management with AI-driven insights, automation, and predictive analytics',;
+    title: 'AI-Powered CRM System',,
+  description: 'Intelligent customer relationship management with AI-driven insights, automation, and predictive analytics',;
     category: 'Micro SAAS Solutions',;
     provider: {;
       id: 'zion-crm',;
@@ -475,8 +475,8 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   },;
   {;
     id: 'hr-management-saas',;
-    title: 'HR Management & Talent Platform',;
-    description: 'Comprehensive HR solution with AI-powered recruitment, employee management, and performance analytics',;
+    title: 'HR Management & Talent Platform',,
+  description: 'Comprehensive HR solution with AI-powered recruitment, employee management, and performance analytics',;
     category: 'Micro SAAS Solutions',;
     provider: {;
       id: 'zion-hr',;
@@ -538,8 +538,8 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
 export const CYBERSECURITY_SERVICES: ITService[] = [;
   {;
     id: 'security-audit',;
-    title: 'Comprehensive Security Audit & Penetration Testing',;
-    description: 'In-depth security assessment including vulnerability scanning, penetration testing, and compliance verification',;
+    title: 'Comprehensive Security Audit & Penetration Testing',,
+  description: 'In-depth security assessment including vulnerability scanning, penetration testing, and compliance verification',;
     category: 'Cybersecurity & Compliance',;
     provider: {;
       id: 'zion-security',;
@@ -600,8 +600,8 @@ export const CYBERSECURITY_SERVICES: ITService[] = [;
 export const DATA_ANALYTICS_SERVICES: AIService[] = [;
   {;
     id: 'business-intelligence',;
-    title: 'Advanced Business Intelligence Platform',;
-    description: 'Comprehensive BI solution with real-time dashboards, predictive analytics, and automated reporting',;
+    title: 'Advanced Business Intelligence Platform',,
+  description: 'Comprehensive BI solution with real-time dashboards, predictive analytics, and automated reporting',;
     category: 'Data Analytics & BI',;
     provider: {;
       id: 'zion-bi',;
@@ -663,8 +663,8 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [;
 export const CLOUD_SOLUTIONS: ITService[] = [;
   {;
     id: 'devops-automation',;
-    title: 'DevOps Automation & CI/CD Pipeline',;
-    description: 'Complete DevOps solution with automated deployment, monitoring, and infrastructure management',;
+    title: 'DevOps Automation & CI/CD Pipeline',,
+  description: 'Complete DevOps solution with automated deployment, monitoring, and infrastructure management',;
     category: 'Cloud & DevOps',;
     provider: {;
       id: 'zion-devops',;

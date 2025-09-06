@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -53,27 +53,24 @@ import { CreateNotificationParams, CreateNotificationResult } from './types',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   userId;
   title;
   message;
   type;
 
-<<<<<<< HEAD
-  relatedId = null;
-  sendEmail = false;
-  actionUrl = null;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
   userId,
   title,
   message,
@@ -81,6 +78,7 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -94,6 +92,9 @@ export async function createNotification({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -102,19 +103,21 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
-<<<<<<< HEAD
     const { data, error } = await supabase.rpc('create_notification', {
       _user_id: userId;
       _title: title;
@@ -123,8 +126,11 @@ export async function createNotification({
       _related_id: relatedId
     });
     if (error) throw error;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       _user_id: userId,
       _title: title,
       _message: message,
@@ -134,6 +140,7 @@ export async function createNotification({
     
     if (error) throw error,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -152,6 +159,8 @@ export async function createNotification({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
@@ -183,8 +192,8 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -306,3 +315,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        body: { user_id: userId, notification_id: notificationId }
+      })
+    }
+    return { success: true, notificationId: data }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

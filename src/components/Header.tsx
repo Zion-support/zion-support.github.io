@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Header() {
@@ -61,11 +62,43 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-600">
             Zion Tech Group
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
+<<<<<<< HEAD
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div
@@ -111,6 +144,15 @@ const Header: React.FC = () => {
                   </AnimatePresence>
                 )}
               </div>
+=======
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                {item.name}
+              </Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ))}
           </nav>
 =======
@@ -118,6 +160,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 
+<<<<<<< HEAD
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -197,12 +240,23 @@ const Header = () => {
             className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+=======
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-gray-300 hover:text-white"
+            onClick={toggleMenu}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </button>
         </div>
 
         {/* Mobile Navigation */}
 <<<<<<< HEAD
         {isMenuOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="md:hidden py-4 border-t border-gray-700">
@@ -286,6 +340,21 @@ const Header = () => {
               </div>
             </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+          <div className="md:hidden py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-300 hover:text-white transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         )}
 =======
@@ -708,6 +777,7 @@ export default Header;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Header;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
@@ -728,3 +798,6 @@ export default Header;
 =======
 export default Header;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+export default Header;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

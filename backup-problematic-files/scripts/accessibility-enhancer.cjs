@@ -65,5 +65,10 @@ const path = require("path")
       this.log(" Accessibility styles created successfully")
       this.log(` Failed to create accessibility "styles"`)
     this.log("♿ Starting accessibility enhancement...")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
+    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

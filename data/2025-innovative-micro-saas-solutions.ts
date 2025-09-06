@@ -4,10 +4,8 @@ export const innovativeMicroSaasSolutions2025 = [
 
   {
 
-
     pricing: {
       starter: {
-<<<<<<< HEAD
         price: 49
         period: 'month'
         features: [
@@ -17,19 +15,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'Standard reports'
         ]
       }
-=======
-
-=======
-        price: 49,
-        period: 'month',
-        features: [;
-          'Up to 1, 000 feedback items / month',
-          'Basic sentiment analysis',
-          'Email support',
-          'Standard reports',
-        ],
-      },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       professional: {
         price: 149
         period: 'month'
@@ -61,6 +46,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Advanced reporting and analytics',
     ],
     pricing: {
+<<<<<<< HEAD
       starter: {
 <<<<<<< HEAD
 =======
@@ -638,10 +624,14 @@ export const innovativeMicroSaasSolutions2025 = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
+=======
+      starter: {    ];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
@@ -649,7 +639,10 @@ export const innovativeMicroSaasSolutions2025 = [
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
 <<<<<<< HEAD
 =======
@@ -657,6 +650,7 @@ export const innovativeMicroSaasSolutions2025 = [
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
@@ -898,3 +892,9 @@ export const innovativeMicroSaasSolutions2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+    ];
+    integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
+    compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

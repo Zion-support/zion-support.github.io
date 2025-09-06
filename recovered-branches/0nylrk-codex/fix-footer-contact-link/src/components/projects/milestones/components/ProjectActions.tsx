@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,12 +23,17 @@ interface ProjectActionsProps {
 =======
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   projectId: string
   isUnderDispute: boolean
@@ -35,6 +41,7 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
   isTalent: boolean
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -57,11 +64,14 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -109,10 +119,13 @@ export function ProjectActions({
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onAddMilestone
 }: ProjectActionsProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -143,16 +156,12 @@ export function ProjectActions({
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <RaiseDisputeButton
+=======
+  return (        <RaiseDisputeButton
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           projectId={projectId}
           variant="outline"
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -169,18 +178,10 @@ interface ProjectActionsProps {;
 export function ProjectActions({;
   projectId,;
   isUnderDispute,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function ProjectActions(): any ({;
-  projectId;
-  isUnderDispute;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   disputeId;
   isTalent;
   onAddMilestone;
+<<<<<<< HEAD
 }: ProjectActionsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,6 +280,15 @@ export function ProjectActions({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Button} from '@/components / ui / button';
+=======
+}: ProjectActionsProps) {;        <RaiseDisputeButton
+          projectId={projectId}
+          variant="outline"        />;
+
+    </div>
+  )
+}import {Button} from '@/components / ui / button';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
 import {RaiseDisputeButton} from '@/components / disputes / RaiseDisputeButton';
@@ -294,11 +304,11 @@ export /**
  */
 function ProjectActions() {
   return (
-    <div className="flex gap - 2">;
+    <div className="flex gap-2">;
       {isUnderDispute && dispute_id ? (
         <Button variant="outline" as_child>;
           <Link to={`/dashboard / disputes/${dispute_id}`}>;
-            <ShieldAlert className="h - 4 w - 4 mr - 2" />;
+            <ShieldAlert className="h - 4 w - 4 mr-2" />;
             View Active Dispute;
           </Link>;
         </Button>) : (
@@ -310,10 +320,10 @@ function ProjectActions() {
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
-<<<<<<< HEAD
         </Button>)}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </div>;
@@ -349,3 +359,5 @@ onAddMilestone
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

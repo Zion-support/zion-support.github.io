@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import FeatureCard from './components/FeatureCard',
 export default function HomePage() {
   const features = [
@@ -121,6 +122,8 @@ export default function HomePage() {
       title: &quot;AI-Powered Intelligence&quot;
       description: &quot;ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.&quot;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [
         &quot;Job & Talent Marketplace&quot;
         &quot;Token System + Rewards&quot;
@@ -129,10 +132,16 @@ export default function HomePage() {
       ]
       gradient: &quot;bg-gradient-to-r from-green-600 to-emerald-600&quot;
     }
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       title: &quot;Enterprise Infrastructure&quot;
       description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
+=======
+    {
+      title: &quot;Enterprise Infrastructure&quot,
+  description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [
         &quot;Regional Dashboards&quot;
         &quot;Partner API Access&quot;
@@ -142,8 +151,13 @@ export default function HomePage() {
       gradient: &quot;bg-gradient-to-r from-orange-600 to-red-600&quot;
     }
     {
+<<<<<<< HEAD
       title: &quot;Education & Growth&quot;
       description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
+=======
+      title: &quot;Education & Growth&quot,
+  description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [
         &quot;Zion Academy&quot;
         &quot;Incubator + Grants&quot;
@@ -215,6 +229,7 @@ export default function HomePage() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       icon: &quot;🚀&quot;,
@@ -244,6 +259,8 @@ export default function HomePage() {
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [
         "ZionGPT Core Integration",
         "Resume Builder + Proposal AI", 
@@ -311,6 +328,7 @@ export default function HomePage() {
         "Blog + Roadmap Setup"
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
@@ -329,6 +347,16 @@ export default function HomePage() {
       {/* Hero Section */}
 
 
+=======
+    }
+  ],
+  return (    }
+  ],
+  return (
+    <div className=&quot;min - h-screen & quot;>;
+      {/* Hero Section */}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="hero-gradient absolute inset-0 -z-10"></div>
@@ -337,13 +365,17 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Launch Sovereign</span>
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -368,6 +400,13 @@ export default function HomePage() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -375,6 +414,7 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">
 <<<<<<< HEAD
 =======
@@ -511,6 +551,9 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </Link>
+=======
+              <a href="/multiverse/launch" className="btn-primary hover-lift">              </Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </Link>
@@ -518,13 +561,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Everything You Need to Build the Future
+<<<<<<< HEAD
             </h2>
 <<<<<<< HEAD
 =======
@@ -590,6 +637,10 @@ export default function HomePage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Ready to Build the Future?
+=======
+            </h2>            {features.map((feature, index) => (
+              <FeatureCard              Ready to Build the Future?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
@@ -606,9 +657,12 @@ export default function HomePage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
@@ -654,6 +708,7 @@ export default function HomePage() {
       </section>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -672,6 +727,8 @@ export default function HomePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Ready to Build the Future?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -688,7 +745,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -715,9 +775,13 @@ export default function HomePage() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

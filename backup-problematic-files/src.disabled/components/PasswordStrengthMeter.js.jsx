@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/PasswordStrengthMeter.js.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/PasswordStrengthMeter.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/PasswordStrengthMeter.js.jsx
@@ -21,8 +22,7 @@ import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordSt
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/PasswordStrengthMeter.jsx
 import { ; calculatePasswordStrength,getStrengthLabel } from \'@/utils/
 const { ; calculatePasswordStrength,getStrengthLabel } from "@/utils/passwordStrength";"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" 
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

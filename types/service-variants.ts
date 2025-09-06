@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:types/service-variants.ts
 =======
 <<<<<<< HEAD
@@ -245,6 +246,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = type ServiceVariant = | "default" | "holographic" | "quantum" | "cyberpunk" | "neural" | "quantum-holographic" | "quantum-advanced" | "holographic-advanced" | "neural-quantum" | "quantum-cyberpunk" | "holographic-neural" | "quantum-holographic-advanced" | "quantum-matrix" | "neural-cyberpunk" | "holographic-quantum" | "quantum-neural-advanced" | "cyberpunk-holographic" | "quantum-space" | "ai-futuristic" | "quantum-entanglement" | "holographic-matrix" | "neural-quantum-cyberpunk" | "quantum-iot" | "quantum-logistics" | "quantum-financial" | "quantum-neural" | "neural-quantum-cyberpunk" | "quantum-energy" | "quantum-futuristic" | "cloud-futuristic" | "devops-futuristic" | "security-futuristic" | "data-futuristic" | "mobility-futuristic" | "network-futuristic" | "backup-futuristic" | "itsm-futuristic" | "monitoring-futuristic" | "blockchain-futuristic" | "metaverse-futuristic" | "iot-futuristic" | "edge-futuristic" | "ar-futuristic" | "digital-twin-futuristic" | "5g-futuristic" | "biometric-futuristic" | "autonomous-futuristic" | "enterprise-futuristic" | "holographic-futuristic" | "biotech-futuristic" | "simulation-futuristic" | "micro-saas-futuristic" | "hr-futuristic" | "marketing-futuristic" | "legal-futuristic" | "customer-service-futuristic" | "project-management-futuristic" | "fintech" | "fintech-futuristic" | "defi-futuristic" | "quantum-bio-enterprise" | "quantum-materials-enterprise" | "supply-chain-futuristic" | "ai-content" | "ai-education" | "it-futuristic" | "ai-consciousness" | "healthcare-futuristic" | "cybersecurity" | "ai-revolutionary" | "quantum-revolutionary" | "ai-quantum-revolutionary" | "quantum-ai-revolutionary" | "quantum-space-revolutionary" | "quantum-iot-revolutionary" | "quantum-energy-revolutionary" | "quantum-logistics-revolutionary" | "quantum-ai-finance" | "ai-emotional" | "ai-multimodal" | "ai-autonomous" | "ai-creative" | "ai-healthcare" | "ai-prediction" | "neural-revolutionary" | "quantum-security" | "quantum-ai-interface" | "ai-autonomous-vehicles" | "space-futuristic" | "consulting-futuristic" | "api-futuristic" | "integration-futuristic" | "monitoring-futuristic" | "backup-futuristic" | "analytics-futuristic" | "emerging-tech" | "space-tech" | "autonomous-systems" | "quantum-futuristic";''"
 import React from 'react';
 interface ServicevariantsProps {
@@ -257,6 +260,7 @@ export default function Servicevariants({ }: ServicevariantsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -288,6 +292,9 @@ export type ServiceVariant =
 export type ServiceVariant = 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   | 'default'
+=======
+export type ServiceVariant =  | 'default'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
@@ -296,6 +303,9 @@ export type ServiceVariant =
   | 'quantum-advanced'
   | 'quantum-cyberpunk'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   | 'neural-quantum-cyberpunk'
   | 'quantum-energy'
   | 'quantum-futuristic'
@@ -374,6 +384,7 @@ export type ServiceVariant =
   | 'industrial-futuristic'
   | 'neural-futuristic',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/service-variants.ts
 =======
@@ -398,6 +409,9 @@ export type ServiceVariant =
 =======
   | 'quantum - hologographic';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  | 'quantum - hologographic';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   | 'quantum - advanced';
   | 'holographic - advanced';
   | 'neural - quantum';
@@ -496,6 +510,7 @@ export type ServiceVariant =
   | 'education - futuristic';
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
+<<<<<<< HEAD
   | 'neural - futuristic';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -641,3 +656,6 @@ export interface ServiceVariantConfig {
   recommended?: boolean;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  | 'neural - futuristic';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

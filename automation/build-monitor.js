@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -14,12 +15,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
+<<<<<<< HEAD
   constructor() {
 <<<<<<< HEAD
 
@@ -200,6 +204,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.isRunning = false;
+=======
+  constructor() {    this.isRunning = false;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.lastBuildTime = null;
@@ -217,6 +224,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -308,6 +316,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -327,6 +337,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -617,6 +628,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const command = process.argv[2];
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   switch (command) {
     case 'start':
       monitor.start().catch(console.error);
@@ -642,9 +656,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = BuildMonitor;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -822,3 +835,6 @@ module.exports = BuildMonitor;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

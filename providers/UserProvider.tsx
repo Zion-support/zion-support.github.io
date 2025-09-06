@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,21 +15,12 @@ export type User = {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
-import React, {;
-  createContext,;
-  useContext,;
-  useEffect,;
-  useMemo,;
-  useState,;} from 'react';} from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -63,7 +55,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
 =======
   avatar?: string;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string
 };
 
 export interface UserContextType {
@@ -213,6 +205,18 @@ export function useUser() {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
+=======
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
+export const useUser = () => {
+  const context = useContext(UserContext);
+  if (context === undefined) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+  return context
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 interface UserProviderProps {
   children: React.ReactNode;
@@ -239,7 +243,29 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   }, [user]);
 
 
+<<<<<<< HEAD
   const value = useMemo<UserContextValue>(
+=======
+  const logout = (): void => {
+    setUser(null);
+    localStorage.removeItem('user')
+};
+
+  const updateUser = async (userData: Partial<User>): Promise<void> => {
+    if (!user) return;
+    
+    const updatedUser = {
+      ...user,
+      ...userData,
+      updatedAt: new Date().toISOString(),
+    };
+    
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser))
+};
+
+  const contextValue = useMemo(
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     () => ({
       user
       setUser
@@ -263,6 +289,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     [user];
   );
 
+<<<<<<< HEAD
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -288,3 +315,9 @@ export default UserProvider;
 export default UserProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
+};
+
+export default UserProvider;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

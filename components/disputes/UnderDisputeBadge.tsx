@@ -50,10 +50,13 @@ export default function UnderDisputeBadge(): any ({;
 }: {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   projectId,
 }: {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -142,7 +145,7 @@ if (return null) {
   $2
 }
   return (
-    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
+    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

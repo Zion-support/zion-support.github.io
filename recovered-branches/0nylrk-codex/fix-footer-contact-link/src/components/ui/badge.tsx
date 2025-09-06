@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 
 import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -19,15 +19,16 @@ import { cn } from &quot;@/lib/utils&quot;
 import { badgeVariants } from &quot;@/components/ui/badge-variants&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn } from "@/lib/utils"
 
 import { badgeVariants } from "@/components/ui/badge-variants"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement> {
+<<<<<<< HEAD
 
 =======
 export interface BadgeProps
@@ -50,6 +51,8 @@ export interface BadgeProps
     | &quot;warning&quot;
     | &quot;info&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   variant?:
     | "default"
     | "secondary"
@@ -58,19 +61,16 @@ export interface BadgeProps
     | "success"
     | "warning"
     | "info"
-<<<<<<< HEAD
 
 }
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 ;
 
 ;
 
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -96,3 +96,5 @@ export { Badge, badgeVariants }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

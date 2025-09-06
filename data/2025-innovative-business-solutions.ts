@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -8,11 +9,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -38,6 +41,7 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     website: string;
@@ -78,6 +82,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -98,13 +104,13 @@ export interface InnovativeBusinessSolution {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 26
   }
@@ -207,8 +213,9 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+;
     realImplementation: true
     implementationDetails:
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
@@ -616,12 +623,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launchDate: '2025-05-01'
     customers: 38
     rating: 4.7
     reviews: 26
+<<<<<<< HEAD
   }
 =======
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
@@ -633,6 +640,9 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+  }];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -644,6 +654,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7
 
     reviews: 26
+<<<<<<< HEAD
 
   }
 ];
@@ -654,12 +665,16 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
+=======
+  }
+];import { ServiceVariant } from '../types/service-variants',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface InnovativeBusinessSolution {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -912,8 +927,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     name: 'AI Business Intelligence Suite',;
     tagline: 'Intelligent business insights and analytics',;
     price: '$3,200',;
-    period: '/month',;
-    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',;
+    period: '/month',,
+  description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',;
     features: [;
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',;
       'Advanced analytics and reportingCustom business intelligence workflows';
@@ -956,6 +971,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 26;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -972,3 +988,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }  }
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -249,5 +249,10 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,16 +6,12 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card
 import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
 import {format} from 'date - fns';
 import {Skeleton} from '@/components / ui / skeleton';
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MilestoneActivitiesProps {
   project_id: string;
 }
 interface Activity {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -36,6 +30,8 @@ interface Activity {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string
   milestone_id: string
   user_id: string
@@ -45,6 +41,7 @@ interface Activity {
   comment: string | null
   created_at: string
 
+<<<<<<< HEAD
   milestone: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,6 +126,9 @@ import { Skeleton } from '@/components/ui/skeleton',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     title: string;
   }
+=======
+  milestone: {  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   created_by_profile: {
     display_name: string,
     avatar_url: string | null;
@@ -163,33 +163,12 @@ if (throw error) {
   $2
 }
         set_activities (data || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (err) {
         console.error ('Error fetching milestone activities:', err);
       } finally {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {supabase} from '@/integrations/supabase/client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {format} from 'date-fns';
-import {Skeleton} from '@/components/ui/skeleton';
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-<<<<<<< HEAD
-
-=======
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -200,18 +179,12 @@ interface Activity {;
   comment: string | null,;
   created_at: string,;
   milestone: {;
-    title: string;
-<<<<<<< HEAD
-  };
-=======
-  },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  created_by_profile: {;
+    title: string
+};  created_by_profile: {;
     display_name: string,;
     avatar_url: string | null;
   }
 }
-<<<<<<< HEAD
 
 export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
@@ -221,17 +194,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     async function fetchActivities() {;
       try {;
         setIsLoading(true);
-
-=======
-;
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         const { data, error } = await supabase;
           .from('milestone_activities');
           .select(`;
@@ -241,7 +203,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
           `);
           .eq('project_id', projectId);
           .order('created_at', { ascending: false }),;
-<<<<<<< HEAD
 
         if (error) throw error;
 
@@ -253,29 +214,13 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 
       }
     }
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (projectId) {;
       fetchActivities();
     }
-
-
 
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
-
-<<<<<<< HEAD
-=======
-    if (projectId) {;
-      fetchActivities();
-    }
-  }, [projectId]);
-  function getActivityDescription(): any (activity: Activity): string {;
-    switch (activity && activity.action) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       case 'created':;
         return 'created a new milestone',;
       case 'status_changed':;
@@ -285,6 +230,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       } catch (err) {;
         console.error('Error fetching milestone activities:', err);
       } finally {;
+<<<<<<< HEAD
         setIsLoading(false);
 =======
       } catch (err) {
@@ -293,6 +239,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
+=======
+        setIsLoading(false);      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     if (projectId) {
       fetchActivities()
@@ -320,9 +269,12 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       fetchActivities();
     }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -340,20 +292,15 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return 'added a deliverable';
       default:;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return activity.action.replace(/_/g, ' ');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-  if (isLoading) {;
-
 =======
-        return activity.action.replace(/_/g, ' ');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (isLoading) {;
     }
   }
 
@@ -371,6 +318,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
                 </div>
               </div>
             </CardContent>
+<<<<<<< HEAD
           </Card>
 =======
   if (isLoading) {;
@@ -386,6 +334,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+          </Card>    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
   if (isLoading) {
@@ -414,7 +365,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return activity && activity.action.replace(/_/g, ' ');
     }
   }
-<<<<<<< HEAD
   if (isLoading) {;
     return (
 
@@ -511,18 +461,15 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
               </div>;
             </CardContent>;
           </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ))}
       </div>;
   if (activities && activities.length === 0) {;
     return (
     ),;
   }
-<<<<<<< HEAD
-
-
 
   if (activities.length === 0) {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -558,10 +505,13 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
+<<<<<<< HEAD
       </Card>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -701,15 +651,13 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </CardContent>;
+=======
+      </Card>;        </CardContent>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </Card>;
     </div>;
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
@@ -717,6 +665,7 @@ if ( {) {
       fetch_activities ();
     }
   }, [project_id]);
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -839,3 +788,6 @@ default: return activity.action.replace (/ /g, ' ')
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

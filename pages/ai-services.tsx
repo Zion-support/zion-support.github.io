@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default function AIServices() {
@@ -1959,19 +1960,43 @@ import React from 'react';
 import Head from 'next/head';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
 import { 
   Brain, 
-  Bot, 
-  Eye, 
-  MessageSquare, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  Smartphone, 
+  Globe, 
+  Database, 
+  Lock, 
   CheckCircle, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  DollarSign, 
+  Clock, 
+  Award,
+  TrendingUp,
+  Target,
+  Star,
+  Rocket,
+  Cpu,
+  Cloud,
+  FileText,
+  Settings,
+  Monitor,
+  Eye,
+  MessageSquare,
+  Image,
+  Video,
+  Mic
 } from 'lucide-react';
 
 const contactInfo = {
@@ -1982,41 +2007,68 @@ const contactInfo = {
 
 const aiServices = [
   {
-    title: 'Natural Language Processing',
-    description: 'Advanced text analysis and language understanding for your business.',
+    id: 1,
+    title: 'AI-Powered Business Intelligence',
+    description: 'Advanced analytics platform with machine learning algorithms for predictive insights, automated reporting, and intelligent decision support.',
+    icon: BarChart3,
+    category: 'Analytics & BI',
+    price: 'Starting at $3,500/month',
+    marketPrice: '$7,000-14,000/month',
+    setupTime: '4-8 weeks',
+    features: [
+      'Predictive analytics & forecasting',
+      'Natural language query interface',
+      'Automated report generation',
+      'Real-time data visualization',
+      'Anomaly detection & alerts',
+      'Custom ML model development',
+      'Integration with 100+ data sources',
+      'White-label dashboard solutions'
+    ],
+    benefits: [
+      'Increase decision accuracy by 75%',
+      'Reduce analysis time by 90%',
+      'Identify opportunities 3x faster',
+      'Enable data-driven growth strategies'
+    ],
+    targetUsers: 'Enterprises, Data Teams, C-Level Executives, Analysts',
+    roi: '400-800%',
+    popular: true
+  },
+  {
+    id: 2,
+    title: 'Conversational AI & Chatbots',
+    description: 'Intelligent conversational AI solutions with natural language processing, multi-language support, and seamless human handoff capabilities.',
     icon: MessageSquare,
-    features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
-    price: '$1,500/month',
-    benefits: ['Better customer insights', 'Automated content', 'Multilingual support', 'Cost efficiency']
-  },
-  {
-    title: 'Computer Vision Solutions',
-    description: 'Image and video analysis powered by cutting-edge AI technology.',
-    icon: Eye,
-    features: ['Object detection', 'Image classification', 'Video analysis', 'Custom models'],
-    price: '$2,000/month',
-    benefits: ['Automated visual analysis', 'Quality control', 'Security monitoring', 'Process optimization']
-  },
-  {
-    title: 'AI Chatbots & Virtual Assistants',
-    description: 'Intelligent conversational agents for customer service and support.',
-    icon: Bot,
-    features: ['24/7 availability', 'Natural conversations', 'Multi-language support', 'Integration ready'],
-    price: '$800/month',
-    benefits: ['Improved customer service', 'Reduced support costs', 'Scalable solutions', 'Better user experience']
-  },
-  {
-    title: 'Machine Learning Models',
-    description: 'Custom ML models tailored to your specific business needs.',
-    icon: Brain,
-    features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
-    price: '$3,000/month',
-    benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
+    category: 'Conversational AI',
+    price: 'Starting at $2,000/month',
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '3-6 weeks',
+    features: [
+      'Natural language understanding',
+      'Multi-channel deployment (web, mobile, voice)',
+      'Intent recognition & entity extraction',
+      'Context-aware conversations',
+      'Human handoff & escalation',
+      'Multi-language support (50+ languages)',
+      'Integration with CRM & helpdesk',
+      'Advanced analytics & insights'
+    ],
+    benefits: [
+      'Reduce support costs by 60%',
+      'Improve customer satisfaction by 40%',
+      'Handle 80% of inquiries automatically',
+      'Provide 24/7 customer support'
+    ],
+    targetUsers: 'E-commerce, SaaS, Healthcare, Financial Services',
+    roi: '300-600%',
+    popular: true
   }
 ];
 
 export default function AIServicesPage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="AI Services - Zion Tech Group"
       description="Cutting-edge AI solutions including natural language processing, computer vision, chatbots, and machine learning models."
@@ -2139,366 +2191,215 @@ export default function AIServicesPage() {
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>
       <Head>
-        <title>AI Services - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Services & Solutions - Zion Tech Group | Machine Learning, AI Development</title>
+        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, natural language processing, and AI consulting. Transform your business with cutting-edge AI technology." />
+        <meta name="keywords" content="AI services, machine learning, computer vision, NLP, AI consulting, artificial intelligence, AI development, AI solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
-      <ErrorBoundary level="page">
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
-            <p className="text-xl text-slate-300 text-center">
-              Advanced artificial intelligence solutions for your business.
-            </p>
-          </div>
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              >;
-                AI Services;
-              </h1>;
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                100+ Advanced Artificial Intelligence Solutions;
-              </p>;
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                Harness the power of artificial intelligence with our comprehensive suite of AI services.;
-                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions;
-                to transform your business operations.;
-              </p>;
-            </div>;
-          </section>;
-          {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-8 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                  <button
-                    key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category.id;
-                        ? 'bg-purple-600 text-white';
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  >;
-                    {category.name} ({category.count});
-                  </button>;
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </div>;
-          </section>;
-          {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-16 px-4" role="main">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
-                  <div 
-                    key={service.id}
-                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    {service.popular && (
-                      <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
-                        Popular
-                      </div>
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
-                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
-                      <ul className="text-slate-400 text-sm space-y-1">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
-
-                            {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </li>;
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-{feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-green-400 mb-2">Use Cases:</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {service.useCases.map((useCase, useCaseIndex) => (
-                          <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
-                            {useCase  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </span>;
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-{useCase}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
-                    </div>
-                    <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                      Learn More
-                    </button>
-                  </div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </div>;
-          </section>;
-          {/* AI Capabilities Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-16 px-4 bg-slate-900/40">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                Our AI Capabilities
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Machine Learning</h3>
-                  <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Computer Vision</h3>
-                  <p className="text-slate-400">Image and video analysis with object detection and recognition</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Natural Language</h3>
-                  <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Predictive Analytics</h3>
-                  <p className="text-slate-400">Data-driven insights and forecasting for business intelligence</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Ready to Harness AI Power?
-              </h2>
-              <p className="text-lg text-slate-300 mb-8">
-                Contact our AI experts to discuss how our advanced artificial intelligence services
-                can transform your business operations and drive innovation.
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI Services & Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Transform your business with cutting-edge artificial intelligence. From machine learning to computer vision, 
+                we deliver AI solutions that drive innovation, efficiency, and growth.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
                   href="/contact"
-                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get AI Consultation
                 </Link>
-                <a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-<a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+                <a 
+                  href={`tel:${contactInfo.phone}`}
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
-                  Call {contact.phone  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </Link>
-                <a
-                  href={`mailto:${contact.email}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
+                  Call {contactInfo.phone}
+                </a>
               </div>
-            </div>
-          </section>
-        </main>
-      </ErrorBoundary>
-    </>
-}
-}
-    </Layout>);
-}
+            </motion.div>
+          </div>
+        </section>
 
-          <section className="py-16 px-4 bg-slate-900/40">;
-            <div className="max-w-6xl mx-auto">;
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
-                Our AI Capabilities;
-              </h2>;
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Machine Learning</h3>;
-                  <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>;
-                </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Computer Vision</h3>;
-                  <p className="text-slate-400">Image and video analysis with object detection and recognition</p>;
-                </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Natural Language</h3>;
-                  <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>;
-                </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Predictive Analytics</h3>;
-                  <p className="text-slate-400">Data-driven insights and forecasting for business intelligence</p>;
-                </div>;
-              </div>;
-            </div>;
-          </section>;
-          {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-16 px-4">;
-            <div className="max-w-4xl mx-auto text-center">;
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">;
-                Ready to Harness AI Power?;
-              </h2>;
-              <p className="text-lg text-slate-300 mb-8">;
-                Contact our AI experts to discuss how our advanced artificial intelligence services;
-                can transform your business operations and drive innovation.;
-              </p>;
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
-                <Link;
-                  href="/contact";
-                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors";
-                >;
-                  Get AI Consultation;
-                </Link>;
-                <a;
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} ;
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors";
-                >;
-                  Call {contact.phone  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </a>;
-                <a;
-                  href={`mailto:${contact.email}`} ;
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors";
-                >;
-                  Email Us;
-                </a>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </ErrorBoundary>;
-    </>;
+        {/* Services Grid */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our AI Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive AI solutions powered by the latest machine learning and artificial intelligence technologies.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+                      <Star className="w-4 h-4 fill-current" />
+                      Popular
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center mb-4">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                      <service.icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Clock className="w-4 h-4 text-gray-400" />
+                        <span className="text-sm text-gray-500">{service.setupTime}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                    </div>
+                    <div className="text-sm text-green-600 font-medium">
+                      Save up to 50% vs market rate
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-700">
+                          <ArrowRight className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="text-sm text-gray-600">
+                      <strong>Target Users:</strong> {service.targetUsers}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <Link
+                      href="/contact"
+                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition-colors font-semibold"
+                    >
+                      Get Quote
+                    </Link>
+                    <Link
+                      href={`/contact?service=${encodeURIComponent(service.title)}`}
+                      className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded text-center hover:bg-blue-50 transition-colors font-semibold"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Harness the Power of AI?
+              </h2>
+              <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Transform your business with our comprehensive AI solutions. From machine learning to computer vision, 
+                we'll help you build the future of intelligent automation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link 
+                  href="/contact"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  Start Your AI Journey
+                </Link>
+                <a 
+                  href={`tel:${contactInfo.phone}`}
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+                >
+                  Call {contactInfo.phone}
+                </a>
+              </div>
+              
+              {/* Contact Information */}
+              <div className="grid md:grid-cols-3 gap-8 mt-12">
+                <div className="flex items-center justify-center">
+                  <Phone className="w-6 h-6 mr-2" />
+                  <span>{contactInfo.phone}</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Mail className="w-6 h-6 mr-2" />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="w-6 h-6 mr-2" />
+                  <span>{contactInfo.address}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2548,3 +2449,6 @@ export default function AIServicesPage(req, res) {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

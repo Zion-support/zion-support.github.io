@@ -785,7 +785,11 @@ const main = async () => {}
     throw error};
 };
 const checkDeploymentRequests = async () => {}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
           // Consider automatic rollback;
           if (CONFIG.ROLLBACK_ENABLED && request.environment !== "production") {log(`Initiating automatic rollback for ${request.environment}`);
@@ -848,5 +852,10 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  main};
+  main};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

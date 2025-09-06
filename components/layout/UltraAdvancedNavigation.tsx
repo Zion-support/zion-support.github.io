@@ -34,8 +34,11 @@
 } from 'lucide-react';
 import Link from 'next/link';import {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Menu,
   X,
   ChevronDown,
@@ -72,9 +75,12 @@ import Link from 'next/link';import {
 import Link from 'next/link';import { ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Lock,
   Code,
 } from 'lucide-react';
@@ -248,6 +254,7 @@ import Link from 'next/link';
           </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -271,6 +278,8 @@ import Link from 'next/link';
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </Link>
                 )}
 
@@ -614,6 +623,7 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
         )}
       </AnimatePresence>;
     </nav>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
                   href="/contact"
@@ -637,9 +647,12 @@ export default UltraAdvancedNavigation;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
-export default UltraAdvancedNavigation;  );
+export default UltraAdvancedNavigation;  )
 };
 <<<<<<< HEAD
 =======
@@ -670,9 +683,9 @@ export default UltraAdvancedNavigation;
               {navigation_items.map (item => (                <div key={item.name}>;
                   {item.dropdown ? (
                     <div>;
-                      <button            className="lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 800 / 50 overflow - hidden";
+                      <button            className="lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray-800 / 50 overflow-hidden";
           >;
-            <div className="px - 4 py - 6 space - y-4">;
+            <div className="px - 4 py-6 space-y-4">;
               {navigation_items.map ((item) => (
                   {item.dropdown ? (
                     <div>;
@@ -698,13 +711,13 @@ export default UltraAdvancedNavigation;
                               key={dropdown_item.name}
                               href={dropdown_item.href}
                               on_click={() => setIsOpen (false)}
-                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                            >                        <div className="ml - 8 mt - 2 space - y-2">;
+                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                            >                        <div className="ml - 8 mt-2 space-y-2">;
                           {item.dropdown.map ((dropdown_item) => (
                             <Link;
                               key={dropdown_item.name}
                               href={dropdown_item.href}
                               on_click={() => setIsOpen (false)}
-                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                              className="block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200";
+                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                              className="block py - 2 text - gray - 400 hover:text - white transition-colors duration-200";
                             >;
                               {dropdown_item.name}
                             </Link>))}
@@ -715,9 +728,9 @@ export default UltraAdvancedNavigation;
                       on_click={() => setIsOpen (false)}
                       className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
                     >;
-                      {item.icon && <item.icon className='w - 5 h - 5' />}                      <span>{item.name}</span>                      className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3";
+                      {item.icon && <item.icon className='w - 5 h - 5' />}                      <span>{item.name}</span>                      className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration-200 py-3";
                     >;
-                      {item.icon && <item.icon className="w - 5 h - 5" />}
+                      {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{item.name}</span>;
                     </Link>)}
                 </div>))}
@@ -748,18 +761,18 @@ export default UltraAdvancedNavigation;
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
                   className='block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300'                >              {/* Mobile Contact Info */}
-              <div className="pt - 6 border - t border - gray - 800 / 50">;
-                <div className="space - y-3 text - sm text - gray - 400">;
-                  <a href={`tel:${contact_info.mobile}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200">;
-                    <Phone className="w - 4 h - 4" />;
+              <div className="pt - 6 border - t border-gray-800 / 50">;
+                <div className="space - y-3 text - sm text-gray-400">;
+                  <a href={`tel:${contact_info.mobile}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition-colors duration-200">;
+                    <Phone className="w-4 h-4" />;
                     <span>{contact_info.mobile}</span>;
                   </a>;
-                  <a href={`mailto:${contact_info.email}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200">;
-                    <Mail className="w - 4 h - 4" />;
+                  <a href={`mailto:${contact_info.email}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition-colors duration-200">;
+                    <Mail className="w-4 h-4" />;
                     <span>{contact_info.email}</span>;
                   </a>;
-                  <div className="flex items - start space - x-3">;
-                    <MapPin className="w - 4 h - 4 mt - 0.5" />;
+                  <div className="flex items-start space-x-3">;
+                    <MapPin className="w - 4 h-4 mt-0.5" />;
                     <span>{contact_info.address}</span>;
                   </div>;
                 </div>;
@@ -767,7 +780,7 @@ export default UltraAdvancedNavigation;
                   href="/contact";
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className="block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300";
+                  className="block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition-all duration-300";
                 >;
                   Get Started;
                 </motion.a>;
@@ -784,9 +797,11 @@ export default UltraAdvancedNavigation);
 export default UltraAdvancedNavigation;
 
 export default UltraAdvancedNavigation;
-  );
-
+  )
 };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

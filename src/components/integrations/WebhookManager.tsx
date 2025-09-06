@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -73,6 +74,12 @@ webhooks,
     loading,
     error,
 
+=======
+export function WebhookManager() {
+  const { 
+    webhooks,
+    loading,     error,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React, { useEffect, useState } from 'react';
 import {;
@@ -140,14 +147,14 @@ export function WebhookManager() {;
       ...newWebhook,;
       eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent],;
       selectedEvent: '' as WebhookEventType,;
-    });
-  };
+    })
+};
 
   const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({;
       ...newWebhook,;
       eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event),;
-    });
-  };
+    })
+};
 
   const handleCreateWebhook = async () => {;
     if (;
@@ -173,15 +180,15 @@ export function WebhookManager() {;
       selectedEvent: '' as WebhookEventType,;
       eventTypes: [],;
       secret: '',;
-    });
-  };
+    })
+};
 
   const handleTestWebhook = async (;
     webhookId: string,;
     eventType: WebhookEventType;
   ) => {;
-    await testWebhook(webhookId, eventType);
-  };
+    await testWebhook(webhookId, eventType)
+};
   return (
 
     <div className='space - y-8'>;
@@ -201,15 +208,17 @@ export function WebhookManager() {;
     toggleWebhook,
     deleteWebhook,
 
-
     }
     
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     
     await createWebhook(
@@ -222,8 +231,11 @@ export function WebhookManager() {;
     
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Reset form
     setNewWebhook({
       name: "",
@@ -241,8 +253,11 @@ export function WebhookManager() {;
   
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="space-y-8">
       <Card>
@@ -263,7 +278,6 @@ export function WebhookManager() {;
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
-
 
                 value={newWebhook.name}
 <<<<<<< HEAD
@@ -310,9 +324,12 @@ export function WebhookManager() {;
             <div className='flex space-x-2'>;
               <Select
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
@@ -395,11 +412,11 @@ export function WebhookManager() {;
       selectedEvent: "" as WebhookEventType,;
       eventTypes: [],;
       secret: "";
-    });
-  };
+    })
+};
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
-    await testWebhook(webhookId, eventType);
-  };
+    await testWebhook(webhookId, eventType)
+};
   return (;
     <div className="space-y-8">;
       <Card>;
@@ -439,8 +456,6 @@ export function WebhookManager() {;
                   onRemove={() => handleRemoveEvent(event)}
                 >;
 
-
-
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
@@ -451,8 +466,12 @@ export function WebhookManager() {;
                 onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
               >
                 <SelectTrigger className="w-full">
+<<<<<<< HEAD
                   <SelectValue placeholder="Select event" />
                 </SelectTrigger>
+=======
+                  <SelectValue placeholder="Select event" />                </SelectTrigger>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <SelectContent>
                   {eventOptions.map(option => (
                     <SelectItem key={option.value} value={option.value}>
@@ -575,11 +594,11 @@ export function WebhookManager() {;
                 </SelectContent>;
               </Select>;
               <Button type="button" on_click={handleAddEvent} variant="outline">;
-                <PlusCircle className="h - 4 w - 4 mr - 2" /> Add;
+                <PlusCircle className="h - 4 w - 4 mr-2" /> Add;
               </Button>;
             </div>;
           </div>;
-          <div className="space - y-2">;
+          <div className="space-y-2">;
             <Label html_for="webhook - secret">Secret (optional)</Label>;
             <Input;
               id="webhook - secret";
@@ -587,31 +606,31 @@ export function WebhookManager() {;
               value={new_webhook.secret}
               on_change={(e) => setNewWebhook ({...new_webhook, secret: e.target.value})}
             />;
-            <p className="text - xs text - muted - foreground">;
+            <p className="text - xs text - muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
           </div>;
         </CardContent>;
         <CardFooter>;
           <Button on_click={handleCreateWebhook}>;
-            <Save className="h - 4 w - 4 mr - 2" /> Create Webhook;
+            <Save className="h - 4 w - 4 mr-2" /> Create Webhook;
           </Button>;
         </CardFooter>;
       </Card>;
       <div>;
-        <h3 className="text - lg font - medium mb - 4">Your Webhooks</h3>;
+        <h3 className="text - lg font - medium mb-4">Your Webhooks</h3>;
 
         {loading ? (
           <p > Loading webhooks...</p>) : error ? (
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
+          <p className="text - red-500">{error}</p>) : webhooks.length === 0 ? (
           <p > No webhooks configured yet.Create your first webhook above.</p>) : (
-          <div className="space - y-4">;
+          <div className="space-y-4">;
             {webhooks.map (webhook => (
               <Card key={webhook.id}>;
-                <CardHeader className="pb - 2">;
-                  <div className="flex justify - between items - start">;
+                <CardHeader className="pb-2">;
+                  <div className="flex justify - between items-start">;
                     <div>;
-                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;
-                      <CardDescription className="truncate max - w-md">;
+                      <CardTitle className="text-lg">{webhook.name}</CardTitle>;
+                      <CardDescription className="truncate max-w-md">;
                         {webhook.url}
 
                 value={newWebhook && newWebhook.selectedEvent}
@@ -740,7 +759,6 @@ export function WebhookManager() {;
                           variant='outline'
                           size='sm'
 
-
           
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
@@ -751,8 +769,11 @@ export function WebhookManager() {;
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -771,6 +792,10 @@ export function WebhookManager() {;
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -838,7 +863,6 @@ export function WebhookManager() {;
                     <Trash className='h-4 w-4 mr-2' /> Delete;
                   </Button>;
 
-
                   <Select
                     onValueChange={value =>;
                       handleTestWebhook(webhook && webhook.id, value as WebhookEventType);
@@ -887,13 +911,16 @@ export function WebhookManager() {;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;
 
-
                         : 'Never triggered'}
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between pt-2">
                   <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     variant="outline"
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
@@ -923,12 +950,11 @@ export function WebhookManager() {;
         )}
 =======
 
-
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
                   >;
-                    <Trash className="h - 4 w - 4 mr - 2" /> Delete;
+                    <Trash className="h - 4 w - 4 mr-2" /> Delete;
                   </Button>;
                   <Select;
                     onValueChange={(value) => handleTestWebhook (webhook.id, value as WebhookEventType)}
@@ -937,10 +963,6 @@ export function WebhookManager() {;
                       <SelectValue placeholder="Test webhook" />;
                     </SelectTrigger>;
                     <SelectContent>;
-
-
-
-
 
         {testResult && (
           <Card className='mt-4 border-blue-200'>
@@ -968,6 +990,7 @@ export function WebhookManager() {;
                         : 'text-red-600';
                     }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1216,3 +1239,11 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+                  >                    {testResult.status} {testResult.statusText}
+                  </span>
+                </div>
+                <div>
+                  <span className='font-medium'>Response:</span>
+                  <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

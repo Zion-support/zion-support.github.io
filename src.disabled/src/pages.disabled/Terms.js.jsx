@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,6 @@ const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/Header";"""; import { Footer } from "@/components/Footer";"""; import TermsOfService from "@/legal/TermsOfService"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <Header /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };"""=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

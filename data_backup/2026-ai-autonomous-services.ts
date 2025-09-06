@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,12 +24,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const aiAutonomousServices2026 = [] as [];
 export interface AiAutonomousService2026 {
   "id": string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -58,6 +61,7 @@ address: string};export const "aiAutonomousServices2026": AiAutonomousService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 <<<<<<< HEAD
@@ -101,11 +105,22 @@ export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousS
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const aiAutonomousServices2026 = [] as [];
+=======
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}export const aiAutonomousServices2026 = [] as [];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface AiAutonomousService2026 {
   "id": string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -135,6 +150,7 @@ address: string};export const "aiAutonomousServices2026": AiAutonomousService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,12 +203,23 @@ export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousS
 export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+=======
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const aiAutonomousServices2026 = [] as []; export interface AiAutonomousService2026 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [ { id: "2026-ai-autonomous",name: "2026 AI Autonomous Platform",tagline: "Fully autonomous AI systems",price: "$499/month",description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",features[ "Autonomous operation","Self-learning capabilities","Independent decision making","Advanced AI algorithms","24/7 operation" ],link: "/services/2026-ai-autonomous",category: "AI Autonomous 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const aiAutonomousServices2026 = [] as [];
 export interface AiAutonomousService2026 {
   "id": string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -222,8 +249,11 @@ address: string};export const "aiAutonomousServices2026": AiAutonomousService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,15 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ServiceVariant } from '../types / service - variants';
 ;
 
 export interface EnterpriseITBreakthroughService2029 {
 
 export interface EnterpriseITBreakthroughService2029 {;
+<<<<<<< HEAD
 =======
 
 =======
@@ -21,6 +25,8 @@ import { ServiceVariant } from '../types / service - variants';
 export interface EnterpriseITBreakthroughService2029 {
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export interface EnterpriseITBreakthroughService2029 {;
 <<<<<<< HEAD
@@ -30,14 +36,17 @@ export interface EnterpriseITBreakthroughService2029 {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -66,6 +75,7 @@ export interface EnterpriseITBreakthroughService2029 {;
 
     website: string;
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   realImplementation: boolean;
@@ -394,6 +404,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       launchDate: '2025-01-15',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       customers: 180,
       rating: 4 && 4.9,
       reviews: 95,
@@ -410,10 +422,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 =======
   ];    features: [
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -435,6 +443,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -453,41 +462,14 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
   ];    features: [;
       'Autonomous infrastructure managementAI - powered deployment automation_self - healing systems_predictive scaling_automated monitoring_intelligent incident response_performance optimization_security automation';
       'Compliance monitoring_analytics dashboard';
     ];
-<<<<<<< HEAD
-=======
-
-    popular: true, icon: '⚙️',
-
-    ];
-
-    popular: true, icon: '☁️',
-
-    ];
-
-    popular: true, icon: '🛡️',
-
-    ];
-
-    popular: true, icon: '🏢',
-
-  }
-];
-
-    color: 'from - slate - 600 via - gray - 600 to - zinc - 600';
-    text_color: 'text - slate - 400';
-    link: 'https://ziontechgroup.com / autonomous - it - operations - center';
-    market_position: 'First - to - market autonomous IT operations center. Competes with traditional IT management tools but offers true autonomy. Pricing reflects enterprise value and innovation.';
-    target_audience: 'Enterprise businesses, Data centers, Cloud providers, IT operations teams, System administrators, Technology companies';
-    trial_days: 45;
-    setup_time: '4 - 8 weeks';
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Enterprise IT & Operations';
     real_service: true;
     technology: ['AI, Machine Learning, IT Automation, Infrastructure Management, Monitoring Tools, Predictive Analytics'];
@@ -502,13 +484,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-=======
-
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true;
     implementationDetails: 'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
     launchDate: '2025-01-15';
@@ -517,6 +492,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     reviews: 95
   }
 ];
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [;
@@ -565,6 +541,9 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       website: 'https://ziontechgroup.com';
+=======
+;      website: 'https://ziontechgroup.com';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     real_implementation: true;
     implementation_details: 'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
@@ -577,12 +556,9 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -851,3 +827,7 @@ export interface EnterpriseITBreakthroughService2029 {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

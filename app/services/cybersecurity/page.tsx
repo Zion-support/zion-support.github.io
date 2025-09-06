@@ -1,5 +1,9 @@
+import React from 'react';
+import Link from 'next/link';
+
 export const metadata = { 
   title: 'Cybersecurity Services | Zion Tech Group',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
@@ -20,10 +24,15 @@ export const metadata = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.',
+  keywords: 'cybersecurity, threat detection, compliance management, security audits, incident response, penetration testing'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default function CybersecurityPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -825,21 +834,32 @@ function ContactSection() {
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Let's discuss how we can protect your business from cyber threats and ensure compliance. 
           Our security experts have protected 200+ organizations from cyber attacks.
+=======
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Cybersecurity Services
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Protect your business with comprehensive cybersecurity solutions. 
+          From threat detection to compliance management, we keep your data secure.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
+            href="mailto:kleber@ziontechgroup.com?subject=Cybersecurity Services Inquiry"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+          >
+            Get Security Assessment
+          </a>
+          <a
             href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
         </div>
+<<<<<<< HEAD
         <div className="mt-8 text-sm text-gray-500">
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
@@ -855,5 +875,9 @@ function ContactSection() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+      </section>
+    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }

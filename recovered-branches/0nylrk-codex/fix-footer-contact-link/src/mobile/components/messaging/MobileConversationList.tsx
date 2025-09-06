@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 
 <<<<<<< HEAD
@@ -15,6 +15,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -22,6 +24,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from "react",
@@ -57,6 +60,8 @@ import { cn } from "@/lib/utils",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -67,8 +72,7 @@ import { cn } from "@/lib/utils";
 interface Conversation {
 
   id: string
-  name: string
-  avatar?: string;
+  name: string  avatar?: string;
   lastMessage: string,;
   timestamp: string,;
   unreadCount: number,;
@@ -78,6 +82,7 @@ interface Conversation {
 interface MobileConversationListProps {;
   conversations: Conversation[],;
 
+<<<<<<< HEAD
   activeConversation?: string;
 <<<<<<< HEAD
   onSelectConversation: (id: string) => void
@@ -219,26 +224,18 @@ export function MobileConversationList({;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
+=======
+  activeConversation?: string;    <div className="space-y-4">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-<<<<<<< HEAD
           <Input
             placeholder="Search messages..."
             className="pl-9"
           />;
         </div>;
       </div>;
-
-=======
-          <Input;
-            placeholder="Search messages...";
-            className="pl-9";
-          />;
-        </div>;
-      </div>;
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="px-4 pb-4 space-y-2">;
         <div className="flex space-x-2">;
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
@@ -247,7 +244,6 @@ export function MobileConversationList({;
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
       <div className="space-y-2 pb-24">;
         {conversations && conversations.map((conversation) => (;
@@ -259,8 +255,8 @@ export function MobileConversationList({;
 
 =======
 
-
               "px-4",
+<<<<<<< HEAD
 
 
 =======
@@ -334,6 +330,8 @@ export function MobileConversationList({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -359,53 +357,10 @@ export function MobileConversationList({;
                       ? <em>Typing...</em> ;
                       : conversation && conversation.lastMessage}
                   </p>;
-<<<<<<< HEAD
 
                   {conversation && conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
-<<<<<<< HEAD
-=======
-      ;
-      <div className="space-y-2 pb-24">;
-        {conversations.map((conversation) => (;
-          <div;
-            key={conversation.id}
-            className={cn(;
-              "px-4",;
-              activeConversation === conversation.id && "bg-primary/5";
-            )}
-            onClick={() => onSelectConversation(conversation.id)}
-          >;
-            <div className="flex items-center gap-3 py-3 cursor-pointer">;
-              <Avatar>;
-                <AvatarImage src={conversation.avatar} />;
-                <AvatarFallback>;
-                  {conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>;
-              </Avatar>;
-              ;
-              <div className="flex-1 min-w-0">;
-                <div className="flex justify-between items-baseline">;
-                  <h3 className="font-medium truncate">{conversation.name}</h3>;
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;
-                    {conversation.timestamp}
-                  </span>;
-                </div>;
-                ;
-                <div className="flex justify-between items-center">;
-                  <p className="text-sm text-muted-foreground truncate">;
-                    {conversation.isTyping ;
-                      ? <em>Typing...</em> ;
-                      :conversation.lastMessage}
-                  </p>;
-                  ;
-                  {conversation.unreadCount > 0 && (;
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
-                      {conversation.unreadCount}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </Badge>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   )}
@@ -415,156 +370,8 @@ export function MobileConversationList({;
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 }
-
-=======
-=======
-      </div>;
-    </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from './react';
-import { Card } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Search } from './lucide-react';
-import { Input } from '@/components / ui / input';
-import { cn } from '@/lib / utils';
-interface Conversation {
-  id: string,
-  name: string,
-  avatar?: string;
-  last_message: string,
-  timestamp: string,
-  unread_count: number,
-  is_typing?: boolean;
-}
-interface MobileConversationListProps {
-  conversations: Conversation[],
-  active_conversation?: string;
-  onSelectConversation: (id: string) => void;
-}
-export /**
- * MobileConversationList - Function description
- */
-function MobileConversationList() {
-  return (
-    <div className="space - y-4">;
-      <div className="px - 4 mb - 2">;
-        <div className="relative">;
-          <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - muted - foreground" />;
-          <Input;
-            placeholder="Search messages...";
-            className="pl - 9";
-          />;
-        </div>;
-      </div>;
-      <div className="px - 4 pb - 4 space - y-2">;
-        <div className="flex space - x-2">;
-          <Badge variant="secondary" className="rounded - full px - 3">All</Badge>;
-          <Badge variant="outline" className="rounded - full px - 3">Unread</Badge>;
-          <Badge variant="outline" className="rounded - full px - 3">Interviews</Badge>;
-          <Badge variant="outline" className="rounded - full px - 3">Projects</Badge>;
-        </div>;
-      </div>;
-      <div className="space - y-2 pb - 24">;
-        {conversations.map ((conversation) => (
-          <div;
-            key={conversation.id}
-            className={cn (
-              "px - 4";
-              active_conversation === conversation.id && "bg - primary / 5")}
-            on_click={() => onSelectConversation (conversation.id)}
-          >;
-            <div className="flex items - center gap - 3 py - 3 cursor - pointer">;
-              <Avatar>;
-                <AvatarImage src={conversation.avatar} />;
-                <AvatarFallback>;
-                  {conversation.name.char_at (0).toUpperCase ()}
-                </AvatarFallback>;
-              </Avatar>;
-              <div className="flex - 1 min - w-0">;
-                <div className="flex justify - between items - baseline">;
-                  <h3 className="font - medium truncate">{conversation.name}</h3>;
-                  <span className="text - xs text - muted - foreground whitespace - nowrap ml - 2">;
-                    {conversation.timestamp}
-                  </span>;
-                </div>;
-                <div className="flex justify - between items - center">;
-                  <p className="text - sm text - muted - foreground truncate">;
-                    {conversation.is_typing;
-                      ? <em > Typing...</em>;
-                      : conversation.last_message}
-                  </p>;
-                  {conversation.unread_count > 0 && (
-                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;
-                      {conversation.unread_count}
-                    </Badge>)}
-                </div>;
-              </div>;
-            </div>;
-            <div className="border - t border - border ml - 12"></div>;
-          </div>))}
-      </div>;
-    </div>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
- interface Conversation {
-  id: string;
-name: string;
-avatar?: string;
-lastMessage: string;
-timestamp: string;
-unreadCount: number;
-isTyping?: boolean 
-}interface MobileConversationListProps {
-  conversations: Conversation[];
-activeConversation?: string;
-onSelectConversation: (id: string) => void 
-}export function MobileConversationList ({
-  conversations;
-activeConversation;
-onSelectConversation 
-}: MobileConversationListProps) {
-  return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All</Badge> <Badge variant=" outline"className=" rounded-full px-3">Unread</Badge> <Badge variant=" outline"className=" rounded-full px-3">Interviews</Badge> <Badge variant=" outline"className=" rounded-full px-3">Projects</Badge> </div> </div> <div className=" space-y-2 pb-24"> {
-  conversations.map ( (conversation) => (<div key= {
-  conversation.id 
-}) 
-}onClick= {
-  () => onSelectConversation (conversation.id) 
-}> <div className=" flex items-center gap-3 py-3 cursor-pointer"> <Avatar> <AvatarImage src= {
-  conversation.avatar 
-}/> <AvatarFallback> {
-  conversation.name.charAt (0) .toUpperCase () 
-}</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage 
-}</p> {
-  conversation.unreadCount 
-}</Badge>) 
-}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) 
-}</div> </div>) 
-}
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="border-t border-border ml-12"></div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

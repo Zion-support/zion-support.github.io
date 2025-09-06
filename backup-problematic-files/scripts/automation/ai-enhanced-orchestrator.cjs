@@ -35,5 +35,10 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

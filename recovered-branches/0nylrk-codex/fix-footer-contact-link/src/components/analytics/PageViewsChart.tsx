@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,12 +86,15 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
 
@@ -108,10 +112,13 @@ interface PageViewsChartProps {;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function PageViewsChart(): any ({;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   data,;
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -161,6 +168,8 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
@@ -179,6 +188,7 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart;
           title="";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -189,40 +199,10 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          data={data || []}
-          dataKeys={["views"]}
-<<<<<<< HEAD
 =======
-
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
-;
-interface PageViewsChartProps {;
-  data:Array<{ date:string, views:number }>,;
-  timeRange:string,;
-  onTimeRangeChange:(range:string) => void;
-}
-;
-export function PageViewsChart({ data, timeRange, onTimeRangeChange } PageViewsChartProps) {;
-  return (;
-    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
-      <CardHeader className="pb-2">;
-        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
-        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>;
-      </CardHeader>;
-      <CardContent className="p-0 pb-4">;
-        <AnalyticsChart ;
-          title="";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           data={data || []}
-          dataKeys={['views']}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          data={data || []}
-          dataKeys={["views"]}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          timeRange={timeRange}
-          onTimeRangeChange={onTimeRangeChange}
+          dataKeys={["views"]}          onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
@@ -232,8 +212,8 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange } PageViewsC
 }
 =======
     </Card>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -315,3 +295,5 @@ onTimeRangeChange: (range: string) => void
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

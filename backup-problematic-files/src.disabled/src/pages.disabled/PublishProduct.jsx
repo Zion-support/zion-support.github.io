@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/PublishProduct.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/PublishProduct.jsx
 <<<<<<< HEAD:backup-merge-conflicts/PublishProduct.jsx.backup
 :backup-merge-conflicts/PublishProduct.jsx.backup
@@ -44,3 +45,6 @@ import _React from 'react';'''; import { ProductSubmissionForm } from '@/compone
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/pages.disabled/PublishProduct.jsx
+========
+import _React from 'react';'''; import { ProductSubmissionForm } from '@/components/ProductSubmissionForm';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate } from 'react-router-dom';'''; import SEO from '@/components/SEO'; export {}; return null} const { isAuthenticated,isLoading } = useAuth(); if (isLoading) {} return(); <div className="flex justify-center items-center min-h-screen bg-zion-blue"> <div className="animate-pulse text-zion-purple text-lg">Loading...></div> ></div> );} if (!isAuthenticated) {} '"; '"'"; return <Navigate to="/login" state={{ "from": '/publish' }} replace />;}"; return (; <div className="min-h-screen flex flex-col bg-zion-blue">"; <div>Broken JSX</div> />"; <main className="flex-1 p-6 "md": p-10"> <div className="max-w-4xl mx-auto"> <h1 className="text-3xl font-bold text-white mb-2"> Publish on Zion"; </h1> <p className="text-zion-slate mb-8"> Share your products,services,or digital assets with the Zion; community.; </p>"; <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 "md": p-8"> <ProductSubmissionForm /> ></div> ></div> ></div> </div>)} ; export { PublishProduct }; export { PublishProduct }; export { PublishProduct }; export { PublishProduct }; export { PublishProduct };=======
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/pages.disabled/PublishProduct.jsx

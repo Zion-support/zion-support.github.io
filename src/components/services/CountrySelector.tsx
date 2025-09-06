@@ -21,8 +21,11 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 <<<<<<< HEAD
 
 
@@ -41,11 +44,15 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
+<<<<<<< HEAD
     setTopCountries(top)
   }, []),
   
@@ -54,6 +61,120 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     const country = onsiteServicePricing.find(item => item.country === countryName) || null,
     onCountryChange(country)
   },
+=======
+
+
+
+    setTopCountries(top)
+  }, [])
+  // Handle country selection
+  const handleCountryChange = (countryName: string) => {
+
+
+import { useState, useEffect } from 'react';
+import { Globe } from 'lucide-react';
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue,;
+} from '@/components/ui/select';
+import {;
+  CountryPricing,;
+  onsiteServicePricing,;
+} from '@/data/onsiteServicePricing';
+
+interface CountrySelectorProps {;
+  onCountryChange: (country: CountryPricing | null) => void;
+  selectedCountry: CountryPricing | null;
+
+export function CountrySelector(): any ({;
+  onCountryChange,;
+  selectedCountry,;
+}: CountrySelectorProps) {;
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {;
+  onCountryChange: (country: CountryPricing | null,) => void,;
+  selectedCountry: CountryPricing | null;
+}
+
+  // Set top/popular countries;
+  useEffect(() => {;
+    const popular = [;
+      'United States',;
+      'United Kingdom',;
+      'Canada',;
+      'Germany',;
+      'Australia',;
+      'Japan',;
+      'Singapore',;
+    ];
+    const top = onsiteServicePricing;
+      .filter(item => popular && popular.includes(item && item.country));
+      .sort((a, b) => a && a.country.localeCompare(b && b.country));
+    setTopCountries(top);
+  }, []);
+
+  // Handle country selection;
+  const handleCountryChange = (countryName: string) => {;
+    const country =;
+      onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
+    onCountryChange(country);
+  };
+  return (
+
+      </h3>;
+
+
+      <Select
+        onValueChange={handleCountryChange}
+        value={selectedCountry?.country}>;
+        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>;
+          <SelectValue placeholder='Select a country' />;
+        </SelectTrigger>;
+        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>;
+          <div className='p-2 border-b border-zion-blue-light'>;
+            <p className='text-sm text-zion-slate-light pb-1'>;
+              Popular Countries;
+            </p>;
+            {topCountries && topCountries.map(item => (;
+              <SelectItem
+                key={item && item.country}
+                value={item && item.country}
+                className='text-white'>                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
+              </SelectItem>;
+            ))}
+          </div>        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">;
+          <div className="p-2 border-b border-zion-blue-light">;
+            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>;
+            {topCountries && topCountries.map((item,) => (;
+              <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
+              </SelectItem>;
+            ))}
+          </div>;
+          <div className='p-2'>;
+            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>;
+            {onsiteServicePricing;
+              .sort((a, b) => a && a.country.localeCompare(b && b.country));
+              .map(item => (;
+                <SelectItem
+                  key={item && item.country}
+                  value={item && item.country}
+                  className='text-white'>;
+                  {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
+                </SelectItem>;
+              ))}          </div>              .map((item) => (;
+              .sort((a, b,) => a && a.country.localeCompare(b && b.country));
+              .map((item,) => (;
+              <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
+                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
+              </SelectItem>;
+            ))}
+
+        </SelectContent>;
+      </Select>;
+    </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <div className="mb-6">
@@ -62,11 +183,17 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
       <Select 
         onValueChange={handleCountryChange} 
@@ -80,6 +207,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { Globe } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -124,6 +252,10 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               <SelectItem key={item.country} value={item.country} className="text-white">;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
+=======
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ))}
           </div>
           <div className="p-2">
@@ -131,12 +263,22 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+<<<<<<< HEAD
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
 <<<<<<< HEAD
 =======
+=======
+
+
+
+              <SelectItem key={item.country} value={item.country} className="text-white">
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
+            ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
@@ -215,6 +357,7 @@ function CountrySelector() {
             {top_countries.map ((item, ) => (
               <SelectItem key={item.country} value={item.country} className="text - white">;
               </SelectItem>))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
         </SelectContent>;
@@ -224,6 +367,30 @@ function CountrySelector() {
 }
 <<<<<<< HEAD
 =======
+=======
+          </div>;
+          <div className='p - 2'>;
+            <p className='text - sm text - zion - slate - light pb - 1'>All Countries</p>;
+            {onsiteServicePricing;
+              .sort ((a, b) => a.country.locale_compare (b.country));
+              .map (item => (
+                <SelectItem;
+                  key={item.country}
+                  value={item.country}
+                  className='text - white';
+                >;
+                  {item.country} - ${item.pricePerIncident.to_fixed (2)}
+                </SelectItem>))}          </div>              .map ((item) => (
+              .sort ((a, b, ) => a.country.locale_compare (b.country));
+              .map ((item, ) => (
+              <SelectItem key={item.country} value={item.country} className="text - white">;
+                {item.country} - ${item.pricePerIncident.to_fixed (2)}
+              </SelectItem>))}
+        </SelectContent>;
+      </Select>;
+    </div>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 ;
@@ -234,7 +401,13 @@ function CountrySelector() {
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

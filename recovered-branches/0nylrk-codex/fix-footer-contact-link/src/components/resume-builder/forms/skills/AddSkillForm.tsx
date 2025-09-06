@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -8,12 +9,16 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
+<<<<<<< HEAD
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 <<<<<<< HEAD
 =======
@@ -45,6 +50,9 @@ import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhanceme
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AddSkillFormProps {
+=======
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
@@ -56,10 +64,9 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +78,8 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -80,6 +89,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     const newSkill: Skill = {
       name: skillName.trim()
       category: skillCategory |'Other'
+<<<<<<< HEAD
       proficiency: proficiency}
 <<<<<<< HEAD
     const success = await onAddSkill(newSkill);
@@ -412,6 +422,13 @@ if ( {) {
                 onEnhanced={handleEnhanceSkill}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <SelectValue placeholder="Select category" />;
+=======
+      proficiency: proficiency}  return (  return (
+    <form onSubmit={handleSubmit} className="space-y-4">;
+      <div className="flex flex-col gap-4 md:flex-row">;
+        <div className="flex-1">;
+          <Label htmlFor="skill-name">Skill Name</Label>;              <SelectValue placeholder="Select category" />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </SelectTrigger>;
             <SelectContent>;
               <SelectItem value="Programming">Programming</SelectItem>;
@@ -419,156 +436,29 @@ if ( {) {
               <SelectItem value="Soft Skills">Soft Skills</SelectItem>;
               <SelectItem value="DevOps">DevOps</SelectItem>;
               <SelectItem value="Data Science">Data Science</SelectItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-              <SelectItem value="AI / ML">AI / ML</SelectItem>;
-
-=======
-              <SelectItem value="AI/ML">AI/ML</SelectItem>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              <SelectItem value="Management">Management</SelectItem>;
-              <SelectItem value="Other">Other</SelectItem>;
-            </SelectContent>;
-          </Select>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              onChange={(e) => setProficiency(Number(e && e.target.value))}
-              className="w-20";
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-},
-
-
-<<<<<<< HEAD
-=======
-        <div>;
-          <Label html_for="skill - proficiency">Proficiency (1 - 5)</Label>;
-          <div className="flex gap - 4">;
-            <Input;
-              id="skill - proficiency";
-              type="number";
-=======
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="flex flex-col gap-4 md:flex-row">
-        <div className="flex-1">
-          <Label htmlFor="skill-name">Skill Name</Label>
-          <Input
-            id="skill-name"
-            value={skillName}
-            onChange={(e) => setSkillName(e.target.value)}
-            placeholder="Enter a skill (e.g., React)"
-          />
-        </div>
-        <div className="w-full md:w-44">
-          <div className="flex justify-between items-center">
-            <Label htmlFor="skill-category">Category</Label>
-            {skillName && (
-              <AIEnhancementButton
-                currentContent={skillName}
-                enhancementType="general"
-                onEnhanced={handleEnhanceSkill}
-                buttonText="Suggest"
-                className="h-4"
-              />
-            )}
-          </div>
-          <Select
-            value={skillCategory}
-            onValueChange={setSkillCategory}
-          >
-            <SelectTrigger id="skill-category">
-              <SelectValue placeholder="Select category" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="Programming">Programming</SelectItem>
-              <SelectItem value="Design">Design</SelectItem>
-              <SelectItem value="Soft Skills">Soft Skills</SelectItem>
-              <SelectItem value="DevOps">DevOps</SelectItem>
-              <SelectItem value="Data Science">Data Science</SelectItem>
-              <SelectItem value="AI/ML">AI/ML</SelectItem>
-              <SelectItem value="Management">Management</SelectItem>
-              <SelectItem value="Other">Other</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        <div>
-          <Label htmlFor="skill-proficiency">Proficiency (1-5)</Label>
-          <div className="flex gap-4">
-            <Input
-              id="skill-proficiency"
-              type="number"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              min={1}
-              max={5}
-              value={proficiency}
-              onChange={(e) => setProficiency(Number(e.target.value))}
-              className="w-20"
-            />
-            <Button type="submit">Add</Button>
-          </div>
-        </div>
-      </div>
-    </form>
-  )
-              on_change={(e) => set_proficiency (Number (e.target.value))}
-              className="w - 20";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-        ;
-        <div>;
-          <Label htmlFor="skill-proficiency">Proficiency (1-5)</Label>;
-          <div className="flex gap-4">;
-            <Input;
-              id="skill-proficiency";
-              type="number";              min={1}
-              max={5}
-              value={proficiency}
-              onChange={(e) => setProficiency(Number(e.target.value))}
-              className="w-20";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
+              <SelectItem value="AI / ML">AI / ML</SelectItem>;}
 
 },
 };
 },
               on_change={(e) => set_proficiency (Number (e.target.value))}
+<<<<<<< HEAD
               className="w - 20";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              className="w-20";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
             <Button type="submit">Add</Button>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    </form>);
-=======
-    </form>;
-  ),;
-},; if (!skillName.trim () ) return;
-const newSkill: Skill = {
-  />) 
-}</div> <Select value= {
-  skillCategory 
-}onValueChange= {
-  setSkillCategory 
-}> <SelectTrigger id="skill-category" > <SelectValue placeholder="Select category" /> </SelectTrigger> <SelectContent> <SelectItem value="Programming" >Programming</SelectItem> <SelectItem value="Design" >Design</SelectItem> <SelectItem value="Soft Skills" >Soft Skills</SelectItem> <SelectItem value="DevOps" >DevOps</SelectItem> <SelectItem value="Data Science" >Data Science</SelectItem> <SelectItem value="AI/ML" >AI/ML</SelectItem> <SelectItem value="Management" >Management</SelectItem> <SelectItem value="Other" >Other</SelectItem> </SelectContent> </Select> </div> <div> <Label htmlFor="skill-proficiency" >Proficiency (1-5) </Label> <div className="flex gap-4" > <Input /> <Button type="submit" >Add</Button> </div> </div> </div> </form>) 
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
+    </form>);}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -582,3 +472,9 @@ const newSkill: Skill = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+},
+};
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

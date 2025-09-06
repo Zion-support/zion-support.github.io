@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState  } from 'react';
 =======
@@ -15,6 +15,8 @@ import { useState  } from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -33,6 +35,7 @@ import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -54,6 +57,9 @@ import { useState } from 'react',
 import { useState } from 'react',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState } from 'react',import { useState } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -67,6 +73,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
+<<<<<<< HEAD
 import { CalendarIcon, Loader2 } from "lucide-react",
 <<<<<<< HEAD
 
@@ -147,18 +154,25 @@ interface WorkExperienceItemFormProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function WorkExperienceItemForm({;
+=======
+import { CalendarIcon, Loader2 } from "lucide-react",export function WorkExperienceItemForm({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   initialData;
   onSubmit;
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   onCancel}: WorkExperienceItemFormProps) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -468,80 +482,32 @@ export function WorkExperienceItemForm({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+  onCancel}: WorkExperienceItemFormProps) {  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField
               control={form && form.control}
-              name="company_name"
-=======
-      company_name: values.company_name,  // Required;
-      role_title: values.role_title,      // Required;
-      start_date: values.start_date,      // Required;
-      end_date: values.end_date,          // Optional;
-      is_current: values.is_current,      // Required;
-      description: values.description,    // Optional;
-      location: values.location,          // Optional;
-    },;
-    await onSubmit(workExperience);
-  },;
-  const handleAIEnhancement = (content: string) => {;
-    form.setValue("description", content, { shouldDirty: true }),;
-    setIsEnhancementDialogOpen(false);
-  },;
-  return (;
-    <>;
-      <Form {...form}>;
-        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}
-              name="company_name";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  onCancel}: WorkExperienceItemFormProps) {;
+              name="company_name"  onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   return (
     <>;
       <Form {...form}>;
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <Input placeholder="e && e.g. Acme Corporation" {...field} />;
-=======
-                    <Input placeholder="e.g. Acme Corporation" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;              )}
-            />;
-            ;
-            <FormField;
-              control={form.control}
-              name="role_title";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Role Title</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="e.g. Senior Developer" {...field} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  </FormControl>;
+                    <Input placeholder="e && e.g. Acme Corporation" {...field} />;                  </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             />;
-
 
             <FormField
               control={form && form.control}
@@ -563,40 +529,15 @@ export function WorkExperienceItemForm({;
 
             <FormField
               control={form && form.control}
-              name="location"
-=======
-            />;
-            />;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField
-              control={form && form.control}
-              name="location"
-          </div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}
-              name="location";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              render={({ field }) => (;
+              name="location"              render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <Input placeholder="e && e.g. New York, NY (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from './react - hook - form';
@@ -661,8 +602,8 @@ function WorkExperienceItemForm() {
       role_title: values.role_title,      // Required;
       start_date: values.start_date,      // Required;
       end_date: values.end_date,          // Optional;
-      is_current: values.is_current,      // Required;
-      description: values.description,    // Optional;
+      is_current: values.is_current,      // Required,
+  description: values.description,    // Optional;
       location: values.location,          // Optional;
     }
 ;
@@ -677,8 +618,8 @@ function WorkExperienceItemForm() {
   return (
     <>;
       <Form {...form}>;
-        <form on_submit={form.handle_submit (handleFormSubmit)} className="space - y-6">;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <form on_submit={form.handle_submit (handleFormSubmit)} className="space-y-6">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;
               control={form.control}
               name="company_name";
@@ -713,7 +654,7 @@ function WorkExperienceItemForm() {
                 </FormItem>)}
             />;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;
               control={form.control}
               name="location";
@@ -736,15 +677,14 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="is_current";
               render={({ field }) => (
-                <FormItem className="flex flex - col">;
+                <FormItem className="flex flex-col">;
                   <FormLabel > Current Position</FormLabel>;
-                  <div className="flex items - center gap - 2 h - 10">;
+                  <div className="flex items - center gap - 2 h-10">;
                     <Switch;
                       checked={field.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             />;
+<<<<<<< HEAD
 
 
 =======
@@ -896,35 +836,19 @@ function WorkExperienceItemForm() {
 
             {!watchIsCurrent && (;
 
-              <FormField
-                control={form && form.control}
-                name="end_date"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <FormField
                 control={form && form.control}
-                name="end_date"
-                </FormItem>;
-              )}
-            />;
-            ;
-            {!watchIsCurrent && (;
-              <FormField;
-                control={form.control}
-                name="end_date";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-              <FormField
+                name="end_date"              <FormField
                 control={form && form.control}
                 name="end_date"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 render={({ field }) => (;
                   <FormItem className="flex flex-col">;
                     <FormLabel>End Date</FormLabel>;
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <Button
                             variant={"outline"}
                             className={cn(
@@ -933,6 +857,7 @@ function WorkExperienceItemForm() {
                             )}>;
                             {field && field.value ? (;
                               format(field && field.value, "MMM yyyy");
+<<<<<<< HEAD
                             ) : (;
 =======
                           <Button;
@@ -1132,44 +1057,26 @@ function WorkExperienceItemForm() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         />;
+=======
+                            ) : (;                              <span>Select date</span>;                        />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </PopoverContent>;
                     </Popover>;
-                    <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          </div>;
-
-
-          <FormField
+                    <FormMessage />;          <FormField
+            control={form && form.control}
+            name="description"          <FormField
             control={form && form.control}
             name="description"
-=======
-                  </FormItem>;                )}
-              />;
-            )}
-          </div>;
-;
-          <FormField;
-            control={form.control}
-            name="description";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          <FormField
-            control={form && form.control}
-            name="description"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             render={({ field }) => (;
               <FormItem>;
                 <div className="flex justify-between items-center">;
                   <FormLabel>Description</FormLabel>;
                   <div className="flex gap-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <AIEnhancementButton
                       options={{
 
                         enhancementType: "work-description",
+<<<<<<< HEAD
                         content: field && field.value || "",
 
 =======
@@ -1327,11 +1234,15 @@ function WorkExperienceItemForm() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     >;
+=======
+                        content: field && field.value || "",                    >;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       AI Writer;
                     </Button>;
                   </div>;
                 </div>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1350,115 +1261,12 @@ function WorkExperienceItemForm() {
 =======
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
+=======
+
+                  <Textarea;
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role...";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     className="min-h-[150px]";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          />;
-
-=======
-              </FormItem>;
-            )}
-          />;
-          ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <div className="flex justify-end gap-2">;
-            <Button type="button" variant="outline" onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-<<<<<<< HEAD
-              ) : (;
-                <>Save</>;
-              )}
-=======
-              </FormItem>)}
-          />;
-          <div className="flex justify - end gap - 2">;
-            <Button type="button" variant="outline" on_click={on_cancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-                  Saving...;
-                </>) : (
-                <>Save</>)}
-
-=======
-              ) :(;
-                <>Save</>;
-              )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        defaultOptions={{;
-          enhancementType: "work-description",;
-          content: form && form.getValues("description") || "",;
-=======
-      <AIEnhancementDialog
-        title="Enhance Work Experience Description"
-        isOpen={isEnhancementDialogOpen}
-        onClose={() => setIsEnhancementDialogOpen(false)}
-        onApply={handleAIEnhancement}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form && form.getValues("description") || ""}
-      />;
-    </>;
-  );
-}
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <AIEnhancementDialog;
-        title="Enhance Work Experience Description";
-        is_open={isEnhancementDialogOpen}
-        on_close={() => setIsEnhancementDialogOpen (false)}
-        on_apply={handleAIEnhancement}
-        default_options={{
-          enhancement_type: "work - description",
-          content: form.get_values ("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initial_content={form.get_values ("description") || ""}
-      />;
-    </>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 }
 ;
 
@@ -1476,15 +1284,15 @@ function WorkExperienceItemForm() {
       />;
     </>;
   ),;}
- is current: z.boolean () .default (false);
-description: z.string () .optional ();
+ is current: z.boolean () .default (false),
+  description: z.string () .optional ();
 location: z.string () .optional () 
 });
 type FormValues = z.infer<typeof formSchema>;
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience) 
 };
-setIsEnhancementDialogOpen (false);
+setIsEnhancementDialogOpen (false)
 };
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
@@ -1506,7 +1314,11 @@ setIsEnhancementDialogOpen (false);
 }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

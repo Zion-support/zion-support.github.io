@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -57,6 +58,19 @@ interface FeatureCardProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   className?: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  className?: string;
+}
+export default function FeatureCard({
+  icon
+  title
+  description
+  features
+  gradient
+  className = ''
+}: FeatureCardProps) {
+  className?: string;  className?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export default /**
  * FeatureCard - Function description
@@ -64,6 +78,7 @@ export default /**
 function FeatureCard() {
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -103,3 +118,8 @@ function FeatureCard() {
     </div>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      </ul>;
+    </div>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

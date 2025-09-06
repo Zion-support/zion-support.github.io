@@ -88,7 +88,6 @@ const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
 for (const file of allFiles) {
   try {
     const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
     if (content.includes('') |content.includes('
 const fs = require('fs'),;
 const path = require('path'),;
@@ -101,8 +100,11 @@ const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🔍 Debugging Next.js project structure...'),;
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd()),;
@@ -124,8 +126,11 @@ if (fs.existsSync('package.json')) {;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -142,8 +147,11 @@ if (fs.existsSync('pages')) {;
   const pages = fs.readdirSync('pages'),;
   const pages = fs.readdirSync('pages');
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 
@@ -159,10 +167,8 @@ const problematicFiles = [];
 =======
 const problematicFiles = [],;
 const problematicFiles = [];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -192,6 +198,8 @@ for (const file of allFiles) {;
 =======
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       problematicFiles.push(file);
     }
   } catch (error) {
@@ -223,6 +231,7 @@ function getAllFiles(dir, extensions) {
   }
   return files;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -241,3 +250,7 @@ function getAllFiles(dir, extensions) {
 console.log('✅ Debug completed');
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+;
+console.log('✅ Debug completed'),;console.log('✅ Debug completed');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -74,3 +75,6 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

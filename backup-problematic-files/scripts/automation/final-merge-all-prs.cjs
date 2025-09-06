@@ -107,5 +107,10 @@ this.log(" Resolved conflicts "in")
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      "successRate"
+      "successRate"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -106,6 +107,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 
@@ -117,6 +120,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
+<<<<<<< HEAD
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -498,6 +502,9 @@ time_markers: generated.time_markers || {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       transcript: generated.transcript,
+=======
+Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;      transcript: generated.transcript,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
       best_quote: generated.best_quote || '',
@@ -520,6 +527,7 @@ time_markers: generated.time_markers || {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     const episode = {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -540,3 +548,6 @@ time_markers: generated.time_markers || {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }},
@@ -93,11 +94,14 @@ files.forEach((file) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
         return match;
       },
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,6 +161,8 @@ if (&&) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           modified = true;
           return match + ";";
         }
@@ -164,6 +170,7 @@ if (&&) {
       },
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,6 +227,12 @@ console.log(`\nTotal files fixed: ${totalFixed}`);
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }},
 ,
 // Run all fixes,
@@ -231,6 +244,7 @@ fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -239,6 +253,8 @@ console.log('🎉 Syntax error fixes completed');
 }},
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -254,6 +270,7 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -343,3 +360,6 @@ const main = () => {
 
 main();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

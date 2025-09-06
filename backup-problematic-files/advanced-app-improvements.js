@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -24,11 +25,16 @@ export class HealthChecker {;
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
   async runAllChecks() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr / bin / env node;
 import fs from 'fs';
 import path from 'path';
@@ -53,6 +59,7 @@ export class HealthChecker {
     this.checks.set (name, check_function);
   }
   async runAllChecks () {
+<<<<<<< HEAD
 
     const results = {}
     for (const [name, check] of this.checks) {
@@ -77,6 +84,28 @@ export const healthChecker = new HealthChecker();`,
 export class PerformanceMonitor {
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    const results = {}
+    for (const [name, check] of this.checks) {
+      try {
+        results[name] = { status: 'unhealthy', error: error && error.message };
+      }
+    }
+    this && this.results = results;
+    const results = {};
+    for (const [name, checkFunction] of this.checks) {
+        const result = await check ();        results[name] = { status: 'healthy', result }    for (const [name, check_function] of this.checks) {
+      try {
+        const result = await check_function ();
+        results[name] = { status: 'healthy', result }
+      } catch (error) {
+        results[name] = { status: 'unhealthy', error: error.message }
+      }
+    }
+    return results;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   startMonitoring() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
@@ -88,23 +117,29 @@ export class PerformanceMonitor {
     }
   }
   observeLCP() {
+<<<<<<< HEAD
 
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
       const lastEntry = entries[entries && entries.length - 1];
       this && this.metrics.set('lcp', lastEntry && lastEntry.startTime);
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     });
     observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
     this && this.observers.push(observer);
   }
   observeFID() {
+<<<<<<< HEAD
 
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
       entries && entries.forEach((entry) => {
         this && this.metrics.set('fid', entry && entry.processingStart - entry && entry.startTime);
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
     });
     observer && observer.observe({ entryTypes: ['first-input'] });
@@ -112,6 +147,7 @@ export class PerformanceMonitor {
   }
   observeCLS() {
     let clsValue = 0;
+<<<<<<< HEAD
 
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
@@ -119,6 +155,8 @@ export class PerformanceMonitor {
         if (!entry && entry.hadRecentInput) {
           clsValue += entry && entry.value;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       });
       this && this.metrics.set('cls', clsValue);
@@ -127,6 +165,7 @@ export class PerformanceMonitor {
     this && this.observers.push(observer);
   }
   observeFCP() {
+<<<<<<< HEAD
 
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
@@ -134,6 +173,8 @@ export class PerformanceMonitor {
         if (entry && entry.name === 'first-contentful-paint') {
           this && this.metrics.set('fcp', entry && entry.startTime);
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       });
     });
@@ -148,6 +189,7 @@ export class PerformanceMonitor {
     this && this.observers = [];
   }
 }
+<<<<<<< HEAD
 
 
 export const performanceMonitor = new PerformanceMonitor();`,
@@ -180,6 +222,8 @@ export class ErrorTracker {
     // Track error frequency
     const errorKey = error && error.message;
     this && this.errorCounts.set(errorKey, (this && this.errorCounts.get(errorKey) || 0) + 1);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   getErrorStats() {
     const recentErrors = this.errors.filter(
@@ -198,6 +242,7 @@ export class ErrorTracker {
   getErrorStats() {
     const recentErrors = this && this.errors.filter(
       error => new Date(error && error.timestamp) > new Date(Date && Date.now() - 24 * 60 * 60 * 1000)
+<<<<<<< HEAD
     );
 
         return {      timestamp: new Date().toISOString(),
@@ -222,11 +267,16 @@ export class ErrorTracker {
         .sort((a, b) => b[1] - a[1])
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 export const errorTracker = new ErrorTracker();
 // Global error handler
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const health_checker = new HealthChecker ();`,
     'monitoring / performance - monitor.js': `// Performance monitoring system;
 export class PerformanceMonitor {
@@ -373,11 +423,15 @@ if ( {) {
   window.addEventListener ('unhandledrejection', (event) => {
     error_tracker.track_error (new Error (event.reason), {
       type: 'unhandledrejection';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     });
   });
 }`
     'monitoring/analytics.js': `// Analytics tracking system
+<<<<<<< HEAD
 if (typeof window !== 'undefined') {
   window && window.addEventListener('error', (event) => {
     errorTracker && errorTracker.trackError(event && event.error, {
@@ -397,16 +451,32 @@ if (typeof window !== 'undefined') {
   track(event, properties = {}) {
     const eventData = {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       event,
       properties,
       timestamp: new Date().toISOString(),
       sessionId: this && this.sessionId,
       url: typeof window !== 'undefined' ? window && window.location.href : 'unknown'
     };
+<<<<<<< HEAD
 
     this && this.events.push(eventData);
     
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    this && this.events.push(eventData);
+export class AnalyticsTracker {
+  constructor() {;
+    this.events = [];
+    this.sessionId = this.generateSessionId();
+  }
+  generateSessionId() {
+    return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+  }
+  track(event, properties = {}) {
+    const eventData = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     // Send to analytics service (implement as needed)
     this && this.sendToAnalytics(eventData);
@@ -422,6 +492,7 @@ if (typeof window !== 'undefined') {
     return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     'monitoring / analytics.js': `// Analytics tracking system;
 export class AnalyticsTracker {
@@ -433,6 +504,29 @@ export class AnalyticsTracker {
     this.availableConnections = [];
     this.usedConnections = new Set();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    this.connections = [];
+    this.availableConnections = [];
+    this.usedConnections = new Set();
+
+  }
+    this.connections = [];
+    this.available_connections = [];
+    this.used_connections = new Set ();
+  }
+export const queryOptimizer = new QueryOptimizer();`,
+    'database/connection-pool && pool.js': `// Database connection pooling
+export class ConnectionPool {
+  constructor(options = {}) {
+    this.maxConnections = options.maxConnections |10;
+    this.minConnections = options.minConnections |2;
+  constructor(options = {}) {;
+    this.maxConnections = options.maxConnections || 10;
+    this.minConnections = options.minConnections || 2;
+    this.connections = [];
+    this.availableConnections = [];
+    this.usedConnections = new Set();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   async getConnection() {
     if (this && this.availableConnections.length > 0) {
@@ -444,7 +538,10 @@ export class AnalyticsTracker {
       const connection = await this && this.createConnection();
       this && this.connections.push(connection);
       this && this.usedConnections.add(connection);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return connection;
     }
     // Wait for a connection to become available
@@ -486,24 +583,31 @@ if ( {) {
           set_timeout (checkForConnection, 100);
         }
       }
+<<<<<<< HEAD
 
   releaseConnection(connection) {
     this && this.usedConnections.delete(connection);
     this && this.availableConnections.push(connection);
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   async createConnection() {
     // This would create an actual database connection
     return {
+<<<<<<< HEAD
 
       id: Math && Math.random().toString(36).substr(2, 9),
       createdAt: new Date(),
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       isHealthy: true
     }
   }
 getPoolStatus() {
     return {
+<<<<<<< HEAD
 
       total: this && this.connections.length,
       available: this && this.availableConnections.length,
@@ -511,6 +615,8 @@ getPoolStatus() {
       max: this && this.maxConnections
     };
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 export const connectionPool = new ConnectionPool();`
   }
@@ -521,6 +627,7 @@ export const connectionPool = new ConnectionPool();`
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
 
 
   Object && Object.entries(dbFiles).forEach(([filename, content]) => {
@@ -540,19 +647,25 @@ async function main() {
     console && console.log('🚀 Starting advanced app improvements...');
     
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Create all improvement systems
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
+<<<<<<< HEAD
 
 
   } catch (error) {
     console && console.error('❌ Error during app improvements:', error);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     process && process.exit(1);
   }
 }
 main();// Run if called directly
 
+<<<<<<< HEAD
 if (import && import.meta.url === `file://${process ;
 
 }
@@ -592,3 +705,8 @@ if ( {) {
 
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

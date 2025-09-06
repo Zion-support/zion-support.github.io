@@ -1,22 +1,33 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 ;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
 
+=======
+const { execSync } = require('child_process');
+class PerformanceOptimizer {
+  constructor() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 
   }
   async optimizePerformance() {
+<<<<<<< HEAD
 
 =======
 class PerformanceOptimizer {
@@ -95,6 +106,8 @@ class PerformanceOptimizer {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       this.log('Starting performance optimization...');
       // Analyze bundle size
@@ -159,10 +172,14 @@ class PerformanceOptimizer {
     });
     return files;
   }
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -171,6 +188,7 @@ class PerformanceOptimizer {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
   }
 =======
@@ -292,306 +310,176 @@ const path = require('path')
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
 =======
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:scripts/performance-optimizer.cjs
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('⚡ Starting Performance Optimization...');
-
 class PerformanceOptimizer {
   constructor() {
-    this.reportFile = path.join(__dirname, '..', 'performance-optimization-report.json');
-    this.results = {
-      timestamp: new Date().toISOString(),
-      bundleAnalysis: null,
-      imageOptimization: null,
-      codeSplitting: null,
-      caching: null,
-      overall: { status: 'unknown', score: 0 }
-    };
-<<<<<<< HEAD
+    this.projectRoot = process.cwd();
+    this.optimizations = [];
   }
 
-  async runCommand(command, description) {
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async optimizeBundleSize() {
+    this.log('📦 Optimizing bundle size...');
+    
     try {
-      console.log(`🔍 ${description}...`);
-      const result = execSync(command, { 
-        encoding: 'utf8', 
+      // Analyze bundle
+      const analyzeResult = execSync('npm run build:analyze', { 
+        cwd: this.projectRoot, 
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
+        encoding: 'utf8'
       });
-      console.log(`✅ ${description} - Success`);
-      return { success: true, result };
+      
+      this.optimizations.push({
+        type: 'bundle-analysis',
+        status: 'completed',
+        details: 'Bundle analysis completed successfully'
+      });
+      
+      this.log('✅ Bundle analysis completed', 'SUCCESS');
     } catch (error) {
-      console.log(`❌ ${description} - Failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log('⚠️ Bundle analysis not available, continuing...', 'WARNING');
     }
-  }
-
-  async analyzeBundle() {
-    const result = await this.runCommand('npm run build:analyze', 'Bundle Analysis');
-    this.results.bundleAnalysis = result;
   }
 
   async optimizeImages() {
-    try {
-      // Check if images exist and optimize them
-      const publicDir = path.join(__dirname, '..', 'public');
-      const images = fs.readdirSync(publicDir).filter(file => 
-        file.match(/\.(jpg|jpeg|png|gif|webp)$/i)
-      );
+    this.log('🖼️ Optimizing images...');
+    
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
+    const publicDir = path.join(this.projectRoot, 'public');
+    
+    if (fs.existsSync(publicDir)) {
+      const images = this.findImages(publicDir, imageExtensions);
       
-      this.results.imageOptimization = {
-        success: true,
-        imagesFound: images.length,
-        optimization: 'Images are already optimized for web delivery'
-      };
-      console.log('✅ Image Optimization - Success');
-    } catch (error) {
-      this.results.imageOptimization = { success: false, error: error.message };
-      console.log(`❌ Image Optimization - Failed: ${error.message}`);
-    }
-  }
-
-  async checkCodeSplitting() {
-    try {
-      // Check if dynamic imports are used
-      const srcDir = path.join(__dirname, '..', 'src');
-      const pagesDir = path.join(__dirname, '..', 'pages');
-      
-      let dynamicImports = 0;
-      const checkDirectory = (dir) => {
-        if (fs.existsSync(dir)) {
-          const files = fs.readdirSync(dir, { withFileTypes: true });
-          files.forEach(file => {
-            const filePath = path.join(dir, file.name);
-            if (file.isDirectory()) {
-              checkDirectory(filePath);
-            } else if (file.name.endsWith('.tsx') || file.name.endsWith('.ts')) {
-              const content = fs.readFileSync(filePath, 'utf8');
-              const matches = content.match(/import\(/g);
-              if (matches) {
-                dynamicImports += matches.length;
-              }
-            }
-          });
+      for (const image of images) {
+        try {
+          // Basic image optimization suggestions
+          const stats = fs.statSync(image);
+          if (stats.size > 100000) { // > 100KB
+            this.optimizations.push({
+              type: 'image-optimization',
+              file: image,
+              size: stats.size,
+              recommendation: 'Consider compressing this image'
+            });
+          }
+        } catch (error) {
+          // Skip files that can't be processed
         }
-      };
-      
-      checkDirectory(srcDir);
-      checkDirectory(pagesDir);
-      
-      this.results.codeSplitting = {
-        success: true,
-        dynamicImports,
-        recommendation: dynamicImports > 0 ? 'Good code splitting detected' : 'Consider adding dynamic imports for better performance'
-      };
-      console.log('✅ Code Splitting Check - Success');
-    } catch (error) {
-      this.results.codeSplitting = { success: false, error: error.message };
-      console.log(`❌ Code Splitting Check - Failed: ${error.message}`);
-    }
-  }
-
-  async checkCaching() {
-    try {
-      // Check Next.js caching configuration
-      const nextConfigPath = path.join(__dirname, '..', 'next.config.js');
-      const nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
-      
-      const hasCaching = nextConfig.includes('cache') || nextConfig.includes('Cache');
-      const hasImageOptimization = nextConfig.includes('images');
-      
-      this.results.caching = {
-        success: true,
-        hasCaching,
-        hasImageOptimization,
-        recommendation: hasCaching ? 'Caching configured' : 'Consider adding caching configuration'
-      };
-      console.log('✅ Caching Check - Success');
-    } catch (error) {
-      this.results.caching = { success: false, error: error.message };
-      console.log(`❌ Caching Check - Failed: ${error.message}`);
-    }
-  }
-
-  calculateOverallScore() {
-    let totalScore = 0;
-    let maxScore = 0;
-
-    // Bundle Analysis (30% weight)
-    if (this.results.bundleAnalysis?.success) {
-      totalScore += 100 * 0.3;
-    }
-    maxScore += 100 * 0.3;
-
-    // Image Optimization (25% weight)
-    if (this.results.imageOptimization?.success) {
-      totalScore += 100 * 0.25;
-    }
-    maxScore += 100 * 0.25;
-
-    // Code Splitting (25% weight)
-    if (this.results.codeSplitting?.success) {
-      totalScore += 100 * 0.25;
-    }
-    maxScore += 100 * 0.25;
-
-    // Caching (20% weight)
-    if (this.results.caching?.success) {
-      totalScore += 100 * 0.2;
-    }
-    maxScore += 100 * 0.2;
-
-    const finalScore = Math.round((totalScore / maxScore) * 100);
-    this.results.overall.score = finalScore;
-    this.results.overall.status = finalScore >= 80 ? 'excellent' : 
-                                 finalScore >= 60 ? 'good' : 
-                                 finalScore >= 40 ? 'fair' : 'poor';
-    
-    return finalScore;
-  }
-
-  async generateReport() {
-    const score = this.calculateOverallScore();
-    
-    fs.writeFileSync(this.reportFile, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Performance optimization report saved to: ${this.reportFile}`);
-    console.log(`🎯 Overall Performance Score: ${score}/100 (${this.results.overall.status})`);
-  }
-
-  async run() {
-    try {
-      console.log('🚀 Starting performance optimization...');
-      
-      await this.analyzeBundle();
-      await this.optimizeImages();
-      await this.checkCodeSplitting();
-      await this.checkCaching();
-      await this.generateReport();
-      
-      console.log('🎉 Performance optimization completed successfully!');
-    } catch (error) {
-      console.log(`❌ Performance optimization failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-// Run the performance optimizer
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-#!/usr/bin/env node;
-;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class PerformanceOptimizer {
-  constructor() {
-    this.optimizations = [];
-    this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
-    this.ensureLogDirectory();
-  }
-
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async optimizePerformance() {
-    try {
-      this.log('Starting performance optimization...');
-      
-      // Analyze bundle size
-      const bundleAnalysis = this.analyzeBundleSize();
-      
-      // Optimize images
-      const imageOptimization = this.optimizeImages();
-      
-      // Check for unused dependencies
-      const dependencyAnalysis = this.analyzeDependencies();
-      
-      // Generate optimization report
-      const report = {
-        timestamp: new Date().toISOString(),
-        bundleSize: bundleAnalysis,
-        imageOptimization: imageOptimization,
-        dependencies: dependencyAnalysis,
-        recommendations: this.generateRecommendations()
-      };
-      
-      this.saveReport(report);
-      this.log('Performance optimization completed');
-      return report;
-    } catch (error) {
-      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  analyzeBundleSize() {
-    try {
-      // Check if dist directory exists
-      const distPath = path.join(__dirname, '..', 'dist');
-      if (!fs.existsSync(distPath)) {
-        return { error: 'Build directory not found. Run npm run build first.' };
       }
-
-      const files = this.getFilesRecursively(distPath);
-      let totalSize = 0;
-      let gzippedSize = 0;
-      
-      files.forEach(file => {
-        const stats = fs.statSync(file);
-        totalSize += stats.size;
-        
-        // Estimate gzipped size (roughly 30% of original)
-        gzippedSize += Math.floor(stats.size * 0.3);
-      });
-
-      return {
-        totalSize: this.formatBytes(totalSize),
-        gzippedSize: this.formatBytes(gzippedSize),
-        fileCount: files.length,
-        recommendations: this.getBundleRecommendations(totalSize, files.length)
-      };
-    } catch (error) {
-      return { error: error.message };
     }
+    
+    this.log(`✅ Found ${this.optimizations.filter(o => o.type === 'image-optimization').length} images to optimize`, 'SUCCESS');
   }
 
-  getFilesRecursively(dir) {
-    let files = [];
+  findImages(dir, extensions) {
+    const images = [];
     const items = fs.readdirSync(dir);
     
-    items.forEach(item => {
+    for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files = files.concat(this.getFilesRecursively(fullPath));
-      } else {
-        files.push(fullPath);
+        images.push(...this.findImages(fullPath, extensions));
+      } else if (stat.isFile()) {
+        const ext = path.extname(item).toLowerCase();
+        if (extensions.includes(ext)) {
+          images.push(fullPath);
+        }
       }
-    });
+    }
+    
+    return images;
+  }
+
+  async optimizeCodeSplitting() {
+    this.log('🔀 Optimizing code splitting...');
+    
+    // Check for dynamic imports
+    const srcDir = path.join(this.projectRoot, 'src');
+    const pagesDir = path.join(this.projectRoot, 'pages');
+    const appDir = path.join(this.projectRoot, 'app');
+    
+    const directories = [srcDir, pagesDir, appDir].filter(dir => fs.existsSync(dir));
+    
+    for (const dir of directories) {
+      const files = this.getAllFiles(dir, ['.js', '.jsx', '.ts', '.tsx']);
+      
+      for (const file of files) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          
+          // Check for dynamic imports
+          const dynamicImports = content.match(/import\s*\(\s*['"`][^'"`]+['"`]\s*\)/g);
+          if (dynamicImports) {
+            this.optimizations.push({
+              type: 'code-splitting',
+              file: file,
+              dynamicImports: dynamicImports.length,
+              status: 'good'
+            });
+          }
+          
+          // Check for large components that could be split
+          if (content.length > 5000) {
+            this.optimizations.push({
+              type: 'large-component',
+              file: file,
+              size: content.length,
+              recommendation: 'Consider splitting this component'
+            });
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+    
+    this.log('✅ Code splitting analysis completed', 'SUCCESS');
+  }
+
+  getAllFiles(dir, extensions) {
+    const files = [];
+    if (!fs.existsSync(dir)) return files;
+    
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files.push(...this.getAllFiles(fullPath, extensions));
+      } else if (stat.isFile()) {
+        const ext = path.extname(item).toLowerCase();
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
     
     return files;
   }
 
+<<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -606,6 +494,9 @@ class PerformanceOptimizer {
   }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
     if (totalSize > 1024 * 1024) { // > 1MB
@@ -663,7 +554,11 @@ class PerformanceOptimizer {
   }
   getImageRecommendations(imageFiles) {
     const recommendations = [];
+<<<<<<< HEAD
     const unoptimizedImages = imageFiles.filter(file =>
+=======
+    const unoptimizedImages = imageFiles.filter(file => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       !file.endsWith('.webp') && !file.endsWith('.avif')
     );
     if (unoptimizedImages.length > 0) {
@@ -755,6 +650,7 @@ class PerformanceOptimizer {
 }
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 =======
 <<<<<<< HEAD
@@ -762,6 +658,8 @@ const optimizer = new PerformanceOptimizer();
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
@@ -779,8 +677,12 @@ optimizer.optimizePerformance().then(report => {
 }).catch(error => {
   console.error('Error running performance optimizer:', error.message);
   process.exit(1);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;
@@ -917,7 +819,11 @@ monitor.runBundleAnalysis()
       this.log("⚠️ Public directory not found", "WARN")
       return,,
 }
+<<<<<<< HEAD
 =======
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]
     const images = this.findFiles(publicDir, imageExtensions)
     this.log(`🖼️ Found ${images.length} images`, "INFO")
@@ -1027,6 +933,94 @@ monitor.runBundleAnalysis()
   }
   generateReport() {
     this.ensureDirectories()
+<<<<<<< HEAD
+========
+  async generatePerformanceReport() {
+    this.log('📊 Generating performance report...');
+    
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:scripts/performance-optimizer.cjs
+    const report = {
+      timestamp: new Date().toISOString(),
+      optimizations: this.optimizations,
+      recommendations: this.generateRecommendations(),
+      metrics: {
+        totalOptimizations: this.optimizations.length,
+        imageOptimizations: this.optimizations.filter(o => o.type === 'image-optimization').length,
+        codeSplitting: this.optimizations.filter(o => o.type === 'code-splitting').length,
+        largeComponents: this.optimizations.filter(o => o.type === 'large-component').length
+      }
+    };
+    
+    fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
+    this.log('✅ Performance report generated', 'SUCCESS');
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    const imageOptimizations = this.optimizations.filter(o => o.type === 'image-optimization');
+    if (imageOptimizations.length > 0) {
+      recommendations.push(`Optimize ${imageOptimizations.length} large images`);
+    }
+    
+    const largeComponents = this.optimizations.filter(o => o.type === 'large-component');
+    if (largeComponents.length > 0) {
+      recommendations.push(`Consider splitting ${largeComponents.length} large components`);
+    }
+    
+    const codeSplitting = this.optimizations.filter(o => o.type === 'code-splitting');
+    if (codeSplitting.length > 0) {
+      recommendations.push(`Good: Found ${codeSplitting.length} files with dynamic imports`);
+    }
+    
+    return recommendations;
+  }
+
+  async run() {
+    this.log('🚀 Starting Performance Optimizer');
+    this.log('='.repeat(50));
+    
+    await this.optimizeBundleSize();
+    await this.optimizeImages();
+    await this.optimizeCodeSplitting();
+    await this.generatePerformanceReport();
+    
+    this.log('\n📊 Performance Optimization Summary');
+    this.log(`Total optimizations identified: ${this.optimizations.length}`);
+    this.log(`Image optimizations: ${this.optimizations.filter(o => o.type === 'image-optimization').length}`);
+    this.log(`Code splitting opportunities: ${this.optimizations.filter(o => o.type === 'code-splitting').length}`);
+    this.log(`Large components: ${this.optimizations.filter(o => o.type === 'large-component').length}`);
+    
+    this.log('\n✅ Performance optimization completed!');
+  }
+}
+<<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
+}
+const optimizer = new PerformanceOptimizer()
+optimizer.run().catch(console.error)
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
+>>>>>>> origin/main
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+optimizer.run().catch(console.error);
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
+========
+
+const optimizer = new PerformanceOptimizer();
+optimizer.run().catch(console.error);
+
+module.exports = PerformanceOptimizer;
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:scripts/performance-optimizer.cjs
+=======
     const report = {
       timestamp: new Date().toISOString(),
       metrics: this.metrics,
@@ -1079,18 +1073,4 @@ monitor.runBundleAnalysis()
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
->>>>>>> origin/main
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-optimizer.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -14,19 +14,15 @@ type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { createContext, useContext, useEffect, useState } from "react"
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 type Theme = "dark" | "light" | "system"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -100,20 +96,18 @@ export function ThemeProvider({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
+=======
+}    () => (localStorage.getItem("theme") as Theme) || defaultTheme
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   )
   useEffect(() => {
     const root = window.document.documentElement
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
     if (theme === &quot;system&quot;) {
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
         .matches
         ? &quot;dark&quot;
+<<<<<<< HEAD
         : &quot;light&quot;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -140,12 +134,16 @@ export function ThemeProvider({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       root.classList.add(systemTheme)
+=======
+        : &quot;light&quot;      root.classList.add(systemTheme)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return
     }
     root.classList.add(theme)
   }, [theme])
   const value = {
     theme
+<<<<<<< HEAD
     setTheme: (theme: Theme) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -412,3 +410,8 @@ export const useTheme = () => {
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    setTheme: (theme: Theme) => {  return context
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9,6 +9,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -25,6 +27,7 @@ import { Form;
 import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
+<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -62,13 +65,17 @@ import {useAuth} from '@/hooks/useAuth';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define schema for form validation
+=======
+import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const projectSchema = z.object({
-  title: z.string().min(1, 'Project title is required');
+  title: z.string().min(1, 'Project title is required'),
   description: z.string().optional()
   technologies: z.string().optional()
   image_url: z.string().optional()
   github_url: z
+<<<<<<< HEAD
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
 <<<<<<< HEAD
 =======
@@ -81,6 +88,9 @@ const projectSchema = z.object({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from 'react';
+=======
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])import {useState} from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 import {z} from 'zod';
@@ -89,6 +99,7 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -149,10 +160,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     .optional();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -236,29 +250,30 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   const isEditing = !!project,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
     defaultValues: {;
-      title: project?.title || '',;
-      description: project?.description || '',;
-<<<<<<< HEAD
-      technologies: project?.technologies ? project && project.technologies.join() : '',;
-=======
-      technologies: project?.technologies ? project.technologies.join() : '',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      image_url: project?.image_url || '',;
+      title: project?.title || '',,
+  description: project?.description || '',;
+      technologies: project?.technologies ? project && project.technologies.join() : '',;      image_url: project?.image_url || '',;
       github_url: project?.github_url || '',;
       demo_url: project?.demo_url || '',;
       pdf_url: project?.pdf_url || ''}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   });
   const onSubmit = async (data: ProjectFormValues) => {
     if (!user) return;
+<<<<<<< HEAD
     setIsLoading(true)
     try {
       const projectData: PortfolioProject = {
@@ -270,6 +285,22 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         github_url: data.github_url |undefined
         demo_url: data.demo_url |undefined
         pdf_url: data.pdf_url}
+=======
+
+    setIsLoading(true),;
+
+    try {;
+      const projectData: PortfolioProject = {;
+        title: data && data.title,,
+  description: data && data.description,;
+        technologies: data && data.technologies ? ;
+          data && data.technologies.split().map(tech => tech && tech.trim()) : [],;
+        image_url: data && data.image_url,;
+        github_url: data && data.github_url || undefined,;
+        demo_url: data && data.demo_url || undefined,;
+        pdf_url: data && data.pdf_url},;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       let success = false;
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
@@ -277,6 +308,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         const projectId = await addProject(projectData);
         success = !!projectId
       }
+<<<<<<< HEAD
       if (success) {
         onSuccess();
 <<<<<<< HEAD
@@ -359,13 +391,21 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  },
-  };
-  },
-<<<<<<< HEAD
+=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (success) {;
+
+        onSuccess();
+        form && form.reset();;
+      if (success) {;
+        onSuccess();
+        form.reset()
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  },
+
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -373,10 +413,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField
           control={form && form.control}
+<<<<<<< HEAD
           name="title"
 <<<<<<< HEAD
 =======
@@ -818,6 +861,9 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex justify-end space-x-2 pt-4">
+=======
+          name="title"        <div className="flex justify-end space-x-2 pt-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
@@ -829,6 +875,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -875,13 +922,15 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
 // Define schema for form validation;
 const project_schema = z.object ({
-  title: z.string ().min (1, 'Project title is required');
+  title: z.string ().min (1, 'Project title is required'),
   description: z.string ().optional (),
   technologies: z.string ().optional (),
   image_url: z.string ().optional (),
@@ -893,6 +942,7 @@ const project_schema = z.object ({
     .optional ();
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1100,3 +1150,6 @@ try {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

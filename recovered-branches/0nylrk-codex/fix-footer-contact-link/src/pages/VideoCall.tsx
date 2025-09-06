@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect  } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -19,6 +22,7 @@ import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { Button  } from '@/components/ui/button';
 import { toast } from 'sonner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -26,6 +30,8 @@ import { toast } from 'sonner';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -34,6 +40,7 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -57,39 +64,19 @@ import { VideoCallRoom } from "@/components/video/VideoCallRoom";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const { roomId } = useParams();
-  const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<
-    Array<{
-      id: string;
-      name: string;
-      avatar?: string;
-      isMuted?: boolean;
-      isVideoEnabled?: boolean;
-      isScreenSharing?: boolean;
-      isHost?: boolean;
-    }>
-  >([
-    {
-      id: "user-1",
-      name: "You",
-      isVideoEnabled: true,
-      isMuted: false,
-    },
-  ]);
-
-  const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<Array<{
-    id: string
-    name: string
-    avatar?: string;
+import {useState, useEffect} from 'react';
+import {use_params, use_navigate} from 'react-router-dom';
+import {Header} from '@/components / Header';
+import {Footer} from '@/components / Footer';
+import {SEO} from '@/components / SEO';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {Button} from '@/components / ui / button';
+import {toast} from 'sonner';    avatar?: string;
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
@@ -140,7 +127,6 @@ export default function VideoCall() {;
     isScreenSharing?: boolean,;
     isHost?: boolean;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: string,
     name: string,
     avatar?: string
@@ -155,23 +141,24 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
   ]),
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
       setHasJoined(true);
       setIsJoining(false);
     setHasJoined(false);
-    toast && toast.info("Call ended", {;
-      description: "You have left the meeting";
+    toast && toast.info("Call ended", {,
+  description: "You have left the meeting";
     });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -183,13 +170,9 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
-<<<<<<< HEAD
-
 
   ]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleJoinCall = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -198,19 +181,15 @@ export default function VideoCall() {;
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`,
       });
-    }, 1500);
-  };
-<<<<<<< HEAD
+    }, 1500)
+};
 
   const handleLeaveCall = () => {;
-
-=======
-  const handleLeaveCall = () => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setHasJoined(false);
-    toast && toast.info("Call ended", {;
-      description: "You have left the meeting";
+    toast && toast.info("Call ended", {,
+  description: "You have left the meeting";
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -400,6 +379,8 @@ export default function VideoCall() {;
               onLeave={handleLeaveCall}
             />
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button
@@ -412,6 +393,7 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             {/* This button is just for demo/testing purposes */}
@@ -458,9 +440,13 @@ export default function VideoCall() {;
     </>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
+=======
+      </main>;
+      <Footer />;
+    </>;  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -468,6 +454,7 @@ export default function VideoCall() {;
     }
   ]);
 ;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -622,3 +609,6 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -43,9 +43,8 @@ export type PolymorphicComponentProp<
 // Safe ref casting helper type - this is the key to fixing our issues
 // We need to use a type that is compatible with both Slot's ref and React's ref handling
 export type SafeRef<T> = React && React.Ref<T>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -54,6 +53,8 @@ export type SafeRef<T> = React && React.Ref<T>;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Sidebar specific types
 <<<<<<< HEAD
 export type SidebarState = "expanded" | "collapsed",
@@ -99,6 +100,7 @@ export type SidebarContext = {
   open: boolean;
   set_open: (open: boolean) => void;
   open_mobile: boolean;
+<<<<<<< HEAD
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean;
   toggleSidebar: () => void;
@@ -218,3 +220,7 @@ export type SidebarContext = {;
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  setOpenMobile: (open: boolean) => void
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import {;
@@ -7,14 +6,10 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -110,6 +105,15 @@ export function ExportPanel() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { toast } = useToast();
+=======
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";  const { toast } = useToast();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -120,28 +124,14 @@ export function ExportPanel() {
 
   const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    toast({
-      title: `Exporting as ${format.toUpperCase()}`,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
 
         });
       }, 1500));
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        });
-      }, 1500));
-  }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -159,12 +149,6 @@ export function ExportPanel() {
           <Button
             variant="default"
             className="bg-zion-purple hover:bg-zion-purple-dark"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => handleExport("csv")}
           >;
             Export as CSV;
@@ -173,6 +157,7 @@ export function ExportPanel() {
             variant="outline"
             className="border-zion-blue-light text-zion-slate-light"
             onClick={() => handleExport("json")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -302,23 +287,11 @@ function ExportPanel() {
             className="bg-zion-purple hover:bg-zion-purple-dark"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             onClick={() => handleExport('csv')}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             Export as CSV
           </Button>
-<<<<<<< HEAD
-
-=======
-          <Button
-            variant="outline"
-            className="border-zion-blue-light text-zion-slate-light"
-            onClick={() => handleExport("json")}
-          >
-            Export as JSON
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Button 
             variant="outline" 
             className="border-zion-blue-light text-zion-slate-light"
@@ -329,6 +302,7 @@ import { useToast } from "@/hooks/use-toast",;
 export function ExportPanel() {;
   const { toast } = useToast(),;
   const handleExport = (format: 'csv' | 'json') => {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -435,11 +409,14 @@ export function ExportPanel() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >;
             Export as JSON;
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -459,11 +436,13 @@ export function ExportPanel() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
     </Card>);
+}  );
+    </Card>);
 }
-<<<<<<< HEAD
-=======
     </Card>;
   ),;}
  export function ExportPanel () {
@@ -484,7 +463,11 @@ export function ExportPanel() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from './react';
 import { Clock } from './lucide-react';
@@ -16,24 +15,13 @@ interface TalentCardAvailabilityProps {
   availability_type: string;
 }
 
-<<<<<<< HEAD
-=======
-import React from './react';
-import { Clock } from './lucide-react';
-interface TalentCardAvailabilityProps {
-  availability_type: string;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Clock} from "lucide-react";
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+<<<<<<< HEAD
 =======
 =======
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
@@ -165,27 +153,23 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         return 'Full-time';
+=======
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
+};
+  // Format availability status;
+  const getAvailabilityColor = (status: string) => {;
+    switch (status) {;
+      case 'full-time':;        return 'Full-time';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case 'part-time':;
         return 'Part-time';
-
-=======
-  },;
-  ;
-  // Format availability label;
-  const getAvailabilityLabel = (status:string) => {;
-    switch (status) {;
-      case 'full-time':;
-        return 'Full-time',;
-      case 'part-time':;
-        return 'Part-time',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       case 'project-based':;
         return 'Project',;
       default:;
         return status;
-<<<<<<< HEAD
 
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   },
@@ -214,6 +198,9 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
@@ -224,21 +211,9 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
   }
 
   return (
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-      <span>{getAvailabilityLabel(availabilityType)}</span>;
-    </div>;
-  );
-=======
-=======
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
@@ -322,3 +297,5 @@ default: </div>)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -19,11 +20,14 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {supabase} from "@/integrations/supabase/client";
+=======
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import {supabase} from "@/integrations/supabase/client";
 
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { supabase } from '@/integrations / supabase / client';
@@ -53,12 +57,18 @@ export const quoteRequestService = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+import { supabase } from '@/integrations / supabase / client';
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -86,10 +96,10 @@ export const quoteRequestService = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         talent:talent_id (
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return data && data.map((item: any) => ({
 
-<<<<<<< HEAD
-=======
       .select(`;
         *;
       .select(`
@@ -114,26 +124,12 @@ export const quoteRequestService = {
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      .order('created_at', { ascending: false }),
-    
-    if (error) throw error,
-    
-    // Format the data to include talent_name
-    return data.map((item: any) => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
       ...item,
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -322,41 +318,21 @@ export const quoteRequestService = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      updates && updates.replied_at = new Date().toISOString()
-=======
-      updates.replied_at = new Date().toISOString()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    }
+      updates && updates.replied_at = new Date().toISOString()    }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
       const { data } = await supabase
         .from('quote_requests')
         .select('viewed_at')
         .eq('id', id)
-        .single();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      
-      if (!data && data.viewed_at) {
-        updates && updates.viewed_at = new Date().toISOString()
-
-=======
-      if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      }
+        .single();      }
     }
     const { data, error } = await supabase
       .from('quote_requests')
@@ -386,70 +362,6 @@ export const quoteRequestService = {;
     return true
   }
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          display_name);
-      `);
-      .eq ('id', id);
-      .single ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return {
-      ...data;
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-  }
-;
-  // Update quote request status;
-  update_status: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status }
-;
-    // If marking as responded, set replied_at;
-    // Check condition
-if ( {) {
-  $2
-}
-      updates.replied_at = new Date ().toISOString ();
-    }
-    // If marking as in_review and viewed_at is null, set viewed_at;
-    // Check condition
-if ( {) {
-  $2
-}
-      const { data } = await supabase;
-        .from ('quote_requests');
-        .select ('viewed_at');
-        .eq ('id', id);
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        updates.viewed_at = new Date ().toISOString ();
-      }
-    }
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .update (updates);
-      .eq ('id', id);
-      .select ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return data[0] as QuoteRequest;
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       .single(),
     
     if (error) throw error,
@@ -466,6 +378,7 @@ if (throw error) {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -521,6 +434,8 @@ if (throw error) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { supabase } from "@/integrations/supabase/client",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
@@ -612,6 +527,7 @@ export const quoteRequestService = {;
       .delete();
       .eq('id', id),;
     if (error) throw error;
+<<<<<<< HEAD
     return true;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -749,3 +665,6 @@ if (throw error) {
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return true;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

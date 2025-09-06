@@ -29,10 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 =======
 
-
   req: NextApiRequest,
   res: NextApiResponse;
-
 
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -43,8 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req && req.query;
   const body = typeof req && req.body === 'string' ? JSON && JSON.parse(req && req.body) : req && req.body;
-
-
 
   req: NextApiRequest
   res: NextApiResponse

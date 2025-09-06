@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 export type Job = {;
   id: string;
@@ -54,6 +55,8 @@ export type Conversation = {;
 =======
 export interface Application {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Application {;
   id: string;
   name: string;
@@ -63,6 +66,7 @@ export interface Application {;
   skills: string[];
   createdAt: string;
   updatedAt?: string;
+<<<<<<< HEAD
 }
 =======
 
@@ -192,3 +196,6 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

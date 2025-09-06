@@ -12,6 +12,7 @@ const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
+<<<<<<< HEAD
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -65,16 +66,24 @@ const Checkbox = React.forward_ref<;
     className={cn (
       'peer h - 4 w - 4 shrink - 0 rounded - sm border border - primary ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 data-[state = checked]:bg - primary data-[state = checked]:text - primary - foreground',
       class_name)}
+=======
+      className
+    )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {...props}
-  >;
-    <CheckboxPrimitive.Indicator;
-      className={cn ('flex items - center justify - center text - current')}
-    >;
-      <Check className='h - 3 w - 3' />;
-    </CheckboxPrimitive.Indicator>;
-  </CheckboxPrimitive.Root>));
-Checkbox.display_name = CheckboxPrimitive.Root.display_name;
-export { Checkbox }
+  >
+    <CheckboxPrimitive.Indicator
+      className={cn("flex items-center justify-center text-current")}
+    >
+      <Check className="h-3 w-3" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
 
+<<<<<<< HEAD
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { Checkbox }
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

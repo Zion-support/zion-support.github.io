@@ -82,5 +82,10 @@ const { execSync } = require("child_process")
       this.log(` Fatal error in security "audit"`)
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error(" Security audit "failed": ")
+    console.error(" Security audit "failed": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

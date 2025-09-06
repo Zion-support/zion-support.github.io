@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { format } from "date-fns";
@@ -41,12 +42,17 @@ import { format } from "date-fns",
 import { format } from "date-fns";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 /**
+=======
+import {format} from "date-fns";
+import { format } from "date-fns",/**
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * Formats a date string into a readable format
  * @param dateString ISO date string to format
  * @returns Formatted date string
  */
 
 export const formatDate = (dateString: string): string => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
     return format (new Date (date_string), 'PP');
@@ -66,6 +72,8 @@ export const formatDate = (dateString: string): string => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { format } from './date - fns';
 /**;
 * Formats a date string into a readable format;
@@ -77,11 +85,15 @@ export const format_date = (date_string: string): string => {
     return format(new Date(dateString), "PP");
   } catch (e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     return dateString
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -98,6 +110,8 @@ export const format_date = (date_string: string): string => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { format } from "date-fns",;
 /**;
  * Formats a date string into a readable format;
@@ -108,6 +122,7 @@ export const formatDate = (dateString: string): string => {;
   try {;
     return format(new Date(dateString), 'PP');
   } catch (e) {;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return dateString;
@@ -126,3 +141,7 @@ export const formatDate = (dateString: string): string => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return dateString;
+  }>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

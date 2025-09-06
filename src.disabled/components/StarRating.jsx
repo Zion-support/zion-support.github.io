@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -78,3 +79,9 @@ import _React from';react' "export": default function StarRating({ value }) { re
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';=======import React from\';react\' \"export\": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid=\'full-star\' className=\'text-yellow-400\'/> : \"value\": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid=\'half-star\' className=\'text-yellow-400\'/> : <\"FaRegStar\": key={idx} data-testid=\'empty-star\' className=\'text-yellow-400\'/> })} \''\';\';
+const React from";react" export: default function StarRating({ value }) { return [.Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid="full-star" className="text-yellow-400"/> : value: >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid="half-star" className="text-yellow-400"/> : <FaRegStar: key={idx} data-testid="empty-star" className="text-yellow-400"/> })} """;";'"'"
+import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';
+import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

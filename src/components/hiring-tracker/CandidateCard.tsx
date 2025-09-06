@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -44,13 +45,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 =======
 const handleSaveNotes = () => {
     // Here you would save the notes to the database
+=======
+  const handleSaveNotes = () => {    // Here you would save the notes to the database
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // For now, we'll just show a toast
     toast({
 
-
       title: 'Notes saved',
       description: 'Your notes have been saved',
-
 
     })
     setShowNotes(false)
@@ -62,7 +64,6 @@ const handleSaveNotes = () => {
       description: 'Offer has been sent to the talent.'
     })
   }
-
 
 import { useState } from 'react';
 
@@ -141,6 +142,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
+<<<<<<< HEAD
       title: "Notes saved",;
       description: "Your notes have been saved";
     }),;
@@ -155,6 +157,25 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   };
   const candidateName = application.talent_profile?.full_name || "Candidate";
   return (;
+=======
+      title: 'Notes saved',,
+  description: 'Your notes have been saved',;
+    });
+    setShowNotes(false)
+};
+
+  const handleHireConfirmed = () => {;
+    // Hiring process completed via the modal;
+    toast({;
+      title: 'Hiring process initiated',,
+  description: 'Offer has been sent to the talent.',;
+    })
+};
+
+  const candidateName = application && application.talent_profile?.full_name || 'Candidate';
+
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (;
@@ -162,7 +183,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
-
 
             {...provided.dragHandleProps}
           >;
@@ -269,6 +289,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       </DropdownMenuItem>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
@@ -362,8 +386,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
@@ -371,8 +398,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 
                 <Button 
                   variant="outline" 
@@ -380,6 +410,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -394,7 +428,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 =======
 
                 </Button>;
-
 
                 <Button
                   variant='default'
@@ -423,6 +456,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             </CardContent>;
           </Card>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -819,6 +853,8 @@ function CandidateCard() {
 }'"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </Draggable>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useCallback } from 'react';
 // Define MessageEvent type if not available
@@ -6,14 +7,19 @@ import { useEffect, useCallback } from 'react';
 import { useEffect, useCallback  } from './react';
 ;
 // Define MessageEvent if not available;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface Event {
   type: string;
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
+<<<<<<< HEAD
 
 ;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;
@@ -26,9 +32,12 @@ interface MessagePort {
   start (): void;
   close (): void;
 }
+<<<<<<< HEAD
 
 interface MessageEvent < T = any> extends Event {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   data: T;
   origin: string;
   lastEventId: string;
@@ -39,6 +48,7 @@ interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
 }
+<<<<<<< HEAD
 =======
 
 export /**
@@ -53,6 +63,8 @@ function useMessageChannelHandler() {
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       try {
         // Check condition
 if ( {) {
@@ -67,13 +79,17 @@ if ( {) {
 }
           on_error (error as Error);
         }
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -106,3 +122,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+      }
+    }
+    [onMessage, onError]
+  );
+  useEffect(() => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

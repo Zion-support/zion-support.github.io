@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,11 +71,15 @@ describe('MainSidebardynamic'
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 describe('MainSidebar', () => {
   test('renders without crashing', () => {
     render(<MainSidebar />);
     expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -116,3 +121,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import MainSide
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

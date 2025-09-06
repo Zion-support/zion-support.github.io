@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -32,27 +33,19 @@ import {;
   useAIContentEnhancer,;
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-interface AIEnhancementPanelProps {;
-  title: string;
+interface AIEnhancementPanelProps {  title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-
-import React, { useState } from 'react';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from '@/components / ui / card'; import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components / ui / card';
-import { Textarea } from '@/components / ui / textarea';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+<<<<<<< HEAD
   useAIContentEnhancer,
   AIEnhancementOptions,
 } from '@/hooks / useAIContentEnhancer';
@@ -102,10 +95,24 @@ if ( {) {
 ;
 export function AIEnhancementPanel({;
   title,;
+=======
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;  title,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
+<<<<<<< HEAD
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -121,11 +128,14 @@ export function AIEnhancementPanel({;
     }
   },
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
       ...options,
       [field]: e.target.value})
   },
@@ -136,10 +146,25 @@ export function AIEnhancementPanel({;
     if (onClose) onClose()
   },
 
+=======
+    })
+  }
+  const handleApply = () => {
+    onApply(generatedContent)
+    if (onClose) onClose()
+  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
   },
 =======
       ...options,
@@ -147,7 +172,21 @@ export function AIEnhancementPanel({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      [field]: e.target.value})
+  },
 
+  const handleApply = () => {
+    onApply(generatedContent),
+    if (onClose) onClose()
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -208,6 +247,7 @@ export function AIEnhancementPanel({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Generate button */}
+<<<<<<< HEAD
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
@@ -220,6 +260,8 @@ export function AIEnhancementPanel({;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
           {isEnhancing ? (
             <>
@@ -240,6 +282,7 @@ export function AIEnhancementPanel({;
               Generate Enhanced Content
             </>
           )}
+<<<<<<< HEAD
         </Button>
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
@@ -330,6 +373,9 @@ export function AIEnhancementPanel({;
     </Card>;
   );
 }
+=======
+        </Button>}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
@@ -423,7 +469,7 @@ export function AIEnhancementPanel({;
 
       )};
     </Card>;
-  );
+  )
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -435,4 +481,4 @@ export function AIEnhancementPanel({;
     </Card>;
   );
 }
-;
+<<<<<<< HEAD

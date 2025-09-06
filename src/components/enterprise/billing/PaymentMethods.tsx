@@ -12,16 +12,14 @@ export function PaymentMethods() {
 =======
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
-
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
+<<<<<<< HEAD
 
 
 export function PaymentMethods() {
@@ -55,6 +53,12 @@ export function PaymentMethods() {
       isDefault: false}
   ],
 
+=======
+import React from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Card>
       <CardHeader>
@@ -154,9 +158,12 @@ export function PaymentMethods() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <p className="text-sm text-muted-foreground">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
@@ -164,11 +171,14 @@ export function PaymentMethods() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex gap-2">
               {!method.isDefault && (
                 <Button size="sm" variant="ghost">Set Default</Button>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
@@ -183,9 +193,9 @@ export function PaymentMethods() {;
 
         <Button className="gap-1">
 
-
         <Button className="gap-1">
 
+<<<<<<< HEAD
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -389,3 +399,7 @@ function PaymentMethods() {
   );
 }
 ;
+=======
+      </CardContent>
+      <CardFooter>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

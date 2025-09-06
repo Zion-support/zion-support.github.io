@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import OpenAI from 'openai';
 
 <<<<<<< HEAD
@@ -80,6 +81,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
+=======
+import OpenAI from 'openai'
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   if (!name) return res && res.status(400).json({ error: 'Name is required' });
 
@@ -87,23 +92,18 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
-<<<<<<< HEAD
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
 <<<<<<< HEAD
 =======
 
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.',
         },
         { role: 'user', content: prompt },
       ],
+<<<<<<< HEAD
       response_format: { type: 'json_object' },
 
 <<<<<<< HEAD
@@ -215,12 +215,16 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+=======
+      response_format: { type: 'json_object' },      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
 }
   }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -242,3 +246,7 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

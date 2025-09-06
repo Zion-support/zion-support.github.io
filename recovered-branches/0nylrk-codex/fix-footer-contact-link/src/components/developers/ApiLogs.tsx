@@ -1,6 +1,6 @@
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -20,6 +20,8 @@ import {Badge} from "@/components/ui/badge";
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
@@ -36,14 +38,11 @@ export function ApiLogs() {
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -62,6 +61,8 @@ export function ApiLogs() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -75,6 +76,7 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -92,12 +94,11 @@ export function ApiLogs() {
 
 =======
 =======
-  
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  
+  
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -110,7 +111,6 @@ export function ApiLogs() {
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-<<<<<<< HEAD
   },
 <<<<<<< HEAD
 
@@ -118,6 +118,7 @@ export function ApiLogs() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -127,6 +128,8 @@ export function ApiLogs() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -137,6 +140,7 @@ export function ApiLogs() {
       return <Badge className="bg-red-700">Server Error</Badge>
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 
@@ -264,27 +268,16 @@ export function ApiLogs() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
+=======
+    }import { useState, useEffect } from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
 import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { Badge } from "@/components/ui/badge",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),;
   const [pageSize, setPageSize] = useState(25),;
@@ -316,50 +309,7 @@ export function ApiLogs() {;
   const totalPages = Math.ceil(totalLogs / pageSize),;
   const hasNextPage = currentPage < totalPages - 1,;
   const hasPrevPage = currentPage > 0;
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  ;
-  // Load logs on mount and when pagination changes;
-  useEffect(() => {;
-    fetchApiLogs(pageSize, currentPage * pageSize),;
-  }, [pageSize, currentPage]),;
-  ;
-  const handleRefresh = () => {;
-    fetchApiLogs(pageSize, currentPage * pageSize),;
-  },;
-  ;
-  // Helper to format the timestamp;
-  const formatTimestamp = (timestamp:string) => {;
-    return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
-  },;
-  ;
-  // Helper to get badge color based on status code;
-  const getStatusBadge = (statusCode:number) => {;
-    if (statusCode >= 200 && statusCode < 300) {;
-      return <Badge className="bg-green-700">Success</Badge>;
-    } else if (statusCode >= 400 && statusCode < 500) {;
-      return <Badge className="bg-amber-700">Client Error</Badge>,;
-    } else if (statusCode >= 500) {;
-      return <Badge className="bg-red-700">Server Error</Badge>,;
-    } else {;
-      return <Badge className="bg-blue-700">Other</Badge>,;
-    }
-  },;
-  ;
-  // Calculate pagination info;
-  const totalPages = Math.ceil(totalLogs / pageSize),;
-  const hasNextPage = currentPage < totalPages - 1,;
-  const hasPrevPage = currentPage > 0,;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Card className="bg-zinc-900 border-zinc-800 text-white">;
+  return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
           <List className="mr-2" size={20} /> API Request Logs;
@@ -368,6 +318,7 @@ export function ApiLogs() {;
           View logs of requests made using your API keys.;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -412,6 +363,8 @@ export function ApiLogs() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -476,6 +429,7 @@ export function ApiLogs() {;
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -488,6 +442,8 @@ export function ApiLogs() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;
@@ -503,57 +459,6 @@ export function ApiLogs() {;
             </Select>;
             <span className="text-sm text-zinc-400">per page</span>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-          ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <Button variant="outline" size="sm" onClick={handleRefresh}>;
-            <RefreshCw size={14} className="mr-1" /> Refresh;
-          </Button>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <div className="overflow-x-auto">;
-          <table className="w-full border-collapse">;
-            <thead>;
-              <tr className="border-b border-zinc-800">;
-                <th className="px-4 py-2 text-left font-medium text-zinc-300">Timestamp</th>;
-                <th className="px-4 py-2 text-left font-medium text-zinc-300">Method</th>;
-                <th className="px-4 py-2 text-left font-medium text-zinc-300">Endpoint</th>;
-                <th className="px-4 py-2 text-left font-medium text-zinc-300">Status</th>;
-                <th className="px-4 py-2 text-left font-medium text-zinc-300">Response Time</th>;
-                <th className="px-4 py-2 text-left font-medium text-zinc-300">IP Address</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              {loading ? (;
-                <tr>;
-                  <td colSpan={6} className="text-center py-12">;
-                    <div className="flex flex-col items-center">;
-                      <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-zion-cyan mb-4"></div>;
-                      <span className="text-zinc-500">Loading logs...</span>;
-                    </div>;
-                  </td>;
-                </tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ) : logs && logs.length === 0 ? (;
-=======
-              ) :logs.length === 0 ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <tr>;
                   <td colSpan={6} className="text-center py-12">;
                     <div className="flex flex-col items-center">;
                       <List className="opacity-30 mb-3" size={24} />;
@@ -564,8 +469,6 @@ export function ApiLogs() {;
                     </div>;
                   </td>;
                 </tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               ) : (;
                 logs && logs.map((log) => (;
                   <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
@@ -577,6 +480,7 @@ export function ApiLogs() {;
                           log && log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
                             : log && log.method === 'POST' 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -590,6 +494,8 @@ export function ApiLogs() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         }>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {log && log.method}
                       </Badge>;
                     </td>;
@@ -603,6 +509,7 @@ export function ApiLogs() {;
                     <td className="px-4 py-3 text-sm">;
                       {log && log.response_time_ms ? `${log && log.response_time_ms}ms` : '-'}
                     </td>;
+<<<<<<< HEAD
                     <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;
 <<<<<<< HEAD
 =======
@@ -720,12 +627,15 @@ export function ApiLogs() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
+=======
+                    <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;import { useState, useEffect } from './react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';
 import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 ;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -1035,3 +945,5 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

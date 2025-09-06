@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -664,6 +665,9 @@ export interface EmergingTech2026ServiceV4 {
     website: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
+=======
+  contactInfo: {    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -870,6 +874,7 @@ export interface EmergingTech2026ServiceV4 {
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -880,10 +885,13 @@ export interface EmergingTech2026ServiceV4 {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 25,
   },;
@@ -891,6 +899,8 @@ export interface EmergingTech2026ServiceV4 {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -900,6 +910,7 @@ export interface EmergingTech2026ServiceV4 {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
     reviews: 25;
+<<<<<<< HEAD
 =======
     reviews: 25;
 =======
@@ -1335,3 +1346,5 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

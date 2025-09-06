@@ -47,7 +47,6 @@ import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-<<<<<<< HEAD
 
 export function ApiWebhooks() {;
   // Sample webhook event payload;
@@ -55,19 +54,7 @@ export function ApiWebhooks() {;
 
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
-  "data": {;
-=======
-  "event_type": "new_application";
-  "created_at": "2023-06-10T15: 42:31Z";
-  "data": {;
-export function ApiWebhooks() {
-  // Sample webhook event payload
-  const newApplicationPayload = `{;
-  "event_type": "new_application";
-  "created_at": "2023-06-10T15: 42:31Z";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
+  "data": {;import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -81,6 +68,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 export function ApiWebhooks() {
   // Sample webhook event payload
 
+<<<<<<< HEAD
   const newApplicationPayload = `{
 <<<<<<< HEAD
   "event_type": "new_application",
@@ -344,6 +332,9 @@ function ApiWebhooks() {
   const newHirePayload = `{;
   "event_type": "talent_hired";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const newApplicationPayload = `{  "event_type": "talent_hired";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "created_at": "2023 - 06 - 12T09: 15:22Z";
   "data": {
     "project_id": "project - 123";
@@ -356,234 +347,50 @@ function ApiWebhooks() {
   }
 }`;
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const quoteReceivedPayload = `{
-=======
-    "status": "offer_accepted",;
-    "created_at": "2023-06-12T09:15:22Z";
-  }
-}`;
-<<<<<<< HEAD
-
-  const quoteReceivedPayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "quote_received";
 
-=======
   const quoteReceivedPayload = `{;
   "event_type": "quote_received";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "status": "new",;
     "created_at": "2023-06-15T11:30:00Z";
   }
 }`;
-<<<<<<< HEAD
 
   const messageReceivedPayload = `{;
-
-=======
-  const messageReceivedPayload = `{;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {;
     "message_id": "msg-123";
     "conversation_id": "conv-456";
     "sender_id": "user-789";
-<<<<<<< HEAD
 
     "recipient_id": "user-012",;
-
-=======
-    "recipient_id": "user-012",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "content": "Hi, I'd like to discuss the project details.";
     "created_at": "2023-06-18T14:22:15Z";
   }
 }`;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  "created_at": "2023 - 06 - 15T11: 30:00Z";
-  "data": {
-    "quote_id": "quote - 123";
-    "client_id": "client - 456";
-    "talent_id": "talent - 789";
-    "project_name": "Website Redesign";
-    "budget_min": 5000;
-    "budget_max": 8000;
-    "status": "new",
-    "created_at": "2023 - 06 - 15T11:30:00Z";
-  }
-}`;
-;
-  const messageReceivedPayload = `{
-  "event_type": "message_received";
-  "created_at": "2023 - 06 - 18T14: 22:15Z";
-  "data": {
-    "message_id": "msg - 123";
-    "conversation_id": "conv - 456";
-    "sender_id": "user - 789";
-    "recipient_id": "user - 012",
-    "content": "Hi, I'd like to discuss the project details.";
-    "created_at": "2023 - 06 - 18T14:22:15Z";
-  }
-}`;
-;
-  const webhookHandlerJs = `// Express.js webhook handler example;
-const express = require ('express');
-const app = express ();
-const crypto = require ('crypto');
-;
-// Middleware to parse JSON bodies;
-app.use (express.json ());
-;
-// Your webhook secret from the Zion dashboard;
-const webhook_secret = 'YOUR_WEBHOOK_SECRET';
-;
-// Middleware to verify webhook signatures;
-/**
- * verifyWebhookSignature - Function description
- */
-function verifyWebhookSignature() {
-  const signature = req.headers['x - zion - signature'];
-  const timestamp = req.headers['x - zion - timestamp'];
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).send ('Missing signature or timestamp');
-  }
-  // Verify the signature;
-  const payload = timestamp + '.' + JSON.stringify (req.body);
-  const expected_signature = crypto;
-    .create_hmac ('sha256', webhook_secret);
-    .update (payload);
-    .digest ('hex');
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).send ('Invalid signature');
-  }
-  next ();
-}
-// Webhook endpoint with signature verification;
-app.post ('/webhooks / zion', verifyWebhookSignature, (req, res) => {
-  const { event_type, data } = req.body;
-;
-  // Handle different event types;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   switch (event_type) {
     case 'new_application':;
       console.log ('New application received:', data.application_id);
       // Process the new application...;
       break;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const webhookHandlerJs = `// Express && Express.js webhook handler example;
-const express = require('express');
-const app = express();
-const crypto = require('crypto');
-
-// Middleware to parse JSON bodies;
-app && app.use(express && express.json());
-
-// Your webhook secret from the Zion dashboard;
-const webhookSecret = 'YOUR_WEBHOOK_SECRET';
-
-// Middleware to verify webhook signatures;
-function verifyWebhookSignature(): any (req, res, next) {;
-  const signature = req && req.headers['x-zion-signature'];
-  const timestamp = req && req.headers['x-zion-timestamp'];
-
-  if (!signature || !timestamp) {;
-    return res && res.status(401).send('Missing signature or timestamp');
-  }
-
-  // Verify the signature;
-  const payload = timestamp + '.' + JSON && JSON.stringify(req && req.body);
-  const expectedSignature = crypto;
-    .createHmac('sha256', webhookSecret);
-    .update(payload);
-    .digest('hex');
-
-  if (signature !== expectedSignature) {;
-    return res && res.status(401).send('Invalid signature');
-  }
-
-  next();
-}
-
-// Webhook endpoint with signature verification;
-app && app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
-  const { event_type, data } = req && req.body;
-
-  // Handle different event types;
-  switch (event_type) {;
-    case 'new_application':;
-      console && console.log('New application received:', data && data.application_id);
-      // Process the new application...;
-      break;
-
-    case 'talent_hired':;
-      console && console.log('Talent hired:', data && data.talent_id);
-      // Update your system...;
-      break;
-
-    case 'quote_received':;
-      console && console.log('New quote received:', data && data.quote_id);
-      // Process the quote...;
-      break;
-
-    case 'message_received':;
-      console && console.log('New message received:', data && data.message_id);
-      // Process the message...;
-      break;
-
-    default:;
-      console && console.log('Unknown event type:', event_type);
-  }
-
-  // Always return a 200 response quickly;
-  res && res.status(200).send('Webhook received');
-});
-
-app && app.listen(3000, () => {;
-  console && console.log('Webhook server listening on port 3000');
-<<<<<<< HEAD
-
-}),`;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
 
-<<<<<<< HEAD
-=======
     "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
     "created_at": "2023-06-10T15:42:31Z"
   }
 }`;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "application_id": "app-123456",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "job_id": "job-789",
     "talent_id": "talent-456",
     "status": "new",
@@ -593,6 +400,7 @@ app && app.listen(3000, () => {;
   }
 }`,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -988,6 +796,15 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break,
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const newHirePayload = `{
+  "event_type": "talent_hired",
+  "created_at": "2023-06-12T09:15:22Z",
+  "data": {  const quoteReceivedPayload = `{
+  "event_type": "quote_received",
+  "created_at": "2023-06-15T11:30:00Z",
+  "data": {    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     case 'talent_hired':
       // // // console.log('Talent hired:', data.talent_id),
@@ -1019,8 +836,11 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       break;
       break,
     
@@ -1042,6 +862,7 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break;
       break,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1050,10 +871,13 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     default:
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // // // console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly
   res.status(200).send('Webhook received')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1382,140 +1206,42 @@ export default ApiWebhooks;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
-  "event_type": "talent_hired";
-  const quoteReceivedPayload = `{
-    "status": "offer_accepted",;
-    "created_at": "2023-06-12T09:15:22Z";
-  }
-<<<<<<< HEAD
-  // Always return a 200 response quickly;
-  res.status (200).send ('Webhook received');
-});
-;
-app.listen (3000, () => {
-  console.log ('Webhook server listening on port 3000');
-}), `;
-;
-  return (
-    <ApiDocsLayout>;
-      <div className="max - w-3xl prose prose - invert">;
-        <h1 > Webhooks</h1>;
-        <p>;
-          Webhooks allow your application to receive real - time notifications when events occur in the Zion AI Marketplace.;
-          Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.;
-        </p>;
-        <h2 > Supported Events</h2>;
-        <p > You can subscribe to the following webhook events:</p>;
-        <div className="overflow - x-auto mb - 6">;
-          <table className="w - full border - collapse">;
-            <thead>;
-              <tr className="border - b border - zinc - 800">;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Event Type</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Description</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              <tr className="border - b border - zinc - 800">;
-                <td className="py - 2 px - 4 text - white font - mono">new_application</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when a talent applies to one of your job postings</td>;
-              </tr>;
-              <tr className="border - b border - zinc - 800">;
-                <td className="py - 2 px - 4 text - white font - mono">talent_hired</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when a talent is hired for a project</td>;
-              </tr>;
-              <tr className="border - b border - zinc - 800">;
-                <td className="py - 2 px - 4 text - white font - mono">quote_received</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when you receive a quote request</td>;
-              </tr>;
-              <tr>;
-                <td className="py - 2 px - 4 text - white font - mono">message_received</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when you receive a new message</td>;
 =======
-import React from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-;
-export function ApiWebhooks() {;
-  // Sample webhook event payload;
-  const newApplicationPayload = `{;
-  "event_type":"new_application",;
-  "created_at":"2023-06-10T15:42:31Z",;
-  "data":{;
-    "application_id":"app-123456",;
-    "job_id":"job-789",;
-    "talent_id":"talent-456",;
-    "status":"new",;
-    "cover_letter":"I'm excited to apply for this position...",;
-    "resume_url":"https://storage.zionai.com/resumes/resume-123.pdf",;
-    "created_at":"2023-06-10T15:42:31Z";
-  }
-}`,;
-;
-  const newHirePayload = `{;
-  "event_type":"talent_hired",;
-  "created_at":"2023-06-12T09:15:22Z",;
-  "data":{;
-    "project_id":"project-123",;
-    "job_id":"job-456",;
-    "client_id":"client-789",;
-    "talent_id":"talent-123",;
-    "start_date":"2023-07-01",;
-    "status":"offer_accepted",;
-    "created_at":"2023-06-12T09:15:22Z";
-  }
-}`,;
-;
-=======
-}`;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const quoteReceivedPayload = `{;
-  "event_type": "quote_received";
-  "event_type": "message_received";
-  "created_at": "2023-06-18T14: 22:15Z";
-  "data": {;
-    "message_id": "msg-123";
-    "conversation_id": "conv-456";
-    "sender_id": "user-789";
-    "content": "Hi, I'd like to discuss the project details.";
-    "created_at": "2023-06-18T14:22:15Z";
-  }
-}`;
-  switch (event_type) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+;
+// Webhook endpoint with signature verification;
+app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
+  const { event_type, data } = req.body,;
+  // Handle different event types;
+  switch (event_type) {;
     case 'new_application':;
-      console.log ('New application received:', data.application_id);
+      // // // console.log('New application received:', data.application_id),;
       // Process the new application...;
-<<<<<<< HEAD
       break,;
-    ;
     case 'talent_hired':;
       // // // console.log('Talent hired:', data.talent_id),;
       // Update your system...;
       break,;
-    ;
     case 'quote_received':;
       // // // console.log('New quote received:', data.quote_id),;
       // Process the quote...;
       break,;
-    ;
     case 'message_received':;
       // // // console.log('New message received:', data.message_id),;
       // Process the message...;
       break,;
-    ;
     default:;
-      // // // console.log('Unknown event type:', event_type),;
+      // // // console.log('Unknown event type:', event_type);
   }
-  ;
-  // Always return a 200 response quickly;
-  res.status(200).send('Webhook received'),;
-}),;
 ;
+  // Always return a 200 response quickly;
+  res.status(200).send('Webhook received');
+}),;
 app.listen(3000, () => {;
-  // // // console.log('Webhook server listening on port 3000'),;
+  // // // console.log('Webhook server listening on port 3000');
 }),`,;
+<<<<<<< HEAD
 ;
   return (;
     <ApiDocsLayout>;
@@ -1769,3 +1495,10 @@ export default ApiWebhooks;
 export default ApiWebhooks;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (;}),
+
+app.listen(3000, () => {
+  // // // console.log('Webhook server listening on port 3000')
+}),`,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

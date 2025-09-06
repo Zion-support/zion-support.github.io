@@ -28,12 +28,12 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface ValidationRule {;
-  required?: boolean;
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+interface ValidationRule {  required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-
 
   name: string
   label: string
@@ -55,7 +55,6 @@ interface ValidationRule {;
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
-
 
   debounceMs?: number
 export function ValidatedFormField({
@@ -261,8 +260,6 @@ if (return '') {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
 
-
-
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -330,9 +327,16 @@ export function ValidatedFormField({;
     }, debounceMs),;
     setDebounceTimer(timer),;
     return () => {;
+<<<<<<< HEAD
       if (timer) clearTimeout(timer);
     }
   }, [fieldValue, isTouched, debounceMs]),;
+=======
+      if (timer) clearTimeout(timer)
+};
+  }, [fieldValue, isTouched, debounceMs]);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const validateField = (value: any): string | null => {;
     if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {;
       return `${label} is required`;
@@ -359,6 +363,7 @@ export function ValidatedFormField({;
     return null
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
@@ -408,6 +413,10 @@ export function ValidatedFormField({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+  const getValidationIcon = () => {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     switch (type) {
       case 'textarea':
         return (
@@ -428,13 +437,6 @@ export function ValidatedFormField({;
       case 'select':
 =======
 
-
-              disabled={disabled}
-              className={baseClasses}
-              rows={4}
-
-
-              {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
@@ -447,7 +449,6 @@ export function ValidatedFormField({;
 
         ),
 
-
       case 'select':;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return (
@@ -459,7 +460,6 @@ export function ValidatedFormField({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-
 
                     {option.label}
 <<<<<<< HEAD
@@ -480,20 +480,7 @@ export function ValidatedFormField({;
                   </SelectItem>
                 ))}
 
-
-        ),
-
-
-
-      case 'checkbox':
-              </SelectContent>;
-            </Select>;
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
-          </div>;
-        );
-
-      case 'checkbox':;
-        return (
+      case 'checkbox':        return (
           <div className='flex items-center space-x-2'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Checkbox
@@ -513,32 +500,36 @@ export function ValidatedFormField({;
           </div>
 =======
 
-
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-
 
               {label}
             </label>;
             {getValidationIcon()}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ),
 
       case 'password':
         return (
+=======
+      case 'password':        return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className='relative'>;
             <Input
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
-
 
               {...form.register(name)}
             />
@@ -573,6 +564,7 @@ export function ValidatedFormField({;
 
 =======
 
+<<<<<<< HEAD
 
         ),
 
@@ -773,6 +765,14 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <p className="text-sm text-muted-foreground">{description}</p>
               )}
+=======
+      default:        return (
+          <div className='relative'>;
+            <Input                  {fieldError.message}
+                </FormMessage>
+              )}
+              {description && !fieldError && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
           )}
         </FormItem>;
@@ -856,11 +856,9 @@ export const common_validations = {
   }}
     }
 
-
   }},
     };
   }};
-
 
     />;
   );
@@ -871,7 +869,7 @@ export const validationPatterns = {;
   phone: /^[\+]?[1-9][\d]{0,15}$/,;
   url: /^https?:\/\/.+/,;
   strongPassword:;
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -934,9 +932,11 @@ export const commonValidations = {;
       }
       return null;
 
-
-
   }},
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }};
+=======
+  }};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

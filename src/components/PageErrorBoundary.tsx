@@ -27,10 +27,13 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
   },
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -42,6 +45,67 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
+<<<<<<< HEAD
+=======
+            </h1>;
+            <p className='text-gray-600'>;
+              {isAuthConfigError;
+                ? 'This page cannot load due to missing authentication configuration';
+                : 'An unexpected error occurred while loading this page'}
+import {
+  logInfo
+  logErrorToProduction as prodLogError
+} from '@/utils/productionLogger'
+interface PageErrorFallbackProps extends FallbackProps {
+  pageName?: string
+function PageErrorFallback({
+  error
+  resetErrorBoundary
+  pageName
+}: PageErrorFallbackProps) {
+    error?.message?.includes('environment')
+  const handleRefresh = () => {
+    if (resetErrorBoundary) {
+      resetErrorBoundary()
+    } else {
+      window.location.reload()
+    }
+  }
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',;
+interface PageErrorFallbackProps extends FallbackProps {;
+  pageName?: string;
+}
+;
+function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {;
+  const isAuthConfigError = error?.message?.includes('Auth0') ||;
+                           error?.message?.includes('AUTH0') ||;
+                           error?.message?.includes('authentication') ||;
+                           error?.message?.includes('environment'),;
+  const handleRefresh = () => {;
+    if (resetErrorBoundary) {;
+      resetErrorBoundary();
+    } else {;
+      window.location.reload();
+    }
+  },
+
+  return (
+    <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
+        {/* Main Error Card */}
+        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
+          <div className="text-center mb-6">
+            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
+              <AlertTriangle className="h-8 w-8 text-red-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </h1>
             <p className="text-gray-600">
               {isAuthConfigError 
@@ -50,7 +114,10 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               }
             </p>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {isAuthConfigError && (
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
               <div className="flex">
@@ -65,6 +132,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               </div>
             </div>
           )}
+<<<<<<< HEAD
 
           {error?.message && (
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
@@ -244,6 +312,12 @@ function PageErrorBoundary() {
 
 
     ((props: FallbackProps) => (
+=======
+          {error?.message && (            <details className="bg-gray-50 rounded-lg p-4 mb-6">
+              <summary className="cursor-pointer text-gray-700 font-medium">
+                Technical Details
+              </summary>    ((props: FallbackProps) => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
@@ -253,9 +327,12 @@ function PageErrorBoundary() {
               support@zion && zion.tech;
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <button;
               onClick={handleRefresh}
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
@@ -300,6 +377,7 @@ function PageErrorBoundary() {
             >;
               support@zion.tech;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </a>;
             <Link href="/status" className="text-blue-400 hover:underline">;
 =======
@@ -308,12 +386,17 @@ function PageErrorBoundary() {
             <Link href='/status' className='text-blue-400 hover:underline'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Service Status;
+=======
+            </a>;
+            <Link href="/status" className="text-blue-400 hover:underline">;              Service Status;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Link>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -355,64 +438,50 @@ export default function PageErrorBoundary({;
 } ;
 =======
 
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface PageErrorBoundaryProps {;
-  children: React && React.ReactNode;
-  pageName?: string;
-  fallback?: React && React.ComponentType<FallbackProps>;
-
-const Component = React && React.memo(function PageErrorBoundary(): any ({;
+  children: React.ReactNode,;
+  pageName?: string,;
+  fallback?: React.ComponentType<FallbackProps>;
+}
+;
+export default function PageErrorBoundary({;
   children,;
   pageName,;
-  fallback,;
+  fallback;
 }: PageErrorBoundaryProps) {;
-  const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
-    prodLogError(;
-      `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,;
-      error;
-    );
-
-    logErrorToProduction(;
-      error instanceof Error ? error && error.message : String(error),;
-      error instanceof Error ? error : undefined,;
-      {;
-        page: pageName || 'unknown',;
-        componentStack: errorInfo && errorInfo.componentStack || undefined,;
-        errorBoundary: 'PageErrorBoundary',;
-        timestamp: new Date().toISOString(),;
-      }
-    );
-  };
-
-  const FallbackComponent =;
-    fallback ||;
-    ((props: FallbackProps) => (;
-      <PageErrorFallback {...props} pageName={pageName} />;
-    ));
-
-
-      onReset={() => {        // Reset any application state if needed;
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
-
-
-
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {;
+    prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),;
+    logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {;
+      page: pageName || 'unknown',;
+      componentStack: errorInfo.componentStack || undefined,;
+      errorBoundary: 'PageErrorBoundary',;
+      timestamp: new Date().toISOString();
+    })
+};
+  const FallbackComponent = fallback || ((props: FallbackProps) => (;
+    <PageErrorFallback {...props} pageName={pageName} />;
+  ));
+  return (;
+    <ErrorBoundary;
+      FallbackComponent={FallbackComponent}
+      onError={handleError}
+      onReset={() => {;
+        // Reset any application state if needed;        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 
       }}
-    >;
-      {children}
-
-
-} ;
-} ;
+    >
+      {children}} ;
+} 
 };
 }
-
 
     </ErrorBoundary>;
   );
 } ;
-
-
-
 
   const FallbackComponent =;
     fallback ||;
@@ -424,7 +493,17 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
     >;
       {children}
     </ErrorBoundary>);
+<<<<<<< HEAD
 }
 }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );}
+;
+interface PageErrorBoundaryProps {;
+  children:React.ReactNode,;
+  pageName?:string,;
+  fallback?:React.ComponentType<FallbackProps>;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

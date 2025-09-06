@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,6 @@ module.exports = function Sonner({ position = "bottom-right",richColors = true,c
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

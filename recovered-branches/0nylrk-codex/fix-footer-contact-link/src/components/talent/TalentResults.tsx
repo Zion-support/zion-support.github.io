@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 =======
@@ -16,12 +16,15 @@ import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
+<<<<<<< HEAD
 import { TalentGrid } from "@/components/talent/TalentGrid",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -82,6 +85,9 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     selectedSkills: string[],
+=======
+import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -91,6 +97,7 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,6 +114,8 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function TalentResults({;
   filteredTalents;
@@ -127,6 +136,7 @@ export function TalentResults({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -184,14 +194,19 @@ interface TalentResultsProps {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     priceRange: [number, number];
 
+=======
+}: TalentResultsProps) {
+  return (
+    <div className="flex-1">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void;
   }
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 export function TalentResults(): any ({;
 
@@ -397,10 +412,18 @@ function TalentResults() {
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function TalentResults(): any ({;      />;
+    </div>;
+  );
+}
+;;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -412,52 +435,12 @@ function TalentResults() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
-
 =======
-=======
-        isAuthenticated={isAuthenticated}
-        clearFilters={activeFiltersProps.clearFilters}
-      />;
-    </div>;
-  ),;}
-}export function TalentResults ({
-  filteredTalents;
-isLoading;
-viewProfile;
-handleRequestHire;
-savedTalents;
-handleToggleSave;
-isAuthenticated;
-activeFiltersProps 
-}: TalentResultsProps) {
-  return (
-    <div className=&quot;flex-1&quot;>
-import React from "react";
-
-interface TalentResultsProps {_filteredTalents: TalentProfile[];
-  isLoading: boolean;
-  viewProfile: (_id: string) => void;
-  handleRequestHire: (_talent: TalentProfile) => void;
-  savedTalents: string[];
-  handleToggleSave: (_id: string, _isSaved: boolean) => void;
-  isAuthenticated: boolean;
-  activeFiltersProps: {
-    selectedSkills: string[];
-    toggleSkill: (_skill: string) => void;
-    selectedAvailability: string[];
-    toggleAvailability: (_availability: string) => void;
-    selectedRegions: string[];
-    toggleRegion: (_region: string) => void;
-    priceRange: [number, _number];
-    setPriceRange: (_range: [number, _number]) => void;
-    experienceRange: [number, _number];
-    setExperienceRange: (_range: [number, _number]) => void;
-    clearFilters: () => void;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-
 ;
 
+<<<<<<< HEAD
 
 ;
 
@@ -500,3 +483,5 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

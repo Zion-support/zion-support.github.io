@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const HomePage: React.FC = () => {
   return (
@@ -81,11 +84,19 @@ const HomePage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 };
 
 function Card({ title, description, href, icon }: { 
   title: string; 
+=======
+  )
+};
+
+function Card({ title, description, href, icon }: { 
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string; 
   href: string; 
   icon: string; 
@@ -103,7 +114,11 @@ function Card({ title, description, href, icon }: {
 }
 
 function FeatureCard({ title, description }: { 
+<<<<<<< HEAD
   title: string; 
+=======
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string; 
 }) {
   return (

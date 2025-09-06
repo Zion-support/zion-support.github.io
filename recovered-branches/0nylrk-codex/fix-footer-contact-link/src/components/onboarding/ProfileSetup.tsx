@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -15,6 +18,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -63,6 +67,8 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const profileSchema = z.object({
@@ -71,6 +77,7 @@ const profileSchema = z.object({
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -83,6 +90,8 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -94,77 +103,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       displayName: ""
       bio: ""
       headline: ""}})
-  const getTypeLabel = () => {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const profileSchema = z && z.object({;
-  displayName: z && z.string().min(2, "Name must be at least 2 characters");
-  bio: z && z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
-  headline: z && z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
-
-type ProfileFormValues = z && z.infer<typeof profileSchema>;
-
-interface ProfileSetupProps {;
-  onComplete: (data: ProfileFormValues) => void,;
-  userType: string;
-}
-
-export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps) {;
-  const form = useForm<ProfileFormValues>({;
-    resolver: zodResolver(profileSchema),;
-    defaultValues: {;
-      displayName: "",;
-      bio: "",;
-      headline: ""}}),;
-
-  const getTypeLabel = () => {;
-    switch (userType) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      case "serviceProvider": return "Service Provider";
-=======
-import { useState } from './react';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { use_form } from './react - hook - form';
-import { z } from './zod';
-import { User, Mail, AtSign, GraduationCap } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-;
-const profile_schema = z.object ({
-  display_name: z.string ().min (2, "Name must be at least 2 characters");
-  bio: z.string ().min (10, "Bio must be at least 10 characters").max (500, "Bio must be less than 500 characters");
-  headline: z.string ().min (5, "Headline must be at least 5 characters").max (100, "Headline must be less than 100 characters")});
-;
-type ProfileFormValues = z.infer < typeof profile_schema>;
-;
-interface ProfileSetupProps {
-  on_complete: (data: ProfileFormValues) => void,
-  user_type: string;
-}
-export /**
- * ProfileSetup - Function description
- */
-function ProfileSetup() {
-  const form = use_form < ProfileFormValues>({
-    resolver: zod_resolver (profile_schema),
-    default_values: {
-      display_name: "",
-      bio: "",
-      headline: ""}}),
-  const getTypeLabel = () =>: any {
-    switch (user_type) {
-      case "service_provider": return "Service Provider";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      case "talent":;
+  const getTypeLabel = () => {      case "talent":;
         return "Talent";
       case "client":;
         return "Client";
@@ -172,24 +111,17 @@ function ProfileSetup() {
         return "User";
     }
   }
+
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+
 <<<<<<< HEAD
-
-
-    switch (userType) {
-      case "serviceProvider": return "Service Provider",
-
-=======
-    switch (userType) {;
-      case "serviceProvider": return "Service Provider";
-    switch (userType) {
-      case "serviceProvider": return "Service Provider",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    switch (userType) {
-      case "serviceProvider": return "Service Provider",
-
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case "talent":
         return "Talent",
       case "client":
@@ -206,30 +138,8 @@ function ProfileSetup() {
 
   },
 
-
-
   return (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  }
-  },
-
-  return (
-    <div className="space-y-6">
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>
-        <p className="text-zion-slate-light mt-2">
-          Help others get to know you better
-        </p>
-      </div>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <FormField
             control={form.control}
             name="displayName"
@@ -249,63 +159,24 @@ function ProfileSetup() {
       default:;
         return "User";
     }
-<<<<<<< HEAD
-  };
-  return (;
-<<<<<<< HEAD
-
-=======
-;
-const profileSchema = z.object({;
-  displayName:z.string().min(2, "Name must be at least 2 characters"),;
-  bio:z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),;
-  headline:z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),;
-;
-type ProfileFormValues = z.infer<typeof profileSchema>,;
-;
-interface ProfileSetupProps {;
-  onComplete:(data:ProfileFormValues) => void,;
-  userType:string;
-}
-;
-export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
-  const form = useForm<ProfileFormValues>({;
-    resolver:zodResolver(profileSchema),;
-    defaultValues:{;
-      displayName:"",;
-      bio:"",;
-      headline:""}}),;
-;
-  const getTypeLabel = () => {;
-    switch (userType) {;
-      case "serviceProvider":return "Service Provider",;
-      case "talent":;
-        return "Talent",;
-      case "client":;
-        return "Client",;
-      default:;
-        return "User";
-    }
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className="space-y-6">;
+  }    <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
         <p className="text-zion-slate-light mt-2">;
           Help others get to know you better;
         </p>;
       </div>;
-<<<<<<< HEAD
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <FormField
             control={form && form.control}
             name="displayName"
@@ -313,6 +184,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <div className="relative">;
 <<<<<<< HEAD
 =======
@@ -390,6 +262,9 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Input
                       placeholder={`e && e.g., ${
+=======
+                  <div className="relative">;                      placeholder={`e && e.g., ${
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
@@ -399,22 +274,24 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
             name="display_name";
             render={({ field }) => (
               <FormItem>;
-                <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;
+                <FormLabel className="text - zion - slate-light">Full Name</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
                     <Input;
                       placeholder="Your full name";
+<<<<<<< HEAD
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       }`}
-                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
                       {...field}
                     />;
           <FormField
             control={form && form.control}
             name="bio"
-<<<<<<< HEAD
-=======
           />;
           <FormField
             control={form && form.control}
@@ -438,28 +315,16 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
           <FormField;
             control={form.control}
             name="bio";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
-                <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  <Textarea
                     placeholder={`Tell us about your ${
                       user_type === "service_provider" ? "services and expertise" :;
                       user_type === "talent" ? "skills and experience" :;
                       "business and needs";
                     }`}
-                    className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
+                    className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min-h-[120px]";
                     {...field}
-<<<<<<< HEAD
                   />;
                 </FormControl>;
+<<<<<<< HEAD
 
 =======
               </FormItem>;
@@ -527,11 +392,14 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                   />;
                 </FormControl>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />;
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Button
             type="submit"
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
@@ -590,6 +458,9 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             Complete Profile;
+=======
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;          >;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         </form>;
       </Form>;
@@ -602,19 +473,6 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </div>);
     </div>;
@@ -650,6 +508,7 @@ getTypeLabel ()
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -658,3 +517,6 @@ getTypeLabel ()
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

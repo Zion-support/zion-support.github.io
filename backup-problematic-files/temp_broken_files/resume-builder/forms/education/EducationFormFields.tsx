@@ -1,17 +1,24 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 =======
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 import { Loader2 } from 'lucide-react',;
 =======
 import { Loader2 } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+import { Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from '@/components/ui/button',;
 import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
@@ -35,7 +42,11 @@ const educationSchema = z.object({;
   field_of_study:z.string().optional(),;
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
+<<<<<<< HEAD
   is_current:z.boolean().default(false),;
+=======
+  is_current:z.boolean().default(false),,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
@@ -56,8 +67,13 @@ export function EducationFormFields({ ;
       degree:'',;
       field_of_study:'',;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
+<<<<<<< HEAD
       is_current:false,;
       description:'',;
+=======
+      is_current:false,,
+  description:'',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
@@ -79,6 +95,7 @@ export function EducationFormFields({ ;
           <FormField;
             control={form.control}
             name="institution";
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
             render={({ field }) => (;
               <FormItem>;
@@ -89,10 +106,16 @@ export function EducationFormFields({ ;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+            render={({ field } { field:any }) => (;
+              <FormItem>;
+                <FormLabel>Institution</FormLabel>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
             render={({ field }) => (;
@@ -105,15 +128,63 @@ export function EducationFormFields({ ;
                 <FormLabel>Start Date</FormLabel>;
                 <FormControl>;
 
+=======
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="degree";
+            render={({ field } { field:any }) => (;
+              <FormItem>;
+                <FormLabel>Degree</FormLabel>;
+                <FormControl>;
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;            )}
+          />;
+        </div>;
+;
+        <FormField;
+          control={form.control}
+          name="field_of_study";
+          render={({ field } { field:any }) => (;
+            <FormItem>;
+              <FormLabel>Field of Study</FormLabel>;
+              <FormControl>;
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="start_date";
+            render={({ field } { field:any }) => (;
+              <FormItem>;
+                <FormLabel>Start Date</FormLabel>;
+                <FormControl>;
+                  <Input ;
+                    type="date" ;
+                    {...field}
+                    value={field.value || ''} ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
           />;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
           <div className="space-y-4">;
             <FormField;
@@ -125,7 +196,10 @@ export function EducationFormFields({ ;
                     <Checkbox;
                       checked={field.value}
                       onCheckedChange={field.onChange}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -134,6 +208,7 @@ export function EducationFormFields({ ;
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
                 render={({ field }) => (;
@@ -142,6 +217,8 @@ export function EducationFormFields({ ;
                     <FormControl>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
             {!form.watch('is_current') && (;
               <FormField;
@@ -159,11 +236,15 @@ export function EducationFormFields({ ;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;                )}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />;
             )}
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           render={({ field }) => (;
@@ -172,6 +253,8 @@ export function EducationFormFields({ ;
               <FormControl>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
         <FormField;
           control={form.control}
@@ -196,14 +279,20 @@ export function EducationFormFields({ ;
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min-h-[100px]";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </FormItem>;
           )}
         />;
@@ -222,14 +311,20 @@ export function EducationFormFields({ ;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' :'Add'} Education;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  type EducationFormValues = z.infer<typeof educationSchema>;
 </FormControl> <FormMessage /> </FormItem>) ;
@@ -250,4 +345,7 @@ export function EducationFormFields({ ;
 }</Button> </Button> </div> </form> </Form>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationFormFields.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -33,7 +33,6 @@ import { Zap } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -585,9 +584,12 @@ import { Zap } from 'lucide-react';
 =======
                         </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </div>
                     </div>
                   </div>
@@ -599,17 +601,21 @@ import { Zap } from 'lucide-react';
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -631,6 +637,8 @@ import { Zap } from 'lucide-react';
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -834,6 +842,7 @@ import { Zap } from 'lucide-react';
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               Emerging Market Trends
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -856,6 +865,8 @@ import { Zap } from 'lucide-react';
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -950,9 +961,12 @@ import { Zap } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -960,12 +974,15 @@ import { Zap } from 'lucide-react';
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -977,23 +994,27 @@ import { Zap } from 'lucide-react';
             {pricingStrategies.map((strategy, index) => (
               <Card
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+=======
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+          <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
             {market_trends.map ((trend, index) => (
               <Card;
                 key={index}
-                className="card - hover border - gradient - blue";
+                className="card - hover border-gradient-blue";
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
-                <div className="p - 6">;
-                  <div className="flex items - start justify - between mb - 4">;
-                    <h3 className="text - xl font - bold text - white">{trend.trend}</h3>;
-                    <div className="flex items - center space - x-2">;
+                <div className="p-6">;
+                  <div className="flex items - start justify-between mb-4">;
+                    <h3 className="text - xl font-bold text-white">{trend.trend}</h3>;
+                    <div className="flex items-center space-x-2">;
                       <span className={`px - 2 py - 1 rounded text - xs font - medium ${
                         trend.impact === 'High' ? 'bg - red - 500 / 20 text - red - 400' :;
                         trend.impact === 'Medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
@@ -1001,7 +1022,7 @@ import { Zap } from 'lucide-react';
                       }`}>;
                         {trend.impact} Impact;
                       </span>;
-                      <span className="px - 2 py - 1 rounded text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
+                      <span className="px - 2 py - 1 rounded text - xs font - medium bg - blue - 500 / 20 text-blue-400">;
                         {trend.timeline}
                       </span>;
                     </div>;
@@ -1015,13 +1036,13 @@ import { Zap } from 'lucide-react';
                       {trend.examples.map ((example, example_index) => (
                         <li key={example_index} className='flex items - start'>;
                           <span className='w - 1.5 h - 1.5 bg - cursor - blue rounded - full mr - 2 mt - 1.5 flex - shrink - 0' />                          {example}
-                  <p className="text - gray - 300 mb - 4">{trend.description}</p>;
-                  <div className="mb - 4">;
-                    <h4 className="text - sm font - semibold text - gray - 400 mb - 2">Examples:</h4>;
-                    <ul className="space - y-1 text - xs text - gray - 300">;
+                  <p className="text - gray-300 mb-4">{trend.description}</p>;
+                  <div className="mb-4">;
+                    <h4 className="text - sm font - semibold text - gray-400 mb-2">Examples:</h4>;
+                    <ul className="space - y-1 text - xs text-gray-300">;
                       {trend.examples.map ((example, example_index) => (
-                        <li key={example_index} className="flex items - start">;
-                          <span className="w - 1.5 h - 1.5 bg - cursor - blue rounded - full mr - 2 mt - 1.5 flex - shrink - 0" />;
+                        <li key={example_index} className="flex items-start">;
+                          <span className="w - 1.5 h - 1.5 bg - cursor - blue rounded - full mr - 2 mt - 1.5 flex-shrink-0" />;
                         </li>))}
                     </ul>;
                   </div>;
@@ -1031,8 +1052,8 @@ import { Zap } from 'lucide-react';
                     </h4>;
                     <p className='text - xs text - gray - 300'>;
                       {trend.opportunities}
-                    </p>                  </div>                    <h4 className="text - sm font - semibold text - green - 400 mb - 2">Opportunities:</h4>;
-                    <p className="text - xs text - gray - 300">{trend.opportunities}</p>;
+                    </p>                  </div>                    <h4 className="text - sm font - semibold text - green-400 mb-2">Opportunities:</h4>;
+                    <p className="text - xs text-gray-300">{trend.opportunities}</p>;
                   </div>;
                 </div>;
               </Card>))}
@@ -1151,8 +1172,11 @@ import { Zap } from 'lucide-react';
                     </ul>
                   </div>
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {/* Cons */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -1173,11 +1197,14 @@ import { Zap } from 'lucide-react';
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>

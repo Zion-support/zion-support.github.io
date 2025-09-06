@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export const metadata = { 
@@ -20,6 +21,7 @@ export const metadata = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   title: 'Advanced Data Analytics & BI | Zion Tech Group',
+<<<<<<< HEAD
   description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
   title: 'Data Analytics Solutions | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
@@ -28,10 +30,15 @@ export const metadata = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.',
+  keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data engineering'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default function DataAnalyticsPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -554,28 +561,41 @@ function CTASection() {
 =======
   );
 }
+=======
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Data Analytics & BI
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Transform your data into actionable insights with advanced analytics, 
+          real-time dashboards, and AI-powered business intelligence solutions.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
+            href="mailto:kleber@ziontechgroup.com?subject=Data Analytics Inquiry"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Get Analytics Consultation
+          </a>
+          <a
             href="tel:+13024640950"
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-          >
-            Email Us
-          </a>
         </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

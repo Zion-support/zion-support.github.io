@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   customers: number;
@@ -103,6 +104,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Real - time interplanetary communication',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Quantum communication protocols',
       'AI - powered routing optimization',
       'Multi - planet network management',
@@ -114,6 +117,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Emergency communication channels',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     icon: '🌐',
@@ -168,6 +172,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -175,6 +181,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real - time monitoring. Includes security protocols and emergency communication systems.',
@@ -362,6 +369,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'AI-powered energy optimization',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: 'space - energy - harvesting - platform',
     name: 'Space Energy Harvesting Platform',
     tagline: 'Harvest energy from space sources and celestial bodies',
@@ -385,13 +394,13 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     popular: true,
     icon: '⚡',
 
-
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
     rating: 4.8,
     reviews: 52,
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -480,6 +489,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -499,8 +510,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
@@ -533,6 +547,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       website: 'https://ziontechgroup.com';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -551,8 +566,9 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+;
     realImplementation: true
     implementationDetails:
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.'
@@ -734,8 +750,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '350% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
       mobile: '+1 302 464 0950'
@@ -769,6 +785,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -780,6 +798,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18;
     rating: 4.8
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -796,12 +815,17 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
+=======
+    reviews: 52
+  }
+];import { ServiceVariant } from '../types/service-variants',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface SpaceColonization2029Service {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -847,7 +871,7 @@ export interface SpaceColonization2029Service {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -906,8 +930,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Mars Colonization Automation Platform',;
     tagline: 'Automate Mars colonization process with AI and robotics',;
     price: '$99,999',;
-    period: '/month',;
-    description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',;
+    period: '/month',,
+  description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',;
     features: [;
       'Autonomous habitat constructionAI-powered resource managementLife support system automationColony expansion planningRobotic workforce managementEnvironmental monitoring AISupply chain automationEmergency response systems',;
       'Colony health monitoringSustainable development AI';
@@ -949,8 +973,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Interplanetary Communication Network',;
     tagline: 'Real-time solar system communication network',;
     price: '$75,999',;
-    period: '/month',;
-    description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',;
+    period: '/month',,
+  description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',;
     features: [;
       'Real-time interplanetary communicationQuantum communication protocolsAI-powered routing optimizationMulti-planet network managementSatellite constellation controlCommunication security protocolsBandwidth optimizationNetwork redundancy systems',;
       'Real-time monitoringEmergency communication channels';
@@ -992,8 +1016,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Space Mining Automation Platform',;
     tagline: 'Automate asteroid and lunar mining operations',;
     price: '$65,999',;
-    period: '/month',;
-    description: 'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',;
+    period: '/month',,
+  description: 'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',;
     features: [;
       'Autonomous mining operationsAI-powered resource detectionRobotic mining equipmentResource processing automationSupply chain managementQuality control systemsSafety monitoring AIEnvironmental impact assessment',;
       'Resource optimizationMining fleet management';
@@ -1036,8 +1060,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Space Habitat Design Platform',;
     tagline: 'Design space habitats for any planet or environment',;
     price: '$45,999',;
-    period: '/month',;
-    description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',;
+    period: '/month',,
+  description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',;
     features: [;
       'AI-powered habitat designEnvironmental simulation toolsMaterial optimization AILife support integrationSustainable design systems3D modeling and visualizationStructural analysis toolsResource efficiency optimization',;
       'Modular design systemsHabitat expansion planning';
@@ -1079,8 +1103,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Space Energy Harvesting Platform',;
     tagline: 'Harvest energy from space sources and celestial bodies',;
     price: '$55,999',;
-    period: '/month',;
-    description: 'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',;
+    period: '/month',,
+  description: 'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',;
     features: [;
       'Multi-source energy harvestingAI-powered energy optimizationAdvanced energy storagePower distribution systemsEnergy efficiency monitoringRenewable space energyPower grid managementEnergy demand forecasting',;
       'Storage optimizationBackup power systems';
@@ -1115,6 +1139,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     launchDate: '2029-03-01',;
     customers: 18,;
     rating: 4.8;
+<<<<<<< HEAD
     reviews: 52;
 <<<<<<< HEAD
 =======
@@ -1132,3 +1157,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    reviews: 52;  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

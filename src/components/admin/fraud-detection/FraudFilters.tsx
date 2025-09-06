@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Input } from "@/components/ui/input",
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from 'lucide-react'
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -16,15 +19,13 @@ interface FraudFiltersProps {
   contentTypeFilter: string | null,
   setContentTypeFilter: (value: string | null) => void,
   resetFilters: () => void
+<<<<<<< HEAD
 =======
 resetFilters: () => void
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-
-
-
-
-  searchQuery
+export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
   setSearchQuery
   statusFilter
   setStatusFilter
@@ -32,7 +33,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter
   contentTypeFilter
   setContentTypeFilter
-import React from 'react';
+import React from 'react'
 };
 
 interface FraudFiltersProps {;
@@ -61,20 +62,27 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
 
-
-
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
+<<<<<<< HEAD
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="pl-10"
         />
       </div>
-      
+=======
+          value = {searchQuery,}
 
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="pl-10"
+        />
+      </div>
+            <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -89,9 +97,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
@@ -108,9 +119,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
@@ -127,6 +141,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
+<<<<<<< HEAD
 
       
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
@@ -182,6 +197,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -195,10 +212,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -227,19 +247,20 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Filter className="h-4 w-4 mr-2" /> Reset Filters;
       </Button>;
     </div>;
-  );
+  )
 };
 <<<<<<< HEAD
 =======
-
-
 
   search_query: string,
   setSearchQuery: (value: string, ) => void,
@@ -261,14 +282,14 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
   contentTypeFilter;
   setContentTypeFilter;
   reset_filters}) => {  return (
-    <div className="flex flex - col md: flex - row gap - 4 mb - 6">;
-      <div className="relative flex - 1">;
-        <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
+    <div className="flex flex - col md: flex - row gap - 4 mb-6">;
+      <div className="relative flex-1">;
+        <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray-400" />;
         <Input;
           placeholder="Search by user or content...";
           value = {search_query, }
           on_change = {(e, ) => setSearchQuery (e.target.value), }
-          className="pl - 10";
+          className="pl-10";
         />;
       </div>;
       <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
@@ -307,11 +328,16 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
-      <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
-        <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
+      <Button variant="outline" on_click={reset_filters} className="md: w-auto">;
+        <Filter className="h - 4 w - 4 mr-2" /> Reset Filters;
       </Button>;
     </div>);
 }
 '"},
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"},
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

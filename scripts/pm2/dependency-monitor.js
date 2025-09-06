@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -46,6 +47,8 @@ const monitor = new DependencyMonitor();
 monitor.run().catch(error = > {process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -1320,6 +1323,7 @@ const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1701,3 +1705,6 @@ monitor.run().catch(error = > {; process.exit(1)});
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

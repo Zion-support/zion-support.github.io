@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
@@ -15,11 +16,14 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 <<<<<<< HEAD
 =======
@@ -55,6 +59,9 @@ export function NewsletterSection() {
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
+=======
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
   )
   )
@@ -127,33 +134,16 @@ function NewsletterSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-=======
-
   )
-=======
   )
 
-=======
     </section>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </section>);
 }
     </section>;
@@ -167,7 +157,4 @@ function NewsletterSection() {
 
 }
 ;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

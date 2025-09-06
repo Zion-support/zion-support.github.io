@@ -8,8 +8,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {Wallet} from "@/components/icons";
 import {toast} from "sonner";
 export function Web3Login() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -18,20 +16,15 @@ export function Web3Login() {;
     try {;
       setIsLoading(true);
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
-=======
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   const handleWeb3Login = async () => {
     try {
@@ -44,41 +37,7 @@ export function Web3Login() {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Check if wallet is available
-      const ethereum = (window as any).ethereum;
-<<<<<<< HEAD
-=======
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-=======
-
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { Wallet } from "@/components/icons";
-import { toast } from "sonner";
-import { Wallet } from "@/components/icons",
-import { toast } from "sonner",
-
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-
-
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      if (!ethereum) {
-        toast("Web3 wallet not found", {
+      const ethereum = (window as any).ethereum;        toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet"})
         return
       }
@@ -89,31 +48,25 @@ export function Web3Login() {
       console.error("Web3 login error:", error)
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      // Check if wallet is available;
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
-        toast("Web3 wallet not found", {;
-          description: "Please install MetaMask or another compatible wallet"}),;
+        toast("Web3 wallet not found", {,
+  description: "Please install MetaMask or another compatible wallet"}),;
         return;
       }
 
       await loginWithWeb3();
 
     } catch (error: any) {;
-      toast("Login failed", {;
-        description: error && error.message || "Failed to connect wallet"}),;
+      toast("Login failed", {,
+  description: error && error.message || "Failed to connect wallet"}),;
       console && console.error("Web3 login error:", error);
     } finally {;
       setIsLoading(false);
-<<<<<<< HEAD
 
     }
+<<<<<<< HEAD
 =======
   }
 =======
@@ -152,6 +105,12 @@ export function Web3Login() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }    }
+
+  },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       disabled={isLoading}
     >
       {isLoading ? (
@@ -167,6 +126,7 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -325,6 +285,13 @@ export function Web3Login() {;
       )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
+=======
+
+      )}
+    </Button>
+  )
+}import { useState } from './react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
 import { Wallet } from '@/components / icons';
@@ -335,6 +302,7 @@ export /**
 function Web3Login() {
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
   const handleWeb3Login = async () => {
@@ -419,3 +387,6 @@ return (<Button type="button" variant="outline" className="w-full border border-
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

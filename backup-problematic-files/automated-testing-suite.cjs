@@ -8,7 +8,11 @@ class AutomatedTestingSuite {}
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'test-reports');
     this.logFile = path.join(this.reportsDir, 'testing-suite.log');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
@@ -29,7 +33,11 @@ class AutomatedTestingSuite {}
         cwd: this.projectRoot;
       }
 });
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log('Tests completed successfully');
       return { success: true, result };
     } catch (error) {}
@@ -45,7 +53,11 @@ class AutomatedTestingSuite {}
         cwd: this.projectRoot;
       }
 });
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log('Build completed successfully');
       return { success: true, result };
     } catch (error) {}
@@ -71,6 +83,7 @@ class AutomatedTestingSuite {}
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {}
@@ -79,6 +92,17 @@ class AutomatedTestingSuite {}
 
       this.generateReport(testResults, buildResults);
 
+=======
+    
+    
+    
+    try {}
+      const testResults = await this.runTests();
+      const buildResults = await this.runBuild();
+      
+      this.generateReport(testResults, buildResults);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (testResults.success && buildResults.success) {}
         this.log('✅ Automated Testing Suite completed successfully!');
       } else {}
@@ -96,5 +120,10 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = AutomatedTestingSuite;
+module.exports = AutomatedTestingSuite;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

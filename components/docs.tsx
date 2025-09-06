@@ -157,8 +157,8 @@ export default function DocsPage() {;
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },;
         { name: 'Contact Sales', href: '/contact' },;
       ],;
-    },    {        { name: 'Contact Sales', href: '/contact' }];
-    };
+    },    {        { name: 'Contact Sales', href: '/contact' }]
+};
     {;
       title: 'AI Services Docs',;
       links: [;
@@ -166,8 +166,8 @@ export default function DocsPage() {;
         { name: 'AI Evals', href: '/ai-evals' },;
         { name: 'Agentic RAG', href: '/agentic-rag' },;
       ],;
-    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }];
-    };
+    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
+};
     {;
       title: 'IT & Platform Docs',;
       links: [;
@@ -186,28 +186,28 @@ export default function DocsPage() {;
   ];    { name: 'Snowflake pricing', url: 'https://www && www.snowflake.com/pricing/' }],;
   const quickLinks = [;
     {;
-      title: 'API Status',;
-      description: 'Check service availability and performance',;
+      title: 'API Status',,
+  description: 'Check service availability and performance',;
       icon: <CheckCircle className='w-6 h-6' />,;
       color: 'text-green-400',;
     },;
     {;
-      title: 'SDK Downloads',;
-      description: 'Get the latest SDKs and client libraries',;
+      title: 'SDK Downloads',,
+  description: 'Get the latest SDKs and client libraries',;
       icon: <Download className='w-6 h-6' />,;
       href: '/downloads',;
       color: 'text-blue-400',;
     },;
     {;
-      title: 'Support Portal',;
-      description: 'Get help from our technical support team',;
+      title: 'Support Portal',,
+  description: 'Get help from our technical support team',;
       icon: <ExternalLink className='w-6 h-6' />,;
       href: '/support',;
       color: 'text-purple-400',;
     },;
     {;
-      title: 'Community Forum',;
-      description: 'Connect with other developers and users',;
+      title: 'Community Forum',,
+  description: 'Connect with other developers and users',;
       icon: <ExternalLink className='w-6 h-6' />,;
       href: '/community',;
       color: 'text-yellow-400',;
@@ -241,7 +241,8 @@ export default function DocsPage() {;
       month: 'short',
 
       day: 'numeric'
-    });  };      day: 'numeric'
+    })
+};      day: 'numeric'
     })
 
 <<<<<<< HEAD
@@ -255,10 +256,17 @@ export default function DocsPage() {;
       year: 'numeric',;
       month: 'short',;
       day: 'numeric',;
+<<<<<<< HEAD
     });  };      day: 'numeric';
     });
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    })
+};      day: 'numeric';
+    })
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
@@ -566,20 +574,20 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                       </a>                    </li>      </Head>;
-      <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-6xl mx - auto space - y-10">;
-          <div className="text - center">;
-            <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">Documentation</h1>;
-            <p className="text - slate - 300 mt - 4">Quick links, references, and integration guides for our services.</p>;
+      <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+        <div className="max - w-6xl mx-auto space-y-10">;
+          <div className="text-center">;
+            <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">Documentation</h1>;
+            <p className="text - slate-300 mt-4">Quick links, references, and integration guides for our services.</p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-6">;
             {sections.map ((s) => (
-              <Card key={s.title} className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
-                <h2 className="text - xl font - semibold mb - 4 text - white">{s.title}</h2>;
-                <ul className="space - y-2">;
+              <Card key={s.title} className="p - 6 bg - black / 40 border border-gray-700 / 50">;
+                <h2 className="text - xl font - semibold mb-4 text-white">{s.title}</h2>;
+                <ul className="space-y-2">;
                   {s.links.map ((l) => (
                     <li key={l.name}>;
-                      <a href={l.href} className="text - cyan - 400 hover:underline">{l.name}</a>;
+                      <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>;
                     </li>))}
                 </ul>;
               </Card>))}
@@ -602,11 +610,11 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                 </li>              ))}
             </ul>;
           </Card>;
-          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
-            <h2 className="text - xl font - semibold mb - 4 text - white">External References</h2>;
-            <ul className="grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300">;
+          <Card className="p - 6 bg - black / 40 border border-gray-700 / 50">;
+            <h2 className="text - xl font - semibold mb-4 text-white">External References</h2>;
+            <ul className="grid grid - cols - 1 md:grid - cols - 2 gap - 3 text-slate-300">;
               {external.map ((e) => (
-                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text - cyan - 400 hover:underline">{e.name}</a></li>;
+                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>;
             </ul>;
           </Card>;
           <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
@@ -635,13 +643,13 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               </a>;
               <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
                 {contact.email}
-              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
-            <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
-            <div className="flex flex - col sm:flex - row gap - 3">;
-              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
-              <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;
-              <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;
-              <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
+              </a>            </div>          <Card className="p - 6 bg - black / 40 border border-gray-700 / 50">;
+            <h2 className="text - xl font - semibold mb-4 text-white">Need help?</h2>;
+            <div className="flex flex - col sm:flex-row gap-3">;
+              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue-600 text-white">Contact Support</Button>;
+              <Button href={contact.website} variant="outline" className="border - gray - 600 text-gray-200">Visit Website</Button>;
+              <a className="text-cyan-400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;
+              <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>;
           </Card>;
         </div>;
       </div>;
@@ -651,8 +659,11 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 ;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </ul>
           </Card>

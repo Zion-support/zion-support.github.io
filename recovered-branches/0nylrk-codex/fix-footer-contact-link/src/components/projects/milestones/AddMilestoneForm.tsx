@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -7,9 +5,6 @@
 =======
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -19,62 +14,9 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-<<<<<<< HEAD
-
-=======
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, 'Title is required');
-  description: z && z.string().optional(),;
-  due_date: z && z.date().optional(),;
-  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-<<<<<<< HEAD
-
-type MilestoneFormValues = z && z.infer<typeof formSchema>;
-
-=======
-type MilestoneFormValues = z && z.infer<typeof formSchema>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-interface AddMilestoneFormProps {;
-  onSubmit: (data: MilestoneFormValues) => void,;
-  isSubmitting: boolean,;
-
-<<<<<<< HEAD
-=======
-import React from 'react';
-
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
-import {format} from 'date-fns';
-import {Button} from '@/components/ui/button';
-import {Calendar} from '@/components/ui/calendar';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
-const formSchema = z.object({
-  title: z.string().min(1, 'Title is required');
-  description: z.string().optional()
-  due_date: z.date().optional()
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-type MilestoneFormValues = z.infer<typeof formSchema>;
-interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void
-  isSubmitting: boolean
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  onCancel?: () => void;
-  projectScope?: string;
+import {AIMilestoneGenerator} from './AIMilestoneGenerator';  projectScope?: string;
   projectStartDate?: string;
+<<<<<<< HEAD
   projectEndDate?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,11 +60,15 @@ export function AddMilestoneForm({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onSubmit;
+=======
+  projectEndDate?: string;  onSubmit;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -167,6 +113,12 @@ export function AddMilestoneForm({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
+=======
+      });
+      return
+
+=======import React from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -190,7 +142,7 @@ import {;
 import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
 const formSchema = z.object({;
-  title: z.string().min(1, 'Title is required'),;
+  title: z.string().min(1, 'Title is required'),,
   description: z.string().optional(),;
   due_date: z.date().optional(),;
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
@@ -213,6 +165,7 @@ export function AddMilestoneForm({;
   projectStartDate = '',;
   projectEndDate = null,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 =======
@@ -224,11 +177,14 @@ export function AddMilestoneForm({;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
+<<<<<<< HEAD
       title: '',;
       description: '',;
       amount: 0}}),;
@@ -347,132 +303,21 @@ export function AddMilestoneForm({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+=======
+      title: '',,
+  description: '',;
+      amount: 0}}),;  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { CalendarIcon, Loader2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-;
-import { Button } from '@/components/ui/button',;
-import { Calendar } from '@/components/ui/calendar',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import {;
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger} from '@/components/ui/popover',;
-import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
-;
-const formSchema = z.object({;
-  title:z.string().min(1, 'Title is required'),;
-  description:z.string().optional(),;
-  due_date:z.date().optional(),;
-  amount:z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
-;
-type MilestoneFormValues = z.infer<typeof formSchema>,;
-;
-interface AddMilestoneFormProps {;
-  onSubmit:(data:MilestoneFormValues) => void,;
-  isSubmitting:boolean,;
-  onCancel?:() => void,;
-  projectScope?:string,;
-  projectStartDate?:string,;
-  projectEndDate?:string,;
-  projectType?:string;
-}
-;
-export function AddMilestoneForm({;
-  onSubmit,;
-  isSubmitting,;
-  onCancel,;
-  projectScope = '',;
-  projectStartDate = '',;
-  projectEndDate = null,;
-  projectType = 'Other';
-} AddMilestoneFormProps) {;
-  const form = useForm<MilestoneFormValues>({;
-    resolver:zodResolver(formSchema),;
-    defaultValues:{;
-      title:'',;
-      description:'',;
-      amount:0}}),;
-;
-  const handleSubmit = (values:MilestoneFormValues) => {;
-    onSubmit(values),;
-    form.reset();
-  },;
-;
-  const handleAddMilestones = (milestones:GeneratedMilestone[]) => {;
-    // If there's only one milestone, submit it directly;
-    if (milestones.length === 1) {;
-      const milestone = milestones[0],;
-      onSubmit({;
-        title:milestone.title,;
-        description:milestone.description,;
-        due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
-        amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      }),;
-      return,;
-    }
-;
-    // If there are multiple milestones, submit them one by one;
-    milestones.forEach(milestone => {;
-      onSubmit({;
-        title:milestone.title,;
-        description:milestone.description,;
-        due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
-        amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      }),;
-    }),;
-  },;
-;
-  const handleAddMilestone = (milestone:GeneratedMilestone) => {;
-    onSubmit({;
-      title:milestone.title,;
-      description:milestone.description,;
-      due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
-      amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    }),;
-  },;
-;
-  return (;
-    <div className="space-y-6">;
-      {/* AI Milestone Generator */}
-      {projectScope && projectStartDate && (;
-        <AIMilestoneGenerator;
-  }
-  },
-
-  return (
-    <div className="space-y-6">
-      {/* AI Milestone Generator */}
-      {projectScope && projectStartDate && (
-        <AIMilestoneGenerator
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           scope={projectScope}
           startDate={projectStartDate}
           endDate={projectEndDate}
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
+<<<<<<< HEAD
           onAddMilestone={handleAddMilestone}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -495,6 +340,9 @@ export function AddMilestoneForm({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Form {...form}>
+=======
+          onAddMilestone={handleAddMilestone}      <Form {...form}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 
       <Form {...form}>;
@@ -508,7 +356,7 @@ export function AddMilestoneForm({;
                 <FormLabel>Title</FormLabel>;
 import {GeneratedMilestone} from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
-  title: z.string ().min (1, 'Title is required');
+  title: z.string ().min (1, 'Title is required'),
   description: z.string ().optional (),
   due_date: z.date ().optional (),
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
@@ -575,7 +423,7 @@ if ( {) {
   }
 ;
   return (
-    <div className="space - y-6">;
+    <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {project_scope && projectStartDate && (
         <AIMilestoneGenerator;
@@ -587,7 +435,7 @@ if ( {) {
           onAddMilestone={handleAddMilestone}
         />)}
       <Form {...form}>;
-        <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
+        <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
           <FormField;
             control={form.control}
             name="title";
@@ -595,138 +443,12 @@ if ( {) {
                 <FormControl>;
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
-                <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          />;
-
-
-          <FormField
-            control={form && form.control}
-            name="description"
-=======
-          />;
-          <FormField
-            control={form && form.control}
-            name="description"
-;
-      <Form {...form}>;
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
-          <FormField;
-            control={form.control}
-            name="title";
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Title</FormLabel>;
-                <FormControl>;
-                  <Input placeholder="Milestone title" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;            )}
-          />;
-;
-          <FormField;
-            control={form.control}
-            name="description";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          <FormField
-            control={form && form.control}
-            name="description"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Description (optional)</FormLabel>;
-                <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  <Textarea
-                    placeholder="Describe what needs to be delivered"
-                    className="min-h-[100px]"
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
-            name="description";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel > Description (optional)</FormLabel>;
-                <FormControl>;
-                  <Textarea;
-                    placeholder="Describe what needs to be delivered";
-                    className="min - h-[100px]";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-                  <Textarea;
-                    placeholder="Describe what needs to be delivered";
-                    className="min-h-[100px]";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          />;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-            <FormField
-              control={form && form.control}
-              name="due_date"
-=======
-            <FormField
-              control={form && form.control}
-              name="due_date"
-              </FormItem>;
-            )}
-          />;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}
-              name="due_date";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-            <FormField
-              control={form && form.control}
-              name="due_date"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              render={({ field }) => (;
+                <FormMessage />;              render={({ field }) => (;
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger asChild>;
                       <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                        <Button
-                          variant="outline"
-                          className="w-full pl-3 text-left font-normal">;
-                          {field && field.value ? (;
-                            format(field && field.value, "PPP");
-                          ) : (;
-<<<<<<< HEAD
-=======
-                        <Button;
-                          variant="outline";
-                          className="w-full pl-3 text-left font-normal";
-                        >;
-                          {field.value ? (;
-                            format(field.value, "PPP");
-                          ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <span className="text-muted-foreground">;
                               Pick a date;
                             </span>;
@@ -736,71 +458,10 @@ if ( {) {
                       </FormControl>;
                     </PopoverTrigger>;
                     <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                      <Calendar
-                        mode="single"
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-            <FormField
-              control={form && form.control}
-              name="amount"
-<<<<<<< HEAD
-=======
-            />;
-            <FormField
-              control={form && form.control}
-              name="amount"
-                      <Calendar;
-                        mode="single";
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        disabled={(date) => date < new Date()}
-                        initialFocus;
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-                </FormItem>;              )}
-            />;
-;
-            <FormField;
-              control={form.control}
-              name="amount";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    <Input
-                      type="number"
-                      min="0"
-                      step="0 && 0.01"
-                      placeholder="0 && 0.00"
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="amount";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Amount ($)</FormLabel>;
-                  <FormControl>;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Input;
                       type="number";
                       min="0";
@@ -810,140 +471,12 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             />;
           </div>;
 
           <div className="flex justify-end space-x-2 pt-4">;
-            {onCancel && (;
-
-=======
-        />
-      )}
-
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="title"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Title</FormLabel>
-                <FormControl>
-                  <Input placeholder="Milestone title" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="description"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Description (optional)</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Describe what needs to be delivered"
-                    className="min-h-[100px]"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
-              control={form.control}
-              name="due_date"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>Due Date (optional)</FormLabel>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <FormControl>
-                        <Button
-                          variant="outline"
-                          className="w-full pl-3 text-left font-normal"
-                        >
-                          {field.value ? (
-                            format(field.value, "PPP")
-                          ) : (
-                            <span className="text-muted-foreground">
-                              Pick a date
-                            </span>
-                          )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        disabled={(date) => date < new Date()}
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="amount"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Amount ($)</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      min="0"
-                      step="0.01"
-                      placeholder="0.00"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="flex justify-end space-x-2 pt-4">
-            {onCancel && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              <Button
-                type="button"
-                variant="outline"
-                onClick={onCancel}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                disabled={isSubmitting}>;
-=======
-                </FormItem>;
-              )}
-            />;
-          </div>;
-;
-          <div className="flex justify-end space-x-2 pt-4">;
-            {onCancel && (;
-              <Button;
-                type="button";
-                variant="outline";
-                onClick={onCancel}
-                disabled={isSubmitting}
-              >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                Cancel;
+            {onCancel && (;                Cancel;
               </Button>;
             )}
             <Button type="submit" disabled={isSubmitting}>;
@@ -951,20 +484,14 @@ if ( {) {
                 <>;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                   Saving...;
-<<<<<<< HEAD
                 </>;
-<<<<<<< HEAD
               ) : (;
                 "Add Milestone";
               )}
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </FormItem>)}
             />;
           </div>;
-          <div className="flex justify - end space - x-2 pt - 4">;
+          <div className="flex justify - end space - x-2 pt-4">;
             {on_cancel && (
               <Button;
                 type="button";
@@ -977,84 +504,7 @@ if ( {) {
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? (
                 <>;
-                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />;
                   Saving...;
                 </>) : (
                 "Add Milestone")}
-<<<<<<< HEAD
-
-=======
-              ) :(;
-                "Add Milestone";
-              )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                "Add Milestone";
-              )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </div>);
-}
-
-=======
-    </div>;
-  ),;}
- type MilestoneFormValues = z.infer<typeof formSchema>;
-const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
-  //If there's only one milestone, submit it directly if (milestones.length === 1) {
-  <AIMilestoneGenerator scope= {
-  projectScope 
-}startDate= {
-  projectStartDate 
-}endDate= {
-  projectEndDate 
-}projectType= {
-  projectType 
-}onAddMilestones= {
-  handleAddMilestones 
-}onAddMilestone= {
-  handleAddMilestone 
-}/>) 
-}</FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) 
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <Button type="button" variant="outline" onClick= {
-  onCancel 
-}disabled= {
-  isSubmitting 
-}> Cancel </Button>) 
-}<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") 
-}</Button> </div> </form> </Form> </div>) 
-}
-                disabled={isSubmitting}
-              >
-                Cancel
-              </Button>
-            )}
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Saving...
-                </>
-              ) : (
-                "Add Milestone"
-              )}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

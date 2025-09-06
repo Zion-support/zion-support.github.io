@@ -22,7 +22,11 @@ class AutomationSuiteRunner {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
   async runCommand(command, description) {
@@ -183,9 +187,15 @@ class AutomationSuiteRunner {
         const lines = content.split('\n');
         qualityMetrics.totalLines += lines.length;
         // Count comments
+<<<<<<< HEAD
         const commentLines = lines.filter(line =>
           line.trim().startsWith('//') ||
           line.trim().startsWith('/*') ||
+=======
+        const commentLines = lines.filter(line => 
+          line.trim().startsWith('//') || 
+          line.trim().startsWith('/*') || 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           line.trim().startsWith('*')
         ).length;
         totalComments += commentLines;
@@ -291,3 +301,7 @@ if (require.main === module) {
   runner.run().catch(console.error);
 }
 module.exports = AutomationSuiteRunner;
+<<<<<<< HEAD
+=======
+module.exports = AutomationSuiteRunner;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

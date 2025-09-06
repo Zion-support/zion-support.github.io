@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -9,6 +10,8 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -16,6 +19,7 @@ import {Label} from "@/components/ui/label";
 import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,39 +103,15 @@ import { toast } from "@/hooks/use-toast",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SummaryStepProps {;
   formData: QuoteFormData,;
+=======
+import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
-
-  const [isMatching, setIsMatching] = useState(false);
-
-  const [matches, setMatches] = useState<MatchResult[]>([]);
-
-
-<<<<<<< HEAD
-=======
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
       if (!formData && formData.projectDescription) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsMatching(true);
       try {;
         // Create a query string from the form data;
@@ -152,26 +132,8 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
           ${formData && formData.budget.type === 'fixed' ? `budget ${formData && formData.budget.amount}` : ''}
           ${formData && formData.timeline}
         `;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
         // Get AI matches;
         const results = await findMatches(;
-
-          queryString;
-          formData && formData.serviceType;
-          3;
-
-
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-        // Get AI matches;
-        const results = await findMatches(;
-
 
         
 ;
@@ -193,6 +155,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.timeline}
         `,
         
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -214,11 +177,11 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [matches, setMatches] = useState<MatchResult[]>([]);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           queryString;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           formData && formData.serviceType;
           3;
         );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
 import { Card, CardContent } from '@/components / ui / card';
@@ -269,11 +232,11 @@ if (return) {
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"});
-<<<<<<< HEAD
 
       } finally {
         setIsMatching (false);
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -286,6 +249,8 @@ if (return) {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         );
         setMatches(results)
       } catch (error) {
@@ -300,6 +265,7 @@ if (return) {
     }
     },
     
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       } finally {
@@ -308,6 +274,8 @@ if (return) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     runMatching()
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
@@ -318,6 +286,7 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -331,18 +300,22 @@ if (return) {
   const matchItems = matches.map(match => match.item);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -350,12 +323,8 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -366,13 +335,15 @@ if (return) {
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -426,6 +397,8 @@ if (return) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -489,6 +462,7 @@ if (return) {
                     {formData.startDate.toLocaleDateString()}
                   </div>
                 </div>
+<<<<<<< HEAD
               )}
 <<<<<<< HEAD
 
@@ -820,18 +794,13 @@ serviceType={formData.serviceType}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         matches={matchItems}
+=======
+              )}        matches={matchItems}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Service Information */}
       <div>;
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>;
@@ -839,15 +808,14 @@ serviceType={formData.serviceType}
           <CardContent className="pt-4">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div>;
-<<<<<<< HEAD
                 <Label className="text-zion-slate-light">Service Type</Label>;
-<<<<<<< HEAD
                 <div className="text-white">{formData && formData.serviceType}</div>;
               </div>;
 
               {formData && formData.specificItem && (;
                 <div>;
                   <Label className="text-zion-slate-light">Selected Item</Label>;
+<<<<<<< HEAD
                   <div className="text-white">{formData && formData.specificItem.title}</div>;
 =======
                 <div className="text-white">{formData.serviceType}</div>;
@@ -1187,3 +1155,7 @@ if ( {) {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  <div className="text-white">{formData && formData.specificItem.title}</div>;                </div>;
+              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

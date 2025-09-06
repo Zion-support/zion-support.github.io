@@ -7,6 +7,7 @@ import { SafeRef } from "@/types/ref-types",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+<<<<<<< HEAD
   title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
@@ -29,6 +30,35 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     return (;
       <div;
 =======
+<<<<<<< HEAD
+=======
+import React, { forwardRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { SafeRef } from '@/types/ref-types';
+interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  title?: string;
+  icon?: React.ReactNode;
+  defaultExpanded?: boolean;
+  showChevron?: boolean
+<<<<<<< HEAD
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
+  (
+    {
+      title
+      icon
+      defaultExpanded = true
+      showChevron = true
+      className
+      children
+      ...props
+    }
+    ref
+  ) => {
+    const [expanded, setExpanded] = React.useState(defaultExpanded)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
@@ -48,18 +78,33 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
       >
         {title && (
           <button
+<<<<<<< HEAD
             type="button"
             className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30"
             onClick={() => setExpanded(!expanded)}
           >
             <div className="flex items-center gap-2">
+=======
+            type='button'
+            className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
+<<<<<<< HEAD
+=======
+            onClick={() => setExpanded(!expanded)}          >;
+            <div className='flex items-center gap-2'>;
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {icon}
               <span>{title}</span>
             </div>
@@ -69,7 +114,90 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+            )}
+          </button>
+        )}
+        <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>
+      </div>
+    )
+  }
+)
+SidebarGroup.displayName = 'SidebarGroup'
+export { SidebarGroup }
+
+
+SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';
+
+import React, { forward_ref } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { SafeRef } from '@/types / ref - types';
+interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
+  title?: string;
+  icon?: React.ReactNode;
+  default_expanded?: boolean;
+  show_chevron?: boolean;
+const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
+  (
+    {
+      title,
+      icon,
+      default_expanded = true,
+      show_chevron = true,
+      class_name,
+      children,
+      ...props;
+    },
+    ref) => {
+    const [expanded, set_expanded] = React.useState (default_expanded);
+        ref={ref as SafeRef < HTMLDivElement>}
+        className={cn ('px - 3 py - 2', class_name)}        {...props}
+      >;
+        {title && (
+          <button;
+            type='button';
+            className='flex w - full items - center justify - between rounded - md px - 2 py - 1 text - sm font - medium text - muted - foreground hover:bg - secondary / 30';
+            on_click={() => set_expanded (!expanded)}          >;
+            <div className='flex items - center gap - 2'>;
+              {icon}
+              <span>{title}</span>;
+            </div>;
+            {showChevron && (;
+              <ChevronDown
+                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
+              />
+            )}
+          </button>;
+        )}
+export { SidebarGroup }
+
+SidebarGroup.displayName = 'SidebarGroup';
+export { SidebarGroup };
+}
+            )}
+          </button>;
+        )}
+        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
+      </div>
+    )
+  }
+),
+
+SidebarGroup.displayName = "SidebarGroup",
+export { SidebarGroup },
+        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
+      </div>;
+    );
+  }
+),;
+SidebarGroup.displayName = "SidebarGroup",;
+export { SidebarGroup };
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
             )}
@@ -89,6 +217,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 
   }
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 SidebarGroup.displayName = 'SidebarGroup'
@@ -126,3 +255,6 @@ export { SidebarGroup };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

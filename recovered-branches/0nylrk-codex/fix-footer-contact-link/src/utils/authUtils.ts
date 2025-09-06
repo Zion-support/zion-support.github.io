@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {supabase} from "@/integrations/supabase/client";
+import type { UserDetails } from "@/types/auth";
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";
 
 import type { UserDetails } from "@/types/auth";
 
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -44,12 +41,17 @@ import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 
 export const cleanupAuthState = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -130,6 +132,10 @@ export const cleanupAuthState = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  // Remove standard auth tokens
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -148,6 +154,7 @@ export const cleanupAuthState = () => {;
   // Remove from sessionStorage if in use;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
+<<<<<<< HEAD
       sessionStorage.removeItem(key);
 <<<<<<< HEAD
 =======
@@ -214,12 +221,18 @@ export const checkNewRegistration = async (user: UserDetails) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      sessionStorage.removeItem(key);    }
+  })
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
       await supabase
         .from("scheduled_jobs")
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -280,6 +293,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           job_type: "send_retention_email";
           scheduled_for: new Date ().toISOString ();
           status: "pending";
@@ -288,6 +303,7 @@ if ( {) {
 
 =======
           }
+<<<<<<< HEAD
         });
 <<<<<<< HEAD
 =======
@@ -333,25 +349,18 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Create entry in email_campaigns table
+=======
+        });      // Create entry in email_campaigns table
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       await supabase
         .from("email_campaigns")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             user_type: user.user_type || "unknown",
-            display_name: user.display_name || user.email?.split ("@")[0] || "User";
-=======
-=======
-          user_id: user && user.id;
-            user_type: user.user_type || "unknown",
-            display_name: user.display_name || user.email?.split ("@")[0] || "User";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          user_id: user.id,
+            display_name: user.display_name || user.email?.split ("@")[0] || "User";          user_id: user.id,
           campaign_type: "welcome_series",
           template_name: "welcome_email",
+<<<<<<< HEAD
           template_data: {
 <<<<<<< HEAD
 =======
@@ -381,6 +390,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             user_id: user.id,
+=======
+          template_data: {            user_id: user.id,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
@@ -411,6 +423,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             user_id: user.id,;
             email_type: "welcome_series",;
             user_type: user.userType || "unknown",;
+<<<<<<< HEAD
             display_name: user.displayName || user.email?.split("@")[0] || "User";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -568,3 +581,6 @@ export const checkNewRegistration = async (user:UserDetails) => {;
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            display_name: user.displayName || user.email?.split("@")[0] || "User";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

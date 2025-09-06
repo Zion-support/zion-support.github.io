@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
 export interface EmergingTechService {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
-  tagline: string;
+  tagline: string,
   description: string;
   category: string;
   price: {
@@ -18,7 +21,6 @@ export interface EmergingTechService {;
     setupTime: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
 
   features: string[];
   benefits: string[];
@@ -67,16 +69,6 @@ export interface EmergingTechService {;
     reviews: 45,
   },
   {
-=======
-
-
-  {
-
-      'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
-    ],
-    realImplementation: true,
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -93,6 +85,7 @@ export interface EmergingTechService {;
     ]
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
+<<<<<<< HEAD
     compliance: [
 <<<<<<< HEAD
 =======
@@ -457,6 +450,9 @@ export interface EmergingTechService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+=======
+    compliance: [];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     ];
     benefits: [
@@ -491,10 +487,13 @@ export interface EmergingTechService {;
   {
     id: 'quantum-bio-computing-platform';
     name: 'Quantum Bio-Computing Platform';
-    tagline: 'Quantum computing meets biological systems';
-    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
+    tagline: 'Quantum computing meets biological systems',
+  description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
     category: 'Quantum & Emerging Tech';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     price: {
       monthly: 799,
       yearly: 7990,
@@ -503,66 +502,6 @@ export interface EmergingTechService {;
       setup_time: '12 hours',
       enterprise: 2999,
     },
-<<<<<<< HEAD
-=======
-    features: [;
-      'Advanced computer vision',
-      'Real - time decision making',
-      'Safety systems',
-      'Path planning algorithms',
-      'Traffic prediction',
-      'Weather adaptation',
-      'Fleet management',
-      'Performance monitoring',
-      'Custom AI models',
-      'API for vehicles',
-    ],
-    benefits: [;
-      'Enable autonomous transportation',
-      'Improve road safety',
-      'Reduce transportation costs',
-      'Optimize fleet operations',
-      'Advance mobility technology',
-    ],
-    target_audience: [;
-      'Automotive manufacturers',
-      'Transportation companies',
-      'Logistics providers',
-      'Ride - sharing platforms',
-      'Government agencies',
-      'Technology companies',
-    ],
-    market_position:;
-      'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
-    competitors: [;
-      'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms',
-    ],
-    tech_stack: [;
-      'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Advanced autonomous vehicle platform with AI perception, decision - making, and safety systems. Includes vehicle integration and fleet management tools.',
-    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
-    use_cases: [;
-      'Autonomous driving',
-      'Fleet management',
-      'Safety systems',
-      'Traffic optimization',
-      'Transportation logistics',
-      'Research and development',
-    ],
-    integrations: [;
-      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications',
-    ],
-    support:;
-      '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
-    compliance: [;
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -573,7 +512,6 @@ export interface EmergingTechService {;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
-<<<<<<< HEAD
     ];
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
@@ -584,6 +522,7 @@ export interface EmergingTechService {;
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -623,6 +562,8 @@ export interface EmergingTechService {;
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -630,6 +571,7 @@ export interface EmergingTechService {;
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 =======
@@ -651,8 +593,11 @@ export interface EmergingTechService {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string,;
+=======
+  }  id: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   category: string,;
   price: {;
@@ -968,12 +913,10 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 <<<<<<< HEAD
 =======
 ;
-<<<<<<< HEAD
-
 export interface EmergingTechService {;
   id: string,;
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   category: string,;
   price: {;
@@ -1012,15 +955,13 @@ export interface EmergingTechService {;
   }
 ];
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface EmergingTechService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1032,3 +973,5 @@ export interface EmergingTechService {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

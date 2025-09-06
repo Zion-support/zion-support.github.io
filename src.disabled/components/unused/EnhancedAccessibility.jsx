@@ -1,25 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
-import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
-const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
-const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/unused/EnhancedAccessibility.jsx
-=======
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -30,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 :temp_exclude/src.disabled/components/unused/EnhancedAccessibility.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
@@ -61,3 +52,8 @@ import React,{ useState,useEffect } from';react' import { motion,AnimatePresence
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
+const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
+import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

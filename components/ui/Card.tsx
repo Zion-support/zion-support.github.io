@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   className: string;
   id: string;
@@ -125,6 +126,8 @@ const CardDescription = React.forward_ref<;
     className={cn ("text - sm text - muted - foreground", class_name)}
     {...props}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 
 interface CardProps {
@@ -138,6 +141,7 @@ export default function Card({ children, className = '' }: CardProps) {
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import React from "react";
@@ -225,6 +229,9 @@ const CardFooter = React && React.forwardRef<;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   />));
+=======
+}  />));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 CardDescription.display_name = "CardDescription";
 ;
 const CardContent = React.forward_ref<;
@@ -303,6 +310,7 @@ interface CardProps {
     >;
       {/* Subtle background pattern */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
 
@@ -319,6 +327,9 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+=======
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>);
 
 },
@@ -328,10 +339,14 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

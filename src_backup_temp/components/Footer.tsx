@@ -31,8 +31,8 @@ export function Footer() {;
   const currentYear = new Date().getFullYear();
 ;
   const scrollToTop = () => {;
-    window.scrollTo({ "top": "0", "behavior": 'smooth' });
-  };
+    window.scrollTo({ "top": "0", "behavior": 'smooth' })
+};
 ;
   return (;
     <footer className="bg-gray-900 text-white relative overflow-hidden">;
@@ -648,8 +648,8 @@ export default function Footer(props: any) {
           scrollToTopButton.classList.add('hidden');
         }
       }
-      setShowScrollTop(window.scrollY > 400);
-    };
+      setShowScrollTop(window.scrollY > 400)
+};
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -664,16 +664,16 @@ export default function Footer(props: any) {
       }
       return newSet;
     }
-    );
-  };
+    )
+};
   // Scroll to top function
   const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     }
-    );
-  };
+    )
+};
 export default function Footer(props: any) {
   const footerSections = [
     {
@@ -804,8 +804,8 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
 export function Footer(props: any) {
   const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' }
-    );
-  };
+    )
+};
   ]"
   const solutions = []
   const contactInfo = [
@@ -1307,16 +1307,16 @@ const Footer = () => {
       }
       return newSet;
     }
-    );
-  };
+    )
+};
   // Scroll to top function
   const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     }
-    );
-  };
+    )
+};
   // Handle link click
   const handleLinkClick = (props: any) => {
     if (link.external) {
@@ -1746,8 +1746,8 @@ import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitt
 export function Footer(props: any) {
   const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' }
-    );
-  };
+    )
+};
   const footerSections = [
     {
       title: "Services",
@@ -2145,7 +2145,7 @@ export function Footer(props: any) {
         </div>
       </div>
 </footer>
-  );
+  )
 };
 export default Footer;
       {/* Scroll to Top Button */}

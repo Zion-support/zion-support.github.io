@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,9 @@ export type ProposalMeta = {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -146,7 +150,7 @@ export type ProposalPayload = {
   supportingMultiverses: string[];
   contentMarkdown: string;
   language?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, any>
 };
 const dataDir = path.join(process.cwd(), 'dataproposals'),;
 const publicDir = path.join(process.cwd(), 'publicproposals'),;
@@ -197,61 +201,23 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {;
 }
 
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
   const next = updater({ ...current, updatedAt: new Date().toISOString() });
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-export function listProposals(): ProposalMeta[] {ensureDirs();
-  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
-  const metas: ProposalMeta[] = entries.map((id) => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-export function getProposal(id: string): ProposalMeta | null {try {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {return null;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -396,11 +362,18 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+}}
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
@@ -418,6 +391,8 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
@@ -569,6 +544,7 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
   return updateProposalMeta (id, (meta) => ({
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -579,3 +555,6 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

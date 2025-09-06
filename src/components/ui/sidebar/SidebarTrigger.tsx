@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+    </Button>;
+  )
+};
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -38,6 +48,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
       <span className="sr-only">Toggle Sidebar</span>;
     </Button>;
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -45,3 +56,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

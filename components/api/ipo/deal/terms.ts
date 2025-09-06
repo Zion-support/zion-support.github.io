@@ -1,26 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
   const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A',
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
     target: '$10,000,000';
     valuationCap: '$80,000,000';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
     discount: '20%'
 <<<<<<< HEAD
 =======
@@ -140,3 +139,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    discount: '20%'    leadInvestor: 'TBD'});
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

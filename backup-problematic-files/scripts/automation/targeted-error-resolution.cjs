@@ -3,9 +3,15 @@
  * Targeted Error Resolution Automation;
  * Focuses on specific error patterns and provides targeted error fixing;
  */
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -28,5 +34,10 @@ const { execSync } = require('child_process')
       newContent = newContent.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2"
   console.error(' Targeted error resolution "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error(' Targeted error resolution interval "failed")
+    console.error(' Targeted error resolution interval "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

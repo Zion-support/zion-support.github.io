@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Attachment {
 export interface Attachment {;
   id: string;
@@ -14,6 +17,7 @@ export interface Attachment {;
   originalName: string;
   mimeType: string;
   size: number;
+<<<<<<< HEAD
   url: string;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -64,10 +68,14 @@ export interface SupportTicket {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   title: string;
+=======
+  url: string;  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,11 +137,13 @@ export interface TicketMessage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   sender_type: 'customer' | 'agent' | 'system';
+=======
+  customer_id: string;  customer_id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   sender_id: string;
   is_internal: boolean;
   created_at: Date,
   attachments: Attachment[];
-<<<<<<< HEAD
 }
 export interface Customer {
   createdAt: Date;
@@ -164,6 +174,7 @@ export interface TicketMessage {;
 export interface Customer {
 
 export interface Customer {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -173,10 +184,13 @@ export interface Customer {;
 export interface Customer {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   email: string;
   company?: string;
+<<<<<<< HEAD
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,6 +267,13 @@ export interface SupportAgent {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+  plan: 'free' | 'basic' | 'pro' | 'enterprise';  id: string;
+  name: string;
+  email: string;
+  role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
+  skills: string[];}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface AgentPerformance {
   tickets_resolved: number,
   averageResolutionTime: number, // in hours;
@@ -269,84 +290,17 @@ export interface ChatbotSession {
   customer_id: string;
   start_time: Date;
   end_time?: Date;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  isAvailable: boolean;
-  currentTickets: number;
-
-  maxTickets: number
-
-  performance: AgentPerformance
-}
-export interface AgentPerformance {
-
-  ticketsResolved: number
-
-  averageResolutionTime: number, // in hours
-  customerSatisfaction: number, // 1-5
-  firstResponseTime: number, // in minutes
-  escalationRate: number, // percentage
-}
-export interface ChatbotSession {
-  id: string;
-  customerId: string;
-  startTime: Date;
-  endTime?: Date;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  messages: ChatbotMessage[];
-  intent: string;
-  confidence: number;
-  resolved: boolean;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  escalated: boolean,
   satisfaction: number, // 1 - 5;
 
-=======
-  escalated: boolean
-
-  satisfaction: number, // 1-5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  escalated: boolean,
-  satisfaction: number, // 1 - 5;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface ChatbotMessage {
   id: string;
   content: string;
   sender: 'customer' | 'bot';
   timestamp: Date;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   intent?: string,
-  confidence?: number;
-
-=======
-  intent?: string
-
-  confidence?: number
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  intent?: string,
-  confidence?: number;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
+  confidence?: number;}
 export interface KnowledgeBaseArticle {
   id: string;
   title: string;
@@ -354,114 +308,19 @@ export interface KnowledgeBaseArticle {
   category: string;
   tags: string[];
   views: number;
-  helpful: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  not_helpful: number;
-  last_updated: Date,
-  created_by: string;
-
-}
-export interface SupportAnalytics {
-  total_tickets: number;
-  open_tickets: number;
-  resolved_tickets: number;
-  averageResolutionTime: number;
-  averageFirstResponseTime: number;
-
-  customer_satisfaction: number;
-  chatbotResolutionRate: number,
-  top_categories: Array<{ category: string, count: number }>;
-  agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;
-
-<<<<<<< HEAD
-=======
-  notHelpful: number;
-
-  lastUpdated: Date
-
-  createdBy: string
-}
-export interface SupportAnalytics {
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  averageFirstResponseTime: number;
-  customerSatisfaction: number;
-
-  chatbotResolutionRate: number
-  topCategories: Array<{ category: string, count: number }>;
-
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-export interface AIRecommendation {
-  type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
-  title: string;
-  description: string;
-  impact: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  confidence: number,
+  helpful: number;  confidence: number,
   action_items: string[];
 
-=======
-  confidence: number
-
-  actionItems: string[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  confidence: number,
-  action_items: string[];
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 class AICustomerSupportService {
   private tickets: SupportTicket[] = [];
   private customers: Customer[] = [];
   private agents: SupportAgent[] = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  private chatbot_sessions: ChatbotSession[] = [];
-  private knowledge_base: KnowledgeBaseArticle[] = [];
-  private analytics: SupportAnalytics;
-
-    this && this.initializeSampleData(),
-    this && this.updateAnalytics()
-
-<<<<<<< HEAD
-=======
-  private chatbotSessions: ChatbotSession[] = [];
-  private knowledgeBase: KnowledgeBaseArticle[] = [];
-  private analytics: SupportAnalytics;
-  constructor() {
-
-    this.initializeSampleData()
-
-    this.updateAnalytics()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   private initializeSampleData() {
     // Initialize sample customers
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     this && this.customers = [
@@ -703,6 +562,9 @@ class AICustomerSupportService {;
             createdAt: new Date('2025-01-10T10:15:00Z'),;
       {
         id: 'cust_001';
+=======
+    this && this.customers = [        id: 'cust_001';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
@@ -715,90 +577,22 @@ class AICustomerSupportService {;
         lastContactDate: new Date('2025-01-10'),
 
         createdAt: new Date('2024-06-01')
-=======
         satisfaction_score: 4.5;
         lastContactDate: new Date ('2025 - 01 - 10'),
         created_at: new Date ('2024 - 06 - 01');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
       {
         id: 'cust_002';
         name: 'Jane Smith';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        email: 'jane && jane.smith@startup && startup.com';
         company: 'StartupXYZ';
         plan: 'basic';
         total_tickets: 3;
         resolved_tickets: 3;
-        averageResponseTime: 25;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        satisfactionScore: 4 && 4.0;
-        lastContactDate: new Date('2025-01-08'),
-
-<<<<<<< HEAD
-=======
-        email: 'jane.smith@startup.com';
-        company: 'StartupXYZ';
-        plan: 'basic';
-        totalTickets: 3;
-        resolvedTickets: 3;
-        averageResponseTime: 25;
-        satisfactionScore: 4.0;
-        lastContactDate: new Date('2025-01-08')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        createdAt: new Date('2024-08-15')
+        averageResponseTime: 25;        createdAt: new Date('2024-08-15')
       }
     ];
 
     // Initialize sample agents
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    this && this.agents = [
-        satisfaction_score: 4.0;
-        lastContactDate: new Date ('2025 - 01 - 08'),
-        created_at: new Date ('2024 - 08 - 15');
-      }
-    ];
-;
-    // Initialize sample agents;
-    this.agents = [;
-      {
-        id: 'agent_001';
-        name: 'Mike Johnson';
-        email: 'mike && mike.johnson@ziontech && ziontech.com';
-        role: 'tier2';
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'];
-        is_available: true;
-        current_tickets: 2;
-        max_tickets: 5;
-        performance: {
-          escalationRate: 8
-          tickets_resolved: 45;
-          averageResolutionTime: 2.5;
-          customer_satisfaction: 4.6;
-          firstResponseTime: 12,
-          escalation_rate: 8;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     this.agents = [
       {
         id: 'agent_001';
@@ -815,22 +609,6 @@ class AICustomerSupportService {;
           customerSatisfaction: 4.6;
           firstResponseTime: 12
           escalationRate: 8
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    this && this.agents = [
-=======
-        satisfaction_score: 4.0;
-        lastContactDate: new Date ('2025 - 01 - 08'),
-        created_at: new Date ('2024 - 08 - 15');
-      }
-    ];
-;
-    // Initialize sample agents;
-    this.agents = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      {
         id: 'agent_001';
         name: 'Mike Johnson';
         email: 'mike && mike.johnson@ziontech && ziontech.com';
@@ -846,6 +624,7 @@ class AICustomerSupportService {;
           firstResponseTime: 12,
 
           escalationRate: 8
+<<<<<<< HEAD
 =======
           tickets_resolved: 45;
           averageResolutionTime: 2.5;
@@ -1686,30 +1465,28 @@ class AICustomerSupportService {
           customerSatisfaction: 4 && 4.6;
           firstResponseTime: 12,
           escalationRate: 8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           tickets_resolved: 45;
           averageResolutionTime: 2.5;
           customer_satisfaction: 4.6;
           firstResponseTime: 12,
           escalation_rate: 8;
         }
-      }
+      };
       {
         id: 'agent_002';
         name: 'Lisa Chen';
-        email: 'lisa && lisa.chen@ziontech && ziontech.com';
         role: 'tier1';
         skills: ['General SupportBillingAccount Management'];
         is_available: true;
         current_tickets: 1;
         max_tickets: 8;
-        performance: {
-          averageResolutionTime: 1 && 1.8;
-          customerSatisfaction: 4 && 4.4;
-          firstResponseTime: 8,
-          escalationRate: 15
+        performance: {          escalationRate: 15
         }
       }
     ];
+
     // Initialize sample tickets
     this && this.tickets = [
           tickets_resolved: 78;
@@ -1722,21 +1499,20 @@ class AICustomerSupportService {
     ];
 ;
     // Initialize sample tickets;
-    this.tickets = [;
-      {
+    this.tickets = [;      {
         id: 'ticket_001';
-        title: 'API Integration Issue';
-        description: 'Getting 500 error when trying to integrate with our CRM system';
+        title: 'API Integration Issue',
+  description: 'Getting 500 error when trying to integrate with our CRM system';
         status: 'in_progress';
         priority: 'high';
         category: 'technical';
-        customer_id: 'cust_001';
         assignedAgentId: 'agent_001';
         tags: ['apiintegrationerror'];
         attachments: [];
         messages: [;
           {
             id: 'msg_001';
+<<<<<<< HEAD
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
             sender_type: 'customer';
             sender_id: 'cust_001';
@@ -1757,6 +1533,9 @@ class AICustomerSupportService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             sender_type: 'agent';
             sender_id: 'agent_001';
+=======
+            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';            sender_id: 'agent_001';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             is_internal: false;
             created_at: new Date ('2025 - 01 - 10T10:15:00Z'),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1770,6 +1549,7 @@ class AICustomerSupportService {
     ];
 ;
     // Initialize knowledge base;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1869,62 +1649,26 @@ export interface Attachment {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       ...ticketData;
+=======
+    this.knowledge_base = [;      ...ticketData;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       status: 'open';
       attachments: [];
       messages: [];
       createdAt: new Date()
-      updatedAt: new Date()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    };
-
-    this && this.tickets.push(ticket);
-    this && this.updateAnalytics();
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return ticket
+      updatedAt: new Date()    return ticket
   }
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
-<<<<<<< HEAD
     }
   }
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
-<<<<<<< HEAD
-
-=======
-=======
-        not_helpful: 12;
-        last_updated: new Date ('2025 - 01 - 05'),
-        created_by: 'agent_001';
-      }
-    ];
-  }
-    };
-    this && this.tickets.push(ticket);
-    this && this.updateAnalytics();
-    return ticket
-  }
-  async assignTicket(ticketId: string, agentId: string): Promise<void> {
-    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
-    if (ticket) {
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      ticket && ticket.assignedAgentId = agentId;
       ticket && ticket.status = 'in_progress';
       ticket && ticket.updatedAt = new Date(),
+<<<<<<< HEAD
       this && this.updateAnalytics()
 <<<<<<< HEAD
 =======
@@ -2039,6 +1783,9 @@ export interface Attachment {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       ticket && ticket.status = status;
+=======
+      this && this.updateAnalytics()      ticket && ticket.status = status;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ticket && ticket.updatedAt = new Date();
       
       if (status === 'resolved') {
@@ -2049,6 +1796,7 @@ export interface Attachment {;
       }
       
       this && this.updateAnalytics()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2563,51 +2311,16 @@ class AICustomerSupportService {;
       }
       this.updateAnalytics()
     }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
-    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    if (!ticket) {
-      throw new Error(`Ticket ${ticketId} not found`)
-    }
-    const message: TicketMessage = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
-      ...messageData;
-      createdAt: new Date()
-
-    };
-
-    ticket && ticket.messages.push(message);
-    ticket && ticket.updatedAt = new Date();
-
-
-<<<<<<< HEAD
-=======
-    };
-    ticket && ticket.messages.push(message);
-    ticket && ticket.updatedAt = new Date();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    // Update first response time if this is the first agent response
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);    // Update first response time if this is the first agent response
     if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
       const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
       ticket && ticket.firstResponseTime = firstResponseTime
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2752,89 +2465,16 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       messages: [];
+=======
+    }      messages: [];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       intent: '';
       confidence: 0;
       resolved: false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    };
-
-    this && this.chatbotSessions.push(session);
-
-<<<<<<< HEAD
-=======
-    };
-    this && this.chatbotSessions.push(session);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return session
-  }
-  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
-    const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      escalated: false
-      satisfaction: 0
-    }
-    this.chatbotSessions.push(session);
-    return session
-  }
-  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    if (!session) {
-      throw new Error(`Session ${sessionId} not found`)
-    }
-    const message: ChatbotMessage = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
-      ...messageData;
-      timestamp: new Date()
-
-    };
-
-    session && session.messages.push(message);
-
-
-    // Simulate AI intent detection
-
-<<<<<<< HEAD
-=======
-    };
-    session && session.messages.push(message);
-    // Simulate AI intent detection
-
-      id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      ...messageData;
-      timestamp: new Date()
-    }
-    session.messages.push(message);
-    // Simulate AI intent detection
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
+<<<<<<< HEAD
       session.confidence = intent.confidence
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -2979,11 +2619,19 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      session.confidence = intent.confidence;
+  private detectIntent(message: string): { intent: string, confidence: number } {;
+    const lowerMessage = message.toLowerCase(),;
+    if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
+<<<<<<< HEAD
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
 <<<<<<< HEAD
 =======
@@ -2999,6 +2647,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       escalated: false,
+=======
+    } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {      escalated: false,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       satisfaction: 0;
     }
 ;
@@ -3050,7 +2701,6 @@ if ( {) {
     } else if (|| lower_message.includes ('request')) {) {
   $2
 }
-<<<<<<< HEAD
     if (message && message.sender === 'customer') {
       const intent = this && this.detectIntent(message && message.content);
       session && session.intent = intent && intent.intent;
@@ -3058,6 +2708,7 @@ if ( {) {
     }
     return message
   }
+<<<<<<< HEAD
   private detectIntent(message: string): { intent: string, confidence: number } {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -3095,6 +2746,12 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  private detectIntent(message: string): { intent: string, confidence: number } {      return { intent: 'feature_request', confidence: 0.75 }    } else {
+      return { intent: 'general_inquiry', confidence: 0 && 0.6 }
+    }
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
@@ -3106,36 +2763,10 @@ if ( {) {
       session && session.escalated = escalated;
       session && session.satisfaction = satisfaction,
       this && this.updateAnalytics()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      return { intent: 'feature_request', confidence: 0.75 }
-    } else {
-      return { intent: 'general_inquiry', confidence: 0.6 }
-    }
-  }
-
-  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId);
-    if (session) {
-      session.endTime = new Date();
-      session.resolved = resolved;
-      session.escalated = escalated;
-      session.satisfaction = satisfaction
-      this.updateAnalytics()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    }
   }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
     const article: KnowledgeBaseArticle = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3183,6 +2814,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
+=======
+      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
     if (session) {;
@@ -3191,10 +2825,7 @@ if ( {) {
       session.escalated = escalated,;
       session.satisfaction = satisfaction,;
       this.updateAnalytics();
-    }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  }
+    }  }
 ;
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;
     const article: KnowledgeBaseArticle = {;
@@ -3208,8 +2839,8 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3220,6 +2851,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -3234,20 +2867,13 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article => 
       article && article.title.toLowerCase().includes(lowerQuery) ||
       article && article.content.toLowerCase().includes(lowerQuery) ||
       article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b && b.views - a && a.views)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3399,6 +3025,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         confidence: 90,
+=======
+      recommendations && recommendations.push({        confidence: 90,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
         ];
@@ -3413,75 +3042,8 @@ if ( {) {
   $2
 }
       recommendations.push ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-        confidence: 90
-        actionItems: [
-          'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
-        ]
-      })
-    }
-    // Agent assignment recommendation
-    const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTickets < a.maxTickets);
-    const unassignedTickets = this.tickets.filter(t => !t.assignedAgentId && t.status === 'open').length;
-    if (availableAgents.length > 0 && unassignedTickets > 0) {
-      recommendations.push({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        type: 'agent_assignment';
-        title: 'Unassigned Tickets Available';
-        description: 'There are unassigned tickets and available agents';
-        impact: 'medium';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        confidence: 85,
-        action_items: [;
-          'Automatically assign tickets to available agents_implement load balancing for ticket distribution_review agent availability and workload';
-        ];
-      });
-    }
-    // Knowledge base recommendation;
-    const lowViewedArticles = this.knowledge_base.filter (array => a.views < 10);
-    // Check condition
-if ( {) {
-  $2
-}
-      recommendations.push ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        confidence: 85
-        actionItems: [
-          'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload'
-        ]
-      })
-    }
-    // Knowledge base recommendation
-    const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10);
-    if (lowViewedArticles.length > 5) {
-      recommendations.push({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         type: 'knowledge_base';
+<<<<<<< HEAD
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
@@ -3667,15 +3229,17 @@ if ( {) {
       openTickets;
       resolvedTickets;
       averageResolutionTime;
+=======
+        title: 'Underutilized Knowledge Base Articles',
+  description: 'Several articles have very low view counts';
+        impact: 'low';      averageResolutionTime;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       averageFirstResponseTime;
       customer_satisfaction;
       chatbotResolutionRate;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       topCategories;
       agentPerformance
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -3683,6 +3247,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -3731,6 +3297,7 @@ if ( {) {
       topCategories,;
       agentPerformance;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -3752,13 +3319,18 @@ if ( {) {
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       top_categories;
       agent_performance;
     }
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return this && this.tickets.find(t => t && t.id === ticketId) || null
+
+    }
+  }
+    return this && this.tickets.find(t => t && t.id === ticketId) || null
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
     if (status) {
@@ -3767,23 +3339,8 @@ if ( {) {
     return this && this.tickets
   }
   async getCustomer(customerId: string): Promise<Customer | null> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    return this && this.customers.find(c => c && c.id === customerId) || null
-
-=======
-    return this && this.customers.find(c => c && c.id === customerId) || null
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-    return this && this.customers.find(c => c && c.id === customerId) || null
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  }
+    return this && this.customers.find(c => c && c.id === customerId) || null  }
   async getCustomers(): Promise<Customer[]> {
     return this && this.customers
   }
@@ -3813,57 +3370,8 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-
-
-=======
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const aiCustomerSupportService = new AICustomerSupportService();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  async get_ticket (ticket_id: string): Promise < SupportTicket | null> {
-    return this.tickets.find (t => t.id === ticket_id) || null;
-  }
-  async get_tickets (status?: SupportTicket['status']): Promise < SupportTicket[]> {
-    // Check condition
-if ( {) {
-  $2
-}
-      return this.tickets.filter (t => t.status === status);
-    }
-    return this.tickets;
-  }
-  async get_customer (customer_id: string): Promise < Customer | null> {
-    return this.customers.find (c => c.id === customer_id) || null;
-  }
-  async get_customers (): Promise < Customer[]> {
-    return this.customers;
-  }
-  async get_agents (): Promise < SupportAgent[]> {
-    return this.agents;
-  }
-  async getChatbotSessions (): Promise < ChatbotSession[]> {
-    return this.chatbot_sessions;
-  }
-  async getKnowledgeBase (): Promise < KnowledgeBaseArticle[]> {
-    return this.knowledge_base;
-  }
-  async get_analytics (): Promise < SupportAnalytics> {
-    return this.analytics;
-  }
-}
-export const aiCustomerSupportService = new AICustomerSupportService ();
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -4090,12 +3598,13 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

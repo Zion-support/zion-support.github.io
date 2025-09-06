@@ -35,5 +35,10 @@ const { execSync } = require('child_process')
     fixed = fixed.replace(/var\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'var $1 = () => {'}
       if (content.includes('${'})
     fixed = fixed.replace(/(\w+):\s*([^,}]+)/g, '"$1"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

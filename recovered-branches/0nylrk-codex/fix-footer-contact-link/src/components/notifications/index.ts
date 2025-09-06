@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -38,3 +39,10 @@ export * from "./NotificationList";
 export * from "./NotificationFilter";
 export * from "./NotificationHeader";
 export * from "./NotificationFooter";
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

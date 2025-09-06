@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
@@ -93,6 +94,8 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ImportMetaEnv {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
   readonly VITE_SUPABASE_ANON_KEY: string,;
@@ -111,8 +114,6 @@ declare module 'vitest/config' {;
 ;
 declare module '@vitejs/plugin-react-swc' {;
   import { Plugin } from 'vite',;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export default function reactSWC(): Plugin;
 }
 ;
@@ -121,15 +122,14 @@ declare module 'path' {;
   export function join(...paths: string[]): string,;
   export function dirname(path: string): string;
 }
-<<<<<<< HEAD
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
 
-<<<<<<< HEAD
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
+<<<<<<< HEAD
 
 
 
@@ -194,3 +194,5 @@ declare let process: {;
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

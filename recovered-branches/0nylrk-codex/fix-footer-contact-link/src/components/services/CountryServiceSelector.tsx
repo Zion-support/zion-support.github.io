@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   onsiteServicePricing
@@ -113,6 +114,19 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
         />
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 
@@ -150,23 +164,6 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
   );
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
-        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-      </div>
-
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {initialCountry && <ServiceDetails country={initialCountry.country} />}
-    </div>
-  );
-}
-;
-
 
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
@@ -226,6 +223,7 @@ selectedCountry?: CountryPricing | null
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -233,3 +231,6 @@ selectedCountry?: CountryPricing | null
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

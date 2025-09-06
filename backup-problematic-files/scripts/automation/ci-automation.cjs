@@ -248,5 +248,10 @@ if (require.main === module) {}
   console.error("CI automation "failed": ', error);
     process.exit(1)})};
 ;
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = CIAutomation;
+module.exports = CIAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

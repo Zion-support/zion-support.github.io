@@ -42,7 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
-
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -169,9 +168,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   res.status(200).json(response)
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

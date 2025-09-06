@@ -3,6 +3,7 @@
 reputation: number;
   size?: 'sm' | 'md' | 'lg'
 
+<<<<<<< HEAD
 
 
 
@@ -12,12 +13,17 @@ reputation: number;
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
 interface ReputationDisplayProps {
+=======
+import { Trophy } from 'lucide-react'
+import { Progress } from "@/components/ui/progress",interface ReputationDisplayProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   reputation: number,
   size?: 'sm' | 'md' | 'lg'
 }
 
 export const ReputationDisplay = ({ 
   reputation,
+<<<<<<< HEAD
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
@@ -37,10 +43,23 @@ export const ReputationDisplay = ({
 
 
       progress: 'h-1',  // Styling based on size
+=======
+
+  size = 'md' 
+}: ReputationDisplayProps) => {
+  // Calculate next milestone
+  const currentLevel = Math.floor(reputation / 100)
+  const nextMilestone = (currentLevel + 1) * 100
+  const progress = ((reputation % 100) / 100) * 100
+  // Styling based on size
+  const sizeClasses = {
+    sm: {      progress: 'h-1',  // Styling based on size
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const sizeClasses = {
     sm: {
       container: "text-xs"
       icon: "w-3 h-3"
+<<<<<<< HEAD
       progress: "h-1"
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -161,14 +180,20 @@ export const ReputationDisplay = ({;
       <div className="text-xs text-muted-foreground">;
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
       </div>;
+=======
+      progress: "h-1"      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
-  );
+  )
 };
+<<<<<<< HEAD
 
 export default ReputationDisplay;
 <<<<<<< HEAD
 =======
 ';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     md: {;
       container: 'text-sm',;
@@ -179,15 +204,13 @@ export default ReputationDisplay;
       container: 'text-base',;
       icon: 'w-5 h-5',;
       progress: 'h-3',;
-    },;
-  };
+    },
+};
 
-
+}
+export default ReputationDisplay
 '
-
-export default ReputationDisplay;
-';
-
+    }
 };
 export default ReputationDisplay;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

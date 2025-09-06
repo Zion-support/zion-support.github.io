@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
   return (
 
 }
 
+<<<<<<< HEAD
 =======
     <div className="py - 10">;
       <h1 className="text - 2xl font - semibold text - white">Services Schema</h1>;
@@ -28,6 +25,8 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Services Schema</h1>
@@ -37,8 +36,9 @@
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

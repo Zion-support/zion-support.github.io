@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,12 +19,16 @@
 
 <<<<<<< HEAD
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+=======
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";=======&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
 "const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {' return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>' </div>' <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>' <TooltipProvider>' <Tooltip> ''';'"";
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -35,12 +40,15 @@
 "const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 ursor/add-new-services-and-deploy-updates-0462
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
 "const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {' return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>' </div>' <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>' <TooltipProvider>' <Tooltip> ''';'"";
+<<<<<<< HEAD
 <<<<<<< HEAD
 :temp_exclude/src.disabled/components/community/EmptyState.jsx
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
@@ -76,3 +84,5 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

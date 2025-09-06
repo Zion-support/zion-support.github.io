@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -29,11 +30,20 @@ export * from './types';
 export * from './createNotification';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export * from './createHireRequestNotifications';
 export * from './createOnboardingNotification';
 export * from './createSystemNotification';
 export * from './createTestNotification';
 export * from './types';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -41,11 +51,15 @@ export * from './types';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export * from './createNotification',;
 export * from './createHireRequestNotifications',;
 export * from './createOnboardingNotification',;
 export * from './createSystemNotification',;
 export * from './createTestNotification',;
+<<<<<<< HEAD
 export * from './types';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -69,3 +83,6 @@ export * from "./createSystemNotification";
 export * from "./createTestNotification";
 export * from "./types";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export * from './types';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

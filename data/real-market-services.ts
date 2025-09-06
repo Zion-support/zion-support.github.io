@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   customers: number;
@@ -35,15 +36,23 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   mobile: '+1 302 464 0950',
+=======
+  customers: number;
+  rating: number;
+  reviews: number;  mobile: '+1 302 464 0950',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const realMarketServices: RealMarketService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -51,11 +60,14 @@ export const realMarketServices: RealMarketService[] = [;
   website: 'https://ziontechgroup.com', }
 ;
 export const realMarketServices: RealMarketService[] = [;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -65,6 +77,7 @@ export const realMarketServices: RealMarketService[] = [;
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup && ziontechgroup.com',};
 <<<<<<< HEAD
     tagline:
@@ -656,6 +669,9 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
       'Provider selection guide'
+=======
+  website: 'https://ziontechgroup && ziontechgroup.com',};      'Provider selection guide'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Schema and index templates'
       'ETL/ingestion pipelines'
       'Embeddings and chunking best practices'
@@ -683,6 +699,7 @@ export const realMarketServices: RealMarketService[] = [
     growthRate: '40% YoY'
     variant: 'data-futuristic'
     contactInfo: contact
+<<<<<<< HEAD
     realImplementation: true
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -711,6 +728,9 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Embeddings and chunking best practices',
+=======
+    realImplementation: true      'Embeddings and chunking best practices',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Latency and cost tuning',
       'Sample RAG app integration',
     ],
@@ -739,10 +759,13 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: contact,
     realImplementation: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Terraform and IaC modules, ETL pipelines, sample notebooks.'
     launchDate: '2024-08-20'
@@ -750,6 +773,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6
     reviews: 41
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -790,6 +814,8 @@ export const realMarketServices: RealMarketService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
       'Public status pages',
       'Weekly compliance reports',
@@ -818,645 +844,7 @@ export const realMarketServices: RealMarketService[] = [
       'CI / CD quality gates',
       'Jira tickets and Slack alerts',
     ],
-    popular: true,
-<<<<<<< HEAD
-=======
-    icon: '🛡️',
-
-=======
-    color: 'from - rose - 600 to - orange - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / api - security - scanner',
-    market_position:;
-      'Competes with Salt Security and Noname (enterprise pricing $3k–$10k+/mo). Lightweight, developer - first and CI - friendly.',
-    target_audience: 'Platform and app security teams, backend engineers',
-    trial_days: 14,
-    setup_time: '1–3 days',
-    category: 'Security & Compliance',
-    real_service: true,
-    technology: ['Node.js, Python, OpenAPI, GraphQL'],
-    integrations: ['GitHub Actions, GitLab CI, Jenkins, Jira, Slack'],
-    use_cases: [;
-      'Shift - left API security, Pre - release checks, Continuous scanning',
-    ],
-    roi: 'Catch critical API vulns pre - prod and reduce incidents by 60%',
-    competitors: ['Salt Security, Noname Security, 42Crunch'],
-    market_size: '$5B API security',
-    growth_rate: '25% YoY',
-    variant: 'security - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
-    launch_date: '2024 - 12 - 05',
-    customers: 54,
-    rating: 4 && 4.7,
-    reviews: 33,
-  },
-  {
-      'Seed inbox placement tests',
-      'Blocklist monitoring',
-      'DMARC aggregate reports (RUA / RUF)',
-      'Alerts and weekly scorecards',
-    ],
-    popular: false,
-    competitors: ['GlockApps, MailGenius, Postmark Monitoring'],
-    market_size: '$3B email tools',
-    growth_rate: '10% YoY',
-    variant: 'monitoring - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'DNS validators, seed inbox network, blocklist checkers and alerting.',
-    launch_date: '2024 - 09 - 22',
-    customers: 77,
-    rating: 4 && 4.6,
-    reviews: 44,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'domain - dns - monitor',
-    name: 'Domain & DNS Monitor',
-    tagline: 'Track DNS, nameserver and SSL changes with instant alerts',
-    price: '$89',
-    period: '/month',
-    description:;
-      'Watches critical DNS records (A / AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'DNS record drift detection',
-      'TLS and chain changes',
-      'Audit log and diffs',
-      'Slack / Email alerts',
-      'Exportable reports',
-    ],
-    popular: false,
-    integrations: ['Slack, Opsgenie, PagerDuty'],
-    use_cases: ['Prevent hijacks, Change control, Compliance evidence'],
-    roi: 'Avoid costly outages and reputational damage',
-    competitors: ['DNS Spy, UptimeRobot DNS, Detectify DNS'],
-    market_size: '$2B monitoring',
-    growth_rate: '12% YoY',
-    variant: 'monitoring - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Authoritative resolvers polling, diffs store, TLS probing and alerting.',
-    launch_date: '2024 - 08 - 18',
-    customers: 61,
-    rating: 4 && 4.5,
-    reviews: 36,
-  },
-  {
-      'Latency and availability SLIs',
-      'SLOs and error budgets',
-      'Burn - rate alerts',
-      'Public status pages',
-    ],
-    popular: true,
-    integrations: ['PagerDuty, Opsgenie, Slack'],
-    use_cases: ['SLO rollout, SLA reporting, Incident readiness'],
-    roi: 'Reduce alert fatigue and align on product reliability',
-    competitors: ['Better Uptime, UptimeRobot, Statuspage'],
-    market_size: '$18B observability',
-    growth_rate: '25% YoY',
-    variant: 'monitoring - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Probers, SLI calculators, error - budget math and alerting integrations.',
-    launch_date: '2024 - 07 - 28',
-    customers: 112,
-    rating: 4 && 4.6,
-    reviews: 58,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'status - pages - slo',
-    name: 'Status Pages & SLO',
-    tagline: 'Customer - facing status pages with SLO metrics baked - in',
-    price: '$59',
-    period: '/month',
-    description:;
-      'Hosted status pages connected to your SLOs and incidents with custom components and history.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Custom components and groups',
-      'Incident timelines',
-      'SLO and uptime widgets',
-      'Subscriptions and webhooks',
-    ],
-    popular: false,
-    integrations: ['PagerDuty, Opsgenie, Slack'],
-    use_cases: ['Transparent comms, SLA evidence, Trust building'],
-    roi: 'Fewer support tickets and faster comms during incidents',
-    competitors: ['Atlassian Statuspage, Better Stack'],
-    market_size: '$1B status',
-    growth_rate: '15% YoY',
-    variant: 'monitoring - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Static + API hybrid pages, component health, subscriptions.',
-    launch_date: '2024 - 06 - 30',
-    customers: 49,
-    rating: 4 && 4.5,
-    reviews: 27,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'serverless - cron - manager',
-    name: 'Serverless Cron Manager',
-    tagline: 'Reliable scheduled jobs without servers and with retries',
-    price: '$79',
-    period: '/month',
-    description:;
-      'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Cron syntax and UI',
-      'Retries with jitter',
-      'Dead - letter queues',
-      'Slack alerts',
-    ],
-    popular: false,
-      'Comparable to EasyCron and CloudWatch Events; adds portable templates and alerts.',
-    target_audience: 'Developers, data engineers, SREs',
-    trial_days: 14,
-    setup_time: '1 hour',
-    category: 'Developer Tools',
-    integrations: ['Slack, Webhook'],
-    use_cases: ['ETL scheduling, Report generation, Cleanup jobs'],
-    roi: 'Reduce ops toil; no servers to manage',
-    competitors: ['EasyCron, AWS EventBridge'],
-    market_size: '$2B dev tooling',
-    growth_rate: '9% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Job store, scheduler, runners and alerting.',
-    launch_date: '2024 - 05 - 12',
-    customers: 73,
-    rating: 4 && 4.5,
-    reviews: 39,
-  },
-  {
-      'Custom fonts and CSS',
-      'Headers / footers, page numbers',
-      'Webhook delivery',
-    ],
-    popular: true,
-    integrations: ['Zapier, Webhook'],
-    use_cases: ['Invoices, Reports, Statements'],
-    roi: 'Save engineering time; consistent documents',
-    competitors: ['PDFMonkey, DocRaptor, Gotenberg'],
-    market_size: '$1B doc gen',
-    growth_rate: '8% YoY',
-    variant: 'data - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Headless Chrome workers, queueing and asset sandboxing.',
-    launch_date: '2024 - 04 - 08',
-    customers: 140,
-    rating: 4 && 4.7,
-    reviews: 91,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'gdpr - dsar - automation',
-    name: 'GDPR DSAR Automation',
-    tagline: 'Automate data subject requests with evidence and workflows',
-    price: '$399',
-    period: '/month',
-    description:;
-      'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor - ready evidence packs.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Request intake portal',
-      'Identity verification',
-      'Connectors to data stores',
-      'Evidence packs and exports',
-    ],
-    popular: true,
-    integrations: ['Snowflake, BigQuery, S3, Postgres'],
-    use_cases: ['Compliance at scale, Reduced manual effort'],
-    roi: 'Cut DSAR handling cost by 60–80%',
-    competitors: ['Transcend, OneTrust, Segment Privacy'],
-    market_size: '$8B privacy ops',
-    growth_rate: '18% YoY',
-    variant: 'security - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Ticketing workflows, connectors, redaction and audit logs.',
-    launch_date: '2024 - 11 - 01',
-    customers: 31,
-    rating: 4 && 4.6,
-    reviews: 21,
-  },
-  {
-      'Evidence collection links',
-      'Risk scoring and tracking',
-      'Renewal reminders',
-    ],
-    popular: false,
-    integrations: ['Slack, Jira, Email'],
-    use_cases: ['Faster reviews, Evidence reuse, Audit readiness'],
-    roi: 'Shorten vendor onboarding by 30–50%',
-    competitors: ['Whistic, OneTrust VRM'],
-    market_size: '$6B VRM',
-    growth_rate: '16% YoY',
-    variant: 'neural - quantum',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Questionnaire engine, evidence vault, risk scoring and reminders.',
-    launch_date: '2024 - 10 - 15',
-    customers: 26,
-    rating: 4 && 4.5,
-    reviews: 18,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'browser - performance - monitor',
-    name: 'Browser Performance Monitor',
-    tagline: 'Core Web Vitals and RUM with actionable diagnostics',
-    price: '$129',
-    period: '/month',
-    description:;
-      'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code - level fixes with dashboards.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'RUM collection script',
-      'Core Web Vitals (LCP / CLS / INP)',
-      'Regression detection',
-      'Dashboards and alerts',
-    ],
-    popular: false,
-<<<<<<< HEAD
-=======
-    icon: '⚡',
-
-=======
-    color: 'from - amber - 600 to - orange - 700',
-    text_color: 'text - amber - 300',
-    link: 'https://ziontechgroup.com / browser - performance - monitor',
-    market_position:;
-      'Alternatives: SpeedCurve ($99–$439 / mo). We bundle diagnostics and dev tips.',
-    target_audience: 'Frontend and growth teams',
-    trial_days: 7,
-    setup_time: '1 hour',
-    category: 'Observability',
-    real_service: true,
-    technology: ['JS RUM, Dashboards'],
-    integrations: ['Slack, Datadog'],
-    use_cases: ['Improve conversions, Perf regressions, SEO gains'],
-    roi: 'Increase conversion 2–10% with better vitals',
-    competitors: ['SpeedCurve, Calibre'],
-    market_size: '$1B web perf',
-    growth_rate: '11% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Lightweight RUM SDK, vitals aggregation and alerting.',
-    launch_date: '2024 - 09 - 08',
-    customers: 52,
-    rating: 4 && 4.5,
-    reviews: 29,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'database - performance - monitor',
-    name: 'Database Performance Monitor',
-    tagline: 'Query insights, locks, connection pools and slow query fixes',
-    price: '$299',
-    period: '/month',
-    description:;
-      'Collector agents for Postgres / MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Slow query detection',
-      'Lock contention analysis',
-      'Connection pool saturation',
-      'Advisor recommendations',
-    ],
-    popular: true,
-    category: 'Observability',
-    real_service: true,
-    technology: ['Postgres, MySQL, Agents'],
-    integrations: ['Grafana, Slack'],
-    use_cases: ['Improve DB latency, Reduce deadlocks, Capacity planning'],
-    roi: 'Reduce query latency 20–50% in weeks',
-    competitors: ['pganalyze, Percona PMM'],
-    market_size: '$4B DB tooling',
-    growth_rate: '13% YoY',
-    variant: 'monitoring - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Extension - based metrics collectors and advisors.',
-    launch_date: '2024 - 08 - 01',
-    customers: 39,
-    rating: 4 && 4.6,
-    reviews: 23,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'cloud - platform - managed - kubernetes',
-    name: 'Managed Kubernetes Platform',
-    tagline: 'Production EKS / GKE / AKS with GitOps, SSO and guardrails',
-    price: '$1, 999',
-    period: '/month',
-    description:;
-      'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'IaC blueprints and GitOps',
-      'SSO and RBAC policies',
-      'Cost controls and quotas',
-      'Backup and restore runbooks',
-    ],
-    popular: true,
-<<<<<<< HEAD
-=======
-    icon: '☁️',
-
-=======
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / cloud - platform',
-    market_position:;
-      'Alternatives: Platform9, Rafay (custom pricing). Opinionated, fast time - to - value.',
-    target_audience: 'Platform engineering and DevOps',
-    trial_days: 0,
-    setup_time: '1–3 weeks',
-    category: 'Cloud & FinOps',
-    real_service: true,
-    technology: ['Terraform, Flux / Argo, EKS / GKE / AKS'],
-    integrations: ['Datadog, Grafana, Vault'],
-    use_cases: ['Standardized platform, Security baseline, Developer velocity'],
-    roi: 'Ship platforms 3x faster at lower risk',
-    competitors: ['Platform9, Rafay, DIY'],
-    market_size: '$20B platform engineering',
-    growth_rate: '22% YoY',
-    variant: 'cloud - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Blueprints, policies, GitOps pipelines and SRE runbooks.',
-    launch_date: '2025 - 01 - 10',
-    customers: 17,
-    rating: 4 && 4.7,
-    reviews: 12,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'rum - analytics - starter',
-    name: 'Real User Monitoring (RUM) Analytics Starter',
-    tagline:;
-      'Measure real user performance, Core Web Vitals and conversion impact',
-    price: '$59',
-    period: '/month',
-    description:;
-      'Drop - in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Core Web Vitals (LCP, INP, CLS)',
-      'Conversion impact analysis',
-      'Geo / device breakdowns',
-      'Anomaly alerts to Slack / Email',
-      'Privacy - friendly, cookie - lite',
-    ],
-    popular: false,
-    customers: 26,
-    rating: 4 && 4.6,
-    reviews: 14,
-  },
-  {
-      'CI gate on severity thresholds',
-      'Page template scanning',
-      'Issue tracker export',
-      'Auditor - ready PDF reports',
-    ],
-    popular: true,
-    competitors: ['Deque axe Monitor, Siteimprove'],
-    market_size: '$1B+ accessibility services',
-    growth_rate: '18% YoY',
-    variant: 'monitoring - futuristic' as any,
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Headless scans with rulesets, diffing, and gated pipelines.',
-    launch_date: '2025 - 02 - 12',
-    customers: 31,
-    rating: 4 && 4.7,
-    reviews: 19,
-  },
-  {
-      'Error budget tracking',
-      'Auto - ticket creation',
-      'Slack / PagerDuty alerts',
-      'Weekly drift reports',
-    ],
-    popular: false,
-<<<<<<< HEAD
-=======
-    icon: '⏱️',
-
-=======
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / services / api - latency - budget - enforcer',
-    market_position:;
-      'Bridges observability and execution; complements Datadog SLO and Grafana.',
-    target_audience: 'SREs, platform and backend teams',
-    trial_days: 14,
-    setup_time: '1 day',
-    category: 'Observability',
-    real_service: true,
-    technology: ['OpenTelemetry, Prometheus, Grafana'],
-    integrations: ['Datadog, Grafana, PagerDuty, Jira'],
-    use_cases: ['Keep latency in check, Manage reliability, Prioritize work'],
-    roi: 'Cut MTTR by 20–40% via proactive guardrails.',
-    competitors: ['Datadog SLOs, Nobl9'],
-    market_size: '$5B+ reliability tooling',
-    growth_rate: '20% YoY',
-    variant: 'monitoring - futuristic' as any,
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'SLO definitions, budget math, and actionable ownership routes.',
-    launch_date: '2025 - 02 - 18',
-    customers: 18,
-    rating: 4 && 4.5,
-    reviews: 11,
-  },
-  {
-      'Lightweight alternative to manual scans; complements Mozilla Observatory and SSL Labs checks.',
-    target_audience: 'Security and platform teams',
-    trial_days: 7,
-    setup_time: '20 minutes',
-    category: 'Security & Compliance',
-    integrations: ['Slack, Webhooks'],
-    use_cases: [;
-      'Prevent misconfigurations, Detect regressions, Improve posture',
-    ],
-    roi: 'Reduce security regressions and audit time.',
-    competitors: ['Mozilla Observatory, SSL Labs'],
-    market_size: '$3B security testing',
-    growth_rate: '16% YoY',
-    variant: 'security - futuristic' as any,
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Scheduled scans with diffs and playbooks.',
-    launch_date: '2025 - 02 - 20',
-    customers: 44,
-    rating: 4 && 4.6,
-    reviews: 22,
-  },
-  {
-      'Policy page generator',
-      'Audit log export',
-      'Analytics / script blocking',
-      'A / B banner testing',
-    ],
-    popular: false,
-      'Simple alternative to complex CMPs; transparent pricing for SMBs.',
-    target_audience: 'Marketing, legal, and web teams',
-    trial_days: 7,
-    setup_time: '30 minutes',
-    category: 'Security & Compliance',
-    integrations: ['Google Tag, GTM, Segment'],
-    use_cases: ['Compliance, User trust, Region - based rules'],
-    roi: 'Accelerate compliance readiness; reduce legal risk.',
-    competitors: ['Cookiebot, OneTrust CMP'],
-    market_size: '$2B privacy tooling',
-    growth_rate: '15% YoY',
-    variant: 'compliance - futuristic' as any,
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Client + middleware rules with storage & audit.',
-    launch_date: '2025 - 02 - 22',
-    customers: 21,
-    rating: 4 && 4.5,
-    reviews: 10,
-  },
-  {
-      'Drift detection',
-      'Weekly compliance reports',
-      'Auto - ticket workflows',
-    ],
-    popular: false,
-    customers: 12,
-    rating: 4 && 4.5,
-    reviews: 7,
-  },
-  {
-<<<<<<< HEAD
-=======
-
-      'IAB TCF v2 && v2.2 compatible consent',
-      'Geo-targeted policies (EEA/UK/US states)',
-    id: 'consent - compliance - kit',
-    name: 'Consent & Cookie Compliance Kit',
-    tagline: 'GDPR / CPRA consent banners, geo - targeting, and audit - ready logs',
-    price: '$49',
-    period: '/month',
-    description:;
-      'Deploy IAB TCF v2 compatible consent banners with region - aware policies, capture consent receipts, and export audit logs for GDPR / CPRA. Includes cookie inventory and auto - blocking helpers.',
-    features: [;
-      'IAB TCF v2.2 compatible consent',
-      'Geo - targeted policies (EEA / UK / US states)',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Consent receipts and log exports',
-      'Cookie inventory and auto - blocking',
-      'Policy pages and versioning',
-      'CMP integrations and tag manager hooks',
-    ],
-    popular: false,
-<<<<<<< HEAD
-=======
-    icon: '🛡️',
-
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / services / consent - compliance - kit',
-    market_position:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
-    target_audience: 'Marketing ops, legal / compliance, web teams',
-    trial_days: 7,
-    setup_time: '1 day',
-    category: 'Privacy & Compliance',
-<<<<<<< HEAD
-=======
-
-    real_service: true,
-    technology: ['Next.js, Tag Manager, IAB TCF v2'],
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    integrations: ['Google Tag Manager, Segment, Cookiebot, OneTrust'],
-    use_cases: ['GDPR / CPRA consent management, Audit exports, Region policies'],
-    roi: 'Reduce compliance risk and legal exposure with verifiable consent logs.',
-    competitors: ['OneTrust, Cookiebot, TrustArc'],
-    market_size: '$2B+ privacy tooling',
-    growth_rate: '18% YoY',
-    variant: 'security - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Embeddable banner, policy config UI, consent log store, export jobs.',
-    launch_date: '2025 - 08 - 22',
-    customers: 22,
-    rating: 4 && 4.6,
-    reviews: 11,
-  },
-  {
-<<<<<<< HEAD
-      'Bridges the gap between brittle webhook flows and reliable data pipelines.'
+    popular: true,      'Bridges the gap between brittle webhook flows and reliable data pipelines.'
     targetAudience: 'Data engineers, platform teams, RevOps'
     trialDays: 14
     setupTime: '2 days'
@@ -1472,11 +860,14 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic'
     contactInfo: contact
     realImplementation: true
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -1496,8 +887,11 @@ export const realMarketServices: RealMarketService[] = [
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -1505,6 +899,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7
     reviews: 9
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1512,6 +907,8 @@ export const realMarketServices: RealMarketService[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: 'api - backfill - reconciliation',
     name: 'API Backfill & Reconciliation',
     tagline:;
@@ -1551,6 +948,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1577,13 +975,19 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     implementationDetails:
+=======
+  {    implementationDetails:
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
     customers: 15
     rating: 4.7
     reviews: 9
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: 'data - quality - sla - monitor',
     name: 'Data Quality & Freshness SLAs',
@@ -1594,7 +998,6 @@ export const realMarketServices: RealMarketService[] = [
       'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -1603,26 +1006,6 @@ export const realMarketServices: RealMarketService[] = [
       'Slack / Jira alerts and reports',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-    icon: '📊',
-
-=======
-    color: 'from - purple - 600 to - pink - 700',
-    text_color: 'text - purple - 300',
-    link: 'https://ziontechgroup.com / services / data - quality - sla - monitor',
-    market_position:;
-      'Lightweight alternative to full data observability platforms for SMBs.',
-    target_audience: 'Analytics, data engineering, product teams',
-    trial_days: 14,
-    setup_time: '2 days',
-    category: 'Data & Analytics',
-    real_service: true,
-    technology: ['dbt, Airflow, Postgres, BigQuery'],
-    integrations: ['Snowflake, BigQuery, Redshift, ClickHouse'],
-    use_cases: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Prevent stale dashboards, Catch pipeline regressions, Improve trust',
     ],
     roi: 'Reduce dashboard breaks; improve data - dependent feature velocity.',
@@ -1634,20 +1017,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 13,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'postgres - index - advisor',
-    name: 'Postgres Index Advisor & Tuner',
-    tagline: 'Automatic index suggestions, vacuum tuning, and slow query fixes',
-    price: '$79',
-    period: '/month',
-    description:;
-      'Analyze query plans and table stats to recommend and schedule index changes, vacuum / autovacuum tuning, and bloat remediation.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'EXPLAIN plan analysis',
       'Missing / unused index detection',
       'Autovacuum and bloat tuning',
@@ -1675,21 +1044,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 8,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'gitops - drift - monitor',
-    name: 'GitOps Policy & Drift Monitor',
-    tagline:;
-      'Detect and correct drift between Git and cluster state with policy gates',
-    price: '$99',
-    period: '/month',
-    description:;
-      'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Desired vs live diffing',
       'OPA / Conftest policy gates',
       'Auto - PR remediation',
@@ -1698,34 +1052,6 @@ export const realMarketServices: RealMarketService[] = [
       'Multi - cluster support',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-    icon: '🧭',
-
-=======
-    color: 'from - amber - 600 to - orange - 700',
-    text_color: 'text - amber - 300',
-    link: 'https://ziontechgroup.com / services / gitops - drift - monitor',
-    market_position:;
-      'Complements Argo CD / Flux with governance and auto - remediation workflows.',
-    target_audience: 'Platform engineering, DevOps, SRE',
-    trial_days: 14,
-    setup_time: '2 days',
-    category: 'DevOps',
-    real_service: true,
-    technology: ['Kubernetes, OPA, Argo CD, Flux'],
-    integrations: ['GitHub, GitLab, Slack, Jira'],
-    use_cases: ['Prevent config drift, Enforce policies, Speed up remediations'],
-    roi: 'Cut rollbacks and misconfig incidents by 30–50%.',
-    competitors: ['Argo CD, Flux, Fairwinds Polaris'],
-    market_size: '$6B DevOps tooling',
-    growth_rate: '20% YoY',
-    variant: 'devops - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Cluster collectors, policy engine, reconciler workers, and PR bots.',
     launch_date: '2025 - 08 - 22',
     customers: 14,
@@ -1733,20 +1059,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'soc2 - readiness - scanner',
-    name: 'SOC 2 Readiness Scanner',
-    tagline: 'Map controls to TSC, auto - collect evidence, and flag gaps',
-    price: '$79',
-    period: '/month',
-    description:;
-      'Pre - audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor - friendly reports.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Control mapping templates',
       'Evidence collectors and checks',
       'Policy and process coverage',
@@ -1783,23 +1095,6 @@ export const realMarketServices: RealMarketService[] = [
     real_service: true,
     technology: ['AWS Config, Azure Resource Graph, GCP Asset Inventory'],
     integrations: ['Jira, ServiceNow, Slack'],
-<<<<<<< HEAD
-=======
-
-=======
-    use_cases: [;
-      'Reduce attack surface, Speed up remediation, Improve visibility',
-    ],
-    roi: 'Lower breach likelihood; improved audit readiness.',
-    competitors: ['Wiz, Prisma Cloud (CSPM)'],
-    market_size: '$8B cloud security',
-    growth_rate: '25% YoY',
-    variant: 'cloud - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'API collectors, exposure heuristics, ticket routing, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 19,
@@ -1807,21 +1102,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'llm - red - team - simulator',
-    name: 'LLM Red Team & Jailbreak Simulator',
-    tagline:;
-      'Automated adversarial prompts, safety tests, and regression dashboards',
-    price: '$99',
-    period: '/month',
-    description:;
-      'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Prompt injection libraries',
       'PII / redaction checks',
       'Safety regression tests',
@@ -1829,34 +1109,6 @@ export const realMarketServices: RealMarketService[] = [
       'CI gates and reports',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-    icon: '🧪',
-
-=======
-    color: 'from - rose - 600 to - pink - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / services / llm - red - team - simulator',
-    market_position:;
-      'Proactive LLM safety for production apps; complements guardrails.',
-    target_audience: 'AI platform teams, security engineers',
-    trial_days: 7,
-    setup_time: '1 day',
-    category: 'AI Safety',
-    real_service: true,
-    technology: ['OpenAI, Anthropic, Garak, OWASP Top 10 for LLMs'],
-    integrations: ['GitHub Actions, GitLab CI, CircleCI'],
-    use_cases: ['Catch regressions, Improve safety, Document compliance'],
-    roi: 'Avoid incidents and brand damage due to unsafe responses.',
-    competitors: ['Lakera, Garak'],
-    market_size: '$1B+ LLM safety',
-    growth_rate: '40% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Scenario libraries, orchestrator, CI integration, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 17,
@@ -1870,34 +1122,6 @@ export const realMarketServices: RealMarketService[] = [
       'Appeal and review portal',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-    icon: '🛑',
-
-=======
-    color: 'from - red - 600 to - rose - 700',
-    text_color: 'text - red - 300',
-    link: 'https://ziontechgroup.com / services / affiliate - fraud - detector',
-    market_position:;
-      'Pairs with attribution hubs to prevent fraud - driven losses.',
-    target_audience: 'Growth teams, finance ops',
-    trial_days: 14,
-    setup_time: '2 days',
-    category: 'Growth & Monetization',
-    real_service: true,
-    technology: ['Python', 'Bayesian modeling', 'dbt'],
-    integrations: ['GA4', 'Facebook Ads', 'Google Ads', 'Shopify'],
-    use_cases: ['Budget optimization', 'Channel ROI', 'Experiment planning'],
-    roi: 'Improve CAC / LTV ratio 10–30%',
-    competitors: ['Recast', 'Google Attribution', 'Rockerbox'],
-    market_size: '$12B+ martech analytics',
-    growth_rate: '20% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
     launch_date: '2025 - 01 - 21',
     customers: 48,
@@ -1941,34 +1165,6 @@ export const realMarketServices: RealMarketService[] = [
       'APIs and dashboards',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-    icon: '🚚',
-
-=======
-    color: 'from - amber - 600 to - orange - 700',
-    text_color: 'text - amber - 300',
-    link: 'https://ziontechgroup.com / iot - fleet - telemetry',
-    market_position:;
-      'Complements AWS IoT / Azure IoT. Faster SMB onboarding with ready analytics.',
-    target_audience: 'Logistics, Mobility, Field Ops, OEMs',
-    trial_days: 14,
-    setup_time: '2–4 weeks',
-    category: 'IoT & Edge',
-    real_service: true,
-    technology: ['MQTT', 'Timeseries DB', 'Edge SDK'],
-    integrations: ['AWS IoT', 'Azure IoT', 'GCP IoT Core*'],
-    use_cases: ['Predictive maintenance', 'Driver behavior', 'Utilization'],
-    roi: 'Reduce downtime 10–20% and fuel costs 3–8%',
-    competitors: ['Particle', 'ThingsBoard', 'Kaa'],
-    market_size: '$30B+ IoT platforms',
-    growth_rate: '19% YoY',
-    variant: 'edge - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Device registry, stream processors, and feature store for ML.',
     launch_date: '2025 - 01 - 21',
     customers: 21,
@@ -1976,20 +1172,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 12,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'api - security - testing',
-    name: 'API Security Testing as a Service',
-    tagline: 'Automated DAST / SAST for APIs with CI / CD integration',
-    price: '$399',
-    period: '/month',
-    description:;
-      'Shift - left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'OWASP API Top 10 checks',
       'Secrets and token leakage detection',
       'CI / CD and PR annotations',
@@ -1997,38 +1179,6 @@ export const realMarketServices: RealMarketService[] = [
       'Reports and Jira tickets',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-    icon: '🛡️',
-
-=======
-    color: 'from - slate - 600 to - gray - 700',
-    text_color: 'text - slate - 300',
-    link: 'https://ziontechgroup.com / api - security - testing',
-    market_position:;
-      'Compared with Snyk / 42Crunch / Burp Suite. We include actionable PR annotations and auto - fix recipes.',
-    target_audience: 'Platform, AppSec, DevSecOps',
-    trial_days: 7,
-    setup_time: '1–3 days',
-    category: 'Security',
-    real_service: true,
-    technology: ['OWASP ZAP', 'SAST', 'SBOM'],
-    integrations: ['GitHub', 'GitLab', 'Jenkins'],
-    use_cases: [;
-      'Shift - left security',
-      'Regulatory compliance',
-      'Audit readiness',
-    ],
-    roi: 'Reduce critical vuln exposure window by 40–60%',
-    competitors: ['Snyk', 'Burp Suite', '42Crunch'],
-    market_size: '$7B+ AppSec tooling',
-    growth_rate: '23% YoY',
-    variant: 'security - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launch_date: '2025 - 08 - 22',
     customers: 13,
@@ -2036,20 +1186,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'cloudflare - turnstile - proxy',
-    name: 'Cloudflare Turnstile & Bot Shield Proxy',
-    tagline: 'Kill signup spam and bot abuse without CAPTCHAs',
-    price: '$39',
-    period: '/month',
-    description:;
-      'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop - in protection for signups, login, and sensitive endpoints.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Turnstile token verification',
       'Reputation and ASN heuristics',
       'IP / device fingerprinting',
@@ -2077,20 +1213,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 8,
   },
   {
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'reverse - etl - lite',
-    name: 'Reverse ETL Lite',
-    tagline: 'Sync warehouse data to SaaS apps in minutes',
-    price: '$99',
-    period: '/month',
-    description:;
-      'Point - and - click syncs from BigQuery / Snowflake / Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Warehouse connectors',
       'Field mapping UI',
       'Schedules and retries',
@@ -2098,28 +1220,11 @@ export const realMarketServices: RealMarketService[] = [
       'Row - level filters',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-    icon: '🔄',
-
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 300',
-    link: 'https://ziontechgroup.com / services / reverse - etl - lite',
-    market_position:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Affordable, focused alternative to heavy Reverse ETL suites.',
     target_audience: 'Growth, data engineering, RevOps',
     trial_days: 14,
     setup_time: '1 hour',
     category: 'Data & Analytics',
-<<<<<<< HEAD
-=======
-
-    real_service: true,
-    technology: ['Node.js, Airflow / dbt optional, OAuth'],
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
     use_cases: ['Activation, Lead scoring, Audiences'],
     roi: 'Ship activation in days; lift campaign ROI 10–20%',
@@ -2142,6 +1247,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 6,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'ai-rfp-response-copilot'
     name: 'AI RFP Response Copilot'
@@ -2199,11 +1305,12 @@ export const realMarketServices: RealMarketService[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
       'Gap coverage tracking',
-<<<<<<< HEAD
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2219,6 +1326,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9
   }
   {
+<<<<<<< HEAD
 =======
 
 =======
@@ -2740,6 +1848,8 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Contacts and notes'
       'Reminders and tasks'
       'Simple pipeline stages'
@@ -2771,6 +1881,7 @@ export const realMarketServices: RealMarketService[] = [
       'Reminders and tasks',
       'Simple pipeline stages',
       'Email / SMS nudges',
+<<<<<<< HEAD
       'Import / export and tags',
 =======
 
@@ -2812,6 +1923,12 @@ export const realMarketServices: RealMarketService[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      'Import / export and tags',      'Mobile‑friendly UI',
+    ],
+    popular: true,
+    icon: '📇',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2826,6 +1943,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.5
     reviews: 77
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -2894,6 +2012,9 @@ export const realMarketServices: RealMarketService[] = [
     roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
+=======
+=======    competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     market_size: '$20B SMB CRM',
     growth_rate: '10% YoY',
     variant: 'analytics - futuristic' as any,
@@ -2913,11 +2034,14 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -2928,8 +2052,29 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: false,
     icon: '🧪',
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
+    marketPosition:;
+      'Focused assistant vs. general copy tools; fast iteration for marketers.',
+    targetAudience: 'Growth and lifecycle marketers',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'AI & Marketing',
+    realService: true,
+    technology: ['NLP/LLM', 'ESP APIs'],
+    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid'],
+    useCases: ['Boost open rates', 'Faster copy iteration'],
+    roi: 'Improve opens by 5–15% and reduce time‑to‑send.',
+    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
+    marketSize: '$3B marketing AI',
+    growthRate: '24% YoY',
+    variant: 'ai-futuristic' as any,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2944,6 +2089,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.4
     reviews: 28
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2962,6 +2108,8 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -2994,6 +2142,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4 && 4.4,
     reviews: 28,
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
@@ -3017,6 +2166,9 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
@@ -3025,32 +2177,6 @@ export const realMarketServices: RealMarketService[] = [
       'Jira / Linear linkage',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-    icon: '🧩',
-
-=======
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 300',
-    link: 'https://ziontechgroup.com / dev - workflow - analytics',
-    market_position:;
-      'Actionable insights without surveillance; focused on flow metrics.',
-    target_audience: 'Engineering teams and platform leads',
-    trial_days: 14,
-    setup_time: '3 days',
-    category: 'Dev Productivity',
-    real_service: true,
-    technology: ['GitHub / GitLab APIs', 'CI logs'],
-    integrations: ['GitHub', 'GitLab', 'Jira', 'Linear'],
-    use_cases: ['Improve code review', 'Reduce cycle time', 'Stabilize CI'],
-    roi: 'Shorten cycle time by 10–25% and cut flaky tests.',
-    competitors: ['LinearB', 'Swarmia', 'Velocity'],
-    market_size: '$5B dev analytics',
-    growth_rate: '21% YoY',
-    variant: 'analytics - futuristic' as any,
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3065,21 +2191,6 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 19,
   },
   {
-<<<<<<< HEAD
-=======
-
-      'Geo/rule‑based banners',
-    id: 'privacy - consent - manager - smb',
-    name: 'Privacy & Consent Manager (SMB)',
-    tagline: 'GDPR / CCPA banners, consent logs, DSAR intake and records',
-    price: '$49',
-    period: '/month',
-    description:;
-      'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',
-    features: [;
-      'Geo / rule‑based banners',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Preference center',
       'DSAR intake and workflows',
       'Cookie catalog and scans',
@@ -3087,22 +2198,6 @@ export const realMarketServices: RealMarketService[] = [
       'Multi‑site management',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-    icon: '⚖️',
-
-    color: 'from - slate - 700 to - slate - 900',
-    text_color: 'text - slate - 200',
-    link: 'https://ziontechgroup.com / privacy - consent - manager',
-    market_position: 'Simpler pricing vs OneTrust; ideal for SMB and startups.',
-    target_audience: 'SMBs and startups',
-    trial_days: 14,
-    setup_time: 'Same day',
-    category: 'Security & Compliance',
-    real_service: true,
-    technology: ['Next.js', 'Edge rules'],
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations: ['GTM', 'Segment', 'Tag managers'],
     use_cases: ['Cookie compliance', 'Consent records', 'DSAR intake'],
     roi: 'Faster compliance and fewer legal risks.',
@@ -3126,7 +2221,6 @@ export const realMarketServices: RealMarketService[] = [
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -3135,7 +2229,7 @@ export interface RealMarketService {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -3183,8 +2277,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'LLM Gateway & Cost Control',;
     tagline: 'Centralize model access, control spend, add observability and guardrails',;
     price: '$299',;
-    period: '/month',;
-    description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',;
+    period: '/month',,
+  description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',;
     features: [;
       'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',;
       'Export to data warehouse';
@@ -3221,8 +2315,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'API Observability Starter',;
     tagline: 'Trace, log, and profile your APIs in hours, not weeks',;
     price: '$149',;
-    period: '/month',;
-    description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;
+    period: '/month',,
+  description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;
     features: [;
       'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view';
     ],;
@@ -3258,8 +2352,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Email Deliverability & Warmup Monitor',;
     tagline: 'Inbox placement, warmup, and sender reputation monitoring',;
     price: '$79',;
-    period: '/month',;
-    description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',;
+    period: '/month',,
+  description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',;
     features: [;
       'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps';
     ],;
@@ -3288,8 +2382,8 @@ export const realMarketServices: RealMarketService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
   }
 ];
-=======
 
+<<<<<<< HEAD
 =======
     id: 'llm-gateway-cost-control', name: 'LLM Gateway & Cost Control',
     tagline: 'Centralize model access, control spend, add observability and guardrails',
@@ -3384,12 +2478,15 @@ export const realMarketServices: RealMarketService[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
     implementation_details: 'Region rules, consent logging, banner / prefs widgets.';
     launch_date: '2025 - 02 - 01';
     customers: 88;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -5038,29 +4135,22 @@ export const realMarketServices: RealMarketService[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ];
 ;
-=======
     rating: 4.6
     reviews: 36
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 ];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -5108,8 +4198,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'LLM Gateway & Cost Control',;
     tagline: 'Centralize model access, control spend, add observability and guardrails',;
     price: '$299',;
-    period: '/month',;
-    description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',;
+    period: '/month',,
+  description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',;
     features: [;
       'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',;
       'Export to data warehouse';
@@ -5146,8 +4236,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'API Observability Starter',;
     tagline: 'Trace, log, and profile your APIs in hours, not weeks',;
     price: '$149',;
-    period: '/month',;
-    description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;
+    period: '/month',,
+  description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;
     features: [;
       'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view';
     ],;
@@ -5183,8 +4273,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Email Deliverability & Warmup Monitor',;
     tagline: 'Inbox placement, warmup, and sender reputation monitoring',;
     price: '$79',;
-    period: '/month',;
-    description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',;
+    period: '/month',,
+  description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',;
     features: [;
       'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps';
     ],;
@@ -5225,8 +4315,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Affiliate Attribution & Payouts Hub',;
     tagline: 'Track referrals, detect fraud, and automate commission payouts',;
     price: '$129',;
-    period: '/month',;
-    description: 'Cross-device attribution with UTM and first-party identity stitching, fraud heuristics, and automated payouts to affiliates across Stripe/PayPal.',;
+    period: '/month',,
+  description: 'Cross-device attribution with UTM and first-party identity stitching, fraud heuristics, and automated payouts to affiliates across Stripe/PayPal.',;
     features: [;
       'UTM, ref, and coupon trackingAttribution windows and LTV creditFraud detection heuristicsStripe/PayPal payout workflowsPartner portal and analyticsWebhooks and API access';
     ],;
@@ -5267,8 +4357,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'AI Customer Support Suite',;
     tagline: 'Unified ticketing, chat, and AI assistants with knowledge sync',;
     price: '$199',;
-    period: '/month',;
-    description: 'Bring chat, ticketing, and AI assistance together with RAG over docs, macros, and action tools for faster resolution and CSAT uplift.',;
+    period: '/month',,
+  description: 'Bring chat, ticketing, and AI assistance together with RAG over docs, macros, and action tools for faster resolution and CSAT uplift.',;
     features: [;
       'AI chat and email draftingRAG over product docs and ticketsMacros and action toolsSentiment and CSAT analyticsZendesk/Intercom syncEscalation and SLA policies';
     ],;
@@ -5309,8 +4399,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'SMB Web Analytics Starter',;
     tagline: 'Privacy-first, cookie-lite analytics with actionable insights',;
     price: '$39',;
-    period: '/month',;
-    description: 'Simple dashboards with traffic sources, conversions, and page insights for non-technical teams. Exports and alerts included.',;
+    period: '/month',,
+  description: 'Simple dashboards with traffic sources, conversions, and page insights for non-technical teams. Exports and alerts included.',;
     features: [;
       'Traffic and conversion funnelsSource/medium and campaignsGoals and events trackingEmail/Slack anomaly alertsCSV/BigQuery exportGDPR-friendly, IP anonymization';
     ],;
@@ -5351,8 +4441,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Cloud Cost Optimizer',;
     tagline: 'Automated rightsizing, anomaly detection, and savings recommendations',;
     price: '$399',;
-    period: '/month',;
-    description: 'Automate detection of idle resources, rightsizing, and savings plans across AWS/GCP/Azure with weekly reports and Jira-ready tickets.',;
+    period: '/month',,
+  description: 'Automate detection of idle resources, rightsizing, and savings plans across AWS/GCP/Azure with weekly reports and Jira-ready tickets.',;
     features: [;
       'Idle resource detectionRightsizing and reservationsAnomaly detection and alertsTag hygiene and complianceWeekly savings reportsAuto-created ticketsRBAC and multi-account';
     ],;
@@ -5388,8 +4478,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'SOC 2 Evidence Automation',;
     tagline: 'Automate evidence collection, auditor-ready reports, and continuous controls',;
     price: '$499',;
-    period: '/month',;
-    description: 'Automate SOC 2 controls evidence from cloud providers, identity, CI/CD, and ticketing systems with auditor export packs.',;
+    period: '/month',,
+  description: 'Automate SOC 2 controls evidence from cloud providers, identity, CI/CD, and ticketing systems with auditor export packs.',;
     features: [;
       'Automated evidence collectorsControl mapping (AICPA)Auditor export packsException workflowsRisk register and ownershipChange management checksContinuous monitoring';
     ],;
@@ -5425,8 +4515,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Vector Search Starter',;
     tagline: 'Production vector DB setup with ingestion pipelines in a day',;
     price: '$249',;
-    period: '/month',;
-    description: 'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.',;
+    period: '/month',,
+  description: 'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.',;
     features: [;
       'Provider selection guideSchema and index templatesETL/ingestion pipelinesEmbeddings and chunking best practicesLatency and cost tuningSample RAG app integration';
     ],;
@@ -5462,8 +4552,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'TLS Certificate Monitor',;
     tagline: 'Prevent outages with proactive cert expiry and chain validation',;
     price: '$49',;
-    period: '/month',;
-    description: 'Simple, reliable certificate expiry and chain monitoring with Slack/Email alerts and status pages.',;
+    period: '/month',,
+  description: 'Simple, reliable certificate expiry and chain monitoring with Slack/Email alerts and status pages.',;
     features: [;
       'Multi-domain monitoringHTTP/TLS and OCSP checksSlack/Email alertsPublic status pagesWeekly compliance reports';
     ],;
@@ -5499,8 +4589,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'API Security Scanner',;
     tagline: 'Automatically find auth, injection and OWASP API Top 10 risks',;
     price: '$799',;
-    period: '/month',;
-    description: 'Continuous API security scanning for REST/GraphQL with schema discovery, auth testing, fuzzing and CI/CD gates. Reports mapped to OWASP API Top 10 with Jira-ready tickets.',;
+    period: '/month',,
+  description: 'Continuous API security scanning for REST/GraphQL with schema discovery, auth testing, fuzzing and CI/CD gates. Reports mapped to OWASP API Top 10 with Jira-ready tickets.',;
     features: [;
       'OpenAPI/GraphQL schema discoveryAuth and permission testingOWASP API Top 10 mappingFuzzing and payload mutationsCI/CD quality gatesJira tickets and Slack alerts';
     ],;
@@ -5536,8 +4626,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Email Deliverability Monitor',;
     tagline: 'SPF/DKIM/DMARC checks, blocklist watch and inbox placement',;
     price: '$149',;
-    period: '/month',;
-    description: 'Continuously monitors DNS auth records, blocklists and seed inbox placement. Actionable runbooks and alerts to keep campaigns landing in the inbox.',;
+    period: '/month',,
+  description: 'Continuously monitors DNS auth records, blocklists and seed inbox placement. Actionable runbooks and alerts to keep campaigns landing in the inbox.',;
     features: [;
       'SPF/DKIM/DMARC validationSeed inbox placement testsBlocklist monitoringDMARC aggregate reports (RUA/RUF)Alerts and weekly scorecards';
     ],;
@@ -5573,8 +4663,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Domain & DNS Monitor',;
     tagline: 'Track DNS, nameserver and SSL changes with instant alerts',;
     price: '$89',;
-    period: '/month',;
-    description: 'Watches critical DNS records (A/AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',;
+    period: '/month',,
+  description: 'Watches critical DNS records (A/AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',;
     features: [;
       'DNS record drift detectionTLS and chain changesAudit log and diffsSlack/Email alertsExportable reports';
     ],;
@@ -5610,8 +4700,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Uptime & SLO Monitor',;
     tagline: 'Blackbox checks, SLOs, error budgets and burn-rate alerts',;
     price: '$99',;
-    period: '/month',;
-    description: 'Define SLOs and error budgets with multi-region uptime checks, latency SLIs and actionable burn-rate alerts.',;
+    period: '/month',,
+  description: 'Define SLOs and error budgets with multi-region uptime checks, latency SLIs and actionable burn-rate alerts.',;
     features: [;
       'Multi-region uptime checksLatency and availability SLIsSLOs and error budgetsBurn-rate alertsPublic status pages';
     ],;
@@ -5647,8 +4737,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Status Pages & SLO',;
     tagline: 'Customer-facing status pages with SLO metrics baked-in',;
     price: '$59',;
-    period: '/month',;
-    description: 'Hosted status pages connected to your SLOs and incidents with custom components and history.',;
+    period: '/month',,
+  description: 'Hosted status pages connected to your SLOs and incidents with custom components and history.',;
     features: [;
       'Custom components and groupsIncident timelinesSLO and uptime widgetsSubscriptions and webhooks';
     ],;
@@ -5684,8 +4774,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Serverless Cron Manager',;
     tagline: 'Reliable scheduled jobs without servers and with retries',;
     price: '$79',;
-    period: '/month',;
-    description: 'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',;
+    period: '/month',,
+  description: 'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',;
     features: [;
       'Cron syntax and UIRetries with jitterDead-letter queuesSlack alerts';
     ],;
@@ -5721,8 +4811,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'PDF Render API',;
     tagline: 'Pixel-perfect HTML-to-PDF with fonts and headers/footers',;
     price: '$49',;
-    period: '/month',;
-    description: 'Drop-in PDF render API with template helpers, page numbers, margins and secure asset loading.',;
+    period: '/month',,
+  description: 'Drop-in PDF render API with template helpers, page numbers, margins and secure asset loading.',;
     features: [;
       'Chrome-based rendererCustom fonts and CSSHeaders/footers, page numbersWebhook delivery';
     ],;
@@ -5758,8 +4848,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'GDPR DSAR Automation',;
     tagline: 'Automate data subject requests with evidence and workflows',;
     price: '$399',;
-    period: '/month',;
-    description: 'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor-ready evidence packs.',;
+    period: '/month',,
+  description: 'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor-ready evidence packs.',;
     features: [;
       'Request intake portalIdentity verificationConnectors to data storesEvidence packs and exports';
     ],;
@@ -5795,8 +4885,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Vendor Risk Automation',;
     tagline: 'Questionnaires, evidence collection and continuous monitoring',;
     price: '$299',;
-    period: '/month',;
-    description: 'Automates vendor questionnaires (SIG Lite/CAIQ), evidence collection and scoring with renewal reminders and issues tracking.',;
+    period: '/month',,
+  description: 'Automates vendor questionnaires (SIG Lite/CAIQ), evidence collection and scoring with renewal reminders and issues tracking.',;
     features: [;
       'SIG/CAIQ templatesEvidence collection linksRisk scoring and trackingRenewal reminders';
     ],;
@@ -5832,8 +4922,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Browser Performance Monitor',;
     tagline: 'Core Web Vitals and RUM with actionable diagnostics',;
     price: '$129',;
-    period: '/month',;
-    description: 'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code-level fixes with dashboards.',;
+    period: '/month',,
+  description: 'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code-level fixes with dashboards.',;
     features: [;
       'RUM collection scriptCore Web Vitals (LCP/CLS/INP)Regression detectionDashboards and alerts';
     ],;
@@ -5869,8 +4959,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Database Performance Monitor',;
     tagline: 'Query insights, locks, connection pools and slow query fixes',;
     price: '$299',;
-    period: '/month',;
-    description: 'Collector agents for Postgres/MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',;
+    period: '/month',,
+  description: 'Collector agents for Postgres/MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',;
     features: [;
       'Slow query detectionLock contention analysisConnection pool saturationAdvisor recommendations';
     ],;
@@ -5906,8 +4996,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Managed Kubernetes Platform',;
     tagline: 'Production EKS/GKE/AKS with GitOps, SSO and guardrails',;
     price: '$1,999',;
-    period: '/month',;
-    description: 'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',;
+    period: '/month',,
+  description: 'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',;
     features: [;
       'IaC blueprints and GitOpsSSO and RBAC policiesCost controls and quotasBackup and restore runbooks';
     ],;
@@ -5943,8 +5033,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Real User Monitoring (RUM) Analytics Starter',;
     tagline: 'Measure real user performance, Core Web Vitals and conversion impact',;
     price: '$59',;
-    period: '/month',;
-    description: 'Drop-in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',;
+    period: '/month',,
+  description: 'Drop-in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',;
     features: [;
       'Core Web Vitals (LCP, INP, CLS)Conversion impact analysisGeo/device breakdownsAnomaly alerts to Slack/EmailPrivacy-friendly, cookie-lite';
     ],;
@@ -5980,8 +5070,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Accessibility Compliance Auditor',;
     tagline: 'Automated WCAG checks with actionable fixes and CI integration',;
     price: '$79',;
-    period: '/month',;
-    description: 'Automate WCAG 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',;
+    period: '/month',,
+  description: 'Automate WCAG 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',;
     features: [;
       'axe-core rules and custom checksCI gate on severity thresholdsPage template scanningIssue tracker exportAuditor-ready PDF reports';
     ],;
@@ -6017,8 +5107,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'API Latency Budget Enforcer',;
     tagline: 'Guardrails for p95/p99 latency budgets with tickets and alerts',;
     price: '$119',;
-    period: '/month',;
-    description: 'Define per-endpoint latency budgets (p95/p99) and auto-create remediation tasks when budgets are breached. Includes SLOs, error budgets, and on-call alerts.',;
+    period: '/month',,
+  description: 'Define per-endpoint latency budgets (p95/p99) and auto-create remediation tasks when budgets are breached. Includes SLOs, error budgets, and on-call alerts.',;
     features: [;
       'Per-route latency SLOsError budget trackingAuto-ticket creationSlack/PagerDuty alertsWeekly drift reports';
     ],;
@@ -6054,8 +5144,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Security Headers & TLS Monitor',;
     tagline: 'Track HSTS, CSP, TLS config and get hardening playbooks',;
     price: '$49',;
-    period: '/month',;
-    description: 'Monitors site headers and TLS for regressions. Provides CSP templates, HSTS, and modern TLS guidance with alerts and diffs.',;
+    period: '/month',,
+  description: 'Monitors site headers and TLS for regressions. Provides CSP templates, HSTS, and modern TLS guidance with alerts and diffs.',;
     features: [;
       'CSP/HSTS header checksTLS version/cipher checksAuto-diff of changesSlack/Email alertsHardening playbooks';
     ],;
@@ -6091,8 +5181,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Cookie & Consent Manager',;
     tagline: 'GDPR/CCPA consent banner, audit trails, and policy generator',;
     price: '$39',;
-    period: '/month',;
-    description: 'Easy consent banner with per-region rules, audit logs, and auto-generated cookie policy pages. Integrates with analytics blockers.',;
+    period: '/month',,
+  description: 'Easy consent banner with per-region rules, audit logs, and auto-generated cookie policy pages. Integrates with analytics blockers.',;
     features: [;
       'Geo-based consent rulesPolicy page generatorAudit log exportAnalytics/script blockingA/B banner testing';
     ],;
@@ -6128,8 +5218,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Backup Policy Auditor',;
     tagline: 'Validate backup frequency, retention and recovery objectives',;
     price: '$99',;
-    period: '/month',;
-    description: 'Continuously checks backup policies against RPO/RTO targets across clouds and DBs. Flags drift and creates remediation tasks.',;
+    period: '/month',,
+  description: 'Continuously checks backup policies against RPO/RTO targets across clouds and DBs. Flags drift and creates remediation tasks.',;
     features: [;
       'RPO/RTO policy checksSnapshot/restore verificationDrift detectionWeekly compliance reportsAuto-ticket workflows';
     ],;
@@ -6165,8 +5255,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Consent & Cookie Compliance Kit',;
     tagline: 'GDPR/CPRA consent banners, geo-targeting, and audit-ready logs',;
     price: '$49',;
-    period: '/month',;
-    description: 'Deploy IAB TCF v2 compatible consent banners with region-aware policies, capture consent receipts, and export audit logs for GDPR/CPRA. Includes cookie inventory and auto-blocking helpers.',;
+    period: '/month',,
+  description: 'Deploy IAB TCF v2 compatible consent banners with region-aware policies, capture consent receipts, and export audit logs for GDPR/CPRA. Includes cookie inventory and auto-blocking helpers.',;
     features: [;
       'IAB TCF v2.2 compatible consentGeo-targeted policies (EEA/UK/US states)Consent receipts and log exportsCookie inventory and auto-blockingPolicy pages and versioningCMP integrations and tag manager hooks';
     ],;
@@ -6202,8 +5292,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'API Backfill & Reconciliation',;
     tagline: 'Recover missed events, dedupe, and reconcile systems with confidence',;
     price: '$99',;
-    period: '/month',;
-    description: 'Detect and repair data gaps between SaaS APIs and your warehouse/CRM. Provides replay-safe backfills, idempotency, and reconciliation reports.',;
+    period: '/month',,
+  description: 'Detect and repair data gaps between SaaS APIs and your warehouse/CRM. Provides replay-safe backfills, idempotency, and reconciliation reports.',;
     features: [;
       'Gap detection and backfill plansIdempotent replay and deduplicationHash-based reconciliation reportsRate-limit aware workersAlerting and failure retriesWarehouse and CRM syncs';
     ],;
@@ -6239,8 +5329,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Data Quality & Freshness SLAs',;
     tagline: 'Track freshness, nulls, and schema drift with alerting and SLOs',;
     price: '$149',;
-    period: '/month',;
-    description: 'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',;
+    period: '/month',,
+  description: 'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',;
     features: [;
       'Freshness and volume checksNull/outlier thresholdsSchema drift detectionLineage visualizationSLOs and error budgetsSlack/Jira alerts and reports';
     ],;
@@ -6276,8 +5366,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Postgres Index Advisor & Tuner',;
     tagline: 'Automatic index suggestions, vacuum tuning, and slow query fixes',;
     price: '$79',;
-    period: '/month',;
-    description: 'Analyze query plans and table stats to recommend and schedule index changes, vacuum/autovacuum tuning, and bloat remediation.',;
+    period: '/month',,
+  description: 'Analyze query plans and table stats to recommend and schedule index changes, vacuum/autovacuum tuning, and bloat remediation.',;
     features: [;
       'EXPLAIN plan analysisMissing/unused index detectionAutovacuum and bloat tuningSafe change windowsRollback and impact reportsAlerts on regressions';
     ],;
@@ -6313,8 +5403,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'GitOps Policy & Drift Monitor',;
     tagline: 'Detect and correct drift between Git and cluster state with policy gates',;
     price: '$99',;
-    period: '/month',;
-    description: 'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',;
+    period: '/month',,
+  description: 'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',;
     features: [;
       'Desired vs live diffingOPA/Conftest policy gatesAuto-PR remediationSlack/Jira alertsChange history and approvalsMulti-cluster support';
     ],;
@@ -6350,8 +5440,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'SOC 2 Readiness Scanner',;
     tagline: 'Map controls to TSC, auto-collect evidence, and flag gaps',;
     price: '$79',;
-    period: '/month',;
-    description: 'Pre-audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor-friendly reports.',;
+    period: '/month',,
+  description: 'Pre-audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor-friendly reports.',;
     features: [;
       'Control mapping templatesEvidence collectors and checksPolicy and process coverageGap analysis and tasksExportable auditor reports';
     ],;
@@ -6387,8 +5477,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Cloud Asset Inventory & Attack Surface',;
     tagline: 'Continuously map cloud assets, exposures, and internet-facing risks',;
     price: '$149',;
-    period: '/month',;
-    description: 'Discover assets across AWS/Azure/GCP, classify risks (public buckets, open ports), and generate remediation tickets with ownership routing.',;
+    period: '/month',,
+  description: 'Discover assets across AWS/Azure/GCP, classify risks (public buckets, open ports), and generate remediation tickets with ownership routing.',;
     features: [;
       'Multi-cloud asset discoveryPublic exposure detectionOwnership and taggingRisk scoring and SLAsAuto-ticket creation';
     ],;
@@ -6424,8 +5514,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'LLM Red Team & Jailbreak Simulator',;
     tagline: 'Automated adversarial prompts, safety tests, and regression dashboards',;
     price: '$99',;
-    period: '/month',;
-    description: 'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',;
+    period: '/month',,
+  description: 'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',;
     features: [;
       'Prompt injection librariesPII/redaction checksSafety regression testsModel/provider matrixCI gates and reports';
     ],;
@@ -6461,8 +5551,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Affiliate Fraud Detector',;
     tagline: 'Block coupon abuse, self-referrals, and low-quality traffic at scale',;
     price: '$129',;
-    period: '/month',;
-    description: 'Enhances affiliate programs with fraud heuristics, device/identity checks, and payout holds to protect margins.',;
+    period: '/month',,
+  description: 'Enhances affiliate programs with fraud heuristics, device/identity checks, and payout holds to protect margins.',;
     features: [;
       'Self-referral detectionDevice and IP risk signalsVelocity and cohort heuristicsPayout hold workflowsAppeal and review portal';
     ],;
@@ -6498,8 +5588,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Data Governance & Catalog Starter',;
     tagline: 'Lightweight catalog, lineage, and PII tagging for modern stacks',;
     price: '$699',;
-    period: '/month',;
-    description: 'Pragmatic data governance with automated discovery, column-level lineage, PII tagging, and policy enforcement. Vendor-neutral and dbt-friendly.',;
+    period: '/month',,
+  description: 'Pragmatic data governance with automated discovery, column-level lineage, PII tagging, and policy enforcement. Vendor-neutral and dbt-friendly.',;
     features: [;
       'Automated table/column discoveryColumn-level lineage and impact analysisPII tagging and masking policiesGlossary and ownership workflowsdbt/Snowflake/BigQuery integrations';
     ],;
@@ -6535,8 +5625,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'E‑commerce Personalization Engine',;
     tagline: 'Real-time recommendations, bundles, and promotions that drive AOV',;
     price: '$499',;
-    period: '/month',;
-    description: 'Plug-and-play personalization for storefronts. Learns from behavior and catalog to optimize recommendations, bundles, and on-site promotions.',;
+    period: '/month',,
+  description: 'Plug-and-play personalization for storefronts. Learns from behavior and catalog to optimize recommendations, bundles, and on-site promotions.',;
     features: [;
       'Session-based and user-based recommendationsBundle and upsell optimizerA/B testing and holdoutsShopify/BigCommerce appsAudience segments and API';
     ],;
@@ -6572,8 +5662,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'IoT Fleet Telemetry Platform',;
     tagline: 'Unified device telemetry, alerts, and predictive maintenance',;
     price: '$999',;
-    period: '/month',;
-    description: 'Collect, store, and analyze telemetry from vehicles and devices. Real-time alerts, anomaly detection, geofencing, and maintenance predictions.',;
+    period: '/month',,
+  description: 'Collect, store, and analyze telemetry from vehicles and devices. Real-time alerts, anomaly detection, geofencing, and maintenance predictions.',;
     features: [;
       'MQTT/HTTP ingestion and device registryRules engine and alertingAnomaly detection and forecastingGeofencing and trip analyticsAPIs and dashboards';
     ],;
@@ -6609,8 +5699,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'API Security Testing as a Service',;
     tagline: 'Automated DAST/SAST for APIs with CI/CD integration',;
     price: '$399',;
-    period: '/month',;
-    description: 'Shift-left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',;
+    period: '/month',,
+  description: 'Shift-left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',;
     features: [;
       'OWASP API Top 10 checksSecrets and token leakage detectionCI/CD and PR annotationsSBOM and dependency riskReports and Jira tickets';
     ],;
@@ -6646,8 +5736,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Cloudflare Turnstile & Bot Shield Proxy',;
     tagline: 'Kill signup spam and bot abuse without CAPTCHAs',;
     price: '$39',;
-    period: '/month',;
-    description: 'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop-in protection for signups, login, and sensitive endpoints.',;
+    period: '/month',,
+  description: 'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop-in protection for signups, login, and sensitive endpoints.',;
     features: [;
       'Turnstile token verificationReputation and ASN heuristicsIP/device fingerprintingAdaptive challengesBlock/allow lists and webhooks';
     ],;
@@ -6688,8 +5778,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Reverse ETL Lite',;
     tagline: 'Sync warehouse data to SaaS apps in minutes',;
     price: '$99',;
-    period: '/month',;
-    description: 'Point-and-click syncs from BigQuery/Snowflake/Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',;
+    period: '/month',,
+  description: 'Point-and-click syncs from BigQuery/Snowflake/Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',;
     features: [;
       'Warehouse connectorsField mapping UISchedules and retriesDry-run and diffsRow-level filters';
     ],;
@@ -6730,8 +5820,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'AI RFP Response Copilot',;
     tagline: 'Draft RFP answers from your knowledge base with evidence links',;
     price: '$129',;
-    period: '/month',;
-    description: 'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',;
+    period: '/month',,
+  description: 'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',;
     features: [;
       'RAG over proposals & policiesSection templates and stylesEvidence citationsGap coverage trackingWord/PDF export';
     ],;
@@ -6772,8 +5862,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'LLM Evaluation Harness',;
     tagline: 'Automated evals with golden sets, judges, and regression gates',;
     price: '$79',;
-    period: '/month',;
-    description: 'Define tasks and datasets, run multi-model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',;
+    period: '/month',,
+  description: 'Define tasks and datasets, run multi-model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',;
     features: [;
       'Golden sets and promptsJudge model scoringMulti-model matrixRegression and drift alertsCI quality gates';
     ],;
@@ -6814,8 +5904,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'GDPR Cookie Consent Edge',;
     tagline: 'Region-aware consent banner with audit receipts and auto-blocking',;
     price: '$49',;
-    period: '/month',;
-    description: 'Deploy a lightweight consent banner with geo rules, consent receipts, automatic tag blocking, and policy page generator.',;
+    period: '/month',,
+  description: 'Deploy a lightweight consent banner with geo rules, consent receipts, automatic tag blocking, and policy page generator.',;
     features: [;
       'Geo rules (EEA/UK/US states)Consent receipts & exportsAuto-blocking for tagsPolicy page generatorA/B banner tests';
     ],;
@@ -6856,8 +5946,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Smart Web Scraper Hub',;
     tagline: 'Rotate, render, and extract with compliance guards and queues',;
     price: '$89',;
-    period: '/month',;
-    description: 'Render JS pages, rotate IPs, manage robots/politeness, and extract structured data to warehouses with retries and dedupe.',;
+    period: '/month',,
+  description: 'Render JS pages, rotate IPs, manage robots/politeness, and extract structured data to warehouses with retries and dedupe.',;
     features: [;
       'Headless rendering & queuesIP rotation and backoffRobots/politeness guardsDeduplication and diffsWarehouse exports';
     ],;
@@ -6899,8 +5989,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'E‑commerce Returns Manager',;
     tagline: 'Automate RMAs, labels, and refund workflows for Shopify/Woo',;
     price: '$149',;
-    period: '/month',;
-    description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',;
+    period: '/month',,
+  description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',;
     features: [;
       'Self‑serve returns portalLabel generation and trackingExchange/repair workflowsReturn reasons and defect analyticsEmail/SMS notificationsWarehouse and RMA integrations';
     ],;
@@ -6941,8 +6031,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Automated Email Follow‑ups',;
     tagline: 'Sequenced follow‑ups with inbox rotation and reply detection',;
     price: '$79',;
-    period: '/month',;
-    description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',;
+    period: '/month',,
+  description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',;
     features: [;
       'Sequence builder and templatesReply/booking detection and stopsInbox rotation and throttlingA/B testing for subject linesWarmup and reputation checksCRM sync and webhooks';
     ],;
@@ -6983,8 +6073,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Podcast Transcribe & Chapters',;
     tagline: 'Accurate transcripts, speakers, summaries, chapters and clips',;
     price: '$49',;
-    period: '/month',;
-    description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',;
+    period: '/month',,
+  description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',;
     features: [;
       'High‑accuracy transcriptionSpeaker diarizationSummaries and chapteringTopic and keyword extractionClip generator for socialEmbeds and RSS sync';
     ],;
@@ -7025,8 +6115,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Freelancer Portfolio Studio',;
     tagline: 'Stunning portfolios and case studies with leads tracking',;
     price: '$19',;
-    period: '/month',;
-    description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',;
+    period: '/month',,
+  description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',;
     features: [;
       'Drag‑and‑drop templatesCase study generatorContact and booking formsTestimonials and logosBasic SEO and analyticsCustom domains';
     ],;
@@ -7067,8 +6157,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Local Micro CRM',;
     tagline: 'Simple contacts, reminders, and pipeline for small shops',;
     price: '$15',;
-    period: '/month',;
-    description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',;
+    period: '/month',,
+  description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',;
     features: [;
       'Contacts and notesReminders and tasksSimple pipeline stagesEmail/SMS nudgesImport/export and tagsMobile‑friendly UI';
     ],;
@@ -7109,8 +6199,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Subject Line Optimizer AI',;
     tagline: 'Generate and score email subjects with live benchmarks',;
     price: '$29',;
-    period: '/month',;
-    description: 'Create and score subject lines using language models and historical performance data, export to ESPs and run quick A/B tests.',;
+    period: '/month',,
+  description: 'Create and score subject lines using language models and historical performance data, export to ESPs and run quick A/B tests.',;
     features: [;
       'AI suggestions and variantsTone and length tuningPerformance benchmarksESP export and A/B testsSpam words and previewTeam review workflow';
     ],;
@@ -7151,8 +6241,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Developer Workflow Analytics',;
     tagline: 'Visualize reviews, velocity, and bottlenecks across repos',;
     price: '$199',;
-    period: '/month',;
-    description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',;
+    period: '/month',,
+  description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',;
     features: [;
       'Cycle time and WIP analysisReview depth and latencyFlaky test detectionRepo hotspots and ownershipTeam scorecards and alertsJira/Linear linkage';
     ],;
@@ -7193,8 +6283,8 @@ export const realMarketServices: RealMarketService[] = [;
     name: 'Privacy & Consent Manager (SMB)',;
     tagline: 'GDPR/CCPA banners, consent logs, DSAR intake and records',;
     price: '$49',;
-    period: '/month',;
-    description: 'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',;
+    period: '/month',,
+  description: 'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',;
     features: [;
       'Geo/rule‑based bannersPreference centerDSAR intake and workflowsCookie catalog and scansConsent logs and exportsMulti‑site management';
     ],;
@@ -7230,9 +6320,12 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.6;
     reviews: 36;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];

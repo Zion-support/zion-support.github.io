@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import * as React from 'react';
@@ -16,6 +17,13 @@ export default function handler(
   req: "NextApiRequest",
   res: "NextApiResponse",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import * as React from "react";
+export declare const config: { api: { bodyParser: boolean } };
+export default function handler(
+  req: "NextApiRequest",
+  res: "NextApiResponse",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ): Promise<any>;
 =======
 ): Promise<any>;

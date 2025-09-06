@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { logDebug } from '@/utils/productionLogger',
@@ -244,6 +245,8 @@ export function IntegrationCard(): any ({;
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -297,9 +300,6 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
 =======
 
-
-
-
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
@@ -313,7 +313,6 @@ export function IntegrationCards() {
     <div className="grid md:grid-cols-3 gap-6">
       <IntegrationCard
 
-
         title="Slack"
         description="Send notifications and interact with Zion from Slack."
         icon={<Slack className="h-5 w-5" />}
@@ -325,32 +324,25 @@ export function IntegrationCards() {
 
         icon={<Briefcase className="h-5 w-5" />}
 
-
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
-    </div>
-  )
-      />;
-    </div>;
-  );
-}        icon={<Briefcase className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Salesforce clicked')}
-      />;
-      <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
 
-
 }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -524,3 +516,6 @@ function IntegrationCards() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

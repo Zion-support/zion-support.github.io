@@ -17,12 +17,6 @@ import path from 'path';
 type Experiment = {
 =======
 
-
-
-
-
-
-
 type Experiment = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -132,13 +126,16 @@ type Experiment = {
 
   title: string,;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   hypothesis?: string;
   metric?: string;
   effort?: number;
 
-impact?: number ;
+impact?: number 
 };
 type Props = {;
   updatedAt: string | null;
@@ -155,12 +152,12 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   hypothesis?: string;
   metric?: string;
   effort?: number;
-  impact?: number;
+  impact?: number
 };
 
 type Props = {;
   updatedAt: string | null,;
-  items: Experiment[];
+  items: Experiment[]
 };
 <<<<<<< HEAD
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
@@ -374,7 +371,7 @@ export async function getStaticProps() {
               </div>)}
           </div>))}
         {!items.length && (
-          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600">;
+          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
             Nothing to show yet.;
           </div>)}
       </div>;
@@ -439,8 +436,8 @@ export async function getStaticProps() {;
         updatedAt: parsed && parsed.updatedAt || null,;
         items: parsed && parsed.items || [],;
       },;
-      revalidate: 300,;
-    };  } catch {;
+      revalidate: 300,
+};  } catch {;
     return {;
       props: {;
         updatedAt: null,}
@@ -453,8 +450,8 @@ export async function getStaticProps() {;
         updatedAt: parsed && parsed.updatedAt || null,;
         items: parsed && parsed.items || [],;
       },;
-      revalidate: 300,;
-    };        items: parsed && parsed.items || []},;
+      revalidate: 300,
+};        items: parsed && parsed.items || []},;
       revalidate: 300}
   } catch {;
     return {;
@@ -462,8 +459,8 @@ export async function getStaticProps() {;
         updatedAt: null,;
         items: [],;
       },;
-      revalidate: 300,;
-    };
+      revalidate: 300,
+};
   }        items: []},;
         updatedAt: null
         items: []

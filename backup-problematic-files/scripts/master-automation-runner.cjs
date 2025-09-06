@@ -22,5 +22,10 @@ console.log(' Starting Master Automation Runner...')
     execSync(automation.script, { "stdio"})
     recommendations.push('"CRITICAL")
     recommendations.push('"CRITICAL")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.log(' Master Automation "Summary")
+  console.log(' Master Automation "Summary")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

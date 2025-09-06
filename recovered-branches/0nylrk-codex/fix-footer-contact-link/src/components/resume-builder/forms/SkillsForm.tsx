@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent  } from './skills';
 import { SkillsFormProps } from './skills/types';
@@ -13,6 +14,8 @@ export function SkillsForm(props: SkillsFormProps) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { SkillsForm, as, SkillsFormComponent  } from './skills';
 import { SkillsFormProps  } from './skills / types';
 export /**
@@ -20,6 +23,7 @@ export /**
  */
 function SkillsForm() {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return <SkillsFormComponent {...props} />;
 }
@@ -108,11 +112,25 @@ export function SkillsForm(props: SkillsFormProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
-;
-}
-;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return <SkillsFormComponent {...props} />;
+}
+import {SkillsForm, as, SkillsFormComponent} from './skills';
+import {SkillsFormProps} from './skills/types';
+export function SkillsForm(): any (props: SkillsFormProps) {;
+  return <SkillsFormComponent {...props} />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+
+import {SkillsForm, as, SkillsFormComponent} from './skills';
+import {SkillsFormProps} from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {
+  return <SkillsFormComponent {...props} />
+import { SkillsForm as SkillsFormComponent } from './skills',;
+import { SkillsFormProps } from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {;
+  return <SkillsFormComponent {...props} />;}
+;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

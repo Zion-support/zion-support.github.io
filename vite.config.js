@@ -81,7 +81,6 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
         drop_debugger: true
       }
     }
@@ -94,6 +93,7 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -108,3 +108,5 @@ export default defineConfig({
 });
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

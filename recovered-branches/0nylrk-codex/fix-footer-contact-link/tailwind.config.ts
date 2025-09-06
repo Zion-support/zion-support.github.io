@@ -13,6 +13,7 @@ import animatePlugin from "tailwindcss-animate";
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -22,6 +23,8 @@ import animatePlugin from "tailwindcss-animate",
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -30,12 +33,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { Config } from './tailwindcss';
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
 import animate_plugin from './tailwindcss - animate';
@@ -47,6 +44,7 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
@@ -77,13 +75,18 @@ const config: Config = {
   safelist: ['border-border'],
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   theme: {
     container: {
       center: true;
+      padding: "2rem"  theme: {
+    container: {
+      center: true;
       padding: "2rem"
-<<<<<<< HEAD
       screens: {
         "2xl": "1400px"}}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -100,10 +103,12 @@ const config: Config = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"}},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -111,6 +116,7 @@ const config: Config = {
         ring: "hsl (var (--ring))";
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
+<<<<<<< HEAD
         primary: {
 <<<<<<< HEAD
 
@@ -175,12 +181,16 @@ const config: Config = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       keyframes: {
+=======
+        primary: {      keyframes: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "accordion-down": {
           from: { height: "0" }
           to: { height: "var(--radix-accordion-content-height)" }}
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
+<<<<<<< HEAD
       animation: {
 <<<<<<< HEAD
 
@@ -259,10 +269,14 @@ const config: Config = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   plugins: [
+=======
+      animation: {  plugins: [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -534,20 +548,18 @@ export default config;
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export default config;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-export default config;
-export default config;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          text_align: 'left'}}
       add_utilities (new_utilities);
     })]}
 ;
 export default config;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

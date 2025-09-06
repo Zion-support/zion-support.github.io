@@ -2,33 +2,21 @@
 =======
 import { Button } from "@/components/ui/button",
 
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-
 
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
-  const [is_visible, setIsVisible] = useState (false);
-  useEffect (() => {
-  // TODO: Add dependencies if needed;
-  return () => {
-    // Cleanup function;
-}
 
+<<<<<<< HEAD
 
 
 export function FloatingCTA() {
@@ -50,11 +38,43 @@ export function FloatingCTA() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+}, []); [])
+    // Show CTA after 5 seconds
+      setIsVisible(true) }, 5000)
+    return () => clearTimeout(timer) }, []) }
+  ]
+  const quickServices = ["
+    { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },"
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
+  ]
+  if(!isVisible) return null
+                    to="/services"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
+                    onClick={() => setIsExpanded(false)}
+                  >"
+                    <span className="text-xl">🚀</span>
+                    <div>"
+                      <div className="font-semibold">Our Services</div>"
+                      <div className="text-sm text-gray-400">Explore solutions</div>
+                    </div>
+                  </Link>
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { useState, useEffect } from "react"export function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false),
+  const [isClosed, setIsClosed] = useState(false),
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -168,6 +188,15 @@ export function FloatingCTA() {;
 
 ;
 
+=======
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)      } else {
+        setIsVisible (false);
+      }
+
+import { X } from 'lucide-react';
+export function FloatingCTA() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -192,8 +221,8 @@ export function FloatingCTA() {;
   }, [isClosed]),;
   const handleClose = () => {;
     setIsClosed(true),;
-    setIsVisible(false);
-  };
+    setIsVisible(false)
+};
   if (!isVisible) return null;
   return (;
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
@@ -216,14 +245,18 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
+<<<<<<< HEAD
 
             <X className="w-5 h-5" />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </button>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -292,6 +325,8 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
     </>)}
 '";
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

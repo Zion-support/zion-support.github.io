@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
@@ -73,10 +74,16 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   state = { ...defaultState }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
 =======
-
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {
+  return { ...state }
+}
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates }
+};}
 
 export function readState(): SyncState {;
   return { ...state };
@@ -158,8 +165,6 @@ export function filterEventsByScope(
   scope: InstanceConfig['scope']
 }
 
-
-
 ): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
@@ -180,14 +185,14 @@ export interface SyncJob {
     retryAttempts?: number;
     timeout?: number;
     filters?: Record<string, any>;
-    mappings?: Record<string, string>;
-  };
+    mappings?: Record<string, string>
+};
   progress: {
     total: number;
     processed: number;
     failed: number;
-    skipped: number;
-  };
+    skipped: number
+};
   startedAt?: string;
   completedAt?: string;
   error?: string;
@@ -203,18 +208,13 @@ export interface SyncConnection {
   config: {
     url?: string;
     credentials?: Record<string, string>;
-    options?: Record<string, any>;
-  };
+    options?: Record<string, any>
+};
   isActive: boolean;
   lastSyncAt?: string;
   createdAt: string;
   updatedAt: string;
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 export interface SyncMapping {
   id: string;
   name: string;
@@ -242,7 +242,6 @@ export interface SyncLog {
   timestamp: string;
 }
 
-<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -442,10 +441,6 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -455,25 +450,9 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
-<<<<<<< HEAD
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
-
-=======
-}
-
-}
-}
-}
-  const entity_id = getEntityId (event);
-  const current_version = state.latestVersionByEntityId[entity_id] || 0;
-  const is_newer = event.version > current_version;
-;
-  // Check condition
-if ( {) {
-  $2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -508,6 +487,7 @@ export function getEntityId (event: SyncEvent): string {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export function filterEventsByScope(;
   events: SyncEvent[];
@@ -541,3 +521,5 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

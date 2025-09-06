@@ -16,10 +16,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeVendor, setActiveVendor] = useState(vendor);
@@ -77,15 +80,14 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 <<<<<<< HEAD
 =======
 
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [;
       ...(activeVendor && activeVendor.packages || []),;
       {;
         id: `pkg_${Date && Date.now()}`,;
-        title: pkgTitle,;
-        description: pkgDesc,;
+        title: pkgTitle,,
+  description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -340,6 +342,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               value={pkgPrice}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </section>
       <section className='space-y-3'>
@@ -369,6 +372,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function Pipeline({ vendorId }: { vendorId: string }) {
 
 <<<<<<< HEAD
@@ -381,10 +386,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-
-
-
-
 
   useEffect(() => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -528,7 +529,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } };
+  return { props: { vendor } }
 };  );
 <<<<<<< HEAD
 }

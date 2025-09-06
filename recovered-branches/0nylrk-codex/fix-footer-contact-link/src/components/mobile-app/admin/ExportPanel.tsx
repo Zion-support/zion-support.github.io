@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,6 +18,10 @@ import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 import {toast} from "sonner";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -24,6 +29,7 @@ import { Download } from "lucide-react",
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 import { toast } from "sonner",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -124,6 +130,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+=======
+import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       } else {
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
@@ -132,6 +141,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.shortDescription,
           metadata.longDescription,
           metadata.version,
+<<<<<<< HEAD
           metadata.platform
 <<<<<<< HEAD
 
@@ -301,6 +311,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+          metadata.platform  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -336,6 +349,7 @@ if ( {) {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -562,35 +576,19 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 CSV;
               </Button>;
             </div>;
-          </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <div className="border - t border - zion - purple / 20 pt - 4">;
-            <h4 className="font - medium mb - 2">Installation Analytics</h4>;
-            <p className="text - sm text - gray - 400 mb - 3">;
-              Track how many users click "Install" from web;
-            </p>;
-            <Button on_click={track_analytics} className="w - full">;
-
-=======
-          ;
-          <div className="border-t border-zion-purple/20 pt-4">;
-            <h4 className="font-medium mb-2">Installation Analytics</h4>;
-            <p className="text-sm text-gray-400 mb-3">;
-              Track how many users click "Install" from web;
-            </p>;
-            <Button onClick={trackAnalytics} className="w-full">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              Enable Analytics;
+          </div>;              Enable Analytics;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </CardContent>;
 <<<<<<< HEAD
     </Card>;
@@ -610,21 +608,17 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+      </CardContent>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+};
     </Card>);
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 };
     </Card>);
 }
 ;
-<<<<<<< HEAD
     </Card>);
 }
 ;
@@ -646,9 +640,13 @@ if (format === 'json') {
 return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) 
 };
     </Card>;
-  );
+  )
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

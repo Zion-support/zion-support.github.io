@@ -161,8 +161,11 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -254,7 +257,6 @@ export default function UltraFuturisticFooter2034() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
 export default function UltraFuturisticFooter2034() {;
 
   return (
@@ -290,11 +292,14 @@ export default function UltraFuturisticFooter2034() {
 
               <motion.div
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -479,6 +484,7 @@ export default function UltraFuturisticFooter2034() {
               <motion.div
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -488,6 +494,8 @@ export default function UltraFuturisticFooter2034() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -574,12 +582,12 @@ export default function UltraFuturisticFooter2034() {
                           </Link>;
                             key={service.name}
                             href={service.href}
-                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200";
+                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition-all duration-200";
                           >;
-                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm">;
+                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition-colors text-sm">;
                               {service.name}
                             </span>;
-                            <span className="text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors">;
+                            <span className="text - xs text - gray - 500 group - hover:text - cyan-400 transition-colors">;
                               {service.price}
                         ))}
                       </div>;
@@ -701,7 +709,6 @@ export default function UltraFuturisticFooter2034() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                 {/* Social Links */}
-
 
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
@@ -935,11 +942,14 @@ export default function UltraFuturisticFooter2034() {
               ))}
         {/* Bottom Bar */}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -1004,8 +1014,6 @@ export default function UltraFuturisticFooter2034() {
           </div>;
         </div>;
       </div>;
-
-
 
 ;
 export default function UltraFuturisticFooter2034() {;

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type SyncScope = "full" | "dao" | "marketplace",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Peer {;
@@ -17,6 +20,7 @@ export interface InstanceConfig {;
   paused: boolean;
   scope: SyncScope;
   peers: Peer[];
+<<<<<<< HEAD
   secretConfigured: boolean;
 <<<<<<< HEAD
 }
@@ -66,6 +70,9 @@ export interface ProposalVoteEntry {;
 =======
 <<<<<<< HEAD
   } catch (error) {
+=======
+  secretConfigured: boolean;}  } catch (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -87,6 +94,7 @@ export interface ProposalPayload extends BaseEventPayload {;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -96,6 +104,8 @@ export interface BaseEventPayload {;
   id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   token: string;
@@ -103,6 +113,7 @@ export interface BaseEventPayload {;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -121,11 +132,14 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -137,15 +151,20 @@ export interface BaseEventPayload {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
@@ -161,19 +180,23 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   score: number;
   category: string, // e.g., grants, contributions;
   rank?: number;
@@ -184,18 +207,23 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+;}
 ;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
+<<<<<<< HEAD
   | DaoEndorsementPayload;
 <<<<<<< HEAD
   | LeaderboardEntryPayload;
@@ -289,3 +317,6 @@ export interface MultiverseState {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  | DaoEndorsementPayload;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

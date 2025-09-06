@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
@@ -15,41 +16,39 @@ import {  Table
   TableCell
   TableHead
   TableHeader
+=======
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   TableRow
-} from '@/components/ui/table'
-import { ApplicationActions } from './ApplicationActions'
-import { StatusBadge } from './StatusBadge'
+} from "@/components/ui/table",
+import { ApplicationActions } from "./ApplicationActions",
+import { StatusBadge } from "./StatusBadge",
 import { Briefcase, User } from 'lucide-react'
-import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal'
-import React, { useState } from 'react'; // Import React and useState
-import { toast } from '@/hooks/use-toast'
-import Image from 'next/image'; // Import next/image
-import { format } from 'date-fns';
-import { JobApplication } from '@/types/jobs';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
-import { ClickableBadge } from '@/components/ui/clickable-badge';
-import {  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { ApplicationActions } from './ApplicationActions';
-import { StatusBadge } from './StatusBadge';
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
-import React, { useState } from 'react'; // Import React and useState;
-import { toast } from '@/hooks/use-toast';
-import Image from 'next/image'; // Import next/image;
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
+import React, { useState } from "react", // Import React and useState
+import { toast } from "@/hooks/use-toast",
+import Image from 'next/image', // Import next/image
 
 interface ApplicationsTableProps {
+  applications: JobApplication[],
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
+  onViewScore: (application: JobApplication) => void
+}
+
+// Sub-component for avatar to handle its own error state
+const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
+  const [avatarError, setAvatarError] = useState(false),
+  const talentName = application.talent_profile?.full_name || "Candidate",
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
-
 
 import { format } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
@@ -84,6 +83,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
 
+<<<<<<< HEAD
   return (
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
@@ -104,6 +104,12 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
 
 
       ) : (
+=======
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |"Candidate"
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <User className="h-4 w-4" />
       )}
 <<<<<<< HEAD
@@ -159,37 +165,12 @@ function ApplicationsTable() {
       description: 'Offer has been sent to the talent.',
     });
 
-  }
-    </AvatarPrimitive>;
-  );
-};
+      ) : (
+        <User className="h-4 w-4" />
+      )}
+    </AvatarPrimitive>
+  )
 
-export function ApplicationsTable(): any ({;
-  applications,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,;
-  onViewScore,;
-}: ApplicationsTableProps) {;
-  const [hireModalOpen, setHireModalOpen] = useState(false);
-  const [selectedApplication, setSelectedApplication] =;
-    useState<JobApplication | null>(null);
-
-  const handleHireClick = (application: JobApplication) => {;
-    setSelectedApplication(application);
-    setHireModalOpen(true);
-  };
-  const handleHireConfirmed = () => {;
-    toast({;
-      title: 'Hiring process initiated',;
-      description: 'Offer has been sent to the talent.',;
-    });
-  };
-
-export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
@@ -207,7 +188,6 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   },
-  
   return (
     <>;
 
@@ -253,13 +233,11 @@ export function ApplicationsTable({
         </Table>;
       </div>;
 
-
       <HireConfirmationModal
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
-
 
   applications,
   processingId,
@@ -305,8 +283,6 @@ export function ApplicationsTable({
   },
   
 
-
-
   return (
     <>
       <div className="rounded-md border">
@@ -326,11 +302,14 @@ export function ApplicationsTable({
               <TableRow key={application.id}>
 =======
 
+<<<<<<< HEAD
             {applications.map((application) => (
               <TableRow key={application.id}>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <TableCell>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
@@ -432,8 +411,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
 =======
 
 }h-4 w-4"/>) ;
-}</AvatarPrimitive>) ;
-
+}</AvatarPrimitive>) 
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
@@ -568,22 +546,22 @@ export function ApplicationsTable({;
   32;
 }//for h - 8 w - 8 height= {
   32 ";
-}//for h - 8 w - 8 className="rounded - full object - cover" on_error= {
+}//for h - 8 w - 8 className="rounded - full object-cover" on_error= {
   () => setAvatarError (true);
 }priority= {
   false ";
 }h - 4 w - 4"/>);
 }</AvatarPrimitive>);
 }";
-return (<> <div className=" rounded - md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table - cell" >Status</TableHead> <TableHead className="hidden lg:table - cell" >Match Score</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+return (<> <div className=" rounded-md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
   application.id;
 }> <TableCell> </div> </div> </div> </TableCell> on_click={
   () => onViewScore (application);
 }> {
   application.match score ";
-}% </ClickableBadge>) : (<span className="text - muted - foreground text - sm" >Not scored</span>) ";
-}</TableCell> <TableCell className="text - right" > <div className="flex items - center justify - end gap - 2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr - 1" /> Hire </ClickableBadge> <ApplicationActions application= {
+}% </ClickableBadge>) : (<span className="text - muted - foreground text-sm" >Not scored</span>) ";
+}</TableCell> <TableCell className="text-right" > <div className="flex items - center justify - end gap-2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
   application;
 }processing_id= {
   processing_id;
@@ -591,8 +569,6 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 }onViewApplication= {
   onViewApplication;
 }onStatusChange= {
-
-
 
   onStatusChange;
 }/> </div> </TableCell> </TableRow>) );

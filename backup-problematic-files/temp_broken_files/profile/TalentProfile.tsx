@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
 =======
 import React from "react",;
@@ -7,6 +8,10 @@ import { Handshake, MessageSquare, Star } from "lucide-react",;
 import React from "react",;
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/TalentProfile.tsx
+=======
+import React from "react",;
+import { Handshake, MessageSquare, Star } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",;
 ;
 import { HireNowCTA } from "./HireNowCTA",;
@@ -50,8 +55,13 @@ export function TalentProfile({ ;
   // Create proper projects array for ProfileProjects component;
   const projectsArray = profile.key_projects?.map((proj, i) => ({;
     id:`project-${i}`,;
+<<<<<<< HEAD
     title:proj.title,;
     description:proj.description,;
+=======
+    title:proj.title,,
+  description:proj.description,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     date:new Date().toISOString() // Default date since we don't have this data;
   })) || [],;
   ;
@@ -136,10 +146,13 @@ export function TalentProfile({ ;
                       <MessageSquare className="mr-2 h-5 w-5" />;
                       Message;
                     </Button>;                  )}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/TalentProfile.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>;
               </div>;
             </div>;
@@ -147,5 +160,63 @@ export function TalentProfile({ ;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
 
+=======
+  ),;}
+ interface TalentProfileProps {;
+  profile: TalentProfileType;
+onRequestHire: () => void;
+onMessageTalent?: () => void ;
+}export function TalentProfile ({;
+  profile;
+onRequestHire;
+onMessageTalent ;
+}: TalentProfileProps) {;
+  const { ;
+  isAuthenticated ;
+ } = useAuth ();
+//Create proper availability object from talent profile const availability: Availability = {;
+  status: profile.availability type === 'full time' ? 'available' : profile.availability type === 'part time' ? 'limited' : 'unavailable';
+message: `$ {;
+  profile.professional title ;
+}with $ {;
+  profile.years experience ;
+}years of experience` 
+};
+//Create proper skills array for ProfileSkills component const skillsArray = profile.skills?.map (skill => ({;
+  name: skill;';
+level: 3 //Default level since we don't have this data ;
+}) ) || [];
+id: `project-$ {;
+  i ;
+}`;
+title: proj.title,
+  description: proj.description;';
+date: new Date () .toISOString () //Default date since we don't have this data ;
+}) ) || [];
+return (</div> </div> {;
+  /* Projects Section */ ;
+}<ProfileProjects projects= {;
+  projectsArray ;
+}/> Reviews & Ratings </h2> <ProfileRatings userId= {;
+  profile.id ;
+}averageRating= {;
+  profile.average rating ;
+}ratingCount= {;
+  profile.rating count ;
+}/> </div> Connect with {;
+  profile.full name ;
+}for your next project and get started right away. {;
+  profile.hourly rate && `Rate starts at $$ {;
+  profile.hourly rate ;
+}/hour.` ;
+}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
+}</div> </div> </div>) ;
+:temp_broken_files/profile/TalentProfile.tsx
+}</div> </div> </div>) ;"}'"
+}</div> </div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/TalentProfile.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -37,6 +38,13 @@ import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function RequestQuote() {
+=======
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { Footer } from "@/components/Footer",
+import { QuoteRequestForm } from "@/components/QuoteRequestForm",export default function RequestQuote() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <>
       <Header />
@@ -45,6 +53,7 @@ export default function RequestQuote() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -57,10 +66,15 @@ export default function RequestQuote() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -70,12 +84,15 @@ import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 
 export default function RequestQuote() {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -95,12 +112,15 @@ export default function RequestQuote() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
         <QuoteRequestForm />;
       </div>;
       <Footer />;
+<<<<<<< HEAD
     </>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +132,9 @@ export default function RequestQuote() {;
 =======
   );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    </>;  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -123,12 +146,13 @@ function RequestQuote() {
   return (
     <>;
       <Header />;
-      <div className="min - h-screen bg - zion - blue">;
+      <div className="min - h-screen bg - zion-blue">;
         <QuoteRequestForm />;
       </div>;
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -155,3 +179,6 @@ function RequestQuote() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

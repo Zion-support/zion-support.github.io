@@ -94,5 +94,10 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.overallStatus = "failed"
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      console.error("\n Build automation "failed": ")
+      console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

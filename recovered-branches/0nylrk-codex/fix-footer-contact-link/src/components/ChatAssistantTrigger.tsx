@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 
 <<<<<<< HEAD
@@ -16,6 +16,8 @@ export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button";
@@ -26,6 +28,7 @@ import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -73,49 +76,63 @@ export function ChatAssistantTrigger() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.error("Error in AI chat:", error);
+
+      console.error("Error in AI chat:", error),
       return Promise.resolve()
-
-import {useState} from "react";
-import {MessageSquare} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {ChatAssistant} from "@/components/ChatAssistant";
-=======
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
       console.error("Error in AI chat:", error),
       return Promise.resolve()
     }
   }
   return (
-<<<<<<< HEAD
     <>
       <Button
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",;
 import { MessageSquare } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { ChatAssistant } from "@/components/ChatAssistant",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  // Handle sending messages to the AI chat assistant;
+  const handleSendMessage = async (message: string): Promise<void> => {;
+    try {;
+      const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {;
+        method: "POST",;
+        headers: {;
+          "Content-Type": "application/json"};
+        body: JSON && JSON.stringify({ ;
+          messages: [{ role: "user", content: message }] ;
+        })});
+
+      if (!response && response.ok) {;
+        throw new Error("Failed to get response from AI assistant");
+      }
+
+      return Promise && Promise.resolve();
+    } catch (error) {;
+      console && console.error("Error in AI chat:", error);
+      return Promise && Promise.resolve();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
   return (
     <>;
+<<<<<<< HEAD
 
       <Button;
 <<<<<<< HEAD
@@ -180,6 +197,10 @@ import { ChatAssistant } from "@/components/ChatAssistant",;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      <Button
+        onClick={() => setIsOpen(true)}        onClick={() => setIsOpen(true)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -189,6 +210,7 @@ export /**
  */
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,3 +361,6 @@ export function ChatAssistantTrigger() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -79,12 +79,15 @@ function EducationFormFields() {
 =======
   }
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
@@ -94,7 +97,6 @@ function EducationFormFields() {
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
-
 
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
@@ -109,7 +111,7 @@ function EducationFormFields() {
           />;
 
           <FormField
-            control={form.control}
+            control={form && form.control}
             name='degree'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel>Degree</FormLabel>;
@@ -124,7 +126,6 @@ function EducationFormFields() {
             name="degree"
             render={({ field }: { field: any }) => (
               <FormItem>
-
 
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
@@ -157,7 +158,6 @@ function EducationFormFields() {
           render={({ field }: { field: any }) => (
             <FormItem>
 
-
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
@@ -172,8 +172,6 @@ function EducationFormFields() {
 =======
         />;
 
-
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <FormField
@@ -182,8 +180,11 @@ function EducationFormFields() {
             name="start_date"
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
@@ -220,6 +221,7 @@ function EducationFormFields() {
                 <FormMessage />;
               </FormItem>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -227,6 +229,11 @@ function EducationFormFields() {
           />
 
           <div className="space-y-4">
+=======
+            )}
+          />;
+          <div className='space-y-4'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <FormField
               control={form.control}
 <<<<<<< HEAD
@@ -236,6 +243,7 @@ function EducationFormFields() {
                   <FormControl>
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -251,6 +259,17 @@ function EducationFormFields() {
               )}
 <<<<<<< HEAD
 =======
+=======
+                    <Checkbox
+                      checked = {field && field.value,}
+                      onCheckedChange = {field && field.onChange,}
+                    />;
+                  </FormControl>;
+                  <div className='space-y-1 leading-none'>;
+                    <FormLabel>I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>;              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             />;
 
@@ -260,20 +279,26 @@ function EducationFormFields() {
                 control={form && form.control}
                 name='end_date'
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
             {!form.watch('is_current') && (;
               <FormField;
                 control={form.control}
                 name="end_date"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
 <<<<<<< HEAD
 =======
-
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
@@ -284,15 +309,98 @@ function EducationFormFields() {
                         value={field.value || ''} 
                       />
                     </FormControl>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <FormMessage />
                   </FormItem>
                 )}
               />;
             )}
+<<<<<<< HEAD
+=======
+
+          </div>;
+        </div>;
+
+        <FormField
+          control={form.control}
+          name='location'
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel>Location (Optional)</FormLabel>;
+            </FormItem>)}
+        />;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+          <FormField;
+            control={form.control}
+            name='start_date';
+            render={({ field }: { field: any }) => (
+              <FormItem>;
+                <FormLabel > Start Date</FormLabel>;
+                <FormControl>;
+                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+          <div className='space - y-4'>;
+            <FormField;
+              control={form.control}
+              name='is_current';
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+                    <Checkbox;
+                      checked = {field.value, }
+                      onCheckedChange = {field.on_change, }
+                    />;
+                  </FormControl>;
+                  <div className='space - y-1 leading - none'>;
+                    <FormLabel > I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>)}
+            />;
+            {!form.watch ('is_current') && (
+              <FormField;
+                control={form.control}
+                name='end_date';
+                render={({ field }: { field: any }) => (
+                  <FormItem>;
+                    <FormLabel > End Date</FormLabel>;
+                    <FormControl>;
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </div>;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
+=======
+
+        />;
+
+        <FormField
+          control={form && form.control}          name='description'
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder='Notable achievements, courses, activities...'
+                  className='min-h-[100px]'
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name='description';
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel > Description (Optional)</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder='Notable achievements, courses, activities...';
+                  className='min - h-[100px]';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -350,6 +458,7 @@ function EducationFormFields() {
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -357,6 +466,8 @@ function EducationFormFields() {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>

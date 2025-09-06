@@ -58,6 +58,7 @@ interface FeatureHighlightsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = [
     {
@@ -83,6 +84,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const highlightsData = [
 
     {
@@ -123,12 +126,15 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
   ],
 =======
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -141,13 +147,15 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 <<<<<<< HEAD
 =======
 
-
 ;
 '"`;
 );
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
@@ -230,6 +238,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
@@ -420,3 +429,6 @@ export function FeatureHighlights() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

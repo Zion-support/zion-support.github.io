@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,6 +14,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
@@ -22,8 +24,6 @@ import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
 <<<<<<< HEAD
 =======
-
-
 
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -38,6 +38,7 @@ import {toast} from '@/hooks/use-toast';
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+<<<<<<< HEAD
   size?: "default" | "sm" | "lg" | "icon";
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -68,6 +69,9 @@ export function AIEnhancementButton(): any ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   options;
+=======
+  size?: "default" | "sm" | "lg" | "icon";  options;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   onEnhanced;
 
   buttonText = "Enhance with AI";
@@ -79,6 +83,7 @@ export function AIEnhancementButton(): any ({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,6 +117,8 @@ import { toast } from '@/hooks/use-toast',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -125,15 +132,6 @@ interface AIEnhancementButtonProps {
 =======
   contentLength?: number
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AIEnhancementButton({;
   options;
   onEnhanced;
@@ -165,6 +163,7 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -275,19 +274,22 @@ export function AIEnhancementButton({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       return;
+=======
+        return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
-<<<<<<< HEAD
 
   },
 <<<<<<< HEAD
 =======
 
-
+  
 
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -301,13 +303,13 @@ export function AIEnhancementButton({;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
       setShowActions(false);
       setGeneratedContent(null);
-<<<<<<< HEAD
-=======
       }),;
       return;
     }
@@ -317,23 +319,15 @@ export function AIEnhancementButton({;
       setGeneratedContent(enhancedContent),;
       setShowActions(true);
     }
-  },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
-  const handleAccept = () => {
+  },  const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -346,13 +340,14 @@ export function AIEnhancementButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
+=======
+    return (  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
-<<<<<<< HEAD
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleCancel = () => {
@@ -365,6 +360,7 @@ export function AIEnhancementButton({;
 
   const handleCancel = () => {
     setShowActions(false);
+<<<<<<< HEAD
     setGeneratedContent(null)
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -387,6 +383,9 @@ export function AIEnhancementButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (showActions) {
+=======
+    setGeneratedContent(null)  if (showActions) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="flex gap-2 items-center">
         <Button
@@ -430,12 +429,12 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
-<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
   },;
+<<<<<<< HEAD
 
 =======
   },;
@@ -528,18 +527,21 @@ export function AIEnhancementButton({;
     }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleAccept = () => {;
     if (generatedContent) {;
       onEnhanced(generatedContent);
       setShowActions(false);
       setGeneratedContent(null);
       toast({;
-        title: "Content applied",;
-        description: "AI-enhanced content has been applied."});
+        title: "Content applied",,
+  description: "AI-enhanced content has been applied."});
     }
   };
 
   const handleRegenerate = async () => {;
+<<<<<<< HEAD
     await handleEnhance();
   };
 
@@ -999,19 +1001,43 @@ return
 ;
 
 }
+=======
+    await handleEnhance()
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
-<Button type="button" variant="ghost" size="sm" onClick= {
-  handleAccept 
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) 
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) 
-}return (<Button) : (<Sparkles className=" h-4 w-4" />) 
-}</Button>) 
-}
+
+  const handleCancel = () => {;
+    setShowActions(false);
+    setGeneratedContent(null)
+};
+
+  if (showActions) {;
+    <Button;
+      type="button";
+      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-4 w-4 animate-spin" />
+      ) : (
+        <Sparkles className="h-4 w-4" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      variant={variant}
+      size={size}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,19 +14,17 @@ import { cn } from &quot;@/lib/utils&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react"
 
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Table = React.forwardRef<
   HTMLTableElement
   React.HTMLAttributes<HTMLTableElement>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +48,9 @@ const Table = React.forwardRef<
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from &quot;react & quot;
+=======
+>(({ className, ...props }, ref) => (import * as React from &quot;react & quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 import { cn } from &quot;@/lib / utils & quot;
 ;
@@ -58,15 +60,13 @@ const Table = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <div className=&quot;relative w - full overflow - auto & quot;>;
     <table;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ref={ref}
       className={cn (&quot;w - full caption - bottom text - sm & quot;, class_name)}
       {...props}
-<<<<<<< HEAD
-
 
 Table.displayName = "Table"
 
+<<<<<<< HEAD
 
 
 =======
@@ -103,17 +103,16 @@ TableHeader.displayName = "TableHeader"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
+<<<<<<< HEAD
     {...props}
 />
 ))
@@ -122,6 +121,9 @@ const TableBody = React.forwardRef<
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 />;
+=======
+    {...props}/>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   </div>));
 Table.display_name = &quot;Table & quot;
 ;
@@ -137,27 +139,15 @@ const TableBody = React.forward_ref<;
   React.HTMLAttributes < HTMLTableSectionElement>;
 >(({ class_name, ...props }, ref) => (
   <tbody;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;[&_tr:last - child]:border - 0&quot;, class_name)}
     {...props}
-<<<<<<< HEAD
-
 
 TableBody.displayName = "TableBody"
 
-
-
-=======
-TableBody.displayName = &quot;TableBody&quot;
-TableBody.displayName = "TableBody"
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const TableFooter = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -165,11 +155,9 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
       "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
+<<<<<<< HEAD
 
 
 =======
@@ -206,12 +194,15 @@ TableFooter.displayName = "TableFooter"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const TableRow = React.forwardRef<
   HTMLTableRowElement
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => (
   <tr
     ref={ref}
+<<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
 
@@ -257,12 +248,16 @@ TableRow.displayName = "TableRow"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const TableHead = React.forwardRef<
+=======
+    className={cn(const TableHead = React.forwardRef<
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <th
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -306,11 +301,16 @@ TableHead.displayName = "TableHead"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+      "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const TableCell = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <td
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -335,6 +335,9 @@ TableCell.displayName = "TableCell"
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 />));
+=======
+    ref={ref}/>));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 TableBody.display_name = &quot;TableBody & quot;
 ;
 const TableFooter = React.forward_ref<;
@@ -381,15 +384,13 @@ const TableCell = React.forward_ref<;
   React.HTMLAttributes < HTMLTableCellElement>;
 >(({ class_name, ...props }, ref) => (
   <td;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
-<<<<<<< HEAD
-
 
 TableCell.displayName = "TableCell"
 
+<<<<<<< HEAD
 
 
 =======
@@ -401,29 +402,26 @@ TableCell.displayName = "TableCell"
     ref={ref}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
   <caption
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    ref={ref}
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
-<<<<<<< HEAD
 />
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 />));
 TableCell.display_name = &quot;TableCell & quot;
 ;
@@ -432,20 +430,15 @@ const TableCaption = React.forward_ref<;
   React.HTMLAttributes < HTMLTableCaptionElement>;
 >(({ class_name, ...props }, ref) => (
   <caption;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
     {...props}
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-/>));
 TableCaption.display_name = &quot;TableCaption & quot;
 ;
 
 TableCaption.displayName = "TableCaption"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -646,3 +639,5 @@ React.HTMLAttributes<HTMLTableCaptionElement> > ( ({
   TableCaption}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -27,6 +27,7 @@ function fileToBase64(file: File): Promise<string> {
   })
 }
 export default function BookBuilder() {
+<<<<<<< HEAD
 
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
@@ -34,6 +35,8 @@ export default function BookBuilder() {
   const coverPreview = useMemo_(() => {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -42,8 +45,11 @@ export default function BookBuilder() {
           <div className="text-lg opacity-80">{project.meta.subtitle}</div>
           <div className="pt-6 text-sm opacity-70">By {project.meta.author}</div>
           {project.meta.isbn ? (
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
             </div>
@@ -121,14 +127,20 @@ export default function BookBuilder() {
           <button className="btn btn-sm btn-outline" onClick={handleGenerateWithAI} disabled={busy}>
             <Wand2 className="w-4 h-4 mr-1" /> AI Assist
           </button>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
           </button>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>
       </div>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -136,6 +148,7 @@ export default function BookBuilder() {
           <h2 className="font-semibold flex items-center gap-2">
             <BookOpen className="w-4 h-4" /> Cover & Branding
           </h2>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.title}
@@ -153,13 +166,31 @@ export default function BookBuilder() {
             </label>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+                placeholder=&quot;9781234567897&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
             </label>
           </div>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </h2>
           <div className="space-y-3">
             <label className="block">
@@ -176,8 +207,11 @@ export default function BookBuilder() {
             </label>
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
           </div>
@@ -187,14 +221,24 @@ export default function BookBuilder() {
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
+              <div className=&quot;font-medium&quot;>{ch.title}</div>
+              <textarea,
+className=&quot;w-full min-h-[160px] border rounded p-2&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
                   chapters[idx] = { ...chapters[idx], content: e.target.value },
                   setProject({ ...project, chapters })                }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />
             </div>
           ))}
@@ -204,8 +248,11 @@ export default function BookBuilder() {
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
@@ -213,13 +260,19 @@ export default function BookBuilder() {
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
               />
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />
               <div />
             </div>
@@ -228,3 +281,6 @@ export default function BookBuilder() {
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

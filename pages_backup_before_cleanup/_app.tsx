@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
@@ -18,6 +21,7 @@ interface _appProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -55,3 +59,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

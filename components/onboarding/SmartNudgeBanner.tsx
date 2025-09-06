@@ -43,12 +43,14 @@ export default function SmartNudgeBanner({
   user_id?: string | null;
   message: string;
 
-
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
     try {
@@ -133,13 +135,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
   );
   );
 
-
   );
 
-
-
 }
-
 
 }
 ;
@@ -205,7 +203,7 @@ if (return null) {
       <div className='text - sm'>{message}</div>;
     </div>);        <X size={16} />;
       </button>;
-      <div className="text - sm">;
+      <div className="text-sm">;
         {message}
       </div>;
     </div>);

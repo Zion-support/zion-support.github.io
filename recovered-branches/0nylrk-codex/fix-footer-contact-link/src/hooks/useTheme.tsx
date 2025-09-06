@@ -35,6 +35,7 @@ export const useTheme = () => {
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -85,10 +86,11 @@ export const useTheme = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     theme: "dark",
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
   };
@@ -105,6 +107,7 @@ export const use_theme = () =>: any {
 
     theme: "dark",
 
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,3 +118,6 @@ export const use_theme = () =>: any {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

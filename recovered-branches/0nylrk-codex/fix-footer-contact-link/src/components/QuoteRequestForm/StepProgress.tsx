@@ -41,7 +41,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
 
-
   return (
     <div className="relative">
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
@@ -88,8 +87,8 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
 
     if (stepOrder < currentStepOrder) return "complete";
     if (stepOrder === currentStepOrder) return "current",;
-    return "upcoming";
-  };
+    return "upcoming"
+};
 
   return (
     <div className="relative">;
@@ -112,7 +111,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors"
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
-
 
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 

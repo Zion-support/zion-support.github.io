@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
@@ -13,6 +14,8 @@ export const PROJECTS: Project[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
     job: {
@@ -27,25 +30,11 @@ export const PROJECTS: Project[] = [
 ];
     talent_profile: {
       full_name: "Alexandra Chen";
-<<<<<<< HEAD
-<<<<<<< HEAD
       professional_title: "Senior AI Engineer";
-=======
-
-import { Project } from "@/types/projects",
-export const PROJECTS: Project[] = [
-=======
-import { Project } from '@/types/projects';
-=======
-import { Project } from "@/types/projects",
-export const PROJECTS: Project[] = [
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
       professional_title: "Senior AI Engineer"
     }
   }
+<<<<<<< HEAD
 ];
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -127,27 +116,13 @@ export const PROJECTS: Project[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+];    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ];
 
-
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
     }
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    }
-  }
-];
-      professional_title: "Senior AI Engineer";
-    }
-  }
-];
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

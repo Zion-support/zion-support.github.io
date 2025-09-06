@@ -41,15 +41,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 =======
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -91,7 +92,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
-
 
     writeGrant(existing);
     return res && res.status(201).json({ update })
@@ -180,6 +180,9 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

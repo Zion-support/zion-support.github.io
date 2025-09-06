@@ -61,7 +61,6 @@ export interface HireRequestData {
   }
 }
 
-
 export function useHireRequest() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -123,8 +122,8 @@ if (throw error) {
       set_error (error_message);
 ;
       toast ({
-        title: "Error";
-        description: error_message,
+        title: "Error",
+  description: error_message,
         variant: "destructive"});
 ;
       return { success: false, error: error_message }
@@ -200,8 +199,8 @@ export function useHireRequest() {;
       if (error) throw error,;
       // Show success message;
       toast({;
-        title: "Request Submitted",;
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
+        title: "Request Submitted",,
+  description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
       return { success: true, requestId: response?.request_id }
     } catch (error) {;
       console.error("Error submitting hire request:", error),;
@@ -210,8 +209,8 @@ export function useHireRequest() {;
         : "There was a problem submitting your request. Please try again.",;
       setError(errorMessage),;
       toast({;
-        title: "Error",;
-        description: errorMessage,;
+        title: "Error",,
+  description: errorMessage,;
         variant: "destructive"}),;
       return { success: false, error: errorMessage }
     } finally {;

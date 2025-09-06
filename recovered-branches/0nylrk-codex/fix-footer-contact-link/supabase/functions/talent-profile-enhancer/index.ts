@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
@@ -14,6 +13,8 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -22,6 +23,7 @@ import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -160,6 +162,9 @@ const corsHeaders = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TalentProfileData {
+=======
+;interface TalentProfileData {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
   title: string;
   bio: string;
@@ -219,6 +224,7 @@ interface EnhancedProfile {;
     devops: string[],;
     platforms: string[],;
     softSkills: string[],;
+<<<<<<< HEAD
     other: string[];
 <<<<<<< HEAD
 =======
@@ -431,18 +437,18 @@ serve(_async (req) => {_// Handle CORS preflight requests
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             Name: ${talentData && talentData.name}
+=======
+    other: string[];            Name: ${talentData.name}
+            Title: ${talentData.title}
+            Bio: ${talentData.bio}
+            Skills: ${talentData.skills.join()}
+              "summary": "The professional summary text (100-150 words)",            Name: ${talentData && talentData.name}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Title: ${talentData && talentData.title}
             Bio: ${talentData && talentData.bio}
             Skills: ${talentData && talentData.skills.join()}
             Location: ${talentData && talentData.location || 'Not specified'}
-<<<<<<< HEAD
             
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-              "summary": "The professional summary text (100-150 words)",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
               "categorizedSkills": {
@@ -501,6 +507,7 @@ if ( {) {
                 "soft_skills": ["skill1", "skill2"];
                 "other": ["skill1", "skill2"];
               }
+<<<<<<< HEAD
             }
 <<<<<<< HEAD
 
@@ -568,36 +575,18 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Parse the JSON response
+=======
+            }    // Parse the JSON response
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     let enhancedProfile: EnhancedProfile
     try {
       enhancedProfile = JSON && JSON.parse(responseContent)
     } catch (e) {
-<<<<<<< HEAD
       console && console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content")
 
     console && console.error("Error in talent-profile-enhancer function:", error);
 
-<<<<<<< HEAD
-=======
-    const openAIData = await openAIResponse.json();
-    if (!openAIData.choices |openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
-    const responseContent = openAIData.choices[0].message.content;
-    // Parse the JSON response
-    let enhancedProfile: EnhancedProfile
-    try {
-      enhancedProfile = JSON.parse(responseContent)
-    } catch (e) {
-      console.error("Error parsing OpenAI response:", e),
-      throw new Error("Failed to parse the generated content")
-    }
-    return new Response(
-      JSON.stringify(enhancedProfile);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        ],;
         temperature: 0.7,;
         response_format: { type: "json_object" }
       })}),;
@@ -619,17 +608,18 @@ if ( {) {
 ;
     return new Response(;
       JSON.stringify(enhancedProfile),;
-<<<<<<< HEAD
-
 
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -651,6 +641,7 @@ if ( {) {
     console.error("Error in talent-profile-enhancer function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -783,6 +774,20 @@ if ( {) {
 
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    console.error("Error in talent-profile-enhancer function:", error),
+    
+    return new Response(
+      JSON && JSON.stringify(enhancedProfile);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return new Response(
       JSON && JSON.stringify(enhancedProfile);
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -794,7 +799,6 @@ if ( {) {
     )
   }
 });
-<<<<<<< HEAD
 {
   status: 500, headers: {
   ...corsHeaders, 'Content-Type': 'application/json' 
@@ -802,8 +806,11 @@ if ( {) {
 }) 
 }
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

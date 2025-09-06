@@ -10,5 +10,10 @@ const { execSync } = require('child_process')
         {"pattern": /,+/g, "replacement"}
         { "pattern": /{\s*,\s*/g, "replacement"}
         {"pattern": /\[\s*,\s*/g, "replacement"}]
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log('\n Errors "encountered")
+      this.log('\n Errors "encountered")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

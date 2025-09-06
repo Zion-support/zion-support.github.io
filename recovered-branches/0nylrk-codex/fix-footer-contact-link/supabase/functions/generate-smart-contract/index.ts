@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -7,56 +8,32 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
-
-
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -137,6 +114,8 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 serve(async (req) => {;
@@ -167,6 +146,7 @@ serve(async (req) => {;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -183,11 +163,18 @@ serve(async (req) => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Create the smart contract prompt for OpenAI
     let prompt = `
+    Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:    // Create the smart contract prompt for OpenAI
+    let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -204,8 +191,6 @@ serve(async (req) => {;
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
       Please also include the following additional clauses as on-chain functionality where possible:
-<<<<<<< HEAD
-<<<<<<< HEAD
       ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
       ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
       ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
@@ -216,14 +201,9 @@ serve(async (req) => {;
     
 =======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
     
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,35 +219,16 @@ serve(async (req) => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
-    // Call OpenAI API
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
-      body: JSON && JSON.stringify({
-<<<<<<< HEAD
-
-=======
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
-      body: JSON.stringify({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        model: 'gpt-4o';
+    // Call OpenAI API        model: 'gpt-4o';
         messages: [
           {
             role: 'system'
+<<<<<<< HEAD
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
 <<<<<<< HEAD
 =======
@@ -460,20 +421,13 @@ if ( {) {
     )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+=======
+            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )
   }
 });
-<<<<<<< HEAD
 
-
-    console.error ('Error generating smart contract:', error);
-    return new Response (
-      JSON.stringify ({
-        success: false,
-        error: error.message || 'Failed to generate smart contract';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      });
       {
         status: 500
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -486,6 +440,7 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -638,3 +593,5 @@ if (additionalClauses && additionalClauses.length > 0) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

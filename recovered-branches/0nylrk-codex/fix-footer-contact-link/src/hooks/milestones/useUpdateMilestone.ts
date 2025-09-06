@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -50,10 +50,13 @@ export const useUpdateMilestone = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -94,11 +97,13 @@ export const useUpdateMilestone = () => {
 =======
   
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
-<<<<<<< HEAD
       setIsSubmitting(true),
 <<<<<<< HEAD
 
@@ -106,6 +111,7 @@ export const useUpdateMilestone = () => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -115,10 +121,13 @@ export const useUpdateMilestone = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
+<<<<<<< HEAD
         .eq('id', milestoneId)
 <<<<<<< HEAD
 
@@ -197,6 +206,11 @@ export const useUpdateMilestone = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return false
+=======
+        .eq('id', milestoneId)      const { error } = await supabase
+        .from('project_milestones')
+        .update({ status: newStatus })      return false
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } finally {
       setIsSubmitting(false)
     }
@@ -266,11 +280,10 @@ if (throw error) {
       toast.error ("Failed to update milestone: " + err.message),
       return false;
     } finally {
-<<<<<<< HEAD
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
       toast.success(`Milestone status changed to ${newStatus}`);
@@ -300,39 +313,14 @@ if (throw error) {
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false,
     
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    try {
-      setIsSubmitting(true)
-      const { error } = await supabase
-        .from('project_milestones')
-        .update(data)
-<<<<<<< HEAD
-=======
-        .eq('id', milestoneId);
-      if (error) throw error;
-      // Create activity record
-      await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated');
-      toast.success("Milestone updated successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error updating milestone:", err);
-      toast.error("Failed to update milestone: " + err.message)
-      return false
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     updateMilestoneStatus;
     update_milestone;
@@ -411,23 +399,16 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
         .eq('id', milestoneId),
 
       
-<<<<<<< HEAD
-=======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      toast && toast.success("Milestone updated successfully");
       
       return true
     } catch (err: any) {
       console && console.error("Error updating milestone:", err);
       toast && toast.error("Failed to update milestone: " + err && err.message),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return false
 =======
@@ -618,3 +599,6 @@ isSubmitting
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      return false
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

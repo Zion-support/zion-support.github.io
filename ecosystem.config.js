@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD;
 =======;
 =======
@@ -19,96 +20,17 @@ export default {
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-module.exports = {;
-=======
-module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  apps:[;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-module.exports = {apps:[;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    {;
-
-      name:'error-fixer',;
-      script:'automation/lint-error-fixer && fixer.cjs',;
-<<<<<<< HEAD
-=======
-module.exports = {;
-module && module.exports = {;
-  apps:[;
-
-
-
-    {;
-
-module.exports = {apps:[;
-    {;
-      name:'error-fixer',;
-      script:'automation/lint-error-fixer && fixer.cjs',;
-module.exports = {;
-  apps:[;
-    {;
-      name:'error-fixer',;
-      script:'automation/lint-error-fixer.cjs',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      args:'continuous',;
-      instances:1,;
-      autorestart:true,;
-      watch:false,;
-      max_memory_restart:'1G',;
-      env:{;
-        NODE_ENV:'production';
-      },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      error_file:'./logs/error-fixer-error && error.log',;
+module.exports = {;      error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
-=======
-      error_file:'./logs/error-fixer-error.log',;
-      out_file:'./logs/error-fixer-out.log',;
-      log_file:'./logs/error-fixer-combined.log',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      error_file:'./logs/error-fixer-error && error.log',;
-      out_file:'./logs/error-fixer-out && out.log',;
-      log_file:'./logs/error-fixer-combined && combined.log',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'intelligent-orchestrator',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
-=======
-      script:'automation/intelligent-orchestrator.cjs',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      script:'automation/intelligent-orchestrator && orchestrator.cjs',;      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -117,77 +39,26 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-<<<<<<< HEAD
-<<<<<<< HEAD
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
-      log_file:'./logs/orchestrator-combined && combined.log',;
-=======
-      error_file:'./logs/orchestrator-error.log',;
-      out_file:'./logs/orchestrator-out.log',;
-      log_file:'./logs/orchestrator-combined.log',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      error_file:'./logs/orchestrator-error && error.log',;
+      log_file:'./logs/orchestrator-combined && combined.log',;      error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'automation-dashboard',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      script:'automation/automation-dashboard && dashboard.cjs',;
-=======
-      script:'automation/automation-dashboard.cjs',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      script:'automation/automation-dashboard && dashboard.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      script:'automation/automation-dashboard && dashboard.cjs',;      script:'automation/automation-dashboard && dashboard.cjs',;
       args:'start',;
       instances:1,;
       autorestart:true,;
       watch:false,;
       max_memory_restart:'1G',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-      env:{;
-        NODE_ENV:'production';
-        PORT:3001;
-
-      },;
-      error_file:'./logs/dashboard-error && error.log',;
-      out_file:'./logs/dashboard-out && out.log',;
-      log_file:'./logs/dashboard-combined && combined.log',;
-<<<<<<< HEAD
-=======
-      env:{;
-        NODE_ENV:'production',;
-        PORT:3001;
-      },;
-      error_file:'./logs/dashboard-error.log',;
-      out_file:'./logs/dashboard-out.log',;
-      log_file:'./logs/dashboard-combined.log',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'code-quality-monitor',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      script:'automation/code-quality-monitor && monitor.cjs',;
-=======
-      script:'automation/code-quality-monitor.cjs',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      script:'automation/code-quality-monitor && monitor.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      script:'automation/code-quality-monitor && monitor.cjs',;      script:'automation/code-quality-monitor && monitor.cjs',;
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -195,34 +66,16 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-<<<<<<< HEAD
-<<<<<<< HEAD
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
-      log_file:'./logs/code-quality-combined && combined.log',;
-=======
-      error_file:'./logs/code-quality-error.log',;
-      out_file:'./logs/code-quality-out.log',;
-      log_file:'./logs/code-quality-combined.log',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      error_file:'./logs/code-quality-error && error.log',;
+      log_file:'./logs/code-quality-combined && combined.log',;      error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'performance-optimizer',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      script:'automation/performance-optimizer && optimizer.cjs',;
-=======
-      script:'automation/performance-optimizer.cjs',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      script:'automation/performance-optimizer && optimizer.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      script:'automation/performance-optimizer && optimizer.cjs',;      script:'automation/performance-optimizer && optimizer.cjs',;
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -230,21 +83,6 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      error_file:'./logs/performance-error && error.log',;
-      out_file:'./logs/performance-out && out.log',;
-      log_file:'./logs/performance-combined && combined.log',;
-
-<<<<<<< HEAD
-=======
-      error_file:'./logs/performance-error.log',;
-      out_file:'./logs/performance-out.log',;
-      log_file:'./logs/performance-combined.log',;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 module.exports = {;
   apps:[;
 module.exports = {apps:[;
@@ -320,6 +158,7 @@ module.exports = {apps:[;
       }
       error_file:'./logs/performance-error.log';
       out_file:'./logs/performance-out.log';
+<<<<<<< HEAD
       log_file:'./logs/performance-combined.log';
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -709,6 +548,13 @@ export default {
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      log_file:'./logs/performance-combined.log';export default {
+  apps: [;
+    {
+
+      name: 'bolt-zion-app',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
@@ -716,6 +562,7 @@ export default {
         NODE_ENV: 'production',
         PORT: 3001
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       log_file: 'logs/pm2/preview.log',
@@ -730,6 +577,8 @@ export default {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       error_file: './logs/dashboard-error.log',
       out_file: './logs/dashboard-out.log',
       log_file: './logs/dashboard-combined.log',
@@ -738,6 +587,7 @@ export default {
     {
       name: 'code-quality-monitor',
       script: 'automation/code-quality-monitor.cjs',
+<<<<<<< HEAD
       instances: 1,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -769,10 +619,14 @@ export default {
       cron_restart: '0 */6 * * *',
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      instances: 1,      cron_restart: '0 */6 * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         NODE_ENV: 'production'
 <<<<<<< HEAD
@@ -815,14 +669,24 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       cron_restart: '*/5 * * * *',
+=======
+        NODE_ENV: 'production'    },
+    {
+      name: 'healthcheck',
+      script: 'node',
+      args: 'scripts/pm2/healthcheck.js',      cron_restart: '*/5 * * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '128M',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         NODE_ENV: 'production'
       },
       log_file: 'logs/pm2/health.log',
@@ -831,6 +695,7 @@ export default {
     },
     {
       name: 'code-quality-monitor',
+<<<<<<< HEAD
       script: 'scripts/pm2/code-quality-monitor.js',
 <<<<<<< HEAD
 =======
@@ -849,11 +714,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/code-quality-monitor.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'code-quality-monitor',
 =======
@@ -871,12 +740,19 @@ export default {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        PM2_PROCESS_NAME: 'code-quality-monitor',        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      cron_restart: '0 */6 * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
     },
     {
       name: 'auto-commit-fixes',
+<<<<<<< HEAD
       script: 'scripts/pm2/auto-commit-fixes.js',
 <<<<<<< HEAD
 =======
@@ -893,11 +769,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/auto-commit-fixes.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'auto-commit-fixes',
 =======
@@ -915,12 +795,19 @@ export default {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        PM2_PROCESS_NAME: 'auto-commit-fixes',        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+      },
+      cron_restart: '0 */2 * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/auto-commit-fixes.log',
       error_file: 'logs/pm2/auto-commit-fixes-error.log',
       out_file: 'logs/pm2/auto-commit-fixes-out.log',
     },
     {
       name: 'dependency-monitor',
+<<<<<<< HEAD
       script: 'scripts/pm2/dependency-monitor.js',
 <<<<<<< HEAD
 =======
@@ -937,11 +824,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/dependency-monitor.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'dependency-monitor',
 =======
@@ -959,12 +850,19 @@ export default {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        PM2_PROCESS_NAME: 'dependency-monitor',        AUTO_UPDATE_DEV: 'true',
+        SECURITY_ALERTS: 'true',
+      },
+      cron_restart: '0 0 * * 0',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/dependency-monitor.log',
       error_file: 'logs/pm2/dependency-monitor-error.log',
       out_file: 'logs/pm2/dependency-monitor-out.log',
     },
     {
       name: 'performance-monitor',
+<<<<<<< HEAD
       script: 'scripts/pm2/performance-monitor.js',
 <<<<<<< HEAD
 =======
@@ -981,11 +879,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/performance-monitor.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'performance-monitor',
 =======
@@ -1003,12 +905,19 @@ export default {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        PM2_PROCESS_NAME: 'performance-monitor',        PERFORMANCE_THRESHOLD: '3000',
+        BUNDLE_SIZE_LIMIT: '2MB',
+      },
+      cron_restart: '0 */8 * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
       out_file: 'logs/pm2/performance-monitor-out.log',
     },
     {
       name: 'git-workflow',
+<<<<<<< HEAD
       script: 'scripts/pm2/git-workflow-automator.js',
 <<<<<<< HEAD
 =======
@@ -1025,11 +934,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/git-workflow-automator.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'git-workflow',
 =======
@@ -1040,21 +953,28 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         AUTO_BRANCH_CLEANUP: 'true',
+=======
+        PM2_PROCESS_NAME: 'git-workflow',        AUTO_BRANCH_CLEANUP: 'true',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         AUTO_MERGE_SAFE: 'true',
         CONFLICT_RESOLUTION: 'true',
         BRANCH_STRATEGY: 'gitflow',
       },
       cron_restart: '0 */6 * * *',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
       out_file: 'logs/pm2/git-workflow-out.log',
     },
     {
       name: 'error-detection',
+<<<<<<< HEAD
       script: 'scripts/pm2/error-detection-service.js',
 <<<<<<< HEAD
 =======
@@ -1071,11 +991,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/error-detection-service.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'error-detection',
 =======
@@ -1093,12 +1017,19 @@ export default {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        PM2_PROCESS_NAME: 'error-detection',        AUTO_FIX_ENABLED: 'true',
+        MONITOR_FREQUENCY: '*/5 * * * *',
+      },
+      cron_restart: '*/5 * * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/error-detection.log',
       error_file: 'logs/pm2/error-detection-error.log',
       out_file: 'logs/pm2/error-detection-out.log',
     },
     {
       name: 'syntax-fixer',
+<<<<<<< HEAD
       script: 'scripts/pm2/syntax-error-fixer.js',
 <<<<<<< HEAD
 =======
@@ -1115,11 +1046,15 @@ export default {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       instances: 1,
+=======
+      script: 'scripts/pm2/syntax-error-fixer.js',      instances: 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
 <<<<<<< HEAD
         PM2_PROCESS_NAME: 'syntax-fixer',
 =======
@@ -1137,11 +1072,18 @@ export default {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        PM2_PROCESS_NAME: 'syntax-fixer',        AUTO_FIX_ENABLED: 'true',
+        MONITOR_FREQUENCY: '*/10 * * * *',
+      },
+      cron_restart: '*/10 * * * *',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       log_file: 'logs/pm2/syntax-fixer.log',
       error_file: 'logs/pm2/syntax-fixer-error.log',
       out_file: 'logs/pm2/syntax-fixer-out.log',
     }
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1158,6 +1100,10 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+  apps: [{
+    name: "ziontechgroup-site",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       log_file: 'logs / pm2 / syntax - fixer.log',
       error_file: 'logs / pm2 / syntax - fixer - error.log',
@@ -1166,12 +1112,14 @@ module.exports = {
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
 
     },
@@ -1183,6 +1131,7 @@ module && module.exports = {
 
     time: true
 
+<<<<<<< HEAD
 
 
 
@@ -1212,13 +1161,11 @@ module && module.exports = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
-}
-
 =======
-
->>>>>>> origin/automation-improvements-final
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+}
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 <<<<<<< HEAD
@@ -1229,36 +1176,13 @@ module && module.exports = {
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       },
       error_file: './logs/code-quality-error.log',
       out_file: './logs/code-quality-out.log',
       log_file: './logs/code-quality-combined.log',
       time: true
-<<<<<<< HEAD
-=======
-    }
-  ]
-}
-export default {
-  apps: [
-    {
-      }
-      error_file: './logs/performance-error.log'
-      out_file: './logs/performance-out.log'
-      log_file: './logs/performance-combined.log'
-      time: true
-    }
-  ]
-},
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-}
-origin/main
-origin/automation-improvements-final
-},
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default {
   apps: [
     {
@@ -1436,13 +1360,7 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log'
     }
   ]
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-module.exports = {
+=======module.exports = {
   apps: [{
     name: "ziontechgroup-site"
     script: "npm"
@@ -1466,7 +1384,7 @@ module.exports = {
 };
 }
 }
-  }];
+  }]
 };
 ;
 ;
@@ -1553,12 +1471,6 @@ module.exports = {;
     }
   ];
 },;
-<<<<<<< HEAD
-
-
-
-
-
 
 }
 
@@ -1581,7 +1493,6 @@ export default {
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log',
->>>>>>> main
     },
     {
       name: 'performance-optimizer',
@@ -1593,6 +1504,7 @@ export default {
       env: {
         NODE_ENV: 'production'
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1773,6 +1685,9 @@ module && module.exports = {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    name: "ziontechgroup - site",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     script: "npm",
     args: "start",
     instances: 1,
@@ -1780,9 +1695,12 @@ module && module.exports = {
     env: {
       NODE_ENV: "production",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       PORT: 3000
     },
     env_production: {
@@ -1801,6 +1719,7 @@ module && module.exports = {
     log_file: "./logs/combined.log",
     time: true
   }]
+<<<<<<< HEAD
 };
 =======
       PORT: 3000;
@@ -1816,6 +1735,9 @@ module && module.exports = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     node_args: "--max - old - space - size = 1024",
+=======
+};    node_args: "--max - old - space - size = 1024",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
     log_file: "./logs / combined.log",
@@ -1823,6 +1745,7 @@ module && module.exports = {
   }];
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1879,3 +1802,6 @@ module && module.exports = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

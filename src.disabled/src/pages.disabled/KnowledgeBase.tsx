@@ -13,6 +13,7 @@ const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ className }) => {
       <h1>KnowledgeBase</h1>
       <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD:backup-problematic-files/pages_backup_conflicts/docs.tsx
 <<<<<<< HEAD:backup-problematic-files/pages_backup_conflicts/docs.tsx
@@ -22,6 +23,9 @@ const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ className }) => {
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_conflicts/docs.tsx
 }
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default KnowledgeBase;

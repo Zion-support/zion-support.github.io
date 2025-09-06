@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { createClient, SupabaseClient } from '@supabase/supabase-js',;
 export type ZionSupabase = SupabaseClient | undefined,;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',;
@@ -13,13 +16,10 @@ export function getSupabaseClient(): ZionSupabase {try {;
     if (typeof window !== 'undefined') {;
       if (!browserClient) {;
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
       return browser_client;
     }
+<<<<<<< HEAD
 
 =======
 =======
@@ -104,3 +104,5 @@ export function getSupabaseClient(): ZionSupabase {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

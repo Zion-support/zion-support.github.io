@@ -1,5 +1,4 @@
-default:
-        return <Badge variant="outline">{status}</Badge>
+      default:        return <Badge variant="outline">{status}</Badge>
     }
 
 <<<<<<< HEAD
@@ -75,7 +74,6 @@ import {ApplicationStatus} from "@/types/jobs";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {applications.map((application) => (
 
-
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -136,7 +134,11 @@ export function MyApplications() {;
       </div>;
     );
   }
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (error) {;
     return (;
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
@@ -144,9 +146,16 @@ export function MyApplications() {;
       </div>;
     );
   }
+<<<<<<< HEAD
 ;
   if (applications.length === 0) {;
     return (;
+=======
+
+  if (applications && applications.length === 0) {;
+
+    return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
           <p className="text-muted-foreground">;
@@ -180,7 +189,6 @@ export function MyApplications() {;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
-
                   {application.cover_letter}
                 </p>;
               )}
@@ -193,6 +201,7 @@ export function MyApplications() {;
                 <Button 
                   variant="outline" 
                   size="sm" 
+<<<<<<< HEAD
                   className="text-xs"
                   asChild
                 >
@@ -364,3 +373,9 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+                  {application.cover_letter}
+                </p>
+              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

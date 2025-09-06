@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,11 +37,14 @@ export function useTalentData() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isLoading, setIsLoading] = useState(false);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
 
   // In a real app, we would fetch data from an API here
   // For now, we'll just return our mock data
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return {
@@ -64,6 +67,8 @@ export function useTalentData() {;
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {TALENT_PROFILES} from '@/data / talent_data';
 import {TalentProfile} from '@/types / talent';
 export /**
@@ -75,6 +80,7 @@ function useTalentData() {
 ;
   // In a real app, we would fetch data from an API here;
   // For now, we'll just return our mock data;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -105,5 +111,7 @@ function useTalentData() {
     is_loading;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }

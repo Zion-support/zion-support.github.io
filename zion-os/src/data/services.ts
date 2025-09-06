@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Service {;
   id: string;
 =======
@@ -11,6 +12,8 @@ export interface Service {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Service {
   id: string,
   name: string,
@@ -21,6 +24,7 @@ export interface Service {
     starter: string,
     professional: string,
     enterprise: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface Service {id: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -799,3 +803,19 @@ export const getCategories = () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface Service {id: string;
+  name: string;
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
+  description: string;
+  features: string[];  pricing: {;
+    starter: string;
+    professional: string;
+    enterprise: string;
+=======    custom?: string;
+    address: string;
+  }
+}
+export const services: Service[] = [;
+  // AI Services;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

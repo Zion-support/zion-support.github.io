@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -66,6 +67,8 @@ export function StructuredData() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 "use client",
 export /**
  * StructuredData - Function description
@@ -93,6 +96,7 @@ function StructuredData() {
         "https://twitter.com / ziontechgroup",
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -122,6 +126,9 @@ export function StructuredData() {const structuredData = {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       ];
+=======
+=======      ];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
     "feature_list": [;
       "Marketplace & Jobs",
@@ -147,6 +154,7 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -207,9 +215,15 @@ export function StructuredData() {;
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  return (  return (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

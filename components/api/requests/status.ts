@@ -42,6 +42,7 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -55,6 +56,8 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;

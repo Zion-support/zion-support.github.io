@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -70,6 +74,7 @@ describe('InteractiveElementsdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe('InteractiveElementsdynamic', () => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -108,3 +113,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Interact
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe('InteractiveElementsdynamic', () => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

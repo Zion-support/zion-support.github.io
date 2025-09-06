@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 
 <<<<<<< HEAD
@@ -17,10 +17,13 @@ import { HireRequestModal } from "./hire-request",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -96,47 +99,16 @@ interface HireNowCTAProps {
   talentProfile: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: string
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-=======
-    full_name?: string;
-    professional_title?: string;
-import { useState } from "react",
-import { TalentProfile } from "@/types/talent",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    hourly_rate?: number
-  }
-}
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-  const handleOpenModal = () => {
-    setModalOpen(true)
-
-<<<<<<< HEAD
-=======
-    hourly_rate?: number
-  }
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
@@ -144,22 +116,17 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleOpenModal = () => {
     setModalOpen(true)
-<<<<<<< HEAD
-  }
-  const handleCloseModal = () => {
-    setModalOpen(false)
-  }
-  // Check if we have minimum required data
-  const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
-  // Calculate talent profile completeness (simplified)
-  const profileCompleteness = calculateProfileCompleteness(talentProfile);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
   },
 
   const handleCloseModal = () => {
@@ -173,8 +140,6 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const profileCompleteness = calculateProfileCompleteness(talentProfile),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
 <<<<<<< HEAD
@@ -186,19 +151,13 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name |'This Talent'}</h3>
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -222,6 +181,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
           Schedule Interview
         </Button>
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
       <HireRequestModal
@@ -365,15 +325,12 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
+=======
+      </div>        <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           Schedule Interview;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <HireRequestModal;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -387,17 +344,10 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
           availability_type: 'full_time'
           timezone: ''
           hourly_rate: talentProfile.hourly_rate
-<<<<<<< HEAD
-        } : null}
-      />
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
       <HireRequestModal
 
+      <HireRequestModal
 
       <HireRequestModal 
       <HireRequestModal 
@@ -406,6 +356,7 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -502,10 +453,13 @@ function HireNowCTA() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -536,6 +490,8 @@ function calculateProfileCompleteness(): any (profile: any) {;
 =======
 }
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
@@ -544,6 +500,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
 <<<<<<< HEAD
 =======
   const fields = [;
+<<<<<<< HEAD
         } : null}
       />;
     </div>;
@@ -551,13 +508,16 @@ function calculateProfileCompleteness(): any (profile: any) {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     'availability_type';
   ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     }
     totalFields++;
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -567,6 +527,8 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
   return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
 }
@@ -589,6 +551,7 @@ if (return 0) {
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -731,3 +694,6 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -59,7 +59,6 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -96,6 +95,7 @@ interface MobileChatViewProps {
   onSendMessage: (content: string) => void;
 }
 
+<<<<<<< HEAD
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState(""),
   const router = useRouter(),
@@ -108,6 +108,43 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
   const [newMessage, setNewMessage] = useState(""),;
   const router = useRouter(),;
+=======
+    }
+  }
+  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default ();
+      handle_send ();
+    }
+
+  const startVideoCall = () =>: any {
+    const room_id = `mobile-${contact.id}`;
+    toast.success ('Starting video call', {
+      description: `Connecting with ${contact.name}...`,
+    });
+    // Navigate to video call page;
+    router.push (`/call/${room_id}`);
+  }
+  const startAudioCall = () =>: any {
+    const room_id = `mobile - audio-${contact.id}`;
+    toast.success ('Starting audio call', {
+      description: `Connecting with ${contact.name}...`,
+    });
+    // Navigate to video call page with audio - only flag;
+    router.push (`/call/${room_id}?audio_only = true`);
+
+  }
+export function MobileChatView(): any ({;
+  contact,;
+  messages,;
+  onBack,;
+  onSendMessage,;
+}: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState('');
+  const router = useRouter();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleSend = () => {;
     if (newMessage && newMessage.trim() !== '') {;
       onSendMessage(newMessage);
@@ -126,6 +163,33 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       handleSend();
     }
+<<<<<<< HEAD
+=======
+  };
+
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact && contact.id}`;
+    toast && toast.success('Starting video call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
+    });
+
+    // Navigate to video call page;
+    router && router.push(`/call/${roomId}`)
+};
+
+  const startAudioCall = () => {;
+    const roomId = `mobile-audio-${contact && contact.id}`;
+    toast && toast.success('Starting audio call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
+    });
+
+    // Navigate to video call page with audio-only flag;
+    router && router.push(`/call/${roomId}?audioOnly=true`)
+};
+
+  return (
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   
   const startVideoCall = () => {
@@ -149,7 +213,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   },
   
 
-
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -170,7 +233,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
+              <AvatarFallback>
+                {contact.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
             </Avatar>
             <div>
 <<<<<<< HEAD
@@ -206,14 +271,16 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <Phone className='h-5 w-5' />;
             </Button>;
 
-
             <Button
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
                 {contact.status || "Online"}
@@ -245,8 +312,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <MoreVertical className="h-5 w-5" />
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>
           </div>
         </div>
@@ -373,16 +443,16 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting video call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page;
     router.push(`/call/${roomId}`);
   },;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting audio call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page with audio-only flag;
     router.push(`/call/${roomId}?audioOnly=true`);
@@ -441,20 +511,17 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div;
-            key={message.id} ;
-            className={cn(;
-              "flex",;
-              message.isMe ? "justify-end" : "justify-start";
-            )}
+            key={message.id}
+            className={cn (
+              'flex',
+              message.is_me ? 'justify - end' : 'justify - start')}
           >;
             <div;
-              className={cn(;
-                "max-w-[80%] rounded-2xl px-4 py-2";
-                message.isMe;
-                  ? "bg-primary text-primary-foreground rounded-tr-none";
-                  : "bg-muted rounded-tl-none";
-              )}
-            >;
+              className={cn (
+                'max - w-[80%] rounded - 2xl px - 4 py - 2',
+                message.is_me;
+                  ? 'bg - primary text - primary - foreground rounded - tr - none';
+                  : 'bg - muted rounded - tl - none')}            >;
               <p>{message.content}</p>;
 <<<<<<< HEAD
               <div className={cn(;
@@ -477,8 +544,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
                 )}
@@ -536,7 +606,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>
       </div>;
     </div>;
-  );
+  )
 };
 }
 }
@@ -580,7 +650,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           <Input
             value={newMessage}
 
-
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -589,8 +658,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
-
-
 
           </Button>
         </div>

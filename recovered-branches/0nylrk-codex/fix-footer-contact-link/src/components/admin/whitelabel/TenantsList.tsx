@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
-<<<<<<< HEAD
 import {;
   Table,;
   TableBody,;
@@ -12,27 +10,11 @@ import {;
   TableHeader,;
   TableRow,;
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-=======
-
-import React, { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { ;
-  Table,;
-  TableBody, ;
-  TableCell, ;
-  TableHead, ;
-  TableHeader, ;
-  TableRow ;
-} from '@/components/ui/table',;
-import { Button } from '@/components/ui/button',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {;
+import { Button } from "@/components/ui/button";import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   DropdownMenuTrigger,;
@@ -63,6 +45,9 @@ import {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/table";
+=======
+  DropdownMenuTrigger,;} from "@/components/ui/table";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -70,6 +55,7 @@ import {
   DropdownMenuItem,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -113,6 +99,11 @@ export function TenantsList() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loadTenants();
+=======
+  DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
+import { toast } from "@/hooks/use-toast";
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }, []);
 
       setIsLoading(true);
@@ -123,31 +114,13 @@ export function TenantsList() {;
 
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    } catch (error: any) {;
-      console && console.error("Error loading tenants:", error);
-      toast({;
-        variant: "destructive",;
-        title: "Failed to load tenants",;
-        description: error && error.message,;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   };
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -155,6 +128,8 @@ export function TenantsList() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
   Edit,
   MoreHorizontal,
@@ -162,6 +137,7 @@ import {
   Power,
   PowerOff,
   Users,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -541,41 +517,13 @@ export function TenantsList() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
-      const { error } = await supabase;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .from("whitelabel_tenants");
-        .update({ dns_verified: true });
-        .eq("id", tenant && tenant.id);
-
-      if (error) throw error;
-
-      // Update local state;
-      setTenants(;
-        tenants && tenants.map((t) =>;
-          t && t.id === tenant && tenant.id ? { ...t, dns_verified: true } : t,;
-        ),;
-      );
-
-      toast({;
-        title: "DNS verified",;
-        description: `Custom domain for ${tenant && tenant.brand_name} has been verified.`,;
-      });
-    } catch (error: any) {;
-      console && console.error("Error verifying DNS:", error);
-      toast({;
-        variant: "destructive",;
-        title: "Failed to verify DNS",;
-        description: error && error.message,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      });
-    }
+      const { error } = await supabase;    }
 
   },
 <<<<<<< HEAD
@@ -584,6 +532,7 @@ export function TenantsList() {;
 =======
 
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1403,3 +1352,5 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

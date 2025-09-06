@@ -18,14 +18,23 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 =======
 const TestimonialsSection = ({ className }) => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+const TestimonialsSection = ({ className }) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
       <h1>TestimonialsSection</h1>
       <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
+=======
+  )
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 

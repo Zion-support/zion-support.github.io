@@ -46,5 +46,10 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      lines[lineIndex] = line.replace(/"/g, ")
+      lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

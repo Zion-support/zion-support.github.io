@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@ import _React from 'react';'''; import { cn } from '../../lib/utils'; const Prog
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React && React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress && Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
+=======
+import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React && React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress && Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React && React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress && Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"
 
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React && _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress && Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +56,5 @@ import _React from 'react';'''; import { cn } from '../../lib/utils'; const Prog
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

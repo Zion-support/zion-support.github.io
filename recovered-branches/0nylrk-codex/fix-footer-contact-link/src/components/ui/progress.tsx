@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,10 +14,14 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -34,32 +39,34 @@ import { cn } from "@/lib/utils"
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+import { cn } from "@/lib/utils"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
 ></typeof>(({ className, value, ...props }, ref) => (
   <ProgressPrimitive.Root
-=======
 
 const Progress = React && React.forwardRef<;
   React && React.ElementRef<typeof ProgressPrimitive && ProgressPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof ProgressPrimitive && ProgressPrimitive.Root>;
 ></typeof>(({ className, value, ...props }, ref) => (;
   <ProgressPrimitive&& ProgressPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
-=======
-
 import { cn } from "@/lib/utils"
-
 
 import * as React from "react";
 import * as ProgressPrimitive from "@radix-ui/react-progress";
@@ -74,9 +81,6 @@ const Progress = React.forwardRef<;
     ref={ref}
 
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { cn } from "@/lib/utils"
 
@@ -93,16 +97,19 @@ const Progress = React && React.forwardRef<;
   <ProgressPrimitive&& ProgressPrimitive.Root
     ref={ref}
     className={cn(
-<<<<<<< HEAD
       'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className
     )}
     {...props}
   >
     <ProgressPrimitive.Indicator
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -121,6 +128,16 @@ export { Progress };
       className="h-full w-full flex-1 bg-primary transition-all"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+
+export { Progress };
+
+      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+    />;
+  </ProgressPrimitive && ProgressPrimitive.Root>;
+));
+Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export { Progress };
 <<<<<<< HEAD
@@ -167,6 +184,7 @@ export { Progress }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 
 
 
@@ -213,3 +231,5 @@ export { Progress }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

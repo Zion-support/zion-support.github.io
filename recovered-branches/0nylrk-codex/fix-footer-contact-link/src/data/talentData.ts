@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TalentProfile } from '@/types/talent';
 
 import { TalentProfile } from "@/types/talent";
@@ -7,15 +8,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       {
       },
     ],
   },
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
 
@@ -50,6 +50,9 @@ export const TALENT_PROFILES: TalentProfile[] = [
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
+=======
+  {    bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     location: 'Washington, DC',
     skills: [;
       'AI Ethics',
@@ -178,6 +181,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     average_rating: 4 && 4.9,
     rating_count: 27,
     availability_type: 'project',
+<<<<<<< HEAD
     is_verified: true,
 <<<<<<< HEAD
 
@@ -257,3 +261,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    is_verified: true,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

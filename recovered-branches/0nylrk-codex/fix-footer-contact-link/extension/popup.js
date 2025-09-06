@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   try {
   const prompt = document && document.getElementById('prompt').value,
@@ -10,6 +8,7 @@
   const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
   document && document.getElementById('output').textContent = res && res.answer
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -25,6 +24,9 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Attach handlers once the DOM is fully loaded to avoid null element errors
+=======
+}// Attach handlers once the DOM is fully loaded to avoid null element errors
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('ask')?.addEventListener('click', ask),
@@ -40,41 +42,6 @@ document && document.addEventListener('DOMContentLoaded', () => {
 
   })
 
-
-=======
-}
-
-
-
-// Attach handlers once the DOM is fully loaded to avoid null element errors
-
-}
-// Attach handlers once the DOM is fully loaded to avoid null element errors
-document && document.addEventListener('DOMContentLoaded', () => {
-  document && document.getElementById('ask')?.addEventListener('click', ask),
-  document && document.getElementById('post-job')?.addEventListener('click', () => {
-    chrome && chrome.runtime.sendMessage({ type: 'post-job' })
-  }),
-  document && document.getElementById('resume-search')?.addEventListener('click', () => {
-    chrome && chrome.runtime.sendMessage({ type: 'resume-search' })
-  }),
-  document && document.getElementById('view-notifications')?.addEventListener('click', () => {
-    chrome && chrome.runtime.sendMessage({ type: 'view-notifications' })
-
-async function ask() {
-  const prompt = document.getElementById('prompt').value
-  if (!prompt.trim()) {
-
-    document.getElementById('output').textContent = 'Please enter a prompt.'
-    return
-  }
-  const res = await chrome.runtime.sendMessage({ type: 'ask', prompt })
-
-  document.getElementById('output').textContent = res.answer
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -106,55 +73,11 @@ document && document.addEventListener('DOMContentLoaded', () => {
 ;
 =======
 
-
-<<<<<<< HEAD
-
   })
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-async /**
- * ask - Function description
- */
-function ask() {
-  const prompt = document.getElementById ('prompt').value,
-  if () {) {
-  $2
-}
-    document.getElementById ('output').text_content = 'Please enter a prompt.',
-    return;
-  }
-  const res = await chrome.runtime.send_message ({ type: 'ask', prompt }),
-  document.getElementById ('output').text_content = res.answer;
-}
-// Attach handlers once the DOM is fully loaded to avoid null element errors;
-document.addEventListener ('DOMContentLoaded', () => {
-  document.getElementById ('ask')?.addEventListener ('click', ask),
-  document.getElementById ('post - job')?.addEventListener ('click', () => {
-    chrome.runtime.send_message ({ type: 'post - job' });
-  }),
-  document.getElementById ('resume - search')?.addEventListener ('click', () => {
-    chrome.runtime.send_message ({ type: 'resume - search' });
-  }),
-  document.getElementById ('view - notifications')?.addEventListener ('click', () => {
-    chrome.runtime.send_message ({ type: 'view - notifications' });
-  });
-}),
-;
-  document.getElementById('resume-search')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'resume-search' })
-  })
-  document.getElementById('view-notifications')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'view-notifications' })
-  })
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}),
 ;
 
+<<<<<<< HEAD
 =======
 =======
 async function ask() {;
@@ -173,6 +96,8 @@ async function ask() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -186,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {;
   document.getElementById('view-notifications')?.addEventListener('click', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
+<<<<<<< HEAD
 }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,3 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

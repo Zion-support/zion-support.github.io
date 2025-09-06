@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -27,6 +28,8 @@ exports.handler = async function() {;
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -81,9 +84,15 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

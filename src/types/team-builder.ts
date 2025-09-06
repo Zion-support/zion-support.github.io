@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +11,12 @@
   techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
 <<<<<<< HEAD
+=======
+project_name: string, goals: string,
+  timeline: string, budget: string,
+  tech_stack?: string[];
+  talent_filters?: { verified_only?: boolean; regions?: string[] }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 =======
 export interface ProjectBrief {
@@ -20,6 +27,7 @@ export interface ProjectBrief {
   techStack?: string[];
 <<<<<<< HEAD
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
   projectName: string, goals: string,
@@ -38,6 +46,10 @@ export interface ProjectBrief {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 =======
@@ -117,4 +129,8 @@ export interface ProjectRequirements {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

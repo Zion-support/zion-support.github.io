@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const http = require('http'),;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -29,6 +32,7 @@ const server = http.createServer((req, res) => {;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
+<<<<<<< HEAD
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -47,13 +51,40 @@ server.listen(PORT, () => {;
 ║     3. Run:npm run dev                                          ║;
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
+=======
+;
+                 OFFLINE DEVELOPMENT MODE ACTIVE                  ;
+;
+                                                                  ;
+   Server running at:http://localhost:${PORT}                    ;
+                                                                  ;
+    This is a placeholder server that doesn't require npm       ;
+     dependencies. Most features will not work until you install  ;
+     the required npm packages.                                   ;
+                                                                  ;
+   See OFFLINE-DEV-README.md for detailed instructions.         ;
+                                                                  ;
+   When internet is available:;
+     1. Run:chmod +x setup.sh                                    ;
+     2. Run:./setup.sh npm                                       ;
+     3. Run:npm run dev                                          ;
+                                                                  ;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 `);
 }),; const server = http.createServer ( (req, res) => {
   if (req.url === '/' || req.url === '/index.html') {
   fs.readFile (path.join (dirname, 'offline.html'), (err, data) => {
   if (err) {
+<<<<<<< HEAD
   ╔══════════════════════════════════════════════════════════════════╗ ║ OFFLINE DEVELOPMENT MODE ACTIVE ║ ╠══════════════════════════════════════════════════════════════════╣ ║ ║ ║ 🚀 Server running at: http://localhost:$ {
   PORT 
 }║ ║ ║ ║ ℹ️ This is a placeholder server that doesn't require npm ║ ║ dependencies. Most features will not work until you install ║ ║ the required npm packages. ║ ║ ║ ║ 🔍 See OFFLINE-DEV-README.md for detailed instructions. ║ ║ ║ ║ 🌐 When internet is available: ║ ║ 1. Run: chmod +x setup.sh ║ ║ 2. Run: ./setup.sh npm ║ ║ 3. Run: npm run dev ║ ║ ║ ╚══════════════════════════════════════════════════════════════════╝ `) 
 });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    OFFLINE DEVELOPMENT MODE ACTIVE       Server running at: http://localhost:$ {
+  PORT 
+}     This is a placeholder server that doesn't require npm   dependencies. Most features will not work until you install   the required npm packages.      See OFFLINE-DEV-README.md for detailed instructions.      When internet is available:   1. Run: chmod +x setup.sh   2. Run: ./setup.sh npm   3. Run: npm run dev     `) 
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

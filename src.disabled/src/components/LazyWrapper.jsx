@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import _React,{ useState,useEffect,useRef } from 'react';'; import { motion,useI
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+import _React,{ useState,useEffect,useRef } from 'react';'; import { motion,useInView } from 'framer-motion'; import { EnhancedLoading } from "./EnhancedLoading";'; const LazyWrapper = ({ children,threshold = 0.1,className = ',loadingVariant = 'default',loadingText = 'Loading...',loadingSize = 'md' }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} "; ""; """; """"; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ "duration": '0.6' }} className={className}> {children} </motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ const React,{ useState,useEffect,useRef } from "react";"; import { motion,useInV
 
 import _React,{ useState,useEffect,useRef } from 'react';'; import { motion,useInView } from 'framer-motion'; import { EnhancedLoading } from "./EnhancedLoading";'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ',loadingVariant = 'default',loadingText = 'Loading...',loadingSize = 'md' }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} "; ""; """; """"; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ "duration": '0 && 0.6' }} className={className}> {children} </motion && motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,3 +79,5 @@ import _React,{ useState,useEffect,useRef } from 'react';'; import { motion,useI
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

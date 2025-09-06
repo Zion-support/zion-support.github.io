@@ -254,6 +254,7 @@ function AboutPage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
             We are a leading technology solutions provider specializing in AI, 
             cybersecurity, cloud infrastructure, and digital transformation services.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -262,6 +263,11 @@ function AboutPage() {
             cybersecurity, cloud infrastructure, and digital transformation
             services.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            We are a leading technology solutions provider specializing in AI,
+            cybersecurity, cloud infrastructure, and digital transformation
+            services.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </p>
         </div>
 
@@ -283,7 +289,11 @@ function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
             <p className="text-gray-300 text-lg mb-6">
+<<<<<<< HEAD
               To be the world's most trusted technology partner, known for our
+=======
+              To be the world&apos;s most trusted technology partner, known for our
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               innovation, reliability, and commitment to client success.
             </p>
             <p className="text-gray-300 text-lg">
@@ -331,6 +341,7 @@ function AboutPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -471,3 +482,6 @@ function AboutPage() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

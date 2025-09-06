@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
@@ -19,27 +20,14 @@ import { Check, Handshake, Search, Send } from "lucide-react",
 const steps = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
+=======
+import { GradientHeading } from './GradientHeading';
+import { Check, Handshake, Search, Send } from './lucide-react';
+const steps = [;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from "lucide-react",
-
-
-
-
-const steps = [
-  {
-    title: "Post",
-    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
-    icon: Send},
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
 const steps = [
   {
@@ -61,15 +49,19 @@ const steps = [;
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const steps = [
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -224,6 +216,12 @@ export function HowItWorksSection() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue">;
+=======
+    title: "Match"
+    description: "Our AI automatically matches your needs with the perfect providers or opportunities."
+    icon: Search}
+  {    <section className="py-20 bg-zion-blue">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <GradientHeading>How It Works</GradientHeading>;
@@ -231,31 +229,12 @@ export function HowItWorksSection() {;
             A simple four-step process to connect technology providers with clients;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-        <div className="relative">;
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
-
-          <div className="space-y-12 md:space-y-0">;
-
-<<<<<<< HEAD
-=======
-        <div className="relative">;
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
-          <div className="space-y-12 md:space-y-0">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {steps.map((step, index) => (;
               <div;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -267,6 +246,9 @@ export function HowItWorksSection() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -274,32 +256,7 @@ export function HowItWorksSection() {;
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  ) : null}
-
-=======
-            {steps && steps.map((step, index) => (;
-              <div
-                key={step && step.title}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                } relative`}>;
-                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;
-                  {index % 2 === 0 ? (;
-                    <div>;
-                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
-                      <p className="text-zion-slate-light">{step && step.description}</p>;
-                    </div>;
-                  ) : null}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  ) : null}
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                </div>;
+                    </div>                </div>;
 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
                   <step && step.icon className="w-6 h-6 text-zion-cyan" />;
@@ -314,13 +271,12 @@ export function HowItWorksSection() {;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   ) : null}
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -393,13 +349,14 @@ export function HowItWorksSection() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -523,3 +480,6 @@ icon: Handshake
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -213,6 +214,13 @@ code {
     white-space: normal;
   }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 <<<<<<< HEAD
@@ -257,7 +265,46 @@ code {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 code {
+<<<<<<< HEAD
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

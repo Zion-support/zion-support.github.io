@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -50,10 +51,18 @@ export const useRecordActivity = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const recordMilestoneActivity = async (
+=======
+export const useRecordActivity = () => {;
+  const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
+import { supabase } from '@/integrations/supabase/client',
+import { MilestoneActivity } from './types',
+export const useRecordActivity = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     milestoneId: string,
     action: string,
     previousStatus: string | null,
     newStatus: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -65,12 +74,15 @@ export const useRecordActivity = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     comment?: string
   ) => {
     if (!user) return null
     try {
       const { data, error } = await supabase
         .from('milestone_activities')
+<<<<<<< HEAD
         .insert({
 <<<<<<< HEAD
 
@@ -192,10 +204,18 @@ if (throw error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+        .insert({          comment})
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -215,6 +235,8 @@ if (throw error) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from '@/hooks/useAuth',;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
 export const useRecordActivity = () => {;
@@ -247,32 +269,10 @@ export const useRecordActivity = () => {;
     } catch (err: any) {;
       console.error("Error recording activity:", err),;
       return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    }
-
-  };
-  return {;
-    recordMilestoneActivity;
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 
+}
 };
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    }
-  };
   return {;
     recordMilestoneActivity;
   }
@@ -289,7 +289,11 @@ export const useRecordActivity = () => {;
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

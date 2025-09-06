@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
   const { email } = req.body |{}
@@ -29,6 +30,9 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Basic validation
     const normalized = email && email.trim().toLowerCase();
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
@@ -37,7 +41,6 @@ export default async function handler(
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // If placeholders are still used, just accept without DB write
-
 
     const { data, error } = await supabase
 <<<<<<< HEAD
@@ -71,18 +74,17 @@ export default async function handler(
 =======
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
     }
     const { data, error } = await supabase
       .from('email_signups')
 
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -115,6 +117,7 @@ export default async function handler(
         email: normalized
         source: 'mobile-launch'
         created_at: new Date().toISOString()
+<<<<<<< HEAD
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -244,6 +247,9 @@ if ( {) {
     return res.status (500).send (e?.message || 'Unexpected error');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }      }
+=======
+      })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })  }      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return res.status (500).send (error.message || 'Database error');
     }
     return res.status (200).json ({ ok: true, data });
@@ -256,28 +262,13 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+    return res.status(500).send(e?.message || 'Unexpected error');
+}
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-
-
-}
-}
-    return res.status(500).send(e?.message || 'Unexpected error');
-  }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return res.status(500).send(e?.message || 'Unexpected error');
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

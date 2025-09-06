@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -34,7 +37,10 @@ export const getTypeIcon = (type: NotificationType,) => {
       return <span className="text-orange-500">📦</span>
     default:
       return <span className="text-gray-500">📣</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -42,9 +48,52 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { formatDistanceToNow } from 'date-fns',
 import { cn } from '@/lib/utils',
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+import React from 'react',;
+// Use the centralized icon wrapper to avoid missing icons;
+import { Check, Trash2, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { formatDistanceToNow } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from '@/components/ui/tooltip',;
+import { useRouter } from 'next/router',;
+import { Notification, NotificationType } from '@/context/notifications',;
+export const getTypeIcon = (type: NotificationType) => {;
+  switch (type) {;
+    case 'message':;
+      return <span className="text-blue-500">💬</span>,;
+    case 'quote_request':;
+      return <span className="text-purple-500">📝</span>,;
+    case 'booking_confirmation':;
+      return <span className="text-green-500">✅</span>,;
+    case 'hire_request':;
+      return <span className="text-zion-purple">🤝</span>,;
+    case 'onboarding':;
+      return <span className="text-zion-cyan">🚀</span>,;
+    case 'system':;
+      return <span className="text-yellow-500">⚠️</span>,;
+    case 'project_update':;
+      return <span className="text-indigo-400">📌</span>,;
+    case 'milestone_complete':;
+      return <span className="text-green-500">🏁</span>,;
+    case 'order_status':;
+      return <span className="text-orange-500">📦</span>,;
+    default:;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -73,6 +122,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'project_update':
       return <span className="text-orange-500">📦</span>;
     default:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       return <span className="text-gray-500">📣</span>
@@ -116,6 +166,9 @@ export const getTypeIcon = (type: NotificationType) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return <span className="text-gray-500">📣</span>;
   }
 },;
@@ -140,19 +193,31 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },;
   return (;
     <div;
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -160,9 +225,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
           <div className="flex justify-between items-center mb-1">
             <h4 className="font-medium text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
               {notification.title || 'Notification'}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </h4>
             {!notification.read && (
               <Badge className="bg-zion-cyan text-xs">New</Badge>
@@ -170,9 +238,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
           </div>
           <p className="text-sm text-zion-slate-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
             {notification.message || 'You have a new notification'}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
@@ -181,21 +252,28 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                     addSuffix: true})
                 : 'Just now'}
             </p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {notification.action_url && notification.action_text && (
               <Button
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 onClick={handleClick}
               >;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
         </div>;
@@ -205,6 +283,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         </div>
       </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
@@ -214,7 +297,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+<<<<<<< HEAD
                 onClick={(e) => {
+=======
+
+
+                onClick={(e) => {
+                onClick={(e) => {
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -228,6 +320,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
+<<<<<<< HEAD
 
         <TooltipProvider>
           <Tooltip>
@@ -246,6 +339,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+        <TooltipProvider>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 
   const handleMarkAsRead = (e: React.MouseEvent) => {
@@ -324,6 +421,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
             </Tooltip>
           )}
           
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -339,6 +437,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </TooltipProvider>
@@ -395,6 +494,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   );
 };
 =======
+=======
+        </TooltipProvider>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 
@@ -407,15 +509,22 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     </div>
   )
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>
       </div>
     </TooltipProvider>
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

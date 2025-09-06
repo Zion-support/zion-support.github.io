@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -7,6 +8,16 @@ import {
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
 } from "@/types/disputes",
 
+=======
+import React, { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { useDisputes } from "@/hooks/useDisputes",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import {
+ Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
+} from "@/types/disputes",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -74,6 +85,7 @@ export function DisputeDetail() {
     if (success) {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status })
+<<<<<<< HEAD
     } else {
       toast.error("Failed to update dispute status")
     }
@@ -98,6 +110,47 @@ export function DisputeDetail() {
         resolved_at: new Date().toISOString()})
     } else {
       toast.error("Failed to resolve dispute")
+=======
+    } else {
+    }
+    const success = await resolveDispute(disputeId, {
+      resolution_type:
+        (resolution.resolution_type as ResolutionType) |'compromise'
+    })
+    if (success && dispute) {
+      setDispute({
+      })
+    } else {
+      toast.error('Failed to resolve dispute')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    }
+  },
+
+  const handleSendMessage = async () => {
+<<<<<<< HEAD
+    if (!disputeId || !message.trim()) return,
+    
+    setIsSending(true),
+    try {
+=======
+    setIsSending(true)
+    try {
+      const success = await addDisputeMessage(disputeId, message, isAdmin)
+      if (success) {
+        // Refresh messages
+        const updatedMessages = await getDisputeMessages(disputeId)
+        setMessages(updatedMessages)
+        setMessage('')
+      }
+    } catch (error) {
+      logErrorToProduction('Error sending message:', { data: error })
+    } finally {
+      setIsSending(false)
+    }
+  }
+        resolved_at: new Date().toISOString()})
+    } else {
+      toast.error("Failed to resolve dispute")
     }
   },
 
@@ -106,6 +159,7 @@ export function DisputeDetail() {
     
     setIsSending(true),
     try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
@@ -118,6 +172,9 @@ import { useDisputes } from "@/hooks/useDisputes",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
 } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -129,6 +186,7 @@ import { Separator } from "@/components/ui/separator",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { format, formatDistanceToNow } from "date-fns",;
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+<<<<<<< HEAD
 =======
   Dispute,;
   disputeReasonLabels,;
@@ -154,6 +212,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { format, formatDistanceToNow } from 'date-fns';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from "@/hooks/useAuth",;
 import { toast } from "sonner",;
@@ -199,8 +259,12 @@ export function DisputeDetail() {;
   }, [disputeId, getDisputeById, getDisputeMessages, router]),;
   const handleStatusChange = async (status: DisputeStatus) => {;
     if (!disputeId) return,;
+<<<<<<< HEAD
     const success = await updateDisputeStatus(disputeId, status),;
     if (success) {;
+=======
+    const success = await updateDisputeStatus(disputeId, status),;    if (success) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status });
     } else {;
@@ -244,12 +308,15 @@ export function DisputeDetail() {;
       setIsSending(false);
     }
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   if (isLoading) {;
 
       summary: resolution.summary,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
@@ -260,7 +327,10 @@ export function DisputeDetail() {;
       </div>
     )
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!dispute) {
     return (
       <div className="p-8 text-center">
@@ -268,13 +338,17 @@ export function DisputeDetail() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Button>
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -536,6 +610,12 @@ if ( {) {
                   </div>
 
                   
+=======
+      case 'open':        return 'default';
+      case 'under_review':;
+        return 'secondary';
+      case 'resolved':;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {dispute.milestone_id && (
                     <div>
                       <h3 className="font-medium">Related Milestone</h3>
@@ -587,7 +667,6 @@ if ( {) {
                         </li>;
                       )}
 
-
                       {dispute && dispute.resolved_at && (;
                         <li className='flex gap-2 items-center'>;
 
@@ -598,6 +677,7 @@ if ( {) {
                           </Badge>;
                           <span>;
                             Resolved on{' '}
+<<<<<<< HEAD
 
                             {format(;
                               new Date(dispute && dispute.resolved_at),;
@@ -629,10 +709,13 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {dispute.resolved_at && (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -699,6 +782,14 @@ if ( {) {
 
 
                 <Card>
+=======
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>                <Card>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
                   </CardHeader>
@@ -751,11 +842,14 @@ if ( {) {
             </TabsContent>
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <TabsContent value="messages" className="space-y-6">
               <Card>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
                   <CardDescription>Communication regarding this dispute</CardDescription>
@@ -808,6 +902,7 @@ if ( {) {
                                     <AvatarImage
                                       src={msg && msg.user_profile?.avatar_url}
                                       alt={
+<<<<<<< HEAD
 
                                         msg && msg.user_profile?.display_name ||
                                         'User avatar'
@@ -816,6 +911,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         .map((msg) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
                             <div
@@ -867,9 +964,12 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     )}
                   </div>
                 </CardContent>
@@ -879,6 +979,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       placeholder="Type your message here..."
@@ -890,6 +991,8 @@ if ( {) {
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </Button>
                     </div>
                   </div>
@@ -899,6 +1002,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
@@ -1082,6 +1186,8 @@ if ( {) {
                           disabled={dispute.status === "closed"}
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         >
 <<<<<<< HEAD
                           Close Dispute
@@ -1094,6 +1200,7 @@ if ( {) {
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
+<<<<<<< HEAD
                           disabled={dispute && dispute.status === 'under_review'}
                         >;
                           Mark as Under Review;
@@ -1144,6 +1251,8 @@ if ( {) {
 
 
                       <div>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
                           <Textarea
@@ -1161,6 +1270,10 @@ if ( {) {
                             <div>
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>
                               <select
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
@@ -1172,10 +1285,6 @@ if ( {) {
                               </select>
                             </div>
                           </div>
-                          
-                          <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
-
-                        </div>
                       </div>
                     )}
                     
@@ -1184,6 +1293,79 @@ if ( {) {
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
                         {messages
                           .filter(msg => msg.is_admin_note)
+<<<<<<< HEAD
+=======
+
+                          disabled={dispute && dispute.status === 'closed'}                        >;
+                          Close Dispute;
+                        </Button>;
+                      </div>;
+                    </div>;
+
+                    {dispute && dispute.status !== 'resolved' && (;
+                      <div>;
+                        <h3 className='font-medium mb-2'>Resolve Dispute</h3>;
+                        <div className='space-y-4'>;
+                          <Textarea
+                            placeholder='Enter resolution summary...'
+                            value={resolution && resolution.summary}
+                            onChange={e =>;
+                              setResolution({;
+                                ...resolution,;
+                                summary: e && e.target.value,;
+                              });
+                            }
+                            className='min-h-[100px]'                          />;
+
+                          <div className='grid grid-cols-2 gap-4'>;
+                            <div>;
+                              <label className='text-sm font-medium mb-1 block'>;
+                                Resolution Type;
+                              </label>;
+                              <select
+                                className='w-full p-2 border rounded'
+                                value={resolution && resolution.resolution_type || ''}
+                                onChange={e =>;
+                                  setResolution({;
+                                    ...resolution,;
+                                    resolution_type: e && e.target;
+                                      .value as ResolutionType,;
+                            on_change={e =>;
+                              set_resolution ({
+                                ...resolution,
+                                summary: e.target.value,
+                              });
+                            }
+                            className='min - h-[100px]'                          />;
+                          <div className='grid grid - cols - 2 gap - 4'>;
+                            <div>;
+                              <label className='text - sm font - medium mb - 1 block'>;
+                                Resolution Type;
+                              </label>;
+                              <select;
+                                className='w - full p - 2 border rounded';
+                                value={resolution.resolution_type || ''}
+                                on_change={e =>;
+                                  set_resolution ({
+                                    ...resolution,
+                                    resolution_type: e.target;
+                                      .value as ResolutionType,
+
+                                  });
+                                }                              >;
+                                <option value='client_favor'>;
+                                  In Client's Favor;
+                                </option>;
+                                <option value='talent_favor'>;
+                                  In Talent's Favor;
+                                </option>;
+                                <option value='compromise'>Compromise</option>;
+                                <option value='dismissed'>Dismissed</option>;
+                              </select>;
+                            </div>;
+                          </div>;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -1197,11 +1379,16 @@ if ( {) {
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                               </div>
                               <span className="text-xs opacity-70">
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1215,6 +1402,11 @@ if ( {) {
 
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
+=======
+                          <p className='text-sm text-muted-foreground italic'>
+                            No admin notes yet
+                          </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         )}
                       </div>
 <<<<<<< HEAD
@@ -1363,14 +1555,22 @@ if ( {) {
                                 );
                                 setAdminNote('');
                               });                            }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
+=======
+                        <Button
+                          variant="outline"
+                          onClick={() => {
+                            if (adminNote.trim()) {                              addDisputeMessage(disputeId!, adminNote, true).then(() => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })
                             }
+<<<<<<< HEAD
                           }}
                         >;
                           Add Admin Note;
@@ -1390,10 +1590,27 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
         <div className="space-y-6">
+=======
+
+                          }}
+                        >
+                          Add Admin Note
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            )}
+          </Tabs>
+        </div>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1472,13 +1689,22 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </p>
+=======
+                </Avatar>
+                <div>
+                  <p className="font-medium">Talent</p>
+                  <p className="text-sm text-muted-foreground">                  </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>
               </div>
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
 
           
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1508,15 +1734,100 @@ if ( {) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 
 }, [dispute_id, getDisputeById, getDisputeMessages, router]);
-}
-const handleResolveDispute = async () => {
+=======
 
+try {
+}catch (error) {
+  logErrorToProduction ('Error sending message:', {
+  data: error
+})
+}finally {
+  setIsSending (false)
+}
+if (isLoading) {"
+  return (<div className=" p-8 text-center"> <div className=" w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div>)
+}if (!dispute) {"
+  return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") "
+}className=" mt-4"> Back to Disputes </Button> </div>)
+};"
+container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) "
+}</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {
+  dispute.resolution summary
+}</AlertDescription> </Alert>) "
+}<div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className="lg:col-span-2"> </TabsList> <TabsContent value="overview" className="space-y-6"> <Card> <CardHeader> <CardTitle>Dispute Details</CardTitle> <CardDescription>Information about this dispute case</CardDescription> </CardHeader> <CardContent className="space-y-4"> <div> <h3 className="font-medium">Reason</h3> <p> {
+  disputeReasonLabels[ dispute.reason code ] ?? dispute.reason code "
+}</p> </div> <div> <h3 className="font-medium">Description</h3> <p className="whitespace-pre-wrap"> {
+  dispute.description
+}</p> </div> <div> </div> {"
+  dispute.milestone id && (<div> <h3 className="font-medium">Related Milestone</h3> <p className="text-sm">Milestone ID: {
+  dispute.milestone id
+}</p> </div>) "
+}<div> <h3 className="font-medium">Timeline</h3> <ul className="space-y-2 mt-2"> <span>Under review</span> </li>)
+}</li>) "
+}</ul> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Resolution</CardTitle> </CardHeader> <CardContent> <p className="whitespace-pre-wrap"> {
+  dispute.resolution summary
+}</p> </Badge> </div>)
+}</CardContent> </Card>) "
+}</TabsContent> <TabsContent value="messages" className="space-y-6"> <Card> <CardHeader> <CardTitle>Messages</CardTitle> <CardDescription>Communication regarding this dispute</CardDescription> </CardHeader> <CardContent> <div className="space-y-6 max-h-[600px] overflow-y-auto p-2"> {"
+  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note)
+}> <div className= {
+  `max-w-[80%] $ {'
+  isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted'
+}p-4 rounded-lg` "
+}> <div className="flex items-center gap-2 mb-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {
+  msg.user profile?.avatar url
+}alt= {"
+  msg.user profile?.display name |"User avatar"
+}/> <AvatarFallback> {'
+  msg.user profile?.display name?.[0] |'?' "
+}</AvatarFallback> </Avatar> <span className="text-sm font-medium"> {'
+  msg.user profile?.display name |'Unknown User' "
+}</span> <span className="text-xs opacity-70"> {'
+  format (new Date (msg.created at),  'MMM d, h:mm a') "
+}</span> </div> <p className="whitespace-pre-wrap"> {
+  msg.message
+}</p> </div> </div>)
+}) ) "
+}</div> </CardContent> <CardFooter> <div className="w-full space-y-4" > <Textarea className="min-h-[100px]" disabled= {
+  isSending "
+}/> </Button> </div> </div> </CardFooter> </Card> </TabsContent> <TabsContent value="attachments"> <Card> <CardHeader> <CardTitle>Attachments</CardTitle> <CardDescription>Files related to this dispute</CardDescription> </CardHeader> <CardContent> <div className="text-center py-12"> <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground" >No attachments available</p> </div> </CardContent> </Card> </TabsContent> <Card> <CardHeader> <CardTitle>Admin Actions</CardTitle> <CardDescription>Handle this dispute as an administrator</CardDescription> </CardHeader> <CardContent className="space-y-6"> <div> <h3 className="font-medium mb-2">Change Status</h3> <div className="flex gap-2" > <Button > Mark as Open </Button> <Button > Mark as Under Review </Button> <Button > Close Dispute </Button> </div> </div> <h3 className="font-medium mb-2">Resolve Dispute</h3> <div className="space-y-4" > <Textarea placeholder="Enter resolution summary..." value= {
+  resolution.summary
+}onChange= {
+  (e) => setResolution ({
+  ...resolution, summary: e.target.value
+}) '"
+}className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor" >In Client's Favor</option> <option value="talent favor" >In Talent's Favor</option> <option value="compromise" >Compromise</option> <option value="dismissed" >Dismissed</option> </select> </div> </div> <Button onClick={
+  handleResolveDispute
+}>Resolve Dispute</Button> </div> </div>)
+}<div> <AvatarFallback> {'
+  msg.user profile?.display name?.[0] |'A'
+}</AvatarFallback> </Avatar>) "
+}</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea
+}> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) "
+}</Tabs> </div> <div className="space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6"> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {
+  dispute.client profile?.avatar url
+}alt= {"
+  dispute.client profile?.display name |"Client avatar" "
+}/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className="font-medium">Client</p> </p> </div> </div> <div className="flex justify-center"> <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {
+  dispute.talent profile?.avatar url
+}alt= {"
+  dispute.talent profile?.display name |"Talent avatar" "
+}/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm"> <div className="flex justify-between"> <span className="font-medium">Case ID:</span> <span className="font-mono"> {
+  dispute.id "
+}</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>)
+}'"  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
 ;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;

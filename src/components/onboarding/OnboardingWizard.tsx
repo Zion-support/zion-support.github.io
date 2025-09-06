@@ -4,7 +4,7 @@
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
 interface WizardStep {;
-  title: string;
+  title: string,
   description: string;
   icon: React && React.ReactNode;
   action: {;
@@ -32,7 +32,7 @@ import { cn } from '@/lib / utils';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 interface WizardStep {
-  title: string;
+  title: string,
   description: string;
   icon: React.ReactNode;
   action: {
@@ -43,8 +43,8 @@ interface WizardStep {
   skipText?: string
 interface OnboardingWizardProps {
 
-    url: string;
-  };
+    url: string
+};
   skipText?: string;
 
 interface OnboardingWizardProps {;
@@ -54,12 +54,9 @@ interface OnboardingWizardProps {;
   onSkip: () => void;
   className?: string
 
-
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
-
-
 
   type,
   onComplete,
@@ -71,15 +68,17 @@ export function OnboardingWizard(): any ({;
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
 
-
           </div>;
         </div>;
 
         <div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -88,7 +87,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
-  title: string,;
+  title: string,,
   description: string,;
   icon: React.ReactNode,;
   action: {;
@@ -113,8 +112,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -150,8 +152,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   ],
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -189,6 +194,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
@@ -220,25 +228,31 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
           {/* Step dots */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex items-center justify-center flex-1">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {steps.map((_, index) => (
               <div
                 key={index}
@@ -246,6 +260,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   "h-2 w-2 rounded-full mx-1",
                   index === currentStep
@@ -261,6 +276,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {steps[currentStep]?.icon}
           </div>
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
@@ -268,6 +285,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         </div>
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
+<<<<<<< HEAD
         <Button
 <<<<<<< HEAD
 =======
@@ -490,3 +508,9 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+        <Button          <Button
+            variant='ghost'
+            className='text-zion-slate-light hover:text-white'
+            onClick={handleSkip}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

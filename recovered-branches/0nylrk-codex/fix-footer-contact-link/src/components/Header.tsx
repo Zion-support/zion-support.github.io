@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Header, as, HeaderComponent } from "./header/Header";
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -11,29 +12,22 @@ export { HeaderComponent as Header };
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { Header, as, HeaderComponent  } from './header / Header';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 export { HeaderComponent as Header }
 
-
+export { HeaderComponent as Header };
+import { Header, as, HeaderComponent } from "./header/Header";
+export { HeaderComponent as Header }
 
 export { HeaderComponent as Header };
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import { Header, as, HeaderComponent } from "./header/Header";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-import { Header, as, HeaderComponent } from "./header/Header";
-export { HeaderComponent as Header }
-
-export { HeaderComponent as Header };
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

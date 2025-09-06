@@ -376,10 +376,13 @@ function InterviewCard() {
   const isInterviewPending = interview.status === 'requested';
   const isInterviewConfirmed = interview.status === 'confirmed';
   const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
-        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
+        return <Badge variant="outline" className="border - destructive text-destructive">Cancelled</Badge>;
       default:;
         return <Badge>{interview.status}</Badge>;
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

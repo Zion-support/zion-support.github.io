@@ -24,5 +24,10 @@ console.log(' Starting Automation Orchestrator...')
     console.log('\n Failed "Tasks")
 // console.log('\n "Recommendations")
     console.log('\n "Recommendations")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error('Orchestrator "failed")
+  console.error('Orchestrator "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

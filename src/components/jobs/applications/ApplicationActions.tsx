@@ -119,6 +119,10 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -126,11 +130,12 @@ export function ApplicationActions({
 
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
-      
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Button 
@@ -178,7 +183,7 @@ import { Button } from "@/components/ui/button",;
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
 
-import Link from 'next / link';
+import Link from 'next/link';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -233,8 +238,6 @@ export function ApplicationActions({;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "interview")}
-          >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
@@ -243,13 +246,17 @@ export function ApplicationActions({;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600";
           >;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
       <Button;
         variant="default";
         size="sm";
@@ -260,6 +267,9 @@ export function ApplicationActions({;
         </Link>;
       </Button>;
     </div>;
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }
 <<<<<<< HEAD
@@ -276,4 +286,7 @@ export function ApplicationActions({;
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

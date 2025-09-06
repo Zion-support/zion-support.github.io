@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,10 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AppLayout} from "@/layout/AppLayout";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -24,6 +29,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -139,13 +145,19 @@ export default function Careers() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Product Manager",
+=======
+import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",        title: "Product Manager",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       },
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -158,6 +170,8 @@ export default function Careers() {
     product: [
       {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -165,21 +179,14 @@ export default function Careers() {
         department: "Product"
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ];
-=======
-    ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    ];    ];
     marketing: [
       {
         title: "Growth Marketing Manager"
         location: "Remote"
         type: "Full-time"
         department: "Marketing"
+<<<<<<< HEAD
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
 <<<<<<< HEAD
 
@@ -244,12 +251,16 @@ export default function Careers() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
+=======
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."      {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         title: "Talent Acquisition Specialist"
         location: "Remote"
         type: "Full-time"
         department: "Operations"
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
+<<<<<<< HEAD
     ]
 <<<<<<< HEAD
 =======
@@ -271,6 +282,9 @@ export default function Careers() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Benefits list
+=======
+    ]  // Benefits list
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const benefits = [
     {
       title: "Flexible Work"
@@ -279,6 +293,7 @@ export default function Careers() {
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
+<<<<<<< HEAD
       )
 <<<<<<< HEAD
 
@@ -301,6 +316,9 @@ export default function Careers() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
+=======
+      )    {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
       icon: (
@@ -308,6 +326,7 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -665,31 +684,36 @@ export default function Careers() {;
     ],;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     marketing: [;
       {;
         title: "Growth Marketing Manager",;
         location: "Remote",;
         type: "Full-time",;
-        department: "Marketing",;
-        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.";
+        department: "Marketing",,
+  description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.";
         type: "Full-time",;
-        department: "Marketing",;
-        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";
+        department: "Marketing",,
+  description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";
       }
     operations: [;
       {;
         title: "Community Manager",;
         location: "Remote",;
         type: "Full-time",;
-        department: "Operations",;
-        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.";
+        department: "Operations",,
+  description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.";
       {;
         title: "Talent Acquisition Specialist",;
         location: "Remote",;
         type: "Full-time",;
-        department: "Operations",;
-        description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
+        department: "Operations",,
+  description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
       }
+<<<<<<< HEAD
     ];
 <<<<<<< HEAD
   },;
@@ -1266,18 +1290,20 @@ export default function Careers() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </Tabs>;
+=======
+    ];                            Apply Now;
+                          </Button>;
+                        </div>;
+                      </CardContent>;            </Tabs>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
             </p>;
+<<<<<<< HEAD
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1314,6 +1340,9 @@ export default function Careers() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Send General Application;
+=======
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;              Send General Application;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </div>;
         </div>;
@@ -1324,19 +1353,8 @@ export default function Careers() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </AppLayout>);
     </AppLayout>;
@@ -1346,64 +1364,64 @@ export default function Careers() {;
   title: "Senior Frontend Engineer";
 location: "Remote";
 type: "Full-time";
-department: "Engineering";
-description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace." 
+department: "Engineering",
+  description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace." 
 };
 {
   title: "AI Research Engineer";
 location: "San Francisco, CA";
 type: "Full-time";
-department: "Engineering";
-description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems." 
+department: "Engineering",
+  description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems." 
 };
 {
   title: "Full Stack Developer";
 location: "Remote";
 type: "Full-time";
-department: "Engineering";
-description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL." 
+department: "Engineering",
+  description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL." 
 }];
 product: [ {
   title: "Product Manager";
 location: "New York, NY";
 type: "Full-time";
-department: "Product";
-description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients." 
+department: "Product",
+  description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients." 
 };
 {
   title: "UX/UI Designer";
 location: "Remote";
 type: "Full-time";
-department: "Product";
-description: "Create intuitive and engaging user experiences that make complex technology accessible to all users." 
+department: "Product",
+  description: "Create intuitive and engaging user experiences that make complex technology accessible to all users." 
 }];
 marketing: [ {
   title: "Growth Marketing Manager";
 location: "Remote";
 type: "Full-time";
-department: "Marketing";
-description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace." 
+department: "Marketing",
+  description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace." 
 };
 {
   title: "Content Strategist";
 location: "London, UK";
 type: "Full-time";
-department: "Marketing";
-description: "Develop compelling content that educates and inspires our audience about the future of AI and technology." 
+department: "Marketing",
+  description: "Develop compelling content that educates and inspires our audience about the future of AI and technology." 
 }];
 operations: [ {
   title: "Community Manager";
 location: "Remote";
 type: "Full-time";
-department: "Operations";
-description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts." 
+department: "Operations",
+  description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts." 
 };
 {
   title: "Talent Acquisition Specialist";
 location: "Remote";
 type: "Full-time";
-department: "Operations";
-description: "Help connect the right talent with the right opportunities on our platform through personalized matching." 
+department: "Operations",
+  description: "Help connect the right talent with the right opportunities on our platform through personalized matching." 
 }
 };
 //Benefits list </svg>) 
@@ -1422,13 +1440,19 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
     </AppLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,12 +11,15 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 },
 
 export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,3 +107,7 @@ export const trackPricingRequest = async (data: any) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

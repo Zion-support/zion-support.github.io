@@ -73,14 +73,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {

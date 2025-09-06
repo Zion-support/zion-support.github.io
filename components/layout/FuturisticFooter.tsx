@@ -69,8 +69,8 @@ export default function FuturisticFooter() {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-  };
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com'
+};
 
   const quickLinks = [;
     { name: 'Services', href: '/services' },;
@@ -266,10 +266,13 @@ export default function FuturisticFooter() {;
             </ul>
           </div>
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Quick Links */}
           <div>;
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
@@ -293,7 +296,7 @@ export default function FuturisticFooter() {;
                   </Link>;
                 </li>;
                     href={link.href}
-                    className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
+                    className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                   >;
                     {link.name}
               ))}
@@ -320,7 +323,7 @@ export default function FuturisticFooter() {;
                   </Link>;
                 </li>;
                     href={service.href}
-                    className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
+                    className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                   >;
                     {service.name}
               ))}
@@ -484,14 +487,14 @@ export default function FuturisticFooter() {;
                     href={`tel:${contact_info.mobile}`}
                     className='text - gray - 400 hover:text - blue - 400 transition - colors duration - 200'                  >              Contact Us;
             </h3>;
-            <div className="space - y-4">;
-              <div className="flex items - start space - x-3">;
-                <Phone className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />;
+            <div className="space-y-4">;
+              <div className="flex items-start space-x-3">;
+                <Phone className="w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0" />;
                 <div>;
-                  <p className="text - white font - medium">Phone</p>;
+                  <p className="text-white font-medium">Phone</p>;
                   <a;
                     href={`tel:${contact_info.mobile}`}
-                    className="text - gray - 400 hover:text - blue - 400 transition - colors duration - 200";
+                    className="text - gray - 400 hover:text - blue - 400 transition-colors duration-200";
                   >;
                     {contact_info.mobile}
                   </a>;
@@ -504,10 +507,10 @@ export default function FuturisticFooter() {;
                   <a;
                     href={`mailto:${contact_info.email}`}
                     className='text - gray - 400 hover:text - green - 400 transition - colors duration - 200'                  >                <div>;
-                  <p className="text - white font - medium">Email</p>;
+                  <p className="text-white font-medium">Email</p>;
                   <a;
                     href={`mailto:${contact_info.email}`}
-                    className="text - gray - 400 hover:text - green - 400 transition - colors duration - 200";
+                    className="text - gray - 400 hover:text - green - 400 transition-colors duration-200";
                   >;
                     {contact_info.email}
                   </a>;
@@ -517,8 +520,8 @@ export default function FuturisticFooter() {;
                 <MapPin className='w - 5 h - 5 text - purple - 400 mt - 1 flex - shrink - 0' />;
                 <div>;
                   <p className='text - white font - medium'>Address</p>;
-                  <p className='text - gray - 400 text - sm'>{contact_info.address}</p>                </div>                  <p className="text - white font - medium">Address</p>;
-                  <p className="text - gray - 400 text - sm">;
+                  <p className='text - gray - 400 text - sm'>{contact_info.address}</p>                </div>                  <p className="text-white font-medium">Address</p>;
+                  <p className="text - gray-400 text-sm">;
                     {contact_info.address}
                   </p>;
               </div>;
@@ -549,14 +552,14 @@ export default function FuturisticFooter() {;
                 className='text - gray - 400 hover:text - white transition - colors duration - 200';
               >                Cookie Policy              © {current_year} Zion Tech Group. All rights reserved.;
             </div>;
-            <div className="flex space - x-6 text - sm">;
-              <Link href="/privacy" className="text - gray - 400 hover:text - white transition - colors duration - 200">;
+            <div className="flex space-x-6 text-sm">;
+              <Link href="/privacy" className="text - gray - 400 hover:text - white transition-colors duration-200">;
                 Privacy Policy;
               </Link>;
-              <Link href="/terms" className="text - gray - 400 hover:text - white transition - colors duration - 200">;
+              <Link href="/terms" className="text - gray - 400 hover:text - white transition-colors duration-200">;
                 Terms of Service;
               </Link>;
-              <Link href="/cookies" className="text - gray - 400 hover:text - white transition - colors duration - 200">;
+              <Link href="/cookies" className="text - gray - 400 hover:text - white transition-colors duration-200">;
                 Cookie Policy;
               </Link>;
             </div>;
@@ -567,9 +570,9 @@ export default function FuturisticFooter() {;
       <div className='absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse' />;
       <div className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000' />;
       <div className='absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500' />;
-    </footer>);      <div className="absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse" />;
-      <div className="absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000" />;
-      <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
+    </footer>);      <div className="absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded-full animate-pulse" />;
+      <div className="absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate-pulse delay-1000" />;
+      <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate-pulse delay-500" />;
     </footer>);
 }
 <<<<<<< HEAD

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -8,11 +9,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -41,31 +44,11 @@
 
     website: string;
   }
-<<<<<<< HEAD
-=======
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-=======
-
-  market_advantage: string;
-;
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -78,14 +61,15 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Advanced AI & Consciousness Services
   {
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -99,11 +83,14 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     icon: '🧠',
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
@@ -129,12 +116,15 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 =======
     icon: '🧠',
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -162,6 +152,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
+<<<<<<< HEAD
     implementation_details:;
 <<<<<<< HEAD
 =======
@@ -632,6 +623,9 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
 <<<<<<< HEAD
     id: 'predictive-analytics-engine'
+=======
+    implementation_details:;    id: 'predictive-analytics-engine'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
     price: '$2,199'
@@ -639,8 +633,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     description:
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
     features: [
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -654,6 +646,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: true,
     icon: '📊',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -670,11 +663,12 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     target_audience:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,
     setup_time: '2 - 3 weeks',
     category: 'Advanced Analytics & AI',
-<<<<<<< HEAD
     integrations: [
       'Data warehouses, Business intelligence tools, CRM systems, ERP platforms'
     ]
@@ -689,50 +683,23 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-    customers: 189,
     rating: 4 && 4.8,
     reviews: 145,
-];
-export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-=======
-
-      'Enterprise-grade predictive analytics platform with custom model development',
-    launchDate: '2024-05-01',
-    real_service: true,
-    technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'],
-    integrations: [;
-      'Data warehouses, Business intelligence tools, CRM systems, ERP platforms',
-    ],
-    use_cases: [;
-      'Sales forecasting, Demand prediction, Risk assessment, Performance optimization',
-    ],
-    roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
-    competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'],
-    market_size: '$30B+ predictive analytics market',
-    growth_rate: '160% YoY',
-    variant: 'analytics - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Enterprise - grade predictive analytics platform with custom model development',
-    launch_date: '2024 - 05 - 01',
-
-    customers: 189,
-    rating: 4 && 4.8,
-    reviews: 145,
-
 
       'Advanced predictive analytics platform with custom ML model development',
   },;
 
-
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
+=======
+=======    benefits: [;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       '60% decision accuracy improvement',
       '35% operational cost reduction',
       'Advanced ML algorithms',
@@ -748,6 +715,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     ],
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
       'Advanced predictive analytics platform with custom ML model development',
@@ -1234,3 +1202,6 @@ export default specializedEnterpriseServices;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  },export default specializedEnterpriseServices;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

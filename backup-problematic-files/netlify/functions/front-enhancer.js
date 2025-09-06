@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -34,6 +35,8 @@ exports.handler = async () => {;
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -71,11 +74,14 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
@@ -87,4 +93,7 @@ exports.handler = async () => {
 main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

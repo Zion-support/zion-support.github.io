@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent' | 'admin';
 export interface UserSummary {;
   id: string;
@@ -115,3 +116,7 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

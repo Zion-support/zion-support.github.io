@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -18,18 +19,19 @@ export function UpcomingInterviewsCard() {
 =======
 // Filter for confirmed interviews in the future
         const upcoming = interviews
+=======
+        // Filter for confirmed interviews in the future        const upcoming = interviews
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           .filter(
             interview =>
               interview.status === 'confirmed' &&
               !isPast(parseISO(interview.scheduled_date))
           )
 
-
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
-
 
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
@@ -67,9 +69,6 @@ export function UpcomingInterviewsCard() {
     loadInterviews()
   }, []),
 
-
-
-
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -89,6 +88,10 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -96,9 +99,21 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
+<<<<<<< HEAD
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from "@/components/ui/avatar",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+=======
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { format, isPast, parseISO } from 'date-fns';
+import Link from 'next/link';
+import { Calendar, Clock, Video } from 'lucide-react';
+import { Avatar } from '@/components/ui/avatar';
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews(),;
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
@@ -137,6 +152,7 @@ export function UpcomingInterviewsCard() {;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <div className="space-y-4">;
             {[1, 2].map(i => (;
               <div key={i} className="flex items-center gap-3 animate-pulse">;
@@ -158,6 +174,8 @@ export function UpcomingInterviewsCard() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -178,9 +196,12 @@ export function UpcomingInterviewsCard() {;
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
   }
 
   return (
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -191,6 +212,10 @@ export function UpcomingInterviewsCard() {;
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -204,9 +229,12 @@ export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -220,8 +248,11 @@ export function UpcomingInterviewsCard() {;
                   ) : (
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
@@ -241,6 +272,7 @@ export function UpcomingInterviewsCard() {;
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
+<<<<<<< HEAD
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
         <CardTitle className='text-lg flex items-center'>;
@@ -318,6 +350,8 @@ export function UpcomingInterviewsCard() {;
           })}
         </div>
         
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href="/interviews">
@@ -326,8 +360,11 @@ export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>
         </div>
       </CardContent>
@@ -415,8 +452,8 @@ if ( {) {
                         interview.talent_name ||;
                         'U').char_at (0)}
                     </div>;
-            return (<div key={interview.id} className="flex items - center gap - 3">;
-                <Avatar className="h - 10 w - 10 bg - zion - purple / 10">;
+            return (<div key={interview.id} className="flex items - center gap-3">;
+                <Avatar className="h - 10 w - 10 bg - zion-purple / 10">;
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
                   {interview.client_avatar || interview.talent_avatar ? (
@@ -424,7 +461,7 @@ if ( {) {
                       src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined;
                       alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string;
                     />) : (
-                    <div className="flex h - full w - full items - center justify - center bg - zion - purple / 20 text - zion - purple font - medium">;
+                    <div className="flex h - full w - full items - center justify - center bg - zion - purple / 20 text - zion - purple font-medium">;
                       {(interview.client_name || interview.talent_name || "U").char_at (0)}
                     </div>)}
                 </Avatar>;
@@ -455,11 +492,13 @@ if ( {) {
 
 }
 
-
-
     </Card>);
 }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

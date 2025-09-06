@@ -1,30 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {;
-  Form,;
-  FormControl,;
-  FormDescription,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
@@ -39,6 +20,7 @@ import {
   FormItem
   FormLabel
   FormMessage
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,12 +42,15 @@ import {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Form,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -184,6 +169,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { control, register, watch, setValue } = form;
 
   const keywords = watch("keywords");
@@ -196,8 +183,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
@@ -207,6 +192,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       if (value && !keywords.includes(value)) {
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -558,56 +544,29 @@ if ( {) {
                       max_length={platform === "ios" ? 170 : 80}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Input ;
                       placeholder="Brief description of your app";
                       maxLength={platform === "ios" ? 170 :80}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
-<<<<<<< HEAD
                     Max {platform === "ios" ? "170" : "80"} characters;
                   </FormDescription>;
 
             />;
 
-
             <FormField
               control={control}
-              name="longDescription"
-=======
-            />;
-            <FormField
-              control={control}
-              name="longDescription"
-                    Max {platform === "ios" ? "170" :"80"} characters;
-                  </FormDescription>;
-                </FormItem>;              )}
-            />;
-            ;
-            <FormField;
-              control={control}
-              name="longDescription";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              render={({ field }) => (;
+              name="longDescription"              render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Long Description</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
                     <Textarea
                       placeholder="Detailed description of your app"
-                      className="min-h-32"
-=======
-                    <Textarea ;
-                      placeholder="Detailed description of your app";
-                      className="min-h-32";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                      maxLength={maxDescriptionLength}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                </FormItem>)}
+                      className="min-h-32"                      maxLength={maxDescriptionLength}                </FormItem>)}
             />;
             <FormField;
               control={control}
@@ -618,19 +577,18 @@ if ( {) {
                   <FormControl>;
                     <Textarea;
                       placeholder="Detailed description of your app";
-                      className="min - h-32";
+                      className="min-h-32";
                       max_length={maxDescriptionLength}
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 </FormItem>;
               )}
             />;
             <FormField;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -685,11 +643,14 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
+<<<<<<< HEAD
                   <FormControl>
 <<<<<<< HEAD
                     <Textarea
@@ -714,6 +675,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       placeholder="Detailed description of your app"
+=======
+                  <FormControl>                      placeholder="Detailed description of your app"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                       {...field}
@@ -724,6 +688,7 @@ if ( {) {
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
 <<<<<<< HEAD
             
@@ -781,6 +746,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               />;
+=======
+            />              />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
@@ -788,36 +756,13 @@ if ( {) {
                   <Badge
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     {keyword}
-
-=======
-                    {longDescription.length}/{maxDescriptionLength} characters;
-                  </FormDescription>;
-                </FormItem>;
-              )}
-            />;
-            ;
-            <div>;
-              <FormLabel htmlFor="keywords">Keywords</FormLabel>;
-              <Input ;
-                id="keywords";
-                placeholder="Add keywords (press Enter or comma to add)";
-                onKeyDown={addKeyword}
-                className="mb-2";
-              />;
-              ;
-              <div className="flex flex-wrap gap-2 mt-2">;
-                {keywords.map((keyword, index) => (;
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">;
-                    {keyword}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                     <button 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
                       type="button"
 <<<<<<< HEAD
@@ -921,12 +866,16 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <FormField
+=======
+                      type="button"            <FormField
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               control={control}
               name="version"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1079,6 +1028,10 @@ if (value && !keywords.includes (value) ) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
+=======
+
+););
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -1091,9 +1044,6 @@ if (value && !keywords.includes (value) ) {
         </Form>;
       </CardContent>;
     </Card>;
-  );
+  )
 };
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

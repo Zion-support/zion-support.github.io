@@ -29,7 +29,11 @@ class ErrorFixer {}
   };
   async fixSyntaxErrors() {}
     this.log('Starting syntax error fixing...');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       const fixes = [{}]
           "pattern": /;/g,
@@ -55,12 +59,20 @@ class ErrorFixer {}
 
       let totalFixed = 0;
       const files = this.getSourceFiles();
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       for (const file of files) {}
         try {}
           let content = fs.readFileSync(file, 'utf8');
           let fileFixed = false;
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           for (const fix of fixes) {}
             const before = content;
             content = content.replace(fix.pattern, fix.replacement);
@@ -86,7 +98,11 @@ class ErrorFixer {}
   };
   async fixLintingErrors() {}
     this.log('Starting linting error fixing...');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
@@ -104,7 +120,11 @@ class ErrorFixer {}
     const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     const files = [];
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
@@ -114,11 +134,19 @@ class ErrorFixer {}
   };
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
+<<<<<<< HEAD
 
     for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
 
+=======
+    
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (stat.isDirectory()) {}
         this.getFilesRecursively(fullPath, extensions, files);
       } else if (extensions.some(ext => item.endsWith(ext))) {}
@@ -128,6 +156,7 @@ class ErrorFixer {}
   };
   async run() {}
     this.log('Starting error fixing automation...');
+<<<<<<< HEAD
 
     try {}
       const syntaxFixed = await this.fixSyntaxErrors();
@@ -136,6 +165,16 @@ class ErrorFixer {}
       this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
         - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
 
+=======
+    
+    try {}
+      const syntaxFixed = await this.fixSyntaxErrors();
+      const lintingFixed = await this.fixLintingErrors();
+      
+      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
+        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return {}
         syntaxFixed,
         lintingFixed,
@@ -159,5 +198,10 @@ if (require.main === module) {}
   }
 });
 };
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ErrorFixer;
+module.exports = ErrorFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

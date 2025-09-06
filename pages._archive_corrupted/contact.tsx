@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -75,6 +76,11 @@ import Link from 'next/link';
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { 
   Phone, 
   Mail, 
@@ -84,6 +90,7 @@ import {
   Send,
   MessageCircle,
   Globe
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,6 +160,9 @@ const "ContactPage": React.FC = () => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -178,6 +188,7 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -215,6 +226,8 @@ const "ContactPage": React.FC = () => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -230,6 +243,7 @@ const "ContactPage": React.FC = () => {
     "Cloud & DevOps Solutions",
     "Blockchain Technology",
     "Digital Transformation",
+<<<<<<< HEAD
     "Consulting & Strategy"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,6 +286,9 @@ const "ContactPage": React.FC = () => {
 =======
   ]
   return (
+=======
+    "Consulting & Strategy"  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>
       <SEO title=\"Contact Us - Zion Tech Group\"
         description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"
@@ -318,6 +335,7 @@ const "ContactPage": React.FC = () => {
               </motion.div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -463,10 +481,13 @@ const "ContactPage": React.FC = () => {;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+<<<<<<< HEAD
 const "Contact": NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -517,6 +538,9 @@ const "Contact": NextPage = () => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const contactInfo = [{
+=======
+const "Contact": NextPage = () => {  const contactInfo = [{
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -540,8 +564,11 @@ const "Contact": NextPage = () => {
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   ];
   const offices = [{
@@ -619,6 +646,7 @@ const "Contact": NextPage = () => {
                   <div>
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
+<<<<<<< HEAD
                     </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -699,6 +727,9 @@ const "Contact": NextPage = () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
+=======
+                    </label>      {/* Hero Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center\">;
@@ -750,9 +781,12 @@ const "Contact": NextPage = () => {;
                       First Name *;
                     </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <input
                       type=\"text\"
                       id=\"firstName\"
@@ -760,13 +794,17 @@ const "Contact": NextPage = () => {;
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     />
                   </div>
                   <div>
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       Last Name *
+<<<<<<< HEAD
                     </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -781,20 +819,27 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     <input
+=======
+                    </label>                    <input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     />
                   </div>
                 </div>
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
+<<<<<<< HEAD
                   </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -810,19 +855,26 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
+=======
+                  </label>                  <input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />
                 </div>
                 <div>
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Company
+<<<<<<< HEAD
                   </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -837,18 +889,25 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
+=======
+                  </label>                  <input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />
                 </div>
                 <div>
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Phone Number
+<<<<<<< HEAD
                   </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -863,13 +922,19 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
+=======
+                  </label>                  <input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />
                 </div>
                 <div>
@@ -896,6 +961,7 @@ const "Contact": NextPage = () => {;
                 <div>
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Message *
+<<<<<<< HEAD
                   </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -930,14 +996,20 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <textarea
+=======
+                  </label>                  <textarea
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     id=\"message\"
                     name=\"message\"
                     rows={6}
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     placeholder=\"Tell us about your project or how we can help you...\"
                   ></textarea>
                 </div>
@@ -998,12 +1070,15 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     placeholder=\"Tell us about your project or how we can help you...\"></textarea>;
                 </div>;
                 <button
@@ -1048,6 +1123,7 @@ const "Contact": NextPage = () => {;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       {/* FAQ Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1146,6 +1222,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 What is your typical project timeline?
+=======
+      {/* FAQ Section */}                What is your typical project timeline?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -1153,6 +1232,7 @@ const "Contact": NextPage = () => {;
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1240,6 +1320,12 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 Do you provide ongoing support?
+=======
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </h3>
               <p className=\"text-gray-600\">
                 Yes, we offer comprehensive support and maintenance packages to ensure 
@@ -1247,6 +1333,7 @@ const "Contact": NextPage = () => {;
                 security patches, and technical support.
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1334,6 +1421,12 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 What technologies do you specialize in?
+=======
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -1341,6 +1434,7 @@ const "Contact": NextPage = () => {;
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1428,6 +1522,12 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 How do you ensure project quality?
+=======
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
@@ -1440,9 +1540,13 @@ const "Contact": NextPage = () => {;
       </section>
     </MainLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
           {/* Contact Information */}
           <section className=\"py-20\">
@@ -1460,15 +1564,8 @@ const "Contact": NextPage = () => {;
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -1640,12 +1737,15 @@ const "Contact": NextPage = () => {;
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 <<<<<<< HEAD
 =======
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
@@ -1713,6 +1813,8 @@ const "Contact": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {contactInfo.map((info, index) => (
                   <motion.div
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -1765,17 +1867,15 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
 =======
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-=======
-<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
                 transition={{ \"duration\": 0.6 }}
@@ -1839,6 +1939,8 @@ const "Contact": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
@@ -1867,23 +1969,30 @@ const "Contact": NextPage = () => {;
                       </label>;
                       <inputtype=\"text\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         id=\"name\"
                         name=\"name\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your full name\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                        />
                     </div>
                     <div>
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Email Address *
                       </label>
+<<<<<<< HEAD
                       <input type=\"email\"
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -1977,16 +2086,31 @@ const "Contact": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                      <input type=\"email\"                        id=\"email\"
+                        name=\"email\"
+                        required
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                       />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         placeholder=\"your && your.email@example && example.com\"
                        />;
                     </div>;
@@ -2003,22 +2127,29 @@ const "Contact": NextPage = () => {;
                       </label>;
                       <inputtype=\"tel\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                        />
                     </div>
                     <div>
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Company
                       </label>
+<<<<<<< HEAD
                       <input type=\"text\"
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2125,6 +2256,12 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                       Service Interest
+=======
+                      <input type=\"text\"                        id=\"company\"
+                        name=\"company\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your company name\"                      Service Interest
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </label>
                     <select
                       id=\"service\"
@@ -2139,6 +2276,7 @@ const "Contact": NextPage = () => {;
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2264,6 +2402,13 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                       Message *
+=======
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">                      Message *
+                    </label>                      Message *
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </label>
                     </select>;
                   </div>;
@@ -2274,15 +2419,19 @@ const "Contact": NextPage = () => {;
                       Message *;
                     </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <textarea
                       id=\"message\"
                       name=\"message\"
                       rows={6}
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       placeholder=\"Tell us about your project requirements...\"></textarea>;
                   </div>;
@@ -2294,19 +2443,20 @@ const "Contact": NextPage = () => {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       placeholder=\"Tell us about your project requirements...\"
                     ></textarea>
                   </div>
                   <motion.button
                     type=\"submit\"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
@@ -2315,6 +2465,7 @@ const "Contact": NextPage = () => {;
                     Send Message
                   </motion.button>
                 </motion.form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2390,6 +2541,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
         {/* Hero Section */}
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"text-center\">
@@ -2407,16 +2561,6 @@ const "Contact": NextPage = () => {;
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
               {/* Contact Form */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
                       placeholder=\"Tell us about your project requirements...\"></textarea>;
                   </div>;
                   <motion&& motion.button
@@ -2437,6 +2581,7 @@ const "Contact": NextPage = () => {;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 =======
 >>>>>>> main
@@ -2549,13 +2694,22 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 {isSubmitted ? (
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\"
@@ -2569,6 +2723,7 @@ const "Contact": NextPage = () => {;
                       <div>
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Full Name *
+<<<<<<< HEAD
                         </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2600,13 +2755,19 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         <input
+=======
+                        </label>                        <input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
                           required
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           value={formData.name}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -2616,6 +2777,7 @@ const "Contact": NextPage = () => {;
                       <div>
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Email Address *
+<<<<<<< HEAD
                         </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2634,10 +2796,14 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         <input
+=======
+                        </label>                        <input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
                           required
+<<<<<<< HEAD
 <<<<<<< HEAD
                           value={formData && formData.email}
                           onChange={handleInputChange}
@@ -2713,26 +2879,41 @@ const "Contact": NextPage = () => {;
 =======
 =======
                           value={formData && formData.email}
+=======
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           placeholder=\"your@email && email.com\"
                         />;
                       </div>;
@@ -2748,16 +2929,22 @@ const "Contact": NextPage = () => {;
                           Company;
                         </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <input
                           type=\"text\"
                           id=\"company\"
                           name=\"company\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           value={formData.company}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -2767,6 +2954,7 @@ const "Contact": NextPage = () => {;
                       <div>
                         <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Phone Number
+<<<<<<< HEAD
                         </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2791,6 +2979,12 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+                        </label>                        <input
+                          type=\"tel\"
+                          id=\"phone\"
+                          name=\"phone\"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           value={formData.phone}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -2818,6 +3012,7 @@ const "Contact": NextPage = () => {;
                     <div>
                       <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                         Message *
+<<<<<<< HEAD
                       </label>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2853,10 +3048,14 @@ const "Contact": NextPage = () => {;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                       <textarea
+=======
+                      </label>                      <textarea
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         id=\"message\"
                         name=\"message\"
                         required
                         rows={6}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         value={formData && formData.message}
                         onChange={handleInputChange}
@@ -2890,6 +3089,8 @@ const "Contact": NextPage = () => {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         value={formData.message}
                         onChange={handleInputChange}
                         className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -2918,6 +3119,7 @@ const "Contact": NextPage = () => {;
               </div>
               {/* Contact Information */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 <div className=\"space-y-6\">
@@ -2926,12 +3128,15 @@ const "Contact": NextPage = () => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <div className=\"space-y-8\">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
                   <p className=\"text-lg text-gray-300 mb-8\">
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3018,6 +3223,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+=======
+                <div className="space-y-6">                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
                         <info.icon className=\"w-6 h-6 text-white\" />
                       </div>
@@ -3031,6 +3239,7 @@ const "Contact": NextPage = () => {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3063,6 +3272,8 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
           </section>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Services Overview */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
@@ -3104,6 +3315,7 @@ const "Contact": NextPage = () => {;
 export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -3123,6 +3335,8 @@ export default ContactPage
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </section>
               <div className=\"space-y-8\">;
                 <div>;
@@ -3185,6 +3399,7 @@ export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3192,15 +3407,15 @@ export default ContactPage
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default ContactPage
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-          </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -3268,6 +3483,9 @@ export default ContactPage
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               </div>;
+=======
+=======              </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
           </section>;
         </main>;
@@ -3293,6 +3511,7 @@ export default ContactPage;
     </>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3349,3 +3568,7 @@ export default ContactPage;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

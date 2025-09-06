@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"E2E"
   test('"homepage"
@@ -26,6 +29,7 @@ test && test.describe('"E2E"
     "await": page && page.fill('textarea[name="message"
     await page && page.click('button[type="submit"
     "await"
+<<<<<<< HEAD
 <<<<<<< HEAD
     "await";
 =======
@@ -50,6 +54,9 @@ test && test.describe('"E2E"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { test, expect } = require('@playwright/test')';
+=======
+    "await";const { test, expect } = require('@playwright/test')';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 test.describe('"E2E": Tests', () => {';
   test('"homepage": loads correctly', async ({ page }) => {';
     "await": page.goto('/')';
@@ -120,6 +127,7 @@ test.describe('"E2E": Tests', () => {';
     await page.waitForLoadState('networkidle')})})';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -150,6 +158,9 @@ const { test,expect } = require('@playwright/test')';; test.describe('E2E: Tests
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 const { test, expect } = require('@playwright/test')'
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 test && test.describe('"E2E"
   test('"homepage"
     "await"
@@ -162,8 +173,11 @@ test && test.describe('"E2E"
     await page && page.click('button[type="submit"
     "await"
     "await";
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

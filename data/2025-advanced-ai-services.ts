@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const advancedAIServices2025 = [
 
@@ -10,6 +11,8 @@ export const advancedAIServices2025 = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -24,7 +27,6 @@ export const advancedAIServices2025 = [
 export const advancedAIServices2025 = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-<<<<<<< HEAD
     id: 'ai - powered - business - intelligence - suite',
     name: 'BusinessIntelligence AI Pro',
     description:;
@@ -38,10 +40,6 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Advanced security and compliance',
     ],
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     pricing: {
       starter: {
         price: 199
@@ -49,42 +47,10 @@ export const advancedAIServices2025 = [;
         features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
-<<<<<<< HEAD
-=======
-
-=======
-        price: 499,
-        period: 'month',
-        features: [;
-          'Up to 50 users',
-          'Advanced AI models',
-          'Custom dashboards',
-          'Predictive analytics',
-        ],
-      },
-      enterprise: {
-        price: 1299,
-        period: 'month',
-        features: [;
-
-          'Unlimited users',
-          'Custom AI training',
-          'White - label solution',
-          'Dedicated support',
-        ],
-      },
-    },
-    category: 'Business Intelligence',
-    tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'],
-
-    website: 'https://ziontechgroup.com / business - intelligence - ai - pro',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     targetAudience:
       'Business analysts, data scientists, executives, enterprise businesses'
     competitiveAdvantage:
@@ -104,71 +70,10 @@ export const advancedAIServices2025 = [;
       'Integration with CRM systems'
       'Advanced reporting and dashboards'
       'Custom AI model training'
-=======
-
-=======
-    market_size: '$27.3B',
-    target_audience:;
-      'Business analysts, data scientists, executives, enterprise businesses',
-    competitive_advantage:;
-      'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration',
-  },
-  {
-    id: 'intelligent - customer - analytics - platform',
-    name: 'CustomerAnalytics AI',
-    description:;
-      'AI - powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.',
-    features: [;
-      'Customer behavior prediction',
-      'Personalization engine',
-      'Churn risk analysis',
-      'Customer segmentation',
-      'Real - time analytics',
-      'Integration with CRM systems',
-      'Advanced reporting and dashboards',
-      'Custom AI model training',
-    ],
-    pricing: {
-      starter: {
-        price: 149,
-        period: 'month',
-        features: [;
-          'Up to 10, 000 customers',
-          'Basic analytics',
-          'Standard reports',
-        ],
-      },
-      professional: {
-        price: 399,
-        period: 'month',
-        features: [;
-          'Up to 100, 000 customers',
-          'Advanced AI',
-          'Custom models',
-          'Real - time insights',
-        ],
-      },
-      enterprise: {
-        price: 999,
-        period: 'month',
-        features: [;
-
-          'Unlimited customers',
-          'Custom AI training',
-          'White - label solution',
-          'Dedicated support',
-        ],
-      },
-    },
-    category: 'Customer Analytics',
-    tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
-
-    website: 'https://ziontechgroup.com / customer - analytics - ai',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
+<<<<<<< HEAD
     },
 <<<<<<< HEAD
 =======
@@ -1430,3 +1335,7 @@ export const advancedAIServices2025 = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    },  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,16 +1,9 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +35,8 @@ export function ProjectMilestonesContent() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -49,6 +44,7 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -94,11 +90,15 @@ import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {;
     async function loadProject() {;
+<<<<<<< HEAD
       if (!projectId) return;
 
       setIsLoading(true);
@@ -219,14 +219,16 @@ export function ProjectMilestonesContent() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
+=======
+        if (projectData) {;
+          setProject(projectData);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     async function loadProject() {;
       if (!projectId) return,;
       ;
       setIsLoading(true),;
       try {;
-
-
-
 
         const projectData = await getProjectById(projectId);
         if (projectData) {;
@@ -256,6 +258,7 @@ export function ProjectMilestonesContent() {;
 ;
     loadProject(),;
     refetch();
+<<<<<<< HEAD
   }, [projectId, getProjectById, refetch]),;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -599,19 +602,14 @@ export function ProjectMilestonesContent() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             milestones={milestones}
+=======
+  }, [projectId, getProjectById, refetch]),;            milestones={milestones}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            paymentTerms={project && project.payment_terms}
-=======
-            paymentTerms={project.paymentterms}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            isSubmitting={isSubmitting}
+            paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
@@ -690,9 +688,9 @@ if ( {) {
   $2
 }
     return (
-      <div className="container mx - auto py - 8 px - 4">;
-        <div className="flex justify - center items - center h - 64">;
-          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;
+      <div className="container mx - auto py - 8 px-4">;
+        <div className="flex justify - center items - center h-64">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
         </div>;
       </div>);
   }
@@ -717,10 +715,10 @@ if (return, ) {
   }
 ;
   return (
-    <div className="container mx - auto py - 8 px - 4">;
+    <div className="container mx - auto py - 8 px-4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      <div className="flex justify - between items - center my - 6">;
-        <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
+      <div className="flex justify - between items - center my-6">;
+        <h2 className="text - 2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
           project_id={project_id || ''}
           isUnderDispute={isUnderDispute}
@@ -730,7 +728,7 @@ if (return, ) {
         />;
       </div>;
       <Tabs value={active_tab} onValueChange={setActiveTab}>;
-        <TabsList className="mb - 6">;
+        <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
           <TabsTrigger value="activity">Activity</TabsTrigger>;
           {is_talent && (
@@ -750,6 +748,7 @@ if (return, ) {
             onUpdateStatus={updateMilestoneStatus}
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
+<<<<<<< HEAD
             refetch={refetch}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -794,13 +793,14 @@ if (return, ) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onSubmit={handleMilestoneSubmit}
+=======
+            refetch={refetch}              onSubmit={handleMilestoneSubmit}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
               projectStartDate={project && project.start_date}
               projectEndDate={project && project.end_date}
-<<<<<<< HEAD
-<<<<<<< HEAD
               projectType={projectType}
             />;
           )}
@@ -813,6 +813,7 @@ if (return, ) {
       </Tabs>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -872,12 +873,14 @@ if (return, ) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; setIsLoading (true);
+=======
+}  ),; setIsLoading (true);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 try {
   
 }finally {
   setIsLoading (false) 
 }
-<<<<<<< HEAD
 ;
 
 }loadProject ();
@@ -889,8 +892,8 @@ if (isLoading || !project) {
   if (!projectId) return;
 //Ensure all required fields are present const milestoneData = {
   project id: projectId;
-title: data.title;
-description: data.description || "";
+title: data.title,
+  description: data.description || "";
 amount: data.amount;
 status: " pending"as const;
 due date: data.due date ? data.due date.toISOString () : undefined 
@@ -976,7 +979,11 @@ await handleMilestoneCreated ()
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -7,6 +8,8 @@ import { Button } from "@/components/ui/button",
 import Link from "next/link",
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (;
@@ -42,6 +45,7 @@ import React from './react';
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } from '@/lib / utils';
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface OnboardingStep {
   id: string,
@@ -112,6 +116,22 @@ export function OnboardingTracker({;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
           style={{ width: `${progress}%` }}
+=======
+import React from "react"
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import React from "react",
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+export interface OnboardingStep {
+  id: string
+  label: string
+  completed: boolean
+  link: string          style={{ width: `${progress}%` }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ></div>;
       </div>;
       {/* Steps list */}
@@ -128,6 +148,7 @@ export function OnboardingTracker({;
             <div className="flex-1">
               <div className="text-sm font-medium text-white">{step.label}</div>
             </div>
+<<<<<<< HEAD
             {!step.completed && step.action && (
 <<<<<<< HEAD
               <Button 
@@ -165,13 +186,19 @@ export function OnboardingTracker({;
 
 
   step.link 
+=======
+            {!step.completed && step.action && (  step.link 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }> </Link> </Button>) 
 }</div>) ) ;
 }</div> </div>) ;
 }"};
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </div>;
     </div>;
   );

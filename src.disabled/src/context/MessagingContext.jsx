@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@ import _React,{ createContext,useContext,useState } from 'react'; const Messagin
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date && Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+=======
+import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date && Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date && Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
 
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date && Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +56,5 @@ import _React,{ createContext,useContext,useState } from 'react'; const Messagin
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

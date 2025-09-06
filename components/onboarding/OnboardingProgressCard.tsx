@@ -31,6 +31,7 @@ import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
 export type OnboardingStep = {;
   id: string;
   label: string;
+<<<<<<< HEAD
   completed: boolean;
 <<<<<<< HEAD
   ctaLabel?: string;
@@ -43,12 +44,18 @@ export type OnboardingProgressCardProps = {;
 =======
 
 
+=======
+  completed: boolean
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export type OnboardingProgressCardProps = {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;}
@@ -70,10 +77,13 @@ export type OnboardingProgressCardProps = {
   return Math.round((completedCount / steps.length) * 100);
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
@@ -118,8 +128,7 @@ export default function OnboardingProgressCard({
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
-  const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
-
+  const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel)
 };
 
 function computePercentage(steps: OnboardingStep[]): number {
@@ -129,13 +138,13 @@ function computePercentage(): any (steps: OnboardingStep[]): number {;
   if (!steps || steps && steps.length === 0) return 0;
   const completedCount = steps && steps.filter(s => s && s.completed).length;
   return Math && Math.round((completedCount / steps && steps.length) * 100);  ctaLabel?: string;
-  ctaHref?: string;
+  ctaHref?: string
 };
 
 export type OnboardingProgressCardProps = {;
   title: string,;
   steps: OnboardingStep[],;
-  highlightColorClass?: string;
+  highlightColorClass?: string
 };
 
 function computePercentage(): any (steps: OnboardingStep[]): number {;
@@ -193,7 +202,7 @@ export type OnboardingProgressCardProps = {
 export type OnboardingProgressCardProps = {
   title: string,
   steps: OnboardingStep[],
-  highlightColorClass?: string;
+  highlightColorClass?: string
 };
 
 function computePercentage(steps: OnboardingStep[]): number {
@@ -296,11 +305,14 @@ function OnboardingProgressCard() {
               <Link href={step.ctaHref}>
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -365,9 +377,9 @@ function OnboardingProgressCard() {
         <div className='mt - 4 flex items - center gap - 2 text - green - 600 dark:text - green - 400'>;
           <PartyPopper size={18} />;
           <span className='text - sm'>All steps completed — great job!</span>        </div>) : null}
-      {/* Checklist */}        <div className="mt - 4 flex items - center gap - 2 text - green - 600 dark:text - green - 400">;
+      {/* Checklist */}        <div className="mt - 4 flex items - center gap - 2 text - green - 600 dark:text-green-400">;
           <PartyPopper size={18} />;
-          <span className="text - sm">All steps completed — great job!</span>;
+          <span className="text-sm">All steps completed — great job!</span>;
         </div>) : null}
       {/* Checklist */}
       <ul className='mt - 4 space - y-2'>;
@@ -385,7 +397,7 @@ function OnboardingProgressCard() {
             </div>;
             {!step.completed && step.cta_href && step.cta_label ? (
               <Link href={step.cta_href}>;
-                <a className='text - xs px - 3 py - 1.5 rounded - md border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 50 dark:hover:bg - gray - 900 transition'>                  {step.cta_label}                <a className="text - xs px - 3 py - 1.5 rounded - md border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 50 dark:hover:bg - gray - 900 transition">;
+                <a className='text - xs px - 3 py - 1.5 rounded - md border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 50 dark:hover:bg - gray - 900 transition'>                  {step.cta_label}                <a className="text - xs px - 3 py - 1.5 rounded - md border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 50 dark:hover:bg-gray-900 transition">;
                   {step.cta_label}
                 </a>;
               </Link>) : null}
@@ -395,9 +407,9 @@ function OnboardingProgressCard() {
       {!all_done && first_incomplete ? (
         <div className='mt - 5'>;
           <Link href={first_incomplete.cta_href!}>;
-            <a className='inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon - blue hover:opacity - 90 transition'>              {first_incomplete.cta_label}        <div className="mt - 5">;
+            <a className='inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon - blue hover:opacity - 90 transition'>              {first_incomplete.cta_label}        <div className="mt-5">;
           <Link href={first_incomplete.cta_href!}>;
-            <a className="inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon - blue hover:opacity - 90 transition">;
+            <a className="inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon-blue hover:opacity-90 transition">;
               {first_incomplete.cta_label}
             </a>;
           </Link>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
@@ -6,6 +7,21 @@ import {;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+  BarChart3, Globe, Database, Cpu, Rocket, Brain;
+} from 'lucide-react';
+interface ContentItem {id: string;
+  title: string;
+  href: string;
+  desc: string;
+  category: string;
+  subcategory?: string;
+  date: string;
+  relevance: 'high' | 'medium' | 'low';
+  tags: string[];
+  source: string;
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect, useMemo } from 'react',
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
@@ -25,6 +41,7 @@ interface ContentItem {
   tags: string[],
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -32,12 +49,21 @@ interface ContentItem {
 interface ContentCategory {id: string;
   name: string;
   icon: any;
+=======
+}
+interface ContentCategory {id: string;
+  name: string;
+  icon: any,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
   color: string;
   count: number;
   subcategories?: string[];
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -53,7 +79,98 @@ interface ContentCategory {id: string;
       source: 'autonomous-auditor';
       type: 'report';
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+const ContentCategorizer: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
+  // Sample content data - in a real implementation, this would come from an API,
+const contentItems: ContentItem[] = [
+    {
+      id: '1',
+      title: 'Structured Data Audit Report',
+      href: '/reports/structured-data-audit.json',
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
+      category: 'seo',
+      subcategory: 'structured-data',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['seojson-ldschemaaudit'],
+      source: 'autonomous-auditor',
+      type: 'report'
+    },
+    {
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'
+    },
+    {
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'
+    },
+    {
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'
+    },
+    {
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'
+    },
+    {
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -119,55 +236,90 @@ interface ContentCategory {id: string;
   const categories: ContentCategory[] = [;
     {id: 'all';
       name: 'All Content';
+<<<<<<< HEAD
       icon: Globe;
       description: 'Complete collection of autonomous content';
+=======
+      icon: Globe,
+  description: 'Complete collection of autonomous content';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-blue-500 to-cyan-500';
       count: contentItems.length;
     }
     {id: 'seo';
       name: 'SEO & Analytics';
+<<<<<<< HEAD
       icon: BarChart3;
       description: 'Search optimization and performance analytics';
+=======
+      icon: BarChart3,
+  description: 'Search optimization and performance analytics';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-green-500 to-emerald-500';
       count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
     {id: 'security';
       name: 'Security & Compliance';
+<<<<<<< HEAD
       icon: Shield;
       description: 'Security assessments and compliance reports';
+=======
+      icon: Shield,
+  description: 'Security assessments and compliance reports';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-red-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
     {id: 'ai';
       name: 'AI & Machine Learning';
+<<<<<<< HEAD
       icon: Brain;
       description: 'AI model performance and insights';
+=======
+      icon: Brain,
+  description: 'AI model performance and insights';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-purple-500 to-pink-500';
       count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
     {id: 'features';
       name: 'Feature Updates';
+<<<<<<< HEAD
       icon: Zap;
       description: 'New features and system updates';
+=======
+      icon: Zap,
+  description: 'New features and system updates';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-yellow-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
     {id: 'monitoring';
       name: 'System Monitoring';
+<<<<<<< HEAD
       icon: Cpu;
       description: 'Infrastructure and system health';
+=======
+      icon: Cpu,
+  description: 'Infrastructure and system health';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-indigo-500 to-purple-500';
       count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
     {id: 'analytics';
       name: 'User Analytics';
+<<<<<<< HEAD
       icon: TrendingUp;
       description: 'User behavior and engagement insights';
+=======
+      icon: TrendingUp,
+  description: 'User behavior and engagement insights';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-teal-500 to-cyan-500';
       count: contentItems.filter(item => item.category === 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];
@@ -194,7 +346,10 @@ interface ContentCategory {id: string;
     { id: 'high', name: 'High Priority', color: 'text-green-400' }
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -203,8 +358,38 @@ interface ContentCategory {id: string;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  ],
+
+  const filteredItems = useMemo(() => {
+    const filtered = contentItems.filter(item => {
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
+      const matchesType = selectedType === 'all' || item.type === selectedType,
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
+      
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance
+    }),
+
+    // Sort items,
+filtered.sort((a, b) => {
+      let comparison = 0,      switch (sortBy) {
+        case 'date':
+          comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
+          break,
+        case 'relevance':
+          const relevanceOrder = { high: 3, medium: 2, low: 1 },
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
+          break,        case 'title':
+          comparison = a.title.localeCompare(b.title),
+          break
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -251,15 +436,21 @@ type=&quot;text&quot;
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -269,8 +460,11 @@ value={selectedSubcategory}
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -281,8 +475,11 @@ value={selectedType}
                   {type.name}
                 </option>;
               ))}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -296,8 +493,11 @@ value={selectedRelevance}
             </select>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -314,15 +514,21 @@ value={sortBy}
               <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
+<<<<<<< HEAD
                 {sortOrder === 'asc' ? '↑' : '↓'}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Clear All Filters
           </button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:components/ContentCategorizer.tsx
       {/* Category Pills */}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
           {categories.map(category => (
@@ -343,9 +549,12 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
           ))}
         </div>;
       </div>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -354,6 +563,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+<<<<<<< HEAD
 :components/ContentCategorizer.tsx
 
                   {item.type}
@@ -362,6 +572,8 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {item.type}
                 </div>;
               </div>;
@@ -404,9 +616,12 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 </div>;
               </div>;
 ;
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -414,8 +629,11 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -423,8 +641,11 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     {tag}
                   </span>;
                 ))}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -442,6 +663,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                   Source: {item.source}
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         })}
       </div>;
@@ -451,6 +673,32 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
+=======
+        })}
+      </div>;
+                <a,
+href={item.href} 
+                  target="blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium"
+                  target=&quot;blank&quot; 
+                  rel=&quot;noopener&quot;
+                  className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
+                >
+                  Open Content
+                  <span aria-hidden></span>
+                </a>
+              </div>
+            </div>
+          )
+        })}
+      </div>;
+;
+      {/* No Results */}
+{filteredItems.length === 0 && (
+        <div className=&quot;text-center py-12&quot;>
+          <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
           <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
           </p>
@@ -465,4 +713,8 @@ onClick={clearAllFilters}
     </div>;
   );
 }
+<<<<<<< HEAD
 export default ContentCategorizer;
+=======
+export default ContentCategorizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

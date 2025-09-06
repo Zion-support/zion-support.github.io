@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -100,6 +100,12 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let message = "This item has an open dispute";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
+=======
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+}
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {export /**
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * DisputeStatusBadge - Function description
  */
 function DisputeStatusBadge() {
@@ -118,20 +124,7 @@ function DisputeStatusBadge() {
       variant = "outline";
       message = "This dispute has been closed";
       break;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
-  let message = "This item has an open dispute";
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
-  let message = "This item has an open dispute",
-  
-  switch (status) {
-    case 'under_review':
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      variant = "secondary",
       message = "This dispute is under review by our team",
       break,
     case 'resolved':
@@ -139,11 +132,11 @@ function DisputeStatusBadge() {
       message = "This dispute has been resolved",
       break,
     case 'closed':
-<<<<<<< HEAD
 
       variant = "outline",
       message = "This dispute has been closed",
       break,
+<<<<<<< HEAD
 
 
 =======
@@ -196,6 +189,8 @@ function DisputeStatusBadge() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -203,7 +198,6 @@ interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -223,58 +217,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       variant = "outline",;
       message = "This dispute has been closed";
       break;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    default:;
-      break;
-  }
-
-  return (
-<<<<<<< HEAD
-=======
-
-import { Badge } from "@/components/ui/badge",;
-import { ShieldAlert } from "lucide-react",;
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
-;
-interface DisputeStatusBadgeProps {;
-  status:'open' | 'under_review' | 'resolved' | 'closed';
-}
-;
-export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
-  let variant:"default" | "destructive" | "secondary" | "outline" = "destructive",;
-  let message = "This item has an open dispute",;
-  ;
-  switch (status) {;
-    case 'under_review':;
-      variant = "secondary",;
-      message = "This dispute is under review by our team",;
-      break,;
-    case 'resolved':;
-      variant = "outline",;
-      message = "This dispute has been resolved",;
-      break,;
-    case 'closed':;
-      variant = "outline",;
-      message = "This dispute has been closed",;
-      break,;
-    default:;
-      break;
-  }
-  ;
-  return (;
-    default:;
-      break;
-  }
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
+<<<<<<< HEAD
           <span>Under Dispute</span>;
 <<<<<<< HEAD
 =======
@@ -357,3 +304,6 @@ message
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          <span>Under Dispute</span>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

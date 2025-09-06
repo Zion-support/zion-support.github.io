@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -50,10 +50,13 @@ export const useUploadDeliverable = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -92,6 +95,8 @@ export const useUploadDeliverable = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -99,6 +104,7 @@ export const useUploadDeliverable = () => {
         .from('project_milestones')
         .select('*')
         .eq('id', milestoneId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       // Create activity record
@@ -173,6 +179,8 @@ export const useUploadDeliverable = () => {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         id: crypto && crypto.randomUUID();
         filename: file && file.name;
@@ -184,6 +192,7 @@ export const useUploadDeliverable = () => {;
       
       const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
       
+<<<<<<< HEAD
 
 =======
         .single();
@@ -611,3 +620,8 @@ isSubmitting
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      // Create activity record
+      await recordMilestoneActivity(
+      return null
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

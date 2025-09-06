@@ -13,6 +13,7 @@ import ForumPostPage from "../pages/ForumPostPage";
 import CreatePostPage from "../pages/CreatePostPage";
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
+<<<<<<< HEAD
 const CommunityRoutes = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -29,6 +30,9 @@ import CommunityProfilePage from "../pages/CommunityProfilePage";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from "react",
+=======
+const CommunityRoutes = () => {import { Fragment } from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import CommunityPage from "../pages/CommunityPage",
@@ -39,8 +43,8 @@ import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 const CommunityRoutes = () => {
-<<<<<<< HEAD
-  return (
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;  return (
     <Routes>
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -48,6 +52,7 @@ const CommunityRoutes = () => {
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -64,9 +69,12 @@ const CommunityRoutes = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const CommunityRoutes = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+const CommunityRoutes = () => {
+=======const CommunityRoutes = () => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Routes>;
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -133,6 +141,7 @@ const CommunityRoutes = () => {;
         }
       />
     </Routes>
+<<<<<<< HEAD
   );
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -145,10 +154,12 @@ const CommunityRoutes = () => {;
         }
       />
     </Routes>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   )
-}
-export default CommunityRoutes;
+};
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -226,31 +237,15 @@ const CommunityRoutes = () =>: any {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProtectedRoute>;
             <CreatePostPage />;
-          </ProtectedRoute>;
-        }
-<<<<<<< HEAD
-      />;
-<<<<<<< HEAD
-
-      <Route;
-        path="/community / edit/:post_id";
-
-        element={
 =======
-      <Route;
-        element={
-        path="/community/edit/:postId";
-        element={;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <ProtectedRoute>;
-            <EditPostPage />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
 
       />;
     </Routes>;
   );
+<<<<<<< HEAD
 
 =======
 },;
@@ -329,3 +324,5 @@ export default CommunityRoutes;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

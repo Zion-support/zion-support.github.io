@@ -3,14 +3,16 @@ import fs from 'fs';
 import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
-
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
     if (fs.existsSync(dir)) {
       for (const f of fs.readdirSync(dir)) {
@@ -49,5 +51,8 @@ res.status(200).json({ ok: true, data });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -33,13 +33,21 @@ class SmartPerformanceOptimizer {}
         try {}
             // Build the project first;
             execSync('npm run build', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
             // Analyze bundle;
             const bundleAnalysis = execSync('npm run analyze', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -53,7 +61,11 @@ class SmartPerformanceOptimizer {}
         const startTime = Date.now(;);
         try {}
             execSync('npm run build', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
@@ -164,5 +176,10 @@ if ( {})
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = SmartPerformanceOptimizer;
+module.exports = SmartPerformanceOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

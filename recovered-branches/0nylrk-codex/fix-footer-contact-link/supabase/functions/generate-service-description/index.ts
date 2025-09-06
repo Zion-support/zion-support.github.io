@@ -1,16 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
@@ -83,26 +84,18 @@ const corsHeaders = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { title, keyFeatures, targetAudience } = await req.json();
-    if (!title) {
-      return new Response(
-        JSON.stringify({
-          error: "Missing required field: title"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -136,8 +129,6 @@ serve(async (req) => {;
         {;
           status: 400,;
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const { title, keyFeatures, targetAudience } = await req && req.json();
 
@@ -145,13 +136,10 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required field: title" 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         });
         {
           status: 400
+<<<<<<< HEAD
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 <<<<<<< HEAD
 =======
@@ -221,6 +209,12 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
@@ -228,9 +222,9 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
-
     
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -254,10 +248,13 @@ Target Audience: ${targetAudience |"General users"}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
+<<<<<<< HEAD
     const prompt = `Create a professional and detailed service description for the following service:;
 <<<<<<< HEAD
 =======
@@ -323,6 +320,11 @@ The description should: 1. Be approximately 200-300 words
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    const prompt = `Create a professional and detailed service description for the following service:;Title: ${title}
+Key Features: ${keyFeatures || "Not specified"}
+Target Audience: ${targetAudience || "General users"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.error ("Error in generate - service - description:", error);
 ;
     return new Response (
@@ -334,6 +336,7 @@ The description should: 1. Be approximately 200-300 words
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
 Key Features: ${keyFeatures || "Not specified"}
+<<<<<<< HEAD
 Target Audience: ${targetAudience || "General users"}
 ;
 The description should: 1. Be approximately 200-300 words;
@@ -451,6 +454,9 @@ The description should: 1. Be approximately 200 - 300 words;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
+=======
+Target Audience: ${targetAudience || "General users"}      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     );
 
 5. Include a compelling opening and closing statement`,
@@ -480,16 +486,10 @@ The description should: 1. Be approximately 200 - 300 words;
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 
 ;
-
-=======
-  }
-});
 ;
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -588,11 +588,12 @@ headers: {
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       }
     );
   }
 });
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

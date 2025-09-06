@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { checkOnline, safeFetch  } from '@/integrations/supabase/client';
 import { vi  } from 'vitest';
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
@@ -56,6 +57,12 @@ it ('check_online returns false when navigator is offline', async () => {
   Object.define_property (window, 'navigator', {
     value: { on_line: false }
     writable: true});
+=======
+// Test that checkOnline returns false when navigator is offline
+it('checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window, 'navigator', {
+    value: { onLine: false };    writable: true});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const result = await check_online ();
   expect (result).to_be (false);
 });
@@ -66,11 +73,9 @@ it ('safe_fetch throws when fetch rejects', async () => {
   vi.spy_on (global, 'fetch').mockRejectedValue (new Error ('Network error'));
   await expect (safe_fetch ('https: //example.com')).rejects.to_throw ('Failed to connect to Supabase');
 ;
-
-=======
-
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
 import { vi } from 'vitest',;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -88,6 +93,8 @@ import { vi } from 'vitest';
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Test that checkOnline returns false when navigator is offline
 it('checkOnline returns false when navigator is offline', async () => {
   Object.defineProperty(window, 'navigator', {
@@ -102,29 +109,12 @@ it('safeFetch throws when fetch rejects', async () => {
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase')
 ;
-<<<<<<< HEAD
-=======
-// Test that checkOnline returns false when navigator is offline;
-it('checkOnline returns false when navigator is offline', async () => {;
-  Object.defineProperty(window, 'navigator', {;
-    value: { onLine: false },;
-    writable: true}),;
-  const result = await checkOnline(),;
-  expect(result).toBe(false);
-}),;
-// Test that safeFetch throws custom error when fetch fails;
-it('safeFetch throws when fetch rejects', async () => {;
-  Object.defineProperty(window, 'navigator', {;
-    value: { onLine: true },;
-    writable: true}),;
-  vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),;
-  await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase');
-});
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 declare const _default: import('@/utils/withErrorLogging').ApiHandler;
+=======
+import * as React from "react";
+declare const _default: import("@/utils/withErrorLogging").ApiHandler;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default _default;
 =======
 import * as React from 'react';

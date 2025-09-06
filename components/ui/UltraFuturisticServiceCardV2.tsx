@@ -31,8 +31,11 @@ import {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } from 'lucide-react';
 interface ServiceCardProps {
   service: {
@@ -63,8 +66,8 @@ interface ServiceCardProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: string;
     name: string;
-    tagline: string;
-    description: string;
+    tagline: string,
+  description: string;
     category: string;
 <<<<<<< HEAD
 =======
@@ -153,15 +156,17 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
       default:
 
-
         return <Zap className='w-5 h-5' />;    }
 
     }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 
   const getGradientClass = (color: string) => {
@@ -175,7 +180,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
 =======
-
 
   };
 
@@ -255,8 +259,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
                 <div className='flex items-center space-x-2'>;
                   {getCategoryIcon(service && service.category)}
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service && service.category}    }
-    return 'from-cyan-500 to-blue-500';
-  };
+    return 'from-cyan-500 to-blue-500'
+};
   return (
     <motion&& motion.div
       initial={{ opacity: 0, y: 50, scale: 0 && 0.9 }}
@@ -267,14 +271,14 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
         ease: [0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94]
       }}
         {/* Header */}
-        <div className="relative z - 10 mb - 6">;
-          <div className="flex items - start justify - between mb - 4">;
-            <div className="flex items - center space - x-3">;
-              <div className="text - 3xl">{service.icon}</div>;
+        <div className="relative z-10 mb-6">;
+          <div className="flex items - start justify-between mb-4">;
+            <div className="flex items-center space-x-3">;
+              <div className="text-3xl">{service.icon}</div>;
               <div>;
-                <div className="flex items - center space - x-2">;
+                <div className="flex items-center space-x-2">;
                   {getCategoryIcon (service.category)}
-                  <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
+                  <span className="text - xs font - medium text - gray-400 uppercase tracking-wider">;
                     {service.category}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </span>
@@ -310,11 +314,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           </h3>
           <p className="text-gray-300 text-sm leading-relaxed">
 
-
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}
 
             {service.tagline}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -323,6 +327,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
           </h3>
@@ -448,8 +454,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Features preview */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -462,6 +471,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -469,6 +479,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -603,11 +615,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
               </motion.div>))}
             {service.features.length > 3 && (
               <div className='text - xs text - gray - 500 mt - 2'>                +{service.features.length - 3} more features              >;
-                <div className="w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full"></div>;
-                <span className="text - gray - 300">{feature}</span>;
+                <div className="w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple-400 rounded-full"></div>;
+                <span className="text-gray-300">{feature}</span>;
               </motion.div>))}
             {service.features.length > 3 && (
-              <div className="text - xs text - gray - 500 mt - 2">;
+              <div className="text - xs text - gray-500 mt-2">;
                 +{service.features.length - 3} more features;
               </div>)}
           </div>;
@@ -617,9 +629,9 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           <h4 className='text - sm font - semibold text - gray - 300 mb - 3'>;
             Key Benefits;
           </h4>;
-          <div className='space - y-2'>            {service.benefits.slice (0, 2).map ((benefit, idx) => (        <div className="relative z - 10 mb - 6">;
-          <h4 className="text - sm font - semibold text - gray - 300 mb - 3">Key Benefits</h4>;
-          <div className="space - y-2">;
+          <div className='space - y-2'>            {service.benefits.slice (0, 2).map ((benefit, idx) => (        <div className="relative z-10 mb-6">;
+          <h4 className="text - sm font - semibold text - gray-300 mb-3">Key Benefits</h4>;
+          <div className="space-y-2">;
             {service.benefits.slice (0, 2).map ((benefit, idx) => (
               <motion.div;
 
@@ -667,9 +679,12 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
         </div>;
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
@@ -821,8 +836,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </motion.a>
 
         </div>
@@ -855,10 +873,10 @@ export default UltraFuturisticServiceCardV2;
                 className='flex items - center space - x-2 text - sm';
               >;
                 <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;
-                <span className='text - gray - 300'>{benefit}</span>              </motion.div>                className="flex items - center space - x-2 text - sm";
+                <span className='text - gray - 300'>{benefit}</span>              </motion.div>                className="flex items - center space-x-2 text-sm";
               >;
-                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full"></div>;
-                <span className="text - gray - 300">{benefit}</span>))}
+                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald-400 rounded-full"></div>;
+                <span className="text-gray-300">{benefit}</span>))}
           </div>;
         </div>;
         {/* Market info */}
@@ -875,15 +893,15 @@ export default UltraFuturisticServiceCardV2;
                 <span className='text - gray - 400'>Growth Rate</span>;
                 <span className='text - green - 400 font - medium'>;
                   {service.growth_rate}
-                </span>              </div>          <div className="relative z - 10 mb - 6">;
-            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20">;
-              <div className="flex items - center justify - between text - xs">;
-                <span className="text - gray - 400">Market Size</span>;
-                <span className="text - cyan - 400 font - medium">{service.market_size}</span>;
+                </span>              </div>          <div className="relative z-10 mb-6">;
+            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border-gray-600 / 20">;
+              <div className="flex items - center justify-between text-xs">;
+                <span className="text-gray-400">Market Size</span>;
+                <span className="text - cyan-400 font-medium">{service.market_size}</span>;
               </div>;
-              <div className="flex items - center justify - between text - xs mt - 1">;
-                <span className="text - gray - 400">Growth Rate</span>;
-                <span className="text - green - 400 font - medium">{service.growth_rate}</span>;
+              <div className="flex items - center justify - between text-xs mt-1">;
+                <span className="text-gray-400">Growth Rate</span>;
+                <span className="text - green-400 font-medium">{service.growth_rate}</span>;
             </div>;
           </div>)}
         {/* CTA Button */}
@@ -891,7 +909,7 @@ export default UltraFuturisticServiceCardV2;
             href={service.link}
             while_hover={{ scale: 1.05 }}
             while_tap={{ scale: 0.95 }}
-            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'        <div className="relative z - 10">;
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'        <div className="relative z-10">;
           <motion.a;
             href={service.link}
             while_hover={{ scale: 1.05 }}
@@ -904,12 +922,12 @@ export default UltraFuturisticServiceCardV2;
             </span>;
             {/* Button glow effect */}
             <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300'></div>          </motion.a>          >;
-            <span className="relative z - 10 flex items - center space - x-2">;
+            <span className="relative z - 10 flex items-center space-x-2">;
               <span > Learn More</span>;
-              <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200" />;
+              <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition-transform duration-200" />;
             </span>;
             {/* Button glow effect */}
-            <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300"></div>;
+            <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition-opacity duration-300"></div>;
           </motion.a>;
         </div>;
         {/* Hover overlay */}
@@ -935,8 +953,6 @@ export default UltraFuturisticServiceCardV2;
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
         />
       </div>
     </motion.div>
@@ -955,6 +971,7 @@ export default UltraFuturisticServiceCardV2;        />
 export default UltraFuturisticServiceCardV2;
 
 export default UltraFuturisticServiceCardV2;
+<<<<<<< HEAD
 export default UltraFuturisticServiceCardV2;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -965,3 +982,8 @@ export default UltraFuturisticServiceCardV2;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default UltraFuturisticServiceCardV2
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

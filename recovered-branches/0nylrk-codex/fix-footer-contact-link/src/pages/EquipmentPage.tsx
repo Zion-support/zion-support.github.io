@@ -21,6 +21,7 @@ import React from 'react',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import React from "react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const EquipmentPage = () => {
 =======
@@ -30,6 +31,9 @@ import React from 'react',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const EquipmentPage = () => {
+=======
+const EquipmentPage = () => {const EquipmentPage = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const EquipmentPage = () => {;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -54,21 +58,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const EquipmentPage = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
-import React from 'react',;
-;
-const EquipmentPage = () => {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="container mx-auto px-4 py-8">;
       <h1 className="text-3xl font-bold mb-6">Equipment</h1>;
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -82,6 +74,7 @@ const EquipmentPage = () => {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -108,21 +101,20 @@ export default EquipmentPage,
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const EquipmentPage = () =>: any {
   return (
-    <div className="container mx - auto px - 4 py - 8">;
-      <h1 className="text - 3xl font - bold mb - 6">Equipment</h1>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+    <div className="container mx - auto px - 4 py-8">;
+      <h1 className="text - 3xl font - bold mb-6">Equipment</h1>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
         {/* Equipment listing placeholder */}
-        <div className="bg - white rounded - lg shadow p - 6">;
-          <h2 className="text - xl font - semibold mb - 2">Coming Soon</h2>;
-          <p className="text - gray - 600">;
+        <div className="bg - white rounded - lg shadow p-6">;
+          <h2 className="text - xl font - semibold mb-2">Coming Soon</h2>;
+          <p className="text - gray-600">;
             Our equipment listing section is currently under development. Check back soon for available equipment.;
           </p>;
         </div>;
@@ -132,18 +124,7 @@ const EquipmentPage = () =>: any {
 ;
 export default EquipmentPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 },
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-},
-
 
   ),;
 },;
@@ -153,8 +134,6 @@ export default EquipmentPage;
 }<div className="bg-white rounded-lg shadow p-6" > <h2 className="text-xl font-semibold mb-2" >Coming Soon</h2> <p className="text-gray-600" > Our equipment listing section is currently under development. Check back soon for available equipment. </p> </div> </div> </div>) 
 };
 export default EquipmentPage;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default EquipmentPage;
 
@@ -163,9 +142,12 @@ export default EquipmentPage;
 export default EquipmentPage;
 export default EquipmentPage,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -45,6 +45,7 @@ export interface MessageAnalysisResult extends AnalysisResult {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -72,10 +73,13 @@ export interface MessageAnalysisResult extends AnalysisResult {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -142,3 +146,8 @@ export interface SignupCheckResult extends AnalysisResult {}
 export interface SignupCheckResult extends AnalysisResult {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

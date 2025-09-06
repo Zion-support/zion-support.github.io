@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ' "export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [isOpen,setIsOpen] = useState (false) const [isMinimized,setIsMinimized] = useState (false) const [messages,setMessages] = useState ([]) const [inputValue,setInputValue] = useState (') const [isTyping,setIsTyping] = useState (false) const messagesEndRef = useRef (null) const inputRef = useRef (null) ';"";
 
@@ -55,3 +56,6 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<' "export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [isOpen,setIsOpen] = useState (false) const [isMinimized,setIsMinimized] = useState (false) const [messages,setMessages] = useState ([]) const [inputValue,setInputValue] = useState (') const [isTyping,setIsTyping] = useState (false) const messagesEndRef = useRef (null) const inputRef = useRef (null) ';"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

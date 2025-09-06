@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   className?: string;
 import React from './react';
@@ -64,22 +65,21 @@ import { Apple, GithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Apple, GithubIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
 interface AppStoreButtonsProps {;
 
-  className?: string;
-import React from './react';
-import { Apple, GithubIcon } from './lucide-react';
-import { cn } from '@/lib / utils';
-interface AppStoreButtonsProps {
+  className?: string;interface AppStoreButtonsProps {
   class_name?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -132,12 +132,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       onAppStoreClick?.()
     }
   },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
-  className;
   appStoreUrl = "#";
+<<<<<<< HEAD
   googlePlayUrl = "#";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onAppStoreClick,;
@@ -242,6 +243,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
+=======
+  googlePlayUrl = "#";        onClick={handleGooglePlayClick}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -258,32 +262,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
         <div>
           <div className="text-xs">GET IT ON</div>
           <div className="text-xl font-semibold">Google Play</div>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </a>
-    </div>
-  )
-
-=======
-
-};
-
-=======
-=======
-
-};
-
-      </Link>
-    </div>
-  )
-}
-
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-},
+        </div>},
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -294,7 +273,6 @@ interface AppStoreButtonsProps {;
   onAppStoreClick?: () => void,;
   onGooglePlayClick?: () => void;
 }
-<<<<<<< HEAD
 ;
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   className,;
@@ -309,28 +287,14 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
       // // // console.log("App Store download clicked"),;
       onAppStoreClick?.();
     }
-  },;
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
-    if (!googlePlayUrl || googlePlayUrl === "#") {;
-      e.preventDefault(),;
-      // // // console.log("Google Play download clicked"),;
-      onGooglePlayClick?.();
-    }
-  };
-  return (;
-<<<<<<< HEAD
-
-=======
-    }
   }
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
+  return (    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a
         href={appStoreUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
         target="_blank"
+<<<<<<< HEAD
         rel="noopener noreferrer">;
 <<<<<<< HEAD
 =======
@@ -548,3 +512,6 @@ export default AppStoreButtons;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        rel="noopener noreferrer">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -10,25 +11,15 @@
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
   if (!fs.existsSync(dir)) return res.status(200).json([]);
-  const files = fs.readdirSync(dir).map((name) => ({ name }));
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));  if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section |"General");
@@ -39,6 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -72,6 +64,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -93,11 +87,8 @@ function handler() {
   appendAuditLog ({ type: "file_list", section });
   res.status (200).json (files);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -106,3 +97,5 @@ function handler() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

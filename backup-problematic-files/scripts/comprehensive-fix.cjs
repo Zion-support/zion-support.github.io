@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -11,23 +12,42 @@ const fs = require('fs');
 const path = require('path');
 =======
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 console.log('🔧 Comprehensive fix for all files...');
 // List of problematic files
 const filesToFix = [
   'pages/about.tsx',
+<<<<<<< HEAD
   'pages/blog.tsx',
+=======
+  'pages/blog.tsx', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   'pages/contact.tsx',
   'pages/services.tsx',
   'pages/talent.tsx'
 ];
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
       return false;
     }
+<<<<<<< HEAD
 =======
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
@@ -40,6 +60,25 @@ function fixFile(filePath) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all merge conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+
+
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove all merge conflict markers
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
@@ -66,6 +105,13 @@ for (const file of filesToFix) {
     fixedCount++;
   }
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
+
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

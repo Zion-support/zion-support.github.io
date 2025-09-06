@@ -1,22 +1,41 @@
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+const logMessage = `[${timestamp}] ${message}\n`;
+    const logMessage = `[${timestamp}] ${message}\n`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
   async runCommand(command, options = {}) {
     try {
+<<<<<<< HEAD
       const { stdout, stderr } = await execAsync(command, {
         cwd: process.cwd(),
         timeout: 120000,
         ...options
+=======
+      const { stdout, stderr } = await execAsync(command, { 
+        cwd: process.cwd(), 
+        timeout: 120000, 
+        ...options 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
+<<<<<<< HEAD
       return {
         success: false,
         stdout: error.stdout || "",
         stderr: error.stderr || error.message
+=======
+      return { 
+        success: false, 
+        stdout: error.stdout || "", 
+        stderr: error.stderr || error.message 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       };
     }
   }
@@ -141,5 +160,10 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+        "impact"
+        "impact"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

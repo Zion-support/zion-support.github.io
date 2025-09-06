@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,9 @@
 =======
 =======
 :pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
+=======
+:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 :pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
 :pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -68,8 +72,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
 :pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
 :pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 ursor/add-new-services-and-deploy-updates-0462
@@ -111,3 +115,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

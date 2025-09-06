@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -22,6 +23,15 @@ import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 =======
 <<<<<<< HEAD
+=======
+export interface TalentCardProps {
+  talent: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
+  is_saved: boolean;
+  onToggleSave: (id: string, is_saved: boolean) => void;
+  is_authenticated: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface TalentCardProps {
 
       onViewProfile(talent.id)
@@ -48,6 +58,7 @@ export interface TalentCardProps {
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
@@ -64,11 +75,37 @@ export interface TalentCardProps {;
 }
 ;
 export function TalentCard({;
+=======
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
+import { TalentProfile } from '@/types/talent';
+import Image from 'next/image'; // Import next/image;
+import React, { useState } from 'react'; // Import React and useState;
+
+export interface TalentCardProps {;
+  talent: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
+  isSaved: boolean;
+  onToggleSave: (id: string, isSaved: boolean) => void;
+  isAuthenticated: boolean;
+export interface TalentCardProps {;
+  talent: TalentProfile,;
+  onViewProfile: (id: string,) => void,;
+  onRequestHire: (talent: TalentProfile,) => void,;
+  isSaved: boolean,;
+  onToggleSave: (id: string, isSaved: boolean,) => void,;
+  isAuthenticated: boolean;
+}
+
+export function TalentCard(): any ({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   talent,;
   onViewProfile,;
   onRequestHire,;
   isSaved,;
   onToggleSave,;
+<<<<<<< HEAD
   isAuthenticated;
 }: TalentCardProps) {;
   const [avatarError, setAvatarError] = useState(false),;
@@ -106,6 +143,52 @@ export function TalentCard({;
 <<<<<<< HEAD
                   src={talent.profile_picture_url} 
 =======
+=======
+  isAuthenticated,;
+}: TalentCardProps) {;
+  const [avatarError, setAvatarError] = useState(false);
+
+  const handleViewProfile = () => {;
+    if (onViewProfile) {;
+      onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
+      onToggleSave(talent.id, !isSaved)
+    }
+  };
+
+  const handleRequestHire = (e: React && React.MouseEvent) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);    }
+      onRequestHire(talent);
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  };
+
+  const handleToggleSave = (e: React && React.MouseEvent) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent && talent.id, !isSaved);
+    if (onToggleSave) {;
+    }
+  };
+
+  const skills = talent && talent.skills?.slice(0, 5) || [];
+  const talentNameInitial = talent && talent.full_name?.charAt(0) || 'T';
+
+
+    >;
+      <div className='p-6'>;
+        <div className='flex items-start'>;
+          <div className='relative mr-4'>;
+            <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'>;
+              {' '}
+              {/* Added relative for Image */}
+              {talent && talent.profile_picture_url && !avatarError ? (;
+                <Image
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   src={talent && talent.profile_picture_url}
                   alt={talent && talent.full_name || 'Talent Avatar'}
                   fill={true}                  style={{ objectFit: 'cover' }}
@@ -138,6 +221,11 @@ import React, { useState } from 'react', // Import React and useState
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -145,6 +233,10 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -153,6 +245,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
@@ -207,28 +300,69 @@ export interface TalentCardProps {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  alt={talent.full_name || 'Talent Avatar'}
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
+
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
+                  onError={() => setAvatarError(true)}
+                  priority={false}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+<<<<<<< HEAD
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
               )}
 <<<<<<< HEAD
 =======
+=======
+
+
+
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
+                />;
+                <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
+              </Button>;
+            </div>;
+            <p className='text-zion-cyan font-medium'>;
+              {talent && talent.professional_title}
+            </p>;
+
+            <div className='mt-2 flex flex-wrap gap-3 text-sm'>;
+              {talent && talent.location && (;
+                <div className='flex items-center text-zion-slate-light'>;
+                  <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
+                </div>;
+
+
+              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
@@ -252,7 +386,10 @@ export interface TalentCardProps {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
@@ -281,16 +418,33 @@ export interface TalentCardProps {
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 ;
         <div className="mt-5 flex items-center justify-between">;
           <div>;
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
+=======
+
+
+              <Button
+                size='sm'
+                variant='secondary'
+                onClick={handleRequestHire}
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+;
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+            {talent && talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent && talent.hourly_rate}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
           </div>
@@ -314,6 +468,8 @@ export interface TalentCardProps {
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         
         <div className="mt-5 flex items-center justify-between">
@@ -332,7 +488,11 @@ export interface TalentCardProps {
           <div>;
 
             {talent.hourly_rate ? (
+<<<<<<< HEAD
               <div className="text-white font-bold">
+=======
+              <div className="text - white font - bold">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 ${talent.hourly_rate}
 
           </div>;
@@ -348,11 +508,15 @@ export interface TalentCardProps {
                 onClick={handleRequestHire}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
   );
@@ -364,3 +528,10 @@ export interface TalentCardProps {
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

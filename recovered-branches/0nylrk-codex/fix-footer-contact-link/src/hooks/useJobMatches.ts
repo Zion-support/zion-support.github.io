@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16,6 +16,8 @@ export function useJobMatches(jobId: string) {;
   const [isProcessing, setIsProcessing] = useState(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -24,6 +26,7 @@ import { JobMatch } from "@/types/jobs",
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+<<<<<<< HEAD
   const [isProcessing, setIsProcessing] = useState(false),
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -103,6 +106,9 @@ function useJobMatches() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           *,
           talent_profile:talent_id(
+=======
+  const [isProcessing, setIsProcessing] = useState(false),          talent_profile:talent_id(
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             id,
             user_id,
             full_name,
@@ -111,6 +117,7 @@ function useJobMatches() {
             hourly_rate,
             bio,
             years_experience,
+<<<<<<< HEAD
             key_projects,
 <<<<<<< HEAD
 
@@ -126,95 +133,16 @@ function useJobMatches() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             skills
+=======
+            key_projects,            skills
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           )
         `)
-        .eq("job_id", jobId)
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-        .order("match_score", { ascending: false });
-      if (error) throw error;
-      setMatches(data |[])
-        .order("match_score", { ascending: false });
-      if (error) throw error;
-      setMatches(data |[])
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        .order("match_score", { ascending: false }),
-
-      if (error) throw error,
-      setMatches(data || [])
-<<<<<<< HEAD
-
-
-    } catch (error) {
-      console && console.error("Error fetching job matches:", error);
-      toast({
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            key_projects,
-            skills);
-        `);
-        .eq ("job_id", job_id);
-        .order ("match_score", { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_matches (data || []);
-    } catch (error) {
-      console.error ("Error fetching job matches:", error);
-      toast ({
-        title: "Error";
-        description: "Failed to load matched talents. Please try again later.",
-        variant: "destructive"});
-
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-;
-
-  const triggerAIMatching = async () => {
-    setIsProcessing (true);
-    try {
-
-
-        title: "Error",
-        description: "Failed to load matched talents. Please try again later.",
-
-<<<<<<< HEAD
-=======
-    } catch (error) {
-      console.error("Error fetching job matches:", error),
-      toast({
-        title: "Error";
-        description: "Failed to load matched talents. Please try again later."
-        title: "Error",
-        description: "Failed to load matched talents. Please try again later.",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        variant: "destructive"})
-    } finally {
-      setIsLoading(false)
-    }
-
-  },
-
-
-<<<<<<< HEAD
-=======
-  }
-  },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const triggerAIMatching = async () => {
+        .eq("job_id", jobId)  const triggerAIMatching = async () => {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -234,11 +162,14 @@ if (throw error) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -479,6 +410,10 @@ export function useJobMatches(jobId: string) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       if (throw new Error (response.error.message)) {
   $2
@@ -492,16 +427,9 @@ export function useJobMatches(jobId: string) {;
     } catch (error) {
       console.error ("Error triggering AI matching:", error);
       toast ({
-        title: "Matching Failed";
-        description: "Could not process talent matching. Please try again later.",
+        title: "Matching Failed",
+  description: "Could not process talent matching. Please try again later.",
         variant: "destructive"});
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsProcessing (false);
     }
@@ -523,6 +451,7 @@ export function useJobMatches(jobId: string) {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -537,3 +466,6 @@ export function useJobMatches(jobId: string) {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -21,12 +21,13 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type ProposalForm = {;
-
-
 
 export type ProposalForm = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -95,7 +96,6 @@ export type ProposalForm = {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
   language?: string;
   customPrompt?: string
 }
@@ -108,7 +108,7 @@ export type ProposalForm = {
   regional_scope: string,
   budgetOrGoals: string,
   supporting_multiverses: string,
-  language?: string;
+  language?: string
 };
 export default function ProposalGenerator() {;
   const [form, setForm] = useState<ProposalForm>({;
@@ -564,13 +564,11 @@ export default function ProposalGenerator() {;
             </button>;
             <button
 
-
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
             <button
-
 
               disabled={!draftMarkdown}>;
               Submit Bridge;
@@ -636,7 +634,6 @@ export default function ProposalGenerator() {;
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
@@ -826,18 +823,18 @@ function handleSubmitBridge() {
               on_change={e =>;
                 handle_change ('type', e.target.value as ProposalType);
               }            >          <div>;
-            <label className="block text - sm font - medium" html_for="input - Target institution">Target institution</label>;
+            <label className="block text-sm font-medium" html_for="input - Target institution">Target institution</label>;
             <input;
-              className="w - full border rounded px - 3 py - 2";
+              className="w - full border rounded px-3 py-2";
               value={form.target_institution}
               on_change={(e) => handle_change ('target_institution', e.target.value)}
               placeholder="UNDP / World Bank / ILO";
             />;
           </div>;
           <div>;
-            <label className="block text - sm font - medium" html_for="input - Type">Type</label>;
+            <label className="block text-sm font-medium" html_for="input - Type">Type</label>;
             <select;
-              className="w - full border rounded px - 3 py - 2";
+              className="w - full border rounded px-3 py-2";
               value={form.type}
               on_change={(e) => handle_change ('type', e.target.value as ProposalType)}
             >;
@@ -904,66 +901,66 @@ function handleSubmitBridge() {
           <div className='flex gap - 2'>;
             <button;
               className='px - 4 py - 2 bg - blue - 600 text - white rounded disabled:opacity - 50'              on_click={handle_generate}            <input;
-              className="w - full border rounded px - 3 py - 2";
+              className="w - full border rounded px-3 py-2";
               value={form.regional_scope}
               on_change={(e) => handle_change ('regional_scope', e.target.value)}
               placeholder="Global / Africa / LATAM / APAC / EU / ...";
             />;
           </div>;
           <div>;
-            <label className="block text - sm font - medium" html_for="input - Budget / Resolution goals">Budget / Resolution goals</label>;
+            <label className="block text-sm font-medium" html_for="input - Budget / Resolution goals">Budget / Resolution goals</label>;
             <textarea;
-              className="w - full border rounded px - 3 py - 2 min - h-[80px]";
+              className="w - full border rounded px - 3 py-2 min-h-[80px]";
               value={form.budgetOrGoals}
               on_change={(e) => handle_change ('budgetOrGoals', e.target.value)}
               placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
             />;
           </div>;
           <div>;
-            <label className="block text - sm font - medium" html_for="input - Supporting multiverse (s)">Supporting multiverse (s)</label>;
+            <label className="block text-sm font-medium" html_for="input - Supporting multiverse (s)">Supporting multiverse (s)</label>;
             <input;
-              className="w - full border rounded px - 3 py - 2";
+              className="w - full border rounded px-3 py-2";
               value={form.supporting_multiverses}
               on_change={(e) => handle_change ('supporting_multiverses', e.target.value)}
               placeholder="Eg. Zion.ai, Zion.ID, Zion.Work";
             />;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+          <div className="grid grid - cols - 1 md:grid - cols-2 gap-4">;
             <div>;
-              <label className="block text - sm font - medium" html_for="input - Language">Language</label>;
+              <label className="block text-sm font-medium" html_for="input - Language">Language</label>;
               <input;
-                className="w - full border rounded px - 3 py - 2";
+                className="w - full border rounded px-3 py-2";
                 value={form.language}
                 on_change={(e) => handle_change ('language', e.target.value)}
                 placeholder="English / French / Spanish / Arabic / ...";
               />;
             </div>;
             <div>;
-              <label className="block text - sm font - medium" html_for="input - GPT Prompt Assist">GPT Prompt Assist</label>;
+              <label className="block text-sm font-medium" html_for="input - GPT Prompt Assist">GPT Prompt Assist</label>;
               <textarea;
-                className="w - full border rounded px - 3 py - 2 min - h-[80px]";
+                className="w - full border rounded px - 3 py-2 min-h-[80px]";
                 value={form.custom_prompt}
                 on_change={(e) => handle_change ('custom_prompt', e.target.value)}
               />;
             </div>;
           </div>;
-          <div className="flex gap - 2">;
+          <div className="flex gap-2">;
             <button;
-              className="px - 4 py - 2 bg - blue - 600 text - white rounded disabled:opacity - 50";
+              className="px - 4 py - 2 bg - blue - 600 text-white rounded disabled:opacity-50";
               on_click={handle_generate}
               disabled={is_generating}
             >;
               {is_generating ? 'Generating...' : 'Generate Draft'}
             </button>;
             <button;
-              className='px - 4 py - 2 bg - emerald - 600 text - white rounded'              on_click={handle_export}              className="px - 4 py - 2 bg - emerald - 600 text - white rounded";
+              className='px - 4 py - 2 bg - emerald - 600 text - white rounded'              on_click={handle_export}              className="px - 4 py - 2 bg - emerald-600 text-white rounded";
               on_click={handle_export}
               disabled={!draft_markdown}
             >;
               Export (PDF / JSON / MD);
             </button>;
             <button;
-              className='px - 4 py - 2 bg - purple - 600 text - white rounded'              on_click={handleSubmitBridge}              className="px - 4 py - 2 bg - purple - 600 text - white rounded";
+              className='px - 4 py - 2 bg - purple - 600 text - white rounded'              on_click={handleSubmitBridge}              className="px - 4 py - 2 bg - purple-600 text-white rounded";
               on_click={handleSubmitBridge}
               disabled={!draft_markdown}
             >;
@@ -986,10 +983,10 @@ function handleSubmitBridge() {
                   </a>                </div>)}
               {export_links.md_url && (
                 <div>          {export_links && (
-            <div className="text - sm space - y-1">;
+            <div className="text-sm space-y-1">;
               {export_links.pdf_url && (
                 <div>;
-                  <a className="text - blue - 600 underline" href={export_links.pdf_url} target="_blank" rel="noreferrer">PDF</a>;
+                  <a className="text-blue-600 underline" href={export_links.pdf_url} target="_blank" rel="noreferrer">PDF</a>;
                 </div>)}
               {export_links.md_url && (
                 <div>;
@@ -1002,7 +999,7 @@ function handleSubmitBridge() {
                     Markdown;
                   </a>                </div>)}
               {export_links.json_url && (
-                <div>                  <a className="text - blue - 600 underline" href={export_links.md_url} target="_blank" rel="noreferrer">Markdown</a>;
+                <div>                  <a className="text-blue-600 underline" href={export_links.md_url} target="_blank" rel="noreferrer">Markdown</a>;
                 </div>)}
               {export_links.json_url && (
                 <div>;
@@ -1013,7 +1010,7 @@ function handleSubmitBridge() {
                     rel='noreferrer';
                   >;
                     JSON;
-                  </a>                </div>                  <a className="text - blue - 600 underline" href={export_links.json_url} target="_blank" rel="noreferrer">JSON</a>;
+                  </a>                </div>                  <a className="text-blue-600 underline" href={export_links.json_url} target="_blank" rel="noreferrer">JSON</a>;
                 </div>)}
             </div>)}
         </div>;
@@ -1023,7 +1020,7 @@ function handleSubmitBridge() {
             className='w - full border rounded px - 3 py - 2 min - h-[520px] font - mono';
             value={draft_markdown}
             on_change={e => setDraftMarkdown (e.target.value)}          />          <textarea;
-            className="w - full border rounded px - 3 py - 2 min - h-[520px] font - mono";
+            className="w - full border rounded px - 3 py - 2 min-h-[520px] font-mono";
             value={draft_markdown}
             on_change={(e) => setDraftMarkdown (e.target.value)}
           />;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 
 =======
@@ -9,6 +10,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
@@ -23,20 +26,28 @@ import {;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
 import { CountryPricing } from '@/data/onsiteServicePricing',;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/PageSections/CountryTabs.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 interface CountryTabsProps {;
   popularCountries:string[],;
   filteredCountries:CountryPricing[],;
   handleCountrySelect:(country:CountryPricing) => void,;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 =======
   onQuote?:(country:CountryPricing) => void,;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/PageSections/CountryTabs.tsx
+=======
+  onQuote?:(country:CountryPricing) => void,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   searchQuery:string,;
   setSearchQuery:(query:string) => void;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 export function CountryTabs({ ;
   popularCountries,;
@@ -49,29 +60,64 @@ export function CountryTabs({ ;
     <Tabs defaultValue="featured" className="w-full">;
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
         <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
+=======
+export function CountryTabs({;
+  popularCountries,;
+  filteredCountries,;
+  handleCountrySelect,;
+  onQuote,;
+  searchQuery,;
+  setSearchQuery} CountryTabsProps) {;
+  const [currentPage, setCurrentPage] = useState(1),;
+  const countriesPerPage = 50,;
+;
+  useEffect(() => {;
+    setCurrentPage(1),;
+  }, [searchQuery]),;
+;
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),;
+  const paginatedCountries = filteredCountries.slice(;
+    (currentPage - 1) * countriesPerPage,;
+    currentPage * countriesPerPage;
+  ),;
+  return (;
+    <Tabs defaultValue="featured" className="w-full">;
+      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
+        <TabsTrigger;
+          value="featured";
+          className="data-[state=active]:bg-zion-purple";
+        >;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           Featured Countries;
         </TabsTrigger>;
         <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">;
           All Countries;
         </TabsTrigger>;
       </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 
       <TabsContent value="featured" className="mt-0">;
         <div className="mb-6">;
           <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       <TabsContent value="featured" className="mt-0">;
         <div className="mb-6">;
           <h2 className="text-2xl font-bold text-white text-center">;
             Featured Service Locations;
           </h2>;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/PageSections/CountryTabs.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <p className="text-zion-slate-light text-center mt-2">;
             Browse our most popular service destinations;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 
                 isPopular={true}
@@ -82,6 +128,8 @@ export function CountryTabs({ ;
       </TabsContent>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
           {filteredCountries;
@@ -97,15 +145,21 @@ export function CountryTabs({ ;
         </div>;
       </TabsContent>;
 ;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/PageSections/CountryTabs.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <TabsContent value="all" className="mt-0">;
         <div className="mb-6 max-w-md mx-auto">;
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 
             </Button>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Input;
               type="text";
               placeholder="Search by country...";
@@ -165,14 +219,20 @@ export function CountryTabs({ ;
                 </PaginationItem>;
               </PaginationContent>;
             </Pagination>;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/PageSections/CountryTabs.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         )}
       </TabsContent>;
     </Tabs>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/CountryTabs.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple" > Featured Countries </TabsTrigger> <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple" > All Countries </TabsTrigger> </TabsList> <TabsContent value="featured" className="mt-0" > <div className="mb-6" > <h2 className="text-2xl font-bold text-white text-center" > Featured Service Locations </h2> <p className="text-zion-slate-light text-center mt-2" > Browse our most popular service destinations </p> </div> .filter ( (country) => popularCountries.includes (country.country) ) .map ( (country) => (<CountryServiceCard key= {;
   country.country ;
@@ -210,4 +270,7 @@ export function CountryTabs({ ;
 }</TabsContent> </Tabs>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/PageSections/CountryTabs.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

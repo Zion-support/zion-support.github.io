@@ -15,11 +15,13 @@ export interface Notification {
   type: string;
   related_id?: string;
   read: boolean;
-  created_at: string;
+
+  created_at: string,
   updated_at: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -50,3 +52,9 @@ export interface Notification {;
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+export interface Notification {;
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

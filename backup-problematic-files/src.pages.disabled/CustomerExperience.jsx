@@ -18,9 +18,13 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 =======
 const CustomerExperience = ({ className }) => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+const CustomerExperience = ({ className }) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
       <h1>CustomerExperience</h1>
@@ -28,5 +32,8 @@ const CustomerExperience = ({ className }) => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

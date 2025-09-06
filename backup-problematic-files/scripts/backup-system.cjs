@@ -27,5 +27,10 @@ const { execSync } = require("child_process")
   case "restore"
       console.error("Please specify backup name to restore")
   case "list"
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

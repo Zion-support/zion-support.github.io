@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -9,9 +10,10 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
@@ -35,6 +37,7 @@ const nextConfig = {
         ]
       };
     }
+<<<<<<< HEAD
     return config;
 =======
 =======
@@ -94,25 +97,18 @@ module.exports = nextConfig;
   trailingSlash: false,
 <<<<<<< HEAD
   distDir: '.next',
+=======
+    return config;  trailingSlash: false,
+  distDir: '.next',
 };
-/** @type {import('next').NextConfig} */;
-const nextConfig = {;
-  reactStrictMode:true,;
-  eslint:{ ignoreDuringBuilds:true },;
-  typescript:{ ignoreBuildErrors:true },;
-  pageExtensions:['tsx', 'ts', 'jsx', 'js'],;
-  images:{;
-    domains:["localhost", "ziontechgroup.com"],;
-  },;
-  output:'standalone',;
-  trailingSlash:false,;
-  distDir:'.next',;
+
+module.exports = nextConfig;
+module.exports = nextConfig
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
-;
-module.exports = nextConfig;};
-};
-;
+
 export default nextConfig;
+<<<<<<< HEAD
 const nextConfig = {,
   reactStrictMode: true,
 <<<<<<< HEAD
@@ -160,6 +156,8 @@ const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Image optimization,
@@ -181,8 +179,8 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300
-      };
-    };
+      }
+};
     return config
   },
   // Headers for security and performance,
@@ -216,7 +214,7 @@ const nextConfig = {
         permanent: true
       }
     ]
-  };
+  }
 };
 ,
 export default nextConfig,
@@ -241,6 +239,7 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 module.exports = nextConfig;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 module.exports = nextConfig;
@@ -450,3 +449,5 @@ module.exports = nextConfig;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

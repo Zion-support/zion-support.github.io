@@ -99,11 +99,14 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -171,13 +174,15 @@ export default function BusinessToolsPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-      ];
-    };
+      ]
+};
       category: 'Communication & Collaboration',
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       tools: [
         {
           name: 'Slack'
@@ -459,6 +464,7 @@ export default function BusinessToolsPage() {
     }
     }
 
+<<<<<<< HEAD
   ];
 
   ];
@@ -466,6 +472,8 @@ export default function BusinessToolsPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -617,29 +625,29 @@ import React from 'react';
 
   const productivityTips = [;
     {;
-      title: 'Start with Free Tiers',;
-      description:;
+      title: 'Start with Free Tiers',,
+  description:;
         'Most tools offer free versions to test before committing to paid plans.',;
       icon: <CheckCircle className='w-6 h-6 text-green-400' />,;
     },;
-      title: 'Focus on Integration',;
-      description:;
+      title: 'Focus on Integration',,
+  description:;
         'Choose tools that work well together to avoid data silos and manual work.',;
       icon: <Cog className='w-6 h-6 text-blue-400' />,;
     },;
     {;
-      title: 'Measure ROI',;
-      description:;
+      title: 'Measure ROI',,
+  description:;
         "Track how each tool improves your team's productivity and business outcomes.",;
       icon: <ChartBar className='w-6 h-6 text-purple-400' />,;
     },;
     {;
-      title: 'Train Your Team',;
-      description:;
+      title: 'Train Your Team',,
+  description:;
         'Invest in proper training to maximize the value of your chosen tools.',;
       icon: <Users className='w-6 h-6 text-orange-400' />,;
-    },  ];              title: 'Train Your Team',;
-        description: 'Invest in proper training to maximize the value of your chosen tools.',;
+    },  ];              title: 'Train Your Team',,
+  description: 'Invest in proper training to maximize the value of your chosen tools.',;
         icon: <Users className="w-6 h-6 text-orange-400" />;
     }
   return (
@@ -703,6 +711,7 @@ import React from 'react';
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -723,6 +732,8 @@ import React from 'react';
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Business Tools */}
 
       <section className="section-padding bg-gradient-cursor">
@@ -837,12 +848,7 @@ import React from 'react';
                       </ul>;
                     </div>;
 
-
-
-
-
                     <Button
-
 
                     <Button
                       href={tool && tool.website}
@@ -913,17 +919,17 @@ import React from 'react';
                           >;
                             <Check className='w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0' />                            {feature}                        {tool.icon}
                       </div>;
-                      <h4 className="text - xl font - bold text - white mb - 2">{tool.name}</h4>;
-                      <p className="text - gray - 400 text - sm leading - relaxed">{tool.description}</p>;
+                      <h4 className="text - xl font - bold text-white mb-2">{tool.name}</h4>;
+                      <p className="text - gray - 400 text-sm leading-relaxed">{tool.description}</p>;
                     </div>;
-                    <div className="mb - 6">;
-                      <div className="text - center mb - 4">;
-                        <span className="text - 2xl font - bold text - cursor - blue">{tool.pricing}</span>;
+                    <div className="mb-6">;
+                      <div className="text-center mb-4">;
+                        <span className="text - 2xl font - bold text-cursor-blue">{tool.pricing}</span>;
                       </div>;
-                      <ul className="space - y-2">;
+                      <ul className="space-y-2">;
                         {tool.features.map ((feature, feature_index) => (
-                          <li key={feature_index} className="flex items - center text - gray - 300 text - sm">;
-                            <Check className="w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0" />;
+                          <li key={feature_index} className="flex items - center text - gray-300 text-sm">;
+                            <Check className="w - 4 h - 4 text - cursor - blue mr - 3 flex-shrink-0" />;
                             {feature}
                           </li>))}
                       </ul>;
@@ -938,11 +944,11 @@ import React from 'react';
                       Visit Website;
                       <ExternalLink className='w - 4 h - 4 ml - 2' />                    </Button>                      variant="primary";
                       size="sm";
-                      className="w - full group - hover:scale - 105 transition - transform duration - 300";
+                      className="w - full group - hover:scale - 105 transition-transform duration-300";
                       external;
                     >;
                       Visit Website;
-                      <ExternalLink className="w - 4 h - 4 ml - 2" />;
+                      <ExternalLink className="w - 4 h-4 ml-2" />;
                   </Card>))}
               </div>;
             </div>))}
@@ -999,8 +1005,11 @@ import React from 'react';
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Card>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1068,11 +1077,11 @@ import React from 'react';
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
                   {tip.description}
-                </p>              </Card>                <div className="flex justify - center mb - 4">;
+                </p>              </Card>                <div className="flex justify-center mb-4">;
                   {tip.icon}
                 </div>;
-                <h3 className="text - xl font - bold text - white mb - 3">{tip.title}</h3>;
-                <p className="text - gray - 400 text - sm leading - relaxed">{tip.description}</p>))}
+                <h3 className="text - xl font - bold text-white mb-3">{tip.title}</h3>;
+                <p className="text - gray - 400 text-sm leading-relaxed">{tip.description}</p>))}
           </div>;
         </div>;
       </section>;

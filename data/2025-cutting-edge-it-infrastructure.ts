@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -8,11 +9,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -38,6 +41,7 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     website: string;
@@ -193,6 +197,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -206,72 +212,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.8,
       reviews: 18,
     },
-<<<<<<< HEAD
-=======
-
-        'AI-powered code review and testing',
-    // Autonomous DevOps Platform;
-    {
-      id: 'autonomous - devops - platform',
-      name: 'Autonomous DevOps Platform',
-      tagline:;
-        'Self - managing DevOps with AI - powered automation and intelligent deployment optimization',
-      price: '$1, 999',
-      period: '/month',
-      description:;
-        'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',
-      features: [;
-        'AI - powered code review and testing',
-
-        'Autonomous deployment optimization',
-        'Intelligent monitoring and alerting',
-        'Automated incident response',
-        'Performance optimization algorithms',
-        'Security vulnerability scanning',
-        'Cost optimization analytics',
-        'Multi - environment management',
-        'GitOps workflow automation',
-        'Real - time collaboration tools',
-      ],
-      popular: true,
-      icon: '⚡',
-
-        'Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation',
-      ],
-      roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
-      competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
-      marketSize: '$8 && 8.2B DevOps market',
-      growthRate: '24% annual growth',
-      variant: 'autonomous-devops-enterprise',
-      contactInfo: {
-      color: 'from - purple - 600 to - pink - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / autonomous - devops',
-      market_position:;
-        'Competes with GitLab ($99 / user / month), GitHub Enterprise ($21 / user / month). Our advantage: AI automation reduces manual DevOps work by 80% and improves deployment success rates.',
-      target_audience:;
-        'Software development teams, DevOps engineers, IT operations teams, Startups, Enterprise development teams',
-      trial_days: 30,
-      setup_time: '1 - 2 weeks',
-      category: 'DevOps & Automation',
-      real_service: true,
-      technology: [;
-        'Kubernetes, Docker, Jenkins, GitLab CI, Python, Go, AI / ML, Terraform',
-      ],
-      integrations: [;
-        'GitHub, GitLab, Bitbucket, AWS, Azure, GCP, Kubernetes, Docker',
-      ],
-      use_cases: [;
-        'Software development, CI / CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation',
-      ],
-      roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
-      competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
-      market_size: '$8.2B DevOps market',
-      growth_rate: '24% annual growth',
-      variant: 'autonomous - devops - enterprise',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -285,72 +225,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.7,
       reviews: 25,
     },
-<<<<<<< HEAD
-=======
-
-=======
-    // Blockchain Infrastructure Platform;
-    {
-      id: 'blockchain - infrastructure - platform',
-      name: 'Enterprise Blockchain Infrastructure Platform',
-      tagline:;
-        'Scalable blockchain infrastructure with AI - powered consensus and smart contract automation',
-      price: '$3, 499',
-      period: '/month',
-      description:;
-        'Enterprise - grade blockchain platform featuring scalable infrastructure, AI - powered consensus mechanisms, and automated smart contract management for business applications.',
-      features: [;
-
-        'Scalable blockchain infrastructure',
-        'AI - powered consensus algorithms',
-        'Smart contract automation',
-        'Enterprise - grade security',
-        'Multi - chain interoperability',
-        'Real - time transaction monitoring',
-        'Compliance and audit tools',
-        'API for business integration',
-        'Performance analytics dashboard',
-        '24 / 7 blockchain monitoring',
-      ],
-      popular: true,
-      icon: '🔗',
-
-        'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service',
-      ],
-      marketSize: '$19 && 19.9B blockchain market',
-      growthRate: '87% annual growth',
-      variant: 'blockchain-enterprise',
-      contactInfo: {
-      color: 'from - orange - 600 to - red - 600',
-      text_color: 'text - orange - 400',
-      link: 'https://ziontechgroup.com / blockchain - infrastructure',
-      market_position:;
-        'Competes with IBM Blockchain Platform ($10, 000 / month), AWS Managed Blockchain ($0.30 / hour). Our advantage: AI - powered consensus with 50% better performance and lower costs.',
-      target_audience:;
-        'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Real estate companies',
-      trial_days: 45,
-      setup_time: '3 - 6 weeks',
-      category: 'Blockchain & Distributed Systems',
-      real_service: true,
-      technology: [;
-        'Hyperledger Fabric, Ethereum, Solidity, Python, Go, AI / ML, Kubernetes',
-      ],
-      integrations: [;
-        'AWS, Azure, GCP, IBM Cloud, Oracle Cloud, SAP, Salesforce',
-      ],
-      use_cases: [;
-        'Supply chain tracking, Financial transactions, Digital identity, Asset tokenization, Smart contracts',
-      ],
-      roi: 'Organizations report 700% ROI through improved transparency and reduced transaction costs.',
-      competitors: [;
-        'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service',
-      ],
-      market_size: '$19.9B blockchain market',
-      growth_rate: '87% annual growth',
-      variant: 'blockchain - enterprise',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -365,6 +239,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       reviews: 12,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -373,6 +248,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline:;
@@ -395,6 +272,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
         '24 / 7 network monitoring',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       icon: '🌌',
@@ -446,6 +324,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4,
@@ -461,10 +341,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 =======
   ];    features: [
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -500,6 +376,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     features: [
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
+<<<<<<< HEAD
 =======
       id: 'quantum-networking-platform'
       name: 'Quantum Networking Platform'
@@ -576,6 +453,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
 
+=======
+=======  ];    features: [
+      'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
+      'Performance analytics24/7 network monitoring'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ];
     popular: true, icon: '☁️',
     color: 'from-blue-600 to-indigo-600', textColor: 'text-blue-400',
@@ -612,36 +494,22 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     variant: 'quantum - networking - enterprise',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
-=======
-
-    popular: true, icon: '🌌',
-    color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-networking',
-    marketPosition: 'Competes with Cisco ($100,000+/year), Juniper ($80,000+/year). Our advantage: Quantum security with 70% better performance and autonomous management.',
-    targetAudience: 'Government agencies, Defense contractors, Financial institutions, Healthcare organizations, Research institutions',
-    trialDays: 90, setupTime: '6-12 weeks',
-    category: 'Quantum Networking & Security', realService: true,
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware'];
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'];
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.'
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -684,8 +552,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Quantum-Secure Cloud Infrastructure Platform',;
     tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security',;
     price: '$4,999',;
-    period: '/month',;
-    description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',;
+    period: '/month',,
+  description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',;
     features: [;
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network',;
       '99.999% uptime guarantee24/7 security monitoring';
@@ -728,8 +596,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Edge Computing Orchestration Platform',;
     tagline: 'Intelligent edge computing management with AI-powered optimization and global distribution',;
     price: '$2,999',;
-    period: '/month',;
-    description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.',;
+    period: '/month',,
+  description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.',;
     features: [;
       'Global edge computing networkAI-powered resource optimizationReal-time performance monitoringAutomatic load balancingEdge-to-cloud synchronizationLatency optimization algorithmsMulti-region deploymentEdge security management',;
       'Cost optimization analyticsAPI for edge application development';
@@ -772,8 +640,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Autonomous DevOps Platform',;
     tagline: 'Self-managing DevOps with AI-powered automation and intelligent deployment optimization',;
     price: '$1,999',;
-    period: '/month',;
-    description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',;
+    period: '/month',,
+  description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',;
     features: [;
       'AI-powered code review and testingAutonomous deployment optimizationIntelligent monitoring and alertingAutomated incident responsePerformance optimization algorithmsSecurity vulnerability scanningCost optimization analyticsMulti-environment management',;
       'GitOps workflow automationReal-time collaboration tools';
@@ -816,8 +684,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Enterprise Blockchain Infrastructure Platform',;
     tagline: 'Scalable blockchain infrastructure with AI-powered consensus and smart contract automation',;
     price: '$3,499',;
-    period: '/month',;
-    description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.',;
+    period: '/month',,
+  description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.',;
     features: [;
       'Scalable blockchain infrastructureAI-powered consensus algorithmsSmart contract automationEnterprise-grade securityMulti-chain interoperabilityReal-time transaction monitoringCompliance and audit toolsAPI for business integration',;
       'Performance analytics dashboard24/7 blockchain monitoring';
@@ -860,8 +728,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Quantum Networking Platform',;
     tagline: 'Next-generation networking with quantum encryption and AI-powered optimization',;
     price: '$5,999',;
-    period: '/month',;
-    description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.',;
+    period: '/month',,
+  description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.',;
     features: [;
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration',;
       'Performance analytics24/7 network monitoring';
@@ -896,6 +764,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-02-01',;
     customers: 6,;
     rating: 4.9;
+<<<<<<< HEAD
 =======
 
     marketSize: '$25 && 25.3B quantum computing market', growthRate: '32% annual growth',
@@ -1180,65 +1049,16 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     real_implementation: true,
     implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
     launch_date: '2025 - 02 - 01', customers: 6,
     rating: 4.9,
     reviews: 4;
-<<<<<<< HEAD
 ];
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
   }
-
-=======
-
-
-=======
-import { ServiceVariant } from '../types/service-variants',;
-export interface CuttingEdgeITInfrastructureService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
 ;
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
@@ -1247,8 +1067,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Quantum-Secure Cloud Infrastructure Platform',;
     tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security',;
     price: '$4,999',;
-    period: '/month',;
-    description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',;
+    period: '/month',,
+  description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',;
     features: [;
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network',;
       '99.999% uptime guarantee24/7 security monitoring';
@@ -1291,8 +1111,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Edge Computing Orchestration Platform',;
     tagline: 'Intelligent edge computing management with AI-powered optimization and global distribution',;
     price: '$2,999',;
-    period: '/month',;
-    description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.',;
+    period: '/month',,
+  description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.',;
     features: [;
       'Global edge computing networkAI-powered resource optimizationReal-time performance monitoringAutomatic load balancingEdge-to-cloud synchronizationLatency optimization algorithmsMulti-region deploymentEdge security management',;
       'Cost optimization analyticsAPI for edge application development';
@@ -1335,8 +1155,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Autonomous DevOps Platform',;
     tagline: 'Self-managing DevOps with AI-powered automation and intelligent deployment optimization',;
     price: '$1,999',;
-    period: '/month',;
-    description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',;
+    period: '/month',,
+  description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',;
     features: [;
       'AI-powered code review and testingAutonomous deployment optimizationIntelligent monitoring and alertingAutomated incident responsePerformance optimization algorithmsSecurity vulnerability scanningCost optimization analyticsMulti-environment management',;
       'GitOps workflow automationReal-time collaboration tools';
@@ -1379,8 +1199,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Enterprise Blockchain Infrastructure Platform',;
     tagline: 'Scalable blockchain infrastructure with AI-powered consensus and smart contract automation',;
     price: '$3,499',;
-    period: '/month',;
-    description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.',;
+    period: '/month',,
+  description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.',;
     features: [;
       'Scalable blockchain infrastructureAI-powered consensus algorithmsSmart contract automationEnterprise-grade securityMulti-chain interoperabilityReal-time transaction monitoringCompliance and audit toolsAPI for business integration',;
       'Performance analytics dashboard24/7 blockchain monitoring';
@@ -1423,8 +1243,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     name: 'Quantum Networking Platform',;
     tagline: 'Next-generation networking with quantum encryption and AI-powered optimization',;
     price: '$5,999',;
-    period: '/month',;
-    description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.',;
+    period: '/month',,
+  description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.',;
     features: [;
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration',;
       'Performance analytics24/7 network monitoring';
@@ -1460,6 +1280,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     customers: 6,;
     rating: 4.9;
     reviews: 4;
+<<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -1763,3 +1584,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

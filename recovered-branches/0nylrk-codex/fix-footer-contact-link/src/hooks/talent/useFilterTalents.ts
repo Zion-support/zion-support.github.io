@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -76,10 +80,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         : [...prev, availability]
     )
   }
   const toggleRegion = (region: string) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -443,20 +450,21 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
+=======
+    
+
+    // Filter by price range
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
+    });
+    // Filter by experience range        break;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       default: // Default sorting by relevance (no specific order)
         break
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,6 +475,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {
@@ -482,6 +492,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     setExperienceRange;
     sortOption;
     setSortOption;
+<<<<<<< HEAD
     toggleSkill;
 <<<<<<< HEAD
 
@@ -816,12 +827,19 @@ export function useFilterTalents(talents:TalentProfile[]) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     toggleAvailability;
+=======
+    toggleSkill;    toggleAvailability;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     toggleRegion;
 
     clearFilters}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

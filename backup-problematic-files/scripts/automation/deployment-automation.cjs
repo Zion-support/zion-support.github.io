@@ -70,7 +70,11 @@ class DeploymentAutomation {}
     // Check if working directory is clean;
     try {}
       const gitStatus = execSync('git status --porcelain', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "encoding": 'utf8',
         "stdio": 'pipe'
       };);
@@ -82,7 +86,11 @@ class DeploymentAutomation {}
     // Check if tests pass;
     try {}
       execSync('npm test -- --watchAll=false', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 120000;
       })) {}
@@ -94,7 +102,11 @@ class DeploymentAutomation {}
     // Check if tests pass;
     try {}
       execSync('npm test -- --watchAll=false', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 120000;
       })};
@@ -103,7 +115,11 @@ class DeploymentAutomation {}
     // Check if build succeeds;
     try {}
       execSync('npm run build', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -116,7 +132,11 @@ class DeploymentAutomation {}
     this.log('Building application...');
     try {}
       const buildOutput = execSync('npm run build', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
@@ -139,7 +159,11 @@ class DeploymentAutomation {}
     this.log('Running test suite...');
     try {}
       const testOutput = execSync('npm test -- --coverage --watchAll=false', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 120000;
@@ -255,9 +279,15 @@ class DeploymentAutomation {}
 });
       execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot }
 });
+<<<<<<< HEAD
 
       this.log(`Created and pushed "tag": ${tagName}`);
 
+=======
+      
+      this.log(`Created and pushed "tag": ${tagName}`);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const tagInfo = {}
         tagName,
         "timestamp": new Date().toISOString();
@@ -289,6 +319,7 @@ class DeploymentAutomation {}
     try {}
       // Pre-deployment checks;
       await this.runStep('Pre-deployment Checks', () => this.preDeploymentChecks());
+<<<<<<< HEAD
 
       // Build application;
       await this.runStep('Build Application', () => this.buildApplication());
@@ -305,6 +336,24 @@ class DeploymentAutomation {}
       // Merge to main;
       await this.runStep('Merge to Main', () => this.mergeToMain());
 
+=======
+      
+      // Build application;
+      await this.runStep('Build Application', () => this.buildApplication());
+      
+      // Run tests;
+      await this.runStep('Run Tests', () => this.runTests());
+      
+      // Commit changes;
+      await this.runStep('Commit Changes', () => this.commitChanges());
+      
+      // Push to repository;
+      await this.runStep('Push to Repository', () => this.pushToRepository());
+      
+      // Merge to main;
+      await this.runStep('Merge to Main', () => this.mergeToMain());
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Create deployment tag;
       await this.runStep('Create Deployment Tag', () => this.createDeploymentTag());
 
@@ -326,5 +375,10 @@ if ( {})
      {}
   const deployment = new DeploymentAutomation}(;);
   deployment.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = DeploymentAutomation;
+module.exports = DeploymentAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

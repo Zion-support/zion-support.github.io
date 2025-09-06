@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,11 +71,15 @@ describe('LoadingSpinnerdynamic'
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 describe('LoadingSpinner', () => {
   test('renders without crashing', () => {
     render(<LoadingSpinner />);
     expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -116,3 +121,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

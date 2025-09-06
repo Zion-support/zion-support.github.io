@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -80,3 +81,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+ import { NewsletterForm } from '@/components/NewsletterForm'; import * as toastHook from '@/hooks/use-toast'; import api from '@/services/apiClient'; import { vi,expect,test } from 'vitest'; vi.mock( '@/hooks/use-toast'); vi.mock( '@/services/apiClient',() => ({ "default": { post: vi.fn() }})) const mockedApi = api as unknown as { "post": 'any' } test( shows success toast when subscription succeeds',async () => { mockedApi.post.mockResolvedValue({}) render(<NewsletterForm />); _fireEvent.input(screen.getByPlaceholderText(/enter your email/i),{ "target": { value: 'test@example.com }}) _fireEvent.submit(screen.getByRole( 'button',{ "name": '/subscribe/i' })) await waitFor(() => { expect(toastHook.toast.success).toHaveBeenCalledWith( '¡Gracias por suscribirte!')})})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

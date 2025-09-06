@@ -42,49 +42,16 @@ import { ReactNode } from "react";
 declare module "@/components/FeatureCard" {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   export interface FeatureCardProps {
-    title: string;
-    description: string;
+    title: string,
+  description: string;
     icon: ReactNode;
-    className?: string;
-    key?: number | string;
-  }
-}
-// Extend ListingScoreCardProps to include key for mapping;
-declare module '@/components / ListingScoreCard' {
-<<<<<<< HEAD
-
-// Extend ListingScoreCardProps to include key for mapping
-declare module "@/components/ListingScoreCard" {
-  export interface ListingScoreCardProps {
-=======
-  export interface ListingScoreCardProps {
-
-import { ReactNode } from 'react';
-import {ReactNode} from 'react';
-// Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
-  export interface FeatureCardProps {;
-    title: string;
-    description: string;
-    icon: ReactNode;
-
-    className?: string
-
-    key?: number | string
-  }
-}
-// Extend ListingScoreCardProps to include key for mapping
-declare module '@/components/ListingScoreCard' {
-  export interface ListingScoreCardProps {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    title: string;
-    description: string;
+    title: string,
+  description: string;
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     author_image?: string;
@@ -274,9 +241,14 @@ declare module '@/components/ProductListingCard' {;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     author_image?: string;
     ai_score?: number;
     rating?: number;
   }
+}    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+  }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

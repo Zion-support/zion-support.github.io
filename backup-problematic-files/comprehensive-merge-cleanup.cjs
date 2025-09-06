@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+=======
+const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
+const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 // Function to clean merge conflicts in a file;
 function cleanMergeConflicts(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+=======
+    // Remove all merge conflict markers
+    // Remove duplicate category lines
+    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
+    // Remove all merge conflict markers
+    // Remove duplicate category lines
+    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Remove all merge conflict markers;
     content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/origin\/cursor[^\n]*\n?/g, '');
@@ -22,6 +36,13 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/},\s*]/g, '}\n  ]');
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
+<<<<<<< HEAD
+=======
+      if (categoryMatch) {
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
+    // Remove any remaining merge conflict markers
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (categoryMatch) {}
         return `category: '${categoryMatch[1]}'\n    }`};
       return match}

@@ -52,6 +52,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .eq('read_status', false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
 }
@@ -66,6 +67,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });

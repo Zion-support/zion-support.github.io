@@ -201,8 +201,6 @@ import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-
-
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
@@ -238,8 +236,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -327,37 +328,48 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
+                      <SelectValue placeholder='Select location' />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="remote">Remote</SelectItem>
-                      <SelectItem value="us">United States</SelectItem>
-                      <SelectItem value="europe">Europe</SelectItem>
-                      <SelectItem value="asia">Asia</SelectItem>
+                      <SelectItem value='remote'>Remote</SelectItem>
+                      <SelectItem value='us'>United States</SelectItem>
+                      <SelectItem value='europe'>Europe</SelectItem>
+                      <SelectItem value='asia'>Asia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <div className="space-y-2">
+=======
+                
+                <div className="space-y-2">
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
+                  <div className='flex gap-4 items-center'>
+                    <Input placeholder='Min' type='number' className='w-full' />
                     <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
-                  </div>
+                    <Input placeholder='Max' type='number' className='w-full' />                  </div>
                 </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <div className="space-y-2">
+=======
+                
+                <div className="space-y-2">
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Label>Skills</Label>
 <<<<<<< HEAD
                   <div className="grid grid-cols-2 gap-2">
@@ -403,34 +415,53 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                   </Select>;
                 </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <div className="flex items-center justify-between">
+=======
+                
+                <div className="flex items-center justify-between">
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
 
-
               
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <SheetFooter>
-                <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+                <Button variant='outline' className='w-full'>
+                  Reset
+                </Button>
+                <Button
+                  className='w-full'
+                  onClick={() => addFilter('Experience: 3+ years')}
+                >
+                  Apply Filters
+                </Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
 
-
           
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Select>
-            <SelectTrigger className="w-[120px] h-8">
-              <SelectValue placeholder="Sort By" />
+            <SelectTrigger className='w-[120px] h-8'>
+              <SelectValue placeholder='Sort By' />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="relevance">Best Match</SelectItem>
-              <SelectItem value="salary">Highest Pay</SelectItem>
+              <SelectItem value='newest'>Newest</SelectItem>
+              <SelectItem value='relevance'>Best Match</SelectItem>
+              <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
 <<<<<<< HEAD
@@ -536,10 +567,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
             </SelectContent>;
           </Select>;
 
-
       </div>;
     </div>;
-  );
+  )
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -564,8 +594,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 }
 <<<<<<< HEAD
 =======
-
-
 
           {active_filters.map (filter => (
             <Badge;

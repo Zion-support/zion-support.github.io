@@ -1,22 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -63,3 +59,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

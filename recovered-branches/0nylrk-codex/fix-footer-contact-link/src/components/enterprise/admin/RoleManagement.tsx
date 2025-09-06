@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 
 =======
@@ -52,6 +52,8 @@ import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RoleManagement() {
   // Mock team members data
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -67,111 +69,25 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 1
       name: "Alex Johnson"
       email: "alex@example.com"
       role: "Admin"
-      permissions: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true}},
-<<<<<<< HEAD
-
-=======
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: true
-        viewBilling: true
-        manageBilling: true}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    {
+      permissions: {    {
       id: 2
       name: "Jamie Smith"
       email: "jamie@example.com"
       role: "Recruiter"
       permissions: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false}},
-<<<<<<< HEAD
-
-=======
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: false
-        viewBilling: false
-        manageBilling: false}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    {
-      id: 3
-      name: "Sam Williams"
-      email: "sam@example.com"
-      role: "Manager"
-      permissions: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        view_candidates: true,
-        edit_candidates: false,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: true,
-        manage_billing: false}},
-<<<<<<< HEAD
-
-=======
-        viewCandidates: true
-        editCandidates: false
-        createJobs: true
-        manageTeam: false
-        viewBilling: true
-        manageBilling: false}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 4
       name: "Taylor Brown"
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -191,10 +107,12 @@ export function RoleManagement() {
       title: "Permission updated"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
-  };
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  },
+  description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
   }
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
@@ -402,6 +320,7 @@ import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
+<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip",;
 <<<<<<< HEAD
 
@@ -1100,34 +1019,24 @@ export function RoleManagement() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
+=======
+  TooltipTrigger} from "@/components/ui/tooltip",;                    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />;
                 </TableCell>;
               </TableRow>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   <Switch 
                     checked={member.permissions.viewBilling} 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-            ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          </TableBody>;
         </Table>;
       </div>;
     </div>;
-<<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -1355,3 +1264,6 @@ TooltipProvider;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

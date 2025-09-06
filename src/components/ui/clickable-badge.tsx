@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from "react",
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -10,6 +11,27 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 }
 
 export function ClickableBadge({
+=======
+export function ClickableBadge({
+      >
+      <span>{children}</span>
+      {onRemove && (
+        <button
+          type='button'
+          onClick={e => {
+import React from "react"
+import { cn } from "@/lib/utils"
+import { badgeVariants } from "@/components/ui/badge-variants"
+
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+export function ClickableBadge({
+  children;
+  className;
+  variant;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   children,
   className,
   variant = "default",
@@ -48,7 +70,11 @@ export function ClickableBadge({
         </button>
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -57,12 +83,15 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
   onRemove?: () => void,;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
+<<<<<<< HEAD
+=======
 ;
 export function ClickableBadge({;
   children,;
   className,;
   variant = "default",;
   onRemove,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ...props;
 }: ClickableBadgeProps) {;
   return (;
@@ -95,14 +124,22 @@ export function ClickableBadge({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 
@@ -169,3 +206,4 @@ function ClickableBadge() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

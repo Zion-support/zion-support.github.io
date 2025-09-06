@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -44,15 +45,25 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
+=======
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface MobileThemeProviderProps {
   children: React.ReactNode;
 }
 
-
-
-
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
-
 
   const { theme } = useTheme();
 
@@ -66,12 +77,10 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 
+<<<<<<< HEAD
 
 
 
@@ -79,15 +88,16 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>;
   );
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -161,3 +171,6 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

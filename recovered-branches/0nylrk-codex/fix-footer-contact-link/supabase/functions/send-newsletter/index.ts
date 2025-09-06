@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -6,21 +7,14 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Resend} from "npm: resend@2 ;
 =======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Resend} from "npm: resend@2 ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,25 +27,12 @@ const cors_headers = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SendNewsletterRequest {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   subject: string;
   preview_text: string;
   body: string;
 
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface SendNewsletterRequest {
-  subject: string;
-  previewText: string;
-  body: string;
-<<<<<<< HEAD
-  testMode?: boolean
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -60,15 +41,16 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -77,6 +59,7 @@ interface SendNewsletterRequest {
   subject: string,
   previewText: string,
   body: string,
+<<<<<<< HEAD
   testMode?: boolean,
 <<<<<<< HEAD
 
@@ -186,12 +169,16 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         status: 200})
+=======
+  testMode?: boolean,        status: 200})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     // In production, we would fetch subscriber emails from the database
     // and send the newsletter to all subscribers
     // This is just a placeholder for now
     const emailResponse = {
       id: "test-email-id"
+<<<<<<< HEAD
       message: "Email would be sent to all subscribers in production"
 <<<<<<< HEAD
 
@@ -211,6 +198,9 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 500})
+=======
+      message: "Email would be sent to all subscribers in production"      status: 500})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 });
 
@@ -278,6 +268,7 @@ serve(async (req) => {;
     console.error("Error in send-newsletter function:", error),;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
+<<<<<<< HEAD
       status: 500});
 
 <<<<<<< HEAD
@@ -296,6 +287,10 @@ serve(async (req) => {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     };
+=======
+      status: 500})
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -305,17 +300,6 @@ serve(async (req) => {;
     
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      status: 500})
-  }
-});
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   test_mode?: boolean,
   test_email?: string;
 }
@@ -370,7 +354,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-<<<<<<< HEAD
 
     },
 
@@ -382,13 +365,8 @@ if ( {) {
     
     return new Response(JSON.stringify({ error: error.message }), {
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 });
 ;
@@ -485,9 +463,12 @@ status: 200
 });
   }
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -35,5 +35,10 @@ const fs = require("fs")";const path = require("path")""
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

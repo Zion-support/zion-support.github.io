@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
 export interface MilestoneAssistantProps {
@@ -17,6 +20,7 @@ export interface MilestoneAssistantProps {
   endDateIso: string,
   project_type: ProjectType,
   on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -226,12 +230,15 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, alignItems: "center" }}>;
           <input type="checkbox" checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />;
           Auto-add to Milestone Tracker;
         </label>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 =======
@@ -314,12 +321,21 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      </div>;            <div;
+              className="milestone-summary";
+              style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
+              on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
+            >;
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div;
               className="milestone-summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
               onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
             >;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
@@ -337,22 +353,15 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
 
-
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
+<<<<<<< HEAD
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
 <<<<<<< HEAD
 =======
@@ -544,6 +553,10 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label>Suggested due date</label>;
+=======
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;                <div style={{ display: "grid", gap: 6 }}>;
+                  <label > Suggested due date</label>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <input;
                     type="date";
                     value={item.suggestedDueDateIso.slice(0, 10)}
@@ -555,6 +568,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                   <label>Estimated effort (hours)</label>;
 =======
                   <label > Estimated effort (hours)</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -575,10 +589,13 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <input;
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -608,6 +625,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   />;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>;
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>;
                   <button onClick={() => removeItem(idx)} style={{ color: "#b00" }}>Remove</button>;
@@ -618,6 +637,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
           </div>;
         ))}
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
 =======
@@ -631,39 +651,11 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 ;
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default MilestoneAssistant;
-=======
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || "0", 10)) })}
-                  />;
-                </div>;
-                <div style={{ display:"flex", justifyContent:"space-between", marginTop:8 }}>;
-                  <button onClick={() => removeItem(idx)} style={{ color:"#b00" }}>Remove</button>;
-                  <button onClick={accept}>Accept</button>;
-                </div>;
-              </div>;            )}
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
-                  />;
-                </div>;
-                <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>;
-                  <button onClick={() => removeItem(idx)} style={{ color: "#b00" }}>Remove</button>;
-                  <button onClick={accept}>Accept</button>;
-                </div>;
-              </div>;
-            )}
-          </div>;
-        ))}
-      </div>;
-    </div>;
-=======
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 ;
 
-
-<<<<<<< HEAD
 export default MilestoneAssistant;
 }> <button onClick= {
   generate 
@@ -804,10 +796,3 @@ export default MilestoneAssistant;
 }
 ;
 export default MilestoneAssistant;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export default MilestoneAssistant;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-export default MilestoneAssistant;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

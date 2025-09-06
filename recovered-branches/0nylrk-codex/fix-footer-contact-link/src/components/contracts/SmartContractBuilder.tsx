@@ -28,6 +28,7 @@ interface SmartContractBuilderProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ interface SmartContractBuilderProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -49,6 +52,7 @@ import {TemplateManager} from "./templates/TemplateManager";
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
 import {useSmartContracts} from "@/hooks/useSmartContracts";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -108,6 +112,8 @@ interface SmartContractBuilderProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -119,6 +125,7 @@ interface SmartContractBuilderProps {;
 
 export function SmartContractBuilder(): any ({;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useState } from "react",
@@ -152,10 +159,14 @@ export function SmartContractBuilder({;
 =======
 export function SmartContractBuilder({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export function SmartContractBuilder({;export function SmartContractBuilder({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isOpen;
   onClose;
   talent;
   clientName;
+<<<<<<< HEAD
   onContractGenerated;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -221,13 +232,16 @@ export function SmartContractBuilder({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
+=======
+  onContractGenerated;  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     network: 'ethereum'
     useEscrow: true
 
     deployToChain: false
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -241,6 +255,8 @@ export function SmartContractBuilder({
     setFormValues(templateData)
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
@@ -252,6 +268,7 @@ export function SmartContractBuilder({
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -262,44 +279,12 @@ export function SmartContractBuilder({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return
-    try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
-    undefined;
-  );
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({;
-    network: 'ethereum',;
-    useEscrow: true,;
-    deployToChain: false;
-  });
-  const [deployStatus, setDeployStatus] = useState<string>('');
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
-
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {;
-    setFormValues(templateData);
-  };
-
-  // Convert ContractFormValues to contract content string;
-  const handleContractGenerated = async (formValues: ContractFormValues) => {;
-    if (!formValues) return,;
-    try {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
+    try {      const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
       if (onContractGenerated) {;
@@ -364,6 +349,7 @@ if ( {) {
   $2
 }
         onContractGenerated (generatedContractText);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 <<<<<<< HEAD
@@ -428,6 +414,13 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
+=======
+      }      }
+    } catch (error) {
+      console.error("Error generating contract:", error),
+      toast.error("Failed to generate smart contract")
+    };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleDeployContract = async () => {
     // Check condition
 if (return) {
@@ -450,29 +443,8 @@ if ( {) {
       }
     } catch (error) {
   }
-  };
-
-
-  };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      if (contractInfo) {
-        setDeploymentInfo(contractInfo),
-        setDeployStatus('deployed'),
-        toast.success("Smart contract deployed successfully!")
-      } else {
-        setDeployStatus('error'),
-        toast.error("Failed to deploy smart contract")
-      }
-    } catch (error) {
-      console.error("Error deploying contract:", error);
-      setDeployStatus('error');
-      toast.error("Failed to deploy smart contract")
-    }
   }
+<<<<<<< HEAD
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content)
@@ -488,6 +460,10 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -560,6 +536,7 @@ export function SmartContractBuilder({;
       onContractGenerated(contract)
     }
     setGeneratedContract(contract);
+<<<<<<< HEAD
     setActiveTab("preview")
 <<<<<<< HEAD
   },
@@ -618,6 +595,9 @@ export function SmartContractBuilder({;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {;
+=======
+    setActiveTab("preview")    } catch (error) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console && console.error("Error generating contract:", error);
       toast && toast.error("Failed to generate smart contract");
     }
@@ -654,125 +634,10 @@ export function SmartContractBuilder({;
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setGeneratedContract(contract);
-    setActiveTab("preview");
-  };
-<<<<<<< HEAD
-<<<<<<< HEAD
+    setActiveTab("preview")
+};
 
-  return (
-=======
-  return (
-
-import { useState } from "react",;
-import { Dialog, DialogContent } from "@/components/ui/dialog",;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
-import { Button } from "@/components/ui/button",;
-import { Save } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { ContractForm, ContractFormValues } from "./components/ContractForm",;
-import { ContractPreview } from "./components/ContractPreview",;
-import { TemplateManager } from "./templates/TemplateManager",;
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",;
-import { useSmartContracts } from "@/hooks/useSmartContracts",;
-import { toast } from "sonner",;
-;
-interface SmartContractBuilderProps {;
-  isOpen:boolean,;
-  onClose:() => void,;
-  talent:TalentProfile,;
-  clientName:string,;
-  onContractGenerated?:(contractContent:string) => void,;
-  onDeploy?:(contractContent:string) => void;
-}
-;
-export function SmartContractBuilder({;
-  isOpen,;
-  onClose,;
-  talent,;
-  clientName,;
-  onContractGenerated,;
-  onDeploy;
-} SmartContractBuilderProps) {;
-  const [activeTab, setActiveTab] = useState<string>("form"),;
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
-    undefined;
-  ),;
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),;
-  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({;
-    network:'ethereum',;
-    useEscrow:true,;
-    deployToChain:false;
-  }),;
-  const [deployStatus, setDeployStatus] = useState<string>(''),;
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),;
-  ;
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),;
-;
-  const handleLoadTemplate = (templateData:ContractFormValues) => {;
-    setFormValues(templateData);
-  },;
-;
-  // Convert ContractFormValues to contract content string;
-  const handleContractGenerated = async (formValues:ContractFormValues) => {;
-    if (!formValues) return,;
-    try {;
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),;
-      setGeneratedContract(generatedContractText),;
-      setActiveTab("preview"),;
-      if (onContractGenerated) {;
-        onContractGenerated(generatedContractText),;
-      }
-    } catch (error) {;
-      console.error("Error generating contract:", error),;
-      toast.error("Failed to generate smart contract"),;
-    }
-  },;
-  ;
-  const handleDeployContract = async () => {;
-    if (!generatedContract) return,;
-    ;
-    try {;
-      setDeployStatus('deploying'),;
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions),;
-      ;
-      if (contractInfo) {;
-        setDeploymentInfo(contractInfo),;
-        setDeployStatus('deployed'),;
-        toast.success("Smart contract deployed successfully!"),;
-      } else {;
-        setDeployStatus('error'),;
-        toast.error("Failed to deploy smart contract"),;
-      }
-    } catch (error) {;
-      console.error("Error deploying contract:", error),;
-      setDeployStatus('error'),;
-      toast.error("Failed to deploy smart contract"),;
-    }
-  },;
-;
-  // Modified to match the expected interface;
-  const handleFormSubmit = (contract:string) => {;
-    // This should be a function that takes a string (contract content);
-    // Since we need to adapt the interface, we'll implement the simplest solution that works;
-    if (onContractGenerated) {;
-      onContractGenerated(contract),;
-    }
-    setGeneratedContract(contract),;
-    setActiveTab("preview"),;
-  },;
-;
-  return (;
-            <ContractForm
-            <ContractForm 
-    setGeneratedContract(contract);
-    setActiveTab("preview");
-  };
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return (  return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -780,6 +645,7 @@ export function SmartContractBuilder({;
             <TabsList className="grid grid-cols-2">;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
+<<<<<<< HEAD
             </TabsList>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -916,43 +782,21 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   generatedContract={generatedContract}
+=======
+            </TabsList>;                  generatedContract={generatedContract}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   talent={talent}
                   onClose={onClose}
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
-<<<<<<< HEAD
 
                 />;
 
                 {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
-                  <div className="mt-6 flex justify-center">;
-
-=======
-          <TabsContent value="form" className="pt-4">;
-            <ContractForm;
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleFormSubmit}
-              deployOptions={deployOptions}
-              onDeployOptionsChange={setDeployOptions}
-            />
-          </TabsContent>
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <div>
-
-            />;
+                  <div className="mt-6 flex justify-center">;            />;
           </TabsContent>;
-                <ContractPreview
-
-                <ContractPreview 
-
-                  generatedContract={generatedContract}
-                  talent={talent}
-          ;
           <TabsContent value="preview" className="pt-4">;
+<<<<<<< HEAD
             {generatedContract && (;
               <div>;
                 <ContractPreview ;
@@ -1055,6 +899,8 @@ if ( {) {
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {generated_contract && (
               <div>;
                 <ContractPreview;
@@ -1065,11 +911,11 @@ if ( {) {
                   deployment_info={deployment_info}
                 />;
                 {!deployment_info && deploy_options.deployToChain && (
-                  <div className="mt - 6 flex justify - center">;
+                  <div className="mt - 6 flex justify-center">;
                     <Button;
                       on_click={handleDeployContract}
                       disabled={deploy_status === 'deploying'}
-                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
+                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo-700";
                     >;
                       {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>;
@@ -1087,6 +933,7 @@ if ( {) {
     </Dialog>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -1100,6 +947,9 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface SmartContractBuilderProps {
+=======
+}  ),; interface SmartContractBuilderProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -1136,8 +986,6 @@ try {
 setActiveTab ("preview");
   
 }
-<<<<<<< HEAD
-;
 
 };
 const handleDeployContract = async () => {
@@ -1151,7 +999,7 @@ if (contractInfo) {
 };
 //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {
   setGeneratedContract (contract);
-setActiveTab ("preview");
+setActiveTab ("preview")
 };
   talent 
 }clientName= {
@@ -1201,7 +1049,11 @@ setActiveTab ("preview");
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

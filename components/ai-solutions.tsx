@@ -38,6 +38,7 @@ export default function AISolutionsPage() {
         'Recommendation Systems',
       ],      icon: '🧠',
       category: 'Core AI',
+<<<<<<< HEAD
       complexity: 'Advanced';
     };
 <<<<<<< HEAD
@@ -45,6 +46,10 @@ export default function AISolutionsPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      complexity: 'Advanced'
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -355,21 +360,21 @@ export default function AISolutionsPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
             {/* AI Solutions Grid */}
-            <div className="mb - 16">;
-              <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+            <div className="mb-16">;
+              <h2 className="text - 3xl font - bold mb - 8 text - center text-cyan-400">Our AI Solutions</h2>;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6">;
                 {ai_solutions.map ((solution, index) => (
-                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300">;
-                    <div className="text - 4xl mb - 4">{solution.icon}</div>;
-                    <div className="flex items - center gap - 2 mb - 3">;
-                      <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full">{solution.category}</span>;
-                      <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full">{solution.complexity}</span>;
+                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition-all duration-300">;
+                    <div className="text-4xl mb-4">{solution.icon}</div>;
+                    <div className="flex items - center gap-2 mb-3">;
+                      <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text-sm rounded-full">{solution.category}</span>;
+                      <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text-sm rounded-full">{solution.complexity}</span>;
                     </div>;
-                    <h3 className="text - xl font - bold mb - 3 text - white">{solution.title}</h3>;
-                    <p className="text - white / 70 mb - 4">{solution.description}</p>;
-                    <ul className="space - y-1 mb - 4">;
+                    <h3 className="text - xl font - bold mb-3 text-white">{solution.title}</h3>;
+                    <p className="text-white / 70 mb-4">{solution.description}</p>;
+                    <ul className="space-y-1 mb-4">;
                       {solution.features.map ((feature, feature_index) => (
-                        <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
+                        <li key={feature_index} className="text - sm text-white / 60 flex items-center">;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
@@ -672,8 +677,11 @@ export default function AISolutionsPage() {
               </div>;
             </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {tech}
                     </span>;
                   ))}
@@ -765,7 +773,6 @@ export default function AISolutionsPage() {
           </section>;
         </main>;
       </div>;
-
 
 }
   );

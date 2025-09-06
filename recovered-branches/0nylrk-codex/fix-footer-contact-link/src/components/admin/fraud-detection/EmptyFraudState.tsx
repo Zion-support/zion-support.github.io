@@ -4,38 +4,23 @@ import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 =======
 
-<<<<<<< HEAD
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
 interface EmptyFraudStateProps {
   has_filters: boolean;
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
   has_filters: boolean;
 
-
-<<<<<<< HEAD
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -67,10 +52,13 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>;
 );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </div>;
 );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -90,6 +78,9 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+=======
+=======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
@@ -106,6 +97,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
   onResetFilters,;
 }) => {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -141,21 +133,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      {hasFilters && (;
-        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
-      )}
-    </div>;
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    </div>
-  );
+  )
 };
 
 import React from "react",;
@@ -195,9 +176,6 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 
 };
 
-  );
+  )
 };
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

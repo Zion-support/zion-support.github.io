@@ -32,7 +32,11 @@ class PM2SyncAutomation {}
         this.log('Checking PM2 status...');
         try {}
             const statusResult = execSync('pm2 status --json', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -54,19 +58,31 @@ class PM2SyncAutomation {}
         try {}
             // Stop all processes;
             execSync('pm2 stop all', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
             // Delete all processes;
             execSync('pm2 delete all', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
             // Start processes from ecosystem file;
             execSync('pm2 start ecosystem.config.cjs', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
             }
 });
@@ -79,7 +95,11 @@ class PM2SyncAutomation {}
         this.log('Checking process health...');
         try {}
             const statusResult = execSync('pm2 status --json', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -103,12 +123,20 @@ class PM2SyncAutomation {}
             const healthCheck = this.checkProcessHealth(;);
             if ( {})
                 execSync('pm2 restart all', { })
+<<<<<<< HEAD
                     "cwd": this.projectRoot,
+=======
+                    "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('pm2 restart all', { })
+<<<<<<< HEAD
                     "cwd": this.projectRoot,
+=======
+                    "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     "stdio": 'pipe'
                 })};
                 this.log('Unhealthy processes restarted');
@@ -161,5 +189,10 @@ if ( {})
      {}
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = PM2SyncAutomation;
+module.exports = PM2SyncAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

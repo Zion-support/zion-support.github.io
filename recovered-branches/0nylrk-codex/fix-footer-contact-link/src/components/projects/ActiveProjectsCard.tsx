@@ -15,17 +15,21 @@ import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
+<<<<<<< HEAD
 
 
 
@@ -37,6 +41,8 @@ export function ActiveProjectsCard() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
@@ -58,6 +64,7 @@ import { Project } from "@/types/projects",
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -98,6 +105,9 @@ export function ActiveProjectsCard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
+=======
+    if (isLoading) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <Card>
         <CardHeader>
@@ -111,6 +121,7 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -213,10 +224,17 @@ export function ActiveProjectsCard() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>;
+=======
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const active = projects && projects.filter(p => ;
+        ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -355,12 +373,14 @@ export function ActiveProjectsCard() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   
 
-
   if (activeProjects.length === 0) {
 
+<<<<<<< HEAD
   if (activeProjects && activeProjects.length === 0) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -520,3 +540,6 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  if (activeProjects && activeProjects.length === 0) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

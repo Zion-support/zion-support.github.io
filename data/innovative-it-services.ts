@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface InnovativeITService {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -56,22 +59,6 @@ export interface InnovativeITService {
     website: string;
   }
   {
-=======
-
-
-  {
-
-=======
-    id: 'edge - computing - platform',
-    name: 'Edge Computing Platform',
-    tagline: 'Distributed computing at the network edge',
-    price: '$299',
-    period: '/month',
-    description:;
-      'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -84,6 +71,7 @@ export interface InnovativeITService {
       '5G optimization',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🌐',
 <<<<<<< HEAD
 =======
@@ -615,6 +603,9 @@ export interface InnovativeITService {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true
+=======
+    icon: '🌐',    realImplementation: true
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
     launchDate: '2024-01-01'
@@ -813,8 +804,6 @@ export interface InnovativeITService {;
     growthRate: '130% annual growth'
     variant: 'cyberpunk'
     contactInfo: {
-<<<<<<< HEAD
-=======
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -822,12 +811,12 @@ export interface InnovativeITService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
     rating: 4.7
     reviews: 1250
+<<<<<<< HEAD
   }
 =======
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
@@ -839,6 +828,9 @@ export interface InnovativeITService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+  }];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -850,6 +842,7 @@ export interface InnovativeITService {;
     rating: 4.7
 
     reviews: 1250
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -864,10 +857,14 @@ export interface InnovativeITService {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string,;
+=======
+  }
+];  id: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -909,8 +906,8 @@ export const innovativeITServices: InnovativeITService[] = [;
     name: 'Zero Trust Security Platform',;
     tagline: 'Next-generation cybersecurity with zero trust architecture',;
     price: '$599',;
-    period: '/month',;
-    description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;
+    period: '/month',,
+  description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;
     features: [;
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management',;
       'Compliance reportingReal-time monitoring';
@@ -954,18 +951,14 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
-<<<<<<< HEAD
 
   }
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
+;  }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

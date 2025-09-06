@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,12 +8,15 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -95,6 +99,9 @@ export const crm = {
 export const ats = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const log: SyncLogEntry = {
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
@@ -122,6 +129,7 @@ async function mockProviderCall < T>(
   return { log, result: { ok: true } as unknown as T }
 }
 // CRM actions;
+<<<<<<< HEAD
 export const crm = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,6 +239,9 @@ export const email = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+=======
+export const crm = {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // ATS actions;
 export const ats = {
@@ -241,6 +252,7 @@ export const ats = {
     return mockProviderCall (connection, "update_status", { status });
   },
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -291,6 +303,8 @@ export const ats = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Email actions
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const email = {
   async sendNotification(
     connection: ProviderConnection,
@@ -299,6 +313,7 @@ export const email = {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -311,3 +326,5 @@ export const email = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

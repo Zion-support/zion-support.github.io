@@ -3,6 +3,7 @@ import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createOpenAIClient, generateJobPost } from './openai.js';
 import { getPool, withUser } from './pg.js';
 <<<<<<< HEAD
@@ -95,6 +96,8 @@ app.get('/notifications', async (req, reply) => {;
        WHERE read = false ORDER BY created_at DESC LIMIT 20`;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -102,6 +105,7 @@ const app = Fastify ({ logger: true });
 await app.register (cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
+<<<<<<< HEAD
     if (|| allowed.includes (origin)) {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -159,6 +163,9 @@ app && app.post('/jobs/generate', async (req, reply) => {
     )
 =======
 import { get_pool, with_user } from './pg.js';
+=======
+    if (|| allowed.includes (origin)) {) {import { get_pool, with_user } from './pg.js';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const allowed = (process.env.CORS_ORIGINS || '';
     cb (new Error ('Not allowed';
   methods: ['GET', 'POST', 'OPTIONS';
@@ -174,7 +181,6 @@ app.post ('/jobs / generate';
   const description = await generateJobPost (openai, role, body);
   // Check condition
 if (return { description }) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   $2
 }
       cb (null, true);
@@ -245,6 +251,7 @@ app.post ('/jobs / generate', async (req, reply) => {
   return { items }
 });
 const port = Number(process.env.API_PORT |4000);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -315,3 +322,5 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

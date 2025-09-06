@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/test/integration-setup.ts
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/test/integration-setup.ts
 =======
 <<<<<<< HEAD
@@ -14,6 +16,11 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/test/integration-setup.ts
+========
+
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/test/integration-setup.ts
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Integration test setup
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
@@ -25,9 +32,9 @@ beforeAll(() => server && server.listen());
 afterEach(() => server && server.resetHandlers());
 afterAll(() => server && server.close());
 export { server };
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/test/integration-setup.ts
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/test/integration-setup.ts
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
 =======
@@ -66,3 +73,11 @@ import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/test/integration-setup.ts
+========
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/test/integration-setup.ts
+=======
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest && rest.get('/api/*',(req,res,ctx) => { return res(ctx && ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server && server.listen()); afterEach(() => server && server.resetHandlers()); afterAll(() => server && server.close()); export { server };
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest && rest.get('/api/*',(req,res,ctx) => { return res(ctx && ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server && server.listen()); afterEach(() => server && server.resetHandlers()); afterAll(() => server && server.close()); export { server };
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest && rest.get('/api/*',(req,res,ctx) => { return res(ctx && ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server && server.listen()); afterEach(() => server && server.resetHandlers()); afterAll(() => server && server.close()); export { server };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

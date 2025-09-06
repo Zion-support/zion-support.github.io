@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -74,3 +75,6 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

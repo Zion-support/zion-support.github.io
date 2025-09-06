@@ -220,6 +220,7 @@ if (return) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (!ctx) return;
 
+<<<<<<< HEAD
         ctx.save();
         ctx.globalAlpha = this.life / this.maxLife;
         ctx.fillStyle = this.color;
@@ -239,6 +240,8 @@ if (return) {
         ctx.stroke();
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if (!ctx) return;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
@@ -489,17 +492,25 @@ if (return) {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }
         }
       }
 
       ctx && ctx.restore();
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+      animationFrameId = requestAnimationFrame(animate)
+};      animationFrameId = requestAnimationFrame(animate);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
           const p1 = particles[i];
@@ -680,6 +691,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 }
 export default UltraAdvancedQuantumBackground;  )
 }
+<<<<<<< HEAD
 export default UltraAdvancedQuantumBackground;
 
 <<<<<<< HEAD
@@ -691,16 +703,23 @@ export default UltraAdvancedQuantumBackground;  )
 export default UltraAdvancedQuantumBackground;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+export default UltraAdvancedQuantumBackground
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
-export default UltraAdvancedQuantumBackground;  );
+export default UltraAdvancedQuantumBackground;  )
 };
 
+<<<<<<< HEAD
 
 export default UltraAdvancedQuantumBackground;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+export default UltraAdvancedQuantumBackground
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",;

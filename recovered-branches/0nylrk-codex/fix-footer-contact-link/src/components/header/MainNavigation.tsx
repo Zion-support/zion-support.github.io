@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -29,10 +25,14 @@ import React from 'react';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link  } from 'react-router-dom';
+=======
+=======import { Link  } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 import {NavLink} from "react-router-dom";
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -97,16 +97,14 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className={({ isActive }) =>;
+=======
+import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
           );
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export /**
  * MainNavigation - Function description
  */
 function MainNavigation() {
@@ -118,63 +116,22 @@ function MainNavigation() {
           cn (
             "text - sm font - medium transition - colors hover: text - primary",
             is_active ? "text - zion - cyan" : "text - muted - foreground");
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-import React from 'react',;
-import { Link } from 'react-router-dom',;
-import { cn } from "@/lib/utils",;
-import { NavLink } from "react-router-dom",;
-;
-interface MainNavigationProps {;
-  className?:string,;
-}
-;
-export function MainNavigation({ className } MainNavigationProps) {;
-  return (;
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;
-      <NavLink;
-        to="/";
-        className={({ isActive }) =>;
-          cn(;
-            "text-sm font-medium transition-colors hover:text-primary",;
-            isActive ? "text-zion-cyan" :"text-muted-foreground";
-          );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        }
       >;
         Home;
       </NavLink>;
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        className={({ isActive }) =>;
-          cn(;
-            "text-sm font-medium transition-colors hover: text-primary",;
-            isActive ? "text-zion-cyan" : "text-muted-foreground";
-          );
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Link to="/talent" className="text - zion - slate - light hover:text - white transition - colors">;
+      <Link to="/talent" className="text - zion - slate - light hover:text - white transition-colors">;
         Find Talent;
       </Link>;
-      <Link to="/services" className="text - zion - slate - light hover:text - white transition - colors">;
+      <Link to="/services" className="text - zion - slate - light hover:text - white transition-colors">;
         Services;
       </Link>;
-      <Link to="/equipment" className="text - zion - slate - light hover:text - white transition - colors">;
+      <Link to="/equipment" className="text - zion - slate - light hover:text - white transition-colors">;
         Equipment;
       </Link>;
-      <Link to="/blog" className="text - zion - slate - light hover:text - white transition - colors">;
+      <Link to="/blog" className="text - zion - slate - light hover:text - white transition-colors">;
         Blog;
       </Link>;
-      <Link to="/categories" className="text - zion - slate - light hover:text - white transition - colors">;
-<<<<<<< HEAD
-=======
+      <Link to="/categories" className="text - zion - slate - light hover:text - white transition-colors">;
       <Link to="/talent" className="text-zion-slate-light hover:text-white transition-colors">;
         Find Talent;
       </Link>;
@@ -188,53 +145,27 @@ export function MainNavigation({ className } MainNavigationProps) {;
         Blog;
       </Link>;
       <Link to="/categories" className="text-zion-slate-light hover:text-white transition-colors">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         Categories;
       </Link>;
       <NavLink;
         to="/partners";
-<<<<<<< HEAD
         className={({ is_active }) =>;
           cn (
             "text - sm font - medium transition - colors hover: text - primary",
             is_active ? "text - zion - cyan" : "text - muted - foreground");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-        className={({ isActive }) =>;
-          cn(;
-            "text-sm font-medium transition-colors hover:text-primary",;
-            isActive ? "text-zion-cyan" :"text-muted-foreground";
-          );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        }
       >;
         Partner Program;
       </NavLink>;
-<<<<<<< HEAD
 
-            isActive ? "text-zion-cyan" : "text-muted-foreground",;
-=======
-      <NavLink;
-        to="/signup";
-        className={({ isActive }) =>;
-          cn(;
-            "text-sm font-medium transition-colors hover:text-primary",;
-            isActive ? "text-zion-cyan" :"text-muted-foreground",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
+            isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
           );
         }
       >;
         Register;
       </NavLink>;
     </nav>;
-<<<<<<< HEAD
   );
 }
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <NavLink;
         to="/signup";
         className={({ is_active }) =>;
@@ -248,6 +179,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
       </NavLink>;
     </nav>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -308,6 +240,8 @@ export function MainNavigation({ className } MainNavigationProps) {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -333,6 +267,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
         to="/partners"
         className={({ isActive }) =>
           cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -379,6 +314,10 @@ export function MainNavigation({ className } MainNavigationProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           cn(;
+=======
+
+            "text-sm font-medium transition-colors hover:text-primary",          cn(;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
@@ -447,7 +386,6 @@ function MainNavigation() {
       </NavLink>;
     </nav>);
 }
-<<<<<<< HEAD
 ;
 
   ),;}
@@ -470,6 +408,7 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 " bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light") 
 }> Register </NavLink> </nav>) 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -479,3 +418,6 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

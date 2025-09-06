@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ComprehensiveService {
 export interface ComprehensiveService {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
-  tagline: string;
+  tagline: string,
   description: string;
   price: string;
   period: string;
@@ -23,10 +26,13 @@ export interface ComprehensiveService {;
     phone: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ];      phone: '+1 302 464 0950';
 
@@ -39,6 +45,7 @@ export interface ComprehensiveService {;
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
+<<<<<<< HEAD
     customers: 950;
 <<<<<<< HEAD
 =======
@@ -345,11 +352,15 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+    customers: 950;      address: '364 E Main St STE 1008 Middletown DE 19709'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 520,
   },;
@@ -357,6 +368,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      phone: '+1 302 464 0950';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -376,7 +389,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 export interface ComprehensiveService {;
   id: string,;
   name: string,;
-  tagline: string,;
+  tagline: string,,
   description: string,;
   price: string,;
   period: string,;
@@ -409,8 +422,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-content-factory-pro',;
     name: 'AI Content Factory Pro',;
-    tagline: 'Enterprise-grade AI content generation with brand voice consistency',;
-    description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',;
+    tagline: 'Enterprise-grade AI content generation with brand voice consistency',,
+  description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',;
     price: '$49',;
     period: '/month',;
     features: [;
@@ -445,8 +458,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-customer-success-platform',;
     name: 'AI Customer Success Platform',;
-    tagline: 'Predictive customer success with AI-powered insights',;
-    description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',;
+    tagline: 'Predictive customer success with AI-powered insights',,
+  description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',;
     price: '$199',;
     period: '/month',;
     features: [;
@@ -481,8 +494,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-financial-risk-manager',;
     name: 'AI Financial Risk Manager',;
-    tagline: 'Real-time financial risk assessment and compliance',;
-    description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',;
+    tagline: 'Real-time financial risk assessment and compliance',,
+  description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',;
     price: '$299',;
     period: '/month',;
     features: [;
@@ -517,8 +530,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-healthcare-diagnostics',;
     name: 'AI Healthcare Diagnostics Platform',;
-    tagline: 'AI-powered medical imaging and diagnostic support',;
-    description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',;
+    tagline: 'AI-powered medical imaging and diagnostic support',,
+  description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',;
     price: '$399',;
     period: '/month',;
     features: [;
@@ -553,8 +566,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-ecommerce-optimizer',;
     name: 'AI E-commerce Optimizer',;
-    tagline: 'Intelligent e-commerce optimization and personalization',;
-    description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',;
+    tagline: 'Intelligent e-commerce optimization and personalization',,
+  description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',;
     price: '$149',;
     period: '/month',;
     features: [;
@@ -589,8 +602,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-cybersecurity-suite',;
     name: 'AI Cybersecurity Suite',;
-    tagline: 'Intelligent threat detection and response',;
-    description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',;
+    tagline: 'Intelligent threat detection and response',,
+  description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',;
     price: '$249',;
     period: '/month',;
     features: [;
@@ -625,8 +638,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-data-pipeline-platform',;
     name: 'AI Data Pipeline Platform',;
-    tagline: 'Intelligent data processing and analytics automation',;
-    description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',;
+    tagline: 'Intelligent data processing and analytics automation',,
+  description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',;
     price: '$179',;
     period: '/month',;
     features: [;
@@ -661,8 +674,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-hr-recruitment-platform',;
     name: 'AI HR Recruitment Platform',;
-    tagline: 'Intelligent talent acquisition and HR automation',;
-    description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',;
+    tagline: 'Intelligent talent acquisition and HR automation',,
+  description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',;
     price: '$129',;
     period: '/month',;
     features: [;
@@ -697,8 +710,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-legal-contract-analyzer',;
     name: 'AI Legal Contract Analyzer',;
-    tagline: 'Intelligent contract analysis and legal automation',;
-    description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',;
+    tagline: 'Intelligent contract analysis and legal automation',,
+  description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',;
     price: '$199',;
     period: '/month',;
     features: [;
@@ -733,8 +746,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   {;
     id: 'ai-manufacturing-optimizer',;
     name: 'AI Manufacturing Optimizer',;
-    tagline: 'Intelligent manufacturing optimization and predictive maintenance',;
-    description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',;
+    tagline: 'Intelligent manufacturing optimization and predictive maintenance',,
+  description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',;
     price: '$299',;
     period: '/month',;
     features: [;
@@ -1391,14 +1404,10 @@ export interface ComprehensiveService {;
     launch_date: '2024 - 01 - 10';
     customers: 950;
     reviews: 520
-=======
     reviews: 520;
-=======
 
 export interface ComprehensiveService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
   id: string, name: string,
@@ -1716,7 +1725,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 ];
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

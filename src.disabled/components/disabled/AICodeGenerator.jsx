@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/disabled/AICodeGenerator.jsx
 import React,{ useState,useCallback } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from\';\';lucide-react\' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState(\'';generate\') const [generatedCode,setGeneratedCode] = useState(\'';\';) const [customCode,setCustomCode] = useState(\'') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) \'';
 const React,{ useState,useCallback } from";react" import { motion,AnimatePresence } from";";framer-motion" import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from";";lucide-react" const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState("";generate") const [generatedCode,setGeneratedCode] = useState("";";) const [customCode,setCustomCode] = useState("") const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) "";''"
@@ -51,3 +52,6 @@ import _React,{ useState,useCallback } from';react' import { motion,AnimatePrese
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

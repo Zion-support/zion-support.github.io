@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,12 +25,15 @@ export default function AIMatcherPage() {;
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
+<<<<<<< HEAD
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 =======
 import { useState } from "react";
@@ -47,6 +51,9 @@ import {
 } from "@/components/ui/select";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { toast } from "@/hooks/use-toast";
+=======
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
   const navigate = useNavigate();
@@ -56,6 +63,9 @@ export default function AIMatcherPage() {
     // Get the item type from the category
     let itemType = "service";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const category = match.item.category.toLowerCase()
     if (category.includes("talent") |category === "engineering" |
         category === "data science" |category === "development") {
@@ -64,6 +74,7 @@ import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+<<<<<<< HEAD
   
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleMatchSelect = (match: MatchResult) => {
@@ -153,6 +164,30 @@ export default function AIMatcherPage() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+  
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service",
+    const category = match.item.category.toLowerCase(),
+    
+    if (category.includes("talent") || category === "engineering" || 
+        category === "data science" || category === "development") {
+      itemType = "talent"
+    } else if (category.includes("equipment") |category === "hardware") {
+      itemType = "equipment"
+    }
+    toast({
+      title: "Match Selected"
+      description: `You've selected ${match.item.title}`})
+    // Navigate to the quote request page with the selected item
+    navigate("/request-quote", {
+      state: {
+        serviceType: itemType
+        specificItem: match.item
+      }
+    })  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -194,6 +229,7 @@ export default function AIMatcherPage() {
               </Select>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -227,6 +263,8 @@ import { MatchResult } from "@/lib/ai-matchmaking",;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -472,33 +510,34 @@ if (|| category === "hardware") {) {
   return (
     <>;
       <Header />;
-      <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
-        <div className="container mx - auto">;
-          <div className="text - center mb - 12">;
+      <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text - center mb-12">;
             <GradientHeading > AI Matchmaker</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
+            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx-auto">;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-          <div className="max - w-4xl mx - auto">;
-            <div className="mb - 8">;
-              <label className="block text - sm font - medium text - zion - slate - light mb - 2">;
+          <div className="max - w-4xl mx-auto">;
+            <div className="mb-8">;
+              <label className="block text - sm font - medium text - zion - slate - light mb-2">;
                 I'm looking for:;
               </label>;
               <Select value={selected_category} onValueChange={setSelectedCategory}>;
-                <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">;
+                <SelectTrigger className="bg - zion - blue border border - zion - blue - light text-white">;
                   <SelectValue placeholder="All Categories" />;
                 </SelectTrigger>;
-                <SelectContent className="bg - zion - blue - dark border border - zion - blue - light">;
-                  <SelectItem value="all" className="text - white">All Categories</SelectItem>;
-                  <SelectItem value="service" className="text - white">Services</SelectItem>;
-                  <SelectItem value="talent" className="text - white">Talent</SelectItem>;
-                  <SelectItem value="equipment" className="text - white">Equipment</SelectItem>;
+                <SelectContent className="bg - zion - blue - dark border border - zion - blue-light">;
+                  <SelectItem value="all" className="text-white">All Categories</SelectItem>;
+                  <SelectItem value="service" className="text-white">Services</SelectItem>;
+                  <SelectItem value="talent" className="text-white">Talent</SelectItem>;
+                  <SelectItem value="equipment" className="text-white">Equipment</SelectItem>;
                 </SelectContent>;
               </Select>;
             </div>;
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
+<<<<<<< HEAD
               onMatchSelect={handleMatchSelect}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -560,3 +599,6 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              onMatchSelect={handleMatchSelect}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

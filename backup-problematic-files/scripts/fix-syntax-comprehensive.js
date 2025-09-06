@@ -63,11 +63,15 @@ function fixFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let fixedContent = content;
     let hasChanges = false;
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-comprehensive.js
     
 ========
 
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/fix-syntax-comprehensive.js
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     fixes.forEach(fix => {
       const newContent = fixedContent.replace(fix.pattern, fix.replacement);
       if (newContent !== fixedContent) {
@@ -75,6 +79,7 @@ function fixFile(filePath) {
         hasChanges = true;
       }
     });
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-comprehensive.js
     
     if (hasChanges) {
@@ -108,6 +113,14 @@ async function main() {
   
 ========
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/fix-syntax-comprehensive.js
+=======
+    
+    if (hasChanges) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+async function main() {
+  console.log(' Starting comprehensive syntax fixes...');
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const patterns = [
     'src/**/*.tsx',
     'src/**/*.ts',
@@ -116,6 +129,7 @@ async function main() {
     'pages/**/*.tsx',
     'pages/**/*.ts'
   ];
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-comprehensive.js
   
   let totalFixed = 0;
@@ -190,3 +204,6 @@ main().catch(console.error);
 ========
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/fix-syntax-comprehensive.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/fix-syntax-comprehensive.js
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

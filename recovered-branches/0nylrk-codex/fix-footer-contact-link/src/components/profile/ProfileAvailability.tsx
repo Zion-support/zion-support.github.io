@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -23,6 +24,8 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
@@ -46,6 +49,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -146,6 +150,11 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   };
 import { Availability } from "@/types/profile",
@@ -177,6 +186,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable';
       default: return '';
     }
+<<<<<<< HEAD
   },
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -215,6 +225,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
+=======
+  },        >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {getStatusText(availability.status)}
         </Badge>
         {availability.nextAvailable && availability.status !== 'available' && (
@@ -239,28 +252,46 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <span>{slot.hours}</span>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    }
-  }
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-            ))}
 <<<<<<< HEAD
+=======
+        {availability && availability.nextAvailable && availability && availability.status !== 'available' && (;
+          <div className="flex items-center gap-2 text-zion-slate-light">;
+            <Calendar className="h-4 w-4" />;
+            <span>Next available: {availability && availability.nextAvailable}</span>;
+          </div>;
+        )}
+      </div>;
+
+      {availability && availability.message && (;
+        <p className="text-zion-slate mb-4">{availability && availability.message}</p>;
+      )}
+
+      {availability && availability.availableHours && availability && availability.availableHours.length > 0 && (;
+        <div className="mt-4">;
+          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">;
+            {availability && availability.availableHours.map((slot, index) => (;
+              <div key={index} className="flex items-center gap-2 text-zion-slate">;
+                <div className="w-20 text-zion-slate-light">{slot && slot.day}:</div>;
+                <div className="flex items-center gap-1">;
+                  <Clock className="h-4 w-4 text-zion-cyan" />;
+                  <span>{slot && slot.hours}</span>;
+                </div>;
+              </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            ))}
           </div>;
         </div>;
       )}
 
     </div>;
   );
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -430,3 +461,6 @@ function ProfileAvailability() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

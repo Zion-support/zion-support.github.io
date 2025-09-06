@@ -66,5 +66,10 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      console.log("\n� High Priority "Optimizations")
+      console.log("\n� High Priority "Optimizations")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

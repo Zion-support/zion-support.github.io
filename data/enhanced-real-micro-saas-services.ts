@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 name: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -86,6 +86,8 @@ category: 'AI & Machine Learning';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MicroSaasService {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string,
   name: string,
   tagline: string,
@@ -2262,7 +2264,6 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
-<<<<<<< HEAD
 // Service categories
 export const serviceCategories = [
   'AllAI & Enterprise Automation',
@@ -2295,42 +2296,8 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-// Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export const getServicesByCategory = (category: string) => {
-  if (category === 'All') return allEnhancedRealMicroSaasServices;
-  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
-};
-export const getPopularServices = () => {
-  return allEnhancedRealMicroSaasServices.filter(service => service.popular)
-};
-export const getServicesByPriceRange = (min: number, max: number) => {
-  return allEnhancedRealMicroSaasServices.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= min && (max === Infinity ? true : price <= max)
-  })
-};
-export const serviceCategories = [
-  'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI';
-  'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
-  'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
-];
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
     'Quantum Computing': ['Quantum AI & ComputingQuantum Technology'],
@@ -2358,7 +2325,7 @@ export const serviceCategories = [
     matchingCategories.some(category => 
       service.category.includes(category)
     )
-  );
+  )
 };
 
 // Service categories
@@ -2396,6 +2363,7 @@ export const serviceCategories = [
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -2407,3 +2375,5 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -15,6 +18,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -34,11 +38,14 @@ export default function PostJob() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 
@@ -93,22 +100,27 @@ import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Navigate } from "react-router-dom";
+=======
+import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (isLoading) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>
     );
   }
-<<<<<<< HEAD
 
   return (
     <>
@@ -250,27 +262,11 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
     return (
-      <div className="flex items - center justify - center min - h-screen">;
-        <div className="animate - pulse">Loading...</div>;
+      <div className="flex items - center justify - center min-h-screen">;
+        <div className="animate-pulse">Loading...</div>;
       </div>);
   }
   return (
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <>;
-      <SEO;
-        title="Post a Job | Zion AI Marketplace";
-        description="Post a job to find the perfect AI talent for your project.";
-      />;
-      <Header />;
-<<<<<<< HEAD
-      <main className={`container mx - auto px-${is_mobile ? '2' : '4'} py-${is_mobile ? '6' : '12'} max - w-4xl`}>;
-        <Card className="border shadow - md">;
-          <CardHeader>;
-            <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -292,6 +288,7 @@ export default function PostJob() {;
     ),;
   }
   ;
+<<<<<<< HEAD
   return (;
     <>;
       <SEO ;
@@ -387,3 +384,9 @@ if (isLoading) {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (;;
+      {is_mobile && <div className="h-16"></div>}
+    </>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

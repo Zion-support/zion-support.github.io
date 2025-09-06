@@ -18,9 +18,8 @@ import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 export function TalentOnboardingSteps() {;
 <<<<<<< HEAD
 =======
@@ -37,6 +36,19 @@ import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
   const { user } = useAuth();
+=======
+export function TalentOnboardingSteps() {
+  const { user } = useAuth(),
+  const onboardingStatus = useOnboardingStatus(),
+  
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function TalentOnboardingSteps() {
+  const { user } = useAuth();  const onboardingStatus = useOnboardingStatus();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const onboardingStatus = useOnboardingStatus();
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
@@ -94,6 +106,7 @@ export function TalentOnboardingSteps() {
       link: "/profile/availability",
       action: "Set",
     },
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -352,3 +365,6 @@ return <OnboardingTracker steps= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

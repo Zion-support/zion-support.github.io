@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,11 +18,16 @@ export function buildPrintableHtml(project: BookProject): string {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+<<<<<<< HEAD
     .join('\n');
 <<<<<<< HEAD
 =======
@@ -71,12 +77,16 @@ export function buildPrintableHtml (project: BookProject): string {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     .join('\n\n');
+=======
+    .join('\n');    .join('\n\n');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const visualsHtml = [;
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 =======
@@ -114,6 +124,11 @@ export function buildPrintableHtml (project: BookProject): string {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return `<!doctype html>;
 <html>;
 <head>;
@@ -123,34 +138,6 @@ export function buildPrintableHtml (project: BookProject): string {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
-function escapeHtml(s: string): string {;
-  return s;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -224,6 +211,7 @@ function escapeHtml(s: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   @page { margin: 1in }
@@ -291,6 +279,8 @@ function paragraphize(text: string): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ${barcode}
   </section>;
   ${quotes_html}
@@ -299,6 +289,7 @@ function paragraphize(text: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -425,11 +416,14 @@ function escapeHtml(s: string): string {;
 }
 </body>;
 </html>`;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -513,3 +507,6 @@ function escape_html (string: string): string {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

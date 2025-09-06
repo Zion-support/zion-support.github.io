@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,51 +10,6 @@ import enTranslation from './locales/en/translation ;
 import esTranslation from './locales/es/translation ;
 import ptTranslation from './locales/pt/translation ;
 import arTranslation from './locales/ar/translation ;
-<<<<<<< HEAD
-
-=======
-import i18n from 'i18next';
-import { initReactI18next  } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector',
-import enTranslation from './locales/en/translation.json',
-import esTranslation from './locales/es/translation.json',
-import ptTranslation from './locales/pt/translation.json',
-import arTranslation from './locales/ar/translation.json',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-// Initialize i18next
-i18n
-  .use(LanguageDetector) // Detect user language
-  .use(initReactI18next) // Initialize react-i18next
-  .init({
-    resources: {
-      en: {
-        translation: enTranslation
-      }
-      es: {
-        translation: esTranslation
-      }
-      pt: {
-        translation: ptTranslation
-      }
-      ar: {
-        translation: arTranslation
-      }
-    }
-    fallbackLng: 'en', // Default language
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    debug: process && process.env.NODE_ENV === 'development',
-
-=======
-    debug: process && process.env.NODE_ENV === 'development',
-
-    debug: process.env.NODE_ENV === 'development'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -65,6 +19,7 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -130,6 +85,8 @@ import arTranslation from './locales/ar/translation.json',;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Initialize i18next;
 i18n;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   .use (LanguageDetector) // Detect user language;
   .use (initReactI18next) // Initialize react - i18next;
   .init ({
@@ -173,8 +130,8 @@ i18n.on ('language_changed', (lng) => {
 });
 ;
 export default i18n;
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -239,3 +196,5 @@ export default i18n;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

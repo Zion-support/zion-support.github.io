@@ -45,29 +45,11 @@ export interface ModerationAction {;
 export interface ModerationResult {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
-<<<<<<< HEAD
   content: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;
   moderatedBy?: string;
-  moderatedAt: Date;
-=======
-  flagId: string;
-  action: ModerationStatus;
-  adminNotes?: string;
-  adminId: string;
-  reason?: string;
-  createdAt: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
+  moderatedAt: Date;;
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -75,19 +57,7 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-<<<<<<< HEAD
-  createdAt: string;
-=======
-  created_at: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  createdAt: string;}
 }
 export interface ModerationFlag {
 
@@ -103,22 +73,10 @@ export interface ModerationFlag {;
   updatedAt: string;
   adminNotes?: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-}
-export interface ModerationFlag {
-=======
->>>>>>> main
-}
 
 export interface ModerationRule {
   id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   type: 'approve' | 'remove' | 'warn' | 'ban';
@@ -232,10 +190,13 @@ export interface ModerationFlag {;
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';
   severity: 'low' | 'medium' | 'high';
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -254,3 +215,6 @@ export interface ModerationFlag {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

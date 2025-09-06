@@ -1,19 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -21,6 +17,7 @@ import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
+<<<<<<< HEAD
 import {useState} from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,14 +128,15 @@ interface TemplateListProps {
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {;
+=======
+import {useState} from "react";  if (isLoading) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
       </div>;
     );
   }
-<<<<<<< HEAD
-
 
   if (!templates && templates.length) {;
 
@@ -152,6 +150,7 @@ interface TemplateListProps {
   return (
     <div className="space-y-3">;
       {templates && templates.map((template) => (;
+<<<<<<< HEAD
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
 =======
   if (!templates && templates.length) {;
@@ -161,6 +160,9 @@ interface TemplateListProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
@@ -185,64 +187,33 @@ interface TemplateListProps {;
   isLoading: boolean,;
   onSelect: (template: ContractTemplate) => void,;
   onEdit: (template: ContractTemplate) => void;
-}
-<<<<<<< HEAD
-;
-export function TemplateList({;
-  templates,;
-  isLoading,;
-  onSelect,;
-  onEdit;
-    ),;
-  }
-;
-  return (;
-    <div className="space-y-3">;
-      {templates.map((template) => (;
-        <Card key={template.id} className={template.is_default ? "border-zion-purple" :""}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <CardContent className="p-4">;
+}          <CardContent className="p-4">;
             <div className="flex items-center justify-between">;
               <div className="space-y-1">;
                 <div className="flex items-center gap-2">;
-<<<<<<< HEAD
                   <h3 className="font-medium">{template && template.title}</h3>;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
-=======
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),;
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),;
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  },;
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate.mutateAsync(templateToDelete),;
-      setTemplateToDelete(null);
-    }
-  },
-=======
-
   };
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   },
 
-
-
   const handleSetDefault = async (templateId: string) => {;
-    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
-  };
+    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId)
+};
 
   if (isLoading) {;
     return (
@@ -270,8 +241,11 @@ interface TemplateListProps {
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
@@ -296,6 +270,7 @@ interface TemplateListProps {
               </div>
             </div>
             <Separator className="my-3" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -324,6 +299,8 @@ interface TemplateListProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="w-full"
             >
               Use This Template
@@ -343,6 +320,7 @@ interface TemplateListProps {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+<<<<<<< HEAD
               onClick={handleDeleteConfirm}
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -523,71 +501,25 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
+=======
+              onClick={handleDeleteConfirm}            >;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Use This Template;
             </Button>;
           </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </Card>))}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Template</AlertDialogTitle>;
-
-=======
-        </Card>;
-      ))}
-      ;
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
-        <AlertDialogContent>;
-          <AlertDialogHeader>;
-            <AlertDialogTitle>Delete Template</AlertDialogTitle>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <AlertDialogDescription>;
-              Are you sure you want to delete this template? This action cannot be undone.;
-            </AlertDialogDescription>;
-          </AlertDialogHeader>;
-          <AlertDialogFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <AlertDialogCancel > Cancel</AlertDialogCancel>;
-            <AlertDialogAction;
-              className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
-              on_click={handleDeleteConfirm}
-            >;
-
-=======
-            <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction ;
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
-              onClick={handleDeleteConfirm}
-            >;
-            >
-              Delete
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </div>
-  )
-}
-            >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              Delete;
+            <AlertDialogTitle > Delete Template</AlertDialogTitle>;              Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>);
+<<<<<<< HEAD
 }
 
 =======
@@ -665,3 +597,6 @@ if (isLoading) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

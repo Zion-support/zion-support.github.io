@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './use_logout';
 ;
@@ -34,10 +35,20 @@ export * from './useLogout';
 =======
 export * from './useLogout';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+
+export * from './useLogout';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export * from './useEmailAuth',;
 export * from './useProfileManagement',;
 export * from './useSocialAuth',;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -47,10 +58,13 @@ export * from './useLogout';
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export * from './useEmailAuth',;
 export * from './useProfileManagement',;
 export * from './useSocialAuth',;
 
+<<<<<<< HEAD
 
 export * from './useLogout';
 export * from './useEmailAuth';
@@ -72,3 +86,9 @@ export * from "./useProfileManagement";
 export * from "./useSocialAuth";
 export * from "./useLogout";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export * from './useLogout';
+export * from './useEmailAuth';
+export * from './useProfileManagement';
+export * from './useSocialAuth';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

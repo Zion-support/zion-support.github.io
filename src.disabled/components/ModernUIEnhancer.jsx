@@ -1,25 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 "export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
-"export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
-"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
-export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ModernUIEnhancer.jsx
-=======
 "export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -30,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
 :temp_exclude/src.disabled/components/ModernUIEnhancer.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
@@ -61,3 +52,8 @@ export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = tr
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
+export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
+"export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

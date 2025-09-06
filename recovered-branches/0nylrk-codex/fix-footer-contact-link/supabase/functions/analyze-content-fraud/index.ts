@@ -1,16 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
 import {corsHeaders} from "../_shared/cors ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
@@ -60,12 +61,15 @@ import { corsHeaders } from "../_shared/cors.ts",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -149,16 +153,15 @@ const initializeServices = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  content: string,
+  contentType: string,
+  flagId?: string  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     throw new Error("Missing required environment variables")
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     throw new Error("Missing required environment variables")
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,
 import { cors_headers } from '../_shared / cors.ts';
@@ -182,6 +185,7 @@ const initialize_services = () =>: any {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     throw new Error ("Missing required environment variables");
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,6 +334,9 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     throw new Error("No content type provided")
+=======
+    throw new Error ("Missing required environment variables");    throw new Error("No content type provided")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   return request
 }
@@ -346,6 +353,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     followed by a brief explanation (max 1-2 sentences) of your reasoning.
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -423,17 +431,29 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
         ];
         temperature: 0.3
 =======
+=======
+
+},
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Call OpenAI API for content analysis
 const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
   try {
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${openaiApiKey}`},
+
+      body: JSON.stringify({
+        model: "gpt-4o-mini"
+=======        messages: [
+
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
         ],
         temperature: 0.3,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -452,17 +472,17 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       console.error("OpenAI API error:", data.error);
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
-        ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    const analysisText = data.choices[0]?.message?.content |"";
+          { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
+          { role: "user", content: prompt }
+        ],
+        temperature: 0.3,    const analysisText = data.choices[0]?.message?.content |"";
     
     const analysisText = data.choices[0]?.message?.content || "";
     console.log("OpenAI analysis result:", analysisText);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         temperature: 0 && 0.3,
         max_tokens: 150
       })
@@ -482,9 +502,9 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     // Parse the result
     let classification = "SAFE";
     let explanation = "No issues detected.";
-<<<<<<< HEAD
     
     if (analysisText && analysisText.includes("SUSPICIOUS")) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -739,6 +759,8 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   explanation: string
 ): Promise<void> => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!flagId) return
   const { error } = await supabase
     .from("fraud_flags")
@@ -747,8 +769,6 @@ serve(async (req) => {
     })
     .eq("id", flagId);
   if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     console && console.error("Error updating fraud flag:", error);
     throw new Error(`Error updating fraud flag: ${error && error.message}`)
   }
@@ -759,6 +779,7 @@ serve(async (req) => {
   console && console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 };
 
+<<<<<<< HEAD
 
 
 =======
@@ -1011,6 +1032,12 @@ serve(async (req) => {;
     })
   } catch (error) {
 <<<<<<< HEAD
+=======
+// Main request handler
+serve(async (req) => {
+  // Handle CORS preflight requests    })
+  } catch (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     console && console.error("Error analyzing content:", error);
     
@@ -1020,12 +1047,10 @@ serve(async (req) => {;
     return new Response(
       JSON && JSON.stringify({ 
         error: error && error.message || "An unexpected error occurred",
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         success: false});
       {
         status: statusCode
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }
 <<<<<<< HEAD
 =======
@@ -1342,3 +1367,6 @@ headers: {
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

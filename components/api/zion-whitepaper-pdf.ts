@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -29,9 +30,10 @@ export default async function handler(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
-
 
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
@@ -57,7 +59,6 @@ function write_section() {
   });
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
-
 
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
@@ -119,7 +120,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // End
   doc && doc.addPage();
   doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
-
 
 }
 ;

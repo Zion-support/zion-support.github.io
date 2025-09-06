@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Moon, Sun} from "lucide-react"
 import {Button} from "@/components/ui/button"
@@ -12,6 +10,7 @@ const useTheme = () => ({
 export function ModeToggle() {;
 
   const { theme, setTheme } = useTheme();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -49,6 +48,8 @@ import { Button } from "@/components/ui/button"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Create a simplified theme hook for offline mode
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const useTheme = () => ({
   theme: "dark"
@@ -60,17 +61,16 @@ const useTheme = () => ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
-<<<<<<< HEAD
   const { theme, setTheme } = useTheme();
-
-
-
 
   const { theme, setTheme } = useTheme();
 import { Moon, Sun } from "lucide-react";
@@ -84,54 +84,6 @@ theme: "dark"
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <span className="sr-only">Toggle theme</span>;
-    </Button>;
-  );
-=======
-=======
-    >;
-      {theme === "dark" ? (;
-        <Sun className="h-5 w-5 text-yellow-300" />;
-      ) : (;
-
-import { Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
-;
-// Create a simplified theme hook for offline mode;
-const useTheme = () => ({;
-  theme:"dark",;
-  setTheme:(theme:string) => // // // console.log(`Theme would change to:${theme}`);
-}),;
-;
-export function ModeToggle() {;
-  const { theme, setTheme } = useTheme(),;
-;
-  return (;
-    <Button;
-      variant="ghost";
-      size="icon";
-      onClick={() => setTheme(theme === "dark" ? "light" :"dark")}
-    >;
-      {theme === "dark" ? (;
-        <Sun className="h-5 w-5 text-yellow-300" />;
-      ) :(;
-        <Moon className="h-5 w-5 text-slate-300" />;
-      )}
-      <span className="sr-only">Toggle theme</span>;
-    </Button>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    >
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-300" />
       ) : (
@@ -143,6 +95,7 @@ export function ModeToggle() {;
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
   )
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -165,6 +118,8 @@ import { Button } from "@/components/ui/button";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Moon, Sun  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 // Create a simplified theme hook for offline mode;
@@ -186,6 +141,7 @@ function ModeToggle() {
       on_click={() => set_theme (theme === "dark" ? "light" : "dark")}
     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -201,6 +157,8 @@ function ModeToggle() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) : (;
@@ -210,11 +168,13 @@ function ModeToggle() {
     </Button>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
->>>>>>> main
 }
   ),;}
  export function ModeToggle () {
@@ -235,6 +195,3 @@ return (<Button variant="ghost" size="icon" onClick= {
 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

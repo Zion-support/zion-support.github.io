@@ -145,29 +145,64 @@ export default function EnterpriseAdmin() {;
   // Check if user has enterprise admin role;
 =======
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {AdminDashboard} from "@/components/enterprise/admin/AdminDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function EnterpriseAdmin() {;
+  const { user } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
-<<<<<<< HEAD
-
+  // Check if user has enterprise admin role
   // Check if user has enterprise admin role
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function EnterpriseAdmin() {
+  const { user } = useAuth(),
+  
+  // Check if user has enterprise admin role
+  const isEnterpriseAdmin = user?.role === "enterprise_admin",
+  
   if (!isEnterpriseAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized" />
   }
   return (
-    <ProtectedRoute>
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+export default function EnterpriseAdmin() {;
+  const { user } = useAuth();
+  // Check if user has enterprise admin role;
+  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+  if (!isEnterpriseAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+;
+  return (;
+    <ProtectedRoute>;
       <SEO
         title="Enterprise Admin - Zion AI Marketplace"
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -204,6 +239,8 @@ export default function EnterpriseAdmin() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -211,6 +248,7 @@ export default function EnterpriseAdmin() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -242,6 +280,8 @@ export default function EnterpriseAdmin() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
   }
@@ -260,7 +300,6 @@ export default /**
 function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
-<<<<<<< HEAD
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 ;
@@ -277,12 +316,13 @@ if ( {) {
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
       />;
       <Header />;
-      <main className="min - h-screen bg - background">;
+      <main className="min - h-screen bg-background">;
         <AdminDashboard />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -301,3 +341,5 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

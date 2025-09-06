@@ -1,11 +1,17 @@
 #!/usr/bin/env node;
 /**
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+/**
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
 =======
 <<<<<<< HEAD
@@ -16,6 +22,8 @@ const path = require('path')
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
   log(message) {
@@ -26,17 +34,28 @@ const path = require('path')
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
+<<<<<<< HEAD
 
       // Fix common syntax errors
       content = this.fixCommonErrors(content);
 
+=======
+      
+      // Fix common syntax errors
+      content = this.fixCommonErrors(content);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
         this.log(`Fixed: ${filePath}`);
         return true;
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
@@ -52,13 +71,18 @@ const path = require('path')
       }
       return match;
     });
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
       if (!str.endsWith('"')) {
         return match + '"';
       }
       return match;
     });
+<<<<<<< HEAD
 
     // Fix missing semicolons
     content = content.replace(/([^;}])\n/g, '$1;\n');
@@ -80,6 +104,14 @@ const path = require('path')
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
+=======
+    
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n/g, '$1;\n');
+    // Fix merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects
@@ -118,6 +150,9 @@ const path = require('path')
     this.log(`📄 Report saved "to": ${reportPath}`);
     return report}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   async run() {
     this.log('🚀 Starting syntax error fixing...');
@@ -146,6 +181,7 @@ if (require.main === module) {
   });
 }
 module.exports = SyntaxErrorFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
 =======
 <<<<<<< HEAD
@@ -153,6 +189,8 @@ module.exports = SyntaxErrorFixer;
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
       this.log('Running ESLint auto-fix...')
@@ -161,3 +199,7 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)
+<<<<<<< HEAD
+=======
+      this.log(`� Syntax error fixing "failed"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

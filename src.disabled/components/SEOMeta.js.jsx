@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -78,3 +79,9 @@ import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,M
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og.jpg',url = window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`=======import React from\';react\' const SEOMeta = ({ title,description,keywords = \'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group\',image = \'/images/zion-tech-group-og && og.jpg\',url = window && window.location.href,type = \'website\',structuredData }) => { const siteName = \'Zion Tech Group\' const fullTitle = `${title} | ${siteName}`\';`
+const React from";react" const SEOMeta = ({ title,description,keywords = "AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group",image = "/images/zion-tech-group-og && og.jpg",url = window && window.location.href,type = "website",structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = `${title} | ${siteName}`";`"`"`
+import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
+import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

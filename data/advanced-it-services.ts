@@ -1,14 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface AdvancedITService {
 export interface AdvancedITService {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -34,6 +37,7 @@ export interface AdvancedITService {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -114,6 +118,12 @@ export interface AdvancedITService {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
+=======
+
+  {
+
+=======      mobile: '+1 302 464 0950',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
@@ -126,6 +136,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.7,
     reviews: 89,
   },
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
     id: 'quantum-cloud-platform'
@@ -1525,11 +1536,12 @@ export interface AdvancedITService {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
+=======
+  {];      mobile: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -2064,6 +2076,7 @@ export interface AdvancedITService {;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true;
@@ -2979,3 +2992,9 @@ export interface AdvancedITService {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface AdvancedITService {;
+
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

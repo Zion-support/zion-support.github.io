@@ -17,8 +17,11 @@ export default function TryItConsole({
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   method,
   path,
   requiresAuth,
@@ -193,16 +196,16 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>        <div>;
-          <label className="block text - sm mb - 1" html_for="input - Base URL">Base URL</label>;
-          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary" value={base_url} on_change={(e) => setBaseUrl (e.target.value)} />;
+          <label className="block text-sm mb-1" html_for="input - Base URL">Base URL</label>;
+          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={base_url} on_change={(e) => setBaseUrl (e.target.value)} />;
         </div>;
         <div>;
-          <label className="block text - sm mb - 1" html_for="input - Auth Token">Auth Token</label>;
-          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary" value={token} on_change={(e) => set_token (e.target.value)} placeholder="Optional" />;
+          <label className="block text-sm mb-1" html_for="input - Auth Token">Auth Token</label>;
+          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={token} on_change={(e) => set_token (e.target.value)} placeholder="Optional" />;
         </div>;
         <div>;
-          <label className="block text - sm mb - 1" html_for="input - Method">Method</label>;
-          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary" value={method} read_only />;
+          <label className="block text-sm mb-1" html_for="input - Method">Method</label>;
+          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={method} read_only />;
         </div>;
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (

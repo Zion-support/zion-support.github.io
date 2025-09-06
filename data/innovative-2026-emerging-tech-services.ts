@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -8,11 +9,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -38,35 +41,6 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-        'Brain-inspired neural architecture',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =;
-  [;
-    // Neuromorphic Computing Platform;
-    {
-      id: 'neuromorphic - computing - platform - 2026',
-      name: 'Neuromorphic Computing Platform 2026',
-      tagline:;
-        'Brain - inspired computing for next - generation AI and cognitive systems',
-      price: '$1, 499',
-      period: '/month',
-      description:;
-        "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, cognitive computing, and adaptive learning systems.",
-      features: [;
-        'Brain - inspired neural architecture',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Spiking neural networks (SNNs)',
         'Ultra - low power consumption',
         'Real - time learning and adaptation',
@@ -78,6 +52,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Research collaboration platform',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       icon: '🧠',
@@ -124,21 +99,14 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       competitors: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         'Intel Loihi',
         'IBM TrueNorth',
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS',
       ],
-<<<<<<< HEAD
-=======
-
-      market_size: '$12.8B market',
-      growth_rate: '380% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -152,206 +120,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4 && 4.9,
       reviews: 40,
     },
-<<<<<<< HEAD
-=======
-
-        'DNA-based data storage',
-    // DNA Computing Platform;
-    {
-      id: 'dna - computing - platform - 2026',
-      name: 'DNA Computing Platform 2026',
-      tagline:;
-        'Molecular computing for complex problem solving and data storage',
-      price: '$2, 999',
-      period: '/month',
-      description:;
-        'Groundbreaking DNA computing platform that leverages molecular biology for ultra - dense data storage, complex problem solving, and next - generation computational capabilities.',
-      features: [;
-        'DNA - based data storage',
-
-        'Molecular problem solving',
-        'Ultra - dense information encoding',
-        'Biomolecular algorithms',
-        'DNA synthesis and sequencing',
-        'Molecular computing workflows',
-        'Advanced bioinformatics tools',
-        'Custom DNA program development',
-        'Laboratory integration',
-        'Professional bioengineering support',
-      ],
-      popular: false,
-      icon: '🧬',
-
-=======
-      color: 'from - green - 500 to - emerald - 600',
-      text_color: 'text - green - 400',
-      link: 'https://ziontechgroup.com / services / dna - computing - platform - 2026',
-      market_position:;
-        'Competitive with Microsoft DNA Storage ($10, 000+/setup), Catalog DNA ($5, 000+/setup), and Twist Bioscience ($3, 000+/setup). Our advantage: Cloud - based platform, comprehensive tools, and 60% cost savings.',
-      target_audience:;
-        'Biotechnology companies, Research institutions, Pharmaceutical companies, Data storage companies, Government agencies, Healthcare organizations',
-      trial_days: 45,
-      setup_time: '4 - 6 weeks',
-      category: 'Emerging Technology & DNA Computing',
-      real_service: true,
-      technology: [;
-        'DNA Synthesis',
-        'DNA Sequencing',
-        'Bioinformatics',
-        'Molecular Biology',
-        'Python',
-        'R',
-      ],
-      integrations: [;
-        'Laboratory equipment',
-        'Bioinformatics platforms',
-        'Cloud storage',
-        'Research databases',
-        'Analysis tools',
-        'Sequencing platforms',
-      ],
-      use_cases: [;
-        'Data storage',
-        'Complex problem solving',
-        'Drug discovery',
-        'Genetic research',
-        'Information encoding',
-        'Molecular computing',
-      ],
-      roi: 'Average customer sees 600% ROI within 12 months through breakthrough discoveries and new capabilities.',
-      competitors: [;
-
-        'Microsoft DNA Storage',
-        'Catalog DNA',
-        'Twist Bioscience',
-        'Illumina',
-        'Pacific Biosciences',
-      ],
-
-      market_size: '$8.9B market',
-      growth_rate: '520% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
-      launch_date: '2026 - 01 - 20',
-      customers: 45,
-      rating: 4 && 4.9,
-      reviews: 25,
-    },
-
-=======
-    // Photonic Computing Platform;
-    {
-      id: 'photonic - computing - platform - 2026',
-      name: 'Photonic Computing Platform 2026',
-      tagline:;
-        'Light - speed computing with photonic processors and optical interconnects',
-      price: '$1, 999',
-      period: '/month',
-      description:;
-        'Next - generation photonic computing platform that uses light instead of electricity for ultra - fast processing, low power consumption, and high - bandwidth data transfer.',
-      features: [;
-
-        'Photonic processors',
-        'Optical interconnects',
-        'Light - based computing',
-        'Ultra - fast data processing',
-        'Low power consumption',
-        'High - bandwidth communication',
-        'Photonic neural networks',
-        'Optical memory systems',
-        'Custom photonic design',
-        'Professional engineering support',
-      ],
-      popular: true,
-      icon: '💡',
-
-=======
-      color: 'from - yellow - 500 to - orange - 600',
-      text_color: 'text - yellow - 400',
-      link: 'https://ziontechgroup.com / services / photonic - computing - platform - 2026',
-      market_position:;
-        'Competitive with Lightmatter ($5, 000+/setup), PsiQuantum ($10, 000+/setup), and Xanadu ($3, 000+/setup). Our advantage: Cloud - based platform, comprehensive tools, and 65% cost savings.',
-      target_audience:;
-        'Technology companies, Research institutions, Telecommunications companies, Data centers, Government agencies, Defense contractors',
-      trial_days: 21,
-      setup_time: '3 - 4 weeks',
-      category: 'Emerging Technology & Photonic Computing',
-      real_service: true,
-      technology: [;
-        'Photonic Integrated Circuits',
-        'Optical Computing',
-        'Silicon Photonics',
-        'Python',
-        'MATLAB',
-        'Optical Design Tools',
-      ],
-      integrations: [;
-        'Data centers',
-        'Telecommunications networks',
-        'Research equipment',
-        'Cloud platforms',
-        'AI frameworks',
-        'High - performance computing',
-      ],
-      use_cases: [;
-        'High - speed computing',
-        'Data center optimization',
-        'Telecommunications',
-        'AI acceleration',
-        'Scientific computing',
-        'Real - time processing',
-      ],
-      roi: 'Average customer sees 450% ROI within 8 months through improved performance and reduced power consumption.',
-      competitors: [;
-
-        'Lightmatter',
-        'PsiQuantum',
-        'Xanadu',
-        'Intel Silicon Photonics',
-        'IBM Photonics',
-      ],
-
-      market_size: '$15.6B market',
-      growth_rate: '420% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
-      launch_date: '2026 - 02 - 01',
-      customers: 120,
-      rating: 4 && 4.8,
-      reviews: 60,
-    },
-
-=======
-    // Holographic Display Platform;
-    {
-      id: 'holographic - display - platform - 2026',
-      name: 'Holographic Display Platform 2026',
-      tagline: 'Next - generation 3D holographic visualization and interaction',
-      price: '$699',
-      period: '/month',
-      description:;
-        'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next - generation display experiences for entertainment, education, and business.',
-      features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         '3D holographic projection',
         'Interactive holographic displays',
         'Real - time 3D rendering',
@@ -364,65 +132,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Professional installation services',
       ],
       popular: false,
-<<<<<<< HEAD
-=======
-      icon: '🌟',
-
-=======
-      color: 'from - pink - 500 to - rose - 600',
-      text_color: 'text - pink - 400',
-      link: 'https://ziontechgroup.com / services / holographic - display - platform - 2026',
-      market_position:;
-        'Competitive with Looking Glass ($600 - 6, 000 / display), Light Field Lab ($2, 000 - 10, 000 / display), and RealView ($1, 500 - 8, 000 / display). Our advantage: Cloud - based platform, comprehensive tools, and 50% cost savings.',
-      target_audience:;
-        'Entertainment companies, Educational institutions, Healthcare providers, Retail businesses, Museums, Event planners',
-      trial_days: 14,
-      setup_time: '1 - 2 weeks',
-      category: 'Emerging Technology & Holographic Displays',
-      real_service: true,
-      technology: [;
-        'Holographic Projection',
-        '3D Rendering',
-        'Computer Vision',
-        'Unity',
-        'Unreal Engine',
-        'Python',
-      ],
-      integrations: [;
-        'Content creation tools',
-        '3D modeling software',
-        'AR / VR platforms',
-        'Mobile devices',
-        'Cloud platforms',
-        'Social media',
-      ],
-      use_cases: [;
-        'Entertainment displays',
-        'Educational content',
-        'Product visualization',
-        'Virtual events',
-        'Interactive experiences',
-        'Marketing campaigns',
-      ],
-      roi: 'Average customer sees 300% ROI within 4 months through improved engagement and new business opportunities.',
-      competitors: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Looking Glass',
         'Light Field Lab',
         'RealView',
         'Hologram USA',
         'HoloLens',
       ],
-<<<<<<< HEAD
-=======
-
-      market_size: '$23.4B market',
-      growth_rate: '280% annual growth',
-      variant: 'ai - futuristic',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -436,26 +151,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4 && 4.7,
       reviews: 100,
     },
-<<<<<<< HEAD
-=======
-
-        'Multi-modal biometric authentication',
-        'AI-powered recognition',
-    // Biometric Authentication Platform;
-    {
-      id: 'biometric - authentication - platform - 2026',
-      name: 'Biometric Authentication Platform 2026',
-      tagline:;
-        'Advanced biometric security with AI - powered recognition and authentication',
-      price: '$899',
-      period: '/month',
-      description:;
-        'Next - generation biometric authentication platform that uses AI - powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
-      features: [;
-        'Multi - modal biometric authentication',
-        'AI - powered recognition',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Facial recognition technology',
         'Fingerprint and palm scanning',
         'Voice and speech recognition',
@@ -466,41 +161,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Enterprise security features',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
-      icon: '🔐',
-
-=======
-      color: 'from - blue - 500 to - indigo - 600',
-      text_color: 'text - blue - 400',
-      link: 'https://ziontechgroup.com / services / biometric - authentication - platform - 2026',
-      market_position:;
-        'Competitive with Face ID ($0.50 - 2.00 / user / month), Touch ID ($0.30 - 1.50 / user / month), and Voice ID ($0.40 - 1.80 / user / month). Our advantage: Multi - modal authentication, AI - powered recognition, and comprehensive security.',
-      target_audience:;
-        'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Retail businesses, Educational institutions',
-      trial_days: 21,
-      setup_time: '1 - 2 weeks',
-      category: 'Emerging Technology & Biometric Security',
-      real_service: true,
-      technology: [;
-        'Computer Vision',
-        'Deep Learning',
-        'Biometric Algorithms',
-        'Python',
-        'TensorFlow',
-        'OpenCV',
-      ],
-      integrations: [;
-        'Mobile apps',
-        'Web applications',
-        'IoT devices',
-        'Security systems',
-        'Cloud platforms',
-        'Enterprise systems',
-      ],
-      use_cases: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'User authentication',
         'Access control',
         'Identity verification',
@@ -509,16 +169,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Customer verification',
       ],
       roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
-<<<<<<< HEAD
-=======
-
-      competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me'],
-      market_size: '$34.8B market',
-      growth_rate: '320% annual growth',
-      variant: 'ai - futuristic',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -533,6 +183,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 175,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -541,6 +192,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
@@ -563,6 +216,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       ],
       popular: false,
       icon: '🌐',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1128,6 +782,8 @@ export const getPopularEmergingTechServices = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       launch_date: '2026 - 01 - 25',
       customers: 60,
       rating: 4 && 4.9,
@@ -1135,11 +791,11 @@ export const getPopularEmergingTechServices = () => {
     },
   ];
 
-
 export const getPopularEmergingTechServices = () => {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return innovative2026EmergingTechServices.filter(service => service.popular);
@@ -1154,6 +810,12 @@ export const getPopularEmergingTechServices = () => {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+  return innovative2026EmergingTechServices.filter(service => service.popular);
+}
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular)
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: 'quantum-internet-platform-2026'
       name: 'Quantum Internet Platform 2026'
       tagline: 'Ultra-secure quantum communication network for the future'
@@ -1178,7 +840,6 @@ export const getPopularEmergingTechServices = () => {;
       color: 'from-cyan-500 to-blue-600'
       textColor: 'text-cyan-400'
       link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       marketPosition:
         'Competitive with Quantum Xchange ($50,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.'
       targetAudience:
@@ -1213,50 +874,8 @@ export const getPopularEmergingTechServices = () => {;
       ]
       roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.'
       competitors: [
-<<<<<<< HEAD
   ];
-=======
-        'Quantum Xchange'
-        'ID Quantique'
-        'Toshiba Quantum'
-        'NTT Quantum'
-        'Chinese Quantum Network'
-      ]
-      marketSize: '$18.7B market'
-      growthRate: '480% annual growth'
-      variant: 'quantum-futuristic'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-<<<<<<< HEAD
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
-      launchDate: '2026-01-25'
-      customers: 60
-      rating: 4.9
-      reviews: 30
-    }
-  ];
-export const getPopularEmergingTechServices = () => {
-=======
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-      launchDate: '2026-01-25',
-      customers: 60,
-      rating: 4.9,
-      reviews: 30,
-    },;
-  ];
-
-export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return innovative2026EmergingTechServices.filter(service => service.popular);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -1268,14 +887,6 @@ export const getPopularEmergingTechServices = () =>: any {
 implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launch_date: '2026 - 01 - 20';
 customers: 45;
-<<<<<<< HEAD
-=======
-
-rating: 4 && 4.9;
-reviews: 25 
-};
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Photonic Computing Platform realImplementation: true;
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launchDate: '2026-02-01';
@@ -1285,14 +896,6 @@ reviews: 25;
 implementation_details: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launch_date: '2026 - 02 - 01';
 customers: 120;
-<<<<<<< HEAD
-=======
-
-rating: 4 && 4.8;
-reviews: 60 
-};
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Holographic Display Platform realImplementation: true;
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launchDate: '2026-02-15';
@@ -1302,14 +905,6 @@ reviews: 60;
 implementation_details: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launch_date: '2026 - 02 - 15';
 customers: 200;
-<<<<<<< HEAD
-=======
-
-rating: 4 && 4.7;
-reviews: 100 
-};
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Biometric Authentication Platform realImplementation: true;
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launchDate: '2026-03-01';
@@ -1319,14 +914,6 @@ reviews: 100;
 implementation_details: 'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launch_date: '2026 - 03 - 01';
 customers: 350;
-<<<<<<< HEAD
-=======
-
-rating: 4 && 4.8;
-reviews: 175 
-};
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Quantum Internet Platform realImplementation: true;
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launchDate: '2026-01-25';
@@ -1336,38 +923,12 @@ reviews: 175;
 implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launch_date: '2026 - 01 - 25';
 customers: 60;
-<<<<<<< HEAD
-=======
-
-rating: 4 && 4.9;
-reviews: 30 
-
-}];
-export const getEmergingTechServicesByCategory = (category: string) => {
-<<<<<<< HEAD
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
-    service && service.category.toLowerCase().includes(category && category.toLowerCase())
-=======
-  return innovative2026EmergingTechServices.filter(service =>
-    service.category.toLowerCase().includes(category.toLowerCase());
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
-    const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
-=======
-  return innovative2026EmergingTechServices.filter(service => {;
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return price >= minPrice && price <= maxPrice;
 
 export interface Innovative2026EmergingTechService {
@@ -1601,20 +1162,18 @@ export const getEmergingTechServicesByCategory = (category: string) => {
   )
 };
 
-
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1647,10 +1206,8 @@ export interface Innovative2026EmergingTechService {;
   launchDate: string,;
   customers: number,;
   rating: number,;
-  reviews: number;
-
+  reviews: number
 };
-
 
 reviews: 30;
 }];
@@ -1671,21 +1228,8 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
   return innovative2026EmergingTechServices.filter (service => {
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
-  });
-
-
-
-
+  })
 };
-=======
-
-
-};
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -1705,13 +1249,12 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
   return innovative2026EmergingTechServices.filter (service => {
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
-  });
-
-
-
-
+  })
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

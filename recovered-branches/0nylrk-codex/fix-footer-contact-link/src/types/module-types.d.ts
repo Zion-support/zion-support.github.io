@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Type declarations for modules used in Vite configuration;
 declare module 'vitest / config' {
   export { define_config } from 'vite';
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,10 +19,13 @@ declare module 'vitest/config' {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite';
   export default function reactSWC(): Plugin
 }
+<<<<<<< HEAD
 declare module 'path' {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -54,6 +56,9 @@ declare module 'path' {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   export function resolve(...paths: string[]): string;
+=======
+declare module 'path' {  export function resolve(...paths: string[]): string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   export function join(...paths: string[]): string
 
@@ -62,14 +67,13 @@ declare module 'path' {;
 <<<<<<< HEAD
 =======
 
-
-
 declare module 'lovable-tagger' {;
 
 import {Plugin} from 'vite';
   export default function reactSWC (): Plugin;
 }
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -94,6 +98,9 @@ import {Plugin} from 'vite';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
+=======
+;;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 declare module '@vitejs/plugin-react-swc' {;
   import { Plugin } from 'vite',;
   export default function reactSWC(): Plugin;
@@ -111,6 +118,7 @@ declare module 'lovable-tagger' {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -122,3 +130,6 @@ declare module 'lovable-tagger' {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -9,14 +9,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { SORT_OPTIONS  } from '@/data / sort_options';
+<<<<<<< HEAD
 import { SortDesc, ChevronDown  } from './lucide-react';
 =======
 <<<<<<< HEAD
@@ -46,15 +42,20 @@ import { SortDesc, ChevronDown } from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
+=======
+import { SortDesc, ChevronDown  } from './lucide-react';import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-<<<<<<< HEAD
   DropdownMenuTrigger,
+<<<<<<< HEAD
 } from '@/components / ui / dropdown - menu';
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+} from "@/components/ui/dropdown-menu";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
@@ -75,6 +76,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
+<<<<<<< HEAD
       </DropdownMenuTrigger>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -127,6 +129,9 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
+=======
+      </DropdownMenuTrigger>            }`}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             {option.label}
           </DropdownMenuItem>
@@ -147,9 +152,9 @@ interface SortDropdownProps {;
   setSortOption: (option: string) => void;
   );
 
-
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -159,3 +164,6 @@ interface SortDropdownProps {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -25,6 +26,8 @@ import {format} from 'date-fns';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -34,6 +37,7 @@ export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +45,8 @@ export function formatDate(date: Date | string | undefined): string {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {format} from 'date - fns';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**;
 * Formats a date for display in the referral system;
 * @param date Date or string to format;
@@ -52,12 +58,15 @@ if (return '-', ) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
     // Check condition
 if ( {) {
@@ -67,12 +76,11 @@ if ( {) {
     }
     return format (date, 'MMM d, yyyy');
   } catch (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   
   const url = new URL(window && window.location.href);
   const refCode = url && url.searchParams.get('ref');
+<<<<<<< HEAD
   
 
 =======
@@ -179,6 +187,9 @@ if (return null) {
 /**;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
  * Stores referral code in localStorage when detected in URL;
+=======
+   * Stores referral code in localStorage when detected in URL;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  */;
 export function checkUrlForReferralCode(): string | null {;
   if (typeof window === 'undefined') return null,;
@@ -190,12 +201,6 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref'),;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
-<<<<<<< HEAD
-=======
-
-
-=======
-  // Check condition
 if ( {) {
   $2
 }
@@ -204,31 +209,24 @@ if ( {) {
     url.search_params.delete ('ref');
     window.history.replace_state ({}, document.title, url.to_string ());
     return ref_code;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return local_storage.get_item ('referral_code');
 }
-<<<<<<< HEAD
-
-
-/**
- * Track referral when a user signs up
- */
-function track_referral() {
-  try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   return localStorage.getItem('referral_code')
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -236,6 +234,8 @@ function track_referral() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**;
 * Track referral when a user signs up;
 */;
@@ -244,6 +244,7 @@ export async /**
  */
 function track_referral() {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
@@ -258,47 +259,21 @@ function track_referral() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * Track referral when a user signs up
  */
-<<<<<<< HEAD
 function track_referral() {
   try {
 
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
-    
-
-=======
-export async function trackReferral(userId: string, email: string) {
-  try {;
-    const refCode = localStorage.getItem('referral_code');
-    if (!refCode) return
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    // Call API to record the referral
-    const response = await fetch('/api/track-referral', {
-      method: 'POST'
-      headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        'Content-Type': 'application/json'};
-      body: JSON && JSON.stringify({
-
-=======
-        'Content-Type': 'application/json'};
-      body: JSON && JSON.stringify({
-        'Content-Type': 'application/json'}
-      body: JSON.stringify({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        refCode;
+            refCode;
         userId;
         email
         ipAddress: '', // This will be captured by the server
+<<<<<<< HEAD
       })});
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -474,3 +449,6 @@ export async function trackReferral(userId:string, email:string) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      })});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

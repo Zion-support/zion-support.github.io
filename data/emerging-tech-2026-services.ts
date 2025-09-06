@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -715,6 +716,8 @@ export interface EmergingTech2026Service {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   contactInfo: {
       
     mobile: string, email: string,
@@ -727,7 +730,10 @@ export interface EmergingTech2026Service {
   rating: number,
   reviews: number
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
@@ -1299,7 +1305,7 @@ export interface EmergingTech2026Service {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1334,9 +1340,6 @@ export interface EmergingTech2026Service {;
   rating: number,;
   reviews: number;
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neuromorphic Computing Platform
@@ -1365,10 +1368,8 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
 
@@ -1390,11 +1391,9 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
 ];
 =======
     rating: 4.8,
-    reviews: 120;
-<<<<<<< HEAD
-=======
-
+    reviews: 120;  }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1815,3 +1814,5 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

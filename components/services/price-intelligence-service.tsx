@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 export default function Placeholder() {
@@ -19,12 +20,15 @@ export default function Placeholder() {
 }
 =======
 import Link from 'next / link';
+=======
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default /**
  * Placeholder - Function description
  */
 function Placeholder() {
   return (
-    <main className="min - h-screen p - 8">;
+    <main className="min-h-screen p-8">;
       <Head>;
         <title > Services • Price - intelligence - service - Placeholder</title>;
         <meta name="robots" content="noindex" />;

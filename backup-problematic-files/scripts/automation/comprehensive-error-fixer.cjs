@@ -830,7 +830,11 @@ class ComprehensiveErrorFixer {
       return false;
     console.log('🔧 Fixing TypeScript errors...');
     // Check if we have TypeScript errors in the priority errors
+<<<<<<< HEAD
     const tsErrors = this.errorReport.priorityErrors.filter(error =>
+=======
+    const tsErrors = this.errorReport.priorityErrors.filter(error => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       error.file && (error.file.endsWith('.ts') || error.file.endsWith('.tsx'))
     );
     if (!tsErrors || tsErrors.length === 0) {
@@ -956,7 +960,11 @@ class ComprehensiveErrorFixer {
   async fixESLintErrors() {
     console.log('🔧 Fixing ESLint errors...');
     // Check if we have ESLint errors
+<<<<<<< HEAD
     const eslintErrors = this.errorReport.priorityErrors.filter(error =>
+=======
+    const eslintErrors = this.errorReport.priorityErrors.filter(error => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       error.message && error.message.includes('eslint')
     );
     if (!eslintErrors || eslintErrors.length === 0) {
@@ -964,7 +972,11 @@ class ComprehensiveErrorFixer {
       return}
     try {
       // Try to auto-fix ESLint errors
+<<<<<<< HEAD
       execSync('npx eslint . --fix', {
+=======
+      execSync('npx eslint . --fix', { 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1003,7 +1015,11 @@ class ComprehensiveErrorFixer {
       return}
     try {
       // Try to fix security vulnerabilities
+<<<<<<< HEAD
       execSync('npm audit fix', {
+=======
+      execSync('npm audit fix', { 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1027,7 +1043,11 @@ class ComprehensiveErrorFixer {
       return}
     try {
       // Update dependencies to fix security issues
+<<<<<<< HEAD
       execSync('npm update', {
+=======
+      execSync('npm update', { 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1182,3 +1202,7 @@ module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
   main()}
+<<<<<<< HEAD
+=======
+  main()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

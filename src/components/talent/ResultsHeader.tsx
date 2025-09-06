@@ -3,11 +3,14 @@ import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
   isLoading: boolean;
   resultCount: number;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">;
@@ -29,9 +32,8 @@ interface ResultsHeaderProps {;
 
     </div>;
   );
-  );
+  )
 };
-
 
 }
 
@@ -45,8 +47,11 @@ interface ResultsHeaderProps {;
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -74,11 +79,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 }
 =======
 
-
-  );
+  )
 };
 };
-
 
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {
@@ -100,8 +103,8 @@ function ResultsHeader() {
             : `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`}        </span>)}
     </div>);
 }
-        <div className="flex items - center">;
-          <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;
+        <div className="flex items-center">;
+          <Loader2 className="h - 4 w - 4 animate - spin mr-2" />;
 interface ResultsHeaderProps {
   is_loading: boolean,
   result_count: number;
@@ -111,10 +114,10 @@ export /**
  */
 function ResultsHeader() {
   return (
-    <div className="flex items - center mb - 6 text - zion - slate - light">;
+    <div className="flex items - center mb - 6 text - zion - slate-light">;
       {is_loading ? (
-        <div className="flex items - center">;
-          <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;
+        <div className="flex items-center">;
+          <Loader2 className="h - 4 w - 4 animate - spin mr-2" />;
           <span > Loading talents...</span>;
         </div>) : (
         <span>;

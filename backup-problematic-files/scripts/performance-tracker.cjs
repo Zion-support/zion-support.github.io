@@ -3,5 +3,11 @@ const fs = require('fs')
 const path = require('path')
     const buildDir = path.join(process.cwd(), '.next;'
     const reportPath = path.join(process.cwd(), 'performance-metrics.json;'
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.log(' Performance metrics saved')
+    console.log(' Performance metrics saved')
+    console.log(' Performance metrics saved')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -180,11 +181,17 @@ export default function HomePage() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
+=======
+
+export default function HomePage() {
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Head>;
         <title>Zion Tech Group — AI, Micro SaaS, IT Solutions</title>;
         <meta
           name=\"description\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           content=\"AI solutions, Micro SaaS products, and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com\"
@@ -216,6 +223,8 @@ export default function HomePage() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           content=\"AI solutions, Micro SaaS products, and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup && ziontechgroup.com\"
         />;
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;
@@ -227,6 +236,7 @@ export default function HomePage() {
         <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/\"  />;
       </Head>;
             <p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -305,12 +315,19 @@ export default function HomePage() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               Main St STE 1008 Middletown DE 19709
+=======
+              Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
+              <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
+              Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}              <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
+              Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}              Main St STE 1008 Middletown DE 19709
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </p>
           </div>
         </section>
       </main>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -415,3 +432,6 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

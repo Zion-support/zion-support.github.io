@@ -49,10 +49,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Brain,
   Heart,
   Eye,
@@ -170,8 +173,11 @@ color: 'from-violet-500 to-purple-600'
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
@@ -268,7 +274,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       description: 'Emotional state monitoring for healthcare professionals'
       icon: Shield
       color: 'from-teal-500 to-cyan-600'
-    },  ];      description: 'AI agents that understand customer emotions and respond appropriately'
+    },  ],
+  description: 'AI agents that understand customer emotions and respond appropriately'
       icon: Users
       color: 'from-blue-500 to-cyan-600'
     }
@@ -357,47 +364,44 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck;
-} from 'lucide-react';
-
-
-    };
+} from 'lucide-react'
+};
     {;
-      title: 'Mental Health Applications',;
-      description: 'Emotional support and monitoring for mental health care',;
+      title: 'Mental Health Applications',,
+  description: 'Emotional support and monitoring for mental health care',;
       icon: Heart,;
       color: 'from-pink-500 to-rose-600',;
-    },      color: 'from-pink-500 to-rose-600';
-    };
+    },      color: 'from-pink-500 to-rose-600'
+};
     {;
-      title: 'Educational Platforms',;
-      description: 'Personalized learning experiences based on emotional state',;
+      title: 'Educational Platforms',,
+  description: 'Personalized learning experiences based on emotional state',;
       icon: Brain,;
       color: 'from-green-500 to-emerald-600',;
-    },      color: 'from-green-500 to-emerald-600';
-    };
+    },      color: 'from-green-500 to-emerald-600'
+};
     {;
-      title: 'Marketing Optimization',;
-      description: 'Campaign optimization based on emotional response analysis',;
+      title: 'Marketing Optimization',,
+  description: 'Campaign optimization based on emotional response analysis',;
       icon: TrendingUp,;
       color: 'from-orange-500 to-red-600',;
-    },      color: 'from-orange-500 to-red-600';
-    };
+    },      color: 'from-orange-500 to-red-600'
+};
     {;
-      title: 'HR and Recruitment',;
-      description: 'Emotional intelligence assessment and team building',;
+      title: 'HR and Recruitment',,
+  description: 'Emotional intelligence assessment and team building',;
       icon: Users,;
       color: 'from-purple-500 to-indigo-600',;
-    },      color: 'from-purple-500 to-indigo-600';
-    };
+    },      color: 'from-purple-500 to-indigo-600'
+};
     {;
-      title: 'Healthcare Diagnostics',;
-      description: 'Emotional state monitoring for healthcare professionals',;
+      title: 'Healthcare Diagnostics',,
+  description: 'Emotional state monitoring for healthcare professionals',;
       icon: Shield,;
       color: 'from-teal-500 to-cyan-600',;
     },      color: 'from-teal-500 to-cyan-600';
     }
   ];
-
 
       ];
       popular: false
@@ -536,13 +540,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             initial={{ opacity: 0, coordinate_y: 50 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 1 }}
-            className='mb - 16'          >      <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 32">;
-        <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
-        <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+            className='mb - 16'          >      <section className="relative min - h-screen flex items - center justify - center overflow-hidden pt-32">;
+        <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple-900 / 20 to-black"></div>;
+        <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
             initial={{ opacity: 0, coordinate_y: 50 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 1 }}
-            className='mb - 16'            className="mb - 16";
+            className='mb - 16'            className="mb-16";
           >;
             {/* Badge */}
             <motion.div;
@@ -654,10 +658,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <span className="text-white">Platform</span>;
             </motion && motion.h1>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Subheading */}
             <motion&& motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -701,8 +708,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <div className='absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>;
               </Link>;
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Link
                 href='#pricing'
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'>;
@@ -892,8 +902,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -978,7 +991,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
 
               >
                 <div className={`flex justify-center mb-6`}>
@@ -1297,7 +1309,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
 
               >
                 <div className={`flex justify-center mb-6`}>
@@ -2008,15 +2019,15 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                     >;
                       <CheckCircle className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
                       <span className='text - gray - 300'>{feature}</span>                    </li>                    {plan.price}
-                    <span className="text - lg text - gray - 400">{plan.period}</span>;
+                    <span className="text - lg text-gray-400">{plan.period}</span>;
                   </div>;
-                  <p className="text - gray - 300">{plan.description}</p>;
+                  <p className="text-gray-300">{plan.description}</p>;
                 </div>;
-                <ul className="space - y-4 mb - 8">;
+                <ul className="space-y-4 mb-8">;
                   {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - start space - x-3">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0" />;
-                      <span className="text - gray - 300">{feature}</span>;
+                    <li key={feature_index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex-shrink-0" />;
+                      <span className="text-gray-300">{feature}</span>;
                     </li>))}
                 </ul>;
                 <Link;
@@ -2035,8 +2046,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       </section>;
       {/* Contact Section */}
       <section className='py - 20 bg - gradient - to - b from - black to - purple - 900 / 20'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to - purple - 900 / 20">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to-purple-900 / 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 50 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2057,9 +2068,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               outcomes.;
             </p>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -2150,6 +2164,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
               <span className='flex items-center'>;
                 Get Started Today;
+<<<<<<< HEAD
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >;
 <<<<<<< HEAD
 =======
@@ -2173,20 +2188,23 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default AIEmotionalIntelligencePlatform2029;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>            <motion.div          >;
-            <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-              Ready to <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent">Transform</span> Your Business?;
+            <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6">;
+              Ready to <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip-text text-transparent">Transform</span> Your Business?;
             </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
               Contact us today to learn how our AI Emotional Intelligence Platform can revolutionize your customer experience and business outcomes.;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8 mb-12">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2196,11 +2214,11 @@ export default AIEmotionalIntelligencePlatform2029;
             >;
               <Phone className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
               <h3 className='text - xl font - bold text - white mb - 2'>Call Us</h3>;
-              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>              className="text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10";
+              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>              className="text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to-white / 10 border border-white / 10";
             >;
-              <Phone className="w - 12 h - 12 text - purple - 400 mx - auto mb - 4" />;
-              <h3 className="text - xl font - bold text - white mb - 2">Call Us</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
+              <Phone className="w - 12 h - 12 text - purple - 400 mx-auto mb-4" />;
+              <h3 className="text - xl font - bold text-white mb-2">Call Us</h3>;
+              <p className="text-gray-300">{contact_info.mobile}</p>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2210,11 +2228,11 @@ export default AIEmotionalIntelligencePlatform2029;
             >;
               <Mail className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
               <h3 className='text - xl font - bold text - white mb - 2'>Email Us</h3>;
-              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>              className="text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10";
+              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>              className="text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to-white / 10 border border-white / 10";
             >;
-              <Mail className="w - 12 h - 12 text - purple - 400 mx - auto mb - 4" />;
-              <h3 className="text - xl font - bold text - white mb - 2">Email Us</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
+              <Mail className="w - 12 h - 12 text - purple - 400 mx-auto mb-4" />;
+              <h3 className="text - xl font - bold text-white mb-2">Email Us</h3>;
+              <p className="text-gray-300">{contact_info.email}</p>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2224,17 +2242,18 @@ export default AIEmotionalIntelligencePlatform2029;
             >;
               <MapPin className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
               <h3 className='text - xl font - bold text - white mb - 2'>Visit Us</h3>;
-              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>              className="text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10";
+              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>              className="text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to-white / 10 border border-white / 10";
             >;
-              <MapPin className="w - 12 h - 12 text - purple - 400 mx - auto mb - 4" />;
-              <h3 className="text - xl font - bold text - white mb - 2">Visit Us</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
+              <MapPin className="w - 12 h - 12 text - purple - 400 mx-auto mb-4" />;
+              <h3 className="text - xl font - bold text-white mb-2">Visit Us</h3>;
+              <p className="text-gray-300">{contact_info.address}</p>;
           </div>;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           >
@@ -2276,9 +2295,10 @@ export default AIEmotionalIntelligencePlatform2029;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 };
-
 
 export default AIEmotionalIntelligencePlatform2029;
 ;

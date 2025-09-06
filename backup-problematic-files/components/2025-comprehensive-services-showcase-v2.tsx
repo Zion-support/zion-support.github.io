@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
 
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
@@ -447,17 +448,27 @@ function ComprehensiveServicesShowcase2025V2() {
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
+} from 'lucide-react';
+// Import our new 2025 V2 innovative services;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
           <motion.div
+=======
+          
+          <motion.div 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             className="space-y-20"
             variants={staggerContainer}
             initial="initial"
@@ -467,9 +478,13 @@ function ComprehensiveServicesShowcase2025V2() {
             {serviceCategories.map((category) => (
               <motion.div key={category.id} variants={fadeInUp}>
                 <div className="text-center mb-12">
+<<<<<<< HEAD
                   <div
                     className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}
                   >
+=======
+                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {category.icon}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -479,6 +494,7 @@ function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
 =======
 
@@ -491,6 +507,13 @@ function ComprehensiveServicesShowcase2025V2() {
 =======
                       key={"id" in service ? service.id : index}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.services.map((service) => (
+                    <motion.div
+                      key={service.id}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       whileHover={{ y: -5 }}
                     >
@@ -500,7 +523,11 @@ function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+                      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -511,12 +538,20 @@ function ComprehensiveServicesShowcase2025V2() {
                           {service.growthRate}
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}
                         </div>
                         <div className="text-sm text-gray-400">
+<<<<<<< HEAD
                           {(service as any).pricing?.professional ?
+=======
+                          {(service as any).pricing?.professional ? 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
                             `${service.price} ${service.period}`
                           }
@@ -524,6 +559,7 @@ function ComprehensiveServicesShowcase2025V2() {
                       </div>;
                       <a;
                         href={`/services/${service.slug}`}
+<<<<<<< HEAD
 
                         className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200";
 
@@ -567,6 +603,8 @@ function ComprehensiveServicesShowcase2025V2() {
                       </a>
                     </motion.div>
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   ))}
                     </motion.div>))}
                 </div>;
@@ -575,6 +613,7 @@ function ComprehensiveServicesShowcase2025V2() {
         </div>;
       </section>;
       {/* Market Statistics */}
+<<<<<<< HEAD
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <motion.h2
@@ -603,10 +642,22 @@ function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
+=======
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 px-4 bg-black / 20">;
+        <div className="max-w-7xl mx-auto">;
+          <motion.h2;
+            className="text - 4xl md:text - 5xl font - bold text - white text-center mb-16";
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            className="grid md:grid - cols - 2 lg:grid - cols-4 gap-8";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
@@ -643,10 +694,17 @@ function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
+=======
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text - 4xl md:text - 5xl font - bold text-white mb-6";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 
           >
             Ready to Lead the Future?
@@ -657,10 +715,13 @@ function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - xl text - gray - 300 mb - 8";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
           >
             Join thousands of businesses already transforming their operations
             with our cutting-edge solutions.
@@ -670,10 +731,14 @@ function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="flex flex - col sm:flex - row gap - 4 justify - center";
+=======
+            className="flex flex - col sm:flex - row gap-4 justify-center";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
+<<<<<<< HEAD
           >
             <a
               href={`mailto:${contactInfo.email}`}
@@ -699,3 +764,5 @@ function ComprehensiveServicesShowcase2025V2() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

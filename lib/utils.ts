@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -29,8 +28,8 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
-  };
+    timeout = setTimeout(() => func(..._args), wait)
+};
 }
 
 export function throttle<T extends (...args: any[]) => any>(
@@ -80,6 +79,7 @@ export function slugify(str: string): string {
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -97,6 +97,9 @@ export const placeholder = 'placeholder';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return twMerge(clsx(inputs));}
+=======
+}  return twMerge(clsx(inputs));}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
 }
@@ -105,17 +108,16 @@ ursor/add-new-services-and-deploy-updates-0462
 }
 origin/automation-improvements-final
 
-
 export function formatDate(date: Date | string | number): string {
 
 },
-
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
     month: "long", day: "numeric"
     year: "numeric"
 }
+<<<<<<< HEAD
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 =======
 <<<<<<< HEAD
@@ -138,10 +140,14 @@ const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-me
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { type ClassValue, clsx } from 'clsx';,
+=======
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { twMerge } from 'tailwind-merge';,
 
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -180,12 +186,16 @@ export function cn(...inputs: ClassValue[]) {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export function formatDate(date: Date | string | number): string {
+=======
+}export function formatDate(date: Date | string | number): string {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric",
     year: "numeric",
 }
 
+<<<<<<< HEAD
 
 
 
@@ -291,10 +301,17 @@ origin/main
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
+=======
+};
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 }
 }
 };
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -304,3 +321,5 @@ origin/main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

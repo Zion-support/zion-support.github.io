@@ -12,6 +12,7 @@ const AccordionItem = React.forwardRef<
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+<<<<<<< HEAD
     ref={ref}
     className={cn("border-b", className)}
     {...props}
@@ -31,6 +32,13 @@ AccordionItem.displayName = "AccordionItem"
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const AccordionTrigger = React.forwardRef<
+=======
+
+AccordionItem.displayName = "AccordionItem"
+
+  />
+))const AccordionTrigger = React.forwardRef<
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
@@ -89,16 +97,21 @@ const AccordionTrigger = React && React.forwardRef<;
       {...props}
     >;
       {children}
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </AccordionPrimitive.Trigger>
+=======
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />    </AccordionPrimitive.Trigger>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   </AccordionPrimitive.Header>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -136,3 +149,5 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

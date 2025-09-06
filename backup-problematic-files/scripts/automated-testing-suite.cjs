@@ -2,9 +2,15 @@
 
 const { execSync } = require('child_process');
 const fs = require('fs');
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🧪 Automated Testing Suite');
 console.log('=====');
 
@@ -19,8 +25,12 @@ async function runTests() {
   ];
 
   const results = [];
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`);
@@ -43,15 +53,31 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
+<<<<<<< HEAD
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
 
+=======
+
+
+
+  fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   console.log('\n📊 Test Summary:');
   console.log(`Total: ${report.summary.total}`);
   console.log(`Passed: ${report.summary.passed}`);
   console.log(`Failed: ${report.summary.failed}`);
+<<<<<<< HEAD
 
   return report;
 }
 <<<<<<< HEAD
 runTests().catch(console.error);
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  
+  return report;
+}
+
+runTests().catch(console.error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

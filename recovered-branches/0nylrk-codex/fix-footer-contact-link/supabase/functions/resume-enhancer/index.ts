@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
-
-<<<<<<< HEAD
-=======
-
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const corsHeaders = {
 <<<<<<< HEAD
   "Access-Control-Allow-Origin": "*",
@@ -27,16 +10,20 @@ const corsHeaders = {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -54,10 +41,13 @@ serve(async (req) => {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
 
     const { content, enhancementType, context } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 
 
     if (!openAiKey) {
@@ -97,6 +87,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -107,6 +99,7 @@ serve(async (req) => {
     const { content, enhancementType, context } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
+<<<<<<< HEAD
       throw new Error("OPENAI_API_KEY is not defined")
 <<<<<<< HEAD
 
@@ -219,14 +212,16 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+=======
+      throw new Error("OPENAI_API_KEY is not defined")      case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
       case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
         user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
-        break;
-<<<<<<< HEAD
-<<<<<<< HEAD
+        break;        temperature: 0 && 0.7})});
 
+<<<<<<< HEAD
 
 =======
         break;
@@ -324,20 +319,12 @@ if ( {) {
         temperature: 0 && 0.7})});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!response && response.ok) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
 
-
-
-
-=======
-    const data = await response && response.json();
-    const enhancedContent = data && data.choices[0].message && message.content;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -382,6 +369,7 @@ if ( {) {
     );
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -393,6 +381,8 @@ if ( {) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.error ("Error in resume - enhancer function:", error);
     return new Response (
       JSON.stringify ({
@@ -402,6 +392,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -632,3 +623,5 @@ return new Response (JSON.stringify ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

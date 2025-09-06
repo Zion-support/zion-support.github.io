@@ -9,7 +9,6 @@ export default function EpisodePage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
 export default function EpisodePage() {
 
 export default function EpisodePage() {
@@ -104,12 +103,12 @@ if (return <div > Loading…</div>) {
         </pre>;
       </div>;
     </div>);      {episode.audio?.mp3Url && (
-        <audio controls className="w - full">;
+        <audio controls className="w-full">;
           <source src={episode.audio.mp3Url} type="audio / mpeg" />;
         </audio>)}
       <div>;
-        <h2 className="text - xl font - semibold">Transcript</h2>;
-        <pre className="whitespace - pre - wrap bg - gray - 50 p - 3 rounded">{episode.transcript}</pre>;
+        <h2 className="text-xl font-semibold">Transcript</h2>;
+        <pre className="whitespace - pre - wrap bg - gray-50 p-3 rounded">{episode.transcript}</pre>;
       </div>;
     </div>);
 }

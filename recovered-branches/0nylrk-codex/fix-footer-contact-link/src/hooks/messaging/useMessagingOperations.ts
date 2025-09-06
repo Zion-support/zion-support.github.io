@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,10 +8,13 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
+<<<<<<< HEAD
 import { useMessages } from './useMessages';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -340,3 +343,11 @@ export function useMessagingOperations(user: UserWithProfile) {;
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { useMessages } from './useMessages';// Allow either UserProfile or UserDetails
+
+type UserWithProfile = UserProfile | UserDetails | null;
+/**
+ * Hook that combines all messaging operations  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

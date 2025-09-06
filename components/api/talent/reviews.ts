@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 });  }
 =======
 <<<<<<< HEAD
@@ -10,6 +11,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabaseexport default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -19,23 +22,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     // In a real implementation, validate and insert review into Supabase
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res && res.status(201).json({ ok: true });
   }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }  if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-<<<<<<< HEAD
-
 
   return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -80,10 +79,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
 export default async /**
  * handler - Function description
  */
@@ -123,6 +118,7 @@ return res;
     .end ('Method Not Allowed');    return res.status (201).json ({ ok: true });
   }
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,3 +198,6 @@ return res
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

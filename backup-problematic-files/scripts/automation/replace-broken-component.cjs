@@ -12,6 +12,7 @@ class ComponentReplacer {}
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
+<<<<<<< HEAD
   Bot,
   User,
   Send,
@@ -23,6 +24,19 @@ import { }
   ThumbsUp,
   ThumbsDown,
   Sparkles,
+=======
+  Bot, 
+  User, 
+  Send, 
+  Paperclip, 
+  Mic, 
+  MicOff, 
+  Settings, 
+  X, 
+  ThumbsUp, 
+  ThumbsDown, 
+  Sparkles, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Clock,
   MessageCircle,
   HelpCircle,
@@ -164,7 +178,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -404,5 +426,10 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComponentReplacer;
+module.exports = ComponentReplacer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

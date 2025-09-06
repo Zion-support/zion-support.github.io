@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -39,12 +42,12 @@
     mobile: string;
     email: string;
 export interface Ultimate2026Service {;
-    address: string;
-  };
+    address: string
+};
   id: string,;
   name: string,;
   tagline: string,;
-  price: string,;
+  price: string,,
   description: string,;
   features: string[],;
   link: string,;
@@ -83,15 +86,11 @@ export const ultimate2026Services: Ultimate2026Service[] = [
   }
 ];      mobile: "+1 302 464 0950";
 
-
       email: "kleber@ziontechgroup.com";
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
     id: "2026-ultimate-service",
@@ -169,21 +168,18 @@ export const ultimate2026Services: Ultimate2026Service[] = [
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+];      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
-;
-=======
-=======
-    id: "2026-ultimate-service",
-    name: "2026 Ultimate Service Platform",
-    tagline: "The ultimate platform for 2026",
-    price: "$699/month",
-    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    features: [
+;    features: [
       "Ultimate platform",
       "All technologies",
       "Maximum capabilities",
@@ -193,11 +189,11 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 =======
 <<<<<<< HEAD
@@ -220,6 +216,9 @@ export const ultimate2026Services: Ultimate2026Service[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 ];

@@ -62,8 +62,6 @@ import {
 <<<<<<< HEAD
 =======
 
-
-
   Brain;
   MessageSquare,
   Image,
@@ -549,6 +547,9 @@ function AIBusinessToolsPage() {
                     </p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -702,6 +703,7 @@ function AIBusinessToolsPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -755,6 +757,8 @@ function AIBusinessToolsPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Why Choose AI Tools?
             </h2>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -910,9 +914,9 @@ function AIBusinessToolsPage() {
                         <div className='text - sm text - gray - 300 max - w-xs'>;
                           {tool.use_case}
                         </div>                      </div>;
-                      <div className="text - right">;
-                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;
-                        <div className="text - sm text - gray - 300 max - w-xs">{tool.use_case}</div>;
+                      <div className="text-right">;
+                        <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs">{tool.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;

@@ -1,16 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
-
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 const Toaster = ({ ...props }: ToasterProps) => {
 
   const { theme = "system" } = useTheme()
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,12 +29,15 @@ const Toaster = ({ ...props }: ToasterProps) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
       toastOptions={{
         classNames: {
+<<<<<<< HEAD
           toast:
 <<<<<<< HEAD
 
@@ -74,6 +80,9 @@ const Toaster = ({ ...props }: ToasterProps) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_theme } from &quot;next - themes & quot;
+=======
+          toast:import { use_theme } from &quot;next - themes & quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
 type ToasterProps = React.ComponentProps < typeof Sonner>;
@@ -92,21 +101,11 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
             &quot;group-[.toast]:bg - primary group-[.toast]:text - primary - foreground & quot;,
           cancel_button:;
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useTheme } from "next-themes";
-import { Toaster as Sonner, toast } from "sonner";
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 ;
 const Toaster = ({ ...props } ToasterProps) => {;
   const { theme = "system" } = useTheme();
 ;
-<<<<<<< HEAD
   return (;
     <Sonner;
       theme={theme as ToasterProps["theme"]}
@@ -114,22 +113,18 @@ const Toaster = ({ ...props } ToasterProps) => {;
       toastOptions={{;
         classNames:{;
           toast:;
-            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",;
-          description:"group-[.toast]:text-muted-foreground",;
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",,
+  description:"group-[.toast]:text-muted-foreground",;
           actionButton:;
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",;
           cancelButton:;
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {...props}
     />);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+;
+;
 <<<<<<< HEAD
-
-=======
-;
-;
 export { Toaster, toast } />) 
 }export {
   Toaster, toast 
@@ -150,3 +145,6 @@ export { Toaster, toast }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

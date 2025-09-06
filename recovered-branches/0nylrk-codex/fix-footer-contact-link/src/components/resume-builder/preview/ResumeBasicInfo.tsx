@@ -7,6 +7,7 @@ interface ResumeBasicInfoSectionProps {
 import { ResumeBasicInfo } from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +105,8 @@ export function ResumeBasicInfoSection({
 import { ResumeBasicInfo } from "@/types/resume";
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export function ResumeBasicInfoSection({
@@ -120,7 +123,23 @@ export function ResumeBasicInfoSection({
 }
 ;
 
-<<<<<<< HEAD
+import { ResumeBasicInfo } from "@/types/resume";
+interface ResumeBasicInfoSectionProps {
+  basicInfo: ResumeBasicInfo;
+}
+
+export function ResumeBasicInfoSection({
+  basicInfo,
+}: ResumeBasicInfoSectionProps) {
+  return (
+    <div className="space-y-2 border-b pb-4 mb-6">
+      <h1 className="text-2xl font-bold">
+        {basicInfo.headline || basicInfo.title}
+      </h1>
+      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
+    </div>
+  );
+}
+;
+
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

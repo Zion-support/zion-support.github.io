@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -32,10 +33,21 @@ export * from './useNotificationOperations';
 export * from './useNotificationOperations';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
+};
+
+export * from './useNotificationOperations';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export * from './types',;
 export * from './NotificationContext',;
 export * from './types',;
 export * from './NotificationContext',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -66,3 +78,11 @@ export * from "./types";
 export * from "./NotificationContext";
 export * from "./useNotificationOperations";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export * from './useNotificationOperations';
+
+export * from './useNotificationOperations';
+;
+export * from './types';
+export * from './NotificationContext';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

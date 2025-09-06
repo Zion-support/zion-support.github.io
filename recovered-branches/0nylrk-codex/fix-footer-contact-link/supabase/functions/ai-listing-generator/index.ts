@@ -1,16 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
@@ -83,26 +84,18 @@ const corsHeaders = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { title, category, keyFeatures, targetAudience } = await req.json();
-    if (!title |!category) {
-      return new Response(
-        JSON.stringify({
-          error: "Missing required fields: title and category are required"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -136,8 +129,6 @@ serve(async (req) => {;
         {;
           status: 400,;
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const { title, category, keyFeatures, targetAudience } = await req && req.json();
 
@@ -145,13 +136,10 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         });
         {
           status: 400
+<<<<<<< HEAD
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 <<<<<<< HEAD
 =======
@@ -221,6 +209,12 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
@@ -228,9 +222,9 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
-
     
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -255,10 +249,13 @@ Target Audience: ${targetAudience |"General users"}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
+<<<<<<< HEAD
     const prompt = `Generate an optimized marketplace listing for the following product:;
 <<<<<<< HEAD
 =======
@@ -279,10 +276,14 @@ Target Audience: ${targetAudience |"General users"}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 Title: ${title}
+=======
+    const prompt = `Generate an optimized marketplace listing for the following product:;Title: ${title}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -327,118 +328,26 @@ Please create:;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
-<<<<<<< HEAD
-
-=======
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0 && 0.7});
 
     const responseText = completion && completion.choices[0].message && message.content;
-<<<<<<< HEAD
     
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    // Parse the JSON from the AI response
-    let parsedResponse;
-    try {
-      // Extract the JSON content if it's wrapped in markdown code blocks
-<<<<<<< HEAD
-
-      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
-                        responseText && responseText.match(/({[\s\S]*})/) ||
-
-=======
-      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
-                        responseText && responseText.match(/({[\s\S]*})/) ||
-
-      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
-                        responseText && responseText.match(/({[\s\S]*})/) ||
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         [null, responseText];
       const jsonString = jsonMatch[1].trim();
       parsedResponse = JSON && JSON.parse(jsonString)
-    } catch (error) {
-<<<<<<< HEAD
-=======
-      console && console.error("Failed to parse AI response as JSON:", error);
-      console && console.log("Raw response:", responseText);
-Format the response as a JSON object with the following structure: {
-  "description": "The optimized description here..."
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
-  "suggestedPrice": { "min": number, "max": number }
-  "keyPoints": ["point1", "point2", "point3"]
-}`;
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini"
-      messages: [{ role: "user", content: prompt }];
-      temperature: 0.7});
-    const responseText = completion.choices[0].message.content;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-Format the response as a JSON object with the following structure:
-{
-  "description": "The optimized description here...",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-  "suggestedPrice": { "min": number, "max": number },
-  "keyPoints": ["point1", "point2", "point3"]
-}`,
-
-<<<<<<< HEAD
-=======
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.7}),
-
-    const responseText = completion.choices[0].message.content,
-    
-=======
-        }
-      );
-    }
-Format the response as a JSON object with the following structure: {
-  "description": "The optimized description here..."
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    // Parse the JSON from the AI response
-    let parsedResponse,
-    try {
-      // Extract the JSON content if it's wrapped in markdown code blocks
-                        [null, responseText];
-      const jsonString = jsonMatch[1].trim();
-      parsedResponse = JSON && JSON.parse(jsonString)
-    } catch (error) {
-<<<<<<< HEAD
-      console.error("Failed to parse AI response as JSON:", error);
-      console.log("Raw response:", responseText);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      // Provide a fallback structured response
-      parsedResponse = {
+    } catch (error) {      parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
       
@@ -453,48 +362,20 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         keyPoints: []
       }
     }
-    return new Response(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      JSON && JSON.stringify({ 
-
-        generated: parsedResponse
-=======
-      JSON && JSON.stringify({ 
-        generated: parsedResponse
-      JSON.stringify({
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        generated: parsedResponse
-      });
+    return new Response(      });
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
-    }
-    return new Response (
-      JSON.stringify ({
-        generated: parsed_response;
-      });
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
+        headers: { ...corsHeaders, "Content-Type": "application/json" }      }
     );
   } catch (error) {
       });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     )
@@ -676,16 +557,14 @@ Format the response as a JSON object with the following structure:;
         headers: { ...cors_headers, "Content - Type": "application / json" }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
+=======
+=======      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     );
   }
 });
-<<<<<<< HEAD
 
 ;
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       JSON.stringify({
         generated: parsedResponse
 
@@ -706,14 +585,10 @@ Format the response as a JSON object with the following structure:;
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
+  }
+});
+});
 <<<<<<< HEAD
-  }
-});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  }
-});
 ;
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -864,3 +739,5 @@ headers: {
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

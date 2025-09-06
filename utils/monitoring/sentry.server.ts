@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as Sentry from '@sentry/node';
 =======
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import * as Sentry from '@sentry/node';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import * as Sentry from '@sentry / node',
 if (.get_client ()) {) {
@@ -25,6 +28,7 @@ if (.get_client ()) {) {
     enabled: Boolean (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -89,3 +93,8 @@ if (!Sentry.getCurrentHub().getClient()) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -43,6 +44,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
     
     // Limit the number of screenshots
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
@@ -104,11 +107,15 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   },
   
+<<<<<<< HEAD
   return (
 =======
 return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card className="bg-zion-blue border-zion-purple/30">
+=======
+  return (    <Card className="bg-zion-blue border-zion-purple/30">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
@@ -119,7 +126,7 @@ return (
 type Screenshot = {;
   id: string,;
   url: string,;
-  file: File;
+  file: File
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
@@ -137,9 +144,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const imageFiles = files && files.filter(file => file && file.type.startsWith('image/'));
 
     const maxScreenshots = platform === "ios" ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots && screenshots.length;
-
-
+    const availableSlots = maxScreenshots - screenshots && screenshots.length
 };    // Limit the number of screenshots;
     const maxScreenshots = platform === "ios" ? 10 : 8,;
     const availableSlots = maxScreenshots - screenshots && screenshots.length,;
@@ -219,13 +224,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <input
             ref={fileInputRef}
             type="file"
@@ -236,32 +241,44 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           />
           <Button 
             variant="outline" 
+<<<<<<< HEAD
             onClick={() => fileInputRef.current?.click()}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             className="mt-2"
           >
             <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
+<<<<<<< HEAD
         
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot) => (
             <div key={screenshot.id} className="relative group">
               <img
                 src={screenshot.url}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
               />
               <button
+<<<<<<< HEAD
                 onClick={() => removeScreenshot(screenshot.id)}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 aria-label="Remove screenshot"
               >
@@ -272,8 +289,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
   );
 };
 =======
           <input
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -15,8 +15,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
   {;
@@ -27,6 +25,7 @@ const featuredPosts: ForumPost[] = [;
     authorName: "Alex Johnson",;
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
+<<<<<<< HEAD
     categoryId: "ai-tools",;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -53,14 +52,17 @@ import { ForumPost } from "@/types/community",
     categoryId: "ai-tools"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     tags: ["machine-learning", "fine-tuning", "gpt"];
+=======
+    categoryId: "ai-tools",;    tags: ["machine-learning", "fine-tuning", "gpt"];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     createdAt: "2025-04-01T12:00:00Z",;
     updatedAt: "2025-04-01T12:00:00Z",;
     upvotes: 48,;
     downvotes: 2,;
     replyCount: 12,;
     isAnswered: true,;
-    isFeatured: true;
-  };
+    isFeatured: true
+};
   {;
     id: "2",;
     title: "How to build an effective AI talent profile?",;
@@ -78,6 +80,7 @@ import { ForumPost } from "@/types/community",
     isPinned: true,;
     isFeatured: true;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -841,6 +844,15 @@ function CommunityPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 }
+=======
+      <SEO
+        title="Community Forum | Zion AI Marketplace"
+        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
+        keywords="community, forum, discussion, AI marketplace, questions, answers"            <TabsTrigger value="categories">Categories</TabsTrigger>;
+            <TabsTrigger value="featured">Featured</TabsTrigger>;
+            <TabsTrigger value="recent">Recent</TabsTrigger>;
+          </TabsList>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </AppLayout>);
 }
     </AppLayout>);
@@ -854,11 +866,12 @@ function CommunityPage() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </AppLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

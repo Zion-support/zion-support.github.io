@@ -113,9 +113,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   heroImage,
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   description,
   benefits,
   testimonials,
@@ -417,9 +420,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 <<<<<<< HEAD
                   </div>
 =======
+<<<<<<< HEAD
+                  </div>
+=======
                   </div>;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -463,11 +470,16 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </div>
                   </div>
                 </CardFooter>
               </Card>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -477,6 +489,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               </Card>;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
           </div>
         </div>
@@ -494,9 +507,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 <<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
 =======
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
+=======
           <a href={ctaLink}>{ctaText}</Link>
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </section>
     </div>

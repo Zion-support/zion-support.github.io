@@ -63,18 +63,24 @@ export function EnterpriseCTA() {
 =======
 import { Calendar } from 'lucide-react';
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -134,6 +140,7 @@ export function EnterpriseCTA() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>
   )
 import React from "react",;
@@ -152,6 +159,13 @@ import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (;
     <section id="contact" className="py-20 px-4 md: px-6">;
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from 'lucide-react';
+export function EnterpriseCTA() {;
+  return (;    <section id="contact" className="py-20 px-4 md: px-6">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
           <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">;
@@ -199,14 +213,19 @@ export function EnterpriseCTA() {;
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
+<<<<<<< HEAD
                     <p>Free consultation on implementation</p>;
                   </li>;
+=======
+                    <p>Free consultation on implementation</p>;                  </li>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </ul>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
 }
@@ -217,3 +236,9 @@ export function EnterpriseCTA() {;
     </section>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    </section>);
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

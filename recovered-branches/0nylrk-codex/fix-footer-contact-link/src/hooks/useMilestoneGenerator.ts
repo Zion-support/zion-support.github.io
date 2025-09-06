@@ -23,6 +23,7 @@ export interface MilestoneInput {
   end_date: string | null,
   project_type: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export interface GeneratedMilestone {
@@ -37,16 +38,19 @@ export interface GeneratedMilestone {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-
 
 export interface GeneratedMilestone {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title: string;
+=======
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       setIsGenerating(true),
 
@@ -55,40 +59,6 @@ export interface GeneratedMilestone {;
 }
 =======
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
-
-=======
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-export interface MilestoneInput {
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from 'sonner';
-export interface MilestoneInput {;
-  scope: string;
-  startDate: string;
-
-  endDate: string | null
-
-  projectType: string
-}
-export interface GeneratedMilestone {
-
-export interface GeneratedMilestone {;
-  title: string;
-  description: string;
-  dueDate: string;
-
-  estimatedHours: number
-
-  isAiGenerated: boolean
-}
-=======
-  const [isGenerating, setIsGenerating] = useState(false);
-
-      setIsGenerating(true),
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function useMilestoneGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -104,9 +74,9 @@ export function useMilestoneGenerator() {
 =======
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
-<<<<<<< HEAD
       setIsGenerating(true),
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -114,69 +84,16 @@ export function useMilestoneGenerator() {
     try {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
-=======
-  due_date: string;
-  estimated_hours: number,
-  isAiGenerated: boolean;
-}
-export /**
- * useMilestoneGenerator - Function description
- */
-function useMilestoneGenerator() {
-  const [is_generating, setIsGenerating] = useState (false);
-  const [generated_milestones, setGeneratedMilestones] = useState < GeneratedMilestone[]>([]);
-;
-  const generate_milestones = async (input: MilestoneInput): Promise < GeneratedMilestone[]> => {
-    try {
-      setIsGenerating (true),
-      const { data, error } = await supabase.functions.invoke ('generate - milestones', {
-        body: input;
-      });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Mark each milestone as AI generated;
-      const milestonesWithFlag = data.milestones.map ((milestone: any) => ({
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        ...milestone,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        isAiGenerated: true}));
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-;
-      setGeneratedMilestones (milestonesWithFlag);
-      return milestonesWithFlag;
-    } catch (error) {
-      console.error ('Error generating milestones:', error);
-      toast.error ('Failed to generate milestones');
-      return [];
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        isAiGenerated: true}));
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    } finally {
+        isAiGenerated: true}));      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({    } finally {
       setIsGenerating (false);
     }
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -371,3 +288,7 @@ if (error) throw error;
     clearGeneratedMilestones}
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }    clearGeneratedMilestones}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

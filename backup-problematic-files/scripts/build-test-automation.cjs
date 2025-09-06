@@ -20,8 +20,14 @@ class BuildTestAutomation {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.report.steps.push({})
       timestamp,
       type,
@@ -31,7 +37,11 @@ class BuildTestAutomation {}
     try {}
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
+<<<<<<< HEAD
         "encoding": 'utf8',
+=======
+        "encoding": 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -133,5 +143,10 @@ if ( {})
      {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = BuildTestAutomation;
+module.exports = BuildTestAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

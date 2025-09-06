@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -53,6 +54,12 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   constructor(props: ErrorBoundaryProps) {;
     super(props),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  [key: string]: any;
+}) =>: any (
+  <Suspense fallback={fallback}>;
+    <Component {...props} />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
@@ -60,6 +67,9 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -69,6 +79,7 @@ interface ErrorBoundaryProps {
   children: ReactNode,
   fallback?: ReactNode;
 }
+<<<<<<< HEAD
 =======
 ;
   render() {;
@@ -88,6 +99,8 @@ interface ErrorBoundaryProps {
 );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -107,6 +120,7 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   }
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
@@ -264,12 +278,17 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
 <<<<<<< HEAD
 // Skeleton loading component;
 <<<<<<< HEAD
+=======
+  }}
+// Skeleton loading component;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export /**
  * Skeleton - Function description
  */
 function Skeleton() {
   return (
     <div className={`animate - pulse ${class_name}`}>;
+<<<<<<< HEAD
       {Array.from ({ length: lines }).map ((_, i) => (
 =======
 export function Skeleton({ className = "", lines = 1 }: {className?: string;
@@ -348,10 +367,22 @@ export function usePerformanceMonitor(componentName: string) {;
 <<<<<<< HEAD
 =======
 =======
+=======
+      {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
+      {Array.from({ length: lines }).map((_, i) => (;
+        <div;
+          key={i}
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb-0";
+          style={{ width: `${Math.random () * 40 + 60}%` }}
+        />))}
+    </div>);
+}      // Log performance metrics in development;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         // Could send to analytics service here;
         console.warn (`${component_name} took ${duration.to_fixed (2)}ms to render`);
 =======
@@ -366,10 +397,16 @@ if ( {) {
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
+      }
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -445,3 +482,9 @@ export { LazyComponent };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    }
+  }, [value, delay]);
+  return debounced_value;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

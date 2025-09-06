@@ -5,7 +5,6 @@ import Link from 'next/link',;
 import React from 'react'
 import Link from 'next/link'
 
-
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -18,6 +17,7 @@ import {
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface EmptyStateProps {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -69,33 +69,21 @@ import {
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
   title: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   subtitle: string;
   cta: string;
   href: string;
-
-import React from 'react';
-import Link from 'next/link';
-import { MessageSquare } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-
-interface EmptyStateProps {
-  title: string,
-  subtitle: string,
-  cta: string,
-  href: string,
-
   hasSession: boolean
 
-
-const EmptyState: React.FC<EmptyStateProps> = ({;
-  title,;
-  subtitle,;
-  cta,;
-  href,;
-  hasSession,;
-
+const EmptyState: React.FC<EmptyStateProps> = ({
+  title
+  subtitle
+  cta
+  href
+  hasSession
 }) => {  return (
+<<<<<<< HEAD
     <div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
@@ -114,6 +102,26 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               <Button disabled>{cta}</Button>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+    <div className='text-center py-16'>
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
+        <MessageSquare className='h-10 w-10 text-zion-purple' />
+      </div>
+      <h2 className='text-xl font-medium mb-2'>{title}</h2>
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+import React from 'react';
+import Link from 'next/link';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface EmptyStateProps {;
+  title: string,;
+  subtitle: string,;
+  cta: string,;
+  href: string,;
+  hasSession: boolean;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
     <div className="text-center py-16">
@@ -133,6 +141,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             ) : (
               <Button disabled>{cta}</Button>
             )}
+<<<<<<< HEAD
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 <<<<<<< HEAD
@@ -142,10 +151,13 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -189,3 +201,6 @@ export default EmptyState;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },;
 export default EmptyState;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

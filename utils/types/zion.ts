@@ -1,25 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 =======
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-export interface Branding {;
 
-=======
-
-export interface Branding {;
-
-  logoUrl?: string,;
-  primaryColor?: string,;
-  secondaryColor?: string,;
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
@@ -32,6 +19,7 @@ export interface Branding {;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -78,6 +66,8 @@ export interface DeployModules {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -88,6 +78,7 @@ export interface DeployModules {;
   roadmapWhitepaper: boolean;
   apiDocsWiki: boolean;
   zionBrain: boolean;
+<<<<<<< HEAD
   // Bonus;
 <<<<<<< HEAD
 =======
@@ -166,12 +157,16 @@ export interface DeployResult {success: boolean;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  // Bonus;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export interface DeployInput {;
   instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -202,6 +197,9 @@ export interface GeneratedAsset {;
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -232,6 +230,7 @@ export interface GeneratedAsset {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -255,12 +254,15 @@ export interface DeployResult {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -294,6 +296,8 @@ export interface Branding {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface DeployModules {
   marketplace: boolean,
   gpt: boolean,
@@ -346,6 +350,7 @@ export interface DeployResult {
 }
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
 <<<<<<< HEAD
@@ -398,3 +403,6 @@ export interface AccessControlConfig {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  adminKeyConfigured: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -469,6 +470,8 @@ export interface Innovative2026AIService {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   contactInfo: {
       
     mobile: string, email: string,
@@ -480,7 +483,6 @@ export interface Innovative2026AIService {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
 }
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
     launchDate: '2025-06-20'
@@ -506,9 +508,6 @@ export interface Innovative2026AIService {
 
     reviews: 950
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
@@ -828,9 +827,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 950
       website: 'https://ziontechgroup.com';
@@ -860,6 +862,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 950;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 
@@ -868,12 +871,15 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
+=======
+];import { ServiceVariant } from '../types/service-variants',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Innovative2026AIService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -916,8 +922,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     name: 'AI Business Intelligence Suite',;
     tagline: 'Transform data into actionable insights with AI',;
     price: '$299',;
-    period: '/month',;
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',;
+    period: '/month',,
+  description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',;
     features: [;
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models',;
       'Collaborative workspace for teamsMobile app for on-the-go insights';
@@ -960,8 +966,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     name: 'AI Customer Experience Platform',;
     tagline: 'Deliver personalized experiences at scale',;
     price: '$199',;
-    period: '/month',;
-    description: 'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.',;
+    period: '/month',,
+  description: 'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.',;
     features: [;
       'AI-powered personalization engineReal-time customer behavior analysisDynamic content optimizationPredictive customer journey mappingAutomated A/B testingMulti-channel experience orchestrationCustomer sentiment analysisPersonalized recommendations',;
       'Automated customer supportCustomer lifetime value optimization';
@@ -1004,8 +1010,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     name: 'AI Cybersecurity Suite',;
     tagline: 'Protect your business with intelligent threat detection',;
     price: '$399',;
-    period: '/month',;
-    description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.',;
+    period: '/month',,
+  description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.',;
     features: [;
       'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analysisVulnerability assessmentCompliance reportingSecurity awareness trainingThreat intelligence feeds',;
       'Incident management dashboard24/7 security operations center';
@@ -1048,8 +1054,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     name: 'AI Marketing Automation Suite',;
     tagline: 'Automate and optimize your marketing campaigns',;
     price: '$149',;
-    period: '/month',;
-    description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.',;
+    period: '/month',,
+  description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.',;
     features: [;
       'AI-powered campaign optimizationMulti-channel automationPersonalized content generationPredictive analyticsA/B testing automationLead scoring and nurturingEmail marketing automationSocial media management',;
       'Marketing attributionROI tracking and optimization';
@@ -1092,8 +1098,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     name: 'AI Sales Intelligence Platform',;
     tagline: 'Boost sales performance with AI-powered insights',;
     price: '$179',;
-    period: '/month',;
-    description: 'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.window.window.performance.',;
+    period: '/month',,
+  description: 'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.window.window.performance.',;
     features: [;
       'AI-powered prospect identificationSales forecasting and predictionLead scoring and prioritizationCompetitive intelligenceSales performance analyticsPipeline optimizationCustomer behavior analysisSales coaching recommendations',;
       'Revenue optimizationIntegration with CRM systems';
@@ -1128,12 +1134,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     launchDate: '2025-06-20',;
     customers: 1900,;
     rating: 4.8;
+<<<<<<< HEAD
     reviews: 950;
 <<<<<<< HEAD
   }
+=======
+    reviews: 950;  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 ;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1145,3 +1155,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

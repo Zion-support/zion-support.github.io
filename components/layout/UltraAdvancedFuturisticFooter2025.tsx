@@ -68,13 +68,16 @@ import { AnimatePresence } from 'framer-motion';
   BookOpen,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } from 'lucide-react';
-import Link from 'next / link';
+import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 ;
 interface FooterLink {
@@ -179,43 +182,43 @@ const footerSections: FooterSection[] = [;
     links: [;
       {;
         label: 'AI & Machine Learning',;
-        href: '/ai-services',;
-        description: 'Advanced AI solutions',;
+        href: '/ai-services',,
+  description: 'Advanced AI solutions',;
       },;
       {;
         label: 'Quantum Computing',;
-        href: '/quantum-computing',;
-        description: 'Next-gen quantum tech',;
+        href: '/quantum-computing',,
+  description: 'Next-gen quantum tech',;
       },;
       {;
         label: 'Space Technology',;
-        href: '/space-tech',;
-        description: 'Innovative space solutions',;
+        href: '/space-tech',,
+  description: 'Innovative space solutions',;
       },;
       {;
         label: 'Q4 2025 Innovation',;
-        href: '/innovative-2025-q4-showcase',;
-        description: 'Latest revolutionary services',;
+        href: '/innovative-2025-q4-showcase',,
+  description: 'Latest revolutionary services',;
       },;
       {;
         label: 'Pricing Guide',;
-        href: '/comprehensive-pricing-2025-q4',;
-        description: 'Comprehensive pricing',;
+        href: '/comprehensive-pricing-2025-q4',,
+  description: 'Comprehensive pricing',;
       },;
       {;
         label: 'Cybersecurity',;
-        href: '/cybersecurity',;
-        description: 'Enterprise security',;
+        href: '/cybersecurity',,
+  description: 'Enterprise security',;
       },;
       {;
         label: 'Cloud Solutions',;
-        href: '/cloud-platform',;
-        description: 'Scalable cloud infrastructure',;
+        href: '/cloud-platform',,
+  description: 'Scalable cloud infrastructure',;
       },;
       {;
         label: 'View All Services',;
-        href: '/services',;
-        description: 'Complete service portfolio',;
+        href: '/services',,
+  description: 'Complete service portfolio',;
       },;
     ],;
   },;
@@ -224,33 +227,33 @@ const footerSections: FooterSection[] = [;
     links: [;
       {;
         label: 'Healthcare & Biotech',;
-        href: '/healthcare-solutions',;
-        description: 'Medical technology',;
+        href: '/healthcare-solutions',,
+  description: 'Medical technology',;
       },;
       {;
         label: 'Financial Services',;
-        href: '/solutions?industry=financial',;
-        description: 'Fintech solutions',;
+        href: '/solutions?industry=financial',,
+  description: 'Fintech solutions',;
       },;
       {;
         label: 'Manufacturing',;
-        href: '/solutions?industry=manufacturing',;
-        description: 'Industry 4 && 4.0',;
+        href: '/solutions?industry=manufacturing',,
+  description: 'Industry 4 && 4.0',;
       },;
       {;
         label: 'Retail & E-commerce',;
-        href: '/solutions?industry=retail',;
-        description: 'Digital commerce',;
+        href: '/solutions?industry=retail',,
+  description: 'Digital commerce',;
       },;
       {;
         label: 'Government',;
-        href: '/solutions?industry=government',;
-        description: 'Public sector',;
+        href: '/solutions?industry=government',,
+  description: 'Public sector',;
       },;
       {;
         label: 'Education',;
-        href: '/solutions?industry=education',;
-        description: 'EdTech solutions',;
+        href: '/solutions?industry=education',,
+  description: 'EdTech solutions',;
       },;
   {;
     title: 'Solutions',;
@@ -261,8 +264,8 @@ const footerSections: FooterSection[] = [;
       { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },;
       { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },;
       { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
-    ];
-  };
+    ]
+};
   {;
     title: 'Company',;
     links: [;
@@ -276,8 +279,8 @@ const footerSections: FooterSection[] = [;
     links: [;
       {;
         label: 'About Us',;
-        href: '/about',;
-        description: 'Our mission and values',;
+        href: '/about',,
+  description: 'Our mission and values',;
       },;
       { label: 'Careers', href: '/careers', description: 'Join our team' },;
       { label: 'Contact', href: '/contact', description: 'Get in touch' },;
@@ -294,39 +297,39 @@ const footerSections: FooterSection[] = [;
       { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },;
       { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },;
       { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
-    ];
-  };
+    ]
+};
   {;
     title: 'Company',;
     links: [;
       { label: 'About Us', href: '/about', description: 'Our mission and values' },;
       { label: 'Careers', href: '/careers', description: 'Join our team' },;
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
-    ];
-  };
+    ]
+};
   {;
     title: 'Resources',;
     links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },;
       {;
         label: 'White Papers',;
-        href: '/white-papers',;
-        description: 'In-depth research',;
+        href: '/white-papers',,
+  description: 'In-depth research',;
       },;
       {;
         label: 'Webinars',;
-        href: '/webinars',;
-        description: 'Educational content',;
+        href: '/webinars',,
+  description: 'Educational content',;
       },;
       {;
         label: 'Documentation',;
-        href: '/docs',;
-        description: 'Technical guides',;
+        href: '/docs',,
+  description: 'Technical guides',;
       },;
       {;
         label: 'Case Studies',;
-        href: '/case-studies',;
-        description: 'Success stories',;
+        href: '/case-studies',,
+  description: 'Success stories',;
       },;
       { label: 'Support', href: '/support', description: 'Help & assistance' },;
     ],;
@@ -336,28 +339,28 @@ const footerSections: FooterSection[] = [;
     links: [;
       {;
         label: 'Healthcare',;
-        href: '/healthcare-solutions',;
-        description: 'Medical technology',;
+        href: '/healthcare-solutions',,
+  description: 'Medical technology',;
       },;
       {;
         label: 'Finance',;
-        href: '/financial-solutions',;
-        description: 'Fintech solutions',;
+        href: '/financial-solutions',,
+  description: 'Fintech solutions',;
       },;
       {;
         label: 'Manufacturing',;
-        href: '/manufacturing-ai-solutions',;
-        description: 'Industry 4 && 4.0',;
+        href: '/manufacturing-ai-solutions',,
+  description: 'Industry 4 && 4.0',;
       },;
       {;
         label: 'Government',;
-        href: '/government-technology-solutions',;
-        description: 'Public sector',;
+        href: '/government-technology-solutions',,
+  description: 'Public sector',;
       },;
       {;
         label: 'Education',;
-        href: '/education-technology-solutions',;
-        description: 'EdTech solutions',;
+        href: '/education-technology-solutions',,
+  description: 'EdTech solutions',;
       },;
     ],;
   },;
@@ -399,7 +402,8 @@ const quickLinks = [;
   { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   const scrollToTop = () => {;
-    window && window.scrollTo({ top: 0, behavior: 'smooth' });  };  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
+    window && window.scrollTo({ top: 0, behavior: 'smooth' })
+};  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
   { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },;
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
@@ -407,9 +411,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   const scrollToTop = () => {;
-    window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+    window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' })
+};
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
@@ -420,8 +423,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
 
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
@@ -588,59 +589,59 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             }}
           />))}
         {/* Gradient Overlays */}
-        <div className="absolute inset - 0 bg - gradient - to - t from - gray - 900 via - purple - 900 / 20 to - transparent"></div>;
-        <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - gray - 900 / 20 to - gray - 900"></div>;
+        <div className="absolute inset - 0 bg - gradient - to - t from - gray - 900 via - purple-900 / 20 to-transparent"></div>;
+        <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - gray - 900 / 20 to-gray-900"></div>;
       </div>;
-      <div className="relative z - 10">;
+      <div className="relative z-10">;
         {/* Main Footer Content */}
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-20">;
           <motion.div;
             variants={container_variants}
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true }}
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 12";
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-6 gap-12";
           >;
             {/* Company Info */}
-            <motion.div variants={item_variants} className="lg:col - span - 2">;
-              <div className="flex items - center space - x-3 mb - 6">;
+            <motion.div variants={item_variants} className="lg:col-span-2">;
+              <div className="flex items - center space-x-3 mb-6">;
                 <div className="relative">;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items - center justify - center">;
-                    <Crown className="w - 7 h - 7 text - white" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items-center justify-center">;
+                    <Crown className="w - 7 h-7 text-white" />;
                   </div>;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl blur - lg opacity - 50"></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl blur-lg opacity-50"></div>;
                 </div>;
                 <div>;
-                  <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+                  <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
                     Zion Tech Group;
                   </h3>;
-                  <p className="text - sm text - gray - 400">Future Technology Solutions</p>;
+                  <p className="text - sm text-gray-400">Future Technology Solutions</p>;
                 </div>;
               </div>;
-              <p className="text - gray - 300 mb - 6 leading - relaxed">;
+              <p className="text - gray - 300 mb-6 leading-relaxed">;
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next - generation technology.;
               </p>;
-              <p className="text - gray - 300 leading - relaxed mb - 6 max - w-md">;
+              <p className="text - gray - 300 leading - relaxed mb-6 max-w-md">;
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future - ready services.;
                 We help businesses transform and thrive in the digital age.;
               </p>;
               {/* Contact Info */}
-              <div className="space - y-3">;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
+              <div className="space-y-3">;
+                <div className="flex items - center space - x-3 text-gray-300">;
+                  <Phone className="w - 4 h - 4 text-cyan-400" />;
                   <span>+1 302 464 0950</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                <div className="flex items - center space - x-3 text-gray-300">;
+                  <Mail className="w - 4 h - 4 text-purple-400" />;
                   <span > kleber@ziontechgroup.com</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                <div className="flex items - center space - x-3 text-gray-300">;
+                  <MapPin className="w - 4 h - 4 text-pink-400" />;
                   <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <Globe className="w - 4 h - 4 text - blue - 400" />;
-                  <a href="https://ziontechgroup.com" className="hover:text - white transition - colors duration - 200">;
+                <div className="flex items - center space - x-3 text-gray-300">;
+                  <Globe className="w - 4 h - 4 text-blue-400" />;
+                  <a href="https://ziontechgroup.com" className="hover:text - white transition-colors duration-200">;
                     ziontechgroup.com;
                   </a>;
                 </div>;
@@ -665,6 +666,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     <li key={item.label}>;
                       <Link;
                         href={item.href}
+<<<<<<< HEAD
+=======
+                        className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
+                </h4>;
+                <ul className="space-y-3">;
+                  {section.items.map ((item) => (
+                    <li key={item.label}>;
+                      <Link;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
           {/* Social Links & Newsletter */}
@@ -675,7 +685,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                         href={item.href}
-                        className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
+                        className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                       >;
                         {item.label}
             {/* Footer Sections */}
@@ -846,10 +856,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </motion && motion.div>;
         </div>;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Bottom Bar */}
         <motion&& motion.div
                       </Link>;
@@ -880,21 +893,21 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     while_tap={{ scale: 0.95 }}
                   >;
                     <social.icon className='w - 5 h - 5' />                  </motion.a>          >;
-            <div className="flex flex - col lg:flex - row items - center justify - between gap - 8">;
+            <div className="flex flex - col lg:flex - row items - center justify-between gap-8">;
               {/* Social Links */}
-              <div className="flex items - center space - x-6">;
-                <span className="text - gray - 400 font - medium">Follow Us:</span>;
+              <div className="flex items-center space-x-6">;
+                <span className="text - gray-400 font-medium">Follow Us:</span>;
                 {social_links.map ((social) => (
                   <motion.a;
                     key={social.label}
                     href={social.href}
                     target="_blank";
                     rel="noopener noreferrer";
-                    className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration - 200 hover:scale - 110";
+                    className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110";
                     while_hover={{ coordinate_y: -2 }}
                     while_tap={{ scale: 0.95 }}
                   >;
-                    <social.icon className="w - 5 h - 5" />;
+                    <social.icon className="w-5 h-5" />;
                   </motion.a>))}
               </div>;
               {/* Newsletter Signup */}
@@ -914,14 +927,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   />;
                   <motion.button;
                     className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 }}                </p>;
-                <div className="flex space - x-2">;
+                <div className="flex space-x-2">;
                   <input;
                     type="email";
                     placeholder="Enter your email";
-                    className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
+                    className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent";
                   />;
                   <motion.button;
-                    className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200";
+                    className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200";
                     while_hover={{ scale: 1.05 }}
                     while_tap={{ scale: 0.95 }}
                   >;
@@ -1090,8 +1103,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                 </div>;
                 <span>•</span>;
                 <div className='flex items - center space - x-2'>;
-                  <Rocket className='w - 4 h - 4 text - pink - 400' />                  <span > Space Technology</span>                <div className="flex items - center space - x-2">;
-                  <Rocket className="w - 4 h - 4 text - pink - 400" />;
+                  <Rocket className='w - 4 h - 4 text - pink - 400' />                  <span > Space Technology</span>                <div className="flex items-center space-x-2">;
+                  <Rocket className="w - 4 h - 4 text-pink-400" />;
                   <span > Space Technology</span>;
                 </div>;
               </div>;
@@ -1122,11 +1135,8 @@ export default UltraAdvancedFuturisticFooter2025;
 =======
 
 export default UltraAdvancedFuturisticFooter2025;
-export default UltraAdvancedFuturisticFooter2025;
-
-};
-
-
+export default UltraAdvancedFuturisticFooter2025
+}
 };
 
 export default UltraAdvancedFuturisticFooter2025;
@@ -1135,7 +1145,7 @@ export default UltraAdvancedFuturisticFooter2025;
       {/* Scroll to Top Button */}
       <motion.button;
         on_click={scrollToTop}
-        className='fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration - 200 z - 50'        while_hover={{ scale: 1.1, coordinate_y: -2 }}        className="fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration - 200 z - 50";
+        className='fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration - 200 z - 50'        while_hover={{ scale: 1.1, coordinate_y: -2 }}        className="fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration-200 z-50";
         while_hover={{ scale: 1.1, coordinate_y: -2 }}
         while_tap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}

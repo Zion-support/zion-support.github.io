@@ -1,9 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
 import '@testing - library / jest - dom',
 import { after_each, vi } from 'vitest',
 import { cleanup } from '@testing - library / react',
@@ -12,14 +14,6 @@ after_each (() => {
   cleanup (),
   vi.restoreAllMocks ();
 }),
-
-=======
-=======
-import '@testing-library/jest-dom'
-import { afterEach, vi } from 'vitest';
-import { cleanup } from '@testing-library/react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import '@testing-library/jest-dom',;
 import { afterEach, vi } from 'vitest',;
 import { cleanup } from '@testing-library/react',;
@@ -37,6 +31,7 @@ import { cleanup } from '@testing-library/react',;
 afterEach(() => {;
   cleanup(),;
   vi.restoreAllMocks();
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -80,3 +75,6 @@ import { cleanup } from '@testing-library/react',;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 =======
@@ -15,12 +15,15 @@ import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
 import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom',
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -74,12 +77,16 @@ export function useAuthEventHandlers(
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
+=======
+import { useNavigate } from 'react-router-dom',      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }, 0);
     }, 0),
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
+<<<<<<< HEAD
       setOnboardingStep('profile'),
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -178,6 +185,9 @@ export function useAuthEventHandlers(;
 =======
       description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      setOnboardingStep('profile'),      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       variant: "default"}),;
 
     // Check for new registration and send welcome email if needed;
@@ -185,61 +195,13 @@ export function useAuthEventHandlers(;
       if (mappedUser) {;
         checkNewRegistration(mappedUser);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    }, 0);
-
-    // Check if user needs to complete onboarding;
-    if (!mappedUser && mappedUser.profileComplete && navigate) {;
-      setOnboardingStep('profile');
-<<<<<<< HEAD
-=======
-    }, 0),;
-    // Check if user needs to complete onboarding;
-    if (!mappedUser.profileComplete && navigate) {;
-      setOnboardingStep('profile'),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
-        title: "Complete your profile",;
-        description: "Please complete your profile information to get started",;
+        title: "Complete your profile",,
+  description: "Please complete your profile information to get started",;
         variant: "default"}),;
       navigate('/onboarding');
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-
-=======
-  },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  };
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const handleSignedOut = () => {;
-    toast({;
-      title: "Signed out",;
-      description: "You have been successfully logged out",;
-      variant: "default"});
-  };
-
-  return {;
-    handleSignedIn;
-    handleSignedOut;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { toast } from '@/hooks / use - toast';
+  };import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
 import {use_navigate} from 'react-router-dom';
@@ -292,6 +254,7 @@ if ( {) {
     handleSignedOut;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -299,6 +262,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     handleSignedOut
   },
@@ -318,6 +283,7 @@ export function useAuthEventHandlers(): any (;
   setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
 ) {;
   const navigate = useNavigate(),;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,7 +298,10 @@ export function useAuthEventHandlers(): any (;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
+}  }
 }
 
 import { toast } from "@/hooks/use-toast",;
@@ -351,8 +320,8 @@ export function useAuthEventHandlers(;
 ;
   const handleSignedIn = (mappedUser:UserProfile) => {;
     toast({;
-      title:"Welcome back!",;
-      description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
+      title:"Welcome back!",,
+  description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
       variant:"default"}),;
     ;
     // Check for new registration and send welcome email if needed;
@@ -366,8 +335,8 @@ export function useAuthEventHandlers(;
     if (!mappedUser.profileComplete && navigate) {;
       setOnboardingStep('profile'),;
       toast({;
-        title:"Complete your profile",;
-        description:"Please complete your profile information to get started",;
+        title:"Complete your profile",,
+  description:"Please complete your profile information to get started",;
         variant:"default"}),;
       navigate('/onboarding'),;
     }
@@ -375,8 +344,8 @@ export function useAuthEventHandlers(;
 ;
   const handleSignedOut = () => {;
     toast({;
-      title:"Signed out",;
-      description:"You have been successfully logged out",;
+      title:"Signed out",,
+  description:"You have been successfully logged out",;
       variant:"default"}),;
   },;
 ;
@@ -395,12 +364,8 @@ export function useAuthEventHandlers(;
 toast ({
   navigate ('/onboarding');
 }
-};
+}
 };
 }
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

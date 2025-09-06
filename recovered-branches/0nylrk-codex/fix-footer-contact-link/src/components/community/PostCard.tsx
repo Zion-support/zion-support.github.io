@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,6 +22,10 @@ import {ForumPost} from "@/types/community";
 import {ProfileBadge} from "@/components/profile/ProfileBadge";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -32,6 +37,7 @@ import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { ForumPost } from "@/types/community",
+<<<<<<< HEAD
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -80,6 +86,9 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       post.isFeatured && "bg-zion-purple/5"
+=======
+import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFeatured && "bg-zion-purple/5"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
         <Avatar className="h-10 w-10">
@@ -92,6 +101,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
               {post.title}
             </Link>
             {post.isAnswered && (
+<<<<<<< HEAD
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
 <<<<<<< HEAD
 =======
@@ -220,6 +230,9 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
+=======
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -267,9 +280,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -494,6 +506,8 @@ export default PostCard;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;
 },;
 ;
@@ -553,13 +567,13 @@ export default PostCard;
 
       </CardFooter>;
     </Card>;
-  );
+  )
 };
 export default PostCard;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
 export default PostCard;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

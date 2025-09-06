@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class TestingSystem {;
   static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {;
     switch (action) {;
@@ -6,6 +7,8 @@ export class TestingSystem {;
         element.click();
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   static async testUserInteraction (
     element: HTMLElement,
@@ -14,6 +17,7 @@ export class TestingSystem {;
       case 'click':;
         element.click ();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -81,3 +85,5 @@ export class TestingSystem {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

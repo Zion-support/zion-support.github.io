@@ -15,5 +15,10 @@ s*(w+)/g, '
       improvements.push('Arrow functions optimized')
       improvements.push('Semicolons added')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      // Skip directories that can'
+      // Skip directories that can'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

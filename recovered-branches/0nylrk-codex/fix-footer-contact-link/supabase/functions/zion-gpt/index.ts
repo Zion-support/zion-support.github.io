@@ -1,21 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -30,6 +27,7 @@ const corsHeaders = {
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -49,6 +47,10 @@ const corsHeaders = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -61,6 +63,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 const corsHeaders = {
@@ -112,10 +115,13 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
+<<<<<<< HEAD
     // Default to base model if no specific model provided
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,6 +406,14 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+=======
+    // Default to base model if no specific model provided      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    )
+
+    console.error ("Error in zion - gpt function:", error);import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
@@ -409,12 +423,7 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
     console.error ("Error in zion - gpt function:", error);
 ;
     return new Response (
@@ -423,55 +432,8 @@ serve(async (req) => {;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
-<<<<<<< HEAD
-
-=======
-;
-  try {;
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
-    if (!openAIApiKey) {;
-      throw new Error("OpenAI API key is not set in environment variables");
-    }
-;
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),;
-    if (!prompt) {;
-      throw new Error("Prompt is required");
-    }
-;
-    // Define the appropriate model to use;
-    // Default to base model if no specific model provided;
-    const model = modelId || "gpt-3.5-turbo",;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-      method: "POST",;
-      headers: {;
-        "Authorization": `Bearer ${openAIApiKey}`,;
-        "Content-Type": "application/json"},;
-      body: JSON.stringify({;
-        model: model,;
-        messages: [{;
-          role: "user",;
-          content: prompt;
-        }],;
-        max_tokens: maxTokens,;
-        temperature: temperature})}),;
-    if (!response.ok) {;
-      const errorData = await response.json(),;
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-    }
-;
-    const data = await response.json(),;
-    const completion = data.choices[0].message.content,;
-    // Return the completion along with usage statistics;
-    return new Response(;
-      JSON.stringify({;
-        completion,;
-        tokensUsed: data.usage?.total_tokens || 0;
-      }),;
-      {;
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  } catch (error) {;
+  }
+});  } catch (error) {;
     console.error("Error in zion-gpt function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
@@ -480,112 +442,14 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
 
-
   }
 });
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-  try {;
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
-    if (!openAIApiKey) {;
-      throw new Error("OpenAI API key is not set in environment variables"),;
-    }
-;
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),;
-    ;
-    if (!prompt) {;
-      throw new Error("Prompt is required"),;
-    }
-    ;
-    // Define the appropriate model to use;
-    // Default to base model if no specific model provided;
-    const model = modelId || "gpt-3.5-turbo",;
-    ;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-      method:"POST",;
-      headers:{;
-        "Authorization":`Bearer ${openAIApiKey}`,;
-        "Content-Type":"application/json"},;
-      body:JSON.stringify({;
-        model:model,;
-        messages:[{ ;
-          role:"user", ;
-          content:prompt ;
-        }],;
-        max_tokens:maxTokens,;
-        temperature:temperature})}),;
-;
-    if (!response.ok) {;
-      const errorData = await response.json(),;
-      throw new Error(`OpenAI API error:${JSON.stringify(errorData)}`),;
-    }
-;
-    const data = await response.json(),;
-    const completion = data.choices[0].message.content,;
-    ;
-    // Return the completion along with usage statistics;
-    return new Response(;
-      JSON.stringify({ ;
-        completion,;
-        tokensUsed:data.usage?.total_tokens || 0;
-      }),;
-      {;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    ),;
-  } catch (error) {;
-    console.error("Error in zion-gpt function:", error),;
-    ;
-    return new Response(;
-      JSON.stringify({ error:error.message }),;
-      {;
-        status:500,;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    ),;  }
-}),;
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}const {
-  prompt, modelId, maxTokens = 500, temperature = 0.7 
-}= await req.json ();
-if (!prompt) {
-  
-}//Define the appropriate model to use //Default to base model if no specific model provided const response = await fetch ("https://api.openai.com/v1/chat/completions", {
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  openAIApiKey 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: model;
-messages: [ {
-  role: "user";
-content: prompt 
-}];
-temperature: temperature 
-}) 
 });
+<<<<<<< HEAD
 return new Response (JSON.stringify ({
   error: error.message 
 });
@@ -604,3 +468,5 @@ return new Response (JSON.stringify ({
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

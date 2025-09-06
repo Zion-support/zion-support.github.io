@@ -1,6 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { useEffect,useRef,useState,useCallback } from";react" export: const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =";";50px",preload: "= true",preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,rootMargin: preload: ? `${preloadDistanc,e}px` : rootMargin: ""}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";`'"`'"`
 =======
 import { useEffect,useRef,useState,useCallback } from\';react\' \"export\": const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =\';\';50px\',\"preload\": \'= true\',preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,\"rootMargin\": preload: ? `${preloadDistanc,e}px` : \"rootMargin\": \''}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}\';`
 const { useEffect,useRef,useState,useCallback } from";react" export: const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =";";50px",preload: "= true",preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,rootMargin: preload: ? `${preloadDistanc,e}px` : rootMargin: ""}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";`'"`'"`
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+import React from 'react';
+
+const UseLazyLoad.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UseLazyLoad.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

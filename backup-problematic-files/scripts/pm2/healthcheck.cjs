@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = require('fs');
 const http = require('http');
@@ -23,10 +26,13 @@ function pingPreview() {
 	console.log('Healthy');
 })();
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -42,9 +48,12 @@ function pingPreview() {}
 	const ok = distOk && (await pingPreview());
 	if (!ok) {}
 		console.error('Healthcheck failed');
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
@@ -243,6 +252,7 @@ async function main() {
 if (require.main === module) {
   main();
 }
+<<<<<<< HEAD
 =======
 module.exports = HealthChecker;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
@@ -251,3 +261,24 @@ module.exports = HealthChecker;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+module.exports = HealthChecker;
+const http = require('http');
+const distOk = fs.existsSync('dist/index.html');
+function pingPreview() {}
+	return new Promise((resolve) => {}
+		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
+			resolve(res.statusCode && res.statusCode < 500)}
+});
+		req.on('error', () => resolve(false));
+		req.end()})};
+(async () => {}
+	const ok = distOk && (await pingPreview());
+	if (!ok) {}
+		console.error('Healthcheck failed');
+		process.exit(1)}
+	})();
+		process.exit(1)};
+	console.log('Healthy')})();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

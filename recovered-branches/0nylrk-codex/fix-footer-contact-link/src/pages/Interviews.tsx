@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,8 @@ function InterviewsContent() {
   const [activeTab, setActiveTab] = useState("upcoming");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -33,6 +36,7 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -210,59 +214,98 @@ import {Calendar, Clock, Video} from "lucide-react";
 import {format, isAfter, parseISO, startOfDay} from "date-fns";
 
 function InterviewsContent() {;
+=======
+import { Calendar, Clock, Video } from "lucide-react";
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
+import { Calendar, Clock, Video } from "lucide-react",
+import { format, isAfter, parseISO, startOfDay } from "date-fns",
 
+function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),
+  const [activeTab, setActiveTab] = useState("upcoming"),
+  
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
+
     const loadInterviews = async () => {
-      await fetchInterviews();
-    };
-
-    loadInterviews();
+      await fetchInterviews()
+    loadInterviews()
   }, []);
-
-  // Filter interviews based on status and date;
+  // Filter interviews based on status and date
   const now = new Date();
   const today = startOfDay(now);
-
   const upcomingInterviews = interviews
     .filter((interview) => {
-      const interviewDate = parseISO(interview.scheduled_date);
-      return (
-        isAfter(interviewDate, now) &&
-        ["confirmedrequested"].includes(interview.status)
-      );
+        ['confirmedrequested'].includes(interview.status)
     })
-    .sort(
-      (a, b) =>
-        parseISO(a.scheduled_date).getTime() -
-        parseISO(b.scheduled_date).getTime(),
-    );
-
-  const pendingInterviews = interviews.filter(
-    (interview) => interview.status === "requested",
+    .sort((a, b) =>
+      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+    interview.status === 'requested'
   );
-
-  const pastInterviews = interviews.filter((interview) => {
+  const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
-    return (
-      !isAfter(interviewDate, now) ||
-      ["completeddeclinedcancelled"].includes(interview.status)
-    );
+    return !isAfter(interviewDate, now) |
+      ['completeddeclinedcancelled'].includes(interview.status)
   });
-
-  // Group interviews by date;
-  const groupInterviewsByDate = (interviews: Interview[]) => {;
-    const grouped: Record<string, Interview[]> = {};
-
+  // Group interviews by date
+  const groupInterviewsByDate = (interviews: Interview[]) => {
     interviews.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), "yyyy-MM-dd");
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
-        grouped[dateKey] = [];
-      }
-      grouped[dateKey].push(interview);
+        grouped[dateKey] = []
+    return Object.entries(groupedInterviews)
+      .sort(([dateA], [dateB]) =>
+        parseISO(dateA).getTime() - parseISO(dateB).getTime()
+      )
+      .map(([date, interviews]) => (
+        <div key={date} className="mb-8">
+          <h3 className="text-lg font-medium text-white mb-4 flex items-center">
+            <Calendar className="h-5 w-5 mr-2" />
+            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {interviews.map((interview) => (
+import React, { useEffect, useState } from "react",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { InterviewCard } from "@/components/interviews/InterviewCard",;
+import { Button } from "@/components/ui/button",;
+import { Calendar, Clock, Video } from "lucide-react",;
+import { format, isAfter, parseISO, startOfDay } from "date-fns",;
+;
+function InterviewsContent() {;
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),;
+  const [activeTab, setActiveTab] = useState("upcoming"),;
+  ;
+  useEffect(() => {;
+    // Modified to handle Promise<Interview[]> return type;
+    const loadInterviews = async () => {;
+      await fetchInterviews(),;
+    },;
+    ;
+    loadInterviews(),;
+  }, []),;
+;
+  // Filter interviews based on status and date;
+  const now = new Date(),;
+  const today = startOfDay(now),;
+  ;
+  const upcomingInterviews = interviews;
+    .filter((interview) => {;
+      const interviewDate = parseISO(interview.scheduled_date),;
+      return isAfter(interviewDate, now) && ;
+        ['confirmedrequested'].includes(interview.status),;
     });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       }
@@ -274,6 +317,34 @@ function InterviewsContent() {;
     return grouped;
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    .sort((a, b) => ;
+      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
+    ),;
+  ;
+  const pendingInterviews = interviews.filter(interview => ;
+    interview.status === 'requested';
+  ),;
+  ;
+  const pastInterviews = interviews.filter(interview => {;
+    const interviewDate = parseISO(interview.scheduled_date),;
+    return !isAfter(interviewDate, now) || ;
+      ['completeddeclined', 'cancelled'].includes(interview.status),;
+  }),;
+;
+  // Group interviews by date;
+  const groupInterviewsByDate = (interviews:Interview[]) => {;
+    const grouped:Record<string Interview[]> = {},;
+    ;
+    interviews.forEach((interview) => {;
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),;
+      if (!grouped[dateKey]) {;
+        grouped[dateKey] = [],;
+      }
+      grouped[dateKey].push(interview),;
+    }),;    return grouped
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
@@ -542,6 +613,7 @@ function InterviewsContent() {;
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       ))
 =======
   }
@@ -555,10 +627,12 @@ function InterviewsContent() {;
       ));
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
+      ))
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+=======  return (
     <>
       <SEO
         title="Interviews | Zion AI Marketplace"
@@ -589,6 +663,7 @@ function InterviewsContent() {;
                   {upcomingInterviews.length}
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -605,6 +680,8 @@ function InterviewsContent() {;
                 </span>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -653,6 +730,7 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -1136,6 +1214,8 @@ export default function Interviews() {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </>);
 }
 export default /**
@@ -1147,6 +1227,7 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1168,3 +1249,5 @@ export default function Interviews() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

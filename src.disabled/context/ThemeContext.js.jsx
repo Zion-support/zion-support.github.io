@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import * as _React from react' const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState('';system') _React.useEffect(() => { const root = window.document.documentElement root.classList.remove('';light','';dark') "if": (theme ===';';system') { const systemTheme = window.matchMedia('';(prefers-color-scheme: dark)').matches ?';';dark' :'';light: root.classList.add(systemTheme)} else { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error('';"useTheme": must be used within a ThemeProvider')} return context} '';
 
@@ -55,3 +56,6 @@ import * as _React from react' const ThemeProvider = ({ children }) => { const [
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<import * as _React from react' const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState('';system') _React.useEffect(() => { const root = window.document.documentElement root.classList.remove('';light','';dark') "if": (theme ===';';system') { const systemTheme = window.matchMedia('';(prefers-color-scheme: dark)').matches ?';';dark' :'';light: root.classList.add(systemTheme)} else { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error('';"useTheme": must be used within a ThemeProvider')} return context} '';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

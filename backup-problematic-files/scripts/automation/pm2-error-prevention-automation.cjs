@@ -352,5 +352,10 @@ process.on("SIGTERM", () => {}
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
   process.exit(1)}
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -78,3 +79,9 @@ import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Load
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''=======import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return () <div\'' className={cn(\''\"flex\": flex-col items-center justify-center min-h-screen\',className )}> <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
+const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return () <div"" className={cn(""flex: flex-col items-center justify-center min-h-screen",className )}> <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

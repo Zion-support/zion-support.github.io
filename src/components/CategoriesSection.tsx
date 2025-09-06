@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
@@ -6,11 +7,14 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
   id: string,
   name: string,
+<<<<<<< HEAD
   description?: string,
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
@@ -40,15 +44,29 @@ const getDefaultCategories = (t: any) => [
     id: "services",
     name: t('categories.services'),
     description: t('categories.services_desc'),
+=======
+  iconName?: string, // Example field if categories have icons
+  itemCount?: number, // Example field for number of items in a category
+  // Add a 'link' property if your API provides it, or construct it.
+  link?: string  {
+    id: "services"
+    name: t('categories.services')
+    description: t('categories.services_desc')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
+=======
+  },
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "talents",
     name: t('categories.talents'),
@@ -65,6 +83,7 @@ const getDefaultCategories = (t: any) => [
     color: "from-amber-500 to-orange-600"},
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -78,12 +97,15 @@ const getDefaultCategories = (t: any) => [
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
     title: "AI Services",
     description: "Cutting - edge AI solutions, chatbots, and machine learning",
     icon: "🤖",
@@ -281,6 +303,8 @@ export function CategoriesSection({
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -290,6 +314,7 @@ export function CategoriesSection({
         icon: getIcon(cat.iconName), // Get icon component
         link: cat.link || `/category/${cat.id}`, // Construct link if not provided
         // Assign a default color or implement logic to assign colors
+<<<<<<< HEAD
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
 <<<<<<< HEAD
@@ -549,19 +574,30 @@ export function CategoriesSection(): any ({;
               <Link 
                 key={service.title}
                 href={service.link}
+=======
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({        {/* Special services section with translations */}
+        <div className="mt-8">
+          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
-              </Link>;
-            ))}
+              </Link>            ))}
           </div>
         </div>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="mt-12 flex justify-center">
           <Link 
             href="/categories/all"
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
+<<<<<<< HEAD
             {t('home.view_all_categories')}
 <<<<<<< HEAD
           </Link>;
@@ -794,3 +830,6 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+            {t('home.view_all_categories')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

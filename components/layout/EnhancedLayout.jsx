@@ -28,9 +28,9 @@ import EnhancedFooter from './EnhancedFooter';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-    <div className="min - h-screen flex flex - col">;
+    <div className="min-h-screen flex flex-col">;
       <EnhancedNavigation />;
-      <main className="flex - 1">;
+      <main className="flex-1">;
         {children}
 <<<<<<< HEAD
 

@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React, {_useState} from 'react'
 import Link from 'next/link'
 
   const [open, setOpen] = useState(false)
   if (!user) return null
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     <div className=&quot;relative&quot;>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
@@ -17,6 +21,7 @@ import Link from 'next/link'
       )}
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   );}
@@ -24,3 +29,5 @@ import Link from 'next/link'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

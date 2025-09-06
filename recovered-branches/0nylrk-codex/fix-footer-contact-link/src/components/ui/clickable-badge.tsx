@@ -10,49 +10,24 @@ import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   onRemove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 
-
-export function ClickableBadge(): any ({;
-=======
-  onRemove?: () => void;
-  variant?: "default" | "secondary" | "destructive" | "outline";
-}
-export function ClickableBadge(): any ({;
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
-  onRemove?: () => void;
-  variant?: "default" | "secondary" | "destructive" | "outline"
-}
-
-export function ClickableBadge({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  children;
+export function ClickableBadge(): any ({;  children;
   className;
   variant = "default";
   onRemove;
-<<<<<<< HEAD
   ...props;
 }: ClickableBadgeProps) {;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
+=======import React from "react",
 import { X } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { badgeVariants } from "@/components/ui/badge-variants";
@@ -63,12 +38,12 @@ import { badgeVariants } from "@/components/ui/badge-variants",
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void,
 
-
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
   children;
   className;
+<<<<<<< HEAD
   variant;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -181,11 +156,15 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
           onClick={(e) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
+=======
+  variant;          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
         </button>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -195,6 +174,8 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from './react';
 import { X } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -223,6 +204,7 @@ function ClickableBadge() {
           on_click={(e) => {
             e.stop_propagation ();
             on_remove ();
+<<<<<<< HEAD
           }}
 <<<<<<< HEAD
 
@@ -288,3 +270,6 @@ onRemove && "pl-2.5 pr-1.5 py-1";
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

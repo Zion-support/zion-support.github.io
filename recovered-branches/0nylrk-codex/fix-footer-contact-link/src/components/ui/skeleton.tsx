@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -75,3 +75,9 @@ export { Skeleton }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+function Skeleton({
+  className
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

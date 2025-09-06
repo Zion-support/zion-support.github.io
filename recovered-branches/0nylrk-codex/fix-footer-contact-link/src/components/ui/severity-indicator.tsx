@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -36,31 +37,26 @@ interface SeverityIndicatorProps {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface SeverityIndicatorProps {
 
-<<<<<<< HEAD
-  severity: "safe" | "suspicious" | "dangerous"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
   showIcon?: boolean;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
-<<<<<<< HEAD
-<<<<<<< HEAD
   className?: string;
 }
 
-=======
-  className?: string
-}
+import React from "react";
+import {cn} from "@/lib/utils";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 
+<<<<<<< HEAD
 export function SeverityIndicator({
   severity
   showIcon = true
@@ -82,14 +78,15 @@ import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+interface SeverityIndicatorProps {;
+  severity: "safe" | "suspicious" | "dangerous",;import React from "react",
+import { cn } from "@/lib/utils";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous",
-  showIcon?: boolean,
-  showText?: boolean,
-  size?: "sm" | "md" | "lg",
-  className?: string
-}
 
+<<<<<<< HEAD
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
@@ -116,25 +113,18 @@ export function SeverityIndicator({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }: SeverityIndicatorProps) {
+=======
+  severity: "safe" | "suspicious" | "dangerous"
+  showIcon?: boolean;
+  showText?: boolean;
+  size?: "sm" | "md" | "lg";
+  className?: string;
+}}: SeverityIndicatorProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
         return <AlertCircle className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function SeverityIndicator(): any ({ ;
-  severity, ;
-  showIcon = true, ;
-  showText = true, ;
-  size = "md";
-  className ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-destructive"
         )} />,
@@ -142,6 +132,7 @@ export function SeverityIndicator(): any ({ ;
         return <AlertTriangle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-amber-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -197,6 +188,8 @@ export function SeverityIndicator(): any ({ ;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -216,17 +209,10 @@ export function SeverityIndicator({;
   showIcon = true,;
   showText = true,;
   size = "md",;
-  className;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}: SeverityIndicatorProps) {;
+  className;}: SeverityIndicatorProps) {;
   const getSeverityIcon = () => {;
     switch (severity) {;
+<<<<<<< HEAD
       case 'dangerous':;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -424,3 +410,6 @@ return (</div>)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      case 'dangerous':;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

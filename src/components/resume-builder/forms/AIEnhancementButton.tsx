@@ -134,6 +134,9 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
 
@@ -146,7 +149,10 @@ if ( {) {
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       onClick={handleEnhance}
       disabled={isEnhancing}
 
@@ -156,6 +162,7 @@ if ( {) {
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Sparkles className="h-3 w-3" />
       )}
       <span className="text-xs">{buttonText}</span>
@@ -163,6 +170,8 @@ if ( {) {
   )
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
         <Sparkles className="h-3 w-3" />
@@ -199,7 +208,13 @@ if ( {) {
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

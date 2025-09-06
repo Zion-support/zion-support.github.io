@@ -1,5 +1,10 @@
 } from 'lucide-react'; import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
 
+<<<<<<< HEAD
 } from "@/components/ui/sidebar";
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
@@ -8,13 +13,30 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarMenuItem,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
+<<<<<<< HEAD
 } from "@/components/ui/sidebar",
 
 export function AppSidebar() {
+=======
+} from '@/components/ui/sidebar'
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"export function AppSidebar() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Sidebar>
       <SidebarContent>
@@ -68,8 +90,11 @@ export function AppSidebar() {
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {;
   Sidebar,;
   SidebarContent,;
@@ -197,5 +222,9 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

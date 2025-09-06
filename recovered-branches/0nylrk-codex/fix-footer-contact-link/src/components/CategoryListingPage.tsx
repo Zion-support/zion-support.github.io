@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { useState } from "react",
 import { Header } from "@/components/Header",
@@ -12,6 +15,7 @@ import { ListingScoreCard } from "@/components/ListingScoreCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -25,6 +29,9 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from "react";
+=======
+import React from 'react';import {useState} from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -32,6 +39,7 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+<<<<<<< HEAD
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
 <<<<<<< HEAD
 =======
@@ -68,6 +76,9 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
+=======
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";import { useState } from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -168,13 +179,16 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Example listing type;
 interface Listing {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   category: string,;
 
@@ -188,6 +202,7 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Example listing type
 <<<<<<< HEAD
@@ -250,98 +265,21 @@ interface Listing {;
   createdAt: string;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-}
-;
-
-<<<<<<< HEAD
 =======
-  subcategory?: string;
-  image?: string;
-  tags?: string[];
-  author?: string;
-  author_image?: string;
-  ai_score?: number;
-  rating?: number;
-  review_count?: number;
-  price?: number | null;
-}
+// Example listing type}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 }
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CategoryListingPageProps {;
-  title: string,;
+  title: string,,
   description: string,;
   listings: Listing[],;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function CategoryListingPage({ 
-  title, ;
-  description;
-  listings: initialListings,
-  sortOptions = [
-    { label: 'Newest First', value: 'newest' },
-    { label: 'Oldest First', value: 'oldest' },
-    { label: 'Highest Rating', value: 'rating-high' },
-    { label: 'Highest AI Match', value: 'ai-match' },
-    { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' }],
-  filterOptions = [
-    { label: 'All', value: 'all' },
-    { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' }]
-}: CategoryListingPageProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
-  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
-  
-  // Process listings based on filters and search
-  const processedListings = initialListings
-    .filter(listing => {
-      // Apply search filter
-      const matchesSearch = 
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (listing.tags && listing.tags.some(tag => 
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        ));
-      
-      // Apply category filters
-      if (selectedFilter === 'all') return matchesSearch;
-      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;
-      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85;
-      
-      return matchesSearch
-    })
-    .sort((a, b) => {
-      // Apply sorting
-      switch (selectedSort) {
-        case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-        case 'oldest':
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
-        case 'rating-high':
-          return (b.rating || 0) - (a.rating || 0);
-        case 'ai-match':
-          return (b.aiScore || 0) - (a.aiScore || 0);
-        case 'a-z':
-          return a.title.localeCompare(b.title);
-        case 'z-a':
-          return b.title.localeCompare(a.title);
-        default: return 0
-      }
-    });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <>
@@ -425,6 +363,7 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -750,12 +689,16 @@ if (return matches_search) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+              {description}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -767,10 +710,13 @@ if (return matches_search) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
+<<<<<<< HEAD
                 <ListingScoreCard
 <<<<<<< HEAD
 =======
@@ -823,16 +769,22 @@ if (return matches_search) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={listing.id}
                   title={listing.title}
+=======
+                <ListingScoreCard          {/* Results Count */}
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}                  title={listing.title}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   description={listing.description}
                   category={listing.subcategory |listing.category}
                   image={listing.image}
                   tags={listing.tags}
                   author={listing.author}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+<<<<<<< HEAD
 =======
                   authorImage={listing.authorImage}
                   aiScore={listing.aiScore}
@@ -872,6 +824,8 @@ if (return matches_search) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </p>;
           </div>;
 
@@ -895,6 +849,7 @@ if (return matches_search) {
               ))}
 
                   setSearchQuery(""),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -911,10 +866,13 @@ if (return matches_search) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 }}
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -986,6 +944,9 @@ if (return matches_search) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )}
+=======
+            </div>          )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>;
       </div>;
       <Footer />;
@@ -996,17 +957,16 @@ if (return matches_search) {
                   review_count={listing.review_count}
                 />))}
             </div>) : (
-            <div className="text - center py - 20">;
-              <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
-              <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
+            <div className="text - center py-20">;
+              <h3 className="text - xl font - bold text - white mb-2">No listings found</h3>;
+              <p className="text - zion - slate - light mb-6">Try adjusting your filters or search query</p>;
               <Button;
                 variant="outline";
                 on_click={() => {
                   setSearchQuery ("");
                   setSelectedFilter (filter_options[0].value);
                 }}
-<<<<<<< HEAD
-                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
               >;
                 Clear all filters;
               </Button>;
@@ -1015,6 +975,7 @@ if (return matches_search) {
       </div>;
       <Footer />;
     </>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),; //Example listing type interface Listing {
@@ -1166,4 +1127,6 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

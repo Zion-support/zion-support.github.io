@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 
   return (
@@ -12,3 +13,6 @@ import * as React from 'react';
 =======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_conflicts/careers.tsx
 }
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

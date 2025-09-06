@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -78,3 +79,6 @@ import _React from 'react"  import '@testing-library/jest-dom import Performance
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react"  import '@testing-library/jest-dom import PerformanceOptimizer from '../components/PerformanceOptimizer" describe('PerformanceOptimizer',() => {' test('renders without crashing',() => {' render(<PerformanceOptimizer / />) expect(screen.getByTestId("performanceoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceOptimizer / />) }) test('handles user interactions',() => {' render(<PerformanceOptimizer / />) }) test('applies correct styling',() => {' render(<PerformanceOptimizer / />) }) })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

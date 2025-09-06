@@ -4,7 +4,7 @@
 // Playwright.config utility
 export const Playwright.config = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 reporter: [ ['list'], ['json', {

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -15,6 +15,8 @@ import {supabase} from '@/integrations/supabase/client';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { Wallet, TokenTransaction } from '@/types/tokens';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function useWallet() {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null),
@@ -29,6 +31,7 @@ export function useWallet() {;
       setLoading(false);
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -36,6 +39,8 @@ export function useWallet() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
 import type { Wallet, TokenTransaction } from '@/types / tokens';
@@ -79,83 +84,7 @@ if ( {) {
       set_wallet (data);
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
-      set_error (err.message);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    } finally {
-      set_loading (false);
-    }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
-
-=======
-    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    setTransactions(prev => [
-      {
-        id: crypto && crypto.randomUUID();
-        user_id: user && user.id;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-    try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('wallets')
-        .select('*')
-        .eq('user_id', user.id)
-        .single();
-      if (error) {
-        throw error
-      }
-      setWallet(data)
-    } catch (err: any) {
-      console.error('Error fetching wallet:', err);
-      setError(err.message)
-    } finally {
-      setLoading(false)
-    }
-  }
-  async function fetchTransactions() {
-    if (!user?.id) {
-      setTransactions([]);
-      return
-    }
-    try {
-      const { data, error } = await supabase
-        .from('token_transactions')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
-      if (error) throw error;
-      setTransactions((data |[]) as TokenTransaction[])
-    } catch (err: any) {
-      console.error('Error fetching transactions:', err)
-    }
-  }
-  async function earnTokens(amount: number, reason?: string) {
-    if (!user?.id) return;
-
-    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
-    setTransactions(prev => [
-      {
-        id: crypto.randomUUID();
-        user_id: user.id;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        amount;
+      set_error (err.message);        amount;
         transaction_type: 'earn';
         reason: reason |null
         created_at: new Date().toISOString()}
@@ -164,27 +93,6 @@ if ( {) {
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
-    );
-    setTransactions(prev => [
-      {
-        id: crypto && crypto.randomUUID();
-        user_id: user && user.id;
-<<<<<<< HEAD
-=======
-      prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
-    );
-    setTransactions(prev => [
-      {
-        id: crypto.randomUUID();
-        user_id: user.id;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -195,11 +103,6 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async /**
  * fetch_transactions - Function description
  */
@@ -270,6 +173,7 @@ if (return) {
     fetch_wallet ();
     fetch_transactions ();
   }, [user?.id]);
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -295,6 +199,9 @@ if (return) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from 'react',;
+=======
+;import { useEffect, useState } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
@@ -389,8 +296,8 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -539,3 +446,9 @@ export function useWallet() {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    fetchTransactions;
+    earnTokens;
+
+    spendTokens}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

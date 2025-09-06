@@ -64,9 +64,12 @@ import {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Brain;
   Monitor,
   Search,
@@ -839,7 +842,6 @@ function MicroSaasServicesPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
@@ -865,74 +867,76 @@ function MicroSaasServicesPage() {
     {;
       title: 'AI Content Generation',;
       marketSize: '$1 && 1.2B',;
-      growth: '+23%',;
-      description:;
+      growth: '+23%',,
+  description:;
         'Rapidly growing market with increasing demand for automated content creation',;
     },    {;
       title: 'Performance Monitoring',;
       marketSize: '$3 && 3.8B',;
-      growth: '+18%',;
-      description:;
+      growth: '+18%',,
+  description:;
         'Essential for modern web applications and user experience optimization',;
     },    {;
       title: 'SEO Analytics',;
       marketSize: '$2 && 2.1B',;
-      growth: '+21%',;
-      description:;
+      growth: '+21%',,
+  description:;
         'Critical for digital marketing and search engine optimization',;
     },    {;
       title: 'API Management',;
       marketSize: '$4 && 4.2B',;
-      growth: '+25%',;
-      description: 'Growing demand for API security and traffic management',;
+      growth: '+25%',,
+  description: 'Growing demand for API security and traffic management',;
     },    {;
       title: 'Email Marketing',;
       marketSize: '$7 && 7.5B',;
-      growth: '+15%',;
-      description:;
+      growth: '+15%',,
+  description:;
         'Mature market with strong automation and personalization trends',;
     },    {;
       title: 'Social Media Management',;
       marketSize: '$2 && 2.8B',;
-      growth: '+19%',;
-      description:;
+      growth: '+19%',,
+  description:;
         'Increasing need for multi-platform social media coordination',;
-    },  ];      description: 'Rapidly growing market with increasing demand for automated content creation';
-    };
+    },  ],
+  description: 'Rapidly growing market with increasing demand for automated content creation'
+};
     {;
       title: 'Performance Monitoring',;
       marketSize: '$3 && 3.8B',;
-      growth: '+18%',;
-      description:;
+      growth: '+18%',,
+  description:;
         'Essential for modern web applications and user experience optimization',;
-    },      description: 'Essential for modern web applications and user experience optimization';
-    };
+    },      description: 'Essential for modern web applications and user experience optimization'
+};
     {;
       title: 'SEO Analytics',;
       marketSize: '$2 && 2.1B',;
-      growth: '+21%',;
-      description:;
+      growth: '+21%',,
+  description:;
         'Critical for digital marketing and search engine optimization',;
-    },      description: 'Critical for digital marketing and search engine optimization';
-    };
+    },      description: 'Critical for digital marketing and search engine optimization'
+};
     {;
       title: 'API Management',;
       marketSize: '$4 && 4.2B',;
-      growth: '+25%',;
-      description: 'Growing demand for API security and traffic management',;
-    },      description: 'Growing demand for API security and traffic management';
-    };
+      growth: '+25%',,
+  description: 'Growing demand for API security and traffic management',;
+    },      description: 'Growing demand for API security and traffic management'
+};
     {;
       title: 'Email Marketing',;
       marketSize: '$7 && 7.5B',;
-      growth: '+15%',;
-      description:;
+      growth: '+15%',,
+  description:;
         'Mature market with strong automation and personalization trends',;
-    },      description: 'Mature market with strong automation and personalization trends';
-    };
+    },      description: 'Mature market with strong automation and personalization trends'
+};
     {;
       title: 'Social Media Management',;
       marketSize: '$2 && 2.8B',;
+<<<<<<< HEAD
       growth: '+19%',;
       description:;
 <<<<<<< HEAD
@@ -1075,6 +1079,10 @@ function MicroSaasServicesPage() {
   return (
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+      growth: '+19%',,
+  description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         'Increasing need for multi-platform social media coordination',;
     },      description: 'Increasing need for multi-platform social media coordination';
     }
@@ -1228,9 +1236,12 @@ function MicroSaasServicesPage() {
               </Card>
             ))}
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1238,12 +1249,15 @@ function MicroSaasServicesPage() {
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1352,14 +1366,14 @@ function MicroSaasServicesPage() {
                             >;
                               <Check className='w - 4 h - 4 mr - 2 text - green - 400 flex - shrink - 0' />                              {feature}              Our Micro SaaS Services;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
               Each service is designed to solve specific business challenges with professional - grade features and competitive pricing.;
             </p>;
           </div>;
-          <div className="space - y-16">;
+          <div className="space-y-16">;
             {microSaasServices.map ((service, index) => (
-              <div key={service.id} className="bg - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 800">;
-                <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
+              <div key={service.id} className="bg - gray - 900 / 50 rounded - 2xl p - 8 border border-gray-800">;
+                <div className="grid grid - cols - 1 lg:grid - cols-3 gap-8">;
                   {/* Service Info */}
 <<<<<<< HEAD
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -10,10 +11,13 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0"
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {serve} from "https: //deno && deno.land/std@0 && 0.131.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0",
 import {corsHeaders} from "../_shared/cors ;
 console && console.log("Track Referral function started!");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -103,6 +107,12 @@ serve(async (req) => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
+=======
+serve(async (req) => {
+  // Handle CORS pre-flight request
+  if (req && req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
     // Look up the referrer from the referral code
     const { data: refCodeData, error: refError } = await supabase
@@ -110,22 +120,13 @@ serve(async (req) => {
       .select('user_id')
       .eq('code', refCode)
       .single();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    if (refError || !refCodeData) {
-      console && console.error('Error finding referral code:', refError);
-
-=======
-    if (refError || !refCodeData) {
-      console && console.error('Error finding referral code:', refError);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return new Response(
+        JSON.stringify({ error: 'Invalid referral code' });      return new Response(
         JSON && JSON.stringify({ error: 'Invalid referral code' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -193,27 +194,19 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
-
-
 
         JSON && JSON.stringify({ error: 'Invalid referral code' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
+<<<<<<< HEAD
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -360,6 +353,19 @@ serve(async (req) => {;
 =======
 
 
+=======
+    }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }
+
+        JSON && JSON.stringify({ message: 'User already has a referral' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         JSON && JSON.stringify({ error: 'Failed to create referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
@@ -388,24 +394,19 @@ serve(async (req) => {;
     console.error('Unexpected error processing referral:', err),;
     return new Response(;
       JSON.stringify({ error: 'Internal server error' }),;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      JSON && JSON.stringify({ error: 'Internal server error' });      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       JSON && JSON.stringify({ error: 'Internal server error' });
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -513,6 +514,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.20.0",;
@@ -617,8 +620,11 @@ try {
 }
 });
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

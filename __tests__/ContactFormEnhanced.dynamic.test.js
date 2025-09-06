@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +104,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -114,6 +119,7 @@ describe('ContactFormEnhanceddynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormEnhanceddynamic from "./components/ContactFormEnhanced.dynamic"; describe('ContactFormEnhanceddynamic', () => { test("renders without crashing",() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormEnhanceddynamic />)}); test("handles user interactions",() => { render(<ContactFormEnhanceddynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,3 +154,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

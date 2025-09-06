@@ -37,7 +37,6 @@ type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
-
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -307,7 +306,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   const slug = String(ctx.params?.slug || '');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
+  return { props: { vendor } }
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -328,9 +327,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 }
 
   const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
+  return { props: { vendor } }
 };
-};
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -339,3 +338,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -10,6 +10,8 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -23,6 +25,7 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 
+<<<<<<< HEAD
 
 
 =======
@@ -32,6 +35,8 @@ import {toast} from 'sonner';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -66,6 +71,7 @@ import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -74,6 +80,8 @@ export default function AccountSettings() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
@@ -85,14 +93,6 @@ export default function AccountSettings() {;
 
 =======
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     try {;
       const saved = localStorage && localStorage.getItem('account_settings');
@@ -101,6 +101,7 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed && parsed.displayWeb3);
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +168,8 @@ export default function AccountSettings() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -193,6 +196,7 @@ export default function AccountSettings() {;
         const parsed = JSON.parse(saved),;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
+<<<<<<< HEAD
         setEnableBackup(!!parsed.enableBackup);
 <<<<<<< HEAD
 
@@ -234,10 +238,17 @@ export default function AccountSettings() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+        setEnableBackup(!!parsed.enableBackup);    } catch (e) {;
+      console && console.error('Error loading account settings', e);
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleSave = () => {
     setIsSubmitting(true);
   }, []),
+  }, []),  }, []),
   }, []),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -285,6 +296,11 @@ export default function AccountSettings() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  const handleSave = () => {
+    setIsSubmitting(true),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -296,28 +312,12 @@ export default function AccountSettings() {;
       } finally {;
         setIsSubmitting(false);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    }, 1000);
-  };
-
-  const handleConnectWallet = async () => {;
-    try {;
-      // Check if wallet is available;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -604,22 +604,25 @@ export default function AccountSettings() {;
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
+    } catch (error: any) {;
+      toast && toast.error(error && error.message || 'Failed to connect wallet');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
   },
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 
     <>;
@@ -636,83 +639,7 @@ export default function AccountSettings() {;
             </CardHeader>;
             <CardContent className="space-y-6">;
               <div className="space-y-2">;
-                <Label htmlFor="email">Email Address</Label>;
-
-=======
-  return (
-    <>
-      <SEO title="Account Settings" description="Manage your account" />
-      <Header />
-      <main className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>Manage your personal information and privacy</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <Input
-                  id="email"
-                  value={user?.email |''}
-                  disabled
-                  className="bg-gray-100"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                />;
-              </div>;
-
-=======
-                />;
-              </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              <div className="space-y-2">;
-                <Label htmlFor="didHandle">Web3 Identity Handle</Label>;
-                <div className="flex gap-2">;
-                  <Input
-                    id="didHandle"
-                    value={didHandle}
-                    onChange={(e) => setDidHandle(e && e.target.value)}
-                    placeholder="ENS / Lens / Ceramic / Farcaster";
-                  />;
-                  <Button
-                    variant="outline" 
-                    onClick={handleConnectWallet}
-                    type="button"
-                    className="flex items-center gap-1">;
-<<<<<<< HEAD
-=======
-                <Input;
-                  id="email";
-                  value={user?.email || ''}
-                  disabled;
-                  className="bg-gray-100";
-                />;
-              </div>;
-              ;
-              <div className="space-y-2">;
-                <Label htmlFor="didHandle">Web3 Identity Handle</Label>;
-                <div className="flex gap-2">;
-                  <Input;
-                    id="didHandle";
-                    value={didHandle}
-                    onChange={(e) => setDidHandle(e.target.value)}
-                    placeholder="ENS / Lens / Ceramic / Farcaster";
-                  />;
-                  <Button ;
-                    variant="outline" ;
-                    onClick={handleConnectWallet}
-                    type="button";
-                    className="flex items-center gap-1";
-                  >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                    <Wallet className="h-4 w-4" />;
+                <Label htmlFor="email">Email Address</Label>;                    <Wallet className="h-4 w-4" />;
                     Connect;
                   </Button>;
                 </div>;
@@ -720,19 +647,16 @@ export default function AccountSettings() {;
                   Link your decentralized identity to display on your profile;
                 </p>;
               </div>;
-<<<<<<< HEAD
 
               <div className="flex items-center justify-between">;
                 <div className="space-y-0 && 0.5">;
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>;
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
                 </div>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}
+<<<<<<< HEAD
                   onCheckedChange={setDisplayWeb3}
 <<<<<<< HEAD
 
@@ -1459,16 +1383,18 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </p>;
+=======
+                  onCheckedChange={setDisplayWeb3}                </p>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
+<<<<<<< HEAD
 }
 
 =======
@@ -1536,3 +1462,6 @@ try {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

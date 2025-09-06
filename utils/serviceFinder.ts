@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -25,9 +25,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Service {
   id: string;
-  name: string;
+  name: string,
   description: string;
   category: string;
   price?: number;
@@ -39,12 +41,12 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.category.toLowerCase().includes(searchTerm)
-  );
+  )
 };
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service =>
     service.category.toLowerCase() === category.toLowerCase()
-  );
+  )
 };
 export default {
   findService,
@@ -53,6 +55,7 @@ export default {
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder
+<<<<<<< HEAD
   return null;
 };
 <<<<<<< HEAD
@@ -115,3 +118,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  return null
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 =======
@@ -16,12 +16,15 @@ import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
+<<<<<<< HEAD
 import { FilterOptions } from "@/types/search",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -101,48 +104,24 @@ import {FilterOptions} from "@/types/search";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FilterSidebarProps {;
   filters: {;
+=======
+import { FilterOptions } from "@/types/search",  filters: {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
-    selectedRating: number | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-=======
-  },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    selectedRating: number | null
+};  };
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-export function FilterSidebar(): any ({;
-
-  filters;
-  filterOptions;
-<<<<<<< HEAD
-=======
-  filters;
-  filterOptions;
-;
-export function FilterSidebar({;
-  filters,;
-  filterOptions,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -168,6 +147,8 @@ export function FilterSidebar({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onClick={onClearFilters}
@@ -246,6 +227,7 @@ export function FilterSidebar({;
             </div>
           ))}
         </div>
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 =======
@@ -522,74 +504,27 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Rating Filter */}
       <div className="mb-6">;
+=======
+      </div>      <div className="mb-6">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Minimum Rating;
         </label>;
         <div className="flex flex-wrap gap-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
-=======
-      {/* Rating Filter */}
-      <div className="mb-6">
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">
-          Minimum Rating
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {[null, ...filterOptions.ratingOptions].map((rating) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
-              onClick={() => onRatingChange(rating)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              className={`${;
-                filters && filters.selectedRating === rating ;
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                  : "border-zion-blue-light text-zion-slate-light";
-<<<<<<< HEAD
-
-=======
-          {[null, ...filterOptions.ratingOptions].map((rating) => (;
-            <Button;
-              key={rating === null ? 'any' :rating}
-              variant="outline";
-              size="sm";
-              onClick={() => onRatingChange(rating)}
-              className={`${;
-                filters.selectedRating === rating ;
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                  :"border-zion-blue-light text-zion-slate-light";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              }`}
+              onClick={() => onRatingChange(rating)}              }`}
             >;
               {rating === null ? (;
                 "Any";
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ) : (;
-=======
-              ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <div className="flex items-center">;
+              ) : (;                <div className="flex items-center">;
                   {[...Array(rating)].map((_, i) => (;
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                   ))}
                   <span className="ml-1">& Up</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>;
               )}
             </Button>;
@@ -599,6 +534,7 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -797,3 +733,6 @@ function FilterSidebar() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

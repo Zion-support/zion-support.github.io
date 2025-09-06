@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Revolutionary2027ItService {
 export interface Revolutionary2027ItService {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -17,12 +20,12 @@ export interface Revolutionary2027ItService {;
     mobile: string;
     email: string;
 export interface Revolutionary2027ItService {;
-    address: string;
-  };
+    address: string
+};
   id: string,;
   name: string,;
   tagline: string,;
-  price: string,;
+  price: string,,
   description: string,;
   features: string[],;
   link: string,;
@@ -34,6 +37,7 @@ export interface Revolutionary2027ItService {;
     address: string;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
@@ -171,3 +175,9 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

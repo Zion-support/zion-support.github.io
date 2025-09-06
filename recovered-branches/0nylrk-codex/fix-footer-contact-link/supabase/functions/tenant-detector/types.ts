@@ -25,6 +25,7 @@ export interface TenantInfo {
     headline: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     subtitle: string
 
@@ -118,15 +119,28 @@ export interface TenantResponse {;
   error?: string;
 }
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export interface TenantResponse {
   tenant: TenantInfo | null,
-  error?: string
+  error?: string;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+    subtitle: string,    cta: string
+};
+  is_active: boolean;
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface TenantResponse {
+  tenant: TenantInfo | null;
+  error?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

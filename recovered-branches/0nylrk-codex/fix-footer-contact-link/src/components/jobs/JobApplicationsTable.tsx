@@ -1,52 +1,29 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface JobApplicationsTableProps {;
   jobId: string;
 }
 
-
-export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-=======
-
-
-export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-
-import { useState } from "react",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import {;
-  ApplicationsTable,;
-  EmptyState,;
-  ErrorState,;
-  LoadingState,;
-  ScoreDialog;
-} from "./applications",;
-;
-interface JobApplicationsTableProps {;
-  jobId:string;
-}
-;
-export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const { ;
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;  const { ;
     applications, ;
     isLoading, ;
     error, ;
     updateApplicationStatus, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -64,14 +41,19 @@ interface JobApplicationsTableProps {
   jobId: string
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const {
     applications
     isLoading
     error
     updateApplicationStatus
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -79,20 +61,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     isLoading
     error
     updateApplicationStatus
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
   const { 
     applications, 
     isLoading, 
@@ -106,6 +74,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     markApplicationAsViewed;
+<<<<<<< HEAD
     refetch;
 <<<<<<< HEAD
 =======
@@ -162,10 +131,14 @@ import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
+=======
+    refetch;      // If it's not already viewed, mark it as viewed;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
 
+<<<<<<< HEAD
 
 
 
@@ -285,11 +258,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 =======
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } finally {;
+      setProcessingId(null);
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleViewApplication = async (applicationId: string) => {;
-    await markApplicationAsViewed(applicationId);
-  };
+    await markApplicationAsViewed(applicationId)
+};
 
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+<<<<<<< HEAD
     refetch();
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -348,14 +327,16 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+=======
+    refetch()
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   if (isLoading) {;
     return <LoadingState />;
 
-  if (isLoading) {;
-    return <LoadingState />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+<<<<<<< HEAD
   }
   return (
     <>;
@@ -518,89 +499,14 @@ if ( {) {
       <ScoreDialog
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
     </>;
   );
 }
-
-=======
-      />;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-      />;
-    </>;
-      />;
-    </>);
-}
-  ),;}
- import {
-  ApplicationsTable;
-EmptyState;
-ErrorState;
-LoadingState;
-ScoreDialog interface JobApplicationsTableProps {
-  jobId: string 
-}export function JobApplicationsTable ({
-  jobId 
-}: JobApplicationsTableProps) {
-  const {
-  applications;
-isLoading;
-error;
-updateApplicationStatus;
-markApplicationAsViewed;
-refetch 
-}= useJobApplications (jobId);
-const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
-const [showScoreDialog, setShowScoreDialog] = useState (false);
-return (<> <ApplicationsTable applications= {
-  applications 
-}processingId= {
-  processingId 
-}onViewApplication= {
-  handleViewApplication 
-}onStatusChange= {
-  handleStatusChange 
-}onViewScore= {
-  handleViewScore 
-}/> <ScoreDialog open= {
-  showScoreDialog 
-}onOpenChange= {
-  setShowScoreDialog 
-}application= {
-  selectedApplication 
-}onScoreUpdated= {
-  handleScoreUpdated 
-}/> </>) 
-}
-
-  return (
-    <>
-      <ApplicationsTable
-        applications={applications}
-        processingId={processingId}
-        onViewApplication={handleViewApplication}
-        onStatusChange={handleStatusChange}
-        onViewScore={handleViewScore}
-      />
-      <ScoreDialog
-        open={showScoreDialog}
-        onOpenChange={setShowScoreDialog}
-        application={selectedApplication}
-        onScoreUpdated={handleScoreUpdated}
-      />
-    </>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -32,6 +33,13 @@ import { cn } from "@/lib/utils",
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface MarkdownProps {
+=======
+import React from "react",
+import ReactMarkdown from "react-markdown";
+import { cn } from "@/lib/utils";
+import ReactMarkdown from "react-markdown",
+import { cn } from "@/lib/utils",interface MarkdownProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   content: string;
   className?: string;
 }
@@ -40,6 +48,7 @@ export function Markdown({ content, className }: MarkdownProps) {
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -52,10 +61,13 @@ export function Markdown({ content, className }: MarkdownProps) {
 import {cn} from "@/lib/utils";
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   )
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -68,6 +80,11 @@ interface MarkdownProps {;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+interface MarkdownProps {;
+  content: string,;
+  className?: string;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
   return (
@@ -77,6 +94,7 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
   );
 =======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -91,6 +109,8 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from './react';
 import ReactMarkdown from './react - markdown';
 import { cn  } from '@/lib / utils';
@@ -107,33 +127,13 @@ function Markdown() {
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   )
-=======
-=======
-
-  )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-  )
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
-
 
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
@@ -166,8 +166,11 @@ export function Markdown({ content, className }: MarkdownProps) {;
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

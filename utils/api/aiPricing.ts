@@ -1,30 +1,17 @@
 // Stub AI pricing utility - placeholder for missing functionality;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-},
-
 =======
-},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-export const getAIPricing = async (service: string) => {
-  // Placeholder implementation;
-  return { price: 99, currency: 'USD', success: true }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-},
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export const calculateAICost = async (usage: any) => {
+},export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
   return { cost: 0, success: true }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,3 +84,6 @@ export const getAIPricing = async (service: string) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

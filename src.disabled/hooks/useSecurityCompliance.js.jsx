@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 
@@ -52,3 +53,6 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

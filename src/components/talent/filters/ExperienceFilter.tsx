@@ -95,18 +95,30 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             aria-label="Experience range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
+<<<<<<< HEAD
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+=======
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
   return (;
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
+<<<<<<< HEAD
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium">;
+=======
       <button;
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium";
       >;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <span>Years of Experience</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
@@ -133,8 +145,43 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
     </div>;
   );
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+}
+
+            className="mt-6"
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+            <span>{experience_range[0]} years</span>;
+            <span>{experience_range[1]} years</span>;
+          </div>;
+          <Slider;
+            aria - label='Experience range'            aria - label="Experience range";
+            value={[experience_range[0], experience_range[1]]}
+            min={0}
+            max={15}
+            step={1}
+            onValueChange={handle_change}
+            className='mt - 6'          />            className="mt - 6";
+            className="mt - 6";
+          />;
+        </div>)}
+    </div>);
+}
+
+;
+=======
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -176,3 +223,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -20,10 +20,6 @@ interface OptimizedImageProps {;
 =======
 const imgRef = useRef<HTMLDivElement>(null);
 
-
-
-
-
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -61,9 +57,7 @@ export function OptimizedImage({
   // Intersection Observer for lazy loading
   useEffect(() => {
 
-
     if (!lazy || priority || isInView) return;
-
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -76,6 +70,7 @@ if ( {) {
   $2
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 ;
 export function OptimizedImage({;
   src,;
@@ -99,6 +94,49 @@ export function OptimizedImage({;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
   // Intersection Observer for lazy loading;
+=======
+  return () => observer.disconnect ();
+}, [lazy, priority, isInView]);
+//Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
+  //If it's already optimized or external,  return as - is if (|| original_src.includes ('/ next / image') ) {) {
+  $2
+}
+  //For internal images, Next.js will handle optimization return original_src;
+}';
+<defs> <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop - color:#f3f4f6, stop - opacity:1" /> <stop offset="100%" style="stop - color:#e5e7eb, stop - opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .to_string ('base64');
+}`;
+}
+  const img_ref = useRef < HTMLDivElement>(null);  // Intersection Observer for lazy loading;
+
+    return () => observer.disconnect ();
+  }, [lazy, priority, isInView]);
+  // Generate WebP - compatible src;
+  const getOptimizedSrc = (original_src: string, ) =>: any {
+    // If it's already optimized or external, return as - is;
+    // Check condition
+if (||) {
+  $2
+}
+      original_src.includes ('/_next / image')) {
+      return original_src;
+    }
+    // For internal images, Next.js will handle optimization;
+    return original_src;
+
+  }
+
+  const handleLoad = () => {
+    setIsLoading(false)
+    onLoad?.()
+  }
+
+  const handleError = () => {
+    setHasError(true)
+    setIsLoading(false)
+    onError?.()
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     if (!lazy || priority || isInView) return,;
     const observer = new IntersectionObserver(;
@@ -147,20 +185,21 @@ export function OptimizedImage({;
     
 =======
 
-
-
         }
       }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
@@ -218,42 +257,51 @@ export function OptimizedImage({;
     }
 
     // For internal images, Next && Next.js will handle optimization;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return originalSrc;
   },;
+=======
+    return originalSrc
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleLoad = () => {;
-    setIsLoading(false),;
-    onLoad?.();
-  },;
+    setIsLoading(false);
+    onLoad?.()
+};
+
   const handleError = () => {;
-    setHasError(true),;
-    setIsLoading(false),;
-    onError?.();
-  },;
+    setHasError(true);
+    setIsLoading(false);
+    onError?.()
+};
+
   // Generate blur placeholder;
   const generateBlurDataURL = () => {;
-    if (blurDataURL) return blurDataURL,;
+    if (blurDataURL) return blurDataURL;
+
     // Generate a simple gray blur placeholder;
-    return `data: image/svg+xml,base64,${Buffer.from(;
-      `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">;
+    return `data:image/svg+xml;base64,${Buffer && Buffer.from(;
+      `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www && www.w3.org/2000/svg">;
         <defs>;
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />;
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />;
+            <stopoffset="0%" style="stop-color:#f3f4f6stop-opacity:1" />;
+            <stopoffset="100%" style="stop-color:#e5e7ebstop-opacity:1" />;
           </linearGradient>;
         </defs>;
         <rect width="100%" height="100%" fill="url(#grad)" />;
       </svg>`;
-    ).toString('base64')}`;
-  },;
-  return (;
-    <div;
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
+    ).toString('base64')}`
+};
+
     >;
       {isInView && !hasError && (;
         <Image;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           src={getOptimizedSrc(src)}
           alt={alt}
           width={width}
@@ -270,7 +318,6 @@ export function OptimizedImage({;
 
           className={cn(            'transition-opacity duration-300'
 
-
           className={cn(            'transition-opacity duration-300',
 
             isLoading ? 'opacity-0' : 'opacity-100'
@@ -283,10 +330,13 @@ export function OptimizedImage({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {...props}
         />;
       )}
@@ -295,17 +345,22 @@ export function OptimizedImage({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+=======
+      {(isLoading && isInView) && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       )}
 ;
       {/* Error fallback */}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-          {fallbackSrc ? (
-            <img
+      {hasError && (;
+        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
+          {fallbackSrc ? (;            <img
               src={fallbackSrc}
               alt={alt}
 <<<<<<< HEAD
@@ -403,7 +458,6 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
   );
 }
 
-
   )
 
 // Higher-order component for easy migration from regular img tags
@@ -420,8 +474,8 @@ export function withImageOptimization<Pextends { src: string alt: string }>(;
 
     const { src, alt, ...otherProps } = props;
 
-    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
-  };
+    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
+};
 }
 
 // Utility to preload critical images;
@@ -433,7 +487,6 @@ export function preloadImage(): any (src: string): Promise<void> {;
     img && img.src = src;
   });
 }
-
 
     const { src, alt, ...otherProps } = props
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />

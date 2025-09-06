@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/FuturisticAnimatedBackground.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/FuturisticAnimatedBackground.jsx
 <<<<<<< HEAD:backup-merge-conflicts/FuturisticAnimatedBackground.jsx.backup
 =======
@@ -49,3 +50,6 @@ import _React,{ useEffect,useRef } from 'react';'; import { motion } from 'frame
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/components/ui/FuturisticAnimatedBackground.jsx
+========
+import _React,{ useEffect,useRef } from 'react';'; import { motion } from 'framer-motion';'; export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk',intensity = 'medium',className = '' }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef.current; if(!canvas); return;'; const ctx = canvas.getContext('2d'); if(!ctx); return; )=======
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/components/ui/FuturisticAnimatedBackground.jsx

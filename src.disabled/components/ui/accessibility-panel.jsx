@@ -1,25 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "use client"; ","; "react";"; "framer-motion'''
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
-"use client"; ","; "react";"; "framer-motion'''
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ui/accessibility-panel.jsx
-=======
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -30,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
 :temp_exclude/src.disabled/components/ui/accessibility-panel.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
@@ -61,3 +52,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+"use client\"; \",\"; \"react\";\"; \"framer-motion\'
+"use client"; ","; "react";"; "framer-motion""""
+"use client"; ","; "react";"; "framer-motion'''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

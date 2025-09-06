@@ -1,17 +1,24 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/custom.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
 =======
 import * as React from 'react';
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/custom.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+<<<<<<< HEAD
 const features = [;
   {}
     title: 'Tailored Solutions,',
@@ -304,3 +311,14 @@ export default function CustomDevelopmentPage() {
 
 export default Custom;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+const Custom: React.FC<CustomProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Custom</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

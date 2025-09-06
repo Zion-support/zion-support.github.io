@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -10,6 +11,10 @@ interface ActionButtonsProps {
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 
+=======
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (
     <div className="flex space-x-2">
@@ -20,23 +25,26 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         aria-label="View details"
         onClick={() => alert("View details (would open a detailed view)")}
       >
+<<<<<<< HEAD
         <Eye className="h-4 w-4" />
       </Button>
       <Button
 =======
 >
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Eye className="h-4 w-4" />
       </Button>
-      <Button
-
-
-};
+      <Button};
 '"},;
-  );
+  )
 };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant="ghost"
         size="icon"
         title="Send Warning"
@@ -80,18 +88,14 @@ import { Button } from "@/components/ui/button",;
         </Button>
       )}
 
-    </div>
-  )
-
-
-  );
-};
-
-
-
 import React from 'react';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {;
   flagId: string,;
@@ -151,9 +155,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         </Button>;
       )}
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 };
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

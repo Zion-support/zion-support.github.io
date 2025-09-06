@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
@@ -10,24 +11,25 @@ import {createNotification} from './createNotification';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
   try {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
@@ -70,6 +72,8 @@ export async function createTestNotification(userId: string) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {NotificationType} from './types';
 import {create_notification} from './create_notification';
 /**;
@@ -91,6 +95,7 @@ function createTestNotification() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
@@ -99,6 +104,8 @@ function createTestNotification() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -106,6 +113,7 @@ function createTestNotification() {
     'hire_request': { url: '/dashboard', text: 'View Request' }
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 
@@ -136,6 +144,9 @@ function createTestNotification() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { NotificationType } from './types',;
+=======
+  }import { NotificationType } from './types',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { createNotification } from './createNotification',;
 /**;
  * Demo function to create test notifications for the current user;
@@ -167,6 +178,7 @@ export async function createTestNotification(userId: string) {;
     actionText: actions[randomType].text;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -187,6 +199,12 @@ export async function createTestNotification(userId: string) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,15 +223,9 @@ export async function createTestNotification(userId: string) {;
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
-=======
-}
-
-import { NotificationType } from './types',;
-import { createNotification } from './createNotification',;
+}}
 ;
+<<<<<<< HEAD
 /**;
  * Demo function to create test notifications for the current user;
  */;
@@ -259,3 +271,5 @@ export async function createTestNotification(userId:string) {;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

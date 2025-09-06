@@ -619,7 +619,6 @@ export const Zap = LucideZap,
 export const ZoomIn = LucideZoomIn,
 export const ZoomOut = LucideZoomOut,
 
-
 import React, { SVGProps } from 'react'
 import { logWarn } from '@/utils/productionLogger'
 import {
@@ -1221,8 +1220,11 @@ export const ZoomOut = LucideZoomOut
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: keyof typeof iconMap,
   size?: number | string,
   className?: string
@@ -1235,8 +1237,11 @@ const iconMap = {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   sparkles: LucideSparkles,
   user: LucideUser,
   briefcase: LucideBriefcase,
@@ -1532,14 +1537,18 @@ const iconMap = {
 
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const Icon: React.FC<IconProps> = ({
   name,
   size = 24, // Default size
   className,
   ...props
 }) => {
+<<<<<<< HEAD
 
 
 
@@ -1854,6 +1863,12 @@ export const Zap = LucideZap,;
 export const ZoomIn = LucideZoomIn,;
 export const ZoomOut = LucideZoomOut,;
 =======
+=======
+  }
+  // Render the dynamically selected Lucide icon component
+  return <LucideIconComponent size={size} className={className} {...props} />
+}  const LucideIconComponent = iconMap[name],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -2480,7 +2495,7 @@ export const ZoomOut = LucideZoomOut;
 export type IconProps = SVGProps<SVGSVGElement> & {;
   name: keyof typeof iconMap;
   size?: number | string;
-  className?: string;
+  className?: string
 };
 
 // Create a map of icon names to component references;
@@ -2777,7 +2792,7 @@ const iconMap = {;
   'zap-off': LucideZapOff,;
   zap: LucideZap,;
   'zoom-in': LucideZoomIn,;
-  'zoom-out': LucideZoomOut,;
+  'zoom-out': LucideZoomOut,
 };
 
 export const Icon: React.FC<IconProps> = ({;
@@ -2793,8 +2808,9 @@ export const Icon: React.FC<IconProps> = ({;
   }
 
   // Render the dynamically selected Lucide icon component;
-  return <LucideIconComponent size={size} className={className} {...props} />;
+  return <LucideIconComponent size={size} className={className} {...props} />
 };
+<<<<<<< HEAD
 
 
 
@@ -3724,3 +3740,6 @@ export const Icons = icon_map, // Export the map if you need to refer to availab
 export default Icon, // Default export the Icon component;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
@@ -14,8 +15,13 @@ const Pagination = ({ class_name, ...props }: React.ComponentProps<&quot;nav & q
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
+=======
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
+<<<<<<< HEAD
 <<<<<<< HEAD
     role="navigation"
     aria-label="pagination"
@@ -98,6 +104,19 @@ type PaginationLinkProps = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface PaginationButtonProps
+=======
+    {...props}
+  />
+)
+>(({ className, ...props }, ref) => (
+  <ul
+    ref={ref}
+    {...props}
+/>
+))
+>(({ className, ...props }, ref) => (
+))interface PaginationButtonProps
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
@@ -107,11 +126,17 @@ const PaginationLink = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   className,
   isActive,
   size = "icon",
+=======
+  className,
+  isActive,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -121,9 +146,12 @@ const PaginationLink = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant: isActive ? "outline" : "ghost",
 
         size}),
@@ -132,6 +160,7 @@ const PaginationLink = ({
     {...props}
   />
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -142,6 +171,8 @@ PaginationLink.displayName = "PaginationLink"
 
 
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ({ page, isActive, className, ...props }, ref) => (
     <button
       ref={ref}
@@ -154,12 +185,14 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         isActive && 'bg-green-600 text-white',;
 =======
 
-
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         className;
       )}
       {...props}
@@ -185,6 +218,7 @@ const PaginationPrevious = ({
   </PaginationLink>
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -195,6 +229,9 @@ PaginationPrevious.displayName = "PaginationPrevious"
 
 const PaginationNext = ({
   className,
+=======
+  className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
@@ -210,11 +247,12 @@ const PaginationNext = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 PaginationNext.displayName = "PaginationNext"
-
-
 
 const PaginationEllipsis = ({
   className,
@@ -229,6 +267,7 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
@@ -348,3 +387,6 @@ export {
 =======
   PaginationButton,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

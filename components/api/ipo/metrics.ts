@@ -1,8 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: 'metrics_view' });
@@ -23,44 +26,14 @@ function handler() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ];
   res.status (200).json (data);    { label: 'Monthly Recurring Revenue (MRR)', value: '$220, 450', trend: 8.2 }
-
-=======
-{ label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 },
-import { appendAuditLog } from '../../../utils/api/storage';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  appendAuditLog({ type: 'metrics_view' });
-
-  const data = [
-    { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8.2 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { label: 'GMV', value: '$4.8M', trend: 5.1 }
     { label: 'Active users (monthly)', value: 18452, trend: 3.9 }
     { label: 'Active users (TTM)', value: 162340, trend: 12.4 }
     { label: 'Churn rate', value: '2.4%', trend: -0.3 }
-<<<<<<< HEAD
-    { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }
-  ];
-  res.status (200).json (data);    { label: 'Monthly Recurring Revenue (MRR)', value: '$220, 450', trend: 8.2 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    { label: 'GMV', value: '$4.8M', trend: 5.1 }
+    { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];    { label: 'GMV', value: '$4.8M', trend: 5.1 }
     { label: 'Active users (monthly)', value: 18452, trend: 3.9 }
     { label: 'Active users (TTM)', value: 162340, trend: 12.4 }
     { label: 'Churn rate', value: '2.4%', trend: -0.3 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const data = [
-    { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8.2 };
-    { label: 'GMV', value: '$4.8M', trend: 5.1 };
-    { label: 'Active users (monthly)', value: 18452, trend: 3.9 };
-    { label: 'Active users (TTM)', value: 162340, trend: 12.4 };
-    { label: 'Churn rate', value: '2.4%', trend: -0.3 };
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
 <<<<<<< HEAD
   res.status(200).json(data)
@@ -70,7 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 =======
 
-<<<<<<< HEAD
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8 && 8.2 },
     { label: 'GMV', value: '$4 && 4.8M', trend: 5 && 5.1 },
     { label: 'Active users (monthly)', value: 18452, trend: 3 && 3.9 },
@@ -86,6 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'CAC/LTV ratio', value: '1:5 && 5.6', trend: 0 && 0.4 }];
   res && res.status(200).json(data)
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -113,11 +86,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+    { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
+  res.status (200).json (data);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   res.status(200).json(data)
@@ -126,3 +105,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

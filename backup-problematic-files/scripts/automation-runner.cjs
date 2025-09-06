@@ -1,7 +1,16 @@
 #!/usr/bin/env node;
 'use strict';
 const { execSync, spawnSync } = require('"node": child_process');
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+
+const { execSync, spawnSync } = require('"node": child_process');
+
+
+const { execSync, spawnSync } = require('"node": child_process');
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -36,8 +45,16 @@ function main() {}
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
 };
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 main();
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+main();
+main();
+
+main();
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -196,11 +196,14 @@ const serviceCategories = [
 =======
 ];
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -209,6 +212,7 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
+<<<<<<< HEAD
 <<<<<<< HEAD
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
@@ -258,33 +262,37 @@ const quickLinks = [
 =======
     ];
   };
+=======
+    ]
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     title: '🧬 2030 Biotech & DNA Computing',;
     icon: Microscope,;
-    color: 'from-green-600 via-emerald-600 to-teal-600',;
-    description: 'Biological computing and genetic engineering',;
+    color: 'from-green-600 via-emerald-600 to-teal-600',,
+  description: 'Biological computing and genetic engineering',;
     services: [;
       {;
         name: 'Biotech DNA Computing Platform',;
-        href: '/biotech-dna-computing-platform',;
-        description: 'DNA-based computation',;
+        href: '/biotech-dna-computing-platform',,
+  description: 'DNA-based computation',;
         price: '$5,999/month',;
       },;
       {;
         name: 'Biotech Personalized Nutrition',;
-        href: '/biotech-personalized-nutrition',;
-        description: 'DNA-based nutrition plans',;
+        href: '/biotech-personalized-nutrition',,
+  description: 'DNA-based nutrition plans',;
         price: '$599/month',;
       },;
       {;
         name: 'AI Predictive Health Analytics',;
-        href: '/ai-predictive-health-analytics',;
-        description: 'Predictive health outcomes',;
+        href: '/ai-predictive-health-analytics',,
+  description: 'Predictive health outcomes',;
         price: '$1,599/month',;
       },;
       {;
         name: 'Advanced Research Automation',;
-        href: '/advanced-research-automation',;
-        description: 'Automated research workflows',;
+        href: '/advanced-research-automation',,
+  description: 'Automated research workflows',;
         price: '$1,999/month',;
       },;
     ],;
@@ -296,35 +304,35 @@ const quickLinks = [
     description: 'Biological computing and genetic engineering',
       { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$1,599/month' };
       { name: 'Advanced Research Automation', href: '/advanced-research-automation', description: 'Automated research workflows', price: '$1,999/month' }
-    ];
-  };
+    ]
+};
     title: '🏙️ 2030 Enterprise IT Solutions',;
     icon: Cpu,;
-    color: 'from-blue-600 via-cyan-600 to-teal-600',;
-    description: 'Autonomous enterprise infrastructure',;
+    color: 'from-blue-600 via-cyan-600 to-teal-600',,
+  description: 'Autonomous enterprise infrastructure',;
     services: [;
       {;
         name: 'Autonomous DevOps Platform',;
-        href: '/autonomous-devops-platform',;
-        description: 'Fully autonomous DevOps',;
+        href: '/autonomous-devops-platform',,
+  description: 'Fully autonomous DevOps',;
         price: '$2,999/month',;
       },;
       {;
         name: 'Autonomous IT Operations Center',;
-        href: '/autonomous-it-operations-center',;
-        description: 'Self-managing IT infrastructure',;
+        href: '/autonomous-it-operations-center',,
+  description: 'Self-managing IT infrastructure',;
         price: '$6,999/month',;
       },;
       {;
         name: 'AI-Powered Enterprise Security',;
-        href: '/ai-powered-enterprise-security',;
-        description: 'AI-driven threat detection',;
+        href: '/ai-powered-enterprise-security',,
+  description: 'AI-driven threat detection',;
         price: '$2,999/month',;
       },;
       {;
         name: 'Intelligent Data Governance',;
-        href: '/intelligent-data-governance',;
-        description: 'AI-powered data management',;
+        href: '/intelligent-data-governance',,
+  description: 'AI-powered data management',;
         price: '$7,999/month',;
       },;
     ],;
@@ -336,35 +344,35 @@ const quickLinks = [
       { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure', price: '$6,999/month' };
       { name: 'AI-Powered Enterprise Security', href: '/ai-powered-enterprise-security', description: 'AI-driven threat detection', price: '$2,999/month' };
       { name: 'Intelligent Data Governance', href: '/intelligent-data-governance', description: 'AI-powered data management', price: '$7,999/month' }
-    ];
-  };
+    ]
+};
     title: '🌌 2030 Space & Metaverse Tech',;
     icon: Rocket,;
-    color: 'from-teal-600 via-emerald-600 to-green-600',;
-    description: 'Space exploration and digital reality',;
+    color: 'from-teal-600 via-emerald-600 to-green-600',,
+  description: 'Space exploration and digital reality',;
     services: [;
       {;
         name: 'Space Mining Automation Platform',;
-        href: '/space-mining-automation-platform',;
-        description: 'Automated asteroid mining',;
+        href: '/space-mining-automation-platform',,
+  description: 'Automated asteroid mining',;
         price: '$8,999/month',;
       },;
       {;
         name: 'Metaverse Digital Reality Platform',;
-        href: '/metaverse-digital-reality-platform',;
-        description: 'Immersive virtual worlds',;
+        href: '/metaverse-digital-reality-platform',,
+  description: 'Immersive virtual worlds',;
         price: '$2,499/month',;
       },;
       {;
         name: 'Quantum Research Platform',;
-        href: '/quantum-research-platform',;
-        description: 'Quantum computing research',;
+        href: '/quantum-research-platform',,
+  description: 'Quantum computing research',;
         price: '$3,999/month',;
       },;
       {;
         name: 'AI Research Assistant',;
-        href: '/ai-research-assistant',;
-        description: 'Intelligent research support',;
+        href: '/ai-research-assistant',,
+  description: 'Intelligent research support',;
         price: '$899/month',;
       },;
     ],;
@@ -376,35 +384,35 @@ const quickLinks = [
       { name: 'Metaverse Digital Reality Platform', href: '/metaverse-digital-reality-platform', description: 'Immersive virtual worlds', price: '$2,499/month' };
       { name: 'Quantum Research Platform', href: '/quantum-research-platform', description: 'Quantum computing research', price: '$3,999/month' };
       { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'Intelligent research support', price: '$899/month' }
-    ];
-  };
+    ]
+};
     title: '🎯 2030 Innovative Micro SAAS',;
     icon: Target,;
-    color: 'from-green-600 via-yellow-600 to-orange-600',;
-    description: 'Cutting-edge micro solutions',;
+    color: 'from-green-600 via-yellow-600 to-orange-600',,
+  description: 'Cutting-edge micro solutions',;
     services: [;
       {;
         name: 'AI Business Intelligence Suite 2030',;
-        href: '/ai-business-intelligence-suite-2030',;
-        description: 'AI-powered business analytics and insights',;
+        href: '/ai-business-intelligence-suite-2030',,
+  description: 'AI-powered business analytics and insights',;
         price: '$299/month',;
       },;
       {;
         name: 'AI Customer Experience Platform 2030',;
-        href: '/ai-customer-experience-platform-2030',;
-        description: 'AI-powered customer experience management',;
+        href: '/ai-customer-experience-platform-2030',,
+  description: 'AI-powered customer experience management',;
         price: '$199/month',;
       },;
       {;
         name: 'AI Marketing Automation Suite 2030',;
-        href: '/ai-marketing-automation-2030',;
-        description: 'Intelligent marketing automation powered by AI',;
+        href: '/ai-marketing-automation-2030',,
+  description: 'Intelligent marketing automation powered by AI',;
         price: '$179/month',;
       },;
       {;
         name: 'AI HR Management Suite 2030',;
-        href: '/ai-hr-management-suite-2030',;
-        description: 'Intelligent human resources management powered by AI',;
+        href: '/ai-hr-management-suite-2030',,
+  description: 'Intelligent human resources management powered by AI',;
         price: '$149/month',;
       },;
     ],;
@@ -480,7 +488,6 @@ const quickLinks = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function UltraFuturisticNavigation2030() {
 
-
 export default function UltraFuturisticNavigation2030() {;
 <<<<<<< HEAD
 =======
@@ -488,9 +495,12 @@ export default function UltraFuturisticNavigation2030() {;
 =======
 export default function UltraFuturisticNavigation2030() {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function UltraFuturisticNavigation2030() {;
 
 <<<<<<< HEAD
@@ -563,11 +573,11 @@ export default function UltraFuturisticNavigation2030() {;
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {;
     const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 20);
-    };
+      setIsScrolled(window && window.scrollY > 20)
+};
     window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20);
-    };
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20)
+};
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -1030,19 +1040,19 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                   <span className='text - xs text - gray - 400 font - mono'>;
                     2030 Future Technology;
                   </span>                </div>            {/* Logo */}
-            <div className="flex items - center space - x-4">;
-              <Link href="/" className="flex items - center space - x-3 group">;
+            <div className="flex items-center space-x-4">;
+              <Link href="/" className="flex items-center space-x-3 group">;
                 <div className="relative">;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300">;
-                    <Zap className="w - 6 h - 6 text - white" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition-transform duration-300">;
+                    <Zap className="w - 6 h-6 text-white" />;
                   </div>;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition-opacity duration-300"></div>;
                 </div>;
-                <div className="flex flex - col">;
-                  <span className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">;
+                <div className="flex flex-col">;
+                  <span className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip-text text-transparent">;
                     Zion Tech Group;
                   </span>;
-                  <span className="text - xs text - gray - 400 font - mono">2030 Future Technology</span>;
+                  <span className="text - xs text - gray-400 font-mono">2030 Future Technology</span>;
                 </div>;
               </Link>;
             </div>;
@@ -1092,34 +1102,34 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                                 className='block p - 3 rounded - lg hover:bg - purple - 500 / 10 transition - colors duration - 200 group'                <Link;
                   key={item.name}
                   href={item.href}
-                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group";
+                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition-colors duration-200 group";
                 >;
-                  <item.icon className="w - 4 h - 4 group - hover:text - purple - 400 transition - colors" />;
+                  <item.icon className="w - 4 h - 4 group - hover:text - purple-400 transition-colors" />;
                   <span>{item.name}</span>;
                 </Link>))}
               {/* Services Dropdown */}
               <div className="relative group">;
-                <button className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200">;
-                  <Briefcase className="w - 4 h - 4" />;
+                <button className="flex items - center space - x-2 text - gray - 300 hover:text - white transition-colors duration-200">;
+                  <Briefcase className="w-4 h-4" />;
                   <span > Services</span>;
-                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 200" />;
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition-transform duration-200" />;
                 </button>;
                 {/* Mega Menu */}
-                <div className="absolute top - full left - 0 w - screen max - w-6xl bg - black / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform group - hover:translate - y-0 translate - y-4">;
-                  <div className="p - 8">;
-                    <div className="grid grid - cols - 2 gap - 8">;
+                <div className="absolute top - full left - 0 w - screen max - w-6xl bg - black / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform group - hover:translate-y-0 translate-y-4">;
+                  <div className="p-8">;
+                    <div className="grid grid - cols-2 gap-8">;
                       {service_categories.map ((category, index) => (
-                        <div key={index} className="space - y-4">;
-                          <div className="flex items - center space - x-3">;
+                        <div key={index} className="space-y-4">;
+                          <div className="flex items-center space-x-3">;
                             <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
-                              <category.icon className="w - 5 h - 5 text - white" />;
+                              <category.icon className="w - 5 h-5 text-white" />;
                             </div>;
                             <div>;
-                              <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
-                              <p className="text - sm text - gray - 400">{category.description}</p>;
+                              <h3 className="text - lg font-semibold text-white">{category.title}</h3>;
+                              <p className="text - sm text-gray-400">{category.description}</p>;
                             </div>;
                           </div>;
-                          <div className="space - y-2">;
+                          <div className="space-y-2">;
                             {category.services.map ((service, service_index) => (
                               <Link;
                                 key={service_index}
@@ -1138,14 +1148,14 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                                   <span className='text - xs font - mono text - purple - 400'>;
                                     {service.price}
                                   </span>                                </div>                              >;
-                                <div className="flex items - center justify - between">;
+                                <div className="flex items-center justify-between">;
                                   <div>;
-                                    <h4 className="text - sm font - medium text - white group - hover:text - purple - 400 transition - colors">;
+                                    <h4 className="text - sm font - medium text - white group - hover:text - purple-400 transition-colors">;
                                       {service.name}
                                     </h4>;
-                                    <p className="text - xs text - gray - 400">{service.description}</p>;
+                                    <p className="text - xs text-gray-400">{service.description}</p>;
                                   </div>;
-                                  <span className="text - xs font - mono text - purple - 400">{service.price}</span>;
+                                  <span className="text - xs font - mono text-purple-400">{service.price}</span>;
                                 </div>;
                               </Link>))}
                           </div>;
@@ -1158,8 +1168,11 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
             </div>;
             {/* CTA Buttons */}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <button
                 onClick={toggleMenu}
                 className='p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200'>;
@@ -1296,6 +1309,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                   <div className="grid grid-cols-2 gap-3">
                     {quickLinks.map((link) => (
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 <<<<<<< HEAD
@@ -1304,6 +1318,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
@@ -1317,7 +1333,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
                             ? `bg-gradient-to-r ${link.color} text-white` 
-
 
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 {/* Mobile Services */}
@@ -1449,7 +1464,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
       </nav>;
       {/* Spacer for fixed navigation */}
       <div className='h - 20'></div>;
-    </>);      <div className="h - 20"></div>;
+    </>);      <div className="h-20"></div>;
     </>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

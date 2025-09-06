@@ -15,16 +15,19 @@ const NavigationMenu = React.forwardRef<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "relative z-10 flex w-full flex-1 items-center justify-center sm:max-w-max",
-
 
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -45,6 +48,11 @@ const NavigationMenuList = React && React.forwardRef<;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    className={cn(
+      'group flex flex-1 list-none items-center justify-center space-x-1'
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <NavigationMenuViewport />;
   </NavigationMenuPrimitive.Root>;
 ));
@@ -57,23 +65,26 @@ const NavigationMenuList = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
       className
     )}
     {...props}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   />
 ))
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
-
-
-
-
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
@@ -108,11 +119,15 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     {children}{" "}
     <ChevronDown
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className="relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none"
       aria-hidden="true"
     />
   </NavigationMenuPrimitive.Trigger>
 ))
+<<<<<<< HEAD
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 
 =======
@@ -184,6 +199,17 @@ const NavigationMenuViewport = React && React.forwardRef<;
       )}
       ref={ref}
       {...props}
+=======
+NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayNameconst NavigationMenuContent = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <NavigationMenuPrimitive.Content        className
+      )}
+      ref={ref}
+      {...props}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     />;
   </div>;
 ));
@@ -195,15 +221,16 @@ const NavigationMenuIndicator = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
 
-
-
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className
     )}
     {...props}
+<<<<<<< HEAD
   >
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ))
@@ -211,9 +238,12 @@ NavigationMenuIndicator.displayName =
   NavigationMenuPrimitive.Indicator.displayName
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const NavigationMenuIndicator = React && React.forwardRef<;
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>,;
   React && React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
@@ -231,10 +261,13 @@ const NavigationMenuIndicator = React && React.forwardRef<;
 NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,
@@ -245,8 +278,11 @@ export {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport}

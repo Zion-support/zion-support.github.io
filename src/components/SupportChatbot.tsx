@@ -15,7 +15,6 @@ import { useState, useRef, useEffect } from 'react',;
           method: 'POST'
           headers: {
 
-
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -33,6 +32,7 @@ import { Button } from '@/components/ui/button',;
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
+<<<<<<< HEAD
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
@@ -126,6 +126,11 @@ export function SupportChatbot() {
 
 
           FALLBACK_RESPONSES[
+=======
+// Fallback responses when API is unavailable
+
+const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
@@ -148,13 +153,9 @@ export function SupportChatbot() {
         let buffer = ''
         let accumulated = ''
         while (!done) {
-
-
-          const result = await reader.read();
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
-
 
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
@@ -171,14 +172,6 @@ export function SupportChatbot() {
               }
               try {
                 const json = JSON.parse(line)
-
-
-                const token = null;
-                  json.choices?.[0]?.delta?.content ||
-                  json.choices?.[0]?.text ||
-
-
-                  ''
                 if (token) {
                   accumulated += token
                   setMessages(prev =>
@@ -207,10 +200,21 @@ export function SupportChatbot() {;
   const endRef = useRef<HTMLDivElement | null>(null),;
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),;
   const sendMessage = async (text: string) => {;
+<<<<<<< HEAD
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },;
     setMessages(prev => [...prev, userMsg]),;
     setLoading(true),;
     setTyping(true),;
+=======
+    const userMsg: Msg = {;
+      id: Date && Date.now().toString(),;
+      role: 'user',;
+      message: text,
+};
+    setMessages(prev => [...prev, userMsg]);
+    setLoading(true);
+    setTyping(true);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       // Try the Supabase AI chat function first with streaming;
       let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {;
@@ -272,10 +276,9 @@ export function SupportChatbot() {;
               } catch (_) {;
 =======
 
-
-
                 }
               } catch (_) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 // ignore parse errors;
               }
@@ -292,6 +295,14 @@ export function SupportChatbot() {;
 
 
           FALLBACK_RESPONSES[
+=======
+                // ignore parse errors
+              }
+            }
+          }
+          buffer = lines[lines.length - 1] |''
+        }          FALLBACK_RESPONSES[
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
@@ -310,6 +321,7 @@ export function SupportChatbot() {;
       const errorMsg: Msg = {
         id: Date.now().toString() + '-e'
         role: 'assistant'
+<<<<<<< HEAD
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -359,6 +371,9 @@ export function SupportChatbot() {;
       setLoading(false),
       setTyping(false)
     }
+=======
+        message: fallbackResponse    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
 
   if (!open) {
@@ -371,14 +386,20 @@ export function SupportChatbot() {;
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
+  }
 
-
-
-      </Button>
+  if (!open) {
+        onClick={() => setOpen(true)}
+        size='icon'
+        variant='outline'
+        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
+        aria-label='Open help chat'      >
+        <MessageSquare className='h-5 w-5' />      </Button>
     )
   }
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40">
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium">Help Bot</span>
@@ -398,6 +419,8 @@ export function SupportChatbot() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -405,6 +428,7 @@ export function SupportChatbot() {;
           <ChatMessage 
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
+<<<<<<< HEAD
           />
 
         const final = accumulated.trim() ||;
@@ -624,3 +648,6 @@ set_typing (false);
 }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

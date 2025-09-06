@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -42,6 +43,8 @@ export function SocialShareSection() {
       })
   },
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const shareLinks = [
     {
       name: "Twitter",
@@ -68,11 +71,15 @@ export function SocialShareSection() {
       onClick: copyLinkToClipboard
     }],
 
+<<<<<<< HEAD
   return (
 =======
 return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <section className="py-12 bg-zion-blue">
+=======
+  return (    <section className="py-12 bg-zion-blue">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
           <div>
@@ -84,7 +91,7 @@ return (
 
 };
 }</div> </div> </div> </section>) ;
-}'";
+}'"
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -119,13 +126,13 @@ export function SocialShareSection() {;
     navigator.clipboard.writeText(window.location.href);
       .then(() => {;
         toast({;
-          title: "Link Copied!",;
-          description: "The link has been copied to your clipboard"});
+          title: "Link Copied!",,
+  description: "The link has been copied to your clipboard"});
       });
       .catch(() => {;
         toast({;
-          title: t('errors.failed_to_copy'),;
-          description: "Please try again or copy the URL manually",;
+          title: t('errors.failed_to_copy'),,
+  description: "Please try again or copy the URL manually",;
           variant: "destructive";
         });
       });
@@ -162,6 +169,7 @@ export function SocialShareSection() {;
 <<<<<<< HEAD
 =======
           <div>;
+<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
@@ -265,3 +273,24 @@ export function SocialShareSection() {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+            <h3 className='text-xl font-bold text-white mb-2'>;              Share Zion with Your Network;
+            </h3>;
+            <p className='text - zion - slate - light'>;
+              Help others discover the future of AI & tech marketplace;
+            </p>;
+          </div>;
+          <div className='flex flex-wrap gap-3'>;
+            {shareLinks && shareLinks.map((link, index) => (              <Button
+                key = {index,}
+                className={`${link && link.color} text-white`}
+                size='sm'
+                onClick={link && link.onClick}
+                aria-label={link && link.name}
+                title={link && link.name}>;
+                {link && link.icon}
+                <span className='sr-only'>{link && link.name}</span>;
+                <span aria-hidden='true'>{link && link.name}</span>;
+              </Button>;
+            ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

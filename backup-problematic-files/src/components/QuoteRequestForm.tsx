@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { useToast } from "@/hooks/use-toast",;
@@ -69,8 +72,13 @@ export function QuoteRequestForm() {;
           specificItem:formData.specificItem}),;
         if (!result.success) {;
           toast({;
+<<<<<<< HEAD
             title:"Service Required",;
             description:"Please select a service before continuing.",;
+=======
+            title:"Service Required",,
+  description:"Please select a service before continuing.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             variant:"destructive"}),;
           return,;
         }
@@ -119,15 +127,25 @@ export function QuoteRequestForm() {;
       await new Promise(resolve => setTimeout(resolve, 1500)),;
       ;
       toast({;
+<<<<<<< HEAD
         title:"Quote Request Submitted",;
         description:"We've received your request and will get back to you soon."}),;
+=======
+        title:"Quote Request Submitted",,
+  description:"We've received your request and will get back to you soon."}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ;
       // Redirect to confirmation page or homepage;
       router.push("/"),;
     } catch (error) {;
       toast({;
+<<<<<<< HEAD
         title:"Submission Failed",;
         description:"There was an error submitting your request. Please try again.",;
+=======
+        title:"Submission Failed",,
+  description:"There was an error submitting your request. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
@@ -156,8 +174,13 @@ export function QuoteRequestForm() {;
     } catch (err) {;
       logErrorToProduction("Auto-fill API error", err as Error, { component:'QuoteRequestForm', projectDescription:description }),;
       toast({;
+<<<<<<< HEAD
         title:"Auto-fill Failed",;
         description:"We couldn't process your request. Please try again.",;
+=======
+        title:"Auto-fill Failed",,
+  description:"We couldn't process your request. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive"}),;
     } finally {;
       setAutoFillLoading(false),;
@@ -318,5 +341,8 @@ const renderStepContent = () => {;
 }loading= {;
   autoFillLoading ;
 }/> </div>) ;
+<<<<<<< HEAD
 }'"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

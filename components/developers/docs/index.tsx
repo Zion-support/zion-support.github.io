@@ -26,9 +26,12 @@ import type { GetServerSideProps } from 'next';
 import path from 'path';
 import fs from 'fs';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   title: string;
   html?: string;
@@ -47,7 +50,6 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
 =======
 
-
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
@@ -58,7 +60,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
   const docs = JSON.parse(raw) as DocsContent;
   return { props: { docs } }
 }
-  return { props: { docs } };
+  return { props: { docs } }
 };
 
 export default function ApiDocsPage({ docs }: PageProps) {
@@ -134,7 +136,6 @@ export default function ApiDocsPage({ docs }: PageProps) {
 
   );
 
-
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -167,15 +168,15 @@ function ApiDocsPage() {
           {section.code && section.code.length > 0 && (  return (
     <DocsLayout title={docs.title} nav={docs.sections.map ((s) => ({ id: s.id, title: s.title }))}>;
       {docs.sections.map ((section) => (
-        <section key={section.id} id={section.id} className="scroll - mt - 24">;
-          <h2 className="text - 2xl font - semibold">{section.title}</h2>;
+        <section key={section.id} id={section.id} className="scroll-mt-24">;
+          <h2 className="text-2xl font-semibold">{section.title}</h2>;
             <div dangerouslySetInnerHTML={{ __html: section.html }} />)}
           {section.code && section.code.length > 0 && (
             <div className='space - y-4 mt - 4'>;
               {section.code.map ((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>;
                   {c.content}
-                </CodeBlock>              ))}            <div className="space - y-4 mt - 4">;
+                </CodeBlock>              ))}            <div className="space-y-4 mt-4">;
               {section.code.map ((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>))}
             </div>)}

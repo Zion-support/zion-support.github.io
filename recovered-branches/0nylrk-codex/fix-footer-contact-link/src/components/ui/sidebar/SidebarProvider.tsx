@@ -38,6 +38,7 @@ interface SidebarContextType {
   open: () => void;
   close: () => void;
 }
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -46,6 +47,8 @@ interface SidebarContextType {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const SidebarContext = create_context < SidebarContextType>({
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   is_open: true,
   toggle: () => {},
   open: () => {},
@@ -54,10 +57,6 @@ const SidebarContext = create_context < SidebarContextType>({
 
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SidebarProviderProps {
   children: React.ReactNode;
 <<<<<<< HEAD
@@ -100,7 +99,6 @@ interface SidebarProviderProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   defaultOpen?: boolean;
 }
-<<<<<<< HEAD
 
 export function SidebarProvider({
   children,
@@ -135,17 +133,25 @@ export function SidebarProvider({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(defaultOpen);
+=======
+export function SidebarProvider({ 
+  children, 
+  defaultOpen = true 
+}: SidebarProviderProps) {;  const [isOpen, setIsOpen] = useState(defaultOpen);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 <<<<<<< HEAD
@@ -322,44 +328,33 @@ function SidebarProvider() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React, { createContext, useContext, useState } from "react",;
-;
+
 interface SidebarContextType {;
-  isOpen:boolean,;
-  toggle:() => void,;
-  open:() => void,;
-  close:() => void;
+  isOpen: boolean,;
+  toggle: () => void,;
+  open: () => void,;
+  close: () => void;
 }
-
-}
-
-;
 const SidebarContext = createContext<SidebarContextType>({;
-  isOpen:true,;
-  toggle:() => {},;
-  open:() => {},;
-  close:() => {}}),;
-;
-export const useSidebar = ():SidebarContextType => useContext(SidebarContext),;
-;
-interface SidebarProviderProps {;
-  children:React.ReactNode,;
-  defaultOpen?:boolean;
-}
-;
-export function SidebarProvider({ ;
-  children, ;
-  defaultOpen = true ;
-} SidebarProviderProps) {;
-  const [isOpen, setIsOpen] = useState(defaultOpen),;
-;
-  const toggle = () => setIsOpen(!isOpen),;
-  const open = () => setIsOpen(true),;
-  const close = () => setIsOpen(false),;
-;
+  isOpen: true,;
+  toggle: () => {},;
+  open: () => {},;
+  close: () => {}}),;
+
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const toggle = () => setIsOpen(!isOpen);
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+<<<<<<< HEAD
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' :'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
         {children}
       </div>;
@@ -399,3 +394,9 @@ return (<SidebarContext.Provider value= {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;        {children}
+      </div>
+    </SidebarContext.Provider>
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

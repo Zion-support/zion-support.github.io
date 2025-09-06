@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+
+interface Resume {
+  id: string;
+  title: string,
+  description: string;
+  lastModified: string;
+  fileSize: string;
+  url: string;
+  status?: 'draft' | 'published' | 'archived';
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -22,6 +40,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button 
             variant="ghost" 
@@ -52,11 +71,14 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             }}
             className="flex-1"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             <Download className="h-4 w-4 text-zion-cyan" />
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         {resume.basic_info.summary && (
@@ -100,6 +122,18 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             {resume.basic_info.summary}
           </p>;
         )}
+=======
+            {resume.basic_info.summary}
+          </p>
+        )}
+        {resume.skills && resume.skills.length > 0 && (
+          <div className='flex flex-wrap gap-1 mt-2'>
+            {resume.skills.slice(0, 5).map((skill, index) => (
+              <Badge
+                key={index}
+                variant='outline'
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
@@ -108,11 +142,19 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 key={index} 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+<<<<<<< HEAD
               >
                 {skill.name}
               </Badge>;
             ))}
             {resume.skills.length > 5 && (
+=======
+                {skill.name}
+              </Badge>
+            ))}
+            {resume.skills.length > 5 && (
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Badge 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
@@ -120,6 +162,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 +{resume.skills.length - 5} more
               </Badge>
             )}
+<<<<<<< HEAD
           </div>;
         )}
       </CardContent>;
@@ -133,3 +176,12 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
   );
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </div>
+        )}
+      </CardContent>;
+    </Card>;
+  )
+};
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

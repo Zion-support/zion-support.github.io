@@ -40,5 +40,10 @@ console.log(' Enhanced Automation System Starting...')
         "command"
         execSync(check.command, { "stdio"})
             this.log(`System "error"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Automation system "failed")
+    console.error('Automation system "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

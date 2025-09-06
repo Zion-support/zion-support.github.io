@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -13,23 +14,31 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/smart-code-fixer.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -62,7 +71,11 @@ function fixSpecificIssues(content, filePath) {
     content = content.replace(/import Link from 'next\/link'/, '// import Link from \'next/link\';');
     modified = true;
   }
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
@@ -71,7 +84,11 @@ function fixSpecificIssues(content, filePath) {
       modified = true;
     }
   }
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
@@ -152,6 +169,10 @@ function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
   
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   let fixedCount = 0;
@@ -180,6 +201,12 @@ if (require.main === module) {
   main();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };

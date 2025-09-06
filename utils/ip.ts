@@ -1,15 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
-import type { NextApiRequest } from 'next';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
 
@@ -27,28 +25,12 @@ export function extractClientIp(req: NextApiRequest): string | null {;
 export function getClientIp(req: any): string {
 
 export function getClientIp(req: any): string {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-import type { NextApiRequest } from 'next';
-  
-  if (forwarded) {
-    return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
-  }
-  
-  return remoteAddress || 'unknown';
-export function getClientIp(req: any): string {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,3 +261,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

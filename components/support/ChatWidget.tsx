@@ -218,10 +218,13 @@ function generateSessionId(): any (): string {;
       setShowEscalation(true);    } catch {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
@@ -319,9 +322,12 @@ function generateSessionId(): any (): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 
@@ -334,6 +340,7 @@ function generateSessionId(): any (): string {;
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (
         <button
 
+<<<<<<< HEAD
           aria-label="Open support chat"
           onClick={() => setIsOpen(true)}
           className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black"
@@ -353,6 +360,8 @@ function generateSessionId(): any (): string {;
             {messages.map((m, idx) => (
               <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
   return (
@@ -404,8 +413,11 @@ function generateSessionId(): any (): string {;
                   Thinking…
                 </div>              </div>              <div className="text-sm">
 
+<<<<<<< HEAD
                 <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
               </div>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
                   <button
                     key={q}
@@ -448,10 +460,6 @@ function generateSessionId(): any (): string {;
             </div>;
           )}
 =======
-
-
-
-
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (

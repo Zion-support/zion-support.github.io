@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/final-syntax-fix.cjs
 
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
@@ -56,6 +59,7 @@ for (const file of files) {
 	if (processFile(file)) fixedCount++
 }
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")function fixAllSyntaxErrors(content) {let next = content"next = next.replace(/\)\s*;\s*\)/g, "))")"next = next.replace(/\[\s*;\s*/g, "[")"next = next.replace(/;\s*\]/g, "]")"next = next.replace(/;\s*\}/g, "}")"next = next.replace(/,\s*;/g, ",")"next = next.replace(/;\s*,/g, ",")"next = next.replace(/\.([a-zA-Z_][a-zA-Z0-9_]*)\s*;\s*/g, ".$1")return next}function processFile(filePath) {try {"const content = fs.readFileSync(filePath, "utf8")const fixedContent = fixAllSyntaxErrors(content)if (fixedContent !== content) {"fs.writeFileSync(filePath, fixedContent, "utf8")console.log(`Fixed syntax errors in: ${filePath}`)return true}return false} catch (error) {`console.error(`Error processing ${filePath}:`, error.message)return false}}function findFiles(dir, extensions) {const files = []function traverse(currentDir) {const items = fs.readdirSync(currentDir)for (const item of items) {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {"if (item === "node_modules" | item.startsWith(".")) continuetraverse(fullPath)} else if (extensions.some(ext => fullPath.endsWith(ext))) {files.push(fullPath)}}}traverse(dir)return files}"const extensions = [".js", ".ts", ".cjs", ".mjs"]"const files = findFiles(".", extensions)let fixedCount = 0for (const file of files) {if (processFile(file)) fixedCount+}`console.log(`Fixed syntax errors in ${fixedCount} files.`)""`"`
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -72,6 +76,8 @@ for (const file of files) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:final-syntax-fix.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -125,6 +131,7 @@ let fixedCount = 0;
 for (const file of files) {}
 	if (processFile(file)) fixedCount++
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/final-syntax-fix.cjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -138,6 +145,9 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`);
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+console.log(`Fixed syntax errors in ${fixedCount} files.`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 
@@ -231,6 +241,7 @@ walkDir('/workspace/src');
 console.log('Final syntax fix completed!');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 =======
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
@@ -245,3 +256,5 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`);
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:final-syntax-fix.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,7 +1,11 @@
 #!/usr/bin/env node;
 /**
  * Improved PM2 Sync Automation System;
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * This system "provides": * - Real-time file watching and automatic Git synchronization;
  * - Intelligent build triggering based on file changes;
  * - Automated testing and security scanning;
@@ -87,8 +91,13 @@ class ImprovedPM2SyncAutomation {}
       execSync('git init', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
       execSync('git remote add origin "https": //github.com/Zion-Holdings/zion.app.git', { })
+<<<<<<< HEAD
         "cwd": this.config.projectRoot,
         "stdio": 'pipe'
+=======
+        "cwd": this.config.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       this.log('Git repository initialized')} catch (error) {}
@@ -140,22 +149,37 @@ class ImprovedPM2SyncAutomation {}
       this.log(`Processing ${this.pendingChanges.size} pending changes...`);
       // Add all changes to git;
       const addResult = execSync('git add -A', { })
+<<<<<<< HEAD
         "cwd": this.config.projectRoot,
         "stdio": 'pipe'
+=======
+        "cwd": this.config.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       // Commit changes;
       const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
       const commitResult = execSync(`git commit -m "${commitMessage}"`, { `})
+<<<<<<< HEAD
         "cwd": this.config.projectRoot,
         "stdio": 'pipe'
+=======
+        "cwd": this.config.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       this.log(`Committed ${this.pendingChanges.size} changes`);
       // Push changes;
       const pushResult = execSync('git push origin main', { })
+<<<<<<< HEAD
         "cwd": this.config.projectRoot,
         "stdio": 'pipe'
+=======
+        "cwd": this.config.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       this.log('Changes pushed to repository');
@@ -174,8 +198,13 @@ class ImprovedPM2SyncAutomation {}
 });
       // Check for conflicts;
       const status = execSync('git status --porcelain', { })
+<<<<<<< HEAD
         "cwd": this.config.projectRoot,
         "encoding": 'utf8'
+=======
+        "cwd": this.config.projectRoot, 
+        "encoding": 'utf8' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       if (status.trim()) {}
@@ -189,14 +218,24 @@ class ImprovedPM2SyncAutomation {}
         // Commit changes if there are any staged;
         try {}
           const stagedStatus = execSync('git diff --cached --name-only', { })
+<<<<<<< HEAD
             "cwd": this.config.projectRoot,
             "encoding": 'utf8'
+=======
+            "cwd": this.config.projectRoot, 
+            "encoding": 'utf8' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }
 });
           if (stagedStatus.trim()) {}
             execSync('git commit -m "Auto-"sync": comprehensive updates and improvements"', { })
+<<<<<<< HEAD
               "cwd": this.config.projectRoot,
               "stdio": 'pipe'
+=======
+              "cwd": this.config.projectRoot, 
+              "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
 });
             this.log('Committed staged changes')};
@@ -213,8 +252,13 @@ class ImprovedPM2SyncAutomation {}
       // Push changes if we have commits;
       try {}
         const aheadStatus = execSync('git status --porcelain -b', { })
+<<<<<<< HEAD
           "cwd": this.config.projectRoot,
           "encoding": 'utf8'
+=======
+          "cwd": this.config.projectRoot, 
+          "encoding": 'utf8' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
 });
         if (aheadStatus.includes('ahead')) {}
@@ -402,9 +446,13 @@ process.on('SIGTERM', async () => {}
     await global.improvedPm2SyncAutomation.stop()};
   process.exit(0)}
 });
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -415,5 +463,10 @@ if (require.main === module) {}
     };
   }, 60000)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ImprovedPM2SyncAutomation;
+module.exports = ImprovedPM2SyncAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -15,27 +16,26 @@ import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 =======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  services?: string[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,10 +50,14 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
+<<<<<<< HEAD
   services?: string[],
 <<<<<<< HEAD
 
@@ -156,6 +160,9 @@ serve(async (req) => {
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           error: "Missing required service provider data"}),
+=======
+  services?: string[],          error: "Missing required service provider data"}),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 interface ServiceProfileData {;
   name: string,;
@@ -163,11 +170,14 @@ interface ServiceProfileData {;
   bio: string,;
   services?: string[],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   location: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 serve (async (req) => {
   try {
@@ -211,54 +221,12 @@ if ( {) {
     // Get OpenAI API key from environment
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
-      return new Response(
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-    // Get OpenAI API key from environment;
-    const api_key = Deno.env.get ("OPENAI_API_KEY");
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (
-        JSON.stringify ({
-<<<<<<< HEAD
-
-          error: "OpenAI API key not configured"});
-=======
-        JSON.stringify({
-
-=======
-          error: "OpenAI API key not configured"});
-        JSON.stringify({
-
-  location: string;
-}
-;
-serve(async (req) => {;
-  try {;
-    // CORS headers;
-    const headers = {;
-      "Access-Control-Allow-Origin": "*",;
-      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",;
-      "Content-Type": "application/json"},;
-    // Handle CORS preflight request;
-    if (req.method === "OPTIONS") {;
-      return new Response(null, { headers, status: 204 });
-    }
-;
-    const reqData = await req.json(),;
-    const providerData = reqData.providerData as ServiceProfileData,;
-    // Validate input;
-    if (!providerData || !providerData.bio) {;
-      return new Response(;
-        JSON.stringify({;
-          error: "Missing required service provider data"}),;
-        { headers, status: 400 }
+      return new Response(        { headers, status: 500 }
+      );
+    }        { headers, status: 500 }
       );
     }
+<<<<<<< HEAD
 
     // Get OpenAI API key from environment
     const apiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -295,6 +263,8 @@ serve(async (req) => {;
       );
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const prompt = `
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
     1. A concise yet compelling professional summary (max 250 words)
@@ -304,6 +274,7 @@ serve(async (req) => {;
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       ? `Current Services: ${providerData.services.join(", ")}`
       : "No services listed yet."}
@@ -312,11 +283,9 @@ serve(async (req) => {;
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 =======
-    ${providerData.services && providerData.services.length > 0
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     ${providerData.services && providerData.services.length > 0 
       ? `Current Services: ${providerData.services.join(", ")}`
 
@@ -325,31 +294,14 @@ serve(async (req) => {;
     Location: ${providerData && providerData.location}
     Current Bio: ${providerData && providerData.bio}
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
-      ? `Current Services: ${providerData && providerData.services.join(", ")}`
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      : "No services listed yet."}
-    Focus on highlighting their unique value proposition, expertise, and professionalism.
-
-
-<<<<<<< HEAD
-=======
-    ${providerData.services && providerData.services.length > 0
-    ${providerData.services && providerData.services.length > 0 
-      ? `Current Services: ${providerData.services.join(", ")}`
-=======
-          error: "OpenAI API key not configured"});
-        { headers, status: 500 }
-      );
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      : "No services listed yet."}
+      ? `Current Services: ${providerData && providerData.services.join(", ")}`      : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     Only respond with JSON in this exact format: {
       "summary": "Professional summary goes here..."
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
+<<<<<<< HEAD
     `;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -410,6 +362,9 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const prompt = `;
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+=======
+    `;    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     1. A concise yet compelling professional summary (max 250 words);
     2. A list of 5 - 10 specific services they could offer based on their description;
     Service Provider Name: ${provider_data.name}
@@ -436,6 +391,7 @@ serve(async (req) => {;
         messages: [;
           {
             role: "system",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -536,12 +492,13 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!response && response.ok) {
       console && console.error("OpenAI API error:", responseData);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return new Response(
         JSON && JSON.stringify({
           error: "Failed to generate enhanced profile content",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
           details: responseData});
 =======
 =======
@@ -551,6 +508,9 @@ serve(async (req) => {;
           details: responseData});
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          details: responseData});          details: responseData});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
     const response_data = await response.json ();
 ;
@@ -563,6 +523,7 @@ if ( {) {
         JSON.stringify ({
           error: "Failed to generate enhanced profile content",
           details: response_data});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -698,17 +659,19 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         JSON && JSON.stringify({
 
+=======
+        { headers, status: 500 }
+      );
+    }    try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
           error: "Failed to parse AI response",
           raw: responseData && responseData.choices[0]?.message?.content});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console.error ("Error parsing AI response:", error);
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -721,15 +684,21 @@ if ( {) {
 =======
           raw: response_data.choices[0]?.message?.content});
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+          raw: response_data.choices[0]?.message?.content});          raw: response_data.choices[0]?.message?.content});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         { headers, status: 500 }
       );
     }
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     console.error ("Function error:", error);
     return new Response (
@@ -752,50 +721,9 @@ if ( {) {
           "Content - Type": "application / json",
           "Access - Control - Allow - Origin": "*"},
         status: 500;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
-
-<<<<<<< HEAD
-=======
-        { headers, status: 500 }
-      )
-    }
-  } catch (error) {
-    console.error("Function error:", error),
-    return new Response(
-      JSON.stringify({
-        error: "Internal server error"});
-      {
-        headers: {
-          "Content-Type": "application/json"
-          "Access-Control-Allow-Origin": "*"}
-        status: 500
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        error: "Internal server error"}),
-      { 
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"}, 
-        status: 500 
-  } catch (error) {;
-    console.error("Function error:", error),;
-    return new Response(;
-      JSON.stringify({;
-        error: "Internal server error"}),;
-      {;
-        headers: {;
-          "Content-Type": "application/json",;
-          "Access-Control-Allow-Origin": "*"},;
-        status: 500;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         error: "Internal server error"}),
       { 
         headers: {
@@ -803,6 +731,7 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1038,3 +967,9 @@ raw: responseData.choices[0]?.message?.content
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      }
+    );
+  }
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -23,6 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -36,15 +37,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = readJsonFile('updates && updates.json', [] as any[]);
   res && res.status(200).json(data)
 }
-  const data = readJsonFile('updates.json', [] as any[]);
-  res.status(200).json(data)
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
+}  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -65,6 +64,7 @@ function handler() {
   const data = readJsonFile ('updates.json', [] as any[]);
   res.status (200).json (data);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -99,3 +99,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

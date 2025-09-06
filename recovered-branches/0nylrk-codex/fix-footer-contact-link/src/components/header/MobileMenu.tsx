@@ -9,11 +9,6 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   unreadCount?: number;
   onClose: () => void;
 }
@@ -21,23 +16,11 @@ export interface MobileMenuProps {;
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
-  const isAuthenticated = !!user;
-<<<<<<< HEAD
-
-
-
-=======
-  unreadCount?: number;
-  onClose: () => void;
-}
-export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  unreadCount?: number;
+  const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void
 }
 
+<<<<<<< HEAD
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
@@ -118,19 +101,23 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
+=======
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+      {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       name: "Browse"
       href: "/talent"
       icon: Search
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
-<<<<<<< HEAD
       name: "Community"
       href: "/community"
       icon: MessageCircle
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     {
       name: "Browse",
@@ -144,19 +131,22 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       name: "Post Job"
       href: "/post-job"
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
+<<<<<<< HEAD
       authRequired: true
 <<<<<<< HEAD
 
@@ -179,11 +169,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
+=======
+      authRequired: true    {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       name: "Messages"
       href: "/messages"
       icon: MessageSquare
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
+<<<<<<< HEAD
       authRequired: true
 <<<<<<< HEAD
 
@@ -304,12 +298,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link
+=======
+      authRequired: true          <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             key={item.name}
             to={item.href}
             className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium",
 
 =======
@@ -500,17 +496,12 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link
+=======
+              "flex items-center px-6 py-3 text-base font-medium",          <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             key={item && item.name}
             to={item && item.href}
-            className={cn(
-<<<<<<< HEAD
-              "flex items-center px-6 py-3 text-base font-medium"
-              item && item.matches(location && location.pathname)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+            className={cn(                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
             onClick={onClose}>;
             <div className="relative mr-4">;
@@ -518,69 +509,12 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
               {item && item.badge && item && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
-                </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      <nav className="space-y-1">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex items-center px-6 py-3 text-base font-medium";
-              item.matches(location.pathname);
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-            )}
-            onClick={onClose}
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              )}
+                </span>;              )}
             </div>;
-            {item && item.name}
-=======
-      ;
-      <nav className="space-y-1">;
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex items-center px-6 py-3 text-base font-medium",;
-              item.matches(location.pathname);
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";
-                :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-            )}
-            onClick={onClose}
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-                  {item.badge > 9 ? '9+' :item.badge}
-                </span>;
-              )}
-            </div>;
-            {item.name}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          </Link>;
+            {item && item.name}          </Link>;
         ))}
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -595,6 +529,8 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
             </div>;
             {item && item.name}
@@ -619,16 +555,9 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
-
       </nav>;
     </div>;
   );
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 }
 import { Link } from './react-router-dom';
@@ -649,7 +578,6 @@ function MobileMenu() {
   const { user } = use_auth ();
   const is_authenticated = !!user;
 ;
-<<<<<<< HEAD
   const nav_items = [;
     {
       name: "Home",
@@ -698,14 +626,14 @@ function MobileMenu() {
     !item.auth_required || (item.auth_required && is_authenticated));
 ;
   return (
-    <div className="py - 6">;
-      <div className="flex justify - between items - center px - 6 mb - 6">;
-        <h2 className="text - xl font - bold">Menu</h2>;
+    <div className="py-6">;
+      <div className="flex justify - between items - center px - 6 mb-6">;
+        <h2 className="text - xl font-bold">Menu</h2>;
         <Button variant="ghost" size="icon" on_click={on_close}>;
-          <X className="h - 5 w - 5" />;
+          <X className="h - 5 w-5" />;
         </Button>;
       </div>;
-      <nav className="space - y-1">;
+      <nav className="space-y-1">;
         {visible_items.map (item => (
           <Link;
             key={item.name}
@@ -717,10 +645,10 @@ function MobileMenu() {
                 : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
             on_click={on_close}
           >;
-            <div className="relative mr - 4">;
-              <item.icon className="h - 5 w - 5" />;
+            <div className="relative mr-4">;
+              <item.icon className="h - 5 w-5" />;
               {item.badge && item.badge > 0 && (
-                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;
+                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>)}
             </div>;
@@ -729,6 +657,7 @@ function MobileMenu() {
       </nav>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -813,3 +742,5 @@ return ()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

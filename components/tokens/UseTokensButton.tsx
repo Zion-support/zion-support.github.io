@@ -77,7 +77,7 @@ serviceId
     <>;
       <button;
         on_click={() => set_open (true)}
-        className="enhanced - button enhanced - button - primary";
+        className="enhanced - button enhanced-button-primary";
       >;
         Use Tokens;
       </button>;
@@ -93,7 +93,7 @@ serviceId
     <>;
       <button;
         on_click={() => set_open (true)}
-        className="enhanced - button enhanced - button - primary";
+        className="enhanced - button enhanced-button-primary";
       >;
         Use Tokens;
       </button>;

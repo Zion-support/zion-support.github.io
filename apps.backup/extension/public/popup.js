@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const API_BASE = 'http: //localhost:4000',;
@@ -21,6 +22,8 @@ function getUserId(cb) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
@@ -28,12 +31,15 @@ function setUserId(id) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
@@ -75,44 +81,10 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
-<<<<<<< HEAD
-=======
-
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
-  });
-  const data = await res && res.json();
-  document && document.getElementById('result').textContent = data && data.description || 'Draft saved.';
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
-<<<<<<< HEAD
-=======
-
-  if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
-  const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
-    headers: { ...(userId ? { 'x-user-id': userId } : {}) }
-  });
-  const data = await res && res.json();
-  document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.results || [], null, 2);
-
-});
-
-document.getElementById('viewNotifications').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r));
-  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.');
-  const res = await fetch(`${API_BASE}/notifications`, {
-    headers: { 'x-user-id': userId }
-  });
-
-  const data = await res && res.json();
-  document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {
@@ -121,27 +93,19 @@ document.getElementById('signIn').addEventListener('click', async () => {
   setUserId(id);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
   btn.addEventListener('click', () => {;
     document.getElementById('prompt').value = btn.dataset.text || '';
 
-
-=======
-  document && document.getElementById('result').textContent = 'Signed in (local).';
-});
-<<<<<<< HEAD
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * getUserId - Function description
  */
@@ -206,6 +170,7 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   const id = crypto.randomUUID(),;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
+<<<<<<< HEAD
 }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,3 +184,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

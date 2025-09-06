@@ -1,21 +1,17 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       {
 
-          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
-=======
-        id: 'p2',
-        title: 'Financial Analytics Suite',
-        description:;
-          'Developed predictive models for investment analysis with 92% accuracy.',
-        image_url:;
-          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',      {
 
+<<<<<<< HEAD
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023',
       },
@@ -91,6 +87,9 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ProfileData } from '@/types/profile';
+=======
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',import { ProfileData } from '@/types/profile';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
     id: 'service-provider-1'
@@ -201,7 +200,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
     avatarUrl:
-<<<<<<< HEAD
       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200'
     coverImageUrl:
       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600'
@@ -212,6 +210,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     aiScore: 97
     profileType: 'talent' as 'service' | 'talent'
     hourlyRate: 150
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -679,3 +678,6 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

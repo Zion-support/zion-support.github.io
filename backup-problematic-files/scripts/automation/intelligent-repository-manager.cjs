@@ -1,7 +1,11 @@
 #!/usr/bin/env node;
 /**
  * Intelligent Repository Manager;
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 * This automation "handles"
             console.error('Failed to write to log "file")
                 "stdio"
@@ -72,5 +76,10 @@
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Failed to start Intelligent Repository "Manager")
+    console.error('Failed to start Intelligent Repository "Manager")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

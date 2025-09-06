@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -271,6 +271,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   return (
 
 =======
+=======
+  },  return (
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       }
     } catch (err: any) {
@@ -278,8 +282,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     }
   }
   },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -291,7 +293,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea
           <Textarea 
-<<<<<<< HEAD
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
@@ -299,12 +300,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           />
         </div>
 
-
   },
   };
   },
-
-
 
   return (
 
@@ -370,26 +368,19 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="bg-muted/40 p-6 rounded-lg">;
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
       <div className="space-y-4">;
         <div className="space-y-2">;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
-<<<<<<< HEAD
 
           <Textarea
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
           <Textarea 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
+<<<<<<< HEAD
 <<<<<<< HEAD
             onChange={(e) => setBulkSkills(e.target.value)}
           />
@@ -428,6 +419,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           className="gap-2"
         >
           {isEnhancing ? (
@@ -461,54 +454,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 animate-spin" />;
           ) : (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          <Textarea ;
-            className="min-h-24";
-            placeholder="Python, React, TypeScript, Project Management, Communication...";
-            value={bulkSkills}
-            onChange={(e) => setBulkSkills(e.target.value)}
-          />;
-        </div>;
-;
-        <Button ;
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills.trim()}
-          className="gap-2";
-        >;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
-          ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Sparkles className="h-4 w-4" />;
           )}
           Categorize with AI;
         </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-        <p className="text-xs text-muted-foreground mt-1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
-
 
 };
     }
@@ -523,13 +474,13 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
   }
 ;
   return (
-    <div className="bg - muted / 40 p - 6 rounded - lg">;
-      <h3 className="text - md font - medium mb - 4">Bulk Add & AI Categorization</h3>;
-      <div className="space - y-4">;
-        <div className="space - y-2">;
-          <label className="text - sm font - medium">Enter multiple skills (comma separated)</label>;
+    <div className="bg - muted / 40 p - 6 rounded-lg">;
+      <h3 className="text - md font - medium mb-4">Bulk Add & AI Categorization</h3>;
+      <div className="space-y-4">;
+        <div className="space-y-2">;
+          <label className="text - sm font-medium">Enter multiple skills (comma separated)</label>;
           <Textarea;
-            className="min - h-24";
+            className="min-h-24";
             placeholder="Python, React, TypeScript, Project Management, Communication...";
             value={bulk_skills}
             on_change={(e) => setBulkSkills (e.target.value)}
@@ -538,14 +489,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
         <Button;
           on_click={handleCategorizeSkills}
           disabled={is_enhancing || !bulk_skills.trim ()}
-          className="gap - 2";
+          className="gap-2";
         >;
           {is_enhancing ? (
-            <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-            <Sparkles className="h - 4 w - 4" />)}
+            <Loader2 className="h - 4 w - 4 animate-spin" />) : (
+            <Sparkles className="h - 4 w-4" />)}
           Categorize with AI;
         </Button>;
-        <p className="text - xs text - muted - foreground mt - 1">;
+        <p className="text - xs text - muted - foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -553,6 +504,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -587,3 +539,5 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

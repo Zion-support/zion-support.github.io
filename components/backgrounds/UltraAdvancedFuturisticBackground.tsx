@@ -550,8 +550,8 @@ if (< 0.1) {) {
           maxLife: 100 + Math && Math.random() * 100,;
           rotation: Math && Math.random() * Math && Math.PI * 2,;
           rotationSpeed: (Math && Math.random() - 0 && 0.5) * 0 && 0.1 * animationSpeed;
-        });
-    };
+        })
+};
 
     // Enhanced animation loop with quantum effects;
     const animate = () => {;
@@ -1245,22 +1245,22 @@ if ( {) {
 =======
 }
 
-    <div className="relative min - h-screen">;
+    <div className="relative min-h-screen">;
       <canvas;
         ref={canvas_ref}
-        className="fixed inset - 0 w - full h - full pointer - events - none";
+        className="fixed inset - 0 w - full h - full pointer-events-none";
         style={{ z_index: -1 }}
       />;
       {/* Additional futuristic overlay effects */}
       {enable_holographic && (
-        <div className="fixed inset - 0 pointer - events - none" style={{ z_index: -1 }}>;
-          <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5" />;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]" />;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]" />;
+        <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;
+          <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to-purple-500 / 5" />;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]" />;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]" />;
         </div>)}
       {enableQuantumEffects && (
-        <div className="fixed inset - 0 pointer - events - none" style={{ z_index: -1 }}>;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]" />;
+        <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]" />;
         </div>)}
       {children}
     </div>);

@@ -44,7 +44,11 @@ class EnhancedAppOptimizer {}
     try {}
       // Analyze bundle size;
       const bundleAnalysis = execSync('npm run "build": analyze', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 120000;
       };);
@@ -122,7 +126,11 @@ class EnhancedAppOptimizer {}
     // Run security audit;
     try {}
       execSync('npm audit --audit-level=moderate', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -182,9 +190,15 @@ class EnhancedAppOptimizer {}
 });
 
       accessibilityOptimizations.push({ })
+<<<<<<< HEAD
         "type": 'alt-text-check',
         "status": 'completed',
         "images": imageCount,
+=======
+        "type": 'alt-text-check', 
+        "status": 'completed', 
+        "images": imageCount, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "altTexts": altTextCount,
         "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
       }
@@ -196,11 +210,19 @@ class EnhancedAppOptimizer {}
   findImageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
 
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
 
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)};
@@ -213,11 +235,19 @@ class EnhancedAppOptimizer {}
   findPageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
 
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
 
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {}
         files.push(fullPath)};
@@ -230,11 +260,19 @@ class EnhancedAppOptimizer {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
 
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
 
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -315,5 +353,10 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = EnhancedAppOptimizer;
+module.exports = EnhancedAppOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

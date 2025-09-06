@@ -1,6 +1,15 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-06T20:40:15.907Z",
   "duration": "124s",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "results": {
     "syntaxFixes": 0,
     "buildSuccess": false,

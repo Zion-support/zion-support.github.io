@@ -32,7 +32,11 @@ class EnhancedSecurityAutomation {}
         this.log('Running security audit...');
         try {}
             const auditResult = execSync('npm audit --json', { })
+<<<<<<< HEAD
                 "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -216,5 +220,10 @@ if ( {})
      {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = EnhancedSecurityAutomation;
+module.exports = EnhancedSecurityAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

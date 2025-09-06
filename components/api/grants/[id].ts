@@ -28,9 +28,12 @@ function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -46,8 +49,11 @@ function writeGrant(record: GrantApplication) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return

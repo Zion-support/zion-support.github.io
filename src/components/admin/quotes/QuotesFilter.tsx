@@ -3,7 +3,6 @@ import React from "react",
 =======
 interface QuotesFilterProps {;
 
-
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -16,7 +15,6 @@ import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
 
-
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -26,22 +24,6 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
-
-  onReset: () => void;
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
-  searchQuery,;
-  setSearchQuery,;
-  statusFilter,;
-  setStatusFilter,;
-  archiveFilter,;
-  setArchiveFilter,;
-  dateRange,;
-  setDateRange,;
-  onReset,}) => {;
-  onReset;
-},) => {;
-
-  return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
@@ -177,6 +159,7 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 
+<<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 <<<<<<< HEAD
   searchQuery,
@@ -333,6 +316,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
 
 }
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -390,7 +376,14 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               </PopoverTrigger>;
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
                 <CalendarComponent;
+<<<<<<< HEAD
                   initialFocus;
+=======
+                  initial_focus;
+                  mode='range'                  default_month={date_range?.from}              <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue-light" align="start">;
+                <CalendarComponent;
+                  initial_focus;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   mode="range";
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
@@ -436,11 +429,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
       </CardContent>;
     </Card>);
 }
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+            <RefreshCw className="mr - 2 h - 4 w-4" /> Reset Filters;
             on_click={on_reset}
-            className="border - zion - blue - light text - zion - slate - light";
+            className="border - zion - blue - light text - zion - slate-light";
           >;
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+            <RefreshCw className="mr - 2 h - 4 w-4" /> Reset Filters;
           </Button>;
         </div>;
       </CardContent>;

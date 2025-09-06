@@ -76,9 +76,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
-
-
-
   const section = String(req && req.query.section || "General");
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });

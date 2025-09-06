@@ -46,7 +46,11 @@ export default function AuditLogVaultPage() {
             <Card className="p-6 bg-black/40 border border-gray-700/50">
               <div className="text-sm text-gray-400 mb-1">Pricing</div>
               <div className="text-3xl font-bold text-white">$89<span className="text-base text-gray-400">/month</span></div>
+<<<<<<< HEAD
               <div className="text-sm text-gray-400 mt-2">Trial: 14 days • Setup: 30 minutes</div>
+=======
+              <div className="text-sm text-gray-400 mt-2">Trial: 14 days  Setup: 30 minutes</div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="mt-6 flex gap-3">
                 <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">Contact Sales</Button>
                 <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>

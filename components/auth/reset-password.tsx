@@ -1,10 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Reset Password</h1>;
@@ -18,6 +19,7 @@
       <h1 className="text-2xl font-semibold">Reset Password</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>;
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -33,6 +35,9 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 
@@ -69,30 +74,11 @@ function ResetPasswordPage() {
  */
 function ResetPasswordPage() {
   return (
-    <div className="container mx - auto px - 4 py - 10">;
-      <h1 className="text - 2xl font - semibold">Reset Password</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Update your password below.</p>;
+    <div className="container mx - auto px-4 py-10">;
+      <h1 className="text-2xl font-semibold">Reset Password</h1>;
+      <p className="mt - 2 text - gray - 600 dark: text-gray-300">Update your password below.</p>;
     </div>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-
-=======
-
-
-
-  )
-}
-
-import React from 'react';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default function ResetPasswordPage() {
-  return (
+}  return (
     <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>Reset Password</h1>
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
@@ -104,11 +90,11 @@ export default function ResetPasswordPage() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Reset Password</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>
-<<<<<<< HEAD
 
     </div>
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -133,3 +119,5 @@ export default function ResetPasswordPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

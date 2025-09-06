@@ -16,13 +16,12 @@ export type IntentResult = {;
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
-  getArticleById: (id: string) => null;
+  getArticleById: (id: string) => null
 };
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
-
 
 export interface IntentMatch {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -128,6 +127,7 @@ export function searchArticles(
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -137,26 +137,19 @@ export function searchArticles(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
-<<<<<<< HEAD
 }
 }
-}
-=======
-  getArticleById: (id: string) => null;
-};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const logSupportEventToOperator = (event: any) => {
+}export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -168,3 +161,5 @@ export const logSupportEventToOperator = (event: any) => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

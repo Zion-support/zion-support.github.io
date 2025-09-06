@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 const suspiciousLinkHosts = [;
   'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com';
@@ -32,6 +33,26 @@ function containsVagueJobClaims(text: string): string[] {;
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
 =======
+=======
+function containsSuspiciousPhrase(text: string): string[] {
+
+  const lower = text && text.toLowerCase();
+  return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p));
+
+function containsVagueJobClaims(text: string): string[] {
+  const lower = text && text.toLowerCase();
+  const reasons: string[] = [];
+  
+  vagueScammyJobPhrases.forEach(phrase => {
+    if (lower.includes(phrase)) {
+      reasons.push(`vague_job_claim:"${phrase}"`);
+    }
+  });
+  
+  return reasons;
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 const suspiciousLinkHosts = [;
   'paypal.me',
@@ -78,6 +99,7 @@ function containsSuspiciousHost (text: string): boolean {
   const lower = text.toLowerCase ();
   return suspiciousLinkHosts.some (host => lower.includes (host));
 }
+<<<<<<< HEAD
 ;
 export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {;
   const reasons: string[] = [];
@@ -125,15 +147,77 @@ export function runHeuristics(data: any): HeuristicResult {
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+function containsSuspiciousPhrase (text: string): string[] {
+  const lower = text.toLowerCase ();
+  return suspicious_phrases.filter (p => lower.includes (p));
+}
+function containsVagueJobClaims (text: string): string[] {
+  const lower = text.toLowerCase ();
+  const reasons: string[] = [];
+  vagueScammyJobPhrases.for_each (phrase => {
+    if () {) {
+  $2
+}
+      reasons.push (`Contains suspicious job phrase: "${phrase}"`);
+    }
+  });
+  return reasons;
+}
+export async function evaluateHeuristics(
+  event: FraudEvent
+  deps: HeuristicDeps
+): Promise<HeuristicEvaluation> {
+  const reasons: string[] = [];
+  let severity: HeuristicEvaluation['severity'] = 'low';
+    if (recent >= 3) {
+      reasons && reasons.push(
+        `rapid_fire_signups_from_ip:${event && event.ipAddress}:${recent}in10m`
+      );
+      severity = recent >= 10 ? 'high' : 'medium';
+    }
+  }
+  if (
+  ) {
+    if (containsSuspiciousHost(event && event.content)) {
+      reasons && reasons.push('outside_payment_link_detected');
+      severity = 'high';
+    }
+    const phrases = containsSuspiciousPhrase(event && event.content);
+    if (phrases && phrases.length > 0) {
+      reasons && reasons.push(...phrases && phrases.map(p => `suspicious_phrase:"${p}"`));
+      if (severity === 'low') severity = 'medium';
+    }
+  }
+  // Mock implementation - in production, this would run actual fraud detection heuristics;
+  const flags = new Set < string>();
+;
+  // Simple heuristics;
+  if () flags.add ('test_email')) {
+  $2
+}
+  if (flags.add ('high_amount')) {
+  $2
+}
+  if (flags.add ('high_frequency')) {
+  $2
+}
+  const confidence = flags.size > 0 ? 0.8 : 0.1;
+  const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return {
     flagged: reasons && reasons.length > 0,
     reasons,
     severity,
+<<<<<<< HEAD
 
 
 =======
 // Fraud detection heuristics utilities
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface HeuristicResult {
   flagged: boolean;
   reasons: string[];
@@ -150,6 +234,7 @@ export function runHeuristics(data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
+<<<<<<< HEAD
 
     flagged: reasons.length > 0
     reasons
@@ -172,12 +257,18 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
 =======
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  }
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   return {;
     flagged: reasons.length > 0;
     reasons;
     severity}
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -192,3 +283,5 @@ main:utils/fraud/heuristics.ts
 main:utils/fraud/heuristics.ts
 :backup-problematic-files/utils/fraud/heuristics.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

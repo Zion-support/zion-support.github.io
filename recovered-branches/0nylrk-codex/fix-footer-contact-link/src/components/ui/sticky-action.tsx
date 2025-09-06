@@ -16,6 +16,7 @@ interface StickyActionProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface StickyActionProps {
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ interface StickyActionProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
@@ -38,6 +41,7 @@ interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
 
+<<<<<<< HEAD
   showAfterScroll?: number;
 <<<<<<< HEAD
 =======
@@ -95,10 +99,14 @@ export function StickyAction(): any ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className;
   children;
+=======
+  showAfterScroll?: number;  children;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   showAfterScroll = 300;
   position = "bottom";
 }: StickyActionProps) {;
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
 <<<<<<< HEAD
   className,
@@ -214,12 +222,19 @@ function StickyAction() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+=======
+  const [isVisible, setIsVisible] = useState(false);  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > showAfterScroll) {
+        setIsVisible(true)  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <AnimatePresence>
       {isVisible && (
         <motion.div
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -241,6 +256,8 @@ function StickyAction() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -259,6 +276,7 @@ export function StickyAction({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -332,12 +350,18 @@ export function StickyAction({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           animate={{ opacity: 1, y: 0 }}
+=======
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }          animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           transition={{ duration: 0 && 0.2 }}
           className={cn(
-<<<<<<< HEAD
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -364,6 +388,8 @@ export function StickyAction({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   const position_classes = {
     bottom: "bottom - 4",
@@ -383,82 +409,9 @@ export function StickyAction({;
             position_classes[position];
             class_name)}
         >;
-          <div className="rounded - lg bg - zion - blue - dark border border - zion - blue - light shadow - lg shadow - zion - purple / 10 flex items - center">;
+          <div className="rounded - lg bg - zion - blue - dark border border - zion - blue - light shadow - lg shadow - zion - purple / 10 flex items-center">;
             {children}
           </div>;
         </motion.div>)}
     </AnimatePresence>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-import React, { useEffect, useState } from "react",;
-import { cn } from "@/lib/utils",;
-import { motion, AnimatePresence } from "framer-motion",;
-;
-interface StickyActionProps {;
-  className?:string,;
-  children:React.ReactNode,;
-  showAfterScroll?:number,;
-  position?:"bottom" | "top";
-}
-;
-export function StickyAction({;
-  className,;
-  children,;
-  showAfterScroll = 300,;
-  position = "bottom";
-} StickyActionProps) {;
-  const [isVisible, setIsVisible] = useState(false),;
-;
-  useEffect(() => {;
-    const handleScroll = () => {;
-      if (window.scrollY > showAfterScroll) {;
-        setIsVisible(true),;
-      } else {;
-        setIsVisible(false),;
-      }
-    },;
-;
-    window.addEventListener("scroll", handleScroll),;
-    return () => {;
-      window.removeEventListener("scroll", handleScroll),;
-    },;
-  }, [showAfterScroll]),;
-;
-  const positionClasses = {;
-    bottom:"bottom-4",;
-    top:"top-20";
-  },;
-;
-    },;
-    window.addEventListener("scroll", handleScroll),;
-    return () => {;
-      window.removeEventListener("scroll", handleScroll);
-    }
-  }, [showAfterScroll]),;
-  const positionClasses = {;
-    bottom: "bottom-4",;
-    top: "top-20";
-  },;
-  return (;
-    <AnimatePresence>;
-      {isVisible && (;
-        <motion.div;
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-            className
-          )}
-        >
-          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">
-            {children}
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

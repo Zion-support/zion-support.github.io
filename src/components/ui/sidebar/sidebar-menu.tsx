@@ -15,16 +15,18 @@ export { SidebarMenuItem, SidebarMenuGroup }
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
 export { SidebarMenuItem, SidebarMenuGroup };
-export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup }
 };
 export { SidebarMenuItem, SidebarMenuGroup };
-
 
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -35,8 +37,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,
   target?: string,
   badge?: React.ReactNode
-
-import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
@@ -139,7 +139,11 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { SidebarMenuItem, SidebarMenuGroup };
 =======
 export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { SidebarMenuItem, SidebarMenuGroup };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

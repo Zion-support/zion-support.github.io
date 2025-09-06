@@ -42,13 +42,10 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import React from 'react'
 import Link from 'next/link'
 import {
-
-  AlertTriangle,
   ExternalLink,
   RefreshCw,
   Settings,;
   CheckCircle;
-
 
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -57,8 +54,9 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-interface AuthConfigurationErrorProps {;
+interface AuthConfigurationErrorProps {
   onRetry?: () => void;
+<<<<<<< HEAD
 
   showSetupButton?: boolean
 
@@ -124,13 +122,29 @@ if ( {) {
     } else {
       window.location.reload ();
 
+=======
+import React from 'react',;
+import Link from 'next/link',;
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+interface AuthConfigurationErrorProps {;
+  onRetry?: () => void,;
+  showSetupButton?: boolean;
+}
+;
+export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;  const handleRefresh = () => {;
+    if (onRetry) {;
+      onRetry();
+    } else {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
-  };
+  },
 
   return (
-
-
-        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
+        {/* Main Error Card */}        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
               <AlertTriangle className="h-8 w-8 text-red-600" />
@@ -164,6 +178,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -182,6 +197,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -190,6 +207,7 @@ if ( {) {
               <li>• AUTH0_CLIENT_ID</li>
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
+<<<<<<< HEAD
           </div>
 
 <<<<<<< HEAD
@@ -261,6 +279,9 @@ if ( {) {
 =======
 
           <Alert variant="destructive" className="mb-6">;
+=======
+          </div>          <Alert variant="destructive" className="mb-6">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <AlertTriangle className="h-4 w-4" />;
             <AlertDescription>;
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. ;
@@ -300,20 +321,20 @@ if ( {) {
               resolved.            </AlertDescription>;
           </Alert>;
           {/* Technical Details */}        {/* Main Error Card */}
-        <div className="bg - white rounded - 2xl shadow - xl border border - red - 200 p - 8 mb - 6">;
-          <div className="text - center mb - 6">;
-            <div className="mx - auto mb - 4 h - 16 w - 16 rounded - full bg - red - 100 flex items - center justify - center">;
-              <AlertTriangle className="h - 8 w - 8 text - red - 600" />;
+        <div className="bg - white rounded - 2xl shadow - xl border border - red - 200 p - 8 mb-6">;
+          <div className="text - center mb-6">;
+            <div className="mx - auto mb - 4 h - 16 w - 16 rounded - full bg - red - 100 flex items - center justify-center">;
+              <AlertTriangle className="h - 8 w - 8 text - red-600" />;
             </div>;
-            <h1 className="text - 3xl font - bold text - gray - 900 mb - 2">;
+            <h1 className="text - 3xl font - bold text - gray - 900 mb-2">;
               Authentication Service Unavailable;
             </h1>;
-            <p className="text - gray - 600">;
+            <p className="text - gray-600">;
               The sign - up system needs to be configured before users can create accounts;
             </p>;
           </div>;
-          <Alert variant="destructive" className="mb - 6">;
-            <AlertTriangle className="h - 4 w - 4" />;
+          <Alert variant="destructive" className="mb-6">;
+            <AlertTriangle className="h - 4 w-4" />;
             <AlertDescription>;
               <strong > Critical Issue #1:</strong> Auth0 environment variables are not configured.;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -330,6 +351,7 @@ if ( {) {
             <h3 className='font - semibold text - gray - 900 mb - 2'>;
               Missing Configuration:;
             </h3>;
+<<<<<<< HEAD
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
@@ -356,6 +378,11 @@ if ( {) {
               </Button>;
 
             )}
+=======
+            <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb-6">;
+            <h3 className="font - semibold text - gray - 900 mb-2">Missing Configuration:</h3>;
+            <ul className="text - sm text - gray - 700 space-y-1">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Button
               onClick={handleRefresh}
               variant='outline'
@@ -387,13 +414,14 @@ if ( {) {
           </div>
 
           {/* Quick Setup Steps */}
+<<<<<<< HEAD
           <div className="border-t pt-6">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
-
-
 
                 <div>
                   <strong>Create Auth0 Account:</strong>
@@ -412,8 +440,19 @@ if ( {) {
                   </Link>
                 </div>
               </li>
+<<<<<<< HEAD
 
               
+=======
+                  <a
+                    href="https://manage.auth0.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline inline-flex items-center gap-1"
+                  >
+                    Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
                 <div>
@@ -425,6 +464,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
@@ -566,6 +606,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
               <li className="flex items-start gap-3">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
@@ -577,6 +619,7 @@ if ( {) {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Alternative Actions Card */}
 =======
@@ -663,10 +706,28 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+=======
+                <div>
+                  <strong>Configure Environment:</strong>
+                  <br />
+                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
+                </div>
+              </li>            >
+              <span>Browse Marketplace</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            
+            <Link 
+              href="/talent"               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
             <Link 
               href="/help" 
@@ -688,8 +749,11 @@ if ( {) {
 
             
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Link 
               href="/status" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -700,14 +764,42 @@ if ( {) {
             </Link>
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <ExternalLink className='w-4 h-4' />
+            </Link>
+            <Link
+              href='/talent'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+            >
+              <span>View Talent Pool</span>
+              <ExternalLink className='w-4 h-4' />
+            </Link>
+            <Link
+              href='/help'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+            >
+              <span>Contact Support</span>
+              <ExternalLink className='w-4 h-4' />
+            </Link>
+            <Link
+              href='/status'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+            >
+              <span>System Status</span>
+              <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
+            </Link>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </div>
-
         {/* Setup Script Info */}
+<<<<<<< HEAD
         {showSetupButton && (
 <<<<<<< HEAD
 =======
@@ -716,20 +808,32 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="mt-6 text-center">
+=======
+        {showSetupButton && (          <div className="mt-6 text-center">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Automated Setup Available</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
             </div>
           </div>
         )}
+<<<<<<< HEAD
 ;
         {/* Footer */}
         <div className="mt-6 text-center text-sm text-gray-500">
@@ -782,12 +886,15 @@ export default AuthConfigurationError;
               className="text-blue-600 hover: underline";
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </button>;
           </p>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -905,3 +1012,6 @@ export default AuthConfigurationError,
 }
 ;
 export default AuthConfigurationError;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

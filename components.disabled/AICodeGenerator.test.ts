@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator;';
 =======
 <<<<<<< HEAD
@@ -13,12 +14,15 @@ import AICodeGenerator from './AICodeGenerator;';
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import AICodeGenerator from '
 describe('AICodeGenerator'
   it('renders without crashing'
     expect(screen.getByRole('main')).toBeInTheDocument();'  });
   it('displays correct content'
   it('handles user interactions'
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
@@ -30,6 +34,8 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', ()
 import AICodeGenerator from './AICodeGenerator;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 describe('AICodeGenerator', () => {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   it('renders without crashing', () => {;
     render(<AICodeGenerator />);
     expect(screen.getByRole('main')).toBeInTheDocument();'  });';
@@ -40,6 +46,7 @@ describe('AICodeGenerator', () => {;
     render(<AICodeGenerator />);
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
 // Add interaction tests based on component functionality})});
+<<<<<<< HEAD
 <<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
@@ -68,12 +75,16 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() 
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 <<<<<<< HEAD
 =======
+=======
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import AICodeGenerator from '
 describe('AICodeGenerator'
   it('renders without crashing'
     expect(screen.getByRole('main')).toBeInTheDocument();'  });
   it('displays correct content'
   it('handles user interactions'
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -82,3 +93,6 @@ describe('AICodeGenerator'
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

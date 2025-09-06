@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -34,6 +35,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const express = // // require("child_process");
+=======
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const app = express()
 app.get("/health", (req, res) => {
   res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime();
@@ -43,6 +47,7 @@ app.get("/ready", (req, res) => {
   // Add readiness checks here
   res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
 module.exports = app
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,6 +162,9 @@ class HealthChecker {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
+=======
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app    });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     
     console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
     
@@ -167,6 +175,7 @@ class HealthChecker {
       results: this && this.results
     };
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,3 +228,5 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

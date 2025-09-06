@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -64,26 +65,16 @@ export const i18n = {
 
 export function isRtl(locale: string): boolean {;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return ['ar', 'he', 'fa', 'ur'].includes(locale);
 }
 export const i18n = {
-
-
-
-=======
-
-  language: 'en',
-  resolved_language: 'en';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  language: 'en'
+  resolvedLanguage: 'en'
 }
-=======
 }
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 export function isRtl(locale: string): boolean {
   return ["ar", "he", "fa", "ur"].includes(locale);
 }
@@ -91,6 +82,7 @@ export const i18n = {
   language: "en",
   resolvedLanguage: "en",
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -101,12 +93,12 @@ export const i18n = {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-}
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+}
+}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -116,3 +108,5 @@ export const i18n = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

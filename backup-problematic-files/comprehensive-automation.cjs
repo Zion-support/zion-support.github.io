@@ -43,5 +43,10 @@ const path = require('path')
     this.log(" Improvements "Created": ${report.summary.improvementsCreated}")
     this.log("⚡ Optimizations "Applied": ${report.summary.optimizationsApplied}")
     this.log("� Scripts "Generated")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Automation "failed")
+    console.error('Automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -90,8 +90,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';

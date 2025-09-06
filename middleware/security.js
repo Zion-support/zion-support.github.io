@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -80,118 +81,35 @@ export function securityMiddleware(request) {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
 export function securityMiddleware(request) {;
 
-
   const response = NextResponse.next();
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const response = NextResponse && NextResponse.next();
+  const response = NextResponse.next();  const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
-<<<<<<< HEAD
-=======
-
-  if (request && request.nextUrl.protocol === 'https:') {
-    response && response.headers.set(
-      'Strict-Transport-Security',
-
-      'max-age=31536000; includeSubDomains; preload'
-    );
-  }
-
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return response;// Security headers middleware
-// Security headers middleware
-
-export function securityHeaders(req, res, next) {
-
-  Object && Object.entries({
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-  return response;// Security headers middleware
-export function securityHeaders(req, res, next) {
-  Object.entries({
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
 
-<<<<<<< HEAD
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
-  Object.entries({
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+  Object.entries({    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
   });
-  next();
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
+  next();}
 
 }
     response.headers.set (
@@ -216,6 +134,7 @@ function security_headers() {
 ;
   next ();
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 }
@@ -252,15 +171,11 @@ import { getSecurityHeaders } from '../utils/security-headers';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 }
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-export function securityMiddleware(request) {
   const response = NextResponse.next();
   
   // Add security headers
@@ -279,6 +194,7 @@ export function securityMiddleware(request) {
   
   return response;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -306,3 +222,5 @@ export function securityMiddleware(request) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

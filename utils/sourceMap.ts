@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 export type SourceNodeType = "folder" | "file";
@@ -161,20 +162,16 @@ export function getSourceMapWithExistence() {
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+export interface DeployTemplateResult {}
 export function getGitStatus() {
   return {
-<<<<<<< HEAD
     connected: false
     branch: 'main'
   }
 }
-<<<<<<< HEAD
-=======
-
-  return nodes && nodes.map(markExistenceRecursive);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -220,31 +217,14 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
-<<<<<<< HEAD
-=======
-=======
-
-    nodes: [],
-    edges: [];
-  };
-
-}
-export function getGitStatus() {
-  return {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     connected: false,
-    branch: 'main';
-  };
+    branch: 'main'
+};
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -254,9 +234,10 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 ;
 export interface DeployTemplateResult {;
-<<<<<<< HEAD
   createdPaths: string[];
+  skippedPaths: string[];  createdPaths: string[];
   skippedPaths: string[];
+<<<<<<< HEAD
 }
 ;
 export function ensureDirectory(dirPath: string): void {;
@@ -273,18 +254,28 @@ export function ensureDirectory(dirPath: string): void {;
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+<<<<<<< HEAD
 }
 ;
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {;
+=======
+
+export function deployBasicTemplateForPath(
+  repoRelativePath: string
+): DeployTemplateResult {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const keepFile = path.join(absoluteDir, ".keep");
   if (!fs.existsSync(keepFile)) {;
@@ -307,47 +298,18 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
 }
 =======
 <<<<<<< HEAD
-  } else {
-    skippedPaths.push(keepFile);
-  }
 =======
-
-
-  const keepFile = path && path.join(absoluteDir, '.keep');
-  if (!fs && fs.existsSync(keepFile)) {
-    fs && fs.writeFileSync(keepFile, '');
-    createdPaths && createdPaths.push(keepFile);
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } else {
     skippedPaths.push(keepFile);
-  }
-
-
-  const readmeFile = path && path.join(absoluteDir, 'README && README.md');
-  if (!fs && fs.existsSync(readmeFile)) {
-    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs && fs.writeFileSync(readmeFile, readme);
-    createdPaths && createdPaths.push(readmeFile);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  } else {
+  }  } else {
     skippedPaths.push(readmeFile);
   }
-
-
-
 
   return { createdPaths, skippedPaths };
 
 }
-=======
   return { createdPaths, skippedPaths }
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   created_paths: string[];
   skipped_paths: string[];
@@ -367,6 +329,7 @@ export function ensure_directory (dir_path: string): void {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -375,3 +338,5 @@ export function ensure_directory (dir_path: string): void {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

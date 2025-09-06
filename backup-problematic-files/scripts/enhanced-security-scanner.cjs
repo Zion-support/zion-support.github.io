@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-scanner.cjs
 =======
 <<<<<<< HEAD
@@ -8,23 +9,34 @@
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-security-scanner.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
     log('info', `Medium "severity": ${securityReport.summary.medium}`);
     log('info', `Low "severity": ${securityReport.summary.low}`);
     log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (securityReport.vulnerabilities.length > 0) {
       log('warn', 'Vulnerabilities "found": ');
       securityReport.vulnerabilities.forEach(vuln => {
         log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (securityReport.recommendations.length > 0) {
       log('info', 'Security "Recommendations": ');
       securityReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
         log('info', `  "Action": ${rec.action}`)})}
+<<<<<<< HEAD
 
     // Save report
     const reportPath = path.join(process.cwd(), `enhanced-security-report-${securityReport.sessionId}.json`);
@@ -32,6 +44,15 @@
 
     log('info', `Enhanced security report saved "to": enhanced-security-report-${securityReport.sessionId}.json`);
 
+=======
+    
+    // Save report
+    const reportPath = path.join(process.cwd(), `enhanced-security-report-${securityReport.sessionId}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
+    
+    log('info', `Enhanced security report saved "to": enhanced-security-report-${securityReport.sessionId}.json`);
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Exit with appropriate status
     if (securityReport.summary.securityScore < 50) {
       log('error', 'Security score is below 50% - immediate attention required');
@@ -40,11 +61,16 @@
       process.exit(0)} else {
       log('info', 'Security scan completed successfully');
       process.exit(0)}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   } catch (error) {
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-scanner.cjs
 main();#!/usr/bin/env node;
@@ -61,6 +87,10 @@ main();
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-security-scanner.cjs
+=======
+main();
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -90,6 +120,7 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
+<<<<<<< HEAD
 =======
       log('info', 'Security "Recommendations")
 <<<<<<< HEAD
@@ -97,3 +128,7 @@ console.log('======')
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      log('info', 'Security "Recommendations")
+      log('info', 'Security "Recommendations")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

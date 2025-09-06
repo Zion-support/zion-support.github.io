@@ -16,14 +16,24 @@ class LinterWatcher {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
       console.log('Running lint check...');
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const child = spawn('npm', ['run', 'lint'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -36,9 +46,15 @@ class LinterWatcher {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -55,12 +71,22 @@ class LinterWatcher {}
   async attemptAutoFix() {}
     try {}
       console.log('Attempting to auto-fix linting issues...');
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const child = spawn('npm', ['run', '"lint": fix'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -96,5 +122,10 @@ if ( {})
 });
   watcher.start().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = LinterWatcher;
+module.exports = LinterWatcher;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

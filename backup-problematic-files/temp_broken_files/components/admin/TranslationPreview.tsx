@@ -16,6 +16,7 @@ export default function TranslationPreview() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
+<<<<<<< HEAD
       <div className="text-sm text-gray-500">{loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}</div>
       <div className="grid md:grid-cols-2 gap-4">
         {targets.map((lng) => (
@@ -27,8 +28,16 @@ export default function TranslationPreview() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
+      <div className="grid md:grid-cols-2 gap-4">
+        {targets.map((lng) => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         ))}
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

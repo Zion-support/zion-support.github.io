@@ -53,8 +53,8 @@ export const TALENT_PROFILES = [;
 =======
 ];
 ;
-=======
 
+<<<<<<< HEAD
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
 
@@ -99,3 +99,5 @@ export const TALENT_PROFILES = [;
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

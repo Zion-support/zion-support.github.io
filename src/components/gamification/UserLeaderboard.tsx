@@ -18,8 +18,6 @@ interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
 
-
-
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 import {;
   Card,;
@@ -42,6 +40,7 @@ interface UserLeaderboardProps {;
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -123,3 +122,8 @@ function UserLeaderboard() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+    <Card>
+      <CardHeader>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -21,15 +21,17 @@ export default function ScrollToTop() {;
 const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
-
 
 const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -62,8 +64,8 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false)
       }
       behavior: 'smooth'
-    });
-    };
+    })
+};
 
     window.addEventListener('scroll', toggleVisibility);
 <<<<<<< HEAD
@@ -114,8 +116,8 @@ origin/main
 =======
 
       behavior: 'smooth'
-    });
-    };
+    })
+};
 
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
@@ -132,8 +134,8 @@ origin/main
     window && window.scrollTo({;
       top: 0,;
       behavior: 'smooth',;
-    });  };      behavior: 'smooth'});
-
+    })
+};      behavior: 'smooth'});
 
       behavior: 'smooth'})
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -160,7 +162,8 @@ origin/main
     </button>
   );
 }
-    });  };      behavior: 'smooth'})
+    })
+};      behavior: 'smooth'})
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -288,25 +291,25 @@ if ( {) {
             className='w - 6 h - 6 transform group - hover:-translate - y-1 transition - transform duration - 300';
             fill='none';
             stroke='current_color';
-            view_box='0 0 24 24';
+            viewBox='0 0 24 24';
             xmlns='http://www.w3.org / 2000 / svg';
           >;
             <path;
-              stroke_linecap='round';
-              stroke_linejoin='round';
-              stroke_width={2}
+              strokeLinecap='round';
+              strokeLinejoin='round';
+              strokeWidth={2}
               d='M5 10l7 - 7m0 0l7 7m - 7-7v18'            />        >;
           <svg;
-            className="w - 6 h - 6 transform group - hover:-translate - y-1 transition - transform duration - 300";
+            className="w - 6 h - 6 transform group - hover:-translate - y-1 transition-transform duration-300";
             fill="none";
             stroke="current_color";
-            view_box="0 0 24 24";
+            viewBox="0 0 24 24";
             xmlns="http://www.w3.org / 2000 / svg";
           >;
             <path;
-              stroke_linecap="round";
-              stroke_linejoin="round";
-              stroke_width={2}
+              strokeLinecap="round";
+              strokeLinejoin="round";
+              strokeWidth={2}
               d="M5 10l7 - 7m0 0l7 7m - 7-7v18";
             />;
           </svg>;

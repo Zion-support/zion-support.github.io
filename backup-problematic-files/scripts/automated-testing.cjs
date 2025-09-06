@@ -9,5 +9,10 @@ console.log('🧪 Running Automated Tests...')
   execSync('npm run lint', { "stdio"})
   execSync('npm run type-check', { "stdio"})
     execSync('npm audit --audit-level=moderate', { "stdio"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+console.log('🧪 Test "Summary")
+console.log('🧪 Test "Summary")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

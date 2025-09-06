@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -40,6 +41,14 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function About() {
+=======
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",export default function About() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <>
       <SEO
@@ -202,6 +211,7 @@ export default function About() {
       <Footer />
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -213,11 +223,16 @@ export default function About() {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  )
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -228,11 +243,14 @@ import {GradientHeading} from "@/components/GradientHeading";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function About() {;
@@ -268,6 +286,8 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
@@ -280,16 +300,20 @@ export default function About() {;
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>;
               <p className="text-zion-slate-light text-lg mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. ;
@@ -314,10 +338,13 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 a global community where the future of technology is being built today.;
               </p>;
             </div>;
             <div className="rounded-lg overflow-hidden">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <img
@@ -342,10 +369,13 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>;
               <p className="text-zion-slate-light text-lg mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 We envision a world where AI and technology are accessible to all, regardless of geographical ;
@@ -372,10 +402,13 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 a community that shapes the future of how we live, work, and interact with technology.;
               </p>;
             </div>;
             <div className="rounded-lg overflow-hidden lg:order-first">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <img
@@ -400,11 +433,14 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="text-center mb-16">;
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
@@ -414,6 +450,8 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
                   </svg>;
                 </div>;
@@ -422,6 +460,7 @@ export default function About() {;
                   We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.;
                 </p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -438,6 +477,8 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </svg>;
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3">Community</h3>;
@@ -445,6 +486,7 @@ export default function About() {;
                   We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.;
                 </p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -461,10 +503,13 @@ export default function About() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </svg>;
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>;
                 <p className="text-zion-slate-light">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -584,6 +629,8 @@ function About() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
                 </p>;
               </div>;
@@ -591,6 +638,7 @@ function About() {
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
       <Footer />;
 <<<<<<< HEAD
 =======
@@ -598,11 +646,15 @@ function About() {
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+      <Footer />;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 }
 ;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -628,3 +680,5 @@ function About() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

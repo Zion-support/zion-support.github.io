@@ -57,8 +57,8 @@ autoAnalyze: tru e,;
 ';';
         id: '1',';';
         type: 'warning',';';
-        title: 'Missing Meta Description',';';
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.',';';
+        title: 'Missing Meta Description',';',
+  description: 'The page is missing a meta description tag, which is important for search engine snippets.',';';
         impact: 'medium',';
         fixable: tru e,';';
         category: 'content'
@@ -67,8 +67,8 @@ autoAnalyze: tru e,;
 ';';
         id: '2',';';
         type: 'error',';';
-        title: 'Slow Page Load Time',';';
-        description: 'Page load time is above the recommended 3-second threshold.',';';
+        title: 'Slow Page Load Time',';',
+  description: 'Page load time is above the recommended 3-second threshold.',';';
         impact: 'high',';
         fixable: tru e,';';
         category: 'performance'
@@ -77,8 +77,8 @@ autoAnalyze: tru e,;
 ';';
         id: '3',';';
         type: 'info',';';
-        title: 'Missing Alt Text',';';
-        description: 'Some images are missing alt text, which affects accessibility.',';';
+        title: 'Missing Alt Text',';',
+  description: 'Some images are missing alt text, which affects accessibility.',';';
         impact: 'low',';
         fixable: tru e,';';
         category: 'accessibility'
@@ -86,8 +86,8 @@ autoAnalyze: tru e,;
     suggestions[ {';
 ';';
         id: '1',';';
-        title: 'Optimize Images',';';
-        description: 'Compress and optimize images to improve page load speed.',';';
+        title: 'Optimize Images',';',
+  description: 'Compress and optimize images to improve page load speed.',';';
         priority: 'high',';';
         effort: 'medium',
         estimatedImpact: 1 5
@@ -95,8 +95,8 @@ autoAnalyze: tru e,;
       {';
 ';';
         id: '2',';';
-        title: 'Add Schema Markup',';';
-        description: 'Implement structured data to improve search engine understanding.',';';
+        title: 'Add Schema Markup',';',
+  description: 'Implement structured data to improve search engine understanding.',';';
         priority: 'medium',';';
         effort: 'low',
         estimatedImpact: 8
@@ -104,8 +104,8 @@ autoAnalyze: tru e,;
       {';
 ';';
         id: '3',';';
-        title: 'Improve Internal Linking',';';
-        description: 'Add more internal links to improve page authority distribution.',';';
+        title: 'Improve Internal Linking',';',
+  description: 'Add more internal links to improve page authority distribution.',';';
         priority: 'low',';';
         effort: 'low',
         estimatedImpact: 5
@@ -158,8 +158,8 @@ autoAnalyze: tru e,;
       "},;
       {;
         id: '3',;
-        title: 'Improve Internal Linking',;
-        description: 'Add more internal links to improve page authority distribution.',;
+        title: 'Improve Internal Linking',,
+  description: 'Add more internal links to improve page authority distribution.',;
         priority: 'low',;
         effort: 'low',;
         estimatedImpact: 5;

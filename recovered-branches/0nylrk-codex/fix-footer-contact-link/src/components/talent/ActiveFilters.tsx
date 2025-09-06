@@ -7,15 +7,6 @@ import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-interface ActiveFiltersProps {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ActiveFiltersProps {;
   selectedSkills: string[],;
   toggleSkill: (skill: string) => void,;
@@ -24,6 +15,7 @@ interface ActiveFiltersProps {;
   selectedRegions: string[],;
   toggleRegion: (region: string) => void,;
 
+<<<<<<< HEAD
   priceRange: [number, number];
 <<<<<<< HEAD
 
@@ -88,6 +80,9 @@ import { X } from "lucide-react",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ActiveFiltersProps {
+=======
+  priceRange: [number, number];interface ActiveFiltersProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
   selectedAvailability: string[],
@@ -98,6 +93,7 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
   clearFilters: () => void
 }
@@ -163,6 +159,13 @@ export function ActiveFilters({
   if (!hasActiveFilters) return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const hasActiveFilters = 
+=======
+
+  clearFilters: () => void
+}}: ActiveFiltersProps) {
+  // Check if any filters are active
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
     selectedRegions.length > 0 ||
@@ -172,8 +175,8 @@ export function ActiveFilters({
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -367,6 +370,12 @@ export function ActiveFilters({;
 =======
         <ClickableBadge
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  return (
+    <div className="mb-6 flex flex-wrap gap-2 items-center">
+      <span className="text-zion-slate-light text-sm">Active filters:</span>
+      {selectedSkills.map(skill => (        <ClickableBadge        <ClickableBadge
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
@@ -377,114 +386,38 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-      {selectedRegions && selectedRegions.map(region => (;
-
-=======
-  return (;
-    <div className="mb-6 flex flex-wrap gap-2 items-center">;
-      <span className="text-zion-slate-light text-sm">Active filters:</span>;
-      {selectedSkills.map(skill => (;
-        <ClickableBadge;
-          key={skill}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => toggleSkill(skill)}
-        >
-          {skill}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
-      ))}
-      {selectedAvailability.map(status => (
-        <ClickableBadge
-          key={status}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleAvailability(status)}
-        >
-          {status === 'full-time' ? 'Full-time' :
-           status === 'part-time' ? 'Part-time' :
-           'Project-based'}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
-      ))}
-      {selectedRegions.map(region => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <ClickableBadge
-          key={region}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleRegion(region)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      ;
-      {selectedRegions.map(region => (;
-        <ClickableBadge ;
-          key={region}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleRegion(region)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        >;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          {region}
+      {selectedRegions && selectedRegions.map(region => (;          {region}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
 
         <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"        <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-=======
-      ;
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
-        <ClickableBadge ;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <ClickableBadge
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setPriceRange([50, 200])}
         >;
           ${priceRange[0]}-${priceRange[1]}/hr;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
 
         <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"        <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-=======
-      ;
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
-        <ClickableBadge ;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <ClickableBadge
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setExperienceRange([0, 15])}
         >;
           {experienceRange[0]}-{experienceRange[1]} years;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-<<<<<<< HEAD
-
 
       <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -585,6 +518,11 @@ export function ActiveFilters({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+        variant="ghost" 
+        size="sm" 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         Clear All;
       </Button>;
     </div>;
@@ -594,9 +532,6 @@ export function ActiveFilters({;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-
-
-
 
 }
 import React from './react';
@@ -629,6 +564,7 @@ function ActiveFilters() {
     experience_range[1] !== 15 ||;
     price_range[0] !== 50 ||;
     price_range[1] !== 200;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
   // Check condition
@@ -747,3 +683,6 @@ if (!hasActiveFilters) return null;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

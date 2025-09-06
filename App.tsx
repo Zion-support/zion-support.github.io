@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react';
 <<<<<<< HEAD
 
@@ -16,18 +17,9 @@ import React from 'react';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 import Header from './src/components/Header';
 =======
 import React, { Suspense, lazy } from 'react';
@@ -78,6 +70,7 @@ export default function App(): JSX.Element {
       features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
     },
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -146,6 +139,10 @@ function App() {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
   return (
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -217,6 +214,7 @@ function App() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
@@ -226,6 +224,8 @@ function App() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }
 <<<<<<< HEAD

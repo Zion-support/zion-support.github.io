@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,3 +98,6 @@ import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresen
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ) ) } catch(error) {}} },[]) ; useEffect(() => {}},[]); applySettings(settings); localStorage.setItem('accessibility-settings',JSON.stringify(settings))},[settings]); const applySettings = (newSettings) => {}; root.classList.add('high-contrast')} else {}; root.classList.remove('high-contrast')} root.style.setProperty('--font-size',`${newSettings.fontSize}%`); if(newSettings.reducedMotion) {}; root.classList.add('reduced-motion')} else {}; root.style.setProperty('--reduced-motion',no-preference')} if(settings.focusIndicator) {}; root.style.setProperty('--focus-visible',auto')} else {}; root.style.setProperty('--focus-visible',none')} root.classList.remove('protanopia',deuteranopia',tritanopia'); if(newSettings.colorBlindness !== 'none') {}; root.classList.add(newSettings.colorBlindness)} if(newSettings.focusIndicator) {}; root.classList.add('focus-visible')} else {}; root.classList.remove('focus-visible')} }; const updateSetting = (key,value) => {}; setSettings(prev => ({ ...prev,[key]: value }))}; const resetSettings = () => {}}; const defaultSettings = {};=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

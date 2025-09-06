@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 :hooks/useResponsive.ts
@@ -20,6 +21,8 @@ import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   'resize', updateDimensions)}, []);
   return state}
 export default useResponsive;import { useState, useEffect } from 'react';
@@ -38,16 +41,20 @@ const defaultBreakpoints: Breakpoints = {
   '2xl': 1536
 }
 
+<<<<<<< HEAD
 export default useResponsive;
 
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} } const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: '1920',screenHeight: '1080',orientation: "landscape",isMobile: 'false',isTablet: 'false',isDesktop: 'true',}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: 'width',screenHeight: 'height',orientation: width > height ? "landscape" : "portrait",isMobile: 'width < 768',isTablet: 'width >= 768 && width < 1024',isDesktop: 'width >= 1024',})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     updateDimensions();
     window.addEventListener(,
   'resize', updateDimensions);
     return () => window.removeEventListener(;
   'resize', updateDimensions)}, []);
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useResponsive.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -70,13 +77,18 @@ ursor/add-new-services-and-deploy-updates-0462
 ;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return state}
 export default useResponsive
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 
+<<<<<<< HEAD
 origin/main
 :backup-problematic-files/hooks/useResponsive.ts
 main:hooks/useResponsive.ts
 :backup-problematic-files/hooks/useResponsive.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

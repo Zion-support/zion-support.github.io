@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -376,11 +377,13 @@ export interface AdvancedAIAutomationService {
     website: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
+=======
+  contactInfo: {    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 <<<<<<< HEAD
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
@@ -513,17 +516,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launch_date: '2024 - 10 - 01';
     customers: 89;
     rating: 4.8,
-    reviews: 38;
-<<<<<<< HEAD
-  }
-=======
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
-=======
+    reviews: 38
+};
     realImplementation: true
     implementationDetails:
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.'
@@ -708,13 +702,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
+<<<<<<< HEAD
     reviews: 38
 =======
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
@@ -726,6 +718,9 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },];
+=======
+    reviews: 38  },];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -737,6 +732,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89;
     rating: 4.8
 
+<<<<<<< HEAD
     reviews: 38
 <<<<<<< HEAD
 
@@ -1031,3 +1027,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    reviews: 38  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

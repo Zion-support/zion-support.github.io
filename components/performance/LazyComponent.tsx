@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
 
 interface LazyComponentProps {
@@ -15,10 +13,11 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
-  );
+  )
 };
 
 export default LazyComponent;
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -40,11 +39,15 @@ import LoadingSpinner from '../LoadingSpinner';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
+  [key: string]: unknown
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,11 +104,14 @@ import React from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 }
 
 const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
+<<<<<<< HEAD
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
   ...props;
 =======
@@ -116,6 +122,10 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
 <<<<<<< HEAD
+=======
+  fallback = <div className="animate - pulse bg - gray-200 h-32 rounded" />,
+  ...props;  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Suspense fallback={fallback}>;
       <Component {...props} />;
     </Suspense>);
@@ -124,6 +134,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent;
 import React from 'react',
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -141,3 +152,5 @@ import React from 'react',
 export default LazyComponent;
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

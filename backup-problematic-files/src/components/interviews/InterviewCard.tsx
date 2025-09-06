@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -61,15 +64,25 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
+<<<<<<< HEAD
         title:`Interview ${status}`,;
         description:`You have successfully ${status} the interview request.`;
+=======
+        title:`Interview ${status}`,,
+  description:`You have successfully ${status} the interview request.`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
       setIsResponseDialogOpen(false),;
       await onRefresh(),;
     } else {;
       toast({;
+<<<<<<< HEAD
         title:"Error",;
         description:"Failed to respond to the interview request. Please try again.",;
+=======
+        title:"Error",,
+  description:"Failed to respond to the interview request. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive";
       }),;
     }
@@ -82,14 +95,24 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
+<<<<<<< HEAD
         title:"Interview cancelled",;
         description:"The interview has been cancelled successfully.";
+=======
+        title:"Interview cancelled",,
+  description:"The interview has been cancelled successfully.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
       await onRefresh(),;
     } else {;
       toast({;
+<<<<<<< HEAD
         title:"Error",;
         description:"Failed to cancel the interview. Please try again.",;
+=======
+        title:"Error",,
+  description:"Failed to cancel the interview. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive";
       }),;
     }
@@ -315,9 +338,15 @@ if (success) {;
   title: `Interview $ {;
   status ;
 }`;
+<<<<<<< HEAD
 }setIsLoading (false) ;
 };
 }setIsLoading (false) ;
+=======
+}setIsLoading (false) 
+};
+}setIsLoading (false) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 const getStatusBadge = () => {;
   switch (interview.status) {';
@@ -349,5 +378,8 @@ const getStatusBadge = () => {;
 }isLoading= {;
   isLoading ;
 }/> </DialogContent> </Dialog> </Card>) ;
+<<<<<<< HEAD
 }'"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

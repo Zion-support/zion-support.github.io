@@ -41,6 +41,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   const toggleMic = async () => {
     if (!room) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const enabled =
       await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
@@ -70,6 +71,10 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   };
 =======
   accent?: 'blue' | 'cyan';};type Props = {;
+=======
+  accent?: 'blue' | 'cyan'
+};type Props = {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   room: Room | null,;
   onLeave: () => void,;
   accent?: 'blue' | 'cyan';
@@ -85,16 +90,18 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     if (!room) return;
     const enabled =;
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);
-  };
+    setMicEnabled(enabled)
+};    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled)
+};
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const toggleCam = async () => {;
     if (!room) return;
     const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled);  };    setCamEnabled(enabled);
-  };
+    setCamEnabled(enabled)
+};    setCamEnabled(enabled)
+};
 
   const toggleScreenShare = async () => {;
     if (!room) return;
@@ -153,8 +160,8 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
-      console && console.warn('Screen share failed', e);
-  };
+      console && console.warn('Screen share failed', e)
+};
 
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

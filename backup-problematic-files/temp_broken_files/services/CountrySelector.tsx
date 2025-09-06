@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
 =======
 import { useState, useEffect } from "react",;
@@ -7,6 +8,10 @@ import { Globe } from "lucide-react",;
 import { useState, useEffect } from "react",;
 import { Globe } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx
+=======
+import { useState, useEffect } from "react",;
+import { Globe } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
 ;
@@ -44,41 +49,58 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
         onValueChange={handleCountryChange} ;
         value={selectedCountry?.country}
       >;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectValue placeholder="Select a country" />;
         </SelectTrigger>;
         <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">;
           <div className="p-2 border-b border-zion-blue-light">;
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
 
+=======
+            {topCountries.map((item) => (;
+              <SelectItem key={item.country} value={item.country} className="text-white">;                {item.country} - ${item.pricePerIncident.toFixed(2)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </SelectItem>;
             ))}
           </div>;
           <div className="p-2">;
             <p className="text-sm text-zion-slate-light pb-1">All Countries</p>;
             {onsiteServicePricing;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               .sort((a, b) => a.country.localeCompare(b.country));
               .map((item) => (;
               <SelectItem key={item.country} value={item.country} className="text-white">;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </SelectItem>;
             ))}
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void;
@@ -93,7 +115,11 @@ setTopCountries (top) ;
 }, []);
 //Handle country selection const handleCountryChange = (countryName: string) => {;
   const country = onsiteServicePricing.find (item => item.country === countryName) || null;
+<<<<<<< HEAD
 onCountryChange (country) ;
+=======
+onCountryChange (country) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white mb-4 flex items-center" > <Globe className="mr-2 h-5 w-5 text-zion-cyan" /> {;
   selectedCountry ? `IT Onsite Service in $ {;"  selectedCountry.country ";"}` : "Select Country for IT Onsite Service" ;
@@ -107,4 +133,7 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 }</div> </SelectContent> </Select> </div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/CountrySelector.tsx
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

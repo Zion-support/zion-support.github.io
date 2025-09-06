@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -12,6 +16,9 @@ import React from 'react';
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
+=======
+import React from 'react';import Link from 'next/link';';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
@@ -173,12 +180,15 @@ export default function CustomDevelopmentPage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
+<<<<<<< HEAD
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center""
@@ -268,6 +278,7 @@ export default function CustomDevelopmentPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -281,6 +292,8 @@ export default function CustomDevelopmentPage() {
                 Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
               </p>;
@@ -353,6 +366,7 @@ export default function CustomDevelopmentPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300"">;
@@ -369,6 +383,8 @@ export default function CustomDevelopmentPage() {
                       <span className="text-white font-bold text-lg">{index + 1}</span>"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"
                   </div>;
                   <p className="text-gray-600">{step.description}</p>"
@@ -403,6 +419,7 @@ export default function CustomDevelopmentPage() {
                 Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs';
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
@@ -429,6 +446,8 @@ export default function CustomDevelopmentPage() {
                 >;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View All Solutions;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </Link>;
               </div>;
             </motion.div>;

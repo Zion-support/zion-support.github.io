@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 export interface WarningEmailPayload {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   toUserId: string;
   toAddress?: string | null;
   subject: string;
   body: string;
 }
+<<<<<<< HEAD
 
   to: string;
   subject: string;
@@ -32,3 +36,5 @@ export async function sendWarningEmail(payload: WarningEmailPayload): Promise<vo
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -299,7 +299,7 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
         </button>;
       </div>;
     </div>;
-  );
+  )
 };
 export default DataSync;';
 </DataSyncProps>;';;';
@@ -309,7 +309,7 @@ export default DataSync;
 "};
 ;
 export default DataSync;
-</DataSyncProps>;
+</DataSyncProps>
 };
 export default DataSync;';
 </DataSyncProps>;';';

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -12,22 +13,20 @@ import { Circle } from &quot;lucide-react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react"
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => {
 <<<<<<< HEAD
 =======
@@ -130,21 +129,18 @@ className={cn(
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className
+=======
+>(({ className, ...props }, ref) => {className={cn(
+        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;,
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       )}
       {...props}
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <RadioGroupPrimitive.Indicator className=&quot;flex items-center justify-center&quot;>
-        <Circle className=&quot;h-2.5 w-2.5 fill-current text-current&quot; />
-=======
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className="h-2.5 w-2.5 fill-current text-current" />      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
         <Circle className="h-2.5 w-2.5 fill-current text-current" />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <Circle className="h-2.5 w-2.5 fill-current text-current" />
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
@@ -189,34 +185,8 @@ className={cn (
 });
 RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export { RadioGroup, RadioGroupItem }
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 export { RadioGroup, RadioGroupItem }
 ;
-
-<<<<<<< HEAD
-=======
-export { RadioGroup, RadioGroupItem };
-=======
-
-export { RadioGroup, RadioGroupItem }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export { RadioGroup, RadioGroupItem }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 export { RadioGroup, RadioGroupItem }
 ;
 export { RadioGroup, RadioGroupItem };
@@ -225,7 +195,6 @@ export { RadioGroup, RadioGroupItem }
 ;
 ;
 export { RadioGroup, RadioGroupItem }
-<<<<<<< HEAD
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 ;
 const RadioGroupItem = React.forwardRef<;
@@ -267,7 +236,11 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item> > ( ({
 }) RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName export {
   RadioGroup, RadioGroupItem 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

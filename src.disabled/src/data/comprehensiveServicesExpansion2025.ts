@@ -5,18 +5,12 @@ import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
-<<<<<<< HEAD
-<<<<<<< HEAD
 ";";"
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
 ";";"
 ";";"
 ";";"
 ursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 =======
@@ -33,3 +27,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

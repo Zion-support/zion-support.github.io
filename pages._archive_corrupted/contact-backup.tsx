@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -59,11 +60,15 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 =======
 
 <<<<<<< HEAD
+=======
+import type { NextPage } from 'next'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default Contact
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 ;
+<<<<<<< HEAD
 =======
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 
@@ -124,3 +129,6 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

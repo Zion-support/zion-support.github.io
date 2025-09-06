@@ -19,7 +19,7 @@ export function TalentCardHeader({
   yearsExperience
 }: TalentCardHeaderProps) {
   return (
-    <div className="flex items-start gap-4 mb-4">
+    <div className='flex items-start gap-4 mb-4'>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
 <<<<<<< HEAD
 =======
@@ -39,8 +39,11 @@ export function TalentCardHeader(): any ({;
         <div className='flex items-center justify-between'>;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
       <div className="flex-1">
         <div className="flex items-center justify-between">
@@ -55,6 +58,7 @@ export function TalentCardHeader(): any ({;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
           </h3>
+<<<<<<< HEAD
           
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
@@ -73,6 +77,13 @@ interface TalentCardHeaderProps {;
   profilePicture?: string,;
   availabilityType: string,;
   yearsExperience: number;
+=======
+
+    </div>;
+  )
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 export function TalentCardHeader({;
@@ -96,14 +107,13 @@ export function TalentCardHeader({;
           </h3>;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
-      </div>;
+
+        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;      </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
 =======
-
 
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';

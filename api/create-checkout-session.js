@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
 =======
@@ -124,6 +125,8 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -133,20 +136,25 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       url: session.url
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======      url: session.url
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),
     res.statusCode = 500,
     res.json({ error: err.message || 'Checkout session creation failed' })
-  };
+  }
 };
 export default withErrorLogging(handler),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ,
@@ -161,9 +169,12 @@ export default withErrorLogging(handler),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
@@ -187,3 +198,5 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

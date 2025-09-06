@@ -48,5 +48,10 @@ const path = require("path")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

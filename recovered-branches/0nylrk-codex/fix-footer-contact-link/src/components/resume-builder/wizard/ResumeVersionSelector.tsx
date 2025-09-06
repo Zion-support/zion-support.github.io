@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import {
@@ -34,6 +35,9 @@ import { useResume } from "@/hooks/useResume";
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
@@ -42,6 +46,7 @@ import {Input} from '@/components/ui/input';
 import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
+<<<<<<< HEAD
 import {useResume} from '@/hooks/useResume';
 <<<<<<< HEAD
 =======
@@ -75,6 +80,9 @@ import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
 interface ResumeVersionSelectorProps {
+=======
+import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
 }
@@ -122,6 +130,7 @@ export function ResumeVersionSelector({
         setSaveDialogOpen(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         setNewResumeTitle("");
 =======
         setNewResumeTitle('');
@@ -139,23 +148,12 @@ export function ResumeVersionSelector({
 =======
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         setNewResumeTitle('')
 
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const handleCreateNewVersion = async () => {
-    if (newResumeTitle.trim()) {
-      setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() });
-      if (resumeId) {
-        await fetchResume(resumeId);
-        onResumeChange(resumeId);
-        setSaveDialogOpen(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
         setNewResumeTitle('')
+<<<<<<< HEAD
 
 
         setNewResumeTitle('')
@@ -164,6 +162,8 @@ export function ResumeVersionSelector({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -196,6 +196,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
+<<<<<<< HEAD
         setNewResumeTitle('');
 <<<<<<< HEAD
       }
@@ -314,6 +315,9 @@ onClick={handleCreateNewVersion}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="gap-2"
+=======
+        setNewResumeTitle('');              className="gap-2"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />
@@ -325,23 +329,9 @@ onClick={handleCreateNewVersion}
     </div>
   );
 }
-
-};
-> {
-  resume.basic info.title 
-}</DropdownMenuItem>) ) 
-}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
-}
-  );
-}
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-  );
-}
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
@@ -357,3 +347,6 @@ onClick={handleCreateNewVersion}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

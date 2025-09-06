@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from "../types/service-variants";
 
 export interface AIEmergingTechService {
@@ -6,7 +5,7 @@ export interface AIEmergingTechService {
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -32,8 +31,8 @@ export interface AIEmergingTechService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -98,8 +97,12 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
 ],
 =======
   }
+<<<<<<< HEAD
 ];
 =======
 // Placeholder content - file was empty after conflict resolution
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

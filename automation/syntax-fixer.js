@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,8 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
 export default SyntaxFixer;
@@ -36,6 +39,7 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -106,6 +110,8 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Main execution;
 // Check condition
 if ( {) {
@@ -155,7 +161,6 @@ if ( {) {
       }
     });
 }
-
 
   },
 ,
@@ -239,7 +244,6 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             files.push(fullPath)
           }
         })
@@ -271,14 +275,6 @@ this.log("=" * 50),
     } catch (error) {
     }
   }
-<<<<<<< HEAD
-=======
-
-        content = content.replace (/export\s+([^, ]+), \s*$/gm, 'export $1, ');
-;
-        if () {) {
-  $2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
           modified = true;
         }
@@ -328,9 +324,12 @@ if ( {) {
     return files;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   async run () {
     this.log ("🚀 Starting Syntax Fixer");
@@ -340,6 +339,7 @@ if ( {) {
 ;
       this.log ("=" * 50);
       this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`);
+<<<<<<< HEAD
 ;
 =======
   async run() {this.log("🚀 Starting Syntax Fixer");
@@ -416,6 +416,9 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           modified = true
+=======
+;          modified = true
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         },
 ,
         if (modified) {,
@@ -423,6 +426,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           this.fixesApplied++,
           this.log(`Fixed export issues in ${file}`)
         }
+<<<<<<< HEAD
       } catch (error) {,
 <<<<<<< HEAD
 
@@ -472,6 +476,9 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
 
             files.push(fullPath)
+=======
+      } catch (error) {,            files.push(fullPath)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }
         })
       }
@@ -479,16 +486,20 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
     }
     return files
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   async run() {
     this.log(&quot;🚀 Starting Syntax Fixer&quot;)
     try {
       await this.fixSyntaxErrors()
+<<<<<<< HEAD
 this.log("=" * 50)
 =======
   },
@@ -658,3 +669,6 @@ export default SyntaxFixer;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+this.log("=" * 50)this.log("=" * 50),      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

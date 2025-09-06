@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
@@ -17,6 +16,7 @@ export const useResponsive = (): ResponsiveState => {
     width: 0,
     height: 0,
   });
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -48,12 +48,15 @@ const defaultBreakpoints: Breakpoints = {
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     updateDimensions(),;
     window && window.addEventListener(;
   'resize', updateDimensions),;
     return () => window && window.removeEventListener(;
   'resize', updateDimensions)}, []),;
   return state},;
+<<<<<<< HEAD
 export default useResponsive,;import { useState, useEffect } from 'react';
 <<<<<<< HEAD
 =======
@@ -291,3 +294,6 @@ const defaultBreakpoints: Breakpoints = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export default useResponsive,;import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

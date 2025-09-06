@@ -1,8 +1,21 @@
+<<<<<<< HEAD
     expect(input).toBeInTheDocument();
   });
 });
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
     expect(input).toBeInTheDocument();
   });
 });
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+describe(\'AIChatAssistant\', () => {
+  it(\'renders without crashing\', () => {
+    render(<AIChatAssistant />);
+    expect(screen.getByRole(\'main\')).toBeInTheDocument();
+  });
+  it(\'displays correct content\', () => {
+    render(<AIChatAssistant />);
+    expect(screen.getByText(/AI Chat Assistant/i)).toBeInTheDocument();
+  });
+  it(\'handles user input\', () => {
+    render(<AIChatAssistant />);
+    const input = screen.getByPlaceholderText(/type your message/i);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

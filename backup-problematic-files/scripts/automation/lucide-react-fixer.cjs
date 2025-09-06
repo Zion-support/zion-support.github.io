@@ -72,5 +72,10 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

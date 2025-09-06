@@ -69,12 +69,15 @@ export function sanitize_html (html: string): string {
   sanitized = sanitized.replace (/javascript:/gi, '');
   sanitized = sanitized.replace (/data:text\/html / gi, '');
 
+<<<<<<< HEAD
 
 
 
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
   sanitized = sanitized.replace(/javascript:/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
@@ -97,12 +100,15 @@ export function sanitizeCss(css: string): string {
   return css.replace(/expression\s*\(/gi, '');
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function sanitizeUrl(url: string): string {;
   return url.replace(/javascript:/gi, '');
 }

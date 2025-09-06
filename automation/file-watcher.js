@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -60,6 +61,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -84,6 +87,7 @@ class FileWatcher {
     this.debounceTimer = null;
     this.pendingChanges = new Set();
     // Ensure directories exist
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -211,11 +215,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     fs.appendFileSync(this.logFile, logMessage)}
   async validateFile(filePath) {
+=======
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());  async validateFile(filePath) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const issues = [];
       // Basic syntax checks
       if (content.includes('return()') && !content.includes('return ()')) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -242,10 +254,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         issues.push('Invalid return statement syntax');
       }
         issues.push('Merge conflict markers found');
       }
+<<<<<<< HEAD
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
@@ -291,6 +306,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        issues.push('Invalid return statement syntax');
+      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check for unmatched braces (simple check)
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
@@ -298,6 +317,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         issues.push('Unmatched braces detected');
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -349,11 +369,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -401,10 +424,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return issues;
+=======
+      // Check for React usage without import
+      if (content.includes('React.') && !content.includes('import React')) {;
+        issues.push('React used without import');
+      }      return issues;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {
       return [`File read error: ${error.message}`];
     }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -452,6 +482,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
         stdio: 'pipe',
@@ -464,6 +496,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -509,12 +542,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Auto-fix common issues
       const fixes = [
         {
           pattern: /return\(\)/g,
           replacement: 'return (',
           description: 'Fixed return statement syntax'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -576,6 +612,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         issues.push('Invalid return statement syntax')}
           "replacement": '',
           "description": 'Removed merge conflict markers'
@@ -585,6 +623,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           "description": 'Removed merge conflict markers'
         }
       ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -653,11 +692,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
+=======
+      for (const fix of fixes) {
+        if (fix.pattern.test(content)) {
+          content = content.replace(fix.pattern, fix.replacement);
+          modified = true;          this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       // Add React import if needed
       if (content.includes('React.') && !content.includes('import React')) {
         content = `import React from 'react';\n${content}`;
         modified = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -706,11 +752,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log(`Added React import to ${filePath}`)}
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (modified) {
         // Create backup
         const backupPath = `${filePath}.auto-backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
         // Write fixed content
+<<<<<<< HEAD
         fs.writeFileSync(filePath, content);
 <<<<<<< HEAD
 
@@ -814,6 +864,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log(`Auto-fixed "file": ${filePath}`);
+=======
+        fs.writeFileSync(filePath, content);        this.log(`Auto-fixed "file": ${filePath}`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return true}
       return false} catch (error) {
       this.log(`Error auto-fixing file ${filePath}: ${error.message}`, 'ERROR');
@@ -844,6 +897,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         }
       }
       results.files.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -946,6 +1000,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "path": filePath,
         "issues": issues,
         "typeErrors": typeErrors,
@@ -955,6 +1011,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');
     fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -993,12 +1050,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 >>>>>>> main
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Validation complete: ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
     this.pendingChanges.clear();
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -1083,6 +1141,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         clearTimeout(this.debounceTimer);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       this.debounceTimer = setTimeout(() => {
         this.processChanges().catch(error => {
@@ -1102,6 +1162,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     });
     return watcher;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1156,6 +1217,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         clearTimeout(this.debounceTimer)}
       this.debounceTimer = setTimeout(() => {
         this.processChanges().catch(error => {
@@ -1176,6 +1239,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       process.on('SIGTERM', () => {
         this.log('Received SIGTERM, closing watcher...');
         watcher.close();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1282,6 +1346,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         process.exit(0)});
       process.on('SIGINT', () => {
         this.log('Received SIGINT, closing watcher...');
@@ -1297,6 +1363,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 // Install chokidar if not present
 try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1429,6 +1496,13 @@ module.exports = FileWatcher;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+// Main execution
+if (require.main === module) {
+  const watcher = new FileWatcher();
+  watcher.run().catch(console.error);}
+module.exports = FileWatcher;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   require('chokidar')} catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { "stdio": 'inherit' })}
@@ -1437,6 +1511,7 @@ if (require.main === module) {
   const watcher = new FileWatcher();
   watcher.run().catch(console.error)}
 module.exports = FileWatcher;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1495,3 +1570,6 @@ module.exports = FileWatcher;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

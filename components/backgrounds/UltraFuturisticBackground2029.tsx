@@ -50,8 +50,9 @@ export default function UltraFuturisticBackground2029() {;
       const gradient = ctx.createRadialGradient(
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-    };
+      canvas && canvas.height = window && window.innerHeight
+};      canvas && canvas.height = window && window.innerHeight
+};
     // Initialize particles;
     const initParticles = () => {;
       const particles: Particle[] = [];
@@ -294,7 +295,7 @@ export default function UltraFuturisticBackground2029() {;
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
           ],        }}      {/* Animated gradient overlay */}
       <motion.div;
-        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30";
+        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to-purple-900 / 30";
         animate={{
           background: [;
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
@@ -340,7 +341,6 @@ export default function UltraFuturisticBackground2029() {;
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 
-
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
@@ -349,13 +349,14 @@ export default function UltraFuturisticBackground2029() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ filter: 'blur (0.5px)' }}
       />;
       {/* Additional visual layers */}
-      <div className="absolute inset - 0">;
+      <div className="absolute inset-0">;
         {/* Quantum field ripples */}
         <motion.div;
+<<<<<<< HEAD
           className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
 <<<<<<< HEAD
 =======
@@ -363,6 +364,9 @@ export default function UltraFuturisticBackground2029() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border-cyan-500 / 20";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           animate={{
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
@@ -450,7 +454,7 @@ export default function UltraFuturisticBackground2029() {;
         />;
         {/* Neural network nodes */}
         <motion.div;
-          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
+          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border-green-500 / 20";
           animate={{
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]

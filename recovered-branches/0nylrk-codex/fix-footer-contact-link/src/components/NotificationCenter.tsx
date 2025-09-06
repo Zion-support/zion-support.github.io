@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -17,13 +18,9 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
-import React, { useState, useEffect } from 'react';
-// Use the shared icon wrapper
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect } from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -31,46 +28,18 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export const NotificationCenter: React.FC = () => {;
-=======
-export const NotificationCenter: React.FC = () => {;
-
-import React, { useState, useEffect } from 'react',;
-// Use the shared icon wrapper;
-import { Bell } from '@/components/icons',;
-import { Button } from '@/components/ui/button',;
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',;
-import { useNotifications } from '@/context/notifications/NotificationContext',;
-import { toast } from 'sonner',;
-import { ;
-  NotificationFilter,;
-  NotificationHeader, ;
-  NotificationList, ;
-  NotificationFooter ;
-} from '@/components/notifications',;
-import { FilterType } from '@/components/notifications/NotificationFilter',;
-;
-export const NotificationCenter:React.FC = () => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const { ;
+export const NotificationCenter: React.FC = () => {;  const { ;
     filteredNotifications,;
     unreadCount, ;
     markAsRead, ;
-<<<<<<< HEAD
     markAllAsRead;
     dismissNotification, ;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loading;
     filter;
     setFilter;
     fetchNotifications;
+<<<<<<< HEAD
   } = useNotifications();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +117,9 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     dismissNotification, 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  } = useNotifications();    dismissNotification, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     loading,
     filter,
     setFilter,
@@ -156,6 +128,7 @@ export const NotificationCenter: React.FC = () => {
 
   const [open, setOpen] = useState(false),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -169,37 +142,13 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Refresh notifications when popover opens
   useEffect(() => {
     if (open) {
       const loadNotifications = async () => {
-        try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          await fetchNotifications(),
-          setError(null)
-        } catch (err) {
-          console.error("Failed to fetch notifications:", err),
-          setError("Couldn't load notifications"),
-          toast.error("Failed to load notifications")
-
-<<<<<<< HEAD
-=======
-        }
-      }
-      loadNotifications()
-    }
-  }, [open, fetchNotifications]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useState, useEffect } from 'react',;
+        try {import React, { useState, useEffect } from 'react',;
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
 import { Button } from '@/components/ui/button',;
@@ -220,41 +169,26 @@ export const NotificationCenter: React.FC = () => {;
     markAsRead,;
     markAllAsRead,;
     dismissNotification,;
-<<<<<<< HEAD
-=======
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-    markAllAsRead,;
-    dismissNotification, ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    loading,;
     filter,;
     setFilter,;
     fetchNotifications;
   } = useNotifications(),;
-<<<<<<< HEAD
   const [open, setOpen] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
-
-=======
-  ;
-  const [open, setOpen] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-;
-  const [open, setOpen] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Refresh notifications when popover opens;
   useEffect(() => {;
     if (open) {;
       const loadNotifications = async () => {;
         try {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           await fetchNotifications();
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           setError(null);
         } catch (err) {;
           console && console.error("Failed to fetch notifications:", err);
@@ -262,46 +196,20 @@ export const NotificationCenter: React.FC = () => {;
           toast && toast.error("Failed to load notifications");
         }
 
-<<<<<<< HEAD
-=======
-          await fetchNotifications(),;
-          setError(null);
-        } catch (err) {;
-          console.error("Failed to fetch notifications:", err),;
-          setError("Couldn't load notifications"),;
-          toast.error("Failed to load notifications");
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      },;
       loadNotifications();
     }
   }, [open, fetchNotifications]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleMarkAllAsRead = async () => {
-    try {
-=======
-      };
-
-      loadNotifications();
-    }
-
-
-=======
-      };
-      loadNotifications();
-    }
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const handleMarkAllAsRead = async () => {
+    try {  const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
       toast.success("All notifications marked as read")
@@ -309,35 +217,22 @@ export const NotificationCenter: React.FC = () => {;
       console.error("Failed to mark notifications as read:", err),
       toast.error("Failed to update notifications")
     }
-<<<<<<< HEAD
   }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  },
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
+<<<<<<< HEAD
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,12 +250,16 @@ export const NotificationCenter: React.FC = () => {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMarkAllAsRead = async () => {;
+=======
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">  const handleMarkAllAsRead = async () => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
     } catch (err) {;
       console && console.error("Failed to mark notifications as read:", err);
       toast && toast.error("Failed to update notifications");
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -515,58 +414,21 @@ if ( {) {
           onFilterChange={handleFilterChange}
 <<<<<<< HEAD
         />;
+=======
+    }        />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <NotificationList;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
-        />
-        <NotificationList
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        
-        <NotificationFilter 
-          filter={filter as FilterType} 
-          onFilterChange={handleFilterChange} 
-        />
-        <NotificationList 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        />;
-        <NotificationList;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
-  );
-
-
-
-
+  )
 };
           on_dismiss={dismiss_notification}
           on_retry={fetch_notifications}
@@ -576,6 +438,7 @@ if ( {) {
     </Popover>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -686,3 +549,5 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

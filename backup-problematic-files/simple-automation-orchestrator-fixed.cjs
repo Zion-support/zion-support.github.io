@@ -53,5 +53,10 @@ const { execSync } = require("child_process")
       this.log(`Results saved "to"`)
       this.log(`Failed to save "results": ${error.message}`, "ERROR"`)
       this.log(`Automation suite "failed": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.results.status = "failed"
+      this.results.status = "failed"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

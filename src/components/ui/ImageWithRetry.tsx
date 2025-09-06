@@ -29,12 +29,17 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
+<<<<<<< HEAD
 <<<<<<< HEAD
   src,
   alt = '',
@@ -121,44 +126,49 @@ export function ImageWithRetry(): any ({;
     setFailed(true);
     setCurrentSrc(fallbackSrc);  };
 
+=======
+}: ImageWithRetryProps) {
+  const [currentSrc, setCurrentSrc] = useState(src)
+  const [failed, setFailed] = useState(false)
+  const handleError = () => {
+    setFailed(true)
+    setCurrentSrc(fallbackSrc) }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleRetry = () => {;
     setFailed(false);
-    setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
-
-  };
-
-  const handleRetry = () => {;
-    setFailed(false);
-
-
-  };
-
-  const fill = !('width' in props) && !('height' in props);
-
+    setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
+  }
+  const handleRetry = () => {
+    setFailed(false)
+    setCurrentSrc(src);    setCurrentSrc(src)
+  }
+  const fill = !('width' in props) && !('height' in props)
   return (
-
-
-      <Image
+    <div className='relative inline-block'>      <Image    <div className="relative inline-block">      <Image
         {...props}
         src = {currentSrc,}
         alt = {alt,}
         onError = {handleError,}
         className = {cn(className),}
         fill = {fill,}
-      />
-      {failed && (
-        <button
-
-
-      )}
-    </div>
   );
+  )
+  ...props
+}: ImageWithRetryProps) {
+  const [currentSrc, setCurrentSrc] = useState(src),
+  const [failed, setFailed] = useState(false),
 
-}
+  const handleError = () => {
+    setFailed(true),
+    setCurrentSrc(fallbackSrc)
+  },
 
+  const handleRetry = () => {
+    setFailed(false),
+    setCurrentSrc(src)
+  },
 
-export default ImageWithRetry;
-
+  const fill = !('width' in props) && !('height' in props),
 
   const fill = !('width' in props) && !('height' in props);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -186,6 +196,7 @@ export default ImageWithRetry;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ImageWithRetry;
 =======
 export default ImageWithRetry;
@@ -196,3 +207,33 @@ export default ImageWithRetry;
   className,
   retryClassName,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  const fill = !('width' in props) && !('height' in props);
+  return (
+    <div className='relative inline - block'>      <Image    <div className="relative inline-block">;
+      <Image;
+        {...props}
+        src = {current_src, }
+        alt = {alt, }
+        on_error = {handle_error, }
+        class_name = {cn (class_name), }
+        fill = {fill, }
+      />;
+      {failed && (
+        <button;
+          type='button';
+          on_click={handle_retry}
+          className={cn (
+            'absolute bottom - 1 right - 1 text - xs underline',
+            retryClassName)}        >          on_click = {handle_retry, }
+          class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName), }
+          type="button";
+          on_click={handle_retry}
+          className={cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName)}
+        >;
+          Retry;
+        </button>)}
+    </div>);
+export default ImageWithRetry;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

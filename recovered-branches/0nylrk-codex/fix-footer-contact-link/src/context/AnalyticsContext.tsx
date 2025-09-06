@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
 import {use_location} from 'react-router-dom';
 import {use_auth} from '@/hooks / use_auth';
+<<<<<<< HEAD
 import {supabase} from '@/integrations / supabase / client';
 =======
 
@@ -52,6 +51,9 @@ export interface AnalyticsEvent {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {supabase} from '@/integrations / supabase / client';  type: AnalyticsEventType,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   path?: string;
   component?: string;
   elementId?: string;
@@ -66,9 +68,9 @@ export interface AnalyticsContextType {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
 export interface AnalyticsContextType {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,12 +81,15 @@ export interface AnalyticsContextType {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
   lastEvent: AnalyticsEvent | null
   events: AnalyticsEvent[]
   clearEvents: () => void
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -238,10 +243,14 @@ export interface AnalyticsContextType {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   pageViews: number,;
+=======
+}  pageViews: number,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   lastEvent: AnalyticsEvent | null,;
   events: AnalyticsEvent[],;
   clearEvents: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -265,6 +274,8 @@ export interface AnalyticsContextType {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -290,6 +301,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   // Function to track general analytics events
+<<<<<<< HEAD
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -332,22 +344,15 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
+=======
+  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {    try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
         event_type: type
         path: location.pathname
         user_id: user?.id
         metadata: metadata
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      }]);
-      console.log(`Analytics event tracked: ${type}`, metadata)
-    } catch (error) {
-      console.error('Error logging analytics event:', error)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   // Function to track conversion events
@@ -372,7 +377,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         lastEvent;
         events;
         clearEvents
-<<<<<<< HEAD
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
 );
@@ -382,16 +386,6 @@ export function AnalyticsProvider(): any ({ children }: { children: ReactNode })
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
   const location = useLocation();
   const { user } = useAuth();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      }]),
-      
-      // // // console.log(`Analytics event tracked: ${type}`, metadata)
-    } catch (error) {
-      console.error('Error logging analytics event:', error)
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  element_id?: string;
   timestamp: number,
   user_id?: string | null;
   metadata?: Record < string, any>;
@@ -492,6 +486,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
       // Store event in Supabase for persistent analytics;
       await supabase.from('analytics_events').insert([{;
         event_type: type,;
+<<<<<<< HEAD
         path: location.pathname,;
         user_id: user?.id,;
         metadata: metadata;
@@ -596,21 +591,11 @@ export interface AnalyticsContextType {;
 <<<<<<< HEAD
 
 =======
+=======
+        path: location.pathname,;}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const useAnalytics = (): AnalyticsContextType => {
   };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-
-      }}
-    >
-    } catch (error) {
-      console.error ('Error logging analytics event:', error);
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AnalyticsContext&& AnalyticsContext.Provider
       value={{
@@ -627,13 +612,10 @@ export const useAnalytics = (): AnalyticsContextType => {
   );
 }
 
-
 export const useAnalytics = (): AnalyticsContextType => {;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-
 
 export const useAnalytics = (): AnalyticsContextType => {;
 
@@ -651,6 +633,7 @@ export const useAnalytics = (): AnalyticsContextType => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 export const useAnalytics = (): AnalyticsContextType => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,16 +652,16 @@ export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const context = useContext(AnalyticsContext);
+=======
+export const useAnalytics = (): AnalyticsContextType => {;  const context = useContext(AnalyticsContext);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Cast is used here because the context default is undefined until provided;
+};  // Cast is used here because the context default is undefined until provided;
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
+<<<<<<< HEAD
   return context as AnalyticsContextType;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -686,9 +669,10 @@ export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  return context as AnalyticsContextType
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+};
   }
 ;
   // Function to track conversion events;
@@ -732,82 +716,10 @@ if ( {) {
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
   return context as AnalyticsContextType;
 }
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    }),;
-  },;
-  ;
-  // Clear events (for development or testing);
-  const clearEvents = () => {;
-    setEvents([]),;
-    setLastEvent(null),;
-  },;
-;
-  return (;
-    <AnalyticsContext.Provider;
-      value={{;
-        trackEvent,;
-        trackConversion,;
-        pageViews,;
-        lastEvent,;
-        events,;
-        clearEvents;
-      }}
-    >;
-      {children}
-    </AnalyticsContext.Provider>;
-  ),;
-}
-;
-export const useAnalytics = ():AnalyticsContextType => {;
-  const context = useContext(AnalyticsContext),;
-  if (!context) {;
-    throw new Error('useAnalytics must be used within an AnalyticsProvider'),;
-  }
-  // Cast is used here because the context default is undefined until provided;
-  // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
-  return context as AnalyticsContextType,;
-},; //Analytics event types export type AnalyticsEventType = | 'page view' | 'button click' | 'form submit' | 'form error' | 'search' | 'filter' | 'conversion' | 'listing view' | 'listing contact' | 'payment initiated' | 'payment completed' | 'signup' | 'login';
-//Interface for analytics events const AnalyticsContext = createContext<AnalyticsContextType | undefined> (undefined);
-//eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [location.pathname]);
-//Function to track general analytics events try {
-  //Store event in Supabase for persistent analytics await supabase.from ('analytics events') .insert ([ {
-  
-}catch (error) {
-  console.error ('Error logging analytics event:', error) 
-}
-};
-//Function to track conversion events const trackConversion = (conversionType: string, value?: number, metadata: Record<string any> = {
-  
-}) => {
-  trackEvent ('conversion', {
-  conversionType;
-value;
-...metadata 
-}) 
-};
-//Clear events (for development or testing) const clearEvents = () => {
-  setEvents ([]);
-setLastEvent (null) 
-};
-{
-  trackEvent, trackConversion, pageViews, lastEvent, events, clearEvents 
-}
-}> {
-  children 
-}</AnalyticsContext.Provider>) 
-}//Cast is used here because the context default is undefined until provided // by `AnalyticsProvider`. The runtime check above ensures it's defined. return context as AnalyticsContextType 
-};
-  // Cast is used here because the context default is undefined until provided;
-  // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
-  return context as AnalyticsContextType;
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 };
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -57,20 +58,28 @@ export type ProjectStatus =
   | "completed"
   | "canceled";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-  | 'completed';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+export type ProjectStatus =
+export type ProjectStatus = 
+export type ProjectStatus = 
+
+  | 'offer_sent'
+  | 'offer_accepted'
+  | 'changes_requested'
+  | 'in_progress'
+export type ProjectStatus =;
+  | 'offer_sent';
+  | 'offer_accepted';
+  | 'changes_requested';
+  | 'in_progress';  | 'completed';
   | 'canceled';
 export interface Project {
 
 export interface Project {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface Project {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  id: string;
+
+export interface Project {  id: string;
   client_id: string;
   talent_id: string;
   job_id: string;
@@ -82,62 +91,38 @@ export interface Project {
   created_at: string;
   updated_at: string;
   job?: {
-    title: string;
-    description: string;
-  };
+    title: string,
+  description: string
+};
   talent_profile?: {
     full_name: string;
     professional_title?: string;
-    profile_picture_url?: string;
-  };
+    profile_picture_url?: string
+};
   client_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-export interface ProjectNote {;
-
-
-<<<<<<< HEAD
-=======
-
-
-
-export interface ProjectNote {;
-
-
-    title: string
-    description: string
-  }
-  talent_profile?: {
-    full_name: string;
-    professional_title?: string
-    profile_picture_url?: string
-  }
-  client_profile?: {
-    display_name: string
     avatar_url?: string
-  }
+};
 }
-export interface ProjectNote {
 
 export interface ProjectNote {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export interface ProjectNote {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export interface ProjectNote {export interface ProjectNote {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   project_id: string;
   user_id: string;
   content: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,3 +199,7 @@ export interface ProjectNote {;
   };
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

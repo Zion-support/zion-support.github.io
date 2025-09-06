@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,9 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 =======
 =======
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -68,8 +72,8 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 ursor/add-new-services-and-deploy-updates-0462
@@ -111,3 +115,6 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

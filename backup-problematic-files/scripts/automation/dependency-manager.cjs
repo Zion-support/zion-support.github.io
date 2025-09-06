@@ -169,7 +169,11 @@ class $1 {}
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
       if (fs.existsSync(nodeModulesPath)) {}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } catch (error) {}
   status.packageJsonIssues.push({})
   "type": "PARSE_ERROR",
@@ -265,7 +269,11 @@ class $1 {}
             "current": info.current,
             "wanted": info.wanted,
             "latest": info.latest}))} catch {}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } catch (error) {}
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {}
@@ -501,5 +509,10 @@ async function $1() {}
 if (require.main === module) {}
   main()};
 ;
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

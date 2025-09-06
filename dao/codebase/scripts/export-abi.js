@@ -1,7 +1,6 @@
+
+
 <<<<<<< HEAD
-=======
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -19,28 +18,19 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
-<<<<<<< HEAD
 function main() {
   const outDir = path.join(__dirname, '../abi')
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
   const artifactsDir = path.join(__dirname, '../artifacts/contracts')
-=======
-
-=======
-const fs = require('fs'),
-const path = require('path'),
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-function main() {
 
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -49,6 +39,7 @@ function main() {
     ['ConstitutionStorage.solConstitutionStorage']
     ['Treasure/Disbursements.solDisbursements']
     ['Treasure/EpochManager.solEpochManager']]
+<<<<<<< HEAD
   for (const [rel, name] of abis) {
 <<<<<<< HEAD
 =======
@@ -84,3 +75,6 @@ function main() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  for (const [rel, name] of abis) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -15,6 +18,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 type DisputesListProps = {
@@ -79,11 +83,14 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
 
+<<<<<<< HEAD
 },
 
 =======
@@ -106,10 +113,14 @@ type DisputesListProps = {
       case "open": return "default",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "under_review":
+=======
+},      case "under_review":
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -118,12 +129,15 @@ type DisputesListProps = {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return "outline",
       default:
         return "default"
     }
 
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -251,16 +265,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
     switch (status) {;
       case "open": return "default",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case "under_review":;
         return "secondary",;
       case "resolved":;
         return "outline", // Changed from "success" to "outline";
       case "closed":;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -292,6 +303,7 @@ function DisputesList() {
         return "secondary",
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
+<<<<<<< HEAD
       case "closed":;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -349,6 +361,9 @@ function DisputesList() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
             </TableBody>;
+=======
+      case "closed":;            </TableBody>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Table>;
         </div>;
       </div>;
@@ -395,6 +410,7 @@ function DisputesList() {
         >;
           Resolved;
         </Button>;
+<<<<<<< HEAD
           onClick={() => setStatusFilter("closed")}
 <<<<<<< HEAD
 
@@ -819,6 +835,9 @@ if ( {) {
                 <TableCell>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+=======
+          onClick={() => setStatusFilter("closed")}                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {dispute.status.replace('_ ')}
                   </Badge>;
                 </TableCell>;
@@ -850,8 +869,6 @@ export function DisputesList ({
   switch (status) {
   
 }
-<<<<<<< HEAD
-;
 
 };
 if (isLoading) {
@@ -875,7 +892,11 @@ if (isLoading) {
 }</TableBody> </Table> </div> </div>) 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

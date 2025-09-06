@@ -34,8 +34,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 function readAllGrants(): GrantApplication[] {

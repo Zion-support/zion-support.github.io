@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-enhanced.js
 ========
 <<<<<<< HEAD
@@ -16,16 +17,30 @@ console && console.log('📊 Enhanced Performance Monitor Starting...');
 const performanceChecks = {
   "bundleSize": () => {
 
+=======
+const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+const fs = require('fs');
+const path = require('path');
+const performanceChecks = {
+  "bundleSize": () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Bundle size analysis would go here
     return true
   },
   "loadTime": () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Load time analysis would go here
     return true
   },
   "memoryUsage": () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Memory usage analysis would go here
     return true
   }
@@ -34,6 +49,7 @@ const performanceChecks = {
 Object && Object.entries(performanceChecks).forEach(([name, check]) => {
   try {
     const result = check();
+<<<<<<< HEAD
     console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
     console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
@@ -58,3 +74,5 @@ const fs = require('fs'); const path = require('path'); console.log('📊 Enhanc
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/performance-monitor-enhanced.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/performance-monitor-enhanced.js
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

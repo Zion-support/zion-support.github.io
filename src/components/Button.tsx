@@ -51,12 +51,16 @@ const Button: React.FC<ButtonProps> = ({
     secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
 <<<<<<< HEAD
+<<<<<<< HEAD
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   };
+=======
+    ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -82,7 +86,7 @@ const Button: React.FC<ButtonProps> = ({
       {loading && <LoadingSpinner size="sm" />}
       {children}
     </motion.button>
-  );
+  )
 };
 
 export default Button;

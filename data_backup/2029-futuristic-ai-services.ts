@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,11 +24,13 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface FuturisticAiService2029 {
   "id": string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -57,6 +60,7 @@ address: string};export const "futuristicAIServices2029": FuturisticAiService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 <<<<<<< HEAD
@@ -100,10 +104,21 @@ export interface FuturisticAiService2029 { id: string; name: string; tagline: st
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export interface FuturisticAiService2029 {
+=======
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}export interface FuturisticAiService2029 {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "id": string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -133,6 +148,7 @@ address: string};export const "futuristicAIServices2029": FuturisticAiService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,11 +201,22 @@ export interface FuturisticAiService2029 { id: string; name: string; tagline: st
 export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+=======
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface FuturisticAiService2029 { id: string; name: string; tagline: string; price: string,
+  description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const futuristicAIServices2029: FuturisticAiService2029[] = [ { id: "2029-futuristic-ai",name: "2029 Futuristic AI Platform",tagline: "Futuristic AI for 2029",price: "$499/month",description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",features[ "Futuristic AI","Advanced capabilities","Breakthrough algorithms","Innovation platform","Future-ready AI" ],link: "/services/2029-futuristic-ai",category: "Futuristic AI 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface FuturisticAiService2029 {
   "id": string;
   name: string;
   tagline: string;
-  price: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -219,8 +246,11 @@ address: string};export const "futuristicAIServices2029": FuturisticAiService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

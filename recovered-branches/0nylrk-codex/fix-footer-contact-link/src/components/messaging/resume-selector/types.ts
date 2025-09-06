@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Resume } from "@/types/resume";
@@ -8,10 +9,13 @@ export interface ResumeOption {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { Resume  } from '@/types / resume';
 
 export interface ResumeOption {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -21,11 +25,14 @@ export interface ResumeOption {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
   file?: File
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export interface ResumeSelectorProps {
@@ -47,6 +54,9 @@ export interface ResumeSelectorProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Resume } from "@/types/resume",
+=======
+}import { Resume } from "@/types/resume",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ResumeOption {
   id: string,
   title: string,
@@ -63,6 +73,7 @@ export interface ResumeOption {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
 =======
@@ -73,19 +84,20 @@ export interface ResumeSelectorProps {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   onResumeSelected: (resumeOption: ResumeOption) => void;
-=======
+  onResumeSelected: (resume_option: ResumeOption) => void;  onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
 export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

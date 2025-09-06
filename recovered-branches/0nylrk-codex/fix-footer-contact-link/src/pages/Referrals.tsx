@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -7,6 +8,24 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+import { useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useReferrals  } from '@/hooks/useReferrals';
+import { ReferralStats  } from '@/components/referrals/ReferralStats';
+import { ReferralLink  } from '@/components/referrals/ReferralLink';
+import { ReferralTable  } from '@/components/referrals/ReferralTable';
+import { RewardsCard  } from '@/components/referrals/RewardsCard';
+import { ReferralGuide  } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button  } from '@/components/ui/button';
+import { toast  } from '@/hooks/use-toast';
+import { Share, Users  } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+export default function ReferralsPage() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {useReferrals} from '@/hooks / useReferrals';
@@ -22,11 +41,19 @@ import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {use_navigate} from 'react-router-dom';
+=======
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const {;
+    isLoading;
+    referralCode;import {use_navigate} from 'react-router-dom';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default /**
  * ReferralsPage - Function description
  */
@@ -38,11 +65,14 @@ function ReferralsPage() {
     referral_code;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect  } from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
 import { ReferralStats  } from '@/components/referrals/ReferralStats';
@@ -79,25 +109,12 @@ import {Share, Users} from 'lucide-react';
   const {;
     isLoading;
     referralCode;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import {use_navigate} from 'react-router-dom';
-export default /**
- * ReferralsPage - Function description
- */
-function ReferralsPage() {
-  const navigate = use_navigate ();
-  const { is_authenticated } = use_auth ();
-  const {
-    is_loading;
-    referral_code;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     referrals;
     rewards;
     stats;
     getReferralLink;
     copyReferralLink;
+<<<<<<< HEAD
 <<<<<<< HEAD
     shareOnSocialMedia} = useReferrals();
 =======
@@ -142,6 +159,9 @@ export default function ReferralsPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -159,15 +179,7 @@ import { Share, Users } from 'lucide-react',
 import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {
   const navigate = useNavigate(),
-  const { isAuthenticated } = useAuth(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const {
+  const { isAuthenticated } = useAuth(),  const {
     isLoading,
     referralCode,
     referrals,
@@ -177,6 +189,7 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -258,21 +271,22 @@ export default function ReferralsPage() {
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     if (!isAuthenticated) {;
       toast({;
-        title: "Authentication required",;
-        description: "Please login to access the referral program",;
+        title: "Authentication required",,
+  description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-
 
   }, [isAuthenticated, navigate]),
 
   const referralLink = getReferralLink(),
 
+<<<<<<< HEAD
 
 
   return (
@@ -301,6 +315,8 @@ export default function ReferralsPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -316,14 +332,7 @@ import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
 import { Share, Users } from 'lucide-react',;
 import { useNavigate } from 'react-router-dom',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ReferralsPage() {;
   const navigate = useNavigate(),;
   const { isAuthenticated } = useAuth(),;
@@ -339,33 +348,14 @@ export default function ReferralsPage() {;
   useEffect(() => {;
     if (!isAuthenticated) {;
       toast({;
-        title: "Authentication required",;
-        description: "Please login to access the referral program",;
+        title: "Authentication required",,
+  description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
     }
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
-<<<<<<< HEAD
   return (;
-<<<<<<< HEAD
-
-=======
-;
-  useEffect(() => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title:"Authentication required",;
-        description:"Please login to access the referral program",;
-        variant:"destructive"}),;
-      navigate("/login"),;
-    }
-  }, [isAuthenticated, navigate]),;
-;
-  const referralLink = getReferralLink(),;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
         <div>;
@@ -379,7 +369,6 @@ export default function ReferralsPage() {;
           Share Referral Link;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
       <ReferralStats stats={stats} isLoading={isLoading} />;
 
@@ -390,23 +379,6 @@ export default function ReferralsPage() {;
             onCopy={copyReferralLink} 
             onShare={shareOnSocialMedia}
           />;
-
-=======
-;
-      <ReferralStats stats={stats} isLoading={isLoading} />;
-      ;
-      <div className="grid gap-6 mt-6 lg:grid-cols-3">;
-        <div className="lg:col-span-2 space-y-6">;
-          <ReferralLink ;
-      <ReferralStats stats={stats} isLoading={isLoading} />;
-      <div className="grid gap-6 mt-6 lg:grid-cols-3">;
-        <div className="lg:col-span-2 space-y-6">;
-          <ReferralLink;
-            referralLink={referralLink} ;
-            onCopy={copyReferralLink} ;
-            onShare={shareOnSocialMedia}
-          />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -426,8 +398,8 @@ export default function ReferralsPage() {;
             </TabsContent>;
           </Tabs>;
         </div>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         <div className="space-y-6">;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -578,3 +550,8 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <div className="space-y-6">;;
+        <div className="space-y-6">;
+        <div className="space-y-6">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

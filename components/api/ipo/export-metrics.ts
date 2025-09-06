@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -22,6 +23,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
@@ -31,20 +36,11 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
     ['MetricValueTrend%'];
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -55,11 +51,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).send(csv)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
@@ -84,6 +83,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['CAC/LTV ratio1: 5 && 5.60.4']], const csv = rows && rows.map(r => r && r.map(v => String(v)).join()).join('\n'),  res && res.setHeader('Content-Typetext/csv');
   res && res.setHeader('Content-Dispositionattachment, filename="ipo-metrics && metrics.csv"');
   res && res.status(200).send(csv)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -114,18 +114,18 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
-
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

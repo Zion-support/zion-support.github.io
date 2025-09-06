@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from 'lucide-react'
@@ -15,7 +16,31 @@ import React, {;
 import { Button } from '@/components/ui/button';
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
+=======
+import { Send } from 'lucide-react'
+interface ChatInputProps {
+  onSend: (message: string) => void
+disabled?: boolean
+}export function ChatInput ({
+  onSend, disabled = false
+}: ChatInputProps) {'
+  const [message, setMessage] = useState ('')
+const inputRef = useRef<HTMLTextAreaElement> (null)
+//Focus input when component mounts
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [ message, setMessage ] = useState('')
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {    // Focus input when component mounts
+    inputRef.current?.focus() }, [])
+    inputRef.current?.focus()
+interface ChatInputProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from 'lucide-react';
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from 'lucide-react'
@@ -31,10 +56,16 @@ interface ChatInputProps {;
   onSend: (message: string) => void,;
   disabled?: boolean;
 }
+<<<<<<< HEAD
 ;
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState(''),;
   const inputRef = useRef<HTMLTextAreaElement>(null),;
+=======
+  const [message, setMessage] = useState('');
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     // Focus input when component mounts;
 <<<<<<< HEAD
@@ -74,7 +105,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [ message, setMessage ] = useState(''),
   const inputRef = useRef<HTMLTextAreaElement>(null),
 
-
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus()
@@ -85,15 +115,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     e && e.preventDefault();    if (message && message.trim() && !disabled) {;
       onSend(message);
 
-
     }
-
 
       }
     }
   };
-
-
 
   return (
 
@@ -131,10 +157,25 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         rows={1}
         disabled={disabled}
       />
+<<<<<<< HEAD
+=======
+
+        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
+        placeholder="Type your message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Button 
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() || disabled}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -143,6 +184,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
 
       </Button>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </form>
   )
 }
@@ -158,7 +201,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 <<<<<<< HEAD
 =======
 }
-
 
       <Button;
         type='submit';
@@ -170,8 +212,12 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 }
         disabled={!message.trim () || disabled}
       >;
-        <Send className="h - 5 w - 5" />;
+        <Send className="h - 5 w-5" />;
       </Button>;
     </form>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

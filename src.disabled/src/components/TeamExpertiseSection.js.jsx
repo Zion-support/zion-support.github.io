@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,6 @@ const teamMembers = [{ id: "1",name: "Dr.Sarah Chen"," role: "Chief Technology O
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const teamMembers = [{ id: "1",name: "Dr.Sarah Chen"," role: "Chief Technology Officer"," expertise: "AI & Machine Learning"," experience: "15+ years"," avatar: "/avatars/sarah-chen.jpg"," bio: "Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing."," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"],;" achievements["50+ AI Projects","15 Research Papers","AI Innovation Award 2023"],; rating: "4.9",projects: "45"," location: "San Francisco,CA"," linkedin: "https:}'"'"=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

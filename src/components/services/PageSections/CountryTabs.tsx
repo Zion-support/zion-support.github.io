@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import {;
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';import {;
   Pagination,;
   PaginationContent,;
   PaginationItem,;
@@ -26,8 +25,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   setSearchQuery: (query: string) => void;
 }
 
@@ -39,8 +41,6 @@ import { CountryPricing } from '@/data/onsiteServicePricing';
     (currentPage - 1) * countriesPerPage,;
     currentPage * countriesPerPage;
   );
-
-
 
 export function CountryTabs({
   popularCountries,
@@ -98,15 +98,22 @@ export function CountryTabs({
 =======
           value='featured'
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
+=======
+      <TabsContent value="featured" className="mt-0">
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-white text-center">
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Featured Service Locations
           </h2>
-          <p className="text-zion-slate-light text-center mt-2">
+          <p className='text-zion-slate-light text-center mt-2'>
             Browse our most popular service destinations
           </p>
         </div>
@@ -228,7 +235,6 @@ export function CountryTabs({
                     }}
 =======
 
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
@@ -283,6 +289,27 @@ export function CountryTabs({
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.max(1, currentPage - 1));
                     }}
+                  />;
+                </PaginationItem>;
+                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  page => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton
+                        page={page}
+                        isActive={page === currentPage}
+                        onClick={e => {;
+                          e && e.preventDefault();
+                          setCurrentPage(page);                        }}
+                      />;
+                    </PaginationItem>;
+                  );
+                )}
+                <PaginationItem>;
+                  <PaginationNext
+                    href={`?page=${currentPage + 1}`}
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
                   />;
                 </PaginationItem>;
               </PaginationContent>;
@@ -427,11 +454,9 @@ function CountryTabs() {
   );
 }
 
-
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
-
 
                     }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -471,7 +496,6 @@ function CountryTabs() {
 }
 ;
 =======
-
 
                 )}
                 <PaginationItem>;

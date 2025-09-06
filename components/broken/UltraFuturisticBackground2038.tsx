@@ -763,10 +763,7 @@ if ( {) {
 =======
                   top: `${(i * 3) % 100}%`,
 
-
-
                   left: `${(i * 5) % 100}%`,
-
 
                 }}
                   left: `${(i * 5) % 100}%`
@@ -907,7 +904,6 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
-
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
               <motion&& motion.div
@@ -916,8 +912,12 @@ if ( {) {
               <motion.div;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 key={i}
+<<<<<<< HEAD
                 className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                className="absolute w - 96 h - 96 border border - pink-500 / 20 rounded-full";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 style={{
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`}}
@@ -942,14 +942,16 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
-
                   left: `${(i * 12) % 100}%`,
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -989,9 +991,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {children}
     </div>;
-  );
-
-
+  )
 };
 // Enhanced animation loop with consciousness and quantum effects ;
 

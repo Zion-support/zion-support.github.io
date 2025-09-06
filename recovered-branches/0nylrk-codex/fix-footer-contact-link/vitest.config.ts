@@ -11,6 +11,7 @@ import path from 'node: path'
 export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     globals: true}});
 =======
@@ -22,12 +23,15 @@ export default defineConfig({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup && setup.ts',
 
     globals: true}});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -46,6 +50,8 @@ export default defineConfig({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {define_config} from 'vitest / config';
 import path from 'node: path',
 export default define_config ({
@@ -54,38 +60,7 @@ export default define_config ({
       '@': path.resolve (__dirname, './src')}}
   test: {
     environment: 'jsdom';
-    setup_files: './tests / setup.ts',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')}}
-  test: {
-    environment: 'jsdom';
-
-    setupFiles: './tests/setup.ts'
-    globals: true}});
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  resolve: {;
-    alias: {;
-      '@': path.resolve(__dirname, './src')}};
-  test: {
-    environment: 'jsdom';
-    setupFiles: './tests/setup.ts',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { defineConfig } from 'vitest/config',;
+    setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config',;
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;
@@ -94,6 +69,7 @@ export default defineConfig({;
   test: {;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';
+<<<<<<< HEAD
     globals: true}});
 <<<<<<< HEAD
 ;
@@ -106,3 +82,6 @@ export default defineConfig({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    globals: true}});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

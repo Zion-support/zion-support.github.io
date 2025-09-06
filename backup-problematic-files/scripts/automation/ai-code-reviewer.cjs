@@ -196,5 +196,10 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
