@@ -95,15 +95,12 @@ import {
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const serviceCategories = [
   {
     title: '🚀 2028 Cutting-Edge Innovations'
@@ -118,20 +115,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -178,14 +171,12 @@ import {;
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building;
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const serviceCategories = [;
   {;
     title: '🚀 2028 Cutting-Edge Innovations',;
@@ -352,8 +343,131 @@ const technologyLinks = [
   { name: '🔄 Automation', href: '/automation', icon: Cpu },];  { name: '🔄 Automation', href: '/automation', icon: Cpu }
 ];
 
-export default function UltraFuturisticNavigation2027() {
-export default function UltraFuturisticNavigation2027() {;
+const _serviceCategories = [
+  {_title: '🚀 2028 Cutting-Edge Innovations', _icon: Rocket, _color: 'from-violet-600 to-purple-600', _description: 'Beyond the future of technology', _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform', _description: 'Evolve AI beyond human limits', _price: '$9, _999/month'},
+      {_name: 'Quantum Consciousness Interface', _href: '/quantum-consciousness-interface', _description: 'Bridge quantum computing with consciousness', _price: '$15, _999/month'},
+      {_name: 'Autonomous AI Civilization', _href: '/autonomous-ai-civilization-platform', _description: 'Create AI civilizations', _price: '$19, _999/month'},
+      {_name: 'Quantum Time Manipulation', _href: '/quantum-time-manipulation-platform', _description: 'Manipulate time through quantum computing', _price: '$25, _999/month'}
+    ]
+  },
+  {_title: '🎯 2028 Practical Micro SAAS', _icon: Target, _color: 'from-blue-600 to-cyan-600', _description: 'Real business solutions for today', _services: [
+      { name: 'AI Customer Success Automation', _href: '/ai-customer-success-automation-2028', _description: 'Automate customer success with AI', _price: '$299/month'},
+      {_name: 'Smart Inventory Management', _href: '/smart-inventory-management-2028', _description: 'AI inventory optimization', _price: '$399/month'},
+      {_name: 'Automated HR Recruitment', _href: '/automated-hr-recruitment-2028', _description: 'AI-powered hiring automation', _price: '$249/month'},
+      {_name: 'AI Content Marketing Suite', _href: '/ai-content-marketing-suite-2028', _description: 'AI-powered content creation', _price: '$199/month'}
+    ]
+  },
+  {_title: '⚛️ 2028 Quantum & Space Tech', _icon: Atom, _color: 'from-indigo-600 to-blue-600', _description: 'Quantum computing and space exploration', _services: [
+      { name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway-2028', _description: 'Unbreakable quantum encryption', _price: '$3, _999/month'},
+      {_name: 'Quantum Neural Interface', _href: '/quantum-neural-interface-platform-2028', _description: 'Brain-computer quantum interface', _price: '$8, _999/month'},
+      {_name: 'Space Debris Management AI', _href: '/space-debris-management-ai-2028', _description: 'AI space safety and management', _price: '$5, _999/month'},
+      {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-algorithm-platform-2028', _description: 'Quantum trading algorithms', _price: '$12, _999/month'}
+    ]
+  },
+  {_title: '🤖 2028 AI & Machine Learning', _icon: Brain, _color: 'from-emerald-600 to-teal-600', _description: 'Next-generation AI solutions', _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform-2028', _description: 'Evolve AI beyond human limits', _price: '$9, _999/month'},
+      {_name: 'Autonomous AI Civilization', _href: '/autonomous-ai-civilization-platform-2028', _description: 'Create AI civilizations', _price: '$19, _999/month'},
+      {_name: 'AI Healthcare Companion', _href: '/ai-healthcare-companion-2028', _description: 'Revolutionary healthcare AI', _price: '$399/month'},
+      {_name: 'AI Content Creation Revolution', _href: '/ai-content-creation-revolution-2028', _description: 'Unlimited AI content generation', _price: '$599/month'}
+    ]
+  },
+  {_title: '🏢 2028 Enterprise Solutions', _icon: Shield, _color: 'from-red-600 to-orange-600', _description: 'Enterprise-grade solutions', _services: [
+      { name: 'Zero Trust Architecture 2028', _href: '/zero-trust-network-architecture-2028', _description: 'Next-gen security architecture', _price: 'Custom pricing'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration-2028', _description: 'Intelligent edge computing', _price: 'Custom pricing'},
+      {_name: '5G Private Networks', _href: '/5g-private-network-solutions-2028', _description: 'Enterprise 5G solutions', _price: 'Custom pricing'},
+      {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform-2028', _description: 'Enterprise blockchain', _price: 'Custom pricing'}
+    ]
+  },
+  {_title: '🌌 2028 Metaverse & Digital Reality', _icon: Globe, _color: 'from-pink-600 to-rose-600', _description: 'Virtual and augmented reality', _services: [
+      { name: 'Holographic Metaverse', _href: '/holographic-metaverse-development-platform-2028', _description: '3D holographic experiences', _price: '$2, _999/month'},
+      {_name: 'AI Multiverse Creation', _href: '/ai-multiverse-creation-platform-2028', _description: 'Create AI-powered multiverses', _price: '$29, _999/month'},
+      {_name: 'Virtual Event Holograms', _href: '/virtual-event-hologram-platform-2028', _description: 'Holographic event platform', _price: '$1, _999/month'},
+      {_name: 'Digital Reality Interface', _href: '/digital-reality-interface-2028', _description: 'Next-gen reality interface', _price: '$4, _999/month'}
+    ]
+  }
+],
+
+const companyLinks = [
+  { name: '🏠 Home', href: '/', icon: Home },
+  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket },
+  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
+  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
+  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
+services: [;
+      {
+        name: 'Holographic Metaverse',
+        href: '/holographic - metaverse - development - platform - 2028',
+        description: '3D holographic experiences',
+        price: '$2, 999 / month',
+      },
+      {
+        name: 'AI Multiverse Creation',
+        href: '/ai - multiverse - creation - platform - 2028',
+        description: 'Create AI - powered multiverses',
+        price: '$29, 999 / month',
+      },
+      {
+        name: 'Virtual Event Holograms',
+        href: '/virtual - event - hologram - platform - 2028',
+        description: 'Holographic event platform',
+        price: '$1, 999 / month',
+      },
+      {
+        name: 'Digital Reality Interface',
+        href: '/digital - reality - interface - 2028',
+        description: 'Next - gen reality interface',
+        price: '$4, 999 / month',
+      },
+    ],
+  }, ];
+;
+const company_links = [;
+  { name: '🏠 Home', href: '/', icon: Home },      { name: 'Holographic Metaverse', href: '/holographic - metaverse - development - platform - 2028', description: '3D holographic experiences', price: '$2, 999 / month' }
+      { name: 'AI Multiverse Creation', href: '/ai - multiverse - creation - platform - 2028', description: 'Create AI - powered multiverses', price: '$29, 999 / month' }
+      { name: 'Virtual Event Holograms', href: '/virtual - event - hologram - platform - 2028', description: 'Holographic event platform', price: '$1, 999 / month' }
+      { name: 'Digital Reality Interface', href: '/digital - reality - interface - 2028', description: 'Next - gen reality interface', price: '$4, 999 / month' }
+    ];
+  }
+const company_links = [;
+  { name: '🏠 Home', href: '/', icon: Home },
+  {
+    name: '🚀 2028 Services',
+    href: '/ultimate - 2028 - services - showcase',
+    icon: Rocket,
+  },
+  {
+    name: '⭐ Ultimate 2028',
+    href: '/ultimate - 2028 - services - showcase',
+    icon: Star,
+  },
+  {
+    name: '💰 2028 Pricing',
+    href: '/revolutionary - 2028 - pricing',
+    icon: DollarSign,
+  },  { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },  { name: '🚀 2028 Services', href: '/ultimate - 2028 - services - showcase', icon: Rocket },
+  { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
+  { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
+  { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: '📈 Reports', href: '/reports', icon: TrendingUp },
+  { name: '🔧 Solutions', href: '/solutions', icon: Layers },
+  { name: '💼 Careers', href: '/careers', icon: Users },
+
+  { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
+  { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom },
+  { name: '☁️ Cloud Platform', href: '/cloud-platform', icon: Cloud },
+  { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
+  { name: '📊 Analytics', href: '/analytics', icon: Database },
+  { name: '🔄 Automation', href: '/automation', icon: Cpu }
+
+];
+
+
+
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -368,13 +482,11 @@ export default function UltraFuturisticNavigation2027() {;
 
       setIsScrolled(window.scrollY > 20)
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isClient]);
 
   const navigation = [
-=======
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }, ];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
 ];
 ;
@@ -504,7 +616,6 @@ const companyLinks = [;
   { name: '💼 Careers', href: '/careers', icon: Users },;
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const technologyLinks = [;
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },;
   { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom },;
@@ -513,30 +624,23 @@ const technologyLinks = [;
   { name: '📊 Analytics', href: '/analytics', icon: Database },;
   { name: '🔄 Automation', href: '/automation', icon: Cpu },];  { name: '🔄 Automation', href: '/automation', icon: Cpu }
 ];
-
 export default function UltraFuturisticNavigation2027() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {;
     setIsClient(true);  }, []);    setIsClient(true);
   }, []);
-
   useEffect(() => {;
     if (!isClient) return;
-
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
-
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);  }, [isClient]);      setIsScrolled(window && window.scrollY > 20);
     };
-
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const navigation = [;
     {;
       name: 'AI & Machine Learning',;
@@ -885,7 +989,6 @@ export default function UltraFuturisticNavigation2027() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
   };
-
   const quickLinks = [;
     {;
       name: 'Pricing',;
@@ -904,12 +1007,9 @@ export default function UltraFuturisticNavigation2027() {;
     },;
     { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> },;
   ];
-
-
     >;
       {/* Animated Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />;
-
       <div className='relative container mx-auto px-4'>;
         <div className='flex items-center justify-between h-20'>;
 
@@ -919,46 +1019,104 @@ export default function UltraFuturisticNavigation2027() {;
             className='flex items-center space-x-3 group relative z-10'>;
             <motion&& motion.div
               className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Zap className='w-7 h-7 text-white' />
-            </motion.div>
-            <div className='hidden sm:block'>
-              <div className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300'>
-                Zion Tech Group
-              </div>
-              <div className='text-xs text-gray-400 group-hover:text-cyan-300 transition-colors'>                Revolutionary Technology Solutions  }
-  const quickLinks = [
-    { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> }
-    { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
-    { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> }
-    { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
-  ];
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20'
-        : 'bg-transparent'
-    }`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
-      <div className="relative container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group relative z-10">
-            <motion.div
-              className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Zap className="w-7 h-7 text-white" />
-            </motion.div>
-            <div className="hidden sm:block">
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
-                Zion Tech Group
-              </div>
-              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
+
+    };
+    {
+      name: 'Quantum Technology',
+      href: '/services?category=Quantum%20Computing',
+      description: '50+ Quantum Solutions',
+icon: <Atom className="w-5 h-5" />,
+      color: 'from-blue-500 to-cyan-600',
+      children: [
+        { 
+          name: 'Quantum Neural Interface',
+          href: '/services/quantum-neural-interface',
+          description: 'Quantum + Neural Networks',
+          price: '$8,999/month',
+    icon: '⚛️'
+        };
+        { 
+          name: 'Quantum Financial Trading',
+          href: '/services/quantum-financial-trading',
+          description: 'Quantum-powered trading',
+          price: '$9,999/month',
+    icon: '💰'
+        };
+        { 
+          name: 'Quantum Internet Protocol',
+          href: '/services/quantum-internet-protocol',
+          description: 'Quantum communication network',
+          price: '$7,999/month',
+    icon: '🌐'
+        };
+        { 
+          name: 'Quantum Sensors Network',
+          href: '/services/quantum-sensors-network',
+          description: 'Ultra-precise quantum sensors',
+          price: '$9,999/month',
+    icon: '📡'
+        };
+        { 
+          name: 'View All Quantum Services',
+          href: '/services?category=Quantum%20Computing',
+          description: 'Explore quantum solutions',
+          icon: '🚀'
+        }
+      ]
+    };
+    {
+      name: 'Emerging Tech',
+      href: '/services?category=Emerging%20Technology',
+      description: '100+ Future Solutions',
+icon: <Rocket className="w-5 h-5" />,
+      color: 'from-green-500 to-emerald-600',
+      children: [
+        { 
+          name: 'Holographic Metaverse',
+          href: '/services/holographic-metaverse-platform',
+          description: '3D immersive experiences',
+          price: '$3,999/month',
+    icon: '🎭'
+        };
+        { 
+          name: 'Neuromorphic Computing',
+          href: '/services/neuromorphic-computing',
+          description: 'Brain-inspired computing',
+          price: '$8,999/month',
+    icon: '🧠'
+        };
+        { 
+          name: 'Synthetic Biology',
+          href: '/services/synthetic-biology-platform',
+          description: 'AI-powered bioengineering',
+          price: '$15,999/month',
+    icon: '🧬'
+        };
+        { 
+          name: 'Brain-Computer Interface',
+          href: '/services/brain-computer-interface',
+          description: 'Direct brain communication',
+          price: '$19,999/month',
+    icon: '💻'
+        };
+        { 
+          name: 'View All Emerging Tech',
+          href: '/services?category=Emerging%20Technology',
+          description: 'Explore future solutions',
+          icon: '🚀'
+        }
+      ]
+    };
+    {
+      name: 'Business Solutions',
+      href: '/services?category=Business%20Operations',
+      description: '150+ Business Tools',
+icon: <Target className="w-5 h-5" />,
+      color: 'from-orange-500 to-red-600',
+      children: [
+        { 
+=======
+
         {          name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
           description: 'Advanced AI consciousness simulation',
@@ -1027,7 +1185,7 @@ export default function UltraFuturisticNavigation2027() {;
       name: 'Cybersecurity',
       href: '/services?category=Cybersecurity',
       description: '75+ Security Solutions',
-      icon: <Shield className="w-5 h-5" />,
+icon: <Shield className="w-5 h-5" />,
       color: 'from-red-500 to-pink-600',
       children: [
         { 
@@ -1070,7 +1228,7 @@ export default function UltraFuturisticNavigation2027() {;
       name: 'Enterprise IT',
       href: '/services?category=Enterprise%20IT',
       description: '100+ Enterprise Solutions',
-      icon: <Building className="w-5 h-5" />,
+icon: <Building className="w-5 h-5" />,
       color: 'from-indigo-500 to-purple-600',
       children: [
         { 
@@ -1079,51 +1237,18 @@ export default function UltraFuturisticNavigation2027() {;
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
 
-          icon: '☁️',
-        },
-        {          name: 'Edge Computing Orchestration',
-          href: '/services/edge-computing-orchestration',
-          description: 'Distributed edge management',
-          price: '$3,499/month',
-          icon: '🌐',
-        },
-        {          name: 'AI Operations Center',
-          href: '/services/enterprise-ai-operations-center',
-          description: 'Centralized AI management',
-          price: '$8,999/month',
-          icon: '🏢',
-        },
-        {          name: 'Infrastructure Drift Detection',
-          href: '/services/infrastructure-drift-detector',
-          description: 'Automated infrastructure monitoring',
-          price: '$2,999/month',
-          icon: '🔍',
-        },
-        {
-          name: 'View All Enterprise Solutions',
-          href: '/services?category=Enterprise%20IT',
-          description: 'Explore enterprise tools',
-          icon: '🚀',
-        },
-      ],
-    },  ];          icon: '🚀'
-        }
-      ]
-    }
 
+  ];
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+};
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> }
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> }
-=======
               whileHover={{ rotate: 5, scale: 1 && 1.1 }}
               whileTap={{ scale: 0 && 0.95 }}>;
               <Zap className='w-7 h-7 text-white' />;
@@ -1133,12 +1258,10 @@ export default function UltraFuturisticNavigation2027() {;
                 Zion Tech Group;
               </div>;
               <div className='text-xs text-gray-400 group-hover:text-cyan-300 transition-colors'>                Revolutionary Technology Solutions  };
-
   const quickLinks = [;
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },;
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },;
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
   return (
@@ -1173,7 +1296,6 @@ export default function UltraFuturisticNavigation2027() {;
           </Link>
 
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />;
-
       <div className="relative container mx-auto px-4">;
         <div className="flex items-center justify-between h-20">;
           {/* Logo */}
@@ -1189,7 +1311,6 @@ export default function UltraFuturisticNavigation2027() {;
                 Zion Tech Group;
               </div>;
               <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">;
-=======
           price: '$299 / month',
           icon: '📝',
         },
@@ -1637,6 +1758,7 @@ export default function UltraFuturisticNavigation2027() {;
                       animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                       exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
+<<<<<<< HEAD
                       className='absolute top - full left - 0 mt - 2 w - 96 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
                     >;
                       <div className='p - 4'>;
@@ -1686,6 +1808,7 @@ export default function UltraFuturisticNavigation2027() {;
                           </div>
                           <div>
                             <h3 className="text-lg font-semibold text-white">{item.name}</h3>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <p className="text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
@@ -1708,14 +1831,53 @@ export default function UltraFuturisticNavigation2027() {;
                         <div className='space-y-2'>;
                           {item && item.children.map(child => (;
                             <Link
-                              key={child.name}
-                              href={child.href}
-                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
-                            >
-                              <span className="text-2xl">{child.icon}</span>
-                              <div className="flex-1">
-                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
-                                  {child.name}
+                              key={child && child.name}
+                              href={child && child.href}
+                              className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group'>;
+                              <span className='text-2xl'>{child && child.icon}</span>;
+                              <div className='flex-1'>;
+                                <div className='font-medium text-white group-hover:text-cyan-300 transition-colors'>;
+                                  {child && child.name}
+                                </div>;
+                                <div className='text-sm text-gray-400'>;
+                                  {child && child.description}
+                                </div>;
+                              </div>;
+                              <div className='text-right'>;
+                                <div className='text-sm font-medium text-cyan-400'>;
+                                  {child && child.price}
+                                </div>;
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>                    >;
+                      <div className="p-4">;
+                        <div className="flex items-center space-x-3 mb-4">;
+                          <div className={`p-3 rounded-xl bg-gradient-to-br ${item && item.color} shadow-lg`}>;
+                            {item && item.icon}
+                          </div>;
+                          <div>;
+                            <h3 className="text-lg font-semibold text-white">{item && item.name}</h3>;
+                            <p className="text-sm text-gray-400">{item && item.description}</p>;
+                          </div>;
+                        </div>;
+                        <div className="space-y-2">;
+                          {item && item.children.map((child) => (;
+
+                            <Link
+                              key={child && child.name}
+                              href={child && child.href}
+                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group">;
+                              <span className="text-2xl">{child && child.icon}</span>;
+                              <div className="flex-1">;
+                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">;
+                                  {child && child.name}
+                                </div>;
+                                <div className="text-sm text-gray-400">{child && child.description}</div>;
+                              </div>;
+                              <div className="text-right">;
+                                <div className="text-sm font-medium text-cyan-400">{child && child.price}</div>;
+                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
+                              </div>;
+                            </Link>;
+=======
                                 </div>
                                 <div className="text-sm text-gray-400">{child.description}</div>
                               </div>
@@ -1759,7 +1921,6 @@ export default function UltraFuturisticNavigation2027() {;
               <a
 
                             <Link
-=======
                                 </div>;
                                 <ChevronRight className='w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors' />                              </div>                    >;
                       <div className="p - 4">;
@@ -1778,6 +1939,7 @@ export default function UltraFuturisticNavigation2027() {;
 
                               key={child.name}
                               href={child.href}
+<<<<<<< HEAD
                               className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200 group";
                             >;
                               <span className="text - 2xl">{child.icon}</span>;
@@ -1804,6 +1966,56 @@ export default function UltraFuturisticNavigation2027() {;
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'>;
                 <Mail className='w-4 h-4' />                <span>{contactInfo && contactInfo.email}</span>            {/* Contact Info */}
             <div className="hidden lg:flex items-center space-x-4 text-sm">;
+=======
+                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
+                            >
+                              <span className="text-2xl">{child.icon}</span>
+                              <div className="flex-1">
+                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
+                                  {child.name}
+                                </div>
+                                <div className="text-sm text-gray-400">{child.description}</div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-sm font-medium text-cyan-400">{child.price}</div>
+                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                              </div>
+=======
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
+
+                              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </nav>
+<<<<<<< HEAD
+          {/* Right Side */}
+          <div className='flex items-center space-x-4'>
+=======
+
+          {/* Right Side */}
+          <div className='flex items-center space-x-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Contact Info */}
+            <div className='hidden lg:flex items-center space-x-4 text-sm'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <a
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
@@ -1811,15 +2023,14 @@ export default function UltraFuturisticNavigation2027() {;
                 <span>{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a
-                href={`mailto:${contactInfo.email}`}
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>{contactInfo.email}</span>
-              </a>
-            </div>
-            {/* CTA Button */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+<<<<<<< HEAD
+                href={`mailto:${contactInfo && contactInfo.email}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
+                <Mail className="w-4 h-4" />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </a>;
+            </div>;
+=======
 
 
 
@@ -1838,6 +2049,41 @@ export default function UltraFuturisticNavigation2027() {;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
+=======
+                href={`mailto:${contactInfo.email}`}
+                className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
+              >
+                <Mail className='w-4 h-4' />                <span>{contactInfo.email}</span>            {/* Contact Info */}
+            <div className="hidden lg:flex items-center space-x-4 text-sm">
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </a>
+            </div>
+<<<<<<< HEAD
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+=======
+
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
 
                 href="/contact"
@@ -1896,6 +2142,29 @@ export default function UltraFuturisticNavigation2027() {;
                     {navigation.map (item => (
                       <div key={item.name}>;
                         <Link;
+=======
+            className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='container mx-auto px-4 py-6'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                {/* Services */}
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-4'>
+                    Services
+                  </h3>
+                  <div className='space-y-3'>
+                    {navigation.map(item => (
+                      <div key={item.name}>
+                        <Link
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           href={item.href}
                           className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
                         >;
@@ -1920,7 +2189,6 @@ export default function UltraFuturisticNavigation2027() {;
                     {navigation.map ((item) => (
                       <div key={item.name}>;
                         <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           href={item.href}
                           className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
                         >;
@@ -1979,7 +2247,6 @@ export default function UltraFuturisticNavigation2027() {;
                     <div className="space-y-2">
                       {quickLinks.map((link) => (
                         <Link
-=======
                           </div>;
                           <div>;
                             <div className="font - medium text - white">{item.name}</div>;
@@ -2017,7 +2284,6 @@ export default function UltraFuturisticNavigation2027() {;
 
                     </div>;
                   </div>;
-
                   <div>;
                     <h3 className='text-lg font-semibold text-white mb-4'>;
                       Contact Info;
@@ -2057,8 +2323,8 @@ export default function UltraFuturisticNavigation2027() {;
                   </div>
                 </div>
               </div>
-=======
-                        href={`mailto:${contactInfo && contactInfo.email}`}
+<<<<<<< HEAD
+href={`mailto:${contactInfo && contactInfo.email}`}
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
                         <Mail className='w-4 h-4 text-cyan-400' />;
                         <span className='text-white'>{contactInfo && contactInfo.email}</span>;
@@ -2082,7 +2348,6 @@ export default function UltraFuturisticNavigation2027() {;
                       <div className="flex items-center space-x-3 p-3 rounded-xl">;
                         <MapPin className="w-4 h-4 text-cyan-400" />;
                         <span className="text-white text-sm">{contactInfo && contactInfo.address}</span>;
-=======
                           <span className="text - white">{link.name}</span>;
                         </Link>))}
                     </div>;
@@ -2126,7 +2391,6 @@ export default function UltraFuturisticNavigation2027() {;
                       <div className="flex items - center space - x-3 p - 3 rounded - xl">;
                         <MapPin className="w - 4 h - 4 text - cyan - 400" />;
                         <span className="text - white text - sm">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </div>;
                     </div>;
                   </div>;
@@ -2168,11 +2432,9 @@ export default function UltraFuturisticNavigation2027() {;
 }<motion&& motion.div whileHover= {
   {
   scale: 1 && 1.05 
-
 }whileTap= {
   {
   scale: 0 && 0.95 
-
 }> <Link href="/contact" className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion && motion.div> {;
   /* Mobile Menu Button */ ;
 }<button </button> </div> </div> </div> {;
@@ -2190,8 +2452,6 @@ export default function UltraFuturisticNavigation2027() {;
 };export default UltraFuturisticNavigation2027;  );
 
 };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticNavigation2027;
 
 export default UltraFuturisticNavigation2027;

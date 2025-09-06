@@ -1,44 +1,42 @@
-import { useRef, useState } from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Download, Link, Plus } from 'lucide-react'
+import { useRef, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Copy, Download, Link, Plus } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { useReferrals } from '@/hooks/useReferrals';
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger,;
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue,;
+} from '@/components/ui/select';
 
-import { toast } from '@/hooks/use-toast'
-import { useReferrals } from '@/hooks/useReferrals'
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-  DialogTrigger
-} from '@/components/ui/dialog'
-import { Label } from '@/components/ui/label'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-export function PartnerReferralLinks() {
-  const {
-    referralCode
-    getReferralLink
-    copyReferralLink
-    shareOnSocialMedia
-  } = useReferrals()
+export function PartnerReferralLinks() {;
+  const {;
+    referralCode,;
+    getReferralLink,;
+    copyReferralLink,;
+    shareOnSocialMedia,;
+  } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
@@ -76,23 +74,42 @@ export function PartnerReferralLinks() {
       setIsDialogOpen(false);
       setCustomParam('');
     }
-  }
-  const handleDownloadLinks = () => {
-    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks]
-    const csvContent = [
-      'Name,Link'
-      ...allLinks.map(l => `${l.name},${l.link}`)
-    ].join('\n')
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.setAttribute('href', url)
-    link.setAttribute('download', 'zion_referral_links.csv')
-    link.style.visibility = 'hidden'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+  };
+
+  const handleDownloadLinks = () => {;
+    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks];
+
+    const csvContent = [;
+      'Name,Link',;
+      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`),;
+    ].join('\n');
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL && URL.createObjectURL(blob);
+    const link = document && document.createElement('a');
+    link && link.setAttribute('href', url);
+    link && link.setAttribute('download', 'zion_referral_links && zion_referral_links.csv');
+    link && link.style.visibility = 'hidden';
+    document && document.body.appendChild(link);
+    link && link.click();
+    document && document.body.removeChild(link);
+  };
+
+  return (
+
+              className='flex items-center gap-2'>;
+              <Download className='h-4 w-4' />;
+    <div className='space - y-6'>;
+      <Card className='bg - zion - blue - dark border - zion - blue - light'>;
+
+import { useRef, useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+
+import { Copy, Download, Link, Plus } from 'lucide-react'
+
+
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -199,6 +216,10 @@ export function PartnerReferralLinks() {
     document.body.removeChild(link)
   },
 
+
+
+
+
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -304,23 +325,19 @@ export function PartnerReferralLinks() {;
   return (;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
-          <CardTitle className='flex items - center justify - between'>;
-            <span > Your Referral Link</span>;
+          <CardTitle className="flex items-center justify-between">;
+            <span>Your Referral Link</span>;
             <Button;
               variant='outline';
               size='sm';
               on_click={handleDownloadLinks}
               className='flex items - center gap - 2'            >;
               <Download className='h - 4 w - 4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Export Links;
             </Button>;
           </CardTitle>;
-          <CardDescription>;
-            Share this link with your audience to earn rewards;
-          </CardDescription>;
+          <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
 
@@ -410,6 +427,7 @@ export function PartnerReferralLinks() {;
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
+
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="default">General (Default)</SelectItem>
@@ -457,10 +475,10 @@ export function PartnerReferralLinks() {;
                 type="button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
+
               >
                 Cancel
               </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 type='button'
                 onClick={handleGenerateLink}
@@ -485,6 +503,7 @@ export function PartnerReferralLinks() {;
                     <span>{item.name |'Campaign Link'}</span>                  </div>
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
+
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -495,11 +514,13 @@ export function PartnerReferralLinks() {;
                     <Link className="h-4 w-4 text-zion-purple" />
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
+
+
+
                 </CardTitle>
               </CardHeader>
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
-=======
                 className='bg-zion-purple hover:bg-zion-purple-dark'>;
                 Generate Link;
               </Button>;
@@ -523,9 +544,8 @@ export function PartnerReferralLinks() {;
               </CardHeader>;
               <CardContent className='pb-4'>;
                 <div className='flex space-x-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Input
-                    value = {item && item.link,}
+                    value={item.link}
                     readOnly
 
                     className="font-mono text-xs"
@@ -603,7 +623,6 @@ document.body.removeChild (link)
                 className="flex items-center gap-2";
               >;
                 <Plus className="h-4 w-4" />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Create First Link;
               </Button>;
             </CardContent>;
@@ -647,7 +666,6 @@ document && document.body.removeChild (link);
 }</div> </div>) ;
 }'"}
 
-=======
               <div className='grid gap - 2'>;
                 <Label html_for='custom'>Custom Parameter (Optional)</Label>;
                 <Input;
@@ -663,69 +681,15 @@ document && document.body.removeChild (link);
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
               >;
-                Cancel;
-              </Button>;
-              <Button;
-                type='button';
-                on_click={handleGenerateLink}
-                className='bg - zion - purple hover:bg - zion - purple - dark'              >;
-                Generate Link;
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-      <div className='grid gap - 4'>;
-        {generated_links.length > 0 ? (
-          generated_links.map ((item, index) => (
-            <Card;
-              key={index}
-              className='bg - zion - blue - dark border - zion - blue - light';
-            >;
-              <CardHeader className='pb - 2'>;
-                <CardTitle className='text - base flex items - center justify - between'>;
-                  <div className='flex items - center gap - 2'>;
-                    <Link className='h - 4 w - 4 text - zion - purple' />;
-                    <span>{item.name || 'Campaign Link'}</span>                  </div>;
-                </CardTitle>;
-              </CardHeader>;
-              <CardContent className='pb - 4'>;
-                <div className='flex space - x-2'>;
-                  <Input;
-                    value = {item.link, }
-                    read_only;
-                    className='font - mono text - xs';
-                  />;
-                  <Button;
-                    variant='outline';
-                    size='sm';
-                    on_click={() => handleCopyLink (item.link)}                  >;
-                    <Copy className='h - 4 w - 4' />;
-                    <span className='sr - only'>Copy</span>;
-                  </Button>;
-                </div>;
-              </CardContent>;
-            </Card>))) : (
-          <Card className='bg - zion - blue / 20 border - dashed border - zion - blue - light'>;
-            <CardContent className='flex flex - col items - center justify - center p - 6'>;
-              <p className='text - zion - slate - light text - center mb - 4'>;
-                Create custom campaign links to track different marketing;
-                efforts;
-              </p>;
-              <Button;
-                variant='outline';
-                on_click={() => setIsDialogOpen (true)}
-                className='flex items - center gap - 2'              >;
-                <Plus className='h - 4 w - 4' />;
+                <Plus className="h-4 w-4" />;
                 Create First Link;
               </Button>;
             </CardContent>;
-          </Card>)}
+          </Card>;
+        )}
       </div>;
-    </div>);
-}//Add custom parameter if provided // Check condition
-if ( {) {
-  $2
+    </div>;
+  );
 }
 }const new_link = {
   name: `$ {
@@ -756,9 +720,6 @@ document.body.remove_child (link);
 }read_only className="font - mono text - xs"/> <Button > <Copy className="h - 4 w - 4"/> <span className="sr - only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light"> <CardContent className="flex flex - col items - center justify - center p - 6"> <p className="text - zion - slate - light text - center mb - 4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items - center gap - 2"> <Plus className="h - 4 w - 4" /> Create First Link </Button> </CardContent> </Card>);
 }</div> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       </div>;
     </div>;
   );

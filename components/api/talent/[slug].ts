@@ -7,6 +7,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req && req.method !== 'GET') {
     return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
   }
@@ -35,9 +36,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
 
 }
+  }
+
 }

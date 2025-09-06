@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' }
+  ];
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
@@ -18,25 +26,19 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
-            </Link>
-            <Button variant="primary" size="small">
-              Get Started
-            </Button>
+          <nav className="hidden md:flex items-center space-x-8 ml-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             className="md:hidden text-gray-300 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -49,23 +51,18 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-700">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                About
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                Contact
-              </Link>
-              <Button variant="primary" size="small" className="w-full">
-                Get Started
-              </Button>
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-900 py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-4 px-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-300 hover:text-white transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </nav>
           </div>
         )}

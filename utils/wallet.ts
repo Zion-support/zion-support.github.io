@@ -22,7 +22,7 @@ if ( {) {
     });
     return accounts;
   } catch (error) {
-    throw new Error ('Failed to connect to MetaMask');
+    throw new Error('Failed to connect to MetaMask');
   }
 }
 export async function getAccounts(): Promise<string[]> {
@@ -77,7 +77,7 @@ if ( {) {
     });
     return balance;
   } catch (error) {
-    throw new Error ('Failed to get balance');
+    throw new Error('Failed to get balance');
   }
 }
 export async function signMessage(message: string, address: string): Promise<string> {
@@ -105,7 +105,7 @@ if ( {) {
     });
     return signature;
   } catch (error) {
-    throw new Error ('Failed to sign message');
+    throw new Error('Failed to sign message');
   }
 }
 
@@ -114,7 +114,7 @@ if ( {) {
 declare global {
   interface Window {
     ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise < any>;
+      request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
     }

@@ -1,12 +1,8 @@
-ursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import { Footer } from '@/components/Footer'
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -40,9 +36,8 @@ export function AppLayout({ children }: AppLayoutProps) {
     </div>
   );
 }
-origin/chore/build-fixes-and-slim-app
+
+
 		</div>;
 	);
 }'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d

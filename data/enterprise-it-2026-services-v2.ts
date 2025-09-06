@@ -3,6 +3,12 @@ import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   tagline: string;
@@ -33,7 +39,6 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
 
@@ -687,6 +692,8 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     reviews: 180
   }
 ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1125,5 +1132,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

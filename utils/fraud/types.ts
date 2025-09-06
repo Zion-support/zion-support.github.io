@@ -23,6 +23,7 @@ export interface AdminAction {;
   status: 'pending' | 'executed' | 'failed',
 
 }
+<<<<<<< HEAD
 export interface FraudDetectionResult {
 
 export interface FraudDetectionResult {;
@@ -35,12 +36,13 @@ export interface FraudDetectionResult {;
   metadata: Record < string, any>;
 
 }
+<<<<<<< HEAD
 export interface FraudDetectionConfig {
 
 export interface FraudDetectionConfig {;
   enabled: boolean;
   rules: {
-    suspicious_activity: {
+    suspiciousActivity: {
       enabled: boolean;
 
       threshold: number,

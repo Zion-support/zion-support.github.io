@@ -126,8 +126,13 @@ function fixNextLinks(filePath) {
   try {
   let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present and file has href attributes;
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
     if (content.includes("href="/") && !content.includes("import Link")) {
-    if (content.includes("href="/") && !content.includes("import Link")) {
+=======
     if (content.includes("href="/") && !content.includes("import Link")) {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -155,7 +160,14 @@ import Link from "next/link";";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ;
 // "Note": previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;

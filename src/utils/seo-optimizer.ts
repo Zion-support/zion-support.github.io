@@ -1,4 +1,3 @@
-
 // SEO optimizer utilities;
 export const generateMetaTags = () =>: any {
   console.log ('Generating meta tags...');
@@ -9,8 +8,6 @@ export const optimize_headings = () =>: any {
 }
 ;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');

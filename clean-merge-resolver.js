@@ -1,8 +1,18 @@
+
+#!/usr / bin / env node;
+const { exec_sync } = require ('child_process'),
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🚀 Starting comprehensive merge conflict resolution and PR merging...'),
+=======
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Function to fix merge conflicts in a file;
 /**
  * fixMergeConflicts - Function description
@@ -48,7 +58,6 @@ function fixMergeConflicts(filePath) {;
     return false;
   } catch (error) {
     console.log (`❌ Error fixing ${file_path}: ${error.message}`),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return false;
   }
 }
@@ -67,9 +76,102 @@ function getAllFiles(dir, extensions) {;
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+
+/**
+ * getAllFiles - Function description
+ */
+function getAllFiles() {
+  let files = [],
+  try {
+    const items = fs.readdir_sync (dir),
+    for (const item of items) {
+      const full_path = path.join (dir, item),
+      const stat = fs.stat_sync (full_path),
+      if (&& !item.starts_with ('.') && item !== 'node_modules' && item !== '.git') {) {
+  $2
+}
+        files = files.concat (getAllFiles (full_path, extensions));
+      } else if ()) {) {
+  $2
+}
+        files.push (full_path);
+=======
+function getAllFiles(dir, extensions) {let files = [];
+=======
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process'),;
+const fs = require('fs'),;
+const path = require('path'),;
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
+// Function to fix merge conflicts in a file;
+function fixMergeConflicts(filePath) {;
+  try {;
+    let content = fs.readFileSync(filePath, 'utf8'),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const originalContent = content,;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (content !== originalContent) {;
+      fs.writeFileSync(filePath, content, 'utf8'),;
+      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
+      return true;
+    }
+    return false;
+  } catch (error) {;
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
+    return false;
+  }
+}
+;
+// Function to get all files recursively;
+function getAllFiles(dir, extensions) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  let files = [],;
+  try {;
+    const items = fs.readdirSync(dir),;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item),;
+      const stat = fs.statSync(fullPath),;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  let files = [];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  try {;
+    const items = fs.readdirSync(dir);
+    for (const item of items) {;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
         files = files.concat(getAllFiles(fullPath, extensions));
+<<<<<<< HEAD
       } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }
   } catch (error) {
@@ -114,8 +216,31 @@ function main() {
     } catch (error) {
       console.log ('⚠️  Merge conflicts detected. Resolving...'),
       // Find files with merge conflicts;
-      const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-      if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
+<<<<<<< HEAD
+      const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
+      if () {) {
+  $2
+}
+        console.log ('Found merge conflicts in:', conflict_files.trim ()),
+        // Resolve conflicts by accepting our version;
+        const files = conflict_files.trim ().split ('\n'),
+        for (const file of files) {
+          if () {) {
+  $2
+}
+            console.log (`Resolving conflicts in: ${file}`),
+            try {
+              exec_sync (`git checkout --ours "${file}"`);
+            } catch (e) {
+              exec_sync (`git checkout --theirs "${file}"`);
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
+        files = files.concat(getAllFiles(fullPath, extensions));
+
       } else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }

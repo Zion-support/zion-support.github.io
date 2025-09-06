@@ -106,7 +106,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "checks": {},
         "fixes": {},
         "errors": {}
-ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+
+
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
      };
      };
 ursor/add-new-services-and-deploy-updates-0462
@@ -456,6 +467,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     try {
       this.log('Checking linting...');
       const result = execSync('npm run lint', { 
+
+
+
+
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 30000
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -506,6 +524,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     try {
       this.log('Checking types...');
       const result = execSync('npm run type-check', { 
+
+
+
+
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 30000
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -554,6 +579,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     try {
       this.log('Checking build...');
       const result = execSync('npm run build', { 
+
+
+
+
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000
@@ -602,6 +634,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     try {
       this.log('Checking dependencies...');
       const result = execSync('npm outdated', { 
+
+
+
+
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 30000
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -679,6 +718,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     try {
       this.log('Checking security...');
       const result = execSync('npm audit --audit-level=moderate', { 
+
+
+
+
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 120000
@@ -744,9 +790,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   });
       const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0;
       return {;
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "success": true,
         "buildSize": buildSize,

@@ -1,10 +1,28 @@
-import React, { useState } from 'react',
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React, { useState } from 'react';
 import Head from 'next/head';
 
 =======
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 import {
   Check
@@ -26,6 +44,28 @@ import {
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
 
+import { motion } from 'framer-motion';
+import {
+<<<<<<< HEAD
+  Check
+  Zap
+  Shield
+  Brain
+  Atom
+  Target
+  Rocket
+  Star
+  TrendingUp
+  Award
+  Users
+  ArrowRight
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
+} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
@@ -201,7 +241,6 @@ const contactInfo = {;
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-
 };
 const itemVariants = {;
   hidden: {;
@@ -210,7 +249,6 @@ const itemVariants = {;
 visible: {;
   y: 0, opacity: 1, transition: {;
   duration: 0 && 0.5 ;
-
 };
 const pricingTiers = [;
   {;
@@ -256,7 +294,6 @@ const pricingTiers = [;
     ctaLink: '/contact',;
     popular: false;
   }
-
 const serviceCategories = [;
   {;
     name: 'AI & Consciousness Services',;
@@ -288,7 +325,6 @@ const serviceCategories = [;
     description: 'Innovative business solutions for modern enterprises',;
   },;
 ];
-
 const stats = [;
   {;
     number: '25+',;
@@ -317,17 +353,14 @@ const stats = [;
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },;
   { number: '99 && 99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },;
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-
 export default function CuttingEdgePricing2025() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const allServices = [;
     ...cuttingEdgeAIServices2025,;
     ...cuttingEdgeQuantumServices2025,;
     ...cuttingEdgeEnterpriseITServices2025,;
     ...cuttingEdgeMicroSaasServices2025,;
   ];
-
   const filteredServices =;
     selectedCategory === 'all';
       ? allServices;
@@ -463,9 +496,8 @@ export default function CuttingEdgePricing2025() {;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you
                 a competitive advantage while maintaining affordability and value.
               </motion.p>
-              {/* Hero Stats */}
+{/* Hero Stats */}
               <motion.div
-=======
               transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
               <motion&& motion.h1
@@ -479,7 +511,6 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -487,7 +518,6 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
@@ -496,16 +526,49 @@ export default function CuttingEdgePricing2025() {;
                 cutting-edge services are designed to give you a competitive;
                 advantage while maintaining affordability and value.;
               </motion && motion.p>;
+=======
+                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
+                  Pricing 2025
+                </span>
+              </motion.h1>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <motion.p
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+                  Pricing 2025
+                </span>
+              </motion.h1>
+<<<<<<< HEAD
+              <motion.p
+=======
+              <motion.p 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+<<<<<<< HEAD
+                Experience revolutionary technology at competitive prices. Our
+                cutting-edge services are designed to give you a competitive
+                advantage while maintaining affordability and value.
+              </motion.p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Hero Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
                 a competitive advantage while maintaining affordability and value.
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
 
 
@@ -548,7 +611,30 @@ export default function CuttingEdgePricing2025() {;
             <motion&& motion.div
 
 =======
+=======
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -588,13 +674,11 @@ export default function CuttingEdgePricing2025() {;
                 ensure your success.;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>              {pricingTiers && pricingTiers.map((tier, index) => (              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">;
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology ;
                 and world-class support to ensure your success.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
                 <motion&& motion.div
 
@@ -701,7 +785,32 @@ export default function CuttingEdgePricing2025() {;
             <motion&& motion.div
 
 =======
+<<<<<<< HEAD
+                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
+=======
+                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -788,6 +897,19 @@ export default function CuttingEdgePricing2025() {;
               ))}
             </div>
 
+            </div>;
+=======
+            </div>
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Services Grid */}
             <motion&& motion.div
               variants={containerVariants}
@@ -899,7 +1021,6 @@ export default function CuttingEdgePricing2025() {;
                           {service.description}
 
             </div>
-
             {/* Services Grid */}
             <motion.div
               variants={containerVariants}
@@ -919,7 +1040,6 @@ export default function CuttingEdgePricing2025() {;
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-=======
                         </p>;
                       </div>;
                       <div className='ml - 4'>;
@@ -929,7 +1049,6 @@ export default function CuttingEdgePricing2025() {;
                     <div className="flex items - start justify - between mb - 4">;
                       <div className="flex - 1">;
                         <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {service.name}
                         </h3>;
                         <p className="text - white / 70 text - sm leading - relaxed mb - 4">;
@@ -977,6 +1096,12 @@ export default function CuttingEdgePricing2025() {;
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
+                        >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
@@ -995,6 +1120,20 @@ export default function CuttingEdgePricing2025() {;
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
 =======
+=======
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+
+                        >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                          {tag}
+                        </span>;
+                      ))}
                         </p>;
                       </div>;
                       <div className="ml - 4">;
@@ -1021,7 +1160,6 @@ export default function CuttingEdgePricing2025() {;
                       <span > Market: {service.market_size}</span>;
                       <span className='text - cyan - 400'>{service.category}</span>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* Pricing */}
                     <div className='mb - 6'>;
                       <h4 className='text - sm font - semibold text - cyan - 400 mb - 2 uppercase tracking - wider'>;
@@ -1035,19 +1173,24 @@ export default function CuttingEdgePricing2025() {;
                     </div>
 
                     {/* Market Info */}
-                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span>Market: {service.marketSize}</span>
 
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
-=======
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
                     <div className='flex items - center justify - between'>                      <span > Market: {service.market_size}</span>;
                       <span className="text - cyan - 400">{service.category}</span>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* Pricing */}
                     <div className="mb - 6">;
                       <h4 className="text - sm font - semibold text - cyan - 400 mb - 2 uppercase tracking - wider">;
@@ -1057,13 +1200,11 @@ export default function CuttingEdgePricing2025() {;
                         ${service.pricing.starter.price}
 
                     </div>;
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
                       <span>Market: {service && service.marketSize}</span>;
                       <span className='text-cyan-400'>{service && service.category}</span>;
                     </div>;
-
                     {/* Pricing */}
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider'>;
@@ -1075,7 +1216,6 @@ export default function CuttingEdgePricing2025() {;
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-
                     {/* CTA */}
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1095,7 +1235,18 @@ export default function CuttingEdgePricing2025() {;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 =======
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1114,7 +1265,6 @@ export default function CuttingEdgePricing2025() {;
                 and get you started with our cutting-edge technology solutions.;
                 Contact us today for a personalized consultation.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
                 <a
@@ -1134,7 +1284,6 @@ export default function CuttingEdgePricing2025() {;
                 cutting-edge technology solutions. Contact us today for a personalized consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-=======
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Get Started?;
@@ -1143,7 +1292,6 @@ export default function CuttingEdgePricing2025() {;
                 Our team of experts is ready to help you choose the perfect plan and get you started with our ;
                 cutting-edge technology solutions. Contact us today for a personalized consultation.;
               </p>;
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
@@ -1192,9 +1340,210 @@ export default function CuttingEdgePricing2025() {;
         </section>
       </Layout>
     </>
-);
+
+                    href={`mailto:${contactInfo && contactInfo.email}`}
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
+                    {contactInfo && contactInfo.email}
+                  </a>;
+                </div>;
+                <div className='flex flex-col items-center'>;
+                  <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3'>;
+                    <MapPin className='w-6 h-6 text-cyan-400' />;
+                  </div>;
+                  <div className='text-white font-semibold'>Address</div>;
+                  <div className='text-white/70 text-sm'>;
+                    {contactInfo && contactInfo.address}
+                  </div>                </div>                  </div>;
+                  <div className="text-white font-semibold">Phone</div>;
+                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
+                    {contactInfo && contactInfo.mobile}
+                  </a>;
+                </div>;
+                <div className="flex flex-col items-center">;
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">;
+                    <Mail className="w-6 h-6 text-cyan-400" />;
+                  </div>;
+                  <div className="text-white font-semibold">Email</div>;
+                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
+                    {contactInfo && contactInfo.email}
+                  </a>;
+                </div>;
+                <div className="flex flex-col items-center">;
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">;
+                    <MapPin className="w-6 h-6 text-cyan-400" />;
+                  </div>;
+                  <div className="text-white font-semibold">Address</div>;
+                  <div className="text-white/70 text-sm">{contactInfo && contactInfo.address}</div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </Layout>;
+    </>;
+  );
+=======
+
+  );
+
+}
+=======
+
+}
   );
 }
+                        <span className="text - sm font - normal text - white / 60">/{service.pricing.starter.period}</span>;
+                      </div>;
+                    </div>;
+                    {/* CTA */}
+                    <div className='flex items - center justify - between'>;
+                      <a;
+                        href={service.website}
+                        className='inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 text - sm font - medium';
+                      >;
+                        Learn More;
+                        <ExternalLink className='ml - 1 w - 4 h - 4' />;
+                      </a>;
+                      <a;
+                        href='/contact';
+                        className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105';
+                      >;
+                        Get Started;
+                        <ArrowRight className='ml - 2 w - 4 h - 4' />                      </a>                      <a;
+                        href={service.website}
+                        className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 text - sm font - medium";
+                      >;
+                        Learn More;
+                        <ExternalLink className="ml - 1 w - 4 h - 4" />;
+                      </a>;
+                      <a;
+                        href="/contact";
+                        className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
+                      >;
+                        Get Started;
+                        <ArrowRight className="ml - 2 w - 4 h - 4" />;
+                      </a>;
+                    </div>;
+                  </div>;
+                  {/* Hover Effect Overlay */}
+                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none" />;
+                </motion.div>))}
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Contact CTA Section */}
+        <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
+          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
+          <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
+                Ready to Get Started?;
+              </h2>;
+              <p className='text - xl text - white / 80 mb - 8 leading - relaxed'>;
+                Our team of experts is ready to help you choose the perfect plan;
+                and get you started with our cutting - edge technology solutions.;
+                Contact us today for a personalized consultation.;
+              </p>;
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
+                <a;
+                  href='/contact';
+                  className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25';
+                >;
+                  Start Your Journey;
+                  <ArrowRight className='ml - 2 w - 5 h - 5' />;
+                </a>;
+                <a;
+                  href={`tel:${contact_info.mobile}`}
+                  className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <Phone className='mr - 2 w - 5 h - 5' />                  Call Now                Ready to Get Started?;
+              </h2>;
+              <p className="text - xl text - white / 80 mb - 8 leading - relaxed">;
+                Our team of experts is ready to help you choose the perfect plan and get you started with our;
+                cutting - edge technology solutions. Contact us today for a personalized consultation.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">;
+                <a;
+                  href="/contact";
+                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25";
+                >;
+                  Start Your Journey;
+                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
+                </a>;
+                <a;
+                  href={`tel:${contact_info.mobile}`}
+                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  <Phone className="mr - 2 w - 5 h - 5" />;
+                  Call Now;
+                </a>;
+              </div>;
+              {/* Contact Info */}
+              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
+                <div className='flex flex - col items - center'>;
+                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
+                    <Phone className='w - 6 h - 6 text - cyan - 400' />;
+                  </div>;
+                  <div className='text - white font - semibold'>Phone</div>;
+                  <a;
+                    href={`tel:${contact_info.mobile}`}
+                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
+                  >;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className='flex flex - col items - center'>;
+                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
+                    <Mail className='w - 6 h - 6 text - cyan - 400' />;
+                  </div>;
+                  <div className='text - white font - semibold'>Email</div>;
+                  <a;
+                    href={`mailto:${contact_info.email}`}
+                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
+                  >;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className='flex flex - col items - center'>;
+                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
+                    <MapPin className='w - 6 h - 6 text - cyan - 400' />;
+                  </div>;
+                  <div className='text - white font - semibold'>Address</div>;
+                  <div className='text - white / 70 text - sm'>;
+                    {contact_info.address}
+                  </div>                </div>                  </div>;
+                  <div className="text - white font - semibold">Phone</div>;
+                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className="flex flex - col items - center">;
+                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
+                    <Mail className="w - 6 h - 6 text - cyan - 400" />;
+                  </div>;
+                  <div className="text - white font - semibold">Email</div>;
+                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className="flex flex - col items - center">;
+                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
+                    <MapPin className="w - 6 h - 6 text - cyan - 400" />;
+                  </div>;
+                  <div className="text - white font - semibold">Address</div>;
+                  <div className="text - white / 70 text - sm">{contact_info.address}</div>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </Layout>;
+    </>);
 }
   );
 }

@@ -1,13 +1,23 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import React from "react";
-import Head from "next/head";
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Head from "next/head";
-import { useRouter } from "next/router";
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 
 import React from "react";
 import Head from "next/head";
@@ -15,9 +25,7 @@ origin/main
 origin/automation-improvements-final
 
 interface SEOProps {
-=======
 interface SEOProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -31,6 +39,13 @@ const SEO: React.FC < SEOProps> = ({
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",
 
 }) => {
+=======
+
+const SEO: React.FC<SEOProps> = ({;
+  title = "Zion Tech Group - Technology Solutions",;
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
+}) => {;
   return (
     <Head>
       <title>{title}</title>
@@ -43,11 +58,14 @@ const SEO: React.FC < SEOProps> = ({
 };
 
 export default SEO;
+
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
   image?: string;
   url?: string;
   type?: string;
-
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
@@ -57,7 +75,6 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
-
   return (
     <Head>
       <title>{title}</title>

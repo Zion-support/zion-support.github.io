@@ -1,6 +1,7 @@
-
-
-export default ActiveFiltersBar; import React from 'react'
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -11,6 +12,7 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string
+
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -60,7 +62,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       label: 'Category',;
       value: filters.category;
     });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   
   static getDerivedStateFromError(error) {
@@ -79,7 +80,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -196,6 +196,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           variant="secondary"
         <Badge 
           key = {filter.key,}
+
       
       {activeFilters.map(filter => (
         <Badge 
@@ -206,7 +207,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
-=======
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
 
@@ -218,7 +218,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           <span className="text-xs">;
             {filter && filter.label}: {filter && filter.value}
           </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant="ghost"
             size="sm"
@@ -230,13 +229,14 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             <X className="h-3 w-3" />
           </Button>
         </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
       <Button
         variant="ghost"
         size="sm"
         onClick = {onClearAll,}
         onClick={onClearAll}
+
+
         className="text-xs h-6 px-2"
       >
         Clear all
@@ -396,10 +396,10 @@ if ( {) {
         Clear all;
       </Button>;
     </div>);
-=======
 
 
 },
+
 export default ActiveFiltersBar,
 
         className="text-xs h-6 px-2">;
@@ -425,12 +425,18 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
+<<<<<<< HEAD
       </button>
     </div>
   )}
 '"
 
-export default ActiveFiltersBar,
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+      >;
+        Clear all;
       </button>;
     </div>)}
 '";

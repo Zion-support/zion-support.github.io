@@ -1,33 +1,25 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Ultimate Final Fix...');
-console.log('ℹ️ [2025-09-06T09:26:05.800Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
-
 // Fix partners request-payout file - rewrite completely
 const partnersRequestPayoutPath = '/workspace/pages/api/partners/request-payout.ts';
 const partnersRequestPayoutContent = `import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
-
   try {
     const { partnerCode, amount, bankDetails } = req.body;
-    
     if (!partnerCode || !amount || !bankDetails) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
-
     const supabase = getServerSupabase();
-    
     const { data, error } = await supabase
       .from('payout_requests')
       .insert({
@@ -39,11 +31,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       })
       .select()
       .single();
-
     if (error) {
       return res.status(500).json({ error: error.message });
     }
-
     res.status(201).json({ 
       success: true, 
       payoutRequest: data 
@@ -52,45 +42,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message });
   }
 }`;
-
 fs.writeFileSync(partnersRequestPayoutPath, partnersRequestPayoutContent);
 console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/request-payout.ts');
-
 // Fix projects milestones file
 const projectsMilestonesPath = '/workspace/pages/api/projects/[projectId]/milestones.ts';
 if (fs.existsSync(projectsMilestonesPath)) {
   let content = fs.readFileSync(projectsMilestonesPath, 'utf8');
-  
   // Fix the syntax error
   content = content.replace(
     '  isClient,;',
     '  isClient,'
   );
-  
   fs.writeFileSync(projectsMilestonesPath, content);
   console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/projects/[projectId]/milestones.ts');
 }
-
 // Fix projects milestoneId file
 const projectsMilestoneIdPath = '/workspace/pages/api/projects/[projectId]/milestones/[milestoneId].ts';
 if (fs.existsSync(projectsMilestoneIdPath)) {
   let content = fs.readFileSync(projectsMilestoneIdPath, 'utf8');
-  
   // Fix the syntax error
   content = content.replace(
     '  isTalent,;',
     '  isTalent,'
   );
-  
   fs.writeFileSync(projectsMilestoneIdPath, content);
   console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/projects/[projectId]/milestones/[milestoneId].ts');
 }
-
 // Fix proposals comment file - rewrite completely
 const proposalsCommentPath = '/workspace/pages/api/proposals/comment.ts';
 const proposalsCommentContent = `import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase';
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -99,16 +80,12 @@ export default async function handler(
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
-
   try {
     const { proposalId, content, authorId } = req.body;
-    
     if (!proposalId || !content || !authorId) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
-
     const supabase = getServerSupabase();
-    
     const { data, error } = await supabase
       .from('proposal_comments')
       .insert({
@@ -119,11 +96,9 @@ export default async function handler(
       })
       .select()
       .single();
-
     if (error) {
       return res.status(500).json({ error: error.message });
     }
-
     res.status(201).json({ 
       success: true, 
       comment: data 
@@ -132,10 +107,8 @@ export default async function handler(
     res.status(500).json({ error: e?.message || 'Failed to create comment' });
   }
 }`;
-
 fs.writeFileSync(proposalsCommentPath, proposalsCommentContent);
 console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/comment.ts');
-
 // Create missing proposals data module
 const proposalsDataPath = '/workspace/utils/data/proposals.ts';
 const proposalsDataContent = `// Proposals data store
@@ -150,7 +123,6 @@ export interface Proposal {
   createdAt: string;
   updatedAt: string;
 }
-
 export interface ProposalComment {
   id: string;
   proposalId: string;
@@ -158,16 +130,13 @@ export interface ProposalComment {
   authorId: string;
   createdAt: string;
 }
-
 class ProposalsStore {
   private proposals: Map<string, Proposal> = new Map();
   private comments: Map<string, ProposalComment[]> = new Map();
-
   // Proposal methods
   getProposal(id: string): Proposal | undefined {
     return this.proposals.get(id);
   }
-
   createProposal(proposal: Omit<Proposal, 'id' | 'createdAt' | 'updatedAt'>): Proposal {
     const id = Date.now().toString();
     const now = new Date().toISOString();
@@ -180,25 +149,20 @@ class ProposalsStore {
     this.proposals.set(id, newProposal);
     return newProposal;
   }
-
   updateProposal(id: string, updates: Partial<Proposal>): Proposal | undefined {
     const proposal = this.proposals.get(id);
     if (!proposal) return undefined;
-    
     const updatedProposal = { ...proposal, ...updates, updatedAt: new Date().toISOString() };
     this.proposals.set(id, updatedProposal);
     return updatedProposal;
   }
-
   deleteProposal(id: string): boolean {
     return this.proposals.delete(id);
   }
-
   // Comment methods
   getComments(proposalId: string): ProposalComment[] {
     return this.comments.get(proposalId) || [];
   }
-
   addComment(comment: Omit<ProposalComment, 'id' | 'createdAt'>): ProposalComment {
     const id = Date.now().toString();
     const now = new Date().toISOString();
@@ -207,24 +171,19 @@ class ProposalsStore {
       id,
       createdAt: now
     };
-    
     const comments = this.comments.get(comment.proposalId) || [];
     comments.push(newComment);
     this.comments.set(comment.proposalId, comments);
-    
     return newComment;
   }
 }
-
 export const proposalsStore = new ProposalsStore();
 `;
-
 fs.writeFileSync(proposalsDataPath, proposalsDataContent);
 console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Created utils/data/proposals.ts');
-
 console.log('');
 console.log('📊 ABSOLUTE ULTIMATE FINAL FIX REPORT');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
@@ -236,7 +195,6 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/projects/[projectId
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/comment.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - utils/data/proposals.ts');
 console.log('');
-
 // Save report
 const report = {
   timestamp: new Date().toISOString(),
@@ -250,6 +208,5 @@ const report = {
     'utils/data/proposals.ts'
   ]
 };
-
 fs.writeFileSync('/workspace/absolute-ultimate-final-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to absolute-ultimate-final-fix-report.json');

@@ -1,27 +1,13 @@
-import { Moon, Sun } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import {
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-import { toast } from '@/hooks/use-toast'
-  darkModeMessages
-  lightModeMessages
-} from '@/utils/themeToggleMessages'
-// Use the ThemeProvider hook directly to ensure no conflicts
-import { useTheme } from '@/components/ThemeProvider'
-import { logIssue } from '@/utils/logIssue'
-import { useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
@@ -46,7 +32,6 @@ export function ModeToggle() {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
-=======
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import {
@@ -95,7 +80,6 @@ if ( {) {
       return window.match_media ('(prefers - color - scheme: dark)').matches;
         ? 'dark';
         : 'light';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return theme;
   })();
@@ -109,13 +93,13 @@ if ( {) {
     try {
 
 
-=======
     }
   }
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
     
+
 
 export function ModeToggle() {
 
@@ -191,6 +175,8 @@ export function ModeToggle() {
         disabled
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
+
+
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
@@ -206,7 +192,6 @@ export function ModeToggle() {
             size='icon'
             variant="ghost"
             size="icon"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -306,7 +291,6 @@ export function ModeToggle() {;
         description: 'Unable to change theme. Please try again.',;
         variant: 'destructive',;
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -330,13 +314,35 @@ export function ModeToggle() {;
           <Button;
             variant="ghost";
             size="icon";
+
+
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-            className='focus-visible:ring-ring relative group text-foreground' // Added text-foreground
-            data-testid='theme-toggle'
-            data-theme={resolvedTheme}          >
+
+            />;
+
+            <span className='sr-only'>;
+
+              Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
+              {isDarkMode ? 'light' : 'dark'}.;
+            </span>;
+          </Button>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <div className='text-center'>;
+            <p className='text-sm font-medium'>Theme: {resolvedTheme}</p>;
+            <p className='text-xs opacity-80'>;
+              Click to switch to {isDarkMode ? 'light' : 'dark'} mode;
+            </p>;
+            {theme === 'system' && (;
+              <p className='text-xs opacity-60 mt-1'>;
+                Following system preference;
+              </p>;
+            )}
+
+
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
@@ -369,6 +375,7 @@ export function ModeToggle() {;
             
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
+
             </span>
           </Button>
         </TooltipTrigger>
@@ -403,7 +410,6 @@ if (!isClient) {"
 }'"}
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
             )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </TooltipContent>;
       </Tooltip>;
@@ -411,15 +417,12 @@ if (!isClient) {"
   );
 
 
-=======
 
       const newTheme = isDarkMode ? "light" : "dark";
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
@@ -533,8 +536,5 @@ if ( {") {
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>);
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

@@ -1,31 +1,4 @@
-
-import { useState, useEffect  } from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { useState, useEffect } from 'react'
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
-import { ProjectForm } from './ProjectForm'
-import { PortfolioProject } from '@/types/resume'
-import { usePortfolio } from '@/hooks/usePortfolio'
-import { FilePlus, Loader2 } from 'lucide-react'
-import { ProjectCard  } from './ProjectCard';
-import { ProjectForm  } from './ProjectForm';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {
-
-  }
-  const handleEditSuccess = () => {
-    setEditingProject(null);
-    fetchProjects();
-  };
-  const handleDeleteProject = async (projectId: string) => {;
-    const success = await deleteProject(projectId);    if (success) {
-      fetchProjects()
-    }
-  }
+}
 
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -90,12 +63,15 @@ export function PortfolioBuilder() {;
         </Button>
       </div>
       
+
           Add Project
         </Button>
       </div>
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
+
+
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -113,7 +89,6 @@ export function PortfolioBuilder() {;
                 setEditingProject(null);                setEditingProject(null)
 
                 setEditingProject(null)
-=======
           className='gap-2';
           disabled={showAddProject || !!editingProject}        >;
           <FilePlus className='h-4 w-4' />;
@@ -144,9 +119,9 @@ export function PortfolioBuilder() {;
                 setEditingProject(null);
 
               }}
-            />;
-          </CardContent>;
-        </Card>;
+            />
+          </CardContent>
+        </Card>
       )}
       {/* Projects List */}
 
@@ -202,10 +177,11 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
-=======
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
+
+
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -222,21 +198,19 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-            
-            <ProjectForm 
+            </h2>;
+            <ProjectForm;
               project={editingProject || undefined}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
+              onCancel={() => {;
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-            />
-          </CardContent>
-        </Card>
+            />;
+          </CardContent>;
+        </Card>;
       )}
 
       
@@ -245,9 +219,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
+
               key={project.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               project={project}
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
@@ -265,7 +238,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <Card className='text-center py-12'>
           <Card className="text-center py-12">
             <CardContent>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
                   <FilePlus className="h-12 w-12 text-muted-foreground" />
@@ -274,19 +246,10 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-                <Button
-                  onClick={() => setShowAddProject(true)}
-                  className='mt-2'                >            <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Add your best work to showcase your skills and experience to potential employers.
-                </p>
-                <Button
-                  onClick={() => setShowAddProject(true)}
+
+
+
+
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
@@ -298,13 +261,76 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           </Card>
         )
       )}
-    </div>
-  )
+
+                  className='mt-2'                >            <CardContent>;
+              <div className="flex flex-col items-center gap-4">;
+                <div className="bg-muted/50 p-6 rounded-full">;
+                  <FilePlus className="h-12 w-12 text-muted-foreground" />;
+                </div>;
+                <h3 className="text-xl font-medium">No portfolio projects yet</h3>;
+                <p className="text-muted-foreground max-w-md mx-auto">;
+                  Add your best work to showcase your skills and experience to potential employers.;
+                </p>;
+                <Button
+                  onClick={() => setShowAddProject(true)} ;
+                  className="mt-2";
+              on_edit={() => setEditingProject (project)}
+              on_delete={handleDeleteProject}
+          {projects.map ((project, ) => (
+            <ProjectCard;
+              key = {project.id, }
+              project = {project, }
+              on_edit = {(, ) => setEditingProject (project), }
+              on_delete = {handleDeleteProject, }
+            />))}
+        </div>) : (
+        !showAddProject && (
+          <Card className='text - center py - 12'>;
+            <CardContent>;
+              <div className='flex flex - col items - center gap - 4'>;
+                <div className='bg - muted / 50 p - 6 rounded - full'>;
+                  <FilePlus className='h - 12 w - 12 text - muted - foreground' />;
+                </div>;
+                <h3 className='text - xl font - medium'>;
+                  No portfolio projects yet;
+                </h3>;
+                <p className='text - muted - foreground max - w-md mx - auto'>;
+                  Add your best work to showcase your skills and experience to;
+                  potential employers.;
+                </p>;
+                <Button;
+                  on_click={() => setShowAddProject (true)}
+                  className='mt - 2'                >            <CardContent>;
+              <div className="flex flex - col items - center gap - 4">;
+                <div className="bg - muted / 50 p - 6 rounded - full">;
+                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
+                </div>;
+                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;
+                <p className="text - muted - foreground max - w-md mx - auto">;
+                  Add your best work to showcase your skills and experience to potential employers.;
+                </p>;
+                <Button;
+                  on_click={() => setShowAddProject (true)}
+                  className="mt - 2";
+
+                >;
+                  Add Your First Project;
+                </Button>;
+              </div>;
+            </CardContent>;
+
+  );
 }
+
+          </Card>))}
+    </div>);
+}
+
 ;
 }
 }
 }
+
     </div>;
   );
 }

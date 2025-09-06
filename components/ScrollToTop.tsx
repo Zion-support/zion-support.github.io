@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -50,21 +46,8 @@ origin/automation-improvements-final
         setIsVisible(true)
       } else {
         setIsVisible(false)
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);      }
-    }
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
       }
-    }
+}
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
@@ -96,14 +79,12 @@ origin/main
     });
 =======
     };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
     };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -124,6 +105,8 @@ origin/main
   if (!isVisible) {
     return null;
   }
+<<<<<<< HEAD
+=======
 
   return (
     <button
@@ -141,9 +124,10 @@ origin/automation-improvements-final
       behavior: 'smooth'
     });  };      behavior: 'smooth'})
   }
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
-    <>;
-      {isVisible && (;
+    <>
+      {isVisible && (
         <button
           onClick={scrollToTop}
           className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
@@ -155,7 +139,8 @@ origin/automation-improvements-final
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
-            xmlns='http://www && www.w3.org/2000/svg'>;
+            xmlns='http://www.w3.org/2000/svg'
+          >
             <path
               strokeLinecap='round'
               strokeLinejoin='round'
@@ -172,7 +157,8 @@ origin/automation-improvements-final
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www && www.w3.org/2000/svg">;
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -181,11 +167,8 @@ origin/automation-improvements-final
 
 
 };
-
 export default ScrollToTop;  );
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ScrollToTop;
 
 

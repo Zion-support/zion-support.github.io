@@ -1,104 +1,4 @@
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button";
-import CodeBlock from "./CodeBlock";
-import { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import CodeBlock from './CodeBlock'
-interface Param {
-
-  name: string
-type: string
-required?: boolean
-}interface ApiPlaygroundProps {
-  method: string
-  path: string
-  params?: Param[]
-export function ApiPlayground({
-  method
-  path
-  params = []
-}: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState('demo_key_123')
-  const [paramValues, setParamValues] = useState<Record<string, string>>({})
-  const [body, setBody] = useState('{}')
-  const [response, setResponse] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues(prev => ({ ...prev, [name]: value }))
-  }
-  const sendRequest = async () => {
-    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl =
-      process.env.NEXT_PUBLIC_API_URL |
-    const baseUrl = null;
-      process.env.NEXT_PUBLIC_API_URL ||
-      (typeof window !== 'undefined' ? window.location.origin : '')
-    let url = `${baseUrl}${path}`
-    const searchParams = new URLSearchParams()
-    if (method === 'GET' |method === 'DELETE') {
-      params.forEach(p => {
-        const val = paramValues[p.name]
-        if (val) searchParams.append(p.name, val)
-      })
-      const query = searchParams.toString()
-      if (query) url += `?${query}` }
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
-interface Param {
-  name: string,
-  type: string,
-  required?: boolean
-import { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import CodeBlock from "./CodeBlock",;
-interface Param {;
-  name: string,;
-  type: string,;
-  required?: boolean;
-}
-;
-interface ApiPlaygroundProps {;
-  method: string,;
-  path: string,;
-  params?: Param[];
-}
-
-export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState("demo_key_123"),
-  const [paramValues, setParamValues] = useState<Record<string string>>({}),
-  const [body, setBody] = useState("{}"),
-  const [response, setResponse] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false),
-
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues((prev) => ({ ...prev, [name]: value }))
-  },
-
-  const sendRequest = async () => {
-    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
-    let url = `${baseUrl}${path}`,
-
-    const searchParams = new URLSearchParams(),
-    if (method === "GET" || method === "DELETE") {
-      params.forEach((p) => {
-        const val = paramValues[p.name],
-        if (val) searchParams.append(p.name, val)
-      }),
-      const query = searchParams.toString(),
-      if (query) url += `?${query}`
-    }
-
-    const options: RequestInit = {
+const options: RequestInit = {
       method
       headers: {
         Authorization: `Bearer ${apiKey}`
@@ -113,13 +13,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
 
-    if (method !== "GET" && method !== "DELETE") {
-      signal: AbortSignal.timeout(15000),
-    }
-    if (method !== 'GET' && method !== 'DELETE') {
-      signal: AbortSignal.timeout(15000)},
-
-    if (method !== "GET" && method !== "DELETE") {
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
@@ -162,15 +55,36 @@ if ( {) {
         error_message =;
           'Network error - check CORS configuration or API endpoint';
       } else {
-        errorMessage = err.message |'Unknown error occurred'
-      }
-      setResponse(
-        `Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`
-      )
-    } finally {
-      setLoading(false)
-    }
-  }
+
+
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import CodeBlock from './CodeBlock';
+
+interface Param {;
+  name: string;
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
+  method: string;
+  path: string;
+  params?: Param[];
+
+export function ApiPlayground(): any ({;
+  method,;
+  path,;
+  params = [],;
+}: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState('demo_key_123');
+  const [paramValues, setParamValues] = useState<Record<string, string>>({});
+  const [body, setBody] = useState('{}');
+  const [response, setResponse] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+        options.body = body
+
 ;
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
   const [apiKey, setApiKey] = useState("demo_key_123"),;
@@ -178,7 +92,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [body, setBody] = useState("{}"),;
   const [response, setResponse] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleParamChange = (name: string, value: string) => {;
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
@@ -255,10 +168,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       );
     } finally {;
       setLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
+
+
 
   return (
     <div className='space-y-4'>;
@@ -270,17 +184,14 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         placeholder="API Key"
       />
       {params.map(p => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
           key={p.name}
           value={paramValues[p.name] |''}
           value={paramValues[p.name] || ''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
-=======
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ))}
       {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
@@ -360,11 +271,48 @@ if () {) {
 }export default ApiPlayground
 '"
 
+
+    </div>;
+  );
+
+export default ApiPlayground;
+  const val = paramValues[p && p.name];
+if (val) searchParams && searchParams.append (p && p.name, val) ;
+});
+const query = searchParams && searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params && params.map ( (p) => (<Inputkey= {
+  p && p.name 
+}</div>) ;
+}export default ApiPlayground;
+
+  p.name;
+}</div>);
+}export default ApiPlayground;
+'";
   p.name 
 }</div>) ;
 }export default ApiPlayground;
 '";
 }
+
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;

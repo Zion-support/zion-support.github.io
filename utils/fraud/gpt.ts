@@ -59,9 +59,6 @@ if ( {) {
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
-=======
-      confidence: 0.5,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }export interface GptResult {
       label: 'SUSPICIOUS',
@@ -87,9 +84,8 @@ if ( {) {
   }
 
 }
+<<<<<<< HEAD
 =======
-  return colors[label];
-}
 
 
 
@@ -100,15 +96,7 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-export async function analyzeWithGpt (data: any): Promise < GptResult> {
-  // Mock implementation - in production, this would call OpenAI API;
-  const suspicious = data.description && data.description.toLowerCase ().includes ('fraud');
-;
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0.9 : 0.1,
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected';
-  }
+
 }
 
 

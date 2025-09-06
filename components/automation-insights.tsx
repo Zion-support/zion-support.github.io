@@ -225,19 +225,20 @@ import React from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
-                    <div className='flex items-center justify-between mb-4'>;
-                      <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full'>;
-                        {trend && trend.category}
-                      </span>;
-                      <span className='text-white/60 text-sm'>;
-                        {trend && trend.readTime}
-                      </span>;
-                    </div>;
-                    <h3 className='text-xl font-bold mb-3 text-white'>;
-                      {trend && trend.title}
-                    </h3>;
-                    <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
+                  >
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full'>
+                        {trend.category}
+                      </span>
+                      <span className='text-white/60 text-sm'>
+                        {trend.readTime}
+                      </span>
+                    </div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
+                      {trend.title}
+                    </h3>
+                    <p className='text-white/70 mb-4'>{trend.description}</p>
                     <Link
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
@@ -313,9 +314,10 @@ import React from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
-                  Get Started;
-                </Link>;
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
+                >
+                  Get Started
+                </Link>
                 <Link
                   href='/case-studies'
 
@@ -326,6 +328,7 @@ import React from 'react';
                 >
                   Get Started
                 </Link>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/case-studies"
 
@@ -339,9 +342,18 @@ import React from 'react';
         </main>
       </div>
     </>
-);
-  );
+
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
 }
+    </>);
 }
   );
 }

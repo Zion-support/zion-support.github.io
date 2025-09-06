@@ -3,11 +3,8 @@
  
  
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
-=======
-}
-const all_services = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ...innovative2035AIServices;
 ...innovative2035ITServices;
 //Existing services ...innovativeRealMicroSaasServices2025;
@@ -86,16 +83,19 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
   service.id
 }initial= {
   {
+<<<<<<< HEAD
   opacity: 0, y: 50
 }whileInView= {
   {
   opacity: 1, y: 0
+=======
   opacity: 0, y: 50 
 
 }whileInView= {
   {
   opacity: 1, y: 0 
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8, delay: index * 0.1
@@ -136,6 +136,7 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 
 }initial= {
   {
+<<<<<<< HEAD
   opacity: 0, y: 50
 =======
 
@@ -264,19 +265,21 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) )
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>)
 }export default Homepage2025;export default Homepage2025;
+<<<<<<< HEAD
 
+
+export default Homepage2025;
+
+=======
+}export default Homepage2025;export default Homepage2025;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 }
-{
-  title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: '📈';
 }
-{
-  title: 'Future - Proof Technology', description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', icon: '🔮';
 }
-{
-  title: 'Expert Team', description: 'World - class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: '👥';
 }
-{
-  title: '24 / 7 Support', description: 'Round - the - clock support and monitoring to ensure your systems run smoothly and efficiently.', icon: '🛡️';
 }
 }
 }

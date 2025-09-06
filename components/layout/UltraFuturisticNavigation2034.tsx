@@ -489,9 +489,7 @@ const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 =======
 ];
-
 const quickLinks = [
-=======
     services: [;
       {
         name: 'Quantum DNA Computing',
@@ -619,7 +617,6 @@ const quickLinks = [;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Careers', href: '/careers', icon: Briefcase },;
@@ -628,7 +625,6 @@ const companyLinks = [;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity },;
 ];
-
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -648,7 +644,6 @@ const socialLinks = [;
   },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
 ];
-
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -658,7 +653,6 @@ const certifications = [;
   'FedRAMP Authorized',;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
-
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -666,16 +660,13 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
-
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
 ];
-
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 50);
@@ -683,28 +674,20 @@ export default function UltraFuturisticNavigation2034() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
-
   const closeDropdown = () => {;
     setActiveDropdown(null);  };    };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
   };
-
   const closeDropdown = () => {;
     setActiveDropdown(null);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
     <>;
       {/* Top Contact Bar */}
@@ -737,8 +720,23 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-cyan-400" />
               <span className="hover:text-cyan-400 transition-colors">
+=======
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <div className='flex items-center space-x-2'>
+              <Phone className='w-4 h-4 text-cyan-400' />
+              <span className='hover:text-cyan-400 transition-colors'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {contactInfo.mobile}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -771,17 +769,14 @@ export default function UltraFuturisticNavigation2034() {;
         </div>
       </div>
       {/* Main Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
-            : 'bg-transparent'
-        }`}
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
+
+        }`}>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -808,18 +803,7 @@ export default function UltraFuturisticNavigation2034() {;
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
-=======
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center space-x-3"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />
@@ -833,7 +817,6 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-=======
               transition={{ duration: 0 && 0.5 }}
               className='flex items-center space-x-3'>;
               <div className='relative'>;
@@ -850,7 +833,6 @@ export default function UltraFuturisticNavigation2034() {;
                   Future Technology Solutions;
                 </p>              </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}            >;
               <div className="relative">;
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">;
@@ -865,8 +847,6 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>;
               </div>;
             </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
@@ -883,15 +863,22 @@ export default function UltraFuturisticNavigation2034() {;
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {link.name}
                 </Link>
               ))}
+=======
+=======
 
                 >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -910,7 +897,6 @@ export default function UltraFuturisticNavigation2034() {;
                         <div className="space-y-1">
                           {category.services.slice(0, 2).map((service) => (
                             <Link
-=======
 ;
 const social_links = [;
   {
@@ -1181,13 +1167,11 @@ function UltraFuturisticNavigation2034() {
                   </div>;
                 </div>;
               </div>;
-
               {/* Contact Button */}
               <Link
                 href='/contact'
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'>                href="/contact";
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";
-=======
                             </Link>))}
                         </div>;
                       </div>))}
@@ -1304,8 +1288,7 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-=======
-        {/* Mobile Menu */}
+{/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
             <motion.div;
@@ -1364,7 +1347,6 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>;
                       {active_dropdown === category.title && (
                         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
@@ -1428,7 +1410,6 @@ function UltraFuturisticNavigation2034() {
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Get Started;
                 </Link>;
@@ -1437,6 +1418,39 @@ function UltraFuturisticNavigation2034() {
 =======
                 
                 <Link
+=======
+                          className='mt-3 ml-4 space-y-2'
+                        >
+                          {category.services.map(service => (                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2"
+                        >
+                          {category.services.map((service) => (
+                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                <Link
+                  href='/contact'
+                  onClick={() => setIsOpen(false)}
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
@@ -1453,10 +1467,9 @@ function UltraFuturisticNavigation2034() {
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
-);      <div className="h-20"></div>
-    </>
-  );
-}
+        </AnimatePresence>;
+      </nav>;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 

@@ -1,30 +1,4 @@
-import { useState } from 'react'
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-import { format } from 'date-fns'
-import { JobMatch } from '@/types/jobs'
-
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns",
-import { JobMatch } from "@/types/jobs",
 interface JobMatchCardProps {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState } from 'react';
 import {;
   Card,;
@@ -40,27 +14,37 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 
-export function JobMatchesCard({
-  match
-  onApply
-  onDecline
-  showApplied = false
-}: JobMatchCardProps) {
-  const job = match.job
-  if (!job) return null
+export function JobMatchesCard(): any ({;
+  match,;
+  onApply,;
+  onDecline,;
+  showApplied = false,;
+}: JobMatchCardProps) {;
+  const job = match && match.job;
+
+
+  return (
+    <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
+      <CardHeader className='p-4 pb-2'>;
+        <div className='flex justify-between items-start'>;
+
+
+
 }
+
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
+
+
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -125,7 +109,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>;
             <CardTitle className='text-lg'>{job && job.title}</CardTitle>;
             <CardDescription>;
@@ -164,7 +147,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                 <Badge variant="secondary" className="text-xs">
                   +{match.matched_skills.length - 5}
                 </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           </div>;
@@ -174,11 +156,15 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
             {job.budget.min} - ${job.budget.max}
+
         
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
+
+
+
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -205,6 +191,20 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className='flex gap-2 w-full'>
             <Button
               className='flex-1'
+              onClick={() => onApply(match && match.id, job && job.id)}
+            >;
+              Apply Now;
+            </Button>;
+            <Button
+              variant='outline'
+              className='flex-1'
+              onClick={() => onDecline(match && match.id)}            >;
+              Decline;
+            </Button>;
+          </div>;
+        )}
+
+
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
@@ -212,18 +212,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             >
               Apply Now
             </Button>
-            <Button
-              variant='outline'
-              className='flex-1'
-              onClick={() => onDecline(match.id)}            >
-              Decline
-            </Button>
-          </div>
-        )}
-      </CardFooter>
-    </Card>
-  )
-}
+
+
             <Button 
               variant="outline" 
               className="flex-1"
@@ -233,12 +223,42 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>;
           </div>;
         )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </CardFooter>;
     </Card>;
   );
 };
 }
+
+
+
+
+import { useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
+import { format } from 'date - fns';
+import { JobMatch } from '@/types / jobs';
+interface JobMatchCardProps {
+  match: JobMatch;
+  on_apply: (match_id: string, job_id: string) => void;
+  on_decline: (match_id: string) => void;
+  show_applied?: boolean;
+export /**
+ * JobMatchesCard - Function description
+ */
+function JobMatchesCard() {
+  const job = match.job;
+  // Check condition
+if (return null) {
+  $2
 }
   return (
     <Card className='overflow - hidden border - l-4 border - l-blue - 500'>;
@@ -316,7 +336,4 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;

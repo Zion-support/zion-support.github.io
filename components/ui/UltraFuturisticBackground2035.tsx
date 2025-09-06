@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -26,7 +22,6 @@ import { motion } from 'framer-motion';
 
 
   children: React.ReactNode,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   intensity?: 'low' | 'medium' | 'high';
 
 
@@ -186,19 +181,15 @@ import { motion } from 'framer-motion';
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
 
     };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles;
     const initParticles = () => {;
       particlesRef && particlesRef.current = [];
@@ -285,20 +276,16 @@ import { motion } from 'framer-motion';
     const animate = () => {;
       ctx && ctx.fillStyle = colors && colors.background;
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Update and draw particles;
       particlesRef && particlesRef.current.forEach((particle, index) => {;
         // Update position;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
-
         // Bounce off edges;
         if (particle && particle.x <= 0 || particle && particle.x >= canvas && canvas.width) particle && particle.vx *= -1;
         if (particle && particle.y <= 0 || particle && particle.y >= canvas && canvas.height) particle && particle.vy *= -1;
-
         // Update life;
         particle && particle.life--;
-
         // Regenerate particle if it dies;
         if (particle && particle.life <= 0) {;
           particle && particle.x = Math && Math.random() * canvas && canvas.width;
@@ -306,18 +293,15 @@ import { motion } from 'framer-motion';
           particle && particle.life = particle && particle.maxLife;
           particle && particle.type = Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal';        }          particle && particle.type = Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal';
         }
-
         // Draw particle;
         const alpha = particle && particle.life / particle && particle.maxLife;
         ctx && ctx.globalAlpha = alpha;
-
         if (particle && particle.type === 'quantum' && enableQuantumEffects) {;
           // Quantum particle effect;
           ctx && ctx.beginPath();
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size * 2, 0, Math && Math.PI * 2);
           ctx && ctx.fillStyle = colors && colors.accent;
           ctx && ctx.fill();
-
           // Quantum glow;
           ctx && ctx.shadowColor = colors && colors.accent;
           ctx && ctx.shadowBlur = 20;
@@ -334,40 +318,30 @@ import { motion } from 'framer-motion';
           ctx && ctx.fill();        }          ctx && ctx.fill();
         }
       });
-
       // Draw holographic grid;
       if (enableHolographic) {;
         drawHolographicGrid(ctx, colors);      }
-
       // Draw neon effects;
       if (enableNeonEffects) {;
         drawNeonEffects(ctx, colors);      }
-
       // Draw space-time effects;
       if (enableSpaceTime) {;
         drawSpaceTimeEffects(ctx, colors);
       }
-
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        drawHolographicGrid(ctx, colors);
       }
-
       // Draw neon effects;
       if (enableNeonEffects) {;
         drawNeonEffects(ctx, colors);        drawNeonEffects(ctx, colors);
       }
-
       // Draw space-time effects;
       if (enableSpaceTime) {;
         drawSpaceTimeEffects(ctx, colors);
       }
-
       animationRef && animationRef.current = requestAnimationFrame(animate);        drawSpaceTimeEffects(ctx, colors);
       }
-
       animationRef && animationRef.current = requestAnimationFrame(animate);
-
     animate();
-
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
       if (animationRef && animationRef.current) {;
@@ -410,6 +384,7 @@ import { motion } from 'framer-motion';
       ctx.beginPath();
 
       ctx.moveTo(x, 0);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke()
     }
@@ -442,6 +417,7 @@ import { motion } from 'framer-motion';
     
 
     // Neon orbs
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
@@ -460,11 +436,9 @@ import { motion } from 'framer-motion';
       ctx.fillStyle = colors.primary;
 
     const time = Date && Date.now() * 0 && 0.001;
-
     ctx && ctx.strokeStyle = colors && colors.primary;
     ctx && ctx.lineWidth = 0 && 0.5;
     ctx && ctx.globalAlpha = 0 && 0.3,;
-
     for (let x = 0; x < ctx && ctx.canvas.width; x += gridSize) {;
       ctx && ctx.beginPath();
       ctx && ctx.moveTo(x, 0);
@@ -473,21 +447,18 @@ import { motion } from 'framer-motion';
       ctx && ctx.lineTo(x, ctx && ctx.canvas.height);
       ctx && ctx.stroke();
     }
-
     for (let y = 0, y < ctx && ctx.canvas.height, y += gridSize) {;
       ctx && ctx.beginPath();
       ctx && ctx.moveTo(0, y);
       ctx && ctx.lineTo(ctx && ctx.canvas.width, y);
       ctx && ctx.stroke();
     }
-
     for (let y = 0; y < ctx && ctx.canvas.height; y += gridSize) {;
       ctx && ctx.beginPath();
       ctx && ctx.moveTo(0, y);
       ctx && ctx.lineTo(ctx && ctx.canvas.width, y);
       ctx && ctx.stroke();    }      ctx && ctx.stroke();
     }
-
     // Animated diagonal lines;
     ctx && ctx.strokeStyle = colors && colors.secondary;
     ctx && ctx.globalAlpha = 0 && 0.2;
@@ -503,10 +474,8 @@ import { motion } from 'framer-motion';
       ctx && ctx.stroke();      ctx && ctx.stroke();
     }
   };
-
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const time = Date && Date.now() * 0 && 0.001;
-
     // Neon orbs;
     for (let i = 0; i < 3; i++) {      const x = (Math && Math.sin(time * 0 && 0.5 + i) * 0 && 0.3 + 0 && 0.5) * ctx && ctx.canvas.width;    ;
     // Neon orbs;
@@ -514,7 +483,6 @@ import { motion } from 'framer-motion';
       const x = (Math && Math.sin(time * 0 && 0.5 + i) * 0 && 0.3 + 0 && 0.5) * ctx && ctx.canvas.width;
       const y = (Math && Math.cos(time * 0 && 0.3 + i) * 0 && 0.3 + 0 && 0.5) * ctx && ctx.canvas.height;
       const size = 30 + Math && Math.sin(time + i) * 10;
-
       // Glow effect;
       ctx && ctx.shadowColor = colors && colors.primary;
       ctx && ctx.shadowBlur = 30;
@@ -522,7 +490,6 @@ import { motion } from 'framer-motion';
       ctx && ctx.arc(x, y, size, 0, Math && Math.PI * 2);
       ctx && ctx.fillStyle = colors && colors.glow;
       ctx && ctx.fill();
-
       // Core;
       ctx && ctx.shadowBlur = 0;
       ctx && ctx.beginPath();
@@ -531,10 +498,8 @@ import { motion } from 'framer-motion';
       ctx && ctx.fill();    }      ctx && ctx.fill();
     }
   };
-
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const time = Date && Date.now() * 0 && 0.001;
-
     // Wormhole effect;
     const centerX = ctx && ctx.canvas.width / 2;
     const centerY = ctx && ctx.canvas.height / 2,;
@@ -554,8 +519,6 @@ import { motion } from 'framer-motion';
 
 
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
           background: 'rgba (0, 0, 0, 0.95)',
@@ -865,7 +828,6 @@ if ( {) {
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
-=======
       />;
       {/* Additional overlay effects */}
       <div className='absolute inset - 0 pointer - events - none'>;
@@ -901,13 +863,11 @@ if ( {) {
         <div className='absolute inset-0 opacity-20'>;
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
-=======
         />;
         {/* Holographic scan lines */}
         <div className='absolute inset - 0 opacity - 20'>;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={i}
               className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';
               style={{
@@ -924,7 +884,6 @@ if ( {) {
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
-=======
                 opacity: [0, 1, 0],
                 scale_x: [0, 1, 0],              }}          }}
         />;
@@ -932,7 +891,6 @@ if ( {) {
         <div className="absolute inset - 0 opacity - 20">;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -973,9 +931,72 @@ if ( {) {
             />
 
           ))}
-        </div>
-      </div>
-    </div>
+=======
+
+                ease: "easeInOut"
+
+              }}
+            />;
+=======
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              transition={{
+                duration: 3,
+                delay: i * 0.1,
+                repeat: Infinity,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ease: 'easeInOut',              }}
+
+              }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          ))}
+
+
+};
+export default UltraFuturisticBackground2035;  );
+};
+export default UltraFuturisticBackground2035;
+
+
+=======
+                ease: 'easeInOut',              }}                ease: "easeInOut";
+              }}
+            />))}
+        </div>;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2035);
+}
+;
+export default UltraFuturisticBackground2035;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
   );
 }
 };

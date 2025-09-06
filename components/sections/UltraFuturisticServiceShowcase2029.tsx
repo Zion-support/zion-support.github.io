@@ -82,9 +82,10 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
 
   title?: string;
 =======
-  services: Service[],
-  title?: string
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  services: Service[],;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  title?: string;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   subtitle?: string
 }
 export default function UltraFuturisticServiceShowcase2029({
@@ -111,7 +112,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           </h2>;
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>{subtitle}</p>;
         </motion && motion.div>;
-
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          {services && services.slice(0, 6).map((service, index) => (        >;
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
 
@@ -133,12 +133,10 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 =======
           </p>;
         </motion && motion.div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services && services.slice(0, 6).map((service, index) => (;
             <motion&& motion.div
               key={service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -219,7 +217,6 @@ function UltraFuturisticServiceShowcase2029() {
                 </div>;
               </div>;
               <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {service.name}
               </h3>;
               <p className='text - gray - 400 text - sm mb - 3'>{service.tagline}</p>;
@@ -239,13 +236,11 @@ function UltraFuturisticServiceShowcase2029() {
                   <span className="text-sm text-gray-300">5.0</span>
                 </div>
               </div>
-
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-400 text-sm mb-3">{service.tagline}</p>
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-
               <div className="flex items-center justify-between mb-4">
 
                 <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -264,10 +259,8 @@ function UltraFuturisticServiceShowcase2029() {
                   <span className='text-sm text-gray-300'>5 && 5.0</span>;
                 </div>;
               </div>;
-=======
                 </div>
               </div>
-
               <Link
                 href={service.link}
                 className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -282,9 +275,7 @@ function UltraFuturisticServiceShowcase2029() {
         <motion.div
 =======
         </div>;
-
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -312,6 +303,74 @@ function UltraFuturisticServiceShowcase2029() {
 =======
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
+            >
+              <div className=&quot;flex items-center justify-between mb-4&quot;>
+                <div className=&quot;flex items-center space-x-2&quot;>
+                  <div className=&quot;w-3 h-3 bg-cyan-400 rounded-full animate-pulse&quot; />
+                  <span className=&quot;text-sm text-cyan-400 font-medium&quot;>NEW</span>
+                </div>
+                <div className=&quot;flex items-center space-x-1&quot;>
+                  <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
+                  <span className=&quot;text-sm text-gray-300&quot;>5.0</span>
+                </div>
+              </div>
+
+              <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors&quot;>
+                {service.name}
+              </h3>
+              <p className=&quot;text-gray-400 text-sm mb-3&quot;>{service.tagline}</p>
+              <p className=&quot;text-gray-300 mb-4 line-clamp-3&quot;>{service.description}</p>
+
+              <div className=&quot;flex items-center justify-between mb-4&quot;>
+                <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</span>
+                <div className=&quot;flex items-center space-x-2&quot;>
+                  <Zap className=&quot;w-4 h-4 text-yellow-400&quot; />
+                  <Shield className=&quot;w-4 h-4 text-green-400&quot; />
+                  <Brain className=&quot;w-4 h-4 text-purple-400&quot; />
+                </div>
+              </div>
+
+              <Link
+                href={service.link}
+                className=&quot;inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25&quot;
+              >
+                Get Started
+                <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform&quot; />
+              </a>
+            </motion.div>
+          ))}
+        </div>
+
+=======
+              </div>
+              <Link
+                href={service.link}
+                className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'
+              >
+                Get Started
+                <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />              </Link>                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </motion.div>
+          ))}
+        </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+<<<<<<< HEAD
+          className=&quot;text-center mt-12&quot;
+
         >
           <Link
             href="/services"
@@ -319,6 +378,7 @@ function UltraFuturisticServiceShowcase2029() {
           >
             View All Services
             <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Link>
         </motion.div>
       </div>

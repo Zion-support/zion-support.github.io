@@ -1,3 +1,18 @@
+
+/* eslint - env node */;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+/* eslint-env node */
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+module.exports = {
+
+=======
+
+
 /* eslint-env node */
 module.exports = {
   env: {
@@ -56,18 +71,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
   },
   env: {
     browser: true,
@@ -272,20 +287,6 @@ origin/automation-improvements-final
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
-=======
-  extends: ["next / core - web - vitals", "plugin:@typescript - eslint / recommended"],
-  parser: "@typescript - eslint / parser",
-  plugins: ["@typescript - eslint"],
-  rules: {
-    "@typescript - eslint / no - unused - vars": "off",
-    "@typescript - eslint / no - explicit - any": "off",
-    "react - hooks / exhaustive - deps": "warn",
-    "react / react - in - jsx - scope": "off",
-    "no - undef": "off",
-    "react / no - unescaped - entities": "off",
-    "@next / next / no - html - link - for - pages": "off",
-    "@next / next / no - img - element": "off",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
   ignorePatterns: [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -405,6 +406,34 @@ origin/automation-improvements-final
     "cypress_backup/",
     "data && data.disabled/",
     "database/",
+
+    "build-verification && verification.js",
+    "check-syntax && syntax.js",
+    "clean-conflicts && conflicts.js",
+    "commit-and-push && push.js",
+
+  ],
+};
+
+
+
+=======
+
+
+=======
+};
+
+
+
+};
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+    "commit-and-push.js"
+  ]
+};
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute-automation.js",
@@ -450,13 +479,11 @@ origin/automation-improvements-final
     "automation-runner.js",
     "basic-test.js",
     "broken_files_backup/",
-    "build-verification.js",
-    "check-syntax.js",
-    "clean-conflicts.js",
-    "commit-and-push.js"
-  ]
-};
-    "commit-and-push.js",
+<<<<<<< HEAD
+    "build - verification.js",
+    "check - syntax.js",
+    "clean - conflicts.js",
+    "commit - and - push.js",
   ],
 };
 };

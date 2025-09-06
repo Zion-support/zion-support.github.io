@@ -4,6 +4,26 @@ import EnhancedFooter from './EnhancedFooter',
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
@@ -63,4 +83,34 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 }
 }
   );
+
+  return (
+    <div className=&quot;min-h-screen flex flex-col&quot;>
+      <header>
+        <EnhancedNavigation />
+        <LanguageSwitchPrompt />
+      </header>
+      <main id=&quot;main&quot; className=&quot;flex-1 container mx-auto px-4 py-6&quot;>{children}</main>
+=======
+<<<<<<< HEAD
+import React, { useEffect } from 'react',
+import EnhancedNavigation from './EnhancedNavigation',
+import EnhancedFooter from './EnhancedFooter',
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+
+=======
+import React, { useEffect } from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;}
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
 }

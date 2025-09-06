@@ -1,30 +1,28 @@
-
-import React, { useState, useEffect } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
-import {
-  Activity
-  Zap
-  Package
-  TrendingUp
-  TrendingDown
-  AlertTriangle
-  CheckCircle
-  RefreshCw
-  BarChart3
-  Clock
-  Globe
-} from 'lucide-react'
-import { bundleMonitor } from '@/utils/bundleMonitor'
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
-interface PerformanceMetrics {
-  bundleSize: number
-  loadTime: number
-  performanceScore: number
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import {;
+  Activity,;
+  Zap,;
+  Package,;
+  TrendingUp,;
+  TrendingDown,;
+  AlertTriangle,;
+  CheckCircle,;
+  RefreshCw,;
+  BarChart3,;
+  Clock,;
+  Globe,;
+} from 'lucide-react';
+import { bundleMonitor } from '@/utils/bundleMonitor';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+interface PerformanceMetrics {;
+  bundleSize: number;
+  loadTime: number;
+  performanceScore: number;
   chunkCount: number;
-=======
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -50,7 +48,6 @@ interface PerformanceMetrics {
   load_time: number;
   performance_score: number;
   chunk_count: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   cacheHitRate: number;
   fcp: number; // First Contentful Paint;
   lcp: number; // Largest Contentful Paint;
@@ -459,7 +456,6 @@ export function PerformanceDashboard() {;
           />
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return vitals;
   };
 
@@ -518,7 +514,6 @@ export function PerformanceDashboard() {;
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
     return () => clearInterval(interval);
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className='space-y-6'>;
@@ -527,7 +522,6 @@ export function PerformanceDashboard() {;
         <div>;
           <h2 className='text-2xl font-bold'>Performance Dashboard</h2>;
           <p className='text-muted-foreground'>;
-=======
   useEffect (() => {
     collect_metrics ();
     const interval = set_interval (collect_metrics, 30000); // Update every 30 seconds;
@@ -540,7 +534,6 @@ export function PerformanceDashboard() {;
         <div>;
           <h2 className='text - 2xl font - bold'>Performance Dashboard</h2>;
           <p className='text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Monitor bundle size, performance metrics, and optimization;
             opportunities;
           </p>;
@@ -548,6 +541,8 @@ export function PerformanceDashboard() {;
 
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
+
+
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -555,39 +550,35 @@ export function PerformanceDashboard() {;
 
 
       {/* Performance Score */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Zap className="w-5 h-5" />
-            Performance Score
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          {metrics ? (
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                {getScoreIcon(metrics.performanceScore)}
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl font-bold">
-                      {metrics.performanceScore}/100
-                    </span>
-                    <Badge variant={metrics.performanceScore >= 90 ? 'default' : 'secondary'}>
-                      {metrics.performanceScore >= 90 ? 'Excellent' : 
-                       metrics.performanceScore >= 70 ? 'Good' : 'Needs Improvement'}
-                    </Badge>
-                  </div>
-                  <Progress value={metrics.performanceScore} className="h-2" />
-                </div>
-              </div>
-              {lastUpdated && (
-                <p className='text-sm text-muted-foreground'>
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <Zap className='w-5 h-5' />;
+        <Button on_click={collect_metrics} disabled={is_loading}>;
+          <RefreshCw;
+            className={`w - 4 h - 4 mr - 2 ${is_loading ? 'animate - spin' : ''}`}
+          />;
+          {is_loading ? 'Collecting...' : 'Refresh'}
+        </Button>;
+      </div>;
+      {/* Performance Score */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items - center gap - 2'>;
+            <Zap className='w - 5 h - 5' />;
+            Performance Score;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+
+
               
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
+
+
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
-=======
                     </Badge>;
                   </div>;
                   <Progress value={metrics && metrics.performanceScore} className='h-2' />;
@@ -598,7 +589,6 @@ export function PerformanceDashboard() {;
                 <p className='text-sm text-muted-foreground'>;
                   Last updated: {lastUpdated && lastUpdated.toLocaleString()}
                 </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           ) : (;
@@ -643,7 +633,6 @@ export function PerformanceDashboard() {;
                 {metrics && metrics.loadTime.toFixed(0)}ms;
               </p>;
               <p className='text-xs text-muted-foreground'>;
-=======
           {metrics ? (
             <div className='space - y-4'>;
               <div className='flex items - center gap - 4'>;
@@ -796,7 +785,6 @@ export function PerformanceDashboard() {;
                           <Badge variant="secondary" className="text-xs">
                             cached
                           </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </div>;
                     </div>;
@@ -814,6 +802,11 @@ export function PerformanceDashboard() {;
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
+
+              {chunks && chunks.length > 10 && (;
+                <p className='text-sm text-muted-foreground text-center pt-2'>;
+                  ... and {chunks && chunks.length - 10} more chunks;
+                </p>;
               )}
             </div>
           ) : (
@@ -849,6 +842,8 @@ export function PerformanceDashboard() {;
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+
+
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -860,6 +855,8 @@ export function PerformanceDashboard() {;
               </div>
             </div>
             
+
+
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -874,17 +871,163 @@ export function PerformanceDashboard() {;
                 </div>
               </div>
             )}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-}
-}
+
+        </CardContent>;
+      </Card>;
+
+      {/* Recommendations */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <TrendingUp className='w-5 h-5' />;
+            Optimization Recommendations;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='space-y-3'>;
+            <div className='flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded'>;
+              <CheckCircle className='w-5 h-5 text-blue-600 mt-0 && 0.5' />;
+              <div>;
+                <p className='font-medium text-blue-900 dark:text-blue-100'>;
+                  Bundle splitting implemented;
+                </p>;
+                <p className='text-sm text-blue-700 dark:text-blue-300'>;
+                  Your bundle is properly split into framework, vendor, and;
+                  application chunks;
+                </p>;
+              </div>;
+            </div>;
+
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
+              <CheckCircle className='w-5 h-5 text-green-600 mt-0 && 0.5' />;
+              <div>;
+                <p className='font-medium text-green-900 dark:text-green-100'>;
+                  Performance monitoring active;
+                </p>;
+                <p className='text-sm text-green-700 dark:text-green-300'>;
+                  Real-time performance tracking is helping optimize your;
+                  application;
+                </p>;
+              </div>;
+            </div>;
+
+            {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
+              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>;
+                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>;
+                    Consider more aggressive code splitting;
+                  </p>;
+                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>;
+                    Bundle size is above 2MB. Consider implementing dynamic;
+                    imports for heavy components;
+                  </p>;
+                </div>;
+              </div>;
+            )}
+
+
+
           </div>;
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+
+
+
+          {chunks.length > 0 ? (
+            <div className='space - y-2'>;
+              {chunks.slice (0, 10).map ((chunk, index) => (
+                <div;
+                  key={chunk.name}
+                  className='flex items - center justify - between p - 3 bg - gray - 50 dark:bg - gray - 800 rounded';
+                >;
+                  <div className='flex items - center gap - 3'>;
+                    <span className='text - sm font - mono text - muted - foreground'>                      {index + 1}
+                    </span>;
+                    <div>;
+                      <p className='font - medium text - sm'>{chunk.name}</p>;
+                      <div className='flex items - center gap - 2'>;
+                        <Badge variant='outline' className='text - xs'>;
+                          {chunk.type}
+                        </Badge>;
+                        {chunk.cached && (
+                          <Badge variant='secondary' className='text - xs'>;
+                            cached;
+                          </Badge>)}
+                      </div>;
+                    </div>;
+                  </div>;
+                  <div className='text - right'>;
+                    <p className='font - medium'>{format_size (chunk.size)}</p>;
+                    <p className='text - xs text - muted - foreground'>;
+                      {chunk.load_time.to_fixed (0)}ms;
+                    </p>;
+                  </div>;
+                </div>))}
+              {chunks.length > 10 && (
+                <p className='text - sm text - muted - foreground text - center pt - 2'>;
+                  ... and {chunks.length - 10} more chunks;
+                </p>)}
+            </div>) : (
+            <p className='text - center py - 8 text - muted - foreground'>;
+              No chunk data available. Refresh to collect metrics.;
+            </p>)}
+        </CardContent>;
+      </Card>;
+      {/* Recommendations */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items - center gap - 2'>;
+            <TrendingUp className='w - 5 h - 5' />;
+            Optimization Recommendations;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='space - y-3'>;
+            <div className='flex items - start gap - 3 p - 3 bg - blue - 50 dark:bg - blue - 900 / 20 rounded'>;
+              <CheckCircle className='w - 5 h - 5 text - blue - 600 mt - 0.5' />;
+              <div>;
+                <p className='font - medium text - blue - 900 dark:text - blue - 100'>;
+                  Bundle splitting implemented;
+                </p>;
+                <p className='text - sm text - blue - 700 dark:text - blue - 300'>;
+                  Your bundle is properly split into framework, vendor, and;
+                  application chunks;
+                </p>;
+              </div>;
+            </div>;
+            <div className='flex items - start gap - 3 p - 3 bg - green - 50 dark:bg - green - 900 / 20 rounded'>;
+              <CheckCircle className='w - 5 h - 5 text - green - 600 mt - 0.5' />;
+              <div>;
+                <p className='font - medium text - green - 900 dark:text - green - 100'>;
+                  Performance monitoring active;
+                </p>;
+                <p className='text - sm text - green - 700 dark:text - green - 300'>;
+                  Real - time performance tracking is helping optimize your;
+                  application;
+                </p>;
+              </div>;
+            </div>;
+            {metrics && metrics.bundle_size > 2 * 1024 * 1024 && (
+              <div className='flex items - start gap - 3 p - 3 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded'>;
+                <AlertTriangle className='w - 5 h - 5 text - yellow - 600 mt - 0.5' />;
+                <div>;
+                  <p className='font - medium text - yellow - 900 dark:text - yellow - 100'>;
+                    Consider more aggressive code splitting;
+                  </p>;
+                  <p className='text - sm text - yellow - 700 dark:text - yellow - 300'>;
+                    Bundle size is above 2MB. Consider implementing dynamic;
+                    imports for heavy components;
+                  </p>;
+                </div>;
+              </div>)}
+          </div>;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+}
+}

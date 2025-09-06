@@ -6,6 +6,10 @@ export interface Peer {;
   baseUrl: string, // e.g., https: //zion-latam.example.org;
   scope?: SyncScope;
   paused?: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 export interface InstanceConfig {instanceId: string;
   optIn: boolean;
@@ -14,31 +18,8 @@ export interface InstanceConfig {instanceId: string;
   peers: Peer[];
   secretConfigured: boolean;
 }
-export type SyncScope = "full" | "dao" | "marketplace";
-export interface Peer {;
-  id: string;
-  baseUrl: string, // e.g., https: //zion-latam.example.org;
-  scope?: SyncScope,;
-  paused?: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 ;
-export interface InstanceConfig {;
-  instanceId: string;
-  optIn: boolean;
-  paused: boolean;
-  scope: SyncScope,;
-  peers: Peer[];
-  secretConfigured: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -164,22 +145,12 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
   }
 
 }
-export interface ProposalVoteEntry {
-  voter_id: string,
-  weight: number,
-  choice: string;
-}
-export interface ProposalPayload extends BaseEventPayload {
-  proposal_id: string,
-  title: string,
-  votes: ProposalVoteEntry[];
-}
-export interface TokenTransferPayload extends BaseEventPayload {
-  tx_id: string,
-  token: string,
-  amount: number,
-  from_subnet: string,
-  to_subnet: string,
+;
+export interface DaoEndorsementPayload extends BaseEventPayload {;
+  fromDAO: string;
+  toDAO: string;
+  resolutionId: string;
+  decision: "endorse" | "reject",;
   timestamp: number;
 
   } catch (error) {
@@ -204,6 +175,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
   }
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -238,6 +210,18 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+=======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

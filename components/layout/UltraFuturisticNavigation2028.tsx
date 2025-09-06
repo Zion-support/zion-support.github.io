@@ -266,7 +266,6 @@ const companyLinks = [
   { name: '🎯 About Us', href: '/about', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-=======
 ];
 
 const companyLinks = [
@@ -356,13 +355,11 @@ export default function UltraFuturisticNavigation2028() {;
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
   };
-
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
         service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
@@ -381,11 +378,9 @@ export default function UltraFuturisticNavigation2028() {;
     )
 =======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
-
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
   };
-
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(service =>;
       service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
@@ -447,7 +442,6 @@ export default function UltraFuturisticNavigation2028() {;
             <div className="flex items-center space-x-4">;
               <a href={contactInfo && contactInfo.website} className="text-purple-300 hover:text-white transition-colors">;
                 {contactInfo && contactInfo.website}
-=======
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }, ];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
 ;
@@ -637,7 +631,6 @@ function UltraFuturisticNavigation2028() {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-=======
             <div className="relative group">;
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
                 <Sparkles className="w-5 h-5" />;
@@ -682,18 +675,94 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
-                        </div>;
-                      </div>;
+                        </div>
+                      </div>
                     ))}
 
 
                         View All Services
+
+=======
+                                  </h4>;
+                                  <p className="text - xs text - purple - 300">{service.description}</p>;
+                                </div>;
+                                <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
+                              </div>;
+                            </Link>))}
+                        </div>;
+                      </div>))}
+                  </div>;
+                  <div className='mt - 6 pt - 6 border - t border - purple - 500 / 20'>;
+                    <div className='flex items - center justify - between'>;
+                      <p className='text - purple - 300'>;
+                        Explore all our cutting - edge services;
+                      </p>;
+                      <Link;
+                        href='/services';
+                        className='px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                      >                  <div className="mt - 6 pt - 6 border - t border - purple - 500 / 20">;
+                    <div className="flex items - center justify - between">;
+                      <p className="text - purple - 300">Explore all our cutting - edge services</p>;
+                      <Link;
+                        href="/services";
+                        className="px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                        View All Services;
+
+                      </Link>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Company Links */}
+            {companyLinks && companyLinks.slice(1, 5).map(link => (;
+              <Link
+                key={link && link.name}
+                href={link && link.href}
+                className='text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2'>;
+                <link && link.icon className='w-4 h-4' />;
+                <span>;
+                  {link && link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
+                </span>              </Link>              <Link
+                key={link && link.name}
+                href={link && link.href}
+                className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2">;
+                <link && link.icon className="w-4 h-4" />;
+                <span>{link && link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>;
+              </Link>;
+            ))}
+
+          </div>;
+
+
+          {/* Search and Actions */}
+          <div className='hidden lg:flex items-center space-x-4'>;
+            {/* Search */}
+            <div className='relative'>;
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
+              <input
+                type='text'
+                placeholder='Search services...'
+                value={searchQuery}
+                onChange={e => setSearchQuery(e && e.target.value)}
+                className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search */}
+            <div className="relative">;
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
+
+=======
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
@@ -783,7 +852,9 @@ function UltraFuturisticNavigation2028() {
             <div className="px-4 py-6 space-y-6">;
 
 =======
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
             <div className="px-4 py-6 space-y-6">
 
@@ -1015,7 +1086,6 @@ function UltraFuturisticNavigation2028() {
                   on_click={close_menu}
                   className="block w - full text - center px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
@@ -1023,6 +1093,25 @@ function UltraFuturisticNavigation2028() {
 
 =======
               <div className="pt-4 border-t border-purple-500/30">
+=======
+              <div className='pt-4 border-t border-purple-500/30'>
+=======
+
+                    </Link>
+
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -1095,12 +1184,51 @@ function UltraFuturisticNavigation2028() {
     </nav>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </nav>
-);
+<<<<<<< HEAD
   );
 }
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Search Results Dropdown */}
+      {search_query && filtered_services.length > 0 && (
+        <div className='absolute top - full left - 0 right - 0 bg - black / 95 backdrop - blur - xl border border - purple - 500 / 30 rounded - 2xl shadow - 2xl z - 50'>;
+          <div className='p - 4'>;
+            <div className='space - y-2'>;
+              {filtered_services.slice (0, 8).map (service => (
+                <Link;
+                  key={service.name}
+                  href={service.href}
+                  className='block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors';
+                >;
+                  <div className='flex items - center justify - between'>;
+                    <div>;
+                      <h4 className='text - sm font - medium text - white'>;
+                        {service.name}
+                      </h4>;
+                      <p className='text - xs text - purple - 300'>;
+                        {service.description}
+                      </p>;
+                    </div>;
+                    <span className='text - xs text - purple - 400 font - medium'>;
+                      {service.price}
+                    </span>                  </div>                <Link;
+                  key={service.name}
+                  href={service.href}
+                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors";
+                >;
+                  <div className="flex items - center justify - between">;
+                    <div>;
+                      <h4 className="text - sm font - medium text - white">{service.name}</h4>;
+                      <p className="text - xs text - purple - 300">{service.description}</p>;
+                    </div>;
+                    <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
+                  </div>;
+                </Link>))}
+            </div>;
+          </div>;
+        </div>)}
+    </nav>);
 }
   );
 }

@@ -1,14 +1,4 @@
-
-import React, { useState, Suspense } from 'react'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-const ReactPlayer = React.lazy(() => import('react-player'))
-const ModelViewer = React.lazy(async () => {
-  await import('@google/model-viewer')
-  return {
-    default: (props: any) => React.createElement('model-viewer', props)
-  }
+}
 });
 interface ProductGalleryProps {
 
@@ -121,7 +111,6 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-=======
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -211,7 +200,6 @@ function ProductGallery() {
                   src={model_url}
                   alt='3d model';
                   camera - controls;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   style={{ width: '100%', height: '100%' }}
                 />;
               </Suspense>;
@@ -226,14 +214,15 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
-    </Dialog>
-  )
-}
-}
+
+    </Dialog>;
+  );
+
     </Dialog>;
   );
 };
 };
+
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -255,13 +244,10 @@ interface ProductGalleryProps {;
   modelUrl?: string;
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 }
-=======
 
-=======
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (

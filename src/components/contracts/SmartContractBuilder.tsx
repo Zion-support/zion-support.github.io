@@ -1,20 +1,4 @@
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-import { useSmartContracts } from "@/hooks/useSmartContracts",
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-interface SmartContractBuilderProps {
-
-  isOpen;
+isOpen;
   onClose;
   talent;
   clientName;
@@ -148,6 +132,45 @@ interface SmartContractBuilderProps {;
 
   onDeploy?: (contractContent: string) => void}
 // Helper to ensure milestones are always an array
+      logErrorToProduction ('Error deploying contract:', { data: error }),
+      setDeployStatus ('error');
+      toast.error ("Failed to deploy smart contract");
+    }
+  }
+// Placeholder ABIs - these should be generated from compiled contracts;
+const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = ["constructor (address client, address talent, string projectDetailsIPFSHash)",
+  "function client () view returns (address)",
+  "function talent () view returns (address)",
+  "function projectDetailsIPFSHash () view returns (string)",
+];
+const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable;
+  "constructor (address initial_owner)",
+  "function owner () view returns (address)",
+  "event OwnershipTransferred (address indexed previous_owner, address indexed new_owner)",
+  "function renounce_ownership ()",
+  "function transfer_ownership (address new_owner)",
+  // From Escrow;
+  "event Deposited (address indexed payee, uint256 wei_amount)",
+  "event Withdrawn (address indexed payee, uint256 wei_amount)",
+  // EscrowAgreement specific (based on previous subtask's template);
+  "constructor (address _talent, address _client, string memory _projectDetailsIPFSHash)", // Note: Ownable takes _client;
+  "function talent () view returns (address)",
+  "function projectDetailsIPFSHash () view returns (string)",
+  "function current_state () view returns (uint8)", // Enum EscrowState;
+  "function deposit_funds () payable",
+  "function release_funds ()",
+  "function markAsDelivered ()",
+  "function raise_dispute ()",
+];
+interface SmartContractBuilderProps {
+  is_open: boolean;
+  on_close: () => void;
+  talent: TalentProfile;
+  client_name: string; // Assuming client_name is passed as a prop;
+  onContractGenerated?: (contract_content: string) => void; // For Solidity;
+  onLegalDraftGenerated?: (markdown_content: string) => void; // For Markdown;
+  on_deploy?: (contract_content: string) => void}
+// Helper to ensure milestones are always an array;
 }
   return []}
 export function SmartContractBuilder({
@@ -264,7 +287,6 @@ export function SmartContractBuilder(): any ({;
         governingLaw: prev?.governingLaw || '',;
         disputeResolution: prev?.disputeResolution || '',,;
 
-=======
 }, []); []);
     if ( { // Only prefill if form_values is not already set (e.g., by a template)) {
   $2
@@ -286,7 +308,6 @@ export function SmartContractBuilder(): any ({;
         deadline: prev?.deadline || '',
         governing_law: prev?.governing_law || '',
         dispute_resolution: prev?.dispute_resolution || '', ,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }))}
   }, [talent, client_name, is_open]); // Re - run if talent, client_name, or is_open changes and form_values not set.// Clear any previously generated contracts when a new template is loaded;
     setGeneratedMarkdownContract (null);
@@ -535,7 +556,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           <TabsContent value="preview_markdown" className="pt-4">
             {isLoadingLegalDraft && <p>Loading draft...</p>}
             {legalDraftError && <p className="text-red-500">Error: {legalDraftError}</p>}
-=======
     setOnChainDeploymentStatus ('connecting');
     setDeploymentError (null);
     setTransactionHash (null);
@@ -660,7 +680,6 @@ if ( {) {
           <TabsContent value="preview_markdown" className="pt - 4">;
             {isLoadingLegalDraft && <p > Loading draft...</p>}
             {legalDraftError && <p className="text - red - 500">Error: {legalDraftError}</p>}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {generatedMarkdownContract && (
               <div>;
                 <div ref={legalDraftPreviewRef} className="prose dark:prose - invert max - w-none p - 6 border rounded - md bg - background shadow - sm">;
@@ -728,7 +747,6 @@ if ( {) {
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-=======
     <Dialog open={is_open} onOpenChange={on_close}>;
       <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
         <DialogHeader>;
@@ -868,17 +886,63 @@ setActiveTab ("preview");
             {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
           </TabsContent>;
         </Tabs>;
-        <TemplateManager;
+
+        <TemplateManager
+
+
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
+              <div>
+                <ContractPreview 
+
+
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-        />
-      </DialogContent>
-    </Dialog>
-  )}
-}
+
+
 ;
+
+
+
+
+          <TabsContent value="form" className="pt - 4">;
+            <ContractForm;
+              talent = {talent, }
+              client_name = {client_name, }
+              initial_values = {form_values, }
+              onFormValuesChange = {setFormValues, }
+              onContractGenerated = {handleFormSubmit, }
+            />;
+          </TabsContent>;
+          <TabsContent value="preview" className="pt - 4">;
+            {generated_contract && (
+              <div>;
+                <ContractPreview;
+                  generated_contract = {generated_contract, }
+                  talent = {talent, }
+                  on_close = {on_close, }
+                  deployment_info = {deployment_info, }
+                />;
+                {!deployment_info && deploy_options.deployToChain && (
+                  <div className="mt - 6 flex justify - center">;
+                    <Button;
+                      on_click = {handleDeployContract, }
+                      disabled = {deploy_status === 'deploying', }
+                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
+                    >;
+                      {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>                )}
+              </div>)}
+          </TabsContent>;
+        </Tabs>;
+        <TemplateManager;
+          is_open = {templateManagerOpen, }
+          on_close = {() => setTemplateManagerOpen (false), }
+          onSelectTemplate = {handleLoadTemplate, }
+          current_values = {form_values, }
         />;
       </DialogContent>;
     </Dialog>);

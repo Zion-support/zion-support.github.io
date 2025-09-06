@@ -1,52 +1,51 @@
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function InstantMessaging() {
-  const schema = {
-    '@context': 'https://schema.org',
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function InstantMessaging() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
     '@type': 'WebPage',;
     name: 'Instant Messaging',;
     description:;
-      'Chat in real time with clients and freelancers using Socket.IO based messaging.';
-    url: 'https://app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Instant Messaging"
-    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
-    "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  }
-  return (
-    <>
-      <SEO
-        title='Instant Messaging'
-        description='Negotiate deals and collaborate instantly with real-time chat.'
-        keywords='real-time messaging, Socket.IO chat, project communication'
-        canonical='https://app.ziontechgroup.com/features/instant-messaging'
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
+      'Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.',;
+    url: 'https://app && app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Instant Messaging";
+    "description": "Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.",;
+    "url": "https://app && app.ziontechgroup.com/features/instant-messaging";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-export default function InstantMessaging() {
-  const schema = {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Instant Messaging'
-    description:
-      'Chat in real time with clients and freelancers using Socket.IO based messaging.'
-    url: 'https://app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Instant Messaging"
-    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
-    "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  }
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
 export default function InstantMessaging() {
   const schema = {
     "@context": "https://schema.org",
@@ -54,22 +53,51 @@ export default function InstantMessaging() {
     "name": "Instant Messaging",
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  },
+
+  };
 
   return (
-    <>
-      <SEO
-        title='Instant Messaging'
-        description='Negotiate deals and collaborate instantly with real-time chat.'
-        keywords='real-time messaging, Socket.IO chat, project communication'
-        canonical='https://app.ziontechgroup.com/features/instant-messaging'
+    <>;
+
+
+            <li>;
+              Chat rooms scoped to each order or project for focused;
+              discussions.;
+            </li>;
+
+            <li > Share files and links directly within the conversation.</li>;
+          </ul>;
+          <h2 className='text - 2xl font - bold mb - 4'>;
+            Frequently Asked Questions;
+          </h2>;
+          <div className='space - y-4 mb - 12'>;
+            <div>;
+              <p className='font - semibold'>Is chat history saved?</p>;
+              <p className='text - zion - slate - light'>;
+
+                Yes, messages are stored securely so you can review past;
+                discussions.;
+              </p>;
+            </div>;
+            <div>;
+
+              <p className='font - semibold'>Can I disable notifications?</p>;
+              <p className='text - zion - slate - light'>;
+
+                You can mute rooms or disable notifications in your account;
+                settings.;
+              </p>;
+            </div>;
+          </div>;
+
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
+
+
+
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -157,6 +185,7 @@ export default function InstantMessaging() {
   )
 }
 ;
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -184,7 +213,6 @@ export default function InstantMessaging() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -203,7 +231,6 @@ export default function InstantMessaging() {;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
+
+
 ;

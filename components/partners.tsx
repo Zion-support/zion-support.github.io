@@ -1,3 +1,22 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Head from 'next/head';
 
@@ -5,8 +24,13 @@ export default function PartnersPage() {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-export default function PartnersPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function PartnersPage() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -35,11 +59,19 @@ export default function PartnersPage() {;
         <div className='pt-4 text-slate-300'>;
 
           Partner with us:{' '}
+<<<<<<< HEAD
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
           </a>;
         </div>;
       </div>;
+=======
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            kleber@ziontechgroup.com
+          </a>
+        </div>
+      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );	return (
 

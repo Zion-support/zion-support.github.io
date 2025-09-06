@@ -9,21 +9,21 @@ export interface NextGenAIService2026 {  id: string;
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
 import { ServiceVariant } from '../types/service-variants',
 export interface NextGenAIService2026 {
@@ -91,7 +91,6 @@ export interface NextGenAIService2026 {
   customers: number,
   rating: number,
   reviews: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 const contact = {
   mobile: '+1 302 464 0950'
@@ -219,7 +218,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 89
 
 
@@ -296,7 +294,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
 =======
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
-=======
     competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],    market_size: '$12.3B predictive maintenance market',    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.js_docker'],
 
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
@@ -308,7 +305,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4 && 4.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 156
 
 
@@ -434,7 +430,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4 && 4.6,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 203
 
 
@@ -487,7 +482,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
 =======
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
-=======
     competitors: ['ElevenLabs', 'Play.ht', 'Resemble AI', 'Descript'],    market_size: '$2.1B voice cloning market',    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
 
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
@@ -498,7 +492,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4 && 4.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 312
 
 
@@ -513,6 +506,111 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     features: [
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics'
       'Pull request automationMulti-language support'
+
+=======
+    ],
+
+    popular: true,
+    icon: '💻🔍',
+    color: 'from-indigo-600 to-blue-700',
+    textColor: 'text-indigo-400',
+
+=======
+    description:;
+      'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
+    features: [;
+      'Automated code quality analysis',
+      'Security vulnerability detection',
+      'Performance optimization suggestions',
+      'Code style and best practices',
+      'Integration with Git platforms',
+      'Custom rule configuration',
+      'Team collaboration tools',
+      'Code review analytics',
+      'Pull request automation',
+
+      'Python',
+      'TensorFlow',
+      'React',
+      'Node && Node.js',
+      'PostgreSQL',
+      'Redis',
+      'Docker',
+    ],
+
+=======
+    integrations: [;
+      'GitHub',
+      'GitLab',
+      'Bitbucket',
+      'Azure DevOps',
+      'Slack',
+      'Jira',
+      'Teams',
+    ],
+    use_cases: [;
+
+      'Code quality improvement',
+      'Security auditing',
+      'Performance optimization',
+      'Team collaboration',
+    ],
+    roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
+
+=======
+    link: 'https://ziontechgroup.com/ai-code-review',
+    marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
+    targetAudience: 'Software development teams, DevOps engineers, Code quality managers, Open source projects',
+    trialDays: 14,
+    setupTime: '2-3 days',
+    category: 'AI & Development',
+    realService: true,
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
+
+=======
+    competitors: ['SonarQube', 'CodeClimate', 'DeepCode', 'Snyk'],    market_size: '$5.4B code quality market',    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],
+    use_cases: ['Code quality improvement_security auditing_performance optimization_team collaboration'],
+    roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
+    competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
+
+
+    growthRate: '110% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+
+
+    customers: 203,
+    rating: 4 && 4.7,
+    reviews: 445,
+  },
+
+=======
+    implementationDetails: 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    launchDate: '2025-01-25',
+    customers: 203,
+    rating: 4 && 4.7,
+    reviews: 445
+  }
+
+],
+
+=======
+];    implementation_details: 'Production - ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
+    launch_date: '2025 - 01 - 25',
+    customers: 203,
+    rating: 4.7,
+    reviews: 445;
+  }
+<<<<<<< HEAD
+],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

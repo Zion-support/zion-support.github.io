@@ -4,31 +4,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 
-type Props = {
-  onSubmit: (payload: {
-    title: string;
-    description?: string;
-    dueDate: string;
-    amountUsd: number;
+
+};
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 }
 export default function MilestoneForm({ onSubmit }: Props) {
@@ -112,7 +107,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
-=======
         <label className='block text - sm font - medium'>Description</label>      <div>;
         <label className="block text - sm font - medium" html_for="input - Title">Title</label>;
         <input;
@@ -131,6 +125,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
+<<<<<<< HEAD
         />;
       </div>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -148,7 +143,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           className="mt - 1 w - full rounded border px - 3 py - 2";
           value={description}
           on_change={(e) => set_description (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           placeholder="Describe deliverables...";
           rows={3}
         />;
@@ -161,6 +155,16 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         <div>;
 
 =======
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
+          <input
+            type="date"
+            className="mt-1 w-full rounded border px-3 py-2"
+            value={dueDate}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
@@ -198,11 +202,29 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
-      </button>
-    </form>
-);
+
+      </button>;
+    </form>;
+  );
+=======
+
+  );
+
+}
+=======
+
+}
   );
 }
+      <button;
+        type='submit';
+        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
+        disabled={loading}
+      >;
+        {loading ? 'Adding...' : 'Add Milestone'}
+      </button>;
+    </form>);
 }
   );
 }

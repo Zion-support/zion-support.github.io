@@ -1,85 +1,10 @@
-import React from 'react'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { toast } from '@/hooks/use-toast'
-import React from "react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { toast } from "@/hooks/use-toast"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { Sparkles } from 'lucide-react'
-import { Progress } from '@/components/ui/progress'
-export function UsageStats() {
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated',
-      description: 'The new usage limits have been saved successfully.',
-    })
-  }
+return (
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
 
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress",
-export function UsageStats() {
-
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated'
-      description: 'The new usage limits have been saved successfully.'
-    })
-  }
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully."})
-  },
-
-  return (
-    <div className="space-y-8">
-      <div>
-        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
-        <p className="text-muted-foreground mb-6">
-          Configure usage limits for your team to manage your subscription resources.
-        </p>
-      </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -113,6 +38,8 @@ export function UsageStats() {
           </CardFooter>
         </Card>
         
+
+
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -146,6 +73,8 @@ export function UsageStats() {
           </CardFooter>
         </Card>
         
+
+
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -177,6 +106,8 @@ export function UsageStats() {
           </CardFooter>
         </Card>
         
+
+
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -228,6 +159,8 @@ export function UsageStats() {
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
+
+
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -273,7 +206,6 @@ export function UsageStats() {;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>;
         <p className='text-muted-foreground mb-6'>;
-=======
     <div className='space - y-8'>;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Usage Limits & Settings</h3>;
@@ -463,9 +395,13 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
-        <Button>Contact Us</Button>;
+
+
+
+        <Button > Contact Us</Button>;
       </div>;
-    </div>;
-  );
-}
-;
+    </div>);
+}"}
+
+    </div>
+  )

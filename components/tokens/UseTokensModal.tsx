@@ -26,11 +26,13 @@ export default function UseTokensModal({
 =======
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
+export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
+
 export default function UseTokensModal({
   isOpen,
   onClose,
   serviceId,
-  defaultType
+defaultType
 }: {
   isOpen: boolean,
   onClose: () => void,
@@ -45,7 +47,6 @@ export default function UseTokensModal({
   const usdValue = (tokens * 0.01).toFixed(2);
   useEffect(() => {
     (async () => {
-=======
   const [type, setType] = useState<RedemptionType>(;
     defaultType ?? "boost_profile",;
   );
@@ -53,10 +54,8 @@ export default function UseTokensModal({
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
-
   useEffect(() => {;
     (async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const accs = await getAccounts();
 
 
@@ -81,7 +80,6 @@ export default function UseTokensModal({
     const accs = await connectMetaMask();
     if (accs && accs.length > 0) setAccount(accs[0]);
   }
-
   async function redeem() {;
     setIsSubmitting(true);
     try {;
@@ -113,6 +111,7 @@ export default function UseTokensModal({
 
   if (!isOpen) return null;
 
+  if (!isOpen) return null;
   return (
 
 
@@ -128,7 +127,6 @@ export default function UseTokensModal({
             />;
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>;
           </div>;
-
           <div className="text-sm">;
             <div className="mb-1">Wallet</div>;
             {account ? (;
@@ -151,7 +149,6 @@ export default function UseTokensModal({
 
           </div>;
         </div>;
-
         <div className="mt-4 flex items-center justify-between">;
           <div className="text-xs opacity-70">;
             You can spend tokens to boost visibility, promote listings, or;
@@ -162,7 +159,6 @@ export default function UseTokensModal({
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
             className="enhanced-button enhanced-button-primary disabled: opacity-50">;
-=======
           <div className="text - sm">;
             <div className="mb - 1">Amount (ZION)</div>;
             <input;
@@ -198,7 +194,6 @@ export default function UseTokensModal({
             on_click={redeem}
             className="enhanced - button enhanced - button - primary disabled: opacity - 50";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Redeem;
           </button>;
         </div>;
@@ -218,4 +213,12 @@ export default function UseTokensModal({
 );
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </div>);
+        </div>
+      </div>
+    </div>
+  )
+
 }

@@ -18,7 +18,6 @@ export default async function handler(
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, candidateProfiles } = req.body |{}
   if (!jobDescription |!Array.isArray(candidateProfiles))
-=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -59,3 +58,33 @@ export default async function handler(
 }
 
 }
+    return res;
+      .status (400);
+      .json ({ error: 'job_description and candidate_profiles[] required' });
+;
+  const prompt =;
+    `Given a job description and candidate profiles, output JSON with top_matches (array of {index, match_score, rationale}) and gaps for each.\n` +;
+    `Job Description:\n${job_description}\n\n` +;
+    `Candidates:\n${candidate_profiles.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;
+;
+  const text = await generate_text (
+    prompt,
+    'You are a matching engine. Output strictly valid JSON.');
+  return res.status (200).json ({ matches: text });
+  const prompt = `Given a job description and candidate profiles, output JSON with top_matches (array of {index, match_score, rationale}) and gaps for each.\n` +;
+    `Job Description:\n${job_description}\n\n` +;
+    `Candidates:\n${candidate_profiles.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;
+;
+  const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.');
+  return res.status (200).json ({ matches: text });
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,7 +1,10 @@
 import React from 'react';
 
 interface CardProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  icon?: string;
   className?: string;
   hover?: boolean;
   glass?: boolean;
@@ -9,6 +12,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({
   children,
+  title,
+  description,
+  icon,
   className = '',
   hover = true,
   glass = true,
@@ -21,6 +27,9 @@ const Card: React.FC<CardProps> = ({
   
   return (
     <div className={classes}>
+      {icon && <div className="text-4xl mb-4">{icon}</div>}
+      {title && <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>}
+      {description && <p className="text-gray-300 mb-4">{description}</p>}
       {children}
     </div>
   );

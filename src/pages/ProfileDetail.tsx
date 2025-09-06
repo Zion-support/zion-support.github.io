@@ -1,9 +1,6 @@
-
-
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const router = useRouter();
   const profileId = router && router.query.profileId as string;
   const [profileData, setProfileData] = useState<any>(null);
@@ -25,20 +22,18 @@ export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
 
-  const router = useRouter();
-  const profileId = router.query.profileId as string;
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
-export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+  useEffect((,) => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true);
+      setError(null);
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing.");
+          return;
+
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -50,6 +45,7 @@ export default function ProfileDetail() {
           return;
           setError("Profile ID is missing."),
           return
+
         }
         const { data, error } = await supabase
           .from("talent_profiles")
@@ -59,13 +55,15 @@ export default function ProfileDetail() {
           .single(),
 
         if (error) {
-          throw new Error(error.message);
+          throw new Error(error.message)
         }
         if (!data) {
           setError("Profile not found.");
           return;
+
           setError("Profile not found."),
           return
+
         }
 
         setProfileData(data)
@@ -77,7 +75,6 @@ export default function ProfileDetail() {
           variant: "destructive"})
 
       } finally {
-=======
       } catch (err: any) {;
         setError(err && err.message || "Failed to fetch profile."),;
         toast({;
@@ -85,37 +82,41 @@ export default function ProfileDetail() {
           description: err && err.message || "Failed to fetch profile.",;
           variant: "destructive"});
       } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setIsLoading(false);
       }
     }
     fetchProfile()
 
   }, [profileId]);
+
     },
 
     fetchProfile()
   }, [profileId]),
+
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>
-    );
+    )
   }
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>
-    );
+    )
   }
   if (!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
+
+  }, [profileId]);
+
     )
   }
   return (
@@ -124,6 +125,7 @@ export default function ProfileDetail() {
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
+
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -183,42 +185,49 @@ export default function ProfileDetail() {;
   }, [profileId]),;
 
   if (isLoading) {;
-    return (
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
       </div>;
     );
   }
-
+;
   if (error) {;
-    return (
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
     );
   }
-
+;
   if (!profileData) {;
-    return (
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
-  return (
+;
+  return (;
     <>;
 
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
 
-=======
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
+
+
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+        title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
+        description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
+      />;
+      <Header />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="grid grid-cols-12 gap-6">;
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -238,37 +247,131 @@ export default function ProfileDetail() {;
                       {profileData.is_verified && (
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
-                    </CardTitle>
-                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-4 text-sm">
-                  {profileData.location && (
-                    <div className="flex items-center text-zion-slate-light">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span>{profileData.location}</span>
-                    </div>
-                  )}
-                  {profileData.availability && (
-                    <div className="flex items-center text-zion-slate-light">
-                      <Clock className="h-4 w-4 mr-1" />
-                      <span>{profileData.availability}</span>
-                    </div>
-                  )}
-                  {profileData.hourly_rate && (
-                    <div className="text-white font-bold">
-                      ${profileData.hourly_rate}
-                      <span className="text-zion-slate-light font-normal">/hr</span>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
+                    </CardTitle>;
+                    <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
+export default /**
+ * ProfileDetail - Function description
+ */
+function ProfileDetail() {
+  // use_params is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = use_router ();
+  const profile_id = router.query.profile_id as string;
+  const [profile_data, setProfileData] = useState < any>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const fetch_profile = async () => {
+      setIsLoading (true);
+      set_error (null);
+      try {
+        // Check condition
+if ( {) {
+  $2
+}
+          set_error ("Profile ID is missing.");
+          return;
+        }
+        const { data, error } = await supabase;
+          .from ("talent_profiles");
+          .select ("*");
+          .eq ("id", profile_id);
+          .single ();
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (error.message);
+        }
+        // Check condition
+if ( {) {
+  $2
+}
+          set_error ("Profile not found.");
+          return;
+        }
+        setProfileData (data);
+      } catch (err: any) {
+        set_error (err.message || "Failed to fetch profile."),
+        toast ({
+          title: "Error",
+          description: err.message || "Failed to fetch profile.",
+          variant: "destructive"});
+      } finally {
+        setIsLoading (false);
+      }
+    }
+;
+    fetch_profile ();
+  }, [profile_id]);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <p > Loading profile...</p>;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <p > Error: {error}</p>;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <p > Profile not found.</p>;
+      </div>);
+  }
+  return (
+    <>;
+      <SEO;
+        title={`${profile_data.full_name} | Zion AI Marketplace`}
+        description = {profile_data.bio || "Check out this talent's profile on Zion!", }
+      />;
+      <Header />;
+      <div className="container mx - auto px - 4 py - 8">;
+        <div className="grid grid - cols - 12 gap - 6">;
+          {/* Main Content */}
+          <div className="col - span - 12 lg:col - span - 8">;
+            {/* Profile Header */}
+            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+              <CardHeader>;
+                <div className="flex items - center space - x-4">;
+                  <Avatar className="w - 20 h - 20">;
+                    {profile_data.profile_picture_url ? (
+                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
+                      <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+                    <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">;
+                      {profile_data.full_name}
+                      {profile_data.is_verified && (
+                        <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
+                    </CardTitle>;
+                    <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
+                  </div>;
+                </div>;
+              </CardHeader>;
+              <CardContent>;
+
+
                 </div>;
               </CardContent>;
             </Card>;
+
+
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -328,8 +431,53 @@ export default function ProfileDetail() {;
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
-                        {link.title |link.url}
-                      </a>
+
+                </div>;
+              </CardContent>;
+            </Card>;
+
+            {/* About Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+              </CardContent>;
+            </Card>;
+
+            {/* Skills Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-xl font-bold text-white">Skills</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className="flex flex-wrap gap-2">;
+                  {profileData && profileData.skills?.map((skill: string, index: number,) => (;
+                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
+                  )) || <p className="text-zion-slate-light">No skills provided.</p>}
+                </div>;
+              </CardContent>;
+            </Card>;
+
+            {/* Experience Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                {profileData && profileData.experience ? (;
+                  profileData && profileData.experience.map((exp: any, index: number,) => (;
+                    <div key={index} className="mb-4">;
+                      <h4 className="font-bold text-white">{exp && exp.title}</h4>;
+                      <p className="text-zion-cyan">{exp && exp.company}</p>;
+                      <p className="text-sm text-zion-slate-light">{exp && exp.start_date} - {exp && exp.end_date || "Present"}</p>;
+                      <p className="text-zion-slate-light">{exp && exp.description}</p>;
+                    </div>;
+                  ));
+                ) : (;
+                  <p className="text-zion-slate-light">No experience provided.</p>;
+
                         {link.title || link.url}
                       </Link>
                     ))}
@@ -359,11 +507,10 @@ export default function ProfileDetail() {;
                         <LinkIcon className="h-4 w-4" />;
                         {link && link.title || link && link.url}
                       </a>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     ))}
-                  </div>;
-                ) : (;
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>;
+                  </div>
+                ) : (
+                  <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
 
               </CardContent>;
@@ -372,7 +519,7 @@ export default function ProfileDetail() {;
 
 
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">;
+          <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id |''
@@ -387,35 +534,38 @@ export default function ProfileDetail() {;
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0
               }}
-            />;
+            />
             {/* Contact Information */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
-              <h3 className="text-xl font-bold mb-4">Contact</h3>;
-              <div className="flex flex-col space-y-3">;
-                {profileData && profileData.email && (;
-                  <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Mail className="h-4 w-4" />;
-                    <a href={`mailto:${profileData && profileData.email}`} className="hover:text-zion-cyan">{profileData && profileData.email}</a>;
-                  </div>;
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Contact</h3>
+              <div className="flex flex-col space-y-3">
+                {profileData.email && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Mail className="h-4 w-4" />
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
+                  </div>
                 )}
-                {profileData && profileData.phone && (;
-                  <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Phone className="h-4 w-4" />;
-                    <span>{profileData && profileData.phone}</span>;
-                  </div>;
+                {profileData.phone && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Phone className="h-4 w-4" />
+                    <span>{profileData.phone}</span>
+                  </div>
                 )}
-                {profileData && profileData.website && (;
-                  <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Globe className="h-4 w-4" />;
-                    <a href={profileData && profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">;
-                      Website;
-                    </a>;
-                  </div>;
+                {profileData.website && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Globe className="h-4 w-4" />
+                    <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
+                      Website
+                    </Link>
+                  </div>
                 )}
               </div>
             </div>
               </div>;
             </div>;
+
+
+
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -432,7 +582,6 @@ export default function ProfileDetail() {;
 
                     href = {profileData && profileData.twitter_url,}
 
-=======
                     title="GitHub"
                   >
                     <Github className="h-4 w-4" />
@@ -447,6 +596,7 @@ export default function ProfileDetail() {;
                 {profileData.twitter_url && (;
                   <a;
                     href={profileData.twitter_url}
+
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -454,7 +604,6 @@ export default function ProfileDetail() {;
 
                     href = {profileData && profileData.linkedin_url,}
 
-=======
                     title="Twitter"
                   >
                     <Twitter className="h-4 w-4" />
@@ -469,12 +618,12 @@ export default function ProfileDetail() {;
                 {profileData.linkedin_url && (;
                   <a;
                     href={profileData.linkedin_url}
+
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
 
-=======
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
                     <div className="flex items - center text - zion - slate - light">;
@@ -630,7 +779,6 @@ export default function ProfileDetail() {;
                     LinkedIn;
                   </a>)}
 
-=======
                     title="LinkedIn"
                   >
                     <Linkedin className="h-4 w-4" />
@@ -670,7 +818,6 @@ export default function ProfileDetail() {;
 }'"}
                   </Link>
                 )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           </div>;
@@ -683,26 +830,9 @@ export default function ProfileDetail() {;
 <p>Error: {error ;
 }</p> </div>) ;
 
-=======
     </>);
 ;
 }
-}, [profile_id]);
-<p > Error: {
-  error ;
-}</p> </div>) ;
-}return (<> <SEO) : (<AvatarFallback> {
-  profile_data.full name?.char_at (0) ;
-}</AvatarFallback>) ;
-}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {
-  profile_data.hourly rate ";
-}<span className="text - zion - slate - light font - normal" >/hr</span> </div>) ";
-}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text - zion - slate - light" >No experience provided.</p>) ";
-}</CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
-}</div>) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>) ;
-}</CardContent> </Card> </div> <HireNowCTA talent_profile= {
-  {
-  id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0 ;
 ;
 }/> Website </Link> </div>) ;
 }</div> </div> <a href= {
@@ -718,9 +848,6 @@ export default function ProfileDetail() {;
 }target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 4 w - 4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     </>;
   );
 }

@@ -1,5 +1,32 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client";
 
+"use client";
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -69,7 +96,27 @@ origin/automation-improvements-final
   Factory
   Truck
   CreditCard
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Code,;
+  Smartphone,;
+  Cloud,;
+  Database,;
+  Shield,;
+  Zap,;
+  Building,;
+  ShoppingCart,;
+  Heart,;
+  GraduationCap,;
+  Factory,;
+  Truck,;
   CreditCard,;
+} from "lucide-react";
+
+  CreditCard,;
+
 } from "lucide-react";
 
 export default function Header() {;
@@ -252,23 +299,18 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-blue-200">24/7 Support Available</span>
-              <div className="flex space-x-2">
-                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
-              </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -288,7 +330,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const servicesDropdown = [;
     {;
       title: "Web Development",;
@@ -327,7 +368,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       icon: Zap,;
     },;
   ];
-
   const solutionsDropdown = [;
     {;
       title: "Enterprise Solutions",;
@@ -354,7 +394,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       icon: GraduationCap,;
     },;
   ];
-
   const industriesDropdown = [;
     { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },;
     { name: "Logistics", href: "/industries/logistics", icon: Truck },;
@@ -363,7 +402,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     { name: "Education", href: "/industries/education", icon: GraduationCap },;
     { name: "Retail", href: "/industries/retail", icon: ShoppingCart },;
   ];
-
   const navigation = [;
     { name: "Home", href: "/" },;
     {;
@@ -381,12 +419,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     { name: "Industries", href: "/industries" },;
     { name: "Contact", href: "/contact" },;
   ];
-
   const handleServiceClick = (href: string) => {;
     closeMenu();
     window && window.location.href = href;
   };
-
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -397,7 +433,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               Zion Tech Group;
             </Link>;
           </div>;
-
           {/* Desktop Navigation */}
 origin/automation-improvements-final
           </div>
@@ -629,6 +664,24 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
@@ -645,6 +698,22 @@ origin/main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
+=======
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
+              Get Started;
+            </Link>;
+          </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+            >
+              Get Started
+            </Link>
+          </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -660,12 +729,20 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+          </button>;
+        </div>;
+=======
+
+
+
+
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
               {navigation.map((item) => (
                 <div key={item.name}>
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -673,11 +750,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white shadow-lg"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {navigation.map((item) => (
-origin/main
+className="lg:hidden bg-white shadow-lg">;
+              <div className="px-4 py-6 space-y-4">;
+                {navigation && navigation.map((item) => (;
                   <Link
                     key={item && item.name}
                     href={item && item.href}
@@ -685,6 +760,15 @@ origin/main
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+
                 ))}
                 <Link
                   href="/contact"

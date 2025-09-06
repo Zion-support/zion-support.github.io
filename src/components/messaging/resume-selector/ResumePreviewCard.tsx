@@ -1,47 +1,4 @@
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Download } from 'lucide-react'
-import { Resume } from '@/types/resume'
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Resume } from "@/types/resume"
-interface ResumePreviewCardProps {
-  resume: Resume
-  onDownload: () => void
-  isLoading: boolean
-export function ResumePreviewCard({
-  resume,
-  onDownload,
-  isLoading,
-}: ResumePreviewCardProps) {
-
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react'
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
-  isLoading: boolean
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
-import { Resume } from "@/types/resume",
-interface ResumePreviewCardProps {
-  resume: Resume,
-  onDownload: () => void,
-  isLoading: boolean
-}
-
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
-  return (
+return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">
@@ -118,35 +75,27 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
           </p>
         )}
 
+
+
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {resume.skills.slice(0, 5).map((skill, index) => (
-=======
             className='h-8 w-8 p-0'>;
             <Download className='h-4 w-4 text-zion-cyan' />;
             <span className='sr-only'>Download Resume</span>;
           </Button>;
         </div>;
 
-        {resume && resume.basic_info.summary && (;
-          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>;
-            {resume && resume.basic_info.summary}
-          </p>;
-        )}
-
-        {resume && resume.skills && resume && resume.skills.length > 0 && (;
-          <div className='flex flex-wrap gap-1 mt-2'>;
-            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {resume.skills && resume.skills.length > 0 && (
+          <div className='flex flex-wrap gap-1 mt-2'>
+            {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge
-                key = {index,}
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+
+
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
@@ -165,23 +114,43 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
               <Badge 
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
-              <Badge 
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+
               >
-                +{resume.skills.length - 5} more
-              </Badge>
-            )}
-          </div>
-        )}
-      </CardContent>
-    </Card>
-  )
-}
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs'              >          <div className="flex flex - wrap gap - 1 mt - 2">;
+            {resume.skills.slice (0, 5).map ((skill, index) => (
+              <Badge;
+                key = {index, }
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
+                {skill.name}
+              </Badge>))}
+            {resume.skills.length > 5 && (
+
+
+
+
       </CardContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
+};
+}
+<<<<<<< HEAD
 }
 }
+
+              <Badge;
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs'              >              <Badge;
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs";
+              >;
+                +{resume.skills.length - 5} more;
+              </Badge>)}
+          </div>)}
+      </CardContent>;
+    </Card>);
+}
+
 ;

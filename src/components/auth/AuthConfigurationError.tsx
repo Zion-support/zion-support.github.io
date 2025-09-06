@@ -1,3 +1,30 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 import React from 'react'
 import Link from 'next/link'
@@ -88,14 +115,58 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     if (onRetry) {;
       onRetry();
     } else {;
-      window.location.reload();
+      window && window.location.reload();    }
+      window.location.reload()
+import React from 'react';
+import Link from 'next / link';
+import {
+  AlertTriangle,
+  ExternalLink,
+  RefreshCw,
+  Settings,
+  CheckCircle,
+} from 'lucide-react'; import { Button } from '@/components / ui / button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+interface AuthConfigurationErrorProps {
+  on_retry?: () => void;
+  showSetupButton?: boolean;
+export /**
+ * AuthConfigurationError - Function description
+ */
+function AuthConfigurationError() {
+  const handle_refresh = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_retry ();
+    } else {
+      window.location.reload () }
+  }
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;
+      <div className='max - w-2xl w - full'>;
+export /**
+ * AuthConfigurationError - Function description
+ */
+function AuthConfigurationError() {
+  const handle_refresh = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_retry ();
+    } else {
+      window.location.reload ();
+
     }
-  },
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full">
-        {/* Main Error Card */}
+
+
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
@@ -108,10 +179,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               The sign-up system needs to be configured before users can create accounts
             </p>
           </div>
-          <Alert variant="destructive" className="mb-6">
-            <AlertTriangle className="h-4 w-4" />
-            <AlertDescription>
-              <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.
+
+
+
+
 
 
           <Alert variant="destructive" className="mb-6">
@@ -128,6 +199,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             </h3>
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
+
+
+
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -137,6 +211,30 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
+
+        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
+          <div className='text-center mb-6'>;
+            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
+              <AlertTriangle className='h-8 w-8 text-red-600' />;
+            </div>;
+            <h1 className='text-3xl font-bold text-gray-900 mb-2'>;
+              Authentication Service Unavailable;
+            </h1>;
+            <p className='text-gray-600'>;
+              The sign-up system needs to be configured before users can create;
+              accounts;
+            </p>;
+          </div>;
+
+          <Alert variant='destructive' className='mb-6'>;
+            <AlertTriangle className='h-4 w-4' />;
+            <AlertDescription>;
+              <strong>Critical Issue #1:</strong> Auth0 environment variables;
+              are not configured. New users cannot sign up until this is;
+              resolved.            </AlertDescription>;
+          </Alert>;
+
+          {/* Technical Details */}        {/* Main Error Card */}
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             {showSetupButton && (
@@ -166,7 +264,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
       <div className="max-w-2xl w-full">;
         {/* Main Error Card */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">;
           <div className="text-center mb-6">;
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">;
@@ -196,7 +293,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">;
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
-=======
     <div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;
       <div className='max - w-2xl w - full'>;
         {/* Main Error Card */}
@@ -248,7 +344,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
               <li>• AUTH0_ISSUER_BASE_URL</li>;
@@ -286,19 +381,20 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
+
               Check Again
             </Button>
           </div>
+              className='flex-1'>;
+              <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />;
+              Check Again;
+            </Button>;
+          </div>;
+
           {/* Quick Setup Steps */}
-          <div className='border-t pt-6'>
-            <h3 className='font-semibold text-gray-900 mb-3'>
-              Quick Setup Steps:
-            </h3>
-            <ol className='space-y-3 text-sm'>
-              <li className='flex items-start gap-3'>
-                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
-                  1
-                </span>
+
+
+
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
@@ -310,7 +406,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   <a 
                     href="https://manage.auth0.com/" 
                     target="_blank" 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
@@ -336,6 +431,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 </div>
               </li>
               
+
+
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
                 <div>
@@ -351,19 +448,119 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
+
+
                 <div>
                   <strong>Configure Environment:</strong>
                   <br />
-                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
-                </div>
-              </li>
-              <li className='flex items-start gap-3'>
-                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
-                  4
-                </span>
-                <div>
-                  <strong>Restart Application:</strong>
-                  <br />
+                    className='text-blue-600 hover:underline inline-flex items-center gap-1'>;
+                    Visit Auth0 Dashboard <ExternalLink className='w-3 h-3' />;
+                  </a>;
+                </div>;
+              </li>;
+
+              <li className='flex items-start gap-3'>;
+                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>;
+                  2;
+                </span>                <div>                <div>;
+                  <strong>Create Auth0 Account:</strong>;
+                  <br />;
+                  <a
+                    href="https://manage && manage.auth0.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline inline-flex items-center gap-1">;
+                    Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />;
+                  </a>;
+                </div>;
+              </li>;
+
+              <li className="flex items-start gap-3">;
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>;
+                <div>;
+                  <strong>Create Application:</strong>;
+          {/* Action Buttons */}
+          <div className='flex flex - col sm:flex - row gap - 3 mb - 6'>;
+            {showSetupButton && (
+              <Button;
+                on_click={() =>;
+                  window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank');
+                }
+                className='bg - blue - 600 hover:bg - blue - 700 text - white flex - 1'              <Button;
+                on_click = {(, ) => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'), }
+                className="bg - blue - 600 hover:bg - blue - 700 text - white flex - 1";
+              >;
+                <Settings className='w - 4 h - 4 mr - 2' />;
+                Setup Guide;
+              </Button>)}
+            <Button;
+              on_click={handle_refresh}
+              variant='outline';
+              className='flex - 1'            >;
+              <RefreshCw className='w - 4 h - 4 mr - 2' />              Check Again              <RefreshCw className="w - 4 h - 4 mr - 2" />;
+              Check Again;
+            </Button>;
+          </div>;
+          {/* Quick Setup Steps */}
+          <div className='border - t pt - 6'>;
+            <h3 className='font - semibold text - gray - 900 mb - 3'>;
+              Quick Setup Steps:;
+            </h3>;
+            <ol className='space - y-3 text - sm'>;
+              <li className='flex items - start gap - 3'>;
+                <span className='flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold'>;
+                  1;
+                </span>;
+                <div>;
+                  <strong > Create Auth0 Account:</strong>;
+                  <br />;
+                  <a;
+                    href='https://manage.auth0.com/';
+                    target='_blank';
+                    rel='noopener noreferrer';
+                    className='text - blue - 600 hover:underline inline - flex items - center gap - 1';
+                  >;
+                    Visit Auth0 Dashboard <ExternalLink className='w - 3 h - 3' />;
+                  </a>;
+                </div>;
+              </li>;
+              <li className='flex items - start gap - 3'>;
+                <span className='flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold'>;
+                  2;
+                </span>                <div>                <div>;
+                  <strong > Create Auth0 Account:</strong>;
+                  <br />;
+                  <a;
+                    href="https://manage.auth0.com/";
+                    target="_blank";
+                    rel="noopener noreferrer";
+                    className="text - blue - 600 hover:underline inline - flex items - center gap - 1";
+                  >;
+                    Visit Auth0 Dashboard <ExternalLink className="w - 3 h - 3" />;
+                  </a>;
+                </div>;
+              </li>;
+              <li className="flex items - start gap - 3">;
+                <span className="flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold">2</span>;
+                <div>;
+                  <strong > Create Application:</strong>;
+                  <br />;
+                  Create a "Regular Web Application" named "Zion AI Marketplace";
+                </div>;
+              </li>;
+
+                  file;
+                </div>;
+              </li>;
+
+              <li className='flex items-start gap-3'>;
+                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>;
+                  4;
+                </span>;
+                <div>;
+                  <strong>Restart Application:</strong>;
+                  <br />;
+
                   Run{' '}
                   <code className='bg-gray-100 px-1 rounded'>;
                     npm run dev;
@@ -390,22 +587,22 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 </div>
               </li>
               <li className="flex items-start gap-3">
-=======
 
               
               <li className="flex items-start gap-3">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+
+
+
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                 </div>
               </li>
             </ol>
           </div>
         </div>
-=======
                   to apply changes                </div>                <div>;
                   <strong>Configure Environment:</strong>;
                   <br />;
@@ -419,7 +616,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   <strong>Restart Application:</strong>;
                   <br />;
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes;
-=======
               <li className='flex items - start gap - 3'>;
                 <span className='flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold'>;
                   3;
@@ -457,7 +653,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   <strong > Restart Application:</strong>;
                   <br />;
                   Run <code className="bg - gray - 100 px - 1 rounded">npm run dev</code> to apply changes;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </li>;
             </ol>;
@@ -484,8 +679,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            <Link
-              href="/help"
+
+
+
+
             
             <Link 
               href="/help" 
@@ -494,50 +691,26 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>Contact Support</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            <Link
-              href="/status"
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
-            >
-              <span>System Status</span>
+
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
+              <span>Browse Marketplace</span>            >;
+              <span>Browse Marketplace</span>;
+              <ExternalLink className="w-4 h-4" />;
+            </Link>;
             
+
+            
+
+
             <Link 
               href="/status" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/talent'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>View Talent Pool</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/help'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>Contact Support</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/status'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
-            </Link>
-            
-            <Link 
-              href="/status" 
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
-            >
-              <span>System Status</span>
-              <ExternalLink className="w-4 h-4" />
-            </Link>
-              <ExternalLink className="w-4 h-4" />
-            </Link>
+
+
+
+
           </div>
         </div>
 
@@ -553,21 +726,23 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Automated Setup Available</span>
+
+
+
               </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
-              <code className='bg-green-100 text-green-800 px-3 py-1 rounded text-sm'>                npm run setup:auth0              </div>
-              <p className="text-sm text-green-600 mb-3">
-                Run the setup script to configure Auth0 interactively:
-              </p>
+
+
+
+
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
             </div>
           </div>
         )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             <Link
               href="/talent" 
@@ -613,7 +788,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Setup Script Info */}
         {showSetupButton && (;
           <div className='mt-6 text-center'>;
@@ -636,46 +810,35 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </div>;
         )}
         {/* Footer */}
-        <div className='mt-6 text-center text-sm text-gray-500'>
-          <p>
-            For detailed instructions, see{' '}
-            <button
-              onClick={() =>
-                window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')
-              }
-              className='text-blue-600 hover:underline'            >        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>
-            For detailed instructions, see{' '}
-            <button
-              onClick = {() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
-              className="text-blue-600 hover: underline"
+
+
+
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             For detailed instructions, see{' '}
 
             >
 
-=======
             <button 
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover: underline"
             >
+
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
         </div>
       </div>
     </div>
-  )
-export default AuthConfigurationError }
-export default AuthConfigurationError
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
+
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}
@@ -699,11 +862,8 @@ export default AuthConfigurationError;}
 
 
 
-=======
 export default AuthConfigurationError;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {/* Alternative Actions Card */}
         <div className='bg - blue - 50 rounded - xl border border - blue - 200 p - 6'>;
           <h3 className='font - semibold text - blue - 900 mb - 3'>;
@@ -804,9 +964,6 @@ export default AuthConfigurationError;
     </div>);
 export default AuthConfigurationError }
 export default AuthConfigurationError,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
 export default AuthConfigurationError;

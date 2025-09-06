@@ -18,8 +18,8 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
-if (newMetrics && newMetrics.loadTime > 3000) {;
-  const formatTime = (ms: number) : string => {;
+if (newMetrics.loadTime > 3000) {
+  const formatTime = (ms: number) : string => {
   if (ms === 0) return 'N/A';
 if (ms < 1000) return `$ {
   Math.round (ms)
@@ -34,24 +34,9 @@ case 'tablet': return Tablet;
 default: return Laptop;
 }
 const getPerformanceScore = () => {
-=======
-if (ms < 1000) return `$ {;
-  Math && Math.round (ms) ;
-}ms`;
-
-};
-//Get device icon const getDeviceIcon = (deviceType: string) => {;
-  switch (deviceType) {;
-  case 'mobile': return Smartphone;
-case 'tablet': return Tablet;
-default: return Laptop;
-
-};
-const getPerformanceScore = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let score = 0;
 let totalMetrics = 0;
-//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
+//FCP scoring (0-100) if (metrics.fcp !== null) {
   totalMetrics++;
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
@@ -97,54 +82,17 @@ else score += 25
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
 // Helper functions const getScoreLabel = (score: number) => {
-=======
-if (metrics && metrics.fcp < 1800) score += 100;
-else if (metrics && metrics.fcp < 3000) score += 75;
-else if (metrics && metrics.fcp < 4000) score += 50;
-else score += 25 ;
-}//LCP scoring (0-100) if (metrics && metrics.lcp !== null) {;
-  totalMetrics++;
-if (metrics && metrics.lcp < 2500) score += 100;
-else if (metrics && metrics.lcp < 4000) score += 75;
-else if (metrics && metrics.lcp < 6000) score += 50;
-else score += 25 ;
-}//FID scoring (0-100) if (metrics && metrics.fid !== null) {;
-  totalMetrics++;
-if (metrics && metrics.fid < 100) score += 100;
-else if (metrics && metrics.fid < 300) score += 75;
-else if (metrics && metrics.fid < 500) score += 50;
-else score += 25 ;
-}//CLS scoring (0-100) if (metrics && metrics.cls !== null) {;
-  totalMetrics++;
-if (metrics && metrics.cls < 0 && 0.1) score += 100;
-else if (metrics && metrics.cls < 0 && 0.25) score += 75;
-else if (metrics && metrics.cls < 0 && 0.4) score += 50;
-else score += 25 ;
-
-};
-//Don't render anything in production return (<AnimatePresence> {;
-  isVisible && (<motion && motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCwclassName= {
-  `w-4 h-4 $ {
-  isLoading ? 'animate-spin': '' 
-}` 
-}/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {;
-  /* Expanded View */ ;
-}<AnimatePresence> {;
-  isExpanded && (<motion && motion.div </div>) ;
-}</div> </div> </div>) ) ;
-}</div> </div>) ;
-}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>) ;
-}{;
-  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>) ;
-}</div> </div> </div> </motion && motion.div>) ;
-}</AnimatePresence> </div> </div> </motion && motion.div> </AnimatePresence>) ;
-};
-// Helper functions const getScoreLabel = (score: number) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
 
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 }

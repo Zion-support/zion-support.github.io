@@ -135,34 +135,13 @@ export interface FigmaNode {
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
 =======
-export async function buildTokenSet (file_id: string): Promise < TokenSet> {
-  // Placeholder implementation;
-  return {
-    colors: {
-      primary: '#007AFF',
-      secondary: '#5856D6',
-      success: '#34C759',
-      warning: '#FF9500',
-      error: '#FF3B30';
-    },
-    typography: {
-      heading1: { font_size: 32, font_weight: 'bold' },
-      heading2: { font_size: 24, font_weight: 'bold' },
-      body: { font_size: 16, font_weight: 'normal' }
-    },
-    spacing: {
-      xs: 4,
-      sm: 8,
-      md: 16,
-      lg: 24,
-      xl: 32;
-    }
-  }
+    };
+  };
 }
-export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
-  const tokens = await buildTokenSet (file_id);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const tokens = await buildTokenSet(fileId);
   return {
 
     id,
@@ -179,10 +158,7 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
   };
 }
 
-export function generateDesignId(): string {
-  return `design_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;

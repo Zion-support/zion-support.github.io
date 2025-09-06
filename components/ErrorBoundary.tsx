@@ -10,7 +10,6 @@ interface Props {
 =======
 
 interface Props {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   children: ReactNode;
   level?: string;
   fallback?: ReactNode;
@@ -46,7 +45,34 @@ interface State {;
   error?: Error;
   errorInfo?: ErrorInfo;
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface State {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  hasError: boolean;
+  error?: Error;
+<<<<<<< HEAD
+  errorInfo?: ErrorInfo;
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode,
   fallback?: ReactNode;
@@ -61,9 +87,14 @@ origin/automation-improvements-final
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     super(props);
-    this.state = { hasError: false }
+    this && this.state = { hasError: false };
   }
+<<<<<<< HEAD
+  static getDerivedStateFromError(error: Error): State {;
+    // Update state so the next render will show the fallback UI;
+=======
   static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI
     // Update state so the next render will show the fallback UI
@@ -71,7 +102,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     return { hasError: true, error };
     return { hasError: true, error }
-origin/main
+>>>>>>> origin/main
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    return { hasError: true, error };
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 origin/automation-improvements-final
@@ -121,23 +159,25 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       error,;
       errorInfo;
     });
-
     // Log error to external service (e && e.g., Sentry);
     if (typeof window !== 'undefined' && (window as any).Sentry) {;
       (window as any).Sentry && Sentry.captureException(error, { extra: errorInfo });    }
-
     // Call custom error handler if provided;
     if (this && this.props.onError) {;
       this && this.props.onError(error, errorInfo);
     }
-
     // Log to external service in production;
     if (process && process.env.NODE_ENV === 'production') {;
       // Here you would typically send to an error reporting service;
       console && console.error('Production error:', error, errorInfo);
 
     }
-origin/main
+<<<<<<< HEAD
+=======
+    }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
     // Log error for debugging in development
@@ -145,8 +185,9 @@ origin/main
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
   handleReload = () => {
     window.location.reload();
@@ -195,6 +236,35 @@ origin/automation-improvements-final
               </details>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -373,14 +443,27 @@ export default class ErrorBoundary extends Component<Props, State> {
             </div>
             <div className="space-y-3">
               <button
-                onClick={() => window && window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors";
-              >;
-                Refresh Page;
-              </button>;
+                onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Reload Page
+              </button>
               <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -434,6 +517,9 @@ origin/automation-improvements-final
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -463,7 +549,6 @@ origin/automation-improvements-final
 }
                 </pre>
               </details>
-=======
                 onClick={() => this && this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors";
               >;
@@ -480,7 +565,6 @@ origin/automation-improvements-final
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
     // Log the error to an error reporting service;
@@ -494,6 +578,7 @@ origin/automation-improvements-final
 if (.Sentry) {) {
   $2
 }
+<<<<<<< HEAD
       (window as any).Sentry.capture_exception (error, { extra: error_info });    }
     // Call custom error handler if provided;
     // Check condition
@@ -510,6 +595,58 @@ if ( {) {
       // Here you would typically send to an error reporting service;
       console.error ('Production error:', error, error_info);
     }
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                </pre>
+              </details>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <button
+              onClick={() => window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
+          </div>
+<<<<<<< HEAD
+    // Log the error to an error reporting service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   handle_reload = () => {
     window.location.reload ();
@@ -664,6 +801,7 @@ if ( {) {
               </pre>;
             </details>;
           )}
+<<<<<<< HEAD
         </div>;
 =======
 }
@@ -752,10 +890,19 @@ if ( {) {
     return this && this.props.children;
   }
 }
+<<<<<<< HEAD
+class ErrorBoundary extends Component<Props, State> {;
+  constructor(props: Props) {;
+=======
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {;
+=======
+<<<<<<< HEAD
 
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     super(props);
     this && this.state = { hasError: false };
 
@@ -768,7 +915,6 @@ class ErrorBoundary extends Component<Props, State> {;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
     this && this.setState({ error, errorInfo });
 }
-
   handleRetry = () => {;
     this && this.setState({ hasError: false, error: undefined, errorInfo: undefined });
 };
@@ -777,14 +923,12 @@ class ErrorBoundary extends Component<Props, State> {;
       if (this && this.props.fallback) {;
         return this && this.props.fallback;
 }
-
       return (
 
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
               <AlertTriangle className="w-8 h-8 text-red-400" />;
-=======
             <details style={{ margin_top: '20px', text_align: 'left' }}>;
               <summary > Error Details (Development)</summary>;
               <pre style={{
@@ -834,7 +978,6 @@ if ( {) {
           <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 text - center">;
             <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
               <AlertTriangle className="w - 8 h - 8 text - red - 400" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
             <h1 className="text - 2xl font - bold text - white mb - 4">;
               Something went wrong;
@@ -866,7 +1009,6 @@ if ( {) {
               <button
                 onClick={() => window && window.location.reload()}
                 className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;
-=======
 ;
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text - left mb - 6">;
@@ -888,7 +1030,6 @@ if ( {) {
               <button;
                 on_click={() => window.location.reload ()}
                 className="bg - transparent border border - white / 20 text - white hover:bg - white / 10 px - 6 py - 3 rounded - lg font - semibold transition - colors duration - 200">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Refresh Page;
               </button>;
             </div>;
@@ -901,7 +1042,6 @@ if ( {) {
 
 =======
     return this.props.children;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 }
 export default ErrorBoundary;

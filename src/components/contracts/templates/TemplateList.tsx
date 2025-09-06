@@ -1,12 +1,3 @@
-
-import { useState } from "react";
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate,) => void,
-  onEdit: (template: ContractTemplate,) => void
-}
-
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -16,6 +7,8 @@ import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 import { useAuth } from "@/hooks/useAuth";
 import { useAuth } from "@/hooks/useAuth",
+
+
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -210,11 +203,13 @@ export function TemplateList(): any ({;
       router && router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return;
     }
-    await setDefaultTemplate.mutateAsync(templateId)
-  },
+    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
+  };
+
+  if (isLoading) {;
+
 
   if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
@@ -250,8 +245,9 @@ export function TemplateList(): any ({;
                 </p>
               </div>
               
+
+
               <div className="flex items-center gap-2">
-=======
                 </div>;
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
@@ -259,7 +255,6 @@ export function TemplateList(): any ({;
               </div>;
 
               <div className="flex items-center gap-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="ghost"
                   size="icon"
@@ -296,17 +291,9 @@ export function TemplateList(): any ({;
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => handleDeleteClick(template.id)}
-                  aria-label="Delete template"
-                >
-                  <Trash className="h-4 w-4 text-destructive" />
-                </Button>
-              </div>
-            </div>
-            <Separator className="my-3" />
-            <Button
-              onClick = {() => onSelect(template),}
-              variant="outline"
+
+
+
             
             <Separator className="my-3" />
             
@@ -372,12 +359,33 @@ return;
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-  handleDeleteConfirm
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
-}'"}
+
+                  onClick = {() => handleDeleteClick(template && template.id),}
+                  aria-label="Delete template";
+                >;
+                  <Trash className="h-4 w-4 text-destructive" />;
+                </Button>;
+              </div>;
+            </div>;
+
+            <Separator className="my-3" />;
+
+            <Button
+              onClick = {() => onSelect(template),}
+              variant="outline" ;
+              className="w-full";
+            >;
+              Use This Template;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      ))}
+
+
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
+
 ;
 
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -402,10 +410,7 @@ return;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -546,8 +551,5 @@ return;
   handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

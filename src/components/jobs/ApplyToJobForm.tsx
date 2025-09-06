@@ -1,19 +1,3 @@
-import { useState } from "react";
-import { useRouter  } from 'next/router';
-    import { useRouter } from 'next/router'
-import { useJobApplications } from "@/hooks/useJobApplications"
-import { useResume } from "@/hooks/useResume"
-import { useAuth } from "@/hooks/useAuth"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow } from "date-fns"
-import { Job } from "@/types/jobs"
-import { toast } from "sonner"
-import { useState } from "react",
-import { useRouter } from 'next/router',
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -28,6 +12,8 @@ import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
+
+
 interface ApplyToJobFormProps {
 
   job: Job
@@ -115,6 +101,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
+
+
+
         if (onSuccess) {
           onSuccess()
         }
@@ -122,7 +111,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
-=======
     import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { use_resume  } from '@/hooks / use_resume';
@@ -162,12 +150,46 @@ if ( {) {
       router.push (`/login?return_to=${encodeURIComponent (`/jobs/${job.id}`)}`);
       return;
     }
-  }
+    if () {) {
+  $2
+}
+      set_error ("Please provide a cover letter");
+      return;
+    }
+    setIsSubmitting (true);
+    set_error (null);
+    try {
+      const success = await applyToJob (
+        job.id;
+        cover_letter;
+        selectedResumeId || undefined;
+        resume_file || undefined);
+      // Check condition
+if ( {) {
+  $2
+}
+        toast.success ("Your application has been submitted!");
+        // Check condition
+if ( {) {
+  $2
+}
+          on_success ();
+        }
+      }
+    } catch (err: any) {
+      set_error (err.message || "Failed to submit application"),
+      toast.error ("Failed to submit application");
+    } finally {
+      setIsSubmitting (false);
+    }
+
 
   },
   
+
   },
   
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -177,6 +199,8 @@ if ( {) {
         </p>
       </div>
       
+
+
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -187,8 +211,6 @@ if ( {) {
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
     import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -276,7 +298,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       <div className="space-y-4">;
         <div>;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Textarea
             id="coverLetter"
             value={coverLetter}
@@ -290,6 +311,8 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
           </p>
         </div>
         
+
+
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -299,7 +322,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
             </div>
           ) : resumes && resumes.length > 0 ? (
 
-=======
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -420,12 +442,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               <span>Loading your resumes...</span>;
             </div>;
           ) : resumes && resumes.length > 0 ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Select
               value = {selectedResumeId,}
               onValueChange = {setSelectedResumeId,}>;
               <SelectTrigger className="mt-1">;
-=======
     <form on_submit={handle_submit} className="space - y-6">;
       <div>;
         <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;
@@ -465,7 +485,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               onValueChange = {setSelectedResumeId, }
             >;
               <SelectTrigger className="mt - 1">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
@@ -475,6 +494,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                         {resume && resume.basic_info.title || "Untitled Resume"}
                       </SelectItem>;
                     );
+
                   }
                   return null;
                 })}
@@ -517,25 +537,27 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           />
         </div>
       </div>
-      
+
+
       <div className="flex justify-end gap-2">
-=======
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
           />;
         </div>;
       </div>;
 
       <div className="flex justify-end gap-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           type="button"
           variant="outline"
-          disabled = {isSubmitting,}
-          onClick={() => {
-            if (onSuccess) onSuccess()
+
+          onClick={() => {;
+            if (onSuccess) onSuccess();
+
+
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
+
           }}
         >;
           Cancel;
@@ -577,16 +599,15 @@ handleSubmit
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
+
+
         </Button>;
       </div>;
     </form>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 {resumes.map ((resume, ) => {
                   // Check condition
 if ( {) {
@@ -677,8 +698,5 @@ handle_submit;
 }</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");
 }</Button> </div> </form>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

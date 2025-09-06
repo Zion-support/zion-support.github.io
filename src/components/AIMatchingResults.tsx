@@ -1,23 +1,3 @@
-import { useState } from 'react'
-import { MatchResultItem } from '@/lib/ai-matchmaking'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
-import Skeleton from '@/components/ui/skeleton'
-import { cn } from '@/lib/utils'
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -147,7 +127,6 @@ export function AIMatchingResults(): any ({;
   }
 
   if (matches && matches.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
         <CardContent className='pt-6'>;
@@ -341,6 +320,15 @@ if ( {) {
                                       .includes('talent')
                                       ? '/hour'
                                       : ''}
+                                  </div>;
+                                </div>;
+                              )}
+
+
+
+
+
+
 
                                   </div>
                                 </div>
@@ -377,7 +365,6 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             </div>;
 
                             <div className='mt-2 flex flex-wrap gap-1'>;
@@ -390,7 +377,6 @@ if ( {) {
                                       {skill}
                                     </Badge>;
                                   ))}                            </div>;
-=======
                                   </div>;
                                   <div className='text - xs text - zion - slate - light'>;
                                     {match.category;
@@ -410,18 +396,13 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-                  </Card>;
-                );
-              });
-            ) : (;
-              <div className="text-center py-8 text-zion-slate-light">;
-                No {tab} matches found.;
-              </div>;
+
+
+
             )}
           </TabsContent>;
         ))}
@@ -434,4 +415,16 @@ if ( {) {
       </Tabs>;
     </div>;
   );
+}
+
+
+
+                  </Card>);
+              })) : (
+              <div className='text - center py - 8 text - zion - slate - light'>;
+                No {tab} matches found.;
+              </div>)}
+          </TabsContent>))}
+      </Tabs>;
+    </div>);
 }

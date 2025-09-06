@@ -39,22 +39,42 @@ export type WikiContent = {
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
-}
-export type DocsContent = {productOverview: WikiSection;
-  developerApi: WikiSection;
-  governanceGuide: WikiSection;
-  tokenomics: WikiSection;
-  team: WikiSection;
-  publicRoadmap: WikiSection;
-}
-export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`;
-export function generateZionWiki(): WikiContent {const title = 'Zion OS';
-  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
-  const infobox: Infobox = {;
-    founder: 'Zion Holdings';
-    launchYear: '2025';
-    token: 'ZION$';
-    protocolType: 'Decentralized AI marketplace & governance protocol'}
+
+export type Infobox = {
+  founder: string,
+launch_year: string,
+  token: string,
+  protocol_type: string;
+},
+export type WikiSection = {
+  id: string,
+  title: string,
+  paragraphs: string[];
+},
+export type WikiContent = {
+  title: string,
+  intro: string,
+  infobox: Infobox,
+  sections: WikiSection[],
+references: string[];
+},
+export type DocsContent = {
+  product_overview: WikiSection,
+  developer_api: WikiSection,
+  governance_guide: WikiSection,
+  tokenomics: WikiSection,
+  team: WikiSection,
+  public_roadmap: WikiSection;
+},
+export const operator_prompt = `Write a Wikipedia - style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,
+export function generateZionWiki (): WikiContent {
+  const title = 'Zion OS',
+  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.',
+  const infobox: Infobox = {
+    founder: 'Zion Holdings',
+    launch_year: '2025',
+    token: 'ZION$',
+    protocol_type: 'Decentralized AI marketplace & governance protocol'},
   const sections: WikiSection[] = [;
     {
       id: 'history - launch',
@@ -115,12 +135,12 @@ export function generateZionDocs (): DocsContent {
     tokenomics: {
       id: 'tokenomics',
       title: 'Tokenomics',
-      paragraphs: [;
+paragraphs: [;
         'ZION$ powers staking, curation, and rewards. Fees from marketplace activity flow to contributors and the treasury under DAO policy.']},
     team: {
       id: 'team',
       title: 'Team',
-      paragraphs: [;
+paragraphs: [;
         'Zion Holdings and community contributors maintain core modules and standards, with decentralized working groups over time.']},
     public_roadmap: {
       id: 'public - roadmap',
@@ -181,7 +201,33 @@ export function buildWikitextFromWiki (wiki: WikiContent): string {
 if ( {) {
   $2
 }
-export function slugify(input: string): string {return input;
+    lines.push ('== References =='),
+    wiki.references.for_each ((r) => lines.push (`* ${r}`));
+  }
+  return lines.join ('\n');
+}
+<<<<<<< HEAD
+export function buildNotionMarkdownFromDocs (docs: DocsContent): string {
+  const sections = [;
+    docs.product_overview,
+    docs.developer_api,
+    docs.governance_guide,
+    docs.tokenomics,
+    docs.team,
+    docs.public_roadmap],
+  const lines: string[] = [],
+  lines.push ('# Zion OS — Internal Documentation'),
+  lines.push (''),
+  for (const s of sections) {
+    lines.push (`## ${s.title}`),
+    for (const p of s.paragraphs) lines.push (p);
+    lines.push ('');
+
+  }
+  return lines.join ('\n');
+}
+
+
 };
 export type DocsContent = {
   productOverview: WikiSection;

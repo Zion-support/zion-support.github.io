@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -357,7 +353,6 @@ const Revolutionary2027ServicesShowcase = () => {;
       growthRate: '500% annual growth',;
     },;
   ];
-
   const categories = [;
     {;
       name: 'Quantum AI Services',;
@@ -410,11 +405,9 @@ const Revolutionary2027ServicesShowcase = () => {;
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>;
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
-
       <div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div
 
@@ -439,7 +432,6 @@ const Revolutionary2027ServicesShowcase = () => {;
 =======
           className="text-center mb-20"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2027 Revolutionary Services
@@ -515,27 +507,11 @@ const Revolutionary2027ServicesShowcase = () => {;
               variants={itemVariants}
               className="group relative"
             >
-              <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>
-                {/* Service Icon */}
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
-                >
-                  <service.icon className='w-8 h-8 text-white' />
-                </div>
-                {/* Service Content */}
-                <div className='space-y-4'>
-                  <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>
-                    {service.name}
-                  </h3>
-                  <p className='text-gray-300 leading-relaxed'>                    {service.description}
-                  </p>
-                  {/* Features */}            >
               <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
                 {/* Service Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-=======
       features: [;
         'Quantum consciousness simulation',
         'Neural pattern recognition',
@@ -675,7 +651,7 @@ const Revolutionary2027ServicesShowcase = () => {;
     visible: {
       opacity: 1,
       transition: {
-        stagger_children: 0.1,
+stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
       }
@@ -801,7 +777,6 @@ const Revolutionary2027ServicesShowcase = () => {;
                 <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}>;
                   <service.icon className="w - 8 h - 8 text - white" />;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {/* Service Content */}
                 <div className="space - y-4">;
                   <h3 className="text - 2xl font - bold text - white group - hover:text - transparent group - hover:bg - gradient - to - r group - hover:from - cyan - 400 group - hover:to - purple - 400 group - hover:bg - clip - text transition - all duration - 300">;
@@ -826,29 +801,24 @@ const Revolutionary2027ServicesShowcase = () => {;
                   className={`w-16 h-16 bg-gradient-to-br ${service && service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>;
                   <service && service.icon className='w-8 h-8 text-white' />;
                 </div>;
-
                 {/* Service Content */}
                 <div className='space-y-4'>;
                   <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>;
                     {service && service.name}
                   </h3>;
-
                   <p className='text-gray-300 leading-relaxed'>                    {service && service.description}
                   </p>;
-
                   {/* Features */}            >;
               <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20">;
                 {/* Service Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service && service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>;
                   <service && service.icon className="w-8 h-8 text-white" />;
                 </div>;
-
                 {/* Service Content */}
                 <div className="space-y-4">;
                   <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">;
                     {service && service.name}
                   </h3>;
-
                   <p className="text-gray-300 leading-relaxed">;
                     {service && service.description}
                   </p>;
@@ -893,18 +863,14 @@ const Revolutionary2027ServicesShowcase = () => {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </div>
-
                   {/* Market Info */}
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="flex justify-between items-center text-sm text-gray-400">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-green-400">↑ {service.growthRate}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
-=======
                   </div>;
-
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>;
                     <div className='flex justify-between items-center text-sm text-gray-400'>;
@@ -913,7 +879,6 @@ const Revolutionary2027ServicesShowcase = () => {;
                         ↑ {service && service.growthRate}
                       </span>                    </div>;
                   </div>;
-
                   {/* Price and CTA */}
 
                   <div className="pt-4 flex items-center justify-between">
@@ -958,11 +923,12 @@ const Revolutionary2027ServicesShowcase = () => {;
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link
-                href='https://ziontechgroup && ziontechgroup.com/contact'
-                className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'>;
-                <span>Get Started Today</span>;
-                <ArrowRight className='w-5 h-5' />;
-              </Link>;
+                href='https://ziontechgroup.com/contact'
+                className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
+              >
+                <span>Get Started Today</span>
+                <ArrowRight className='w-5 h-5' />
+              </Link>
               <a
                 href='tel:+13024640950'
 
@@ -974,6 +940,7 @@ const Revolutionary2027ServicesShowcase = () => {;
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Join the future of technology with our revolutionary 2027 services.
               Get in touch to discover how we can accelerate your digital transformation.
             </p>
@@ -1016,9 +983,8 @@ const Revolutionary2027ServicesShowcase = () => {;
   );
 }
 };
-
-export default Revolutionary2027ServicesShowcase;  )
-}
+export default Revolutionary2027ServicesShowcase;  );
+};
 export default Revolutionary2027ServicesShowcase;
 
 export default Revolutionary2027ServicesShowcase;

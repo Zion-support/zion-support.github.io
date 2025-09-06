@@ -1,9 +1,3 @@
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import React from 'react'
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
@@ -28,8 +22,8 @@ export default function ITSupportPage() {
   ]
     return (
 
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 export default function ITSupportPage() {
@@ -37,15 +31,16 @@ export default function ITSupportPage() {
     {
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
-      icon: <Clock className = "h-8 w-8" />},
+      icon: <Clock className="h-8 w-8" />},
     {
       title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
-      icon: <ShieldCheck className = "h-8 w-8" />},
+      icon: <ShieldCheck className="h-8 w-8" />},
     {
       title: "Multi-Channel Support",
-      description: "Get help via phone, chat, or onsite visits tailored to your needs.";
-      icon: <Phone className = "h-8 w-8" />}],
+      description: "Get help via phone, chat, or onsite visits tailored to your needs.",
+      icon: <Phone className="h-8 w-8" />}],
+
   const testimonials = [
     {
       name: "Lisa Wong",
@@ -57,7 +52,43 @@ export default function ITSupportPage() {
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
 
-  return (
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { Phone, ShieldCheck, Clock } from 'lucide-react';
+export default function ITSupportPage() {;
+  const benefits = [;
+    {import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Phone, ShieldCheck, Clock } from 'lucide-react';
+
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+
+
+
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
@@ -78,6 +109,7 @@ export default function ITSupportPage() {
 ;
 }
 }
+
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -86,7 +118,6 @@ export default function ITSupportPage() {
   )
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {;
   const benefits = [;
@@ -125,7 +156,6 @@ export default function ITSupportPage() {;
     },;
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -133,19 +163,5 @@ export default function ITSupportPage() {;
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
-      heroImage="https://placehold && placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
-      benefits = {benefits,}
-      testimonials = {testimonials,}
-      ctaText="Get IT Support"
-      ctaLink="/request-quote"
-    />;
-  );      benefits={benefits}
-      testimonials={testimonials}
-
-      ctaText="Get IT Support";
-      ctaLink="/request-quote";
-    />;
-  );
-}
-;

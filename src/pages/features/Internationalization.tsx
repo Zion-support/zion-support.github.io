@@ -1,52 +1,51 @@
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function Internationalization() {
-  const schema = {
-    '@context': 'https://schema.org',
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function Internationalization() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
     '@type': 'WebPage',;
     name: 'Internationalization',;
     description:;
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.';
-    url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Internationalization"
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-  }
-  return (
-    <>
-      <SEO
-        title='Internationalization'
-        description='Reach a global audience with multi-language support across the Zion platform.'
-        keywords='i18n, multi-language marketplace, localized listings'
-        canonical='https://app.ziontechgroup.com/features/internationalization'
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.',;
+    url: 'https://app && app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Internationalization";
+    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",;
+    "url": "https://app && app.ziontechgroup.com/features/internationalization";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-export default function Internationalization() {
-  const schema = {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Internationalization'
-    description:
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.'
-    url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Internationalization"
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-  }
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
 export default function Internationalization() {
   const schema = {
     "@context": "https://schema.org",
@@ -54,22 +53,49 @@ export default function Internationalization() {
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
     "url": "https://app.ziontechgroup.com/features/internationalization"
-  },
+
+  };
 
   return (
-    <>
-      <SEO
-        title='Internationalization'
-        description='Reach a global audience with multi-language support across the Zion platform.'
-        keywords='i18n, multi-language marketplace, localized listings'
-        canonical='https://app.ziontechgroup.com/features/internationalization'
+    <>;
+
+
+            <li>;
+              Automatic language detection ensures a localized experience.;
+            </li>;
+          </ul>;
+
+          <h2 className='text - 2xl font - bold mb - 4'>;
+            Frequently Asked Questions;
+          </h2>;
+          <div className='space - y-4 mb - 12'>;
+            <div>;
+              <p className='font - semibold'>Which languages are supported?</p>;
+              <p className='text - zion - slate - light'>;
+
+                The platform currently supports English, Spanish, Portuguese and;
+                more.;
+              </p>;
+            </div>;
+            <div>;
+
+              <p className='font - semibold'>Can I suggest new translations?</p>;
+              <p className='text - zion - slate - light'>;
+
+                Yes, community contributions help us continually add new;
+                languages.;
+              </p>;
+            </div>;
+          </div>;
+
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
+
+
+
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -157,6 +183,7 @@ export default function Internationalization() {
   )
 }
 ;
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -184,7 +211,6 @@ export default function Internationalization() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -204,7 +230,6 @@ export default function Internationalization() {;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
+
+
 ;

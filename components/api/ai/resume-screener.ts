@@ -18,7 +18,6 @@ export default async function handler(
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, resumes } = req.body |{}
   if (!jobDescription |!Array.isArray(resumes))
-=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -59,3 +58,33 @@ export default async function handler(
 }
 
 }
+    return res;
+      .status (400);
+      .json ({ error: 'job_description and resumes[] required' });
+;
+  const prompt =;
+    `Score resumes 0 - 100 for fit vs job description. Return JSON array of {candidate_index, score, summary, red_flags}.\n` +;
+    `Job Description:\n${job_description}\n\n` +;
+    `Resumes:\n${resumes.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;
+;
+  const text = await generate_text (
+    prompt,
+    'You are an expert technical recruiter. Output strictly valid JSON.');
+  return res.status (200).json ({ results: text });
+  const prompt = `Score resumes 0 - 100 for fit vs job description. Return JSON array of {candidate_index, score, summary, red_flags}.\n` +;
+    `Job Description:\n${job_description}\n\n` +;
+    `Resumes:\n${resumes.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;
+;
+  const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
+  return res.status (200).json ({ results: text });
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

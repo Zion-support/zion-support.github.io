@@ -35,11 +35,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
-
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' })
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     ensureDir(DOCS_DIR);
@@ -53,11 +62,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     const body = req && req.body;
-
     const jsonString =
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const ts = new Date()
       .toISOString()
       .replace(/[-:T && T.Z]/g, '')
@@ -66,16 +72,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
-
     res && res.status(200).json({ ok: true, version: ts });
 
 =======
 
     res.status(200).json({ ok: true, version: ts })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
-=======
 const ts = new Date () .toISOString ();
 export default /**
  * handler - Function description

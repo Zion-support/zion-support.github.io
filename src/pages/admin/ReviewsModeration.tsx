@@ -1,27 +1,10 @@
-import { SEO } from '@/components/SEO'
-import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { useState, useEffect } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Star, AlertTriangle } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
-
-
-function ReviewsModerationContent() {
-  const [active_tab, setActiveTab] = useState ('pending');
-  const [reviews, set_reviews] = useState ([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const fetch_reviews = async () => {
-    setIsLoading (true);
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [reviews, setReviews] = useState([]),
+  const [isLoading, setIsLoading] = useState(true),
+  
+  const fetchReviews = async () => {
+    setIsLoading(true),
     try {
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
@@ -98,10 +81,7 @@ function ReviewsModerationContent() {
   }, [active_tab]),
   const handle_refresh = () =>: any {
     fetch_reviews ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { SEO } from '@/components/SEO';
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
@@ -137,11 +117,12 @@ function ReviewsModerationContent() {;
 
       setIsLoading(false)
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"});
+        variant: "destructive"}),
       setIsLoading(false)
     }
   }
@@ -194,9 +175,7 @@ function ReviewsModerationContent() {;
 
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
 
-=======
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
@@ -209,24 +188,17 @@ function ReviewsModerationContent() {;
               </TabsList>
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable
-=======
                 <ReviewsModerationTable 
                   reviews={reviews}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
                   reviews = {reviews,}
                   isLoading = {isLoading,}
                   onRefresh = {handleRefresh,}
-                />
-              </TabsContent>
-              <TabsContent value='reported' className='mt-0'>
-                <div className='text-center py-12 border rounded-lg'>
-                  <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />
-                  <h3 className='text-lg font-medium mb-2'>Reported Reviews</h3>
-                  <p className='text-muted-foreground'>
-                    This section will show reviews that have been reported by
-                    users.                  </p>
+
+              
+
+
               
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
@@ -236,6 +208,7 @@ function ReviewsModerationContent() {;
                 />
               </TabsContent>
               
+
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -243,6 +216,9 @@ function ReviewsModerationContent() {;
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
                   </p>
+
+
+
                 </div>
               </TabsContent>
             </Tabs>
@@ -255,10 +231,17 @@ function ReviewsModerationContent() {;
 
 
 export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>
+      <SEO;
+        title='Review Moderation | Zion AI Marketplace';
+        description='Moderate and manage reviews in the Zion AI Marketplace';
+      />;
+      <main className='container mx - auto px - 4 py - 8'>;
+        <div className='flex justify - between items - center mb - 8'>;
+          <div>;
+            <h1 className='text - 3xl font - bold'>Review Moderation</h1>;
+            <p className='text - muted - foreground mt - 1'>;
+              Manage, approve, or reject reviews;
+            </p>;
   )
 }
 return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5" /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTable reviews= {
@@ -272,6 +255,7 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
 ;
+
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -319,13 +303,11 @@ function ReviewsModerationContent() {;
           <div>;
             <h1 className="text-3xl font-bold">Review Moderation</h1>;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
         <Card>;
           <CardHeader>;
 
-=======
             <CardTitle className="flex items-center gap-2">;
               <Star className="h-5 w-5" />;
               Review Management;
@@ -348,20 +330,13 @@ function ReviewsModerationContent() {;
 
                 />;
               </TabsContent>;
-
-              <TabsContent value='reported' className='mt-0'>;
-                <div className='text-center py-12 border rounded-lg'>;
-                  <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />;
-                  <h3 className='text-lg font-medium mb-2'>Reported Reviews</h3>;
-                  <p className='text-muted-foreground'>;
-                    This section will show reviews that have been reported by;
-                    users.                  </p>              ;
               <TabsContent value="reported" className="mt-0">;
                 <div className="text-center py-12 border rounded-lg">;
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />;
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>;
                   <p className="text-muted-foreground">;
                     This section will show reviews that have been reported by users.;
+                  </p>;
                 </div>;
               </TabsContent>;
             </Tabs>;
@@ -371,16 +346,15 @@ function ReviewsModerationContent() {;
     </>;
   );
 }
-
+;
 export default function ReviewsModeration() {;
-  return (
+  return (;
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>;
   );
 
 
-=======
 return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5" /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews= {
   reviews;
 }is_loading= {
@@ -393,8 +367,5 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
  */
 function ReviewsModeration() {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

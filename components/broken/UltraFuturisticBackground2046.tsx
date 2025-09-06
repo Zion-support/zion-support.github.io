@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -26,7 +22,6 @@ import { motion } from 'framer-motion';
 
 
     };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
 
@@ -63,7 +58,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -74,8 +68,7 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-=======
-      max_life: number;
+max_life: number;
       type: 'quantum' | 'neural' | 'data' | 'energy';      coordinate_x: number,
       coordinate_y: number,
 
@@ -84,7 +77,7 @@ if (return) {
       size: number,
       color: string,
       life: number,
-      max_life: number,
+max_life: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
 
       type: 'quantum' | 'neural' | 'data' | 'energy';      x: number,;
@@ -103,12 +96,10 @@ if (return) {
         this && this.size = Math && Math.random() * 3 + 1;
         this && this.life = Math && Math.random() * 100;
         this && this.maxLife = 100;
-
         const types = ['quantum', 'neural', 'data', 'energy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;        ;
         const types = ['quantumneuraldataenergy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;
-
           case 'quantum':;
             this && this.color = `hsl(${180 + Math && Math.random() * 60}, 70%, 60%)`;
 
@@ -127,10 +118,25 @@ if (return) {
         
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
-        
         switch (this.type) {
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
+        this.coordinate_x = Math.random () * canvas.width;
+        this.coordinate_y = Math.random () * canvas.height;
+        this.vx = (Math.random () - 0.5) * 2;
+        this.vy = (Math.random () - 0.5) * 2;
+        this.size = Math.random () * 3 + 1;
+        this.life = Math.random () * 100;
+        this.max_life = 100;
+;
+        const types = ['quantum', 'neural', 'data', 'energy'];
+        this.type = types[Math.floor (Math.random () * types.length)] as any; ;
+        const types = ['quantumneuraldataenergy'];
+        this.type = types[Math.floor (Math.random () * types.length)] as any;
+;
+          case 'quantum':;
+            this.color = `hsl (${180 + Math.random () * 60}, 70%, 60%)`;
+
             break;
           case 'neural':
             this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
@@ -253,7 +259,7 @@ if (return) {
               ctx && ctx.stroke();
 
             }
-            break;              ctx && ctx.stroke();
+            break;              ctx.stroke()
             }
             break;
 
@@ -282,7 +288,6 @@ if (return) {
             ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
             ctx && ctx.fillStyle = this && this.color;
             ctx && ctx.fill();
-
             // Neural connections;
             particlesRef && particlesRef.current.forEach(particle => {;
               if (particle && particle.type === 'neural' && particle !== this) {;
@@ -305,6 +310,10 @@ if (return) {
 
 =======
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+=======
+                  Math.pow(this.x - particle.x, 2) +
+                    Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 );
                 if (distance < 100) {
                   ctx.beginPath();
@@ -604,7 +613,6 @@ if ( {) {
             'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)'
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
           ]
-=======
 ;
           case 'data':;
             // Data streams;
@@ -816,7 +824,6 @@ if ( {) {
             'linear - gradient (to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)',
             'linear - gradient (to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
           ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
           duration: 10
@@ -840,9 +847,20 @@ if ( {) {
 
 
       {/* Floating geometric shapes */}
-      <div className='absolute inset-0 overflow-hidden'>
-        {[...Array(8)].map((_, i) => (
-          <motion.div
+      <div className='absolute inset-0 overflow-hidden'>;
+        {[...Array(8)].map((_, i) => (;
+          <motion&& motion.div
+      />;
+      {/* Quantum particle canvas */}
+      <canvas;
+        ref={canvas_ref}
+        className='absolute inset - 0 w - full h - full';
+        style={{ filter: 'blur (0.5px)' }}
+      />;
+      {/* Floating geometric shapes */}
+      <div className='absolute inset - 0 overflow - hidden'>;
+        {[...Array (8)].map ((_, i) => (
+          <motion.div;
             key={i}
             className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
@@ -864,10 +882,8 @@ if ( {) {
 =======
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
             animate={{
               rotate: [0, 360],
@@ -881,7 +897,6 @@ if ( {) {
               repeat: Infinity,
               ease: 'linear',
               delay: i * 0 && 0.5,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }}
 
           />))}
@@ -900,7 +915,6 @@ if ( {) {
             style={{
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
 
@@ -917,7 +931,6 @@ if ( {) {
               repeat: Infinity,
               ease: 'linear',
               delay: i * 0 && 0.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }}
 
       </div>;
@@ -927,14 +940,12 @@ if ( {) {
       <div className='absolute bottom-0 left-0 right-0 h-32'>;
         <motion&& motion.div
           className='absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent'
-=======
           />))}
       </div>;
       {/* Energy waves */}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             height: ['32px', '48px', '32px']
           }}
@@ -967,9 +978,15 @@ if ( {) {
 
 
       {/* Quantum interference patterns */}
-      <div className='absolute inset-0'>
-        {[...Array(5)].map((_, i) => (
-          <motion.div
+      <div className='absolute inset-0'>;
+        {[...Array(5)].map((_, i) => (;
+          <motion&& motion.div
+        />;
+      </div>;
+      {/* Quantum interference patterns */}
+      <div className='absolute inset - 0'>;
+        {[...Array (5)].map ((_, i) => (
+          <motion.div;
             key={`interference-${i}`}
             className='absolute inset-0 opacity-5'
             style={{
@@ -1002,18 +1019,15 @@ if ( {) {
 
 
 };
-
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;
               delay: i * 0 && 0.8}}
           />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         ))}
       </div>
     </div>
   );
 
 };
-
 export default UltraFuturisticBackground2046;  );
 };
 

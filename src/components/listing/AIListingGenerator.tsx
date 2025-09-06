@@ -1,13 +1,3 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-import {logErrorToProduction} from '@/utils/productionLogger';
-
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -16,7 +6,7 @@ interface GeneratedContent {
     max: number;
 
   }
-  key_points: string[];
+  keyPoints: string[]
 }
 interface AIListingGeneratorProps {
 
@@ -38,7 +28,7 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string;
+    targetAudience?: string
   }
 }
 
@@ -72,16 +62,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
 
-      setGeneratedContent((data as any)?.generated || null)
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
+
+
+
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -93,6 +76,24 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+      // Check condition
+if (.error) {) {
+  $2
+}
+        throw new Error ((data as any).error);
+      }
+      setGeneratedContent ((data as any)?.generated || null);
+      toast ({
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {
+      logErrorToProduction ('Error generating content:', { data: error }),
+      toast ({
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+        variant: "destructive";
+      });
     } finally {
       setIsLoading(false)
     }
@@ -105,6 +106,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
+
+
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -163,7 +166,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         description: "The generated content has been applied to your listing.";
       });
 
-=======
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
@@ -174,11 +176,9 @@ if ( {) {
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-  }
+  },
 
-=======
     }
 
   },
@@ -186,8 +186,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="space-y-6">;
@@ -233,7 +231,7 @@ key_features: string;
 target_audience: string;
 
 }) => {
-  setIsLoading (true);
+  setIsLoading (true)
 try {
   const {
 
@@ -255,7 +253,7 @@ if (.error) {) {
 }setGeneratedContent ( (data as any) ?.generated || null);
 
 toast ({
-}catch (error) {';
+}catch (error) {'
   logErrorToProduction ('Error generating content:', {
 
           />;
@@ -337,13 +335,11 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>) ;
 }'";
 
-=======
   data: error;
 });
 toast ({
 }finally {
   setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 const handle_apply = () =>: any {
@@ -375,13 +371,14 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) 
 }</div>) 
 }'";
+};
 }
 
 }
 }
 }
 }
-}
+
     </div>;
   );
 }

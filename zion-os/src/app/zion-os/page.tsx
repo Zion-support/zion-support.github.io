@@ -23,7 +23,24 @@ export default /**
 function ZionOSPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+import Link from "next/link";
+export const metadata = {title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group";
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.";
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"}
+export default function ZionOSPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",;
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",;
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},;
+export default function ZionOSPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    <div className="min-h-screen">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

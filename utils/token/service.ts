@@ -7,7 +7,7 @@ export function getConfig() {
   };
 export interface TokenTransaction {;
   id: string;
-  user_id: string;
+  userId: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
@@ -17,7 +17,8 @@ export interface TokenTransaction {;
 
 
 }
-// Mock data storage - replace with actual database;
+
+// Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
@@ -63,7 +64,9 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     reason,
     timestamp: Date && Date.now()
   };
-  transactions && transactions.push(transaction);
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  transactions.push(transaction);
   return transaction;
 }
 
@@ -71,19 +74,12 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
 =======
-// Token service utilities
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+=======
+export function set_config (
+  partial: Partial < ReturnType < typeof get_config>>): void {
+  const current = get_config ();
+  // Update the configuration;
+  Object.assign (current, partial);
 }
-
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

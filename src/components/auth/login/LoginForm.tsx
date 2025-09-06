@@ -1,32 +1,3 @@
-
-import { useState } from "react";
-import { useRouter  } from 'next/router';
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import { useForm, ControllerRenderProps } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { LogIn, User, Eye, EyeOff } from 'lucide-react'
-import { fireEvent } from '@/lib/analytics'
-import { useAuth } from '@/context/auth/AuthProvider'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { useState } from "react"
-import { useForm, ControllerRenderProps } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
-import { useAuth } from "@/context/auth/AuthProvider"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-
-import { useState } from "react",
-import { useRouter } from 'next/router',
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
@@ -52,26 +23,73 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import Link from 'next/link';
-import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
-const loginSchema = z.object({
-  email: z
-    .string()
-    .email('Please enter a valid email')
-    .min(1, 'Email is required')
-  password: z.string().min(6, 'Password must be at least 6 characters')
-  rememberMe: z.boolean()
-})
-type LoginFormValues = z.infer<typeof loginSchema>
-export function LoginForm() {
-  const { isLoading, login } = useAuth()
-  const [showPassword, setShowPassword] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isResending, setIsResending] = useState(false)
-  const [verificationMessage, setVerificationMessage] = useState('')
-  const router = useRouter()
+} from '@/components / ui / form';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+import Link from 'next / link';
+import { Checkbox } from '@/components / ui / checkbox';// Form validation schema;
+const login_schema = z.object ({
+  email: z;
+    .string ();
+    .email ('Please enter a valid email');
+    .min (1, 'Email is required'),
+  password: z.string ().min (6, 'Password must be at least 6 characters'),
+  remember_me: z.boolean (),
+});
+type LoginFormValues = z.infer < typeof login_schema>;
+export /**
+ * LoginForm - Function description
+ */
+function LoginForm() {
+  const { is_loading, login } = use_auth ();
+  const [show_password, setShowPassword] = useState (false);
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [is_resending, setIsResending] = useState (false);
+  const [verification_message, setVerificationMessage] = useState ('');
+  const router = use_router ();
+  const form = use_form < LoginFormValues>({
+    resolver: zod_resolver (login_schema) as any,
+    default_values: {
+      email: '',
+      password: '',
+      remember_me: false,
+    },
+  });
+  const on_submit = async (data: LoginFormValues) => {
+    // Check condition
+if (return) {
+  $2
+}
+    try {
+      setIsSubmitting (true),
+      // Pass email and password to the login function;
+      const result = await login (data.email, data.password, data.remember_me);
+      // Check condition
+if ( {) {
+  $2
+}
+        let error_message = 'Login failed. Please try again.'; // Default generic error;
+        // Check condition
+if ( {) {
+  $2
+}
+          if (.includes ('email not confirmed')) {
+  $2
+}
+
+          ) {
+            error_message =;
+              'Your email is not confirmed. Please check your inbox for a confirmation link.';
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -102,6 +120,7 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
+
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -145,21 +164,7 @@ export function LoginForm() {
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe)
       const result = await login(data.email, data.password, data.rememberMe),
-      if (result?.error) {
-        let errorMessage = "Login failed. Please try again.", // Default generic error
-        if (result?.error && result?.error?.message) {
-          if (
-            result.error.message.toLowerCase().includes('email not confirmed')
-          ) {
-            errorMessage =
-              'Your email is not confirmed. Please check your inbox for a confirmation link.'
-          if (result.error.message.toLowerCase().includes("email not confirmed")) {
-            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
-      if (result?.error) {
-        let errorMessage = "Login failed. Please try again.", // Default generic error
-        if (result?.error && result?.error?.message) {
-          if (result.error.message.toLowerCase().includes("email not confirmed")) {
-            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+
           } else {
             error_message = result.error.message;
           }
@@ -187,6 +192,7 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
+
         form.setError("root", { message: errorMessage })
       } else {
         fireEvent('login', { method: 'email' })
@@ -200,7 +206,6 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form,;
   FormControl,;
@@ -308,6 +313,44 @@ export function LoginForm() {;
     router && router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   };
 
+
+        onSubmit={form && form.handleSubmit(onSubmit, errors => {;
+          const firstError = Object && Object.keys(errors)[0] as keyof LoginFormValues;
+          if (firstError) {;
+            form && form.setFocus(firstError);
+
+          }        })}
+        className='space-y-6';
+      >;
+        <FormField
+          control={form && form.control}
+          name='email'
+      {form.form_state.errors.root && (
+        <Alert variant='destructive' className='mb - 4'>;
+          <AlertDescription>;
+            {form.form_state.errors.root.message}
+          </AlertDescription>;
+        </Alert>)}
+      <form;
+        on_submit={form.handle_submit (on_submit, errors => {
+          const first_error = Object.keys (errors)[0] as keyof LoginFormValues;
+          // Check condition
+if ( {) {
+  $2
+}
+            form.set_focus (first_error);
+          }        })}
+        className='space - y-6';
+      >;
+        <FormField;
+          control={form.control}
+          name='email';
+          render={({
+            field
+          }: {
+
+
+
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -350,18 +393,66 @@ export function LoginForm() {;
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+
               <FormControl>
-                <div className="relative">
+                <div className='relative'>
+            field: ControllerRenderProps<LoginFormValues, 'email'>;
+          }) => (            <FormItem>;
+              <FormLabel className='text-zion-slate-light'>;
+            field: ControllerRenderProps < LoginFormValues, 'email'>;
+          }) => (            <FormItem>;
+              <FormLabel className='text - zion - slate - light'>;
+                Email address;
+              </FormLabel>;
+              <FormControl>;
+                <div className='relative'>;
+
+                  <Input;
+                    placeholder='you@example.com';
+                    aria - label='Email address';
+                    aria - invalid={!!form.form_state.errors.email}
+                    className='bg - zion - blue pl - 10 text - white placeholder:text - zion - blue - light border - zion - blue - light focus:border - zion - purple'                    {...field}
+                  />;
+                  <User className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
+                </div>;
+              </FormControl>;
+              <FormMessage className='text - red - 400' />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name='password';
+
+          render={({
+            field
+          }: {
+
+            field: ControllerRenderProps<LoginFormValues, 'password'>;
+          }) => (            <FormItem>;
+              <FormLabel className='text-zion-slate-light'>Password</FormLabel>;
+              <FormControl>;
+                <div className='relative'>;
+
                   <Input
                     placeholder='you@example.com'
                     aria-label='Email address'
                     aria-invalid={!!form.formState.errors.email}
                     className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
+                  />;
+                  <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />;
+                  <Button
+                    type='button'
+                    variant='ghost'
+                    size='sm'
+                    className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
+                    onClick={() => setShowPassword(!showPassword)}                  >;
+
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
+
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
@@ -422,6 +513,7 @@ export function LoginForm() {;
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
+
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
@@ -498,7 +590,6 @@ export function LoginForm() {;
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                     onClick={() => setShowPassword(!showPassword)}
                   >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {showPassword ? (;
                       <EyeOff className='h-4 w-4' />;
                     ) : (;
@@ -506,7 +597,6 @@ export function LoginForm() {;
                     )}
                     <span className='sr-only'>;
                       {showPassword ? 'Hide password' : 'Show password'}
-=======
             field: ControllerRenderProps < LoginFormValues, 'password'>;
           }) => (            <FormItem>;
               <FormLabel className='text - zion - slate - light'>Password</FormLabel>;
@@ -531,7 +621,6 @@ export function LoginForm() {;
                       <Eye className='h - 4 w - 4' />)}
                     <span className='sr - only'>;
                       {show_password ? 'Hide password' : 'Show password'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </Button>;
                 </div>;
@@ -546,12 +635,10 @@ export function LoginForm() {;
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
               <FormControl>
-=======
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Checkbox
 
                   checked={field.value}
@@ -566,7 +653,6 @@ export function LoginForm() {;
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         />;
         <div className='flex items-center justify-between'>;
@@ -738,7 +824,6 @@ export function LoginForm() {;
         </div>
         <p className="text-sm text-center mt-4">
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Create account
           </Link>
         </p>
@@ -810,18 +895,7 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-          </Button>;
-          <Button;
-            type="button";
-            variant="outline";
-            className="w-1/2 ml-2";
-            onClick={handleCheckStatus}
-          >;
-            Check status;
-          </Button>;
-        </div>;
-        <p className="text-sm text-center mt-4">;
-          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
+            className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
             Create account;
           </Link>;
         </p>;
@@ -830,9 +904,6 @@ return;
   );
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -942,8 +1013,5 @@ return;
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

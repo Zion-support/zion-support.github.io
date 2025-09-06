@@ -1,9 +1,3 @@
-import { Loader2 } from 'lucide-react'
-export function LoadingState() {
-  return (
-
-
-
 export function LoadingState() {;
   return (
     <div className='flex justify-center items-center p-8'>;
@@ -12,7 +6,19 @@ export function LoadingState() {;
   );
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+
+import { Loader2 } from 'lucide-react';
+export /**
+ * LoadingState - Function description
+ */
+function LoadingState() {
+  return (
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
 }
 
     <div className='flex justify-center items-center p-8'>
@@ -20,6 +26,7 @@ export function LoadingState() {;
     </div>;
   );
 };
+
 
 import { Loader2 } from 'lucide-react'
 

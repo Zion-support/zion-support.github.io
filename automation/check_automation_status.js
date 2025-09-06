@@ -105,16 +105,19 @@ module.exports = { checkAutomationStatus };,
 ;
 ursor/add-new-services-and-deploy-updates-0462
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly;
 if (require.main === module) {}
   checkAutomationStatus();
-
 module.exports = { checkAutomationStatus };,
 ;
 ;
 ;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -131,6 +134,12 @@ async function checkAutomationStatus() {
   try {
     // Check PM2 processes
     try {
+
+
+
+
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
       const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
@@ -138,23 +147,6 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-      } catch(error) { 
-      statusReport.pm2Processes = [] }
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-      const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
-      const pm2Data = JSON.parse(pm2List;);
-      statusReport.pm2Processes = pm2Data;
-      const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
-      } catch(error) { 
-      statusReport.pm2Processes = [] }
-ursor/add-new-services-and-deploy-updates-0462
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;

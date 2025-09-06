@@ -1,4 +1,23 @@
-import React, { useState, useEffect } from 'react',
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -477,7 +496,6 @@ const EnhancedNavigation: React.FC = () => {
                   className="block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - semibold transition - colors";
                   on_click={closeAllDropdowns}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;

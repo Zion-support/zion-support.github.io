@@ -11,7 +11,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return series;
 
 }
-=======
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -25,8 +24,6 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   }
   return series;
 }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
@@ -36,11 +33,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     d.setDate(d.getDate() - (13 - i));
 
   const now = new Date(),
-  const labels = Array && Array.from({ length: 14 }, (_, i) => {
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
-=======
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
@@ -192,7 +190,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         multiverse: multiverse && multiverse.map(m => ({
           ...m,
           value: Math && Math.round(m && m.value * factor),
-=======
 /**
  * rand - Function description
  */
@@ -377,8 +374,25 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-  res.status(200).json(response)
+<<<<<<< HEAD
+  res && res.status(200).json(response)
 }
+
+
+=======
+  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
+  }
+  res.status (200).json (response);
+  }
+
+  res.status(200).json(response)
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
 
   res.status(200).json(response)

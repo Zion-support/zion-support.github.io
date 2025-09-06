@@ -478,10 +478,11 @@ const mainNavItems = [;
 ];
 
 export default function UltraFuturisticNavigation2029() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setScrolled(window && window.scrollY > 50);
@@ -491,11 +492,10 @@ export default function UltraFuturisticNavigation2029() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       {/* Top Contact Bar */}
@@ -510,6 +510,39 @@ export default function UltraFuturisticNavigation2029() {;
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
+=======
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className='flex items-center space-x-2'>              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -533,12 +566,11 @@ export default function UltraFuturisticNavigation2029() {;
           </div>
         </div>
       </div>
-=======
-              href={contactInfo && contactInfo.website}
+<<<<<<< HEAD
+href={contactInfo && contactInfo.website}
               className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">;
             <a href={contactInfo && contactInfo.website} className="hover:text-cyan-300 transition-colors">;
               {contactInfo && contactInfo.website.replace('https://', '')}
-=======
   { name: 'Contact', href: '/contact', icon: Phone }, ];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
 ;
@@ -604,7 +636,6 @@ function UltraFuturisticNavigation2029() {
             >              {contact_info.website.replace ('https://', '')}          <div className="flex items - center space - x-4">;
             <a href={contact_info.website} className="hover:text - cyan - 300 transition - colors">;
               {contact_info.website.replace ('https://', '')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </div>;
@@ -623,6 +654,7 @@ function UltraFuturisticNavigation2029() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
@@ -637,7 +669,6 @@ function UltraFuturisticNavigation2029() {
                 <span className="text-xs text-gray-400">2029 Innovation Hub</span>
               </div>
             </motion.div>
-=======
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
@@ -653,26 +684,33 @@ function UltraFuturisticNavigation2029() {
                   2029 Innovation Hub;
                 </span>              </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}
+
+            <div className="hidden lg:flex items-center space-x-8">
+              {mainNavItems.map((item) => (
+=======
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="group relative text-gray-300 hover:text-white transition-colors duration-200"
+className="group relative text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <div className="flex items-center space-x-2">
                     <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+=======
 
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
 
               ))}
@@ -777,13 +815,11 @@ function UltraFuturisticNavigation2029() {
                   <span>All Services</span>
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
-                
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceCategories.map((category, index) => (
                       <motion.div
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -927,6 +963,7 @@ function UltraFuturisticNavigation2029() {
                             <h3 className="font - semibold text - white group - hover:text - cyan - 300 transition - colors">;
 
                               {category.title}
+<<<<<<< HEAD
                             </h3>;
                           </div>;
                           <p className="text - sm text - gray - 400 mb - 4">{category.description}</p>;
@@ -968,11 +1005,10 @@ function UltraFuturisticNavigation2029() {
                 Get Started
               </motion.button>
             </div>
-=======
-                  </div>;
+<<<<<<< HEAD
+</div>;
                 </div>;
               </div>;
-
               {/* CTA Button */}
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
@@ -982,8 +1018,6 @@ function UltraFuturisticNavigation2029() {
                 Get Started;
               </motion && motion.button>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <button
@@ -1017,18 +1051,18 @@ function UltraFuturisticNavigation2029() {
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
               onClick={closeMenu}
-            />;
-            <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto'>;
-              <div className='p-6'>;
-                <div className='flex items-center justify-between mb-8'>;
-                  <div className='flex items-center space-x-3'>;
-                    <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
-                      <Rocket className='w-5 h-5 text-white' />;
-                    </div>;
-                    <span className='text-lg font-bold text-white'>;
-                      Zion Tech;
-                    </span>;
-                  </div>;
+            />
+            <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto'>
+              <div className='p-6'>
+                <div className='flex items-center justify-between mb-8'>
+                  <div className='flex items-center space-x-3'>
+                    <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>
+                      <Rocket className='w-5 h-5 text-white' />
+                    </div>
+                    <span className='text-lg font-bold text-white'>
+                      Zion Tech
+                    </span>
+                  </div>
                   <button
                     onClick={closeMenu}
 
@@ -1049,7 +1083,6 @@ function UltraFuturisticNavigation2029() {
                     <X size={24} />
                   </button>
                 </div>
-=======
                     className='text-gray-400 hover:text-white'>                    <X size={24} />          >;
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />;
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">;
@@ -1065,8 +1098,6 @@ function UltraFuturisticNavigation2029() {
                     <X size={24} />;
                   </button>;
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Navigation Items */}
 
 =======
@@ -1166,6 +1197,12 @@ function UltraFuturisticNavigation2029() {
         )}
 
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
@@ -1184,11 +1221,7 @@ function UltraFuturisticNavigation2029() {
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
-);      <div className="h-20" />
-    </>
-  );
-}
-
+      </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;

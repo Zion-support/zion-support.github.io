@@ -5,10 +5,7 @@ import Link from './next / link';
 ;
 
 interface SearchResult {
-=======
-
 interface SearchResult {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   description: string;
   url: string;
@@ -140,7 +137,126 @@ const search_data: SearchResult[] = [;
 ];
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+
+interface SearchModalProps {;
+  isOpen: boolean;
+  onClose: () => void;
+}
+const searchData: SearchResult[] = [;
+  // Services;
+  {;
+    title: "AI Services",;
+    description: "Machine learning, computer vision, NLP, and AI solutions",;
+    url: "/ai-services",;
+    category: "Services",;
+  },;
+  {;
+    title: "IT Services",;
+    description: "Cloud infrastructure, cybersecurity, and IT solutions",;
+    url: "/it-services",;
+    category: "Services",;
+  },;
+  {;
+    title: "Micro SaaS",;
+    description: "Custom micro SaaS platforms and automation tools",;
+    url: "/micro-saas",;
+    category: "Services",;
+  },;
+  {;
+    title: "Cloud Solutions",;
+    description: "AWS, Azure, GCP migration and cloud infrastructure",;
+    url: "/cloud-solutions",;
+    category: "Services",;
+  },;
+  {;
+    title: "Cybersecurity",;
+    description: "Security audits, penetration testing, and compliance",;
+    url: "/cybersecurity",;
+    category: "Services",;
+  },;
+  {;
+    title: "Blockchain Solutions",;
+    description: "Smart contracts, DeFi, and blockchain development",;
+    url: "/blockchain-services",;
+    category: "Services",;
+  },;
+  // Solutions;
+  {;
+    title: "Digital Transformation",;
+    description: "Complete digital transformation solutions",;
+    url: "/digital-transformation",;
+    category: "Solutions",;
+  },;
+  {;
+    title: "Enterprise Solutions",;
+    description: "Large-scale enterprise technology solutions",;
+    url: "/enterprise-solutions",;
+    category: "Solutions",;
+  },;
+  {;
+    title: "Startup Solutions",;
+    description: "Technology solutions for startups and SMBs",;
+    url: "/startup-solutions",;
+    category: "Solutions",;
+  },;
+  // Industries;
+  {;
+    title: "Healthcare",;
+    description: "Technology solutions for healthcare industry",;
+    url: "/industries/healthcare",;
+    category: "Industries",;
+  },;
+  {;
+    title: "Finance",;
+    description: "Financial technology and fintech solutions",;
+    url: "/industries/finance",;
+    category: "Industries",;
+  },;
+  {;
+    title: "Education",;
+    description: "Educational technology and e-learning solutions",;
+    url: "/industries/education",;
+    category: "Industries",;
+  },;
+  {;
+    title: "Manufacturing",;
+    description: "Industrial IoT and manufacturing automation",;
+    url: "/industries/manufacturing",;
+    category: "Industries",;
+  },;
+  // Company;
+  {;
+    title: "About Us",;
+    description: "Learn about Zion Tech Group and our mission",;
+    url: "/about",;
+    category: "Company",;
+  },;
+  {;
+    title: "Contact",;
+    description: "Get in touch with our team",;
+    url: "/contact",;
+    category: "Company",;
+  },;
+  {;
+    title: "Careers",;
+    description: "Join our team and build the future",;
+    url: "/careers",;
+    category: "Company",;
+  },;
+  {;
+    title: "Blog",;
+    description: "Latest insights and technology trends",;
+    url: "/blog",;
+    category: "Company",;
+  },;
+  {;
+    title: "Pricing",;
+    description: "Transparent pricing for all our services",;
+    url: "/pricing",;
+    category: "Company",;
+  },;
+];
+
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -161,7 +277,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
       setRecentSearches(JSON && JSON.parse(saved));
     }
   }, []);
-
   useEffect(() => {;
     if (query && query.trim()) {;
       const filtered = searchData && searchData.filter(;
@@ -174,7 +289,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
       setResults(filtered);
     } else {;
       setResults([]);
-=======
 ;
 export default /**
  * SearchModal - Function description
@@ -219,7 +333,6 @@ if ( {) {
       set_results (filtered);
     } else {
       set_results ([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     setSelectedIndex (0);
   }, [query]);
@@ -240,7 +353,6 @@ if ( {) {
     }
 
   };
-
   const handleResultClick = (result: SearchResult) => {;
     // Add to recent searches;
     const newRecent = [;
@@ -249,11 +361,9 @@ if ( {) {
     ].slice(0, 5);
     setRecentSearches(newRecent);
     localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
-
     // Navigate to result;
     window && window.location.href = result && result.url;
   };
-
   const handleRecentClick = (search: string) => {;
 
     setQuery(search);
@@ -300,7 +410,6 @@ if ( {) {
                 <div className="p-2">;
                   {results && results.map((result, index) => (;
                     <div
-=======
 ;
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
@@ -385,7 +494,6 @@ if (return null) {
                 <div className="p - 2">;
                   {results.map ((result, index) => (
                     <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={index}
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${
                         index === selected_index;
@@ -423,7 +531,6 @@ if (return null) {
       </div>;
     </div>;
   );
-=======
                       on_click={() => handleResultClick (result)}
                     >;
                       <div className="flex items - start justify - between">;
@@ -492,5 +599,4 @@ if (return null) {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

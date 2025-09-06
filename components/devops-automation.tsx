@@ -51,46 +51,23 @@ export default function DevOpsAutomationPage() {
       icon: <Shield className="w-6 h-6" />
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-    }
-    {
-      icon: <BarChart3 className="w-6 h-6" />
-      title: 'Performance Monitoring'
-      description: 'Real-time performance insights and optimization'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-    }
-      title: 'CI/CD Pipelines'
-      description: 'Automated build, test, and deployment workflows'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-    }
-    {
-      icon: <Zap className='w-6 h-6' />
-      title: 'Infrastructure as Code'
-      description: 'Terraform, CloudFormation, and Kubernetes automation'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-    }
-    {
-      icon: <Shield className='w-6 h-6' />
-      title: 'Security Automation'
-      description: 'Automated security scanning and compliance checks'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-    }
-    {
-      icon: <BarChart3 className='w-6 h-6' />
-      title: 'Performance Monitoring'
-      description: 'Real-time performance insights and optimization'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-    },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-    }
-    {
-      icon: <GitBranch className='w-6 h-6' />,
-
-export default function DevOpsAutomationPage() {
-  const features = [
-    {
-
-  ];
-  const pricingPlans = [
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  GitBranch,
+  Zap,
+  Shield,
+  BarChart3,
+  Check,
+  Star,
+<<<<<<< HEAD
+  GitPullRequest,
+  Cpu,
+} from 'lucide-react';
+export default /**
+ * DevOpsAutomationPage - Function description
+ */
+function DevOpsAutomationPage() {
+  const features = [;
     {
       icon: <GitBranch className='w - 6 h - 6' />, import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default /**
@@ -160,6 +137,36 @@ export default function DevOpsAutomationPage() {
 
 ;
   const pricing_plans = [;
+
+export default function DevOpsAutomationPage() {_const _features = [
+    {
+      icon: <GitBranch className=&quot;w-6 h-6&quot; />,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment workflows',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    },
+    {
+      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      title: 'Infrastructure as Code',
+      description: 'Terraform, CloudFormation, and Kubernetes automation',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    },
+    {
+      icon: <Shield className=&quot;w-6 h-6&quot; />,
+      title: 'Security Automation',
+      description: 'Automated security scanning and compliance checks',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+    },
+    {
+      icon: <BarChart3 className=&quot;w-6 h-6&quot; />,
+      title: 'Performance Monitoring',
+      description: 'Real-time performance insights and optimization',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    }
+  ],
+
+  const pricingPlans = [
+
     {
       name: 'Starter',
       price: '$39',
@@ -258,7 +265,99 @@ export default function DevOpsAutomationPage() {
       pros: ['Completely free', 'Highly customizable']
       cons: ['Requires maintenance', 'No managed service']
     },  ];      pros: ['Completely freeHighly customizable']
-      cons: ['Requires maintenanceNo managed service']
+        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
+      ];
+      popular: false,
+      cta: 'Start Free Trial',
+
+      color: 'border - gray - 600 hover:border - blue - 500';
+    }
+
+      name: 'Professional',
+      price: '$129',
+      period: '/month',
+      description: 'Ideal for growing development teams',
+
+      features: [;
+        'Up to 25 repositories',
+        'Advanced CI / CD workflows',
+        'Multi - cloud deployment',
+        'Slack & Teams integration',
+        'Advanced security suite',
+        'Priority support',
+        'Custom pipelines',
+        'Team collaboration',
+      ],
+      popular: true,
+      cta: 'Start Free Trial',
+      color: 'border - blue - 500 hover:border - blue - 400',
+    },    {        'Up to 25 repositories_advanced CI / CD workflows_multi - cloud deployment_slack & Teams integration_advanced security suite_priority support_custom pipelines_team collaboration';
+      ];
+      popular: true,
+      cta: 'Start Free Trial',
+      color: 'border - blue - 500 hover:border - blue - 400';
+    }
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large - scale development operations',
+      features: [;
+        'Unlimited repositories',
+        'Enterprise CI / CD',
+        'Advanced IaC automation',
+        'Custom integrations',
+        '24 / 7 dedicated support',
+        'SLA guarantees',
+        'On - premise options',
+        'Custom security policies',
+      ],
+      popular: false,
+      cta: 'Contact Sales',
+      color: 'border - gray - 600 hover:border - blue - 500',
+    },  ];        'Unlimited repositories_enterprise CI / CDAdvanced IaC automation_custom integrations24 / 7 dedicated supportSLA guarantees_on - premise options_custom security policies';
+
+      ];
+      popular: false,
+      cta: 'Contact Sales',
+      color: 'border - gray - 600 hover:border - blue - 500';
+    }
+
+  const market_comparison = [;
+
+    {
+      competitor: 'GitHub Actions',
+      pricing: 'Free + $0.008 / min',
+      repositories: 'Unlimited',
+
+      rating: '4.6 / 5',
+      pros: ['GitHub native', 'Good free tier'],
+      cons: ['Expensive for teams', 'Limited features'],
+    },    {      pros: ['GitHub native_good free tier'],
+      cons: ['Expensive for teams_limited features'];
+    }
+
+    {
+      competitor: 'GitLab CI / CD',
+      pricing: '$19 / user / month',
+      repositories: 'Unlimited',
+
+      rating: '4.4 / 5',
+      pros: ['Integrated platform', 'Good CI / CD'],
+      cons: ['User - based pricing', 'Limited integrations'],
+    },    {      pros: ['Integrated platform_good CI / CD'],
+      cons: ['User - based pricing_limited integrations'];
+    }
+
+    {
+      competitor: 'Jenkins',
+      pricing: 'Free',
+      repositories: 'Unlimited',
+
+      rating: '4.2 / 5',
+      pros: ['Completely free', 'Highly customizable'],
+      cons: ['Requires maintenance', 'No managed service'],
+    },  ];      pros: ['Completely free_highly customizable'],
+      cons: ['Requires maintenance_no managed service'];
     }
   ];
   const testimonials = [
@@ -382,19 +481,19 @@ export default function DevOpsAutomationPage() {
                 href='#pricing'
                 variant='primary'
                 size='lg'
-                className='bg-blue-600 hover:bg-blue-700 text-white'>;
-                Start Free Trial;
-              </Button>;
+                className='bg-blue-600 hover:bg-blue-700 text-white'              >
+                Start Free Trial
+              </Button>
               <Button
                 href='#demo'
                 variant='outline'
                 size='lg'
-                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'>                href="#pricing";
-                variant="primary";
-                size="lg";
-                className="bg-blue-600 hover:bg-blue-700 text-white";
-                Start Free Trial;
-              </Button>;
+                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'              >                href="#pricing"
+                variant="primary"
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+                Start Free Trial
+              </Button>
               <Button
 
 =======
@@ -568,16 +667,10 @@ export default function DevOpsAutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <Card
-=======
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-              {features.map ((feature, index) => (
-                <Card;
                   key={index}
-                  className='text - center group hover:scale - 105 transition - transform duration - 300';
-                >;
-                  <div;
-                    className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center text - white mx - auto mb - 6 ${feature.color}`}
-                  >;
+                  className="text-center group hover:scale-105 transition-transform duration-300"
+                >
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -608,7 +701,8 @@ export default function DevOpsAutomationPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Card
                   key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'>;
+                  className='text-center group hover:scale-105 transition-transform duration-300'
+                >
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
                   >
@@ -626,34 +720,10 @@ export default function DevOpsAutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {automationExamples.map((example, index) => (
                 <Card
-=======
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 4">{feature.title}</h3>;
-                  <p className="text - gray - 400">{feature.description}</p>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Automation Examples Section */}
-        <section className='py - 24 bg - gray - 800'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-                What You Can Automate;
-              </h2>;
-              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-                See how Zion DevOps can transform your development workflow.;
-              </p>;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-              {automation_examples.map ((example, index) => (
-                <Card;
                   key={index}
-                  className='text - center group hover:scale - 105 transition - transform duration - 300';
-                >;
-                  <div;
-                    className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center text - 3xl mx - auto mb - 6 bg - gradient - to - br ${example.color}`}
-                  >;
+                  className="text-center group hover:scale-105 transition-transform duration-300"
+                >
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
                     {example.icon}
                   </div>;
                   <h3 className='text - xl font - semibold text - white mb - 4'>;
@@ -687,9 +757,83 @@ export default function DevOpsAutomationPage() {
                 </Card>
 
               ))}
-            </div>
-          </div>
-        </section>
+
+            </div>;
+          </div>;
+        </section>;
+
+
+        {/* Pricing Section */}
+        <section id='pricing' className='py-24 bg-gray-900'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+            <div className='text-center mb-20'>;
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
+                Simple, Transparent Pricing;
+              </h2>;
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+                Choose the plan that fits your DevOps needs. All plans include a;
+                14-day free trial.;
+              </p>;
+            </div>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map((plan, index) => (                Simple, Transparent Pricing;
+              </h2>;
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
+                Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.;
+              </p>;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+              {pricingPlans && pricingPlans.map((plan, index) => (;
+                <Card
+                  key={index}
+                  className={`relative p-8 ${plan && plan.color} transition-all duration-300 hover:scale-105 ${
+                    plan && plan.popular ? 'ring-2 ring-blue-500' : ''
+                  }`}>;
+                  {plan && plan.popular && (;
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
+                      <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                        Most Popular;
+                      </span>;
+                    </div>;
+                  )}                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
+                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
+                        Most Popular;
+                      </span>;
+                    </div>;
+                  )}
+                  <div className='text-center'>;
+                    <h3 className='text-2xl font-bold text-white mb-2'>;
+                      {plan && plan.name}
+                    </h3>;
+                    <div className='mb-6'>;
+                      <span className='text-4xl font-bold text-white'>;
+                        {plan && plan.price}
+                      </span>;
+                      <span className='text-gray-400'>{plan && plan.period}</span>;
+                    </div>;
+                    <p className='text-gray-300 mb-8'>{plan && plan.description}</p>;
+                    <ul className='text-left space-y-3 mb-8'>;
+                      {plan && plan.features.map((feature, featureIndex) => (;
+                        <li
+                          key={featureIndex}
+                          className='flex items-center text-gray-300'>;
+                          <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}                    </div>;
+                    <p className="text-gray-300 mb-8">{plan && plan.description}</p>;
+                    <ul className="text-left space-y-3 mb-8">;
+                      {plan && plan.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="flex items-center text-gray-300">;
+                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Pricing Section */}
+        <section id="pricing" className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+=======
+
+
+
 
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
@@ -699,6 +843,13 @@ export default function DevOpsAutomationPage() {
 
                 Simple, Transparent Pricing
               </h2>
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                Choose the plan that fits your DevOps needs. All plans include a
+                14-day free trial.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans.map((plan, index) => (                Simple, Transparent Pricing
+              </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
               </p>
@@ -706,39 +857,10 @@ export default function DevOpsAutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <Card
-=======
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 4">{example.title}</h3>;
-                  <p className="text - gray - 400">{example.description}</p>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Pricing Section */}
-        <section id='pricing' className='py - 24 bg - gray - 900'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-                Simple, Transparent Pricing;
-              </h2>;
-              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-                Choose the plan that fits your DevOps needs. All plans include a;
-                14 - day free trial.;
-              </p>;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>              {pricing_plans.map ((plan, index) => (                Simple, Transparent Pricing;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-                Choose the plan that fits your DevOps needs. All plans include a 14 - day free trial.;
-              </p>;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {pricing_plans.map ((plan, index) => (
-                <Card;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
-                  className={`relative p - 8 ${plan.color} transition - all duration - 300 hover:scale - 105 ${
-                    plan.popular ? 'ring - 2 ring - blue - 500' : '';
+                  className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${
+                    plan.popular ? 'ring-2 ring-blue-500' : ''
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   }`}
                 >;
                   {plan.popular && (
@@ -875,6 +997,50 @@ export default function DevOpsAutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {marketComparison.map((competitor, index) => (
                 <Card key={index} className="p-6">
+=======
+                    </Button>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Market Comparison Section */}
+        <section className='py-24 bg-gray-800'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-20'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+                How We Compare to the Competition
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </h2>
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                See why Zion DevOps is the smart choice for automation.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {marketComparison.map((competitor, index) => (
+                <Card key={index} className='p-6'>
+                  <div className='text-center mb-6'>
+                    <h3 className='text-xl font-bold text-white mb-2'>
+                      {competitor.competitor}
+                    </h3>
+                    <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
@@ -969,7 +1135,7 @@ export default function DevOpsAutomationPage() {
                       <Star
                         key={i}
                         className='w-5 h-5 text-yellow-400 fill-current'
-                      />;
+                      />
                     ))}
                   </div>
                   <p className='text-gray-300 mb-6 italic'>
@@ -985,6 +1151,7 @@ export default function DevOpsAutomationPage() {
                     </p>                  </div>                Trusted by DevOps Teams Worldwide
               </h2>
             </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="p-6">
@@ -1058,22 +1225,67 @@ export default function DevOpsAutomationPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="#signup"
+=======
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+              Ready to Automate Your DevOps?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </h2>
+            <p className='text-xl text-blue-100 mb-12'>
+              Join thousands of teams who trust Zion for their DevOps automation
+              needs.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Button
+                href='#signup'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-blue-600 hover:bg-gray-100'              >
+                Start Free Trial
+              </Button>
+              <Button
+                href='/contact'
+                variant='outline'
+                size='lg'
+                className='border-white text-white hover:bg-white hover:text-blue-600'              >                href="#signup"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 variant="secondary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 Start Free Trial
               </Button>
+<<<<<<< HEAD
               <Button
-                href="/contact"
+href="/contact"
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
+<<<<<<< HEAD
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Contact Sales
-=======
                     </Button>;
                   </div>;
                 </Card>))}
@@ -1250,7 +1462,6 @@ export default function DevOpsAutomationPage() {
                 size="lg";
                 className="border - white text - white hover:bg - white hover:text - blue - 600";
                 Contact Sales;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </Button>;
             </div>;
           </div>;

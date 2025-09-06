@@ -1,21 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {
-  Home,
-  Users,
-  Settings,
-  DollarSign,
-  Phone,
-  Menu
-} from 'lucide-react'
-const Sidebar = () => {
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Contact', href: '/contact', icon: Phone }
-  ]
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Sidebar: React.FC = () => {;
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -50,7 +36,6 @@ export default Sidebar
 export default Sidebar;
 import React from 'react';
 
-=======
   };
 ,
   const navigationSections = [,
@@ -255,7 +240,6 @@ import React from 'react';
     </motion.aside>,
   ),
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
 };
+export default Sidebar;

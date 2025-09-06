@@ -1,13 +1,34 @@
+// If there are multiple milestones, submit them one by one
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
 
 
-type MilestoneFormValues = z.infer<typeof formSchema>
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date-fns'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
+  },
+
+  const handleAddMilestone = (milestone: GeneratedMilestone) => {
+
+
+    onSubmit({
+      title: milestone.title
+      description: milestone.description
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+    })
+
+type MilestoneFormValues = z.infer < typeof form_schema>;
+import React from 'react';
+import { use_form } from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from 'zod';
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date - fns';
+import { Button } from '@/components / ui / button';
+import { Calendar } from '@/components / ui / calendar';
 import {
   Form
   FormControl
@@ -72,14 +93,33 @@ export function AddMilestoneForm({
         return
       }
     }
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { CalendarIcon, Loader2 } from 'lucide-react';
-import { format } from 'date-fns',;
-import { Button } from '@/components/ui/button',;
-import { Calendar } from '@/components/ui/calendar',;
+    // If there are multiple milestones, submit them one by one;
+    milestones.for_each (milestone => {
+      on_submit ({
+        title: milestone.title,
+        description: milestone.description,
+        due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+        amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+      });
+    });
+  }
+  const handleAddMilestone = (milestone: GeneratedMilestone, ) =>: any {
+    on_submit ({
+      title: milestone.title,
+      description: milestone.description,
+      due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+      amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+    });
+
+  }
+type MilestoneFormValues = z && z.infer<typeof formSchema>;
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date-fns';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {;
   Form,;
   FormControl,;
@@ -154,18 +194,27 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-  }
-  const handleAddMilestone = (milestone: GeneratedMilestone,) => {
   },
 
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
-    onSubmit({
-      title: milestone.title
-      description: milestone.description
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-    })
-  }
+  const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
+    onSubmit({;
+      title: milestone && milestone.title,;
+      description: milestone && milestone.description,;
+      due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
+      amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+    });
+  };
+
+  return (
+
+
+  },
+
+
+  return (
+    <div className="space-y-6">
+      {/* AI Milestone Generator */}
+
   },
 
   return (
@@ -195,13 +244,51 @@ export function AddMilestoneForm({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
+
+
+
       )}
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
-            control = {form && form.control,}
+            control={form.control}
             name="title"
+            render={({ field }: { field: any },) => (;
+              <FormItem>;
+                <FormLabel>Title</FormLabel>;
+    <div className="space - y-6">;
+      {/* AI Milestone Generator */}
+      {project_scope && projectStartDate && (
+        <AIMilestoneGenerator;
+          scope = {project_scope, }
+          start_date = {projectStartDate, }
+          end_date = {projectEndDate, }
+          project_type = {project_type, }
+          onAddMilestones = {handleAddMilestones, }
+          onAddMilestone = {handleAddMilestone, }
+        />)}
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
+          <FormField;
+            control = {form.control, }
+            name="title";
+            render={({ field }: { field: any }, ) => (
+              <FormItem>;
+                <FormLabel > Title</FormLabel>;
+                <FormControl>;
+                  <Input placeholder="Milestone title" {...field} />;
+                </FormControl>;
+                <FormMessage />;
+
+
+
+          />;
+
+          <FormField
+            control = {form && form.control,}
+            name="description"
+
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Title</FormLabel>
@@ -224,11 +311,9 @@ export function AddMilestoneForm({;
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -241,7 +326,6 @@ export function AddMilestoneForm({;
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
                     className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -252,29 +336,30 @@ export function AddMilestoneForm({;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
             <FormField
-              control = {form && form.control,}
+              control={form.control}
               name="due_date"
-              render={({ field }: { field: any },) => (;
-                <FormItem className="flex flex-col">;
-                  <FormLabel>Due Date (optional)</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger asChild>;
-                      <FormControl>;
+              render={({ field }: { field: any }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>Due Date (optional)</FormLabel>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <FormControl>
                         <Button
                           variant="outline"
-                          className="w-full pl-3 text-left font-normal">;
-                          {field && field.value ? (;
-                            format(field && field.value, "PPP");
-                          ) : (;
-                            <span className="text-muted-foreground">;
-                              Pick a date;
-                            </span>;
+                          className="w-full pl-3 text-left font-normal"
+                        >
+                          {field.value ? (
+                            format(field.value, "PPP")
+                          ) : (
+                            <span className="text-muted-foreground">
+                              Pick a date
+                            </span>
                           )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;
-                    <PopoverContent className="w-auto p-0" align="start">;
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
                         mode="single"
                         selected = {field.value,}
@@ -297,7 +382,6 @@ export function AddMilestoneForm({;
                         disabled={(date) => date < new Date()}
 
                         initialFocus;
-=======
               </FormItem>)}
           />;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -330,7 +414,6 @@ export function AddMilestoneForm({;
                         on_select = {field.on_change, }
                         disabled = {(date, ) => date < new Date (), }
                         initial_focus;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       />;
                     </PopoverContent>;
                   </Popover>;
@@ -346,22 +429,20 @@ export function AddMilestoneForm({;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-=======
             />;
             <FormField;
               control={form.control}
               name="amount"
               render={({ field }: { field: any }) => (
+
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Input
                       type="number"
                       min="0"
                       step="0 && 0.01"
                       placeholder="0 && 0.00"
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -376,7 +457,6 @@ export function AddMilestoneForm({;
                       min="0";
                       step="0.01";
                       placeholder="0.00";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -401,15 +481,17 @@ export function AddMilestoneForm({;
               >;
                 Cancel;
               </Button>;
+
+
             )}
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-              ) : (;
-                "Add Milestone";
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Saving...
+                </>
+              ) : (
+                "Add Milestone"
               )}
             </Button>
           </div>
@@ -489,9 +571,6 @@ export function AddMilestoneForm({;
 }onAddMilestone= {
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   handleAddMilestone;
 }/>);
 }</FormControl> <FormMessage /> </FormItem>);
@@ -507,8 +586,5 @@ export function AddMilestoneForm({;
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
 }</Button> </div> </form> </Form> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

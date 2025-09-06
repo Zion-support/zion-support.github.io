@@ -80,7 +80,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Check for unmatched braces (simple check)
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
@@ -91,7 +99,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Check for unmatched parentheses
       const openParens = (content.match(/\(/g) || []).length;
       const closeParens = (content.match(/\)/g) || []).length;
@@ -104,10 +120,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         issues.push('React used without import');
       }
 
+=======
+
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {;
         issues.push('React used without import');
       }
+<<<<<<< HEAD
+=======
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -120,7 +143,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   async quickTypeCheck(filePath) {
     if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
       return [];
@@ -129,7 +160,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {
       execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
         stdio: 'pipe',
@@ -145,7 +184,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   async autoFixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
@@ -154,7 +201,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Auto-fix common issues
       const fixes = [
         {

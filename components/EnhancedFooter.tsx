@@ -185,15 +185,35 @@ const EnhancedFooter: React.FC = () => {;
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-=======
 import Link from 'next / link';
 import {
+=======
+<<<<<<< HEAD
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+
+import {
+<<<<<<< HEAD
+  Brain
+  Mail
+  Phone
+  MapPin
+  Globe
+  Github
+  Linkedin
+  Twitter;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
   Mail,
   Phone,
   MapPin,
   Globe,
   Github,
+<<<<<<< HEAD
   Linkedin,
   Twitter,
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
@@ -475,7 +495,6 @@ function EnhancedFooter() {
     <footer className="bg - gray - 900 text - white">";
       <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8">,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* comment */}";
           <div className="lg: col - span - 2">";
             <div className="flex items - center space - x-2 mb - 4">";
@@ -577,12 +596,10 @@ digital age.;
                   </Link>;
                 </li>;
               ))}
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
           {/* comment */}
@@ -611,12 +628,10 @@ digital age.;
                   </Link>;
                 </li>;
               ))}
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
           {/* comment */}
@@ -645,12 +660,10 @@ digital age.;
                   </Link>;
                 </li>;
               ))}
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
           {/* comment */}
@@ -746,7 +759,6 @@ company updates.;
               <button type="submit;
                 className="bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - semibold hover:bg - blue - 700 transition - colors">;
                 Subscribe,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </button>;
             </form>;
           </div>;

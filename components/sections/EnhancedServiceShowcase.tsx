@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -59,9 +55,7 @@ import {
   Database,;
   Cloud,;
 import Button from '../ui/Button';
-
 interface Service {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   name: string;
   tagline: string;
@@ -94,7 +88,6 @@ interface Service {;
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
 
@@ -104,7 +97,6 @@ interface Service {;
 
   customers: number;
   rating: number;
-
   reviews: number;
 
 ;
@@ -150,13 +142,11 @@ interface Service {
   growthRate: string,
   variant: string,
   contactInfo: {
-      
     mobile: string,
     email: string,
     address: string,
     website: string
-  
-    },
+},
     realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -164,7 +154,6 @@ interface Service {
   rating: number,
   reviews: number
 }
-
 interface EnhancedServiceShowcaseProps {
   title: string,
   subtitle: string,
@@ -172,7 +161,6 @@ interface EnhancedServiceShowcaseProps {
   services?: Service[];
   maxServices?: number
 }
-
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title;
 
@@ -273,7 +261,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
-
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀' },;
     { id: 'ai', name: 'AI & ML', icon: '🧠' },;
@@ -282,7 +269,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },;
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' },  ];    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
   ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices' },;
     { id: 'low', name: 'Under $1K/month' },;
@@ -290,7 +276,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { id: 'high', name: '$5K - $20K/month' },;
     { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: '$20K+/month' }
   ];
-
   const sortOptions = [;
     { id: 'popular', name: 'Most Popular' },;
     { id: 'rating', name: 'Highest Rated' },;
@@ -298,7 +283,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { id: 'price-low', name: 'Price Low to High' },;
     { id: 'price-high', name: 'Price High to Low' },;
   ];
-
   const filteredServices = useMemo(() => {;
     let filtered = services && services.filter(service => {;
       const matchesCategory =;
@@ -321,7 +305,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             service && service.category.includes('Autonomous') ||;
             service && service.category.includes('Space') ||;
             service && service.category.includes('Biotech')));
-
       const matchesPrice =;
         selectedPriceRange === 'all' ||;
         (selectedPriceRange === 'low' &&;
@@ -334,9 +317,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
         (selectedPriceRange === 'premium' &&;
           parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
-
       return matchesCategory && matchesPrice;    });  ];
-
   const filteredServices = useMemo(() => {;
     const filtered = services && services.filter(service => {;
       const matchesCategory = selectedCategory === 'all' || ;
@@ -345,16 +326,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                              (selectedCategory === 'blockchain' && (service && service.category.includes('Blockchain') || service && service.category.includes('DeFi') || service && service.category.includes('NFT'))) ||;
                              (selectedCategory === 'enterprise' && (service && service.category.includes('Enterprise') || service && service.category.includes('IT'))) ||;
                              (selectedCategory === 'emerging' && (service && service.category.includes('Neural') || service && service.category.includes('Autonomous') || service && service.category.includes('Space') || service && service.category.includes('Biotech')));
-
       const matchesPrice = selectedPriceRange === 'all' ||;
                           (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 1000) ||;
                           (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
                           (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
                           (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
-
       return matchesCategory && matchesPrice;
     });
-
     // Sort services;
     switch (sortBy) {;
       case 'popular':;
@@ -367,7 +345,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         filtered && filtered.sort((a, b) => {;
           const aROI = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           return bROI - aROI;
         });
         break;
@@ -384,13 +361,118 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             parseFloat(b && b.price.replace(/[$]/g, '')) -;
             parseFloat(a && a.price.replace(/[$]/g, ''));
         );
+;
+  const price_ranges = [;
+    { id: 'all', name: 'All Prices' },
+    { id: 'low', name: 'Under $1K / month' },
+    { id: 'medium', name: '$1K - $5K / month' },
+    { id: 'high', name: '$5K - $20K / month' },
+    { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: '$20K+/month' }
+  ];
+;
+  const sort_options = [;
+    { id: 'popular', name: 'Most Popular' },
+    { id: 'rating', name: 'Highest Rated' },
+    { id: 'roi', name: 'Best ROI' },
+    { id: 'price - low', name: 'Price Low to High' },
+    { id: 'price - high', name: 'Price High to Low' },
+  ];
+;
+  const filtered_services = useMemo (() => {
+    let filtered = services.filter (service => {
+      const matches_category =;
+        selected_category === 'all' ||;
+        (selected_category === 'ai' &&;
+          (service.category.includes ('AI') ||;
+            service.category.includes ('Machine Learning'))) ||;
+        (selected_category === 'quantum' &&;
+          (service.category.includes ('Quantum') ||;
+            service.category.includes ('Space'))) ||;
+        (selected_category === 'blockchain' &&;
+          (service.category.includes ('Blockchain') ||;
+            service.category.includes ('DeFi') ||;
+            service.category.includes ('NFT'))) ||;
+        (selected_category === 'enterprise' &&;
+          (service.category.includes ('Enterprise') ||;
+            service.category.includes ('IT'))) ||;
+        (selected_category === 'emerging' &&;
+          (service.category.includes ('Neural') ||;
+            service.category.includes ('Autonomous') ||;
+            service.category.includes ('Space') ||;
+            service.category.includes ('Biotech')));
+;
+      const matches_price =;
+        selectedPriceRange === 'all' ||;
+        (selectedPriceRange === 'low' &&;
+          parse_float (service.price.replace (/[$]/g, '')) < 1000) ||;
+        (selectedPriceRange === 'medium' &&;
+          parse_float (service.price.replace (/[$]/g, '')) >= 1000 &&;
+          parse_float (service.price.replace (/[$]/g, '')) < 5000) ||;
+        (selectedPriceRange === 'high' &&;
+          parse_float (service.price.replace (/[$]/g, '')) >= 5000 &&;
+          parse_float (service.price.replace (/[$]/g, '')) < 20000) ||;
+        (selectedPriceRange === 'premium' &&;
+          parse_float (service.price.replace (/[$]/g, '')) >= 20000);
+;
+      return matches_category && matches_price;    });  ];
+;
+  const filtered_services = useMemo (() => {
+    const filtered = services.filter (service => {
+      const matches_category = selected_category === 'all' ||;
+                            (selected_category === 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning'))) ||;
+                            (selected_category === 'quantum' && (service.category.includes ('Quantum') || service.category.includes ('Space'))) ||;
+                            (selected_category === 'blockchain' && (service.category.includes ('Blockchain') || service.category.includes ('DeFi') || service.category.includes ('NFT'))) ||;
+                            (selected_category === 'enterprise' && (service.category.includes ('Enterprise') || service.category.includes ('IT'))) ||;
+                            (selected_category === 'emerging' && (service.category.includes ('Neural') || service.category.includes ('Autonomous') || service.category.includes ('Space') || service.category.includes ('Biotech')));
+;
+      const matches_price = selectedPriceRange === 'all' ||;
+                          (selectedPriceRange === 'low' && parse_float (service.price.replace (/[$]/g, '')) < 1000) ||;
+                          (selectedPriceRange === 'medium' && parse_float (service.price.replace (/[$]/g, '')) >= 1000 && parse_float (service.price.replace (/[$]/g, '')) < 5000) ||;
+                          (selectedPriceRange === 'high' && parse_float (service.price.replace (/[$]/g, '')) >= 5000 && parse_float (service.price.replace (/[$]/g, '')) < 20000) ||;
+                          (selectedPriceRange === 'premium' && parse_float (service.price.replace (/[$]/g, '')) >= 20000);
+;
+      return matches_category && matches_price;
+    });
+;
+    // Sort services;
+    switch (sort_by) {
+      case 'popular':;
+        filtered.sort ((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
         break;
-      default:
+      case 'rating':;
+        filtered.sort ((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case 'roi':;
+        filtered.sort ((a, b) => {
+          const aROI = parse_int (a.roi.match (/\d+/)?.[0] || '0');
+          const bROI = parse_int (b.roi.match (/\d+/)?.[0] || '0');
+          return bROI - aROI;
+        });
+        break;
+      case 'price - low':;
+        filtered.sort (
+          (a, b) =>;
+            parse_float (a.price.replace (/[$]/g, '')) -;
+            parse_float (b.price.replace (/[$]/g, '')));
+        break;
+      case 'price - high':;
+        filtered.sort (
+          (a, b) =>;
+            parse_float (b.price.replace (/[$]/g, '')) -;
+            parse_float (a.price.replace (/[$]/g, '')));
+        break;
+      default:;
         break;
     }
-    return filtered.slice(0, maxServices);
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-  const stats = [
+
+          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
+          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+          return bROI - aROI
+        });
+    return filtered.slice (0, max_services);
+  }, [services, selected_category, selectedPriceRange, sort_by, max_services]);
+;
+  const stats = [;
     {
       label: 'Total Services'
       value: services.length
@@ -498,7 +580,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
     return filtered && filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-
   const stats = [;
     { label: 'Total Services', value: services && services.length, icon: Rocket, color: 'text-blue-400' },;
     { label: 'Active Customers', value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0), icon: Users, color: 'text-green-400' },;
@@ -544,6 +625,56 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
           >
             {stats.map((stat, index) => (
+=======
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            {subtitle}
+          </motion.p>
+=======
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
+
+          >
+
+            {subtitle}
+          </motion.p>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className='text-center'>
+                <div className={`${stat.color} mb-2 flex justify-center`}>
+                  <stat.icon className='w-8 h-8' />
+                </div>
+                <div className='text-2xl font-bold text-white'>
+                  {stat.value}
+                </div>
+                <div className='text-sm text-gray-400'>{stat.label}</div>              </div>          >
+            {stats.map((stat, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
@@ -573,10 +704,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Category Filter */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
-                    Category;
-                  </label>;
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Category
+                  </label>
                   <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
@@ -707,7 +838,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
-=======
           </motion.div>)}
         {/* Services Grid */}
         <motion.div;
@@ -719,7 +849,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           <AnimatePresence>;
             {filtered_services.map ((service, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={service.id}
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
@@ -753,6 +882,57 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className='text-right'>
                         <div className='text-2xl font-bold text-white'>
                           {service.price}
+                        </div>;
+                        <div className='text - sm text - gray - 400'>;
+                          {service.period}
+
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-3xl">{service.icon}</div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white">{service.price}</div>
+                        <div className="text-sm text-gray-400">{service.period}</div>
+                      </div>
+
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    </h3>;
+                    <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
+                    </div>;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+                      {service.name}
+                    </h3>;
+                    <p className="text - gray - 300 text - sm leading - relaxed">;
+                      {service.tagline}
+
+                  <div className='mb-6'>;
+                    <div className='flex items-center justify-between mb-4'>;
+                      <div className='text-3xl'>{service && service.icon}</div>;
+                      <div className='text-right'>;
+                        <div className='text-2xl font-bold text-white'>;
+                          {service && service.price}
+                        </div>;
+                        <div className='text-sm text-gray-400'>;
+                          {service && service.period}
+                        </div>;
+                      </div>;
+                    </div>;
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                      {service && service.name}
+                    </h3>;
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service && service.tagline}                      </div>;
+                    </div>;
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
+                      {service && service.name}
+                    </h3>;
+                    <p className="text-gray-300 text-sm leading-relaxed">;
+                      {service && service.tagline}
+                    </p>;
+                  </div>;
+
+
+                  {/* Features */}
+
                         </div>
                         <div className='text-sm text-gray-400'>
                           {service.period}
@@ -800,6 +980,32 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+=======
+=======
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
+
+                      {service.tagline}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </p>
+                  </div>
+                  {/* Features */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       Key Features
                     </h4>
                     <ul className="space-y-2">
@@ -838,10 +1044,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
                   {/* ROI Highlight */}                    <div>
-=======
-                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                    <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
                     </div>
@@ -881,7 +1084,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                     </ul>;
                   </div>;
-
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
                     <div>;
@@ -902,7 +1104,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       </div>;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>;
                   </div>;
-
                   {/* ROI Highlight */}                    <div>;
                       <div className="text-lg font-bold text-white">{service && service.rating}</div>;
                       <div className="text-xs text-gray-400">Rating</div>;
@@ -916,7 +1117,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className="text-xs text-gray-400">Trial Days</div>;
                     </div>;
                   </div>;
-
                   {/* ROI Highlight */}
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>;
                     <div className='text-sm text-green-400 font-semibold mb-1'>;
@@ -928,7 +1128,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       {service && service.roi}
                     </div>;
                   </div>;
-
                   {/* Market Position */}
                   <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>;
                     <div className='text-sm text-cyan-400 font-semibold mb-2'>;
@@ -947,9 +1146,36 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   {/* CTA */}
                   <div className='mt-auto'>
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <Button
+                      href={service && service.link}
+                      variant='primary'
+
+                      className='w-full group-hover:bg-cyan-500 transition-colors'>;
+                      Get Started;
+                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
+                  </div>;
+
+
+                  {/* Contact Info */}                    <Button
+                      href={service && service.link}
+                  <div className="mt-auto">
+=======
+                  <div className='mt-auto'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <Button
                       href={service.link}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       variant="primary"
 
                       className="w-full group-hover:bg-cyan-500 transition-colors">;
@@ -1056,9 +1282,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   );
 }
 };
-
-export default EnhancedServiceShowcase;  )
-}
+export default EnhancedServiceShowcase;  );
+};
 export default EnhancedServiceShowcase;
 
 export default EnhancedServiceShowcase;

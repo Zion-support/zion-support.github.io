@@ -107,6 +107,11 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+
+=======
+    res.status(500).json({ error: e.message });
+  }    res.status(500).json({ error: e.message })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

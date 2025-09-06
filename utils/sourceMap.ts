@@ -1,6 +1,7 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
+<<<<<<< HEAD
     nodes: []
     edges: []
   }
@@ -10,6 +11,7 @@ export function getSourceMapWithExistence() {
 }
 export function getGitStatus() {
   return {
+<<<<<<< HEAD
     connected: false
     branch: 'main'
   }
@@ -90,8 +92,8 @@ export function ensureDirectory(dirPath: string): void {
 
 export function deployBasicTemplateForPath(
   repoRelativePath: string
-): DeployTemplateResult {
-  const absoluteDir = path && path.join(ROOT, repoRelativePath);
+): DeployTemplateResult {;
+  const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
@@ -103,7 +105,7 @@ export function deployBasicTemplateForPath(
     createdPaths && createdPaths.push(keepFile);
 
   } else {
-    skippedPaths && skippedPaths.push(keepFile);
+    skippedPaths.push(keepFile);
   }
 
 
@@ -114,7 +116,7 @@ export function deployBasicTemplateForPath(
     createdPaths && createdPaths.push(readmeFile);
 
   } else {
-    skippedPaths && skippedPaths.push(readmeFile);
+    skippedPaths.push(readmeFile);
   }
 
   return { createdPaths, skippedPaths }
@@ -126,16 +128,6 @@ export function deployBasicTemplateForPath(
   return { createdPaths, skippedPaths }
 
 =======
-// Source map utilities
-export interface SourceMapInfo {
-  version: number;
-  sources: string[];
-  names: string[];
-  mappings: string;
-  sourcesContent?: string[];
-  file?: string;
-  sourceRoot?: string;
-}
 
 
   created_paths: string[];
@@ -145,4 +137,14 @@ export function ensure_directory (dir_path: string): void {
   if () {) {
   $2
 }
+}
+}
+    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
+    fs.writeFileSync (readme_file, readme);
+    created_paths.push (readme_file);
+  } else {
+    skipped_paths.push (readme_file);
+  }
+  return { created_paths, skipped_paths }
+;
 

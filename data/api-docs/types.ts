@@ -46,6 +46,18 @@ export interface EndpointSpec {;
   rate_limits?: RateLimitInfo[];
   errors?: ErrorCode[];
   tags?: string[];
+
+  versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
+
+
+=======
+  versions: string[]; // e.g., ['v1'] or ['v1', 'v2'];
+=======
+  versions: string[]; // e.g., ['v1'] or ['v1','v2']
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export interface SectionSpec {
+=======
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 export interface SectionSpec {
 
@@ -70,11 +82,8 @@ export interface CodeSample {
   code: string
 =======
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-
-=======
   lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -90,10 +99,7 @@ export interface ErrorCode {
   message: string;
 }
 export interface EndpointSpec {
-  id: string, title: string
-  description: string, path: string
-  method: HttpMethod, visibility: Visibility
-  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>
+<<<<<<< HEAD
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
@@ -108,12 +114,20 @@ export interface EndpointSpec {
 
 }
 
+=======
+
+}
+
+
 }
 }
 }
 }
 }
 }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;

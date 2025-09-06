@@ -26,7 +26,6 @@ export function middleware(request: NextRequest) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-  return NextResponse.next ();
 }
   return NextResponse.next();
   } catch (error) {

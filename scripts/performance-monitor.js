@@ -1,9 +1,5 @@
 #!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim();  const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { } else { } } try {  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' });  performanceChecks.bundleAnalysis = true} catch (error) { ')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { ,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: * 1000}ms`); if (parseFloat(responseTime) < 1) { } else { } performanceChecks.loadTime = true} else { ,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); `); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
-#!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim();  const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { } else { } } try {  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' });  performanceChecks.bundleAnalysis = true} catch (error) { ')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { ,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: * 1000}ms`); if (parseFloat(responseTime) < 1) { } else { } performanceChecks.loadTime = true} else { ,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); `); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim();  const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { } else { } } try {  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' });  performanceChecks.bundleAnalysis = true} catch (error) { ')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { ,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: * 1000}ms`); if (parseFloat(responseTime) < 1) { } else { } performanceChecks.loadTime = true} else { ,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); `); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
@@ -39,26 +35,26 @@ const performanceChecks = {
   "memoryUsage": false};
 try {
   // Check build size
-  if (fs && fs.existsSync('.next')) {
+  if (fs.existsSync('.next')) {
     const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim();
-    console && console.log(`✅ Build "size": ${buildSize}`);
+    console.log(`✅ Build "size": ${buildSize}`);
     // Check if build size is reasonable (less than 50MB)
-    const sizeInMB = parseInt(buildSize && buildSize.split('\t')[0]);
+    const sizeInMB = parseInt(buildSize.split('\t')[0]);
     if (sizeInMB < 50) {
-      console && console.log('✅ Build size is within acceptable limits');
+      console.log('✅ Build size is within acceptable limits');
     } else {
-      console && console.log('⚠️  Build size is large, consider optimization');
+      console.log('⚠️  Build size is large, consider optimization');
     }
   }
 try {
   // Bundle analysis
-  console && console.log('📋 Analyzing bundle...');
+  console.log('📋 Analyzing bundle...');
   const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
   console.log('✅ Bundle analysis completed');
 ursor/fix-syntax-push-and-merge-to-main-40de
   performanceChecks.bundleAnalysis = true;
 } catch (error) {
-  console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -69,10 +65,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   performanceChecks.bundleAnalysis = true} catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
-=======
-  performanceChecks && performanceChecks.bundleAnalysis = true} catch (error) {
-  console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor.js
 try {
   // Check if app is running and get basic metrics
   const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" "http": //localhost:3000', { "encoding": 'utf8' });
@@ -84,27 +76,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     console.log('✅ Application is running on localhost: 3000');,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log('✅ Application is running on "localhost": 3000'),
-=======
-    console && console.log('✅ Application is running on localhost: 3000');,
-    console && console.log('✅ Application is running on localhost: 3000');,
-    console && console.log('✅ Application is running on localhost: 3000');,
-    console && console.log('✅ Application is running on localhost: 3000');,
-    console && console.log('✅ Application is running on "localhost": 3000'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor.js
     // Get response time
     const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { "encoding": 'utf8' });
-    console && console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
+    console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
     if (parseFloat(responseTime) < 1) {
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('✅ Response time is good');
-=======
-      console && console.log('✅ Response time is good');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor.js
     } else {
-      console && console.log('⚠️  Response time could be improved');
+      console.log('⚠️  Response time could be improved');
     }
-    performanceChecks && performanceChecks.loadTime = true;
+    performanceChecks.loadTime = true;
   } else {
     console.log('⚠️  Application not running on localhost: 3000');,
   }
@@ -115,23 +97,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('⚠️  Response time could be improved')}
     performanceChecks.loadTime = true} else {
     console.log('⚠️  Application not running on "localhost": 3000')}
-=======
-    console && console.log('⚠️  Application not running on localhost: 3000'),,
-  }
-      console && console.log('✅ Response time is good')} else {
-      console && console.log('⚠️  Response time could be improved')}
-    performanceChecks && performanceChecks.loadTime = true} else {
-    console && console.log('⚠️  Application not running on "localhost": 3000')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor.js
   measureMemoryUsage() {
-    const usage = process && process.memoryUsage();
-    this && this.metrics.memoryUsage = Math && Math.round(usage && usage.heapUsed / 1024 / 1024); // MB
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024); // MB
   }
   generateReport() {
     const report = {
-      "timestamp": this && this.metrics.timestamp,
-      "metrics": this && this.metrics,
-      "recommendations": this && this.generateRecommendations()
+      "timestamp": this.metrics.timestamp,
+      "metrics": this.metrics,
+      "recommendations": this.generateRecommendations()
     }
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -151,26 +125,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       recommendations.push('Consider code splitting to reduce bundle size');
-=======
-    const reportPath = path && path.join(process && process.cwd(), 'performance-report && report.json');
-    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
-    console && console.log('Performance report generated:', reportPath);
-  }
-    console && console.log('Performance report generated:', reportPath);
-  }
-    console && console.log('Performance report generated:', reportPath);
-  }
-    console && console.log('Performance report generated:', reportPath);
-  }
-    console && console.log('Performance report "generated": ', reportPath)}
-  generateRecommendations() {
-    const recommendations = [];
-    if (this && this.metrics.bundleSize > 1000000) {
-      recommendations && recommendations.push('Consider code splitting to reduce bundle size');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor.js
     }
-    if (this && this.metrics.memoryUsage > 100) {
-      recommendations && recommendations.push('High memory usage detected, consider optimization');
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('High memory usage detected, consider optimization');
     }
     return recommendations;
   }
@@ -180,18 +137,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (this.metrics.memoryUsage > 100) {
       recommendations.push('High memory usage detected, consider optimization')}
-=======
-      recommendations && recommendations.push('Consider code splitting to reduce bundle size')}
-    if (this && this.metrics.memoryUsage > 100) {
-      recommendations && recommendations.push('High memory usage detected, consider optimization')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor.js
     return recommendations}
 
 // Generate performance report
-const totalChecks = Object && Object.keys(performanceChecks).length;
-const passedChecks = Object && Object.values(performanceChecks).filter(Boolean).length;
-const performanceScore = Math && Math.round((passedChecks / totalChecks) * 100);
-console && console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
+const totalChecks = Object.keys(performanceChecks).length;
+const passedChecks = Object.values(performanceChecks).filter(Boolean).length;
+const performanceScore = Math.round((passedChecks / totalChecks) * 100);
+console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
 // Save performance report
 const report = {
 ursor/fix-syntax-push-and-merge-to-main-40de

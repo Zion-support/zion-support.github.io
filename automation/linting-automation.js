@@ -229,6 +229,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     try {
       // Try to auto-fix linting issues;
       this.log('Attempting to auto-fix linting issues...');
+
+
+
+
+      const fixOutput = execSync('npm run "lint": fix', { 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      const fixOutput = execSync('npm run "lint": fix', { 
       const fixOutput = execSync('npm run lint:fix', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
@@ -342,6 +351,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     } catch (error) {
       // Ignore errors;
     }
+
+
+
+
+    
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return { exists: false ;}}
   async reportLintingFailure(error) {
     const failureReport = {
@@ -450,23 +467,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       // Check common source directories
       const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils';];
     const recentFiles = [];
-    const cutoffTime = Date.now() - 600;0;0; // 1 minute ago;
-    try {
-      // Check common source directories;
-      const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils'];
-      );
-          recentFiles.push(...files.filter(file => {
-            try {
-              const stats = fs.statSync(file;);
-              return stats.mtime.getTime() > cutoffTime;} catch {
-              return false;}
-          }))}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const recentFiles = [];
-    const recentFiles = [];
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-    const recentFiles = [];
-ursor/fix-syntax-push-and-merge-to-main-40de
     const recentFiles = [;];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     try {
@@ -513,6 +521,15 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
     } catch (error) {
       // Ignore errors;
     }
+
+
+
+
+    return recentFiles}
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    return recentFiles}
     return recentFiles;}
     return recentFiles}
   getFilesInDirectory(dir, fileList = []) {}
@@ -582,6 +599,23 @@ if (stat.isDirectory()) {
     this.log('Linting Automation started');
     return fileList}}
     
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    return fileList) {
+    ) {
+          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath)}
+      }
+    } catch (error) {
+      // Ignore errors;
+    }
+    return fileList;
+  }}
+  async start() {
+    this.isRunning = true;
+    this.log('Linting Automation started');
+    return fileList}}
   async start() {}
     this.isRunning = true;,
     this.log('Linting Automation started');';,
@@ -597,14 +631,8 @@ if (stat.isDirectory()) {
     }, this.lintInterval);
   }
     return fileList}}
-    
     return fileList}}
-    
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
     return fileList}}
-    
-ursor/fix-syntax-push-and-merge-to-main-40de
     return fileList) {
     ) {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {

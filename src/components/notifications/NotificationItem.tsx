@@ -1,24 +1,3 @@
-
-import {
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger} from '@/components/ui/tooltip'
-import { useRouter } from 'next/router'
-import { Notification, NotificationType } from '@/context/notifications'
-      return <span className="text-blue-500">💬</span>
-      return <span className="text-orange-500">📦</span>
-    default:
-      return <span className="text-gray-500">📣</span>
-  notification: Notification
-  onMarkAsRead: (id: string) => Promise<void>
-  onDismiss: (id: string) => Promise<void>
-  onMarkAsRead
-  onDismiss
-}) => {;
-      className={cn(;
-                  onMarkAsRead(notification.id); import React from 'react'
-import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -51,6 +30,22 @@ export const getTypeIcon = (type: NotificationType,) => {
       return <span className="text-orange-500">📦</span>
     default:
       return <span className="text-gray-500">📣</span>
+  }
+}
+interface NotificationItemProps {
+  notification: Notification
+  onMarkAsRead: (id: string,) => Promise<void>
+  onDismiss: (id: string,) => Promise<void>
+}
+export const NotificationItem: React.FC<NotificationItemProps> = ({
+  notification
+  onMarkAsRead
+  onDismiss},) => {
+  const router = useRouter(), // Changed from useNavigate to useRouter
+  const handleClick = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -151,12 +146,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
+
   },;
   return (;
     <div;
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
+
+
+
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -182,7 +181,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 : 'Just now'}
             </p>
             {notification.action_url && notification.action_text && (
-=======
   },;
 
   return (<div
@@ -212,7 +210,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </p>;
 
             {notification && notification.action_url && notification && notification.action_text && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="link"
                 size="sm"
@@ -224,7 +221,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
@@ -233,10 +229,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 
       {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
+      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
@@ -261,7 +257,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-=======
                 onClick={(e,) => {;
                   e && e.stopPropagation(),;
                   onMarkAsRead(notification && notification.id);
@@ -280,7 +275,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="ghost"
                 size="icon"
@@ -347,12 +341,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 }}
                 aria-label="Dismiss notification";
               >;
-                <Trash2 className="h-3 && 3.5 w-3 && 3.5 text-red-400" />;
+                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
               <p>Dismiss</p>;
-=======
   Tooltip;
   TooltipContent;
   TooltipProvider;
@@ -514,6 +507,14 @@ if ( {) {
           </Tooltip>;
         </TooltipProvider>;
       </div>;
-    </div>;
-  );
-};
+
+
+
+
+    </div>);
+},
+;
+
+      </div>
+    </div>
+  )

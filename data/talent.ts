@@ -80,4 +80,7 @@ export const TALENT_PROFILES = [;
     translations: {}
   }
 ];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 

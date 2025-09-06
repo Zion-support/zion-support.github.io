@@ -1,13 +1,23 @@
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-ursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-origin/automation-improvements-final
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 
 import React from "react";
 import Head from "next/head";
@@ -16,10 +26,8 @@ import Footer from "./Footer";
 origin/main
 interface LayoutProps {
   children: React.ReactNode;
-=======
 interface LayoutProps {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -68,7 +76,6 @@ const Layout: React.FC<LayoutProps> = ({;
 
   return (
     <div className="min-h-screen bg-white">;
-=======
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -105,7 +112,6 @@ const Layout: React.FC < LayoutProps> = ({
 ;
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
@@ -117,7 +123,6 @@ const Layout: React.FC < LayoutProps> = ({
 
 =======
 import React, { ReactNode } from "react";
-=======
         <meta property="og:title" content={ogTitle || title} />;
         <meta
           property="og:description"
@@ -126,7 +131,6 @@ import React, { ReactNode } from "react";
         <meta property="og:image" content={ogImage} />;
         <meta property="og:url" content={canonical} />;
         <meta property="og:type" content="website" />;
-
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content={ogTitle || title} />;
@@ -135,10 +139,20 @@ import React, { ReactNode } from "react";
           content={ogDescription || description}
         />;
         <meta name="twitter:image" content={ogImage} />;
-
         {/* JSON-LD */}
         <script
           type="application/ld+json"
+<<<<<<< HEAD
+          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
+        />;
+      </Head>;
+      <Header />;
+      <main>{children}</main>;
+      <Footer />;
+    </div>;
+  );
+};
+=======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
@@ -146,12 +160,16 @@ import React, { ReactNode } from "react";
       <main>{children}</main>
       <Footer />
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 import React, { ReactNode } from "react";
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
   children: ReactNode,
 }
-
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">

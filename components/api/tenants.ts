@@ -13,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const auth = authenticateRequest(req, false);
 
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
   if (method === 'POST') {
 
     if (!branding?.name)
@@ -38,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });  }
-
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
@@ -56,7 +54,99 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });
   }
-  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { authenticate_request } from '@/utils / auth';
+import {
+  create_tenant,
+  get_tenants,
+  rotateTenantApiKey,
+  update_tenant,
+} from '@/utils / tenant';import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const method = (req.method || 'GET').toUpperCase (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({ tenants: get_tenants () });
+  }
+  const auth = authenticate_request (req, false);
+  if (return res.status (401).json ({ error: auth.error })) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    const { branding } = req.body || {}
+    if (
+      return res.status (400).json ({ error: 'branding.name required' })) {
+  $2
+}
+    const tenant = create_tenant (branding);
+    return res.status (201).json ({ tenant });  }    if (return res.status (400).json ({ error: 'branding.name required' })) {
+  $2
+}
+    const tenant = create_tenant (branding);
+    return res.status (201).json ({ tenant });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { tenant_id, update } = req.body || {}
+    if (return res.status (400).json ({ error: 'tenant_id required' })) {
+  $2
+}
+    const result = update_tenant (tenant_id, update || {});
+    if (return res.status (404).json ({ error: 'Tenant not found' })) {
+  $2
+}
+    return res.status (200).json ({ tenant: result });  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { tenant_id, rotate_key } = req.body || {}
+    if (
+      return res.status (400).json ({ error: 'tenant_id and rotate_key required' })) {
+  $2
+}    return res.status (200).json ({ tenant: result });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { tenant_id, rotate_key } = req.body || {}
+    if (
+      return res.status (400).json ({ error: 'tenant_id and rotate_key required' })) {
+  $2
+}
+    const result = rotateTenantApiKey (tenant_id);
+    if (return res.status (404).json ({ error: 'Tenant not found' })) {
+  $2
+}
+    return res.status (200).json ({ tenant: result });
+  }
+  return res.status (405).json ({ error: 'Method not allowed' });    const result = rotateTenantApiKey (tenant_id);
+    if (return res.status (404).json ({ error: 'Tenant not found' })) {
+  $2
+}
+    return res.status (200).json ({ tenant: result });
+  }
+return res.status (405).json ({ error: 'Method not allowed' });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
 import {
   createTenant,
   getTenants,

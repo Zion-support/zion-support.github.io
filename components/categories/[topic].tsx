@@ -60,7 +60,6 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
           ))}
         </div>;
         <div className='mt-6'>;
-=======
         <meta name='twitter:image' content='/images / og / topic - default.jpg' />;
       </Head>;
       <div className='mx - auto max - w-6xl'>;
@@ -89,25 +88,19 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
                 }),
               }).catch (() => {});
             }
-          />
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          {posts.map(p => (
-            <BlogCard key={p.id} post={p} />
-          ))}
-        </div>
-        <div className='mt-6'>
-          <Link href='/blog' className='underline'>
-            Back to Blog
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  const topic = String(ctx.params?.topic |'');
-};
+          />;
+        </div>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+          {posts.map (p => (
+            <BlogCard key={p.id} post={p} />))}
+        </div>;
+        <div className='mt - 6'>;
+          <Link href='/blog' className='underline'>;
+            Back to Blog;
+          </Link>;
+        </div>;
+      </div>;
+
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
@@ -121,13 +114,11 @@ export default TopicPage;      </Head>
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
-
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
   return { props: { topic, posts } };
 };
-
 export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
@@ -155,7 +146,6 @@ export default TopicPage;      </Head>;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic |'');
 };
-
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic || '');

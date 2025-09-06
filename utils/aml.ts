@@ -52,7 +52,6 @@ class MockAmlProvider implements AmlProvider {
 
 // Singleton instance
 export const amlManager = new AmlManager();
-
 // Utility functions
 export function createAmlCheck(
   userId: string,
@@ -67,15 +66,12 @@ export function createAmlCheck(
     details: {}
   };
 }
-
 export function generateAmlCheckId(): string {
   return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-
 export function isAmlCheckExpired(check: AmlCheck): boolean {
   return new Date(check.expiresAt) < new Date();
 }
-
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   const colors = {
     low: 'green',
@@ -85,8 +81,6 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   };
   return colors[riskLevel];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ();

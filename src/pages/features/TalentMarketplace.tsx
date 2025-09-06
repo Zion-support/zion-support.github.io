@@ -1,52 +1,51 @@
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function TalentMarketplace() {
-  const schema = {
-    '@context': 'https://schema.org',
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function TalentMarketplace() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
     '@type': 'WebPage',;
     name: 'Talent Marketplace',;
     description:;
-      'Hire vetted AI and tech professionals from around the world on Zion.';
-    url: 'https://app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Talent Marketplace"
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  }
-  return (
-    <>
-      <SEO
-        title='Talent Marketplace'
-        description='Discover and hire top AI specialists through the Zion talent marketplace.'
-        keywords='AI talent marketplace, hire developers, tech freelancers'
-        canonical='https://app.ziontechgroup.com/features/talent-marketplace'
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
+      'Hire vetted AI and tech professionals from around the world on Zion.',;
+    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Talent Marketplace";
+    "description": "Hire vetted AI and tech professionals from around the world on Zion.",;
+    "url": "https://app && app.ziontechgroup.com/features/talent-marketplace";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-export default function TalentMarketplace() {
-  const schema = {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Talent Marketplace'
-    description:
-      'Hire vetted AI and tech professionals from around the world on Zion.'
-    url: 'https://app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Talent Marketplace"
-    "description": "Hire vetted AI and tech professionals from around the world on Zion."
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  }
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
 export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
@@ -54,22 +53,36 @@ export default function TalentMarketplace() {
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  },
+
+  };
 
   return (
-    <>
-      <SEO
-        title='Talent Marketplace'
-        description='Discover and hire top AI specialists through the Zion talent marketplace.'
-        keywords='AI talent marketplace, hire developers, tech freelancers'
-        canonical='https://app.ziontechgroup.com/features/talent-marketplace'
+    <>;
+
+
+                Create a free account and send a message or job invite directly;
+                from their profile.;
+              </p>;
+            </div>;
+            <div>;
+
+              <p className='font - semibold'>Are payments protected?</p>;
+              <p className='text - zion - slate - light'>;
+
+                Yes, funds are held in escrow until you approve completed;
+                milestones.;
+              </p>;
+            </div>;
+          </div>;
+
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
+
+
+
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -157,6 +170,7 @@ export default function TalentMarketplace() {
   )
 }
 ;
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -184,7 +198,6 @@ export default function TalentMarketplace() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md:px-6">;
@@ -204,7 +217,6 @@ export default function TalentMarketplace() {;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
+
+
 ;

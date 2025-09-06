@@ -15,12 +15,32 @@ function getUserId(req: NextApiRequest): string {
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+=======
+import { supabase } from '../../../utils/supabase/client';
+import {
+<<<<<<< HEAD
+  NotificationItem
+  NotificationType;
+=======
+  NotificationItem,;
+  NotificationType,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../utils/notifications';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+  const match = cookie
+    .split(';')
+    .map(c => c.trim())
+    .find(c => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
+<<<<<<< HEAD
 import { supabase } from '../../../utils / supabase / client';
 import {
   NotificationItem,
@@ -42,7 +62,6 @@ export default async /**
  * handler - Function description
  */
 function handler() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const user_id = getUserId (req);
     const {
@@ -56,6 +75,7 @@ function handler() {
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   try {
     const userId = getUserId(req);
 
@@ -80,6 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!count) {
         const { count: exactCount } = await supabase
           .from('notifications')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false);
@@ -122,18 +143,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
     const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
 
     }
-    return res.status(200).json({ notifications: data as NotificationItem[] });
+    return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
+<<<<<<< HEAD
+    return res.status(500).json({ error: 'Unexpected error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  };
+}
+      return res.status (200).json ({ notifications: fallback });
+    }
+    return res.status (200).json ({ notifications: data as NotificationItem[] });
+  } catch (e) {
+return res.status (500).json ({ error: 'Unexpected error' });
+  }    return res.status (500).json ({ error: 'Unexpected error' });
+=======
 return res.status(500).json({ error: 'Unexpected error' });
   }    return res.status(500).json({ error: 'Unexpected error' })
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
   };

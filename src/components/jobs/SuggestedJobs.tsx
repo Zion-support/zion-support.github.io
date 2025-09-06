@@ -1,19 +1,3 @@
-
-    updateJobMatchStatus
-    updateJobMatchStatus, 
-import { useAuth } from "@/hooks/useAuth"
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
-import { useJobSuggestions } from "@/hooks/useJobSuggestions"
-import { JobMatchesCard } from "./JobMatchesCard"
-import { NoJobsCard } from "./NoJobsCard"
-updateJobMatchStatus, 
-
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
 interface SuggestedJobsProps {
   talent_id?: string;
 }
@@ -77,13 +61,13 @@ function SuggestedJobs() {
     updateJobMatchStatus(matchId, 'declined')
   },
 
+
+
   if (isLoading) {
-=======
   // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
 
 
@@ -93,22 +77,18 @@ import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/bad
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-=======
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-  }
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />
-  }
+
+
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
 import { JobMatchesCard } from "./JobMatchesCard",;
 import { NoJobsCard } from "./NoJobsCard",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SuggestedJobsProps {;
   talentId?: string;
 }
@@ -143,8 +123,12 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
+
+
+
+
   }
-  
+
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -164,6 +148,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+              />;
+
+
           
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
@@ -173,14 +160,15 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </div>;
       )}
 ;
+
       
 ;
+
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -195,6 +183,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+              />;
+
+
           
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
@@ -204,14 +195,15 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </div>;
       )}
 ;
+
       
 ;
+
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -223,7 +215,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               <JobMatchesCard
               <JobMatchesCard 
                 key = {match.id,}
-=======
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -236,7 +227,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -252,6 +242,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+
+
+
+
             ))}
           </div>;
         </div>;
@@ -314,10 +308,7 @@ if (isLoading) {
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -437,8 +428,5 @@ if ( {) {
 }</div> </div>);
 }</div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;

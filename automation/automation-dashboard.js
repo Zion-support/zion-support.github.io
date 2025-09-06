@@ -591,7 +591,18 @@ switch: (command) {
     dashboard.start(parseInt(port));
     break;
   case ""status": ;
-ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+
+
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // // // // // // // // , null, 2));
     // // // // // // // // , null, 2));
 ursor/add-new-services-and-deploy-updates-0462

@@ -1,22 +1,17 @@
-
-import React, { useState, useEffect } from 'react'
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-  Select,
-  SelectContent,
-  SelectItem,
+import React, { useState, useEffect } from 'react';
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage,;
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
   SelectTrigger,;
   SelectValue;
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
@@ -26,7 +21,6 @@ import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 
 interface ValidationRule {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   required?: boolean;
   minLength?: number;
   maxLength?: number;
@@ -105,6 +99,87 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
+import React, { useState, useEffect } from 'react';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components / ui / select'; import { Checkbox } from '@/components / ui / checkbox';
+import { cn } from '@/lib / utils';
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+interface ValidationRule {
+  required?: boolean;
+  min_length?: number;
+  max_length?: number;
+  pattern?: RegExp;
+  custom?: (value: any) => string | null;
+interface ValidatedFormFieldProps {
+  name: string;
+  label: string;
+  type?:;
+    | 'text';
+    | 'email';
+    | 'password';
+    | 'tel';
+    | 'url';
+    | 'number';
+    | 'textarea';
+    | 'select';
+    | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string; label: string }[];
+  form: any; // React Hook Form control;
+  class_name?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+  debounce_ms?: number;
+export /**
+ * ValidatedFormField - Function description
+ */
+function ValidatedFormField() {
+  const [show_password, setShowPassword] = useState (false);
+  const [validation_state, setValidationState] = useState<;
+    'idle' | 'validating' | 'valid' | 'invalid';
+  >('idle');
+  const [debounce_timer, setDebounceTimer] = useState < NodeJS.Timeout | null>(
+    null);
+  const field_value = form.watch (name);
+  const field_error = form.form_state.errors[name];
+  const is_touched = form.form_state.touched_fields[name];
+  // Debounced validation;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setValidationState ('idle');
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      clear_timeout (debounce_timer);
+    }
+    setValidationState ('validating');
+    const timer = set_timeout (() => {
+      const error = validate_field (field_value);
+      setValidationState (error ? 'invalid' : 'valid');
+    }, debounce_ms);
+    setDebounceTimer (timer);
     return () => {
       if (timer) clearTimeout(timer)
     }
@@ -158,8 +233,12 @@ export function ValidatedFormField({
         return ''
     }
   }
-  const renderField = () => {
-    const baseClasses = cn(getFieldClasses(), className)
+  const render_field = () =>: any {
+    const base_classes = cn (getFieldClasses (), class_name);
+    switch (type) {
+
+
+
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -312,7 +391,6 @@ export function ValidatedFormField(): any ({;
 
     switch (type) {
       case 'textarea':
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return (
           <div className='relative'>;
             <Textarea
@@ -322,27 +400,23 @@ export function ValidatedFormField(): any ({;
               disabled={disabled}
               className={baseClasses}
               rows={4}
+
+
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
-        )
-      case 'select':
-        return (
-          <div className='relative'>
-            <Select
-              onValueChange={value => form.setValue(name, value)}
-              disabled={disabled}
-            >              <SelectTrigger className={baseClasses}>
-                <SelectValue placeholder={placeholder} />
-              </SelectTrigger>
-              <SelectContent>
-                {options.map(option => (                  <SelectItem key={option.value} value={option.value}>
+
+              {...form && form.register(name)}
+            />;
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
+          </div>;
+        );
+
         ),
 
 
       case 'select':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
 
           <div className="relative">
@@ -355,7 +429,6 @@ export function ValidatedFormField(): any ({;
                   <SelectItem key={option.value} value={option.value}>
                     {option.label}
                   </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </SelectContent>
             </Select>
@@ -366,8 +439,9 @@ export function ValidatedFormField(): any ({;
         )
         ),
 
+
+
       case 'checkbox':
-=======
               </SelectContent>;
             </Select>;
             <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
@@ -375,7 +449,6 @@ export function ValidatedFormField(): any ({;
         );
 
       case 'checkbox':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
@@ -389,6 +462,8 @@ export function ValidatedFormField(): any ({;
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
+
+
               {label}
             </label>;
             {getValidationIcon()}
@@ -396,7 +471,13 @@ export function ValidatedFormField(): any ({;
         )
         ),
 
+
+
       case 'password':
+          </div>;
+        );
+
+      case 'password':;
         return (
           <div className="relative">
             <Input
@@ -424,11 +505,11 @@ export function ValidatedFormField(): any ({;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
+
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </Button>
             </div>
@@ -436,29 +517,20 @@ export function ValidatedFormField(): any ({;
         )
         ),
 
+
+
       default:
+              </Button>;
+            </div>;
+          </div>;
+        );
+
+      default:;
         return (
           <div className="relative">
             <Input
-              type = {type,}
-              disabled = {disabled,}
-              className = {baseClasses,}
-              {...form.register(name)}
-            />
-            <div className='absolute inset-y-0 right-0 flex items-center pr-3'>
-              {getValidationIcon()}
-            </div>
-          </div>
-        )
-    }
-  }
-  if (type === 'checkbox') {
-        render={() => (
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
-              <div className='space-y-1'>
-                {fieldError && (
-                  <FormMessage className='text-sm text-red-500'>
+
+
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -494,6 +566,7 @@ export function ValidatedFormField(): any ({;
                 {description && !fieldError && (
                   <p className='text-sm text-muted-foreground'>{description}</p>
                   <p className="text-sm text-muted-foreground">{description}</p>
+
                 )}
               </div>;
             )}
@@ -507,14 +580,9 @@ export function ValidatedFormField(): any ({;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
-              <span className='text-red-500 ml-1'>*</span>
-            )}          </FormLabel>
-          <FormControl>{renderField()}</FormControl>
-          {(fieldError |description) && (
-            <div className='space-y-1'>
-              {fieldError && (
-                <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
-                  <AlertCircle className='h-3 w-3' />
+
+
+
       />;
     );
   }
@@ -541,6 +609,7 @@ export function ValidatedFormField(): any ({;
               {description && !fieldError && (
                 <p className='text-sm text-muted-foreground'>{description}</p>
                 <p className="text-sm text-muted-foreground">{description}</p>
+
               )}
             </div>
           )}
@@ -597,6 +666,8 @@ export const commonValidations = {
   }},
     };
   }};
+
+
     />;
   );
 
@@ -641,13 +712,7 @@ export const commonValidations = {;
       return null;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     }
   }};

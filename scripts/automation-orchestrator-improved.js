@@ -134,10 +134,14 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
           "critical": false}
       ];
       // Run each automation script;
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
       for (const script of automationScripts) {;
         await this.runScript(script)}
-      for (const script of automationScripts) {;
-        await this.runScript(script)}
+=======
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -258,7 +262,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // "Run": the automation orchestrator;
 const orchestrator = new ImprovedAutomationOrchestrator();
 orchestrator.run().catch(error: => {
@@ -333,7 +344,14 @@ orchestrator.run().catch(error: => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Run the automation orchestrator;
 const orchestrator = new ImprovedAutomationOrchestrator();
 orchestrator.run().catch(error => {',

@@ -10,7 +10,6 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml');
-=======
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
@@ -36,6 +35,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+=======
+
+  const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
+  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
@@ -85,8 +88,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -172,6 +173,24 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 }/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
   items;
 }</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' });
+    })
+    .join('\n'),
+
+  const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
+  <channel>
+    <title>Zion Podcast</title>
+    <link>${_siteUrl}/media/podcast</link>
+    <language>en-us</language>
+    <itunes:author>Zion</itunes:author>
+    <description>Zion interviews builders, founders, and contributors.</description>
+    ${_items}
+  </channel>
+</rss>`,
+
+  fs.writeFileSync(RSS_PATH, xml, 'utf8'),
+  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

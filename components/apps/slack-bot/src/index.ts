@@ -87,7 +87,6 @@ if ( {) {
 
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -203,7 +202,6 @@ if ( {) {
 
       response_type: 'ephemeral',
       text: `Error: ${err && err.message || 'unknown'}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });  }      });
 
 =======
@@ -256,8 +254,10 @@ if ( {) {
   const port = Number(process && process.env.SLACK_PORT || 3001);
   await app && app.start(port);
   // eslint-disable-next-line no-console
-console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+<<<<<<< HEAD
+  console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
+
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);

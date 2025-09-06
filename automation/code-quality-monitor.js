@@ -41,6 +41,11 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
+
+=======
+
+
+=======
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -54,8 +59,8 @@ class CodeQualityMonitor {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
 ursor/integrate-build-improve-and-re-verify-8f7d
   }
@@ -224,6 +229,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
       return null;
 };
+=======
 #!/usr/bin/env node,
 const fs = require("fs"),
 const path = require("path"),
@@ -280,11 +286,10 @@ class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, main
 origin/main
 origin/automation-improvements-final
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
-      return this.metrics
-    } catch (error) {,
-      this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
-      return null
-    },
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 

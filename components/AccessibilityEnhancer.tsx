@@ -1,3 +1,19 @@
+
+
+const AccessibilityEnhancer: React.FC = () => {;
+  useEffect(() => {;
+    // Add skip link for keyboard navigation;
+    const skipLink = document && document.createElement('a');
+    skipLink && skipLink.href = '#main-content';
+    skipLink && skipLink.textContent = 'Skip to main content',;
+    skipLink && skipLink.className = 'sr-only focus: not-sr-only',;
+    skipLink && skipLink.style.cssText = `;
+      position: absolute, top: -40px,;
+      left: 6px, background: #000,;
+      color: #fff, padding: 8px,;
+      text-decoration: none, z-index: 1000,;
+=======
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -11,9 +27,9 @@ const AccessibilityEnhancer: React.FC = () => {
       left: 6px, background: #000
       color: #fff, padding: 8px
       text-decoration: none, z-index: 1000
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
-
     // Focus management;
     const handleMouseDown = () => {;
       document && document.body.classList && classList.add('using-mouse');
@@ -23,10 +39,8 @@ const AccessibilityEnhancer: React.FC = () => {
         document && document.body.classList && classList.remove('using-mouse'),;
       }
     };
-
     document && document.addEventListener('mousedown', handleMouseDown);
     document && document.addEventListener('keydown', handleKeyDown);
-
     // Add ARIA live region for announcements;
     const liveRegion = document && document.createElement('div');
     liveRegion && liveRegion.setAttribute('aria-live', 'polite');
@@ -34,7 +48,6 @@ const AccessibilityEnhancer: React.FC = () => {
     liveRegion && liveRegion.className = 'sr-only';
     liveRegion && liveRegion.id = 'live-region';
     document && document.body.appendChild(liveRegion);
-
     // Announce page changes;
     const announcePageChange = (message: string) => {;
       const liveRegion = document && document.getElementById('live-region');
@@ -42,30 +55,24 @@ const AccessibilityEnhancer: React.FC = () => {
         liveRegion && liveRegion.textContent = message,;
       }
     };
-
     // Listen for route changes (Next && Next.js specific);
     const handleRouteChange = () => {;
       announcePageChange('Page loaded');
     };
-
     // Add route change listener if available;
     if (typeof window !== 'undefined' && window && window.history) {;
       const originalPushState = window && window.history.pushState;
       const originalReplaceState = window && window.history.replaceState;
-
       window && window.history.pushState = function(...args) {;
         originalPushState && originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window && window.history.replaceState = function(...args) {;
         originalReplaceState && originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window && window.addEventListener('popstate', handleRouteChange);
     }
-
     // Cleanup;
     return () => {;
       document && document.removeEventListener('mousedown', handleMouseDown);
@@ -264,7 +271,6 @@ if ( {) {
   }
 
 };
-
 // Add CSS for focus management;
 const focusStyles = `;
   .using-mouse *:focus {;
@@ -287,7 +293,6 @@ const focusStyles = `;
     clip: auto, white-space: normal,;
   }
 `;
-
 // Inject styles;
 if (typeof document !== 'undefined') {;
   const styleSheet = document && document.createElement('style');
@@ -296,49 +301,40 @@ if (typeof document !== 'undefined') {;
 }
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {;
   children: React && React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {;
     const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-
     const savedHighContrast = localStorage && localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage && localStorage.getItem('fontSize') || 'normal';
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
   }, []);
-
   const applyAccessibilityStyles = (;
     highContrast: boolean,;
     fontSizeValue: string,;
     reducedMotionValue: boolean;
   ) => {;
     const root = document && document.documentElement;
-
     if (highContrast) {;
       root && root.classList.add('high-contrast');
     } else {;
       root && root.classList.remove('high-contrast');
     }
-
     root && root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root && root.classList.add(`font-${fontSizeValue}`);
-
     if (reducedMotionValue) {;
       root && root.classList.add('reduced-motion');
     } else {;
       root && root.classList.remove('reduced-motion');
     }
   };
-
   const toggleHighContrast = () => {;
 
     const newValue = !isHighContrast;
@@ -347,7 +343,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
 
   };
-
   const changeFontSize = (newSize: string) => {;
 
     setFontSize(newSize);
@@ -415,7 +410,6 @@ export default AccessibilityEnhancer;
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
         Skip to main content;
       </a>;
-
       {/* Screen reader only content */}
       <div className="sr-only">;
         <h1>Zion Tech Group - Technology Solutions Provider</h1>;
@@ -424,12 +418,80 @@ export default AccessibilityEnhancer;
           computing, blockchain infrastructure, and innovative development services.;
         </p>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main content */}
       <div id="main-content">{children}</div>;
     </>;
   );
+<<<<<<< HEAD
 }
 export default AccessibilityEnhancer;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default AccessibilityEnhancer;
+<<<<<<< HEAD
+;
+  const toggleHighContrast = () =>: any {
+    const new_value = !isHighContrast;
+    setIsHighContrast (new_value);
+    local_storage.set_item ('high_contrast', new_value.to_string ());
+    applyAccessibilityStyles (new_value, font_size, reduced_motion);
+  }
+;
+  const changeFontSize = (new_size: string) =>: any {
+    setFontSize (new_size);
+    local_storage.set_item ('font_size', new_size);
+    applyAccessibilityStyles (isHighContrast, new_size, reduced_motion);
+  }
+;
+  return (
+    <>;
+      {/* Accessibility Controls */}
+      <div className="accessibility - controls fixed top - 4 right - 4 z - 50 bg - white dark:bg - gray - 800 shadow - lg rounded - lg p - 4 border">;
+        <h3 className="text - sm font - semibold mb - 2 text - gray - 900 dark:text - white">Accessibility Options</h3>;
+        <div className="space - y-2">;
+          <button;
+            on_click={toggleHighContrast}
+            className={`w - full px - 3 py - 1 text - xs rounded ${
+              isHighContrast ? 'bg - blue - 600 text - white' : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
+            }`}
+            aria - label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+          >;
+            {isHighContrast ? 'Disable' : 'Enable'} High Contrast;
+          </button>;
+          <div className="text - xs text - gray - 600 dark:text - gray - 300">Font Size:</div>;
+          <div className="flex gap - 1">;
+            {['small', 'normal', 'large', 'extra - large'].map ((size) => (
+              <button;
+                key={size}
+                on_click={() => changeFontSize (size)}
+                className={`px - 2 py - 1 text - xs rounded ${
+                  font_size === size ? 'bg - blue - 600 text - white' : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
+                }`}
+                aria - label={`Set font size to ${size}`}
+              >;
+                {size.char_at (0).toUpperCase ()}
+              </button>))}
+          </div>;
+        </div>;
+      </div>;
+      {/* Skip to main content link */}
+      <a;
+        href="#main - content";
+        className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg - blue - 600 text - white px - 4 py - 2 rounded z - 50";
+      >;
+        Skip to main content;
+      </a>;
+      {/* Screen reader only content */}
+      <div className="sr - only">;
+        <h1 > Zion Tech Group - Technology Solutions Provider</h1>;
+        <p>;
+          Leading technology solutions provider helping businesses transform their digital presence with cutting - edge AI, quantum;
+          computing, blockchain infrastructure, and innovative development services.;
+        </p>;
+      </div>;
+      {/* Main content */}
+      <div id="main - content">{children}</div>;
+    </>);
+}
+;
 export default AccessibilityEnhancer;

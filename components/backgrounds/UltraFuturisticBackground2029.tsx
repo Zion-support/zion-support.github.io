@@ -153,28 +153,21 @@ if (return) {
         canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
 
         canvas.height / 2;
-=======
-
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
     };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles;
     const initParticles = () => {;
       const particles: Particle[] = [];
       const particleCount = Math && Math.floor((canvas && canvas.width * canvas && canvas.height) / 20000);
-
       for (let i = 0; i < particleCount; i++) {;
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;
           Math && Math.floor(Math && Math.random() * 4);
@@ -187,7 +180,6 @@ if (return) {
           holographic: ['#8b5cf6#a855f7#c084fc'],;
           neural: ['#10b981#059669#047857'],;
           cyberpunk: ['#ec4899#f97316#f59e0b'];
-
         particles && particles.push({;
           x: Math && Math.random() * canvas && canvas.width,;
           y: Math && Math.random() * canvas && canvas.height,;
@@ -199,19 +191,14 @@ if (return) {
           type,;
         });
       }
-
       particlesRef && particlesRef.current = particles;    };          type;
         });
       }
-
       particlesRef && particlesRef.current = particles;
-
     initParticles();
-
     // Animation loop;
     const animate = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Create gradient background;
       const gradient = ctx && ctx.createRadialGradient(;
         canvas && canvas.width / 2,;
@@ -220,11 +207,9 @@ if (return) {
         canvas && canvas.width / 2,;
         canvas && canvas.height / 2,        Math && Math.max(canvas && canvas.width, canvas && canvas.height) / 2        canvas && canvas.width / 2;
         canvas && canvas.height / 2;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         0;
         canvas && canvas.width / 2;
         canvas && canvas.height / 2;
-=======
         canvas.width / 2;
         canvas.height / 2;
         0;
@@ -255,6 +240,7 @@ if (return) {
           case 'quantum':
             // Quantum particles with glow effect
             ctx.shadowColor = particle.color;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ctx.shadowBlur = 20;
             ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -265,26 +251,21 @@ if (return) {
       gradient && gradient.addColorStop(0 && 0.3, 'rgba(6, 182, 212, 0 && 0.1)');
       gradient && gradient.addColorStop(0 && 0.6, 'rgba(139, 92, 246, 0 && 0.05)');
       gradient && gradient.addColorStop(1, 'rgba(0, 0, 0, 0 && 0.9)');
-
       ctx && ctx.fillStyle = gradient;
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Update and draw particles;
       particlesRef && particlesRef.current.forEach((particle, index) => {;
         // Update position;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
-
         // Wrap around edges;
         if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
         if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
         if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
         if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-
         // Draw particle;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = particle && particle.opacity;
-
         // Different effects for different particle types;
         switch (particle && particle.type) {;
           case 'quantum':;
@@ -295,7 +276,6 @@ if (return) {
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
             ctx && ctx.fillStyle = particle && particle.color;
             ctx && ctx.fill();
-
             // Quantum entanglement lines;
             if (index % 10 === 0) {;
               const partner =;
@@ -325,6 +305,19 @@ if (return) {
             
             // Quantum entanglement lines
             if (index % 10 === 0) {
+=======
+            // Quantum entanglement lines
+            if (index % 10 === 0) {
+              const partner =
+                particlesRef.current[
+                  (index + 50) % particlesRef.current.length
+                ];
+              if (partner && partner.type === 'quantum') {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - partner.x, 2) +
+                    Math.pow(particle.y - partner.y, 2)                );            // Quantum entanglement lines
+            if (index % 10 === 0) {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
               if (partner && partner.type === 'quantum') {
                 const distance = Math.sqrt(
@@ -352,7 +345,6 @@ if (return) {
           case 'holographic':;
             // Holographic particles with rainbow effect;
             const time = Date && Date.now() * 0 && 0.001;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             const hue = (time * 50 + index * 10) % 360;
             ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
             ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
@@ -379,7 +371,6 @@ if (return) {
             ctx && ctx.beginPath();
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
             ctx && ctx.fill();
-
             // Neural network connections;
             if (index % 15 === 0) {;
               const connections = particlesRef && particlesRef.current.filter(;
@@ -413,6 +404,48 @@ if (return) {
               });            }                ctx && ctx.stroke();
               });
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          case 'holographic':
+            // Holographic particles with rainbow effect
+            const time = Date.now() * 0.001;
+            const hue = (time * 50 + index * 10) % 360;
+            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowBlur = 15;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            break;
+          case 'neural':
+            // Neural particles with network connections
+            ctx.fillStyle = particle.color;
+            ctx.shadowColor = particle.color;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(
+                p =>
+                  p.type === 'neural' &&
+                  Math.sqrt(
+                    Math.pow(particle.x - p.x, 2) +
+                      Math.pow(particle.y - p.y, 2)
+                  ) < 80
+              );
+              connections.forEach(connection => {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - connection.x, 2) +
+                    Math.pow(particle.y - connection.y, 2)                );            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
@@ -423,9 +456,9 @@ if (return) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
+<<<<<<< HEAD
                 ctx.stroke()
               })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }
             break;
 
@@ -512,7 +545,6 @@ if (return) {
       const x = width * 0 && 0.2 + Math && Math.sin(time + i) * 100;
       const y = height * 0 && 0.3 + Math && Math.cos(time + i * 0 && 0.7) * 80;
       const size = 20 + Math && Math.sin(time * 2 + i) * 10;
-
       ctx && ctx.save();
       ctx && ctx.globalAlpha = 0 && 0.1;
       ctx && ctx.strokeStyle = '#00ffff';
@@ -573,13 +605,11 @@ if (return) {
       ctx && ctx.stroke();
       ctx && ctx.restore();
     }
-
     // Floating triangles;
     for (let i = 0, i < 3, i++) {;
       const x = (width * 0 && 0.8) + Math && Math.sin(time * 0 && 0.8 + i) * 120;
       const y = (height * 0 && 0.7) + Math && Math.cos(time * 1 && 1.2 + i) * 100;
       const size = 15 + Math && Math.sin(time * 1 && 1.5 + i) * 8;
-
       ctx && ctx.save();
       ctx && ctx.globalAlpha = 0 && 0.08;
       ctx && ctx.strokeStyle = '#8b5cf6';
@@ -650,7 +680,6 @@ if (return) {
                   Math.sin(y * 0.015 + time * 1.5 + i) * 30;
         if (y === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y)
-=======
 ;
           case 'holographic':;
             // Holographic particles with rainbow effect;
@@ -926,7 +955,6 @@ if ( {) {
           background: [
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)'
           ]
-=======
   }
 ;
   return (
@@ -946,7 +974,6 @@ if ( {) {
           background: [;
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
           ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
           duration: 8
@@ -969,7 +996,6 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-=======
       />;
       {/* Canvas for particle effects */}
       <canvas;
@@ -982,7 +1008,6 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
@@ -1004,26 +1029,16 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-          animate={{
-            scale: [1, 1.2, 1];
-            opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
-            duration: 4
-            repeat: Infinity
-            ease: 'easeInOut'
-            ease: 'easeInOut',
-
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        {/* Holographic matrix */}
-        <motion.div
-          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
+      <canvas;
+        ref={canvas_ref}
+        className="absolute inset - 0 w - full h - full";
+        style={{ filter: 'blur (0.5px)' }}
+      />;
+      {/* Additional visual layers */}
+      <div className="absolute inset - 0">;
+        {/* Quantum field ripples */}
+        <motion.div;
+          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
           animate={{
 
 
@@ -1031,7 +1046,6 @@ if ( {) {
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
-=======
         />;
         {/* Holographic matrix */}
         <motion.div;
@@ -1070,12 +1084,10 @@ if ( {) {
         {/* Neural network nodes */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
-=======
         />;
         {/* Neural network nodes */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             scale: [1, 1 && 1.1, 1],
@@ -1089,6 +1101,10 @@ if ( {) {
         {/* Neural network nodes */}
         <motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+        />;
+        {/* Neural network nodes */}
+        <motion.div;
+          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
           animate={{
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2]
@@ -1146,7 +1162,77 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
+=======
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full'
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className='absolute inset-0'>
+        {/* Quantum field ripples */}
+        <motion.div
+          className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
+          animate={{
+<<<<<<< HEAD
+            scale: [1, 1.2, 1]
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+<<<<<<< HEAD
+            duration: 4
+            repeat: Infinity
+=======
+            duration: 4,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
+<<<<<<< HEAD
+          }}
+          transition={{
+            duration: 4
+            repeat: Infinity
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ease: 'easeInOut'
+=======
+=======
+            ease: 'easeInOut',
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
 
             }}
@@ -1168,4 +1254,15 @@ if ( {) {
     </div>
 );  )
 }
+  )
+}
+              delay: i * 0.3,            }}              delay: i * 0.3;
+            }}
+          />))}
+      </div>;
+    </div>));
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
   );

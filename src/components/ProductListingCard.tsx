@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
-import { useRouter  } from 'next/router';
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
-import { DollarSign } from 'lucide-react'
-
-import { RatingStars } from '@/components/RatingStars'
-import React, { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import { useRouter } from 'next/router'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ProductListing } from '@/types/listings'
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useMemo } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ProductListing } from '@/types/listings';
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
@@ -43,22 +53,9 @@ interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
-  detailBasePath?: string
+  detailBasePath?: string;
+import Image from 'next/image'; // Import next/image
 
-const ProductListingCardComponent = ({
-  listing
-  view = 'grid'
-  onRequestQuote
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid'
-  const router = useRouter()
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-      ? listing.images[0]
-      : '/placeholder.svg'
-  )
-  const [imageError, setImageError] = useState(false)
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -85,7 +82,6 @@ interface ProductListingCardProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
@@ -390,8 +386,10 @@ const ProductListingCardComponent = ({;
         }      }}
     >;
       {/* Image */}
-      <div;
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+
+
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -425,7 +423,6 @@ const ProductListingCardComponent = ({;
           if(e && e.key === 'Enter' || e && e.key === ' ') {;
             e && e.preventDefault () ;
 
-=======
         // Check condition
 if ( {) {
   $2
@@ -472,19 +469,14 @@ if ( {) {
   $2
 }
             e.prevent_default ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             handleViewListing () }
         }}
       >;
         <div className={`relative ${imageContainerClasses}`}>;
           {' '}
           {/* Ensure this container has dimensions */}
-          <Image
-            src = {imageSrc,}
-            alt = {listing.title,}
-            fill = {true,}
-            style={{ objectFit: 'cover' }}
-            onError = {handleImageError,}
+
+
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
@@ -521,36 +513,25 @@ if ( {) {
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
+
+
               {stockStatus}
             </Badge>;
           )}
-          <FavoriteButton itemId={listing.id} />
-        </div>
-      </div>
-      {/* Content */}
-      <div
-        className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}
-      >
-        <div>
-          {/* Category & Rating */}
-          <div className='flex justify-between items-center mb-2'>
-            <Badge
-              variant='outline'
-              className='bg-background text-foreground/80 border-primary/10'
-            >
+
+          <FavoriteButton itemId={listing && listing.id} />;
+
            <FavoriteButton itemId={listing.id} />;
 
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content */}
       <div
         className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
           {/* Category & Rating */}
 
-=======
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
@@ -558,7 +539,9 @@ if ( {) {
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
-          </div>
+
+          </div>;
+
           {/* Title & Description */}
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
@@ -594,10 +577,10 @@ if ( {) {
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
-=======
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
+
                 {listing.uspHeadline}
               </p>
             )}
@@ -630,18 +613,17 @@ if ( {) {
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
+
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-        </div>
-        {/* Footer with price and button */}
-        <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
-          <div className='text-sm font-medium'>
+
+
+
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Footer with price and button */}
 
           </div>;
@@ -723,6 +705,7 @@ if ( {) {
                 addToCart()
               }}
               disabled={loading}
+
             >
               {loading ? (
                 <>
@@ -760,6 +743,7 @@ if ( {) {
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
+
                 router.push('/checkout')
               }}
               disabled = {loading,}
@@ -941,24 +925,11 @@ export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
-          </div>
-        </div>;
-      </div>;
-    </div>;) }
-export default React.memo(ProductListingCard)
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-'"`
-export const ProductListingCard = React.memo(ProductListingCardComponent)
-ProductListingCard.displayName = 'ProductListingCard'
+
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+
             
             {onRequestQuote && (
               <Button 
@@ -1041,15 +1012,9 @@ export default ProductListingCard;
 '"`;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
