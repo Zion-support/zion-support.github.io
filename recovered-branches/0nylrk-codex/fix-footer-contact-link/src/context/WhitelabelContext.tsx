@@ -1,12 +1,12 @@
+    headline: string
+    subtitle: string
 
-
-
+    cta: string
+  }
     headline: string,
     subtitle: string,
     cta: string;
   };
-
-
   tenant: WhitelabelTenant | null
 }
 
@@ -61,12 +61,14 @@ const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
-=======
 
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider')
+  }
   const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
@@ -75,7 +77,6 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
-
 
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
@@ -91,7 +92,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
         tenant: tenant})
     } else if (!isLoading) {
       setContextValue(defaultContext)
-=======
   // Cast is used here because the context default is `null` until provided by;
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType;
@@ -117,18 +117,11 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
         tenant: tenant});
     } else if (!isLoading) {;
       setContextValue(defaultContext);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }, [tenant, isLoading]);
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
-
-    </WhitelabelContext && WhitelabelContext.Provider>;
-  );
-};
-
-=======
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -204,11 +197,6 @@ if ( {) {
   return (
     <WhitelabelContext.Provider value={context_value}>;
       {children}
-
-    </WhitelabelContext.Provider>;
-  );
-};
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </WhitelabelContext.Provider>);
+}
+;

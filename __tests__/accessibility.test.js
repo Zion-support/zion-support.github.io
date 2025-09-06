@@ -1,5 +1,3 @@
-
-
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Accessibility"
   test('"page"
@@ -9,7 +7,6 @@ test && test.describe('"Accessibility"
   test('"buttons"
     "await"
     "await"
-
 const { test, expect } = require('@playwright/test')';
 test.describe('"Accessibility": Tests', () => {';
   test('"page": has proper heading structure', async ({ page }) => {';
@@ -122,8 +119,4 @@ test.describe('Accessibility Tests', () => {
     // Check if focus is visible'
     const focusedElement = page.locator(':focus');
     await expect(focusedElement).toBeVisible()})})';
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     "await"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

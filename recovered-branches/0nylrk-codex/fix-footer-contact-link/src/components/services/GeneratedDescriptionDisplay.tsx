@@ -1,32 +1,17 @@
-
-
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
-import {Textarea} from "@/components/ui/textarea";
-import {Check, Pencil} from "lucide-react";
-
-=======
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-import { Textarea } from "@/components/ui/textarea",
-import { Check, Pencil } from "lucide-react",
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from "lucide-react";
 interface GeneratedDescriptionDisplayProps {
   description: string;
-  onSave: (editedDescription: string) => void
-}
-
-
-interface GeneratedDescriptionDisplayProps {;
-  description: string,;
   onSave: (editedDescription: string) => void;
 }
 
@@ -34,25 +19,14 @@ export function GeneratedDescriptionDisplay(): any ({ ;
   description, ;
   onSave ;
 }: GeneratedDescriptionDisplayProps) {;
-
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-=======
 
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  const handleSave = () => {;
-    onSave(editedDescription);
-    setIsEditing(false);
-
-
-    })
-  },
+  const handleSave = () => {
+    onSave(editedDescription),
+    setIsEditing(false),
+    toast({
 
 
 
@@ -64,59 +38,10 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
 
-=======
-            onClick={() => setIsEditing(!isEditing)}
-            className="border-zion-blue-light text-zion-slate-light hover:text-white"
-          >
-            {isEditing ? (
-              <>
-                <Check className="h-4 w-4 mr-1" />
-                Done
-              </>
-            ) : (
-              <>
-                <Pencil className="h-4 w-4 mr-1" />
-                Edit
-              </>
-
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Check, Pencil } from "lucide-react",;
-interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string) => void;
-}
-;
-export function GeneratedDescriptionDisplay({;
-  description,;
-  onSave;
-}: GeneratedDescriptionDisplayProps) {;
-  const { toast } = useToast(),;
-  const [isEditing, setIsEditing] = useState(false),;
-  const [editedDescription, setEditedDescription] = useState(description),;
-  const handleSave = () => {;
-    onSave(editedDescription),;
-    setIsEditing(false),;
-
-    toast({;
-      title: "Description Saved",;
-      description: "Your edited description has been saved.";
-    });
-  };
-
-  return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-      <CardHeader>;
-        <CardTitle className="text-white flex items-center justify-between">;
-          Generated Description;
-          <Button
-            variant="outline" 
-            size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -125,17 +50,12 @@ export function GeneratedDescriptionDisplay({;
                 <Check className="h-4 w-4 mr-1" />;
                 Done;
               </>;
-            ) : (;
+            ) :(;
               <>;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
-=======
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
@@ -189,29 +109,14 @@ function GeneratedDescriptionDisplay() {
                 <Pencil className="h - 4 w - 4 mr - 1" />;
                 Edit;
               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-
-      </CardContent>;
-      {isEditing && (;
-        <CardFooter>;
-
-          <Button
-            onClick={handleSave}
-            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white">;
             Save Changes;
           </Button>;
         </CardFooter>;
       )}
-
-    </Card>;
-  );
-}
-
-=======
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -233,4 +138,3 @@ function GeneratedDescriptionDisplay() {
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

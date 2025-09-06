@@ -1,5 +1,4 @@
 
-
 import {useState, useEffect} from 'react';
 
 
@@ -11,10 +10,6 @@ export function useIsMobile() {
 
     const handleResize = () => {
 
-      setIsMobile(window && window.innerWidth < 768)
-    };
-
-
     if (typeof window !== 'undefined') {
       window && window.addEventListener('resize', handleResize);
       return () => window && window.removeEventListener('resize', handleResize)
@@ -23,7 +18,6 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
-
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -46,10 +40,6 @@ if ( {) {
     }
     return undefined;
   }, []);
-=======
-
-
-=======
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -66,12 +56,5 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
-
-
-
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-  return is_mobile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}

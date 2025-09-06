@@ -1,14 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync, spawn } = require('child_process');
 class MasterAutomationOrchestrator {
   constructor() {
@@ -226,14 +218,8 @@ class MasterAutomationOrchestrator {
       this.log(`💥 Fatal error in "orchestrator": ${error.message}`, 'ERROR');
       await this.generateFinalReport();
       process.exit(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     }
   }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Master Automation Orchestrator');
@@ -316,21 +302,14 @@ async function runAllAutomations() {
       if (task.critical) {
         console.log(`⚠️ Critical task failed: ${task.name}`);
       }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
   }
 
   return { results, successCount, failureCount };
->>>>>>> origin/automation-improvements-final
+    }
+  }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
+}
 
 // Generate comprehensive report
 function generateReport(results) {
@@ -377,16 +356,9 @@ async function main() {
     const report = generateReport(results);
 
     console.log('\n📊 AUTOMATION SUMMARY');
-<<<<<<< HEAD
-<<<<<<< HEAD
+    console.log('======');
     console.log('====================');
-=======
->>>>>>> origin/main
-=======
-=======
     console.log('====================');
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
@@ -397,16 +369,6 @@ async function main() {
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
 
     console.log('\n✅ Master automation orchestration completed');
@@ -430,16 +392,7 @@ async function main() {
     process.exit(1);
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
 main();
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
@@ -463,20 +416,7 @@ const { execSync, spawn } = require('child_process')
     this.log(`Overall "Success"`)
     this.log('\n� Phase "Results")
         this.log(`    "Errors"`)
-<<<<<<< HEAD
-      this.log(`� Fatal error in "orchestrator"`)
-=======
-      this.log(`� Fatal error in "orchestrator"`)
-=======
 
 main();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
 main();
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

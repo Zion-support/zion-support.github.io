@@ -1,4 +1,16 @@
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+const CybersecurityChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -9,15 +21,13 @@ const CybersecurityChat: NextPage = () => {;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}
-
-
-const CybersecurityChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-
+      <main>
+        <h1>CybersecurityChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
       </Head>;
-
 
       <main>;
         <h1>CybersecurityChat</h1>;
@@ -25,18 +35,9 @@ const CybersecurityChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default CybersecurityChat;
-
-
-=======
-
-        <title>CybersecurityChat - Zion Tech Solutions</title>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -57,4 +58,3 @@ const CybersecurityChat: NextPage = () => {
 ;
 export default CybersecurityChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

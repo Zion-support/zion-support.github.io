@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"function log(message, type = "INFO") {" const icons = { INFO: "", SUCCESS: "", ERROR: "", WARNING: "" };" console.log(`${icons[type] | ""} ${message}`);}function ensureDir(dir) {" fs.mkdirSync(dir, { recursive: true });}function findFiles(dir, exts) { if (!fs.existsSync(dir)) return []; const results = []; for (const entry of fs.readdirSync(dir)) { const p = path.join(dir, entry); const stat = fs.statSync(p); if (stat.isDirectory()) results.push(.findFiles(p, exts)); else if (exts.includes(path.extname(entry).toLowerCase())) results.push(p); } return results;}function optimizeImages(publicDir, report) {" const images = findFiles(publicDir, [".png", ".jpg", ".jpeg"]); if (images.length === 0) {" report.actions.push("No images found to optimize"); return; } let sharp; try {" sharp = require("sharp"); } catch {" report.actions.push("sharp not installed; skipping image optimization"); return; } const optimized = []; for (const img of images) { const stat = fs.statSync(img); if (stat.size < 150 * 1024) continue; / skip small files const ext = path.extname(img).toLowerCase();"` const outPath = img.replace(new RegExp(`${ext}$`), ".webp"); try {" sharp(img).webp({ quality: 80 }).toFile(outPath);" optimized.push({ from: img, to: outPath }); } catch (e) {` report.errors.push(`Failed optimizing ${img}: ${e.message}`); } } if (optimized.length > 0) report.optimizedImages = optimized;` report.actions.push(`Optimized ${optimized.length} images to WebP`);}function ensureNextConfigFlags(rootDir, report) {" const candidates = ["next.config.js", "deployment/next.config.js"]; for (const rel of candidates) { const file = path.join(rootDir, rel); if (!fs.existsSync(file)) continue;" const original = fs.readFileSync(file, "utf8");"" if (original.includes("optimizeCss: true")) {` report.actions.push(`${rel}: optimizeCss already enabled`); continue; } / Attempt minimal enhancement by appending experimental.optimizeCss try { let updated = original;"" if (original.includes("experimental: ")) { updated = original.replace( /experimental:\s*\{/,"" "experimental: {\n optimizeCss: true," ); } else if (" original.includes("nextConfig") |" original.includes("module.exports") ) { updated = original.replace(/\{([\s\S]*?)\}/, m =>"" m.replace(/\}$/, ",\n experimental: { optimizeCss: true }\n}") ); } if (updated !== original) { fs.writeFileSync(file, updated); report.modifiedFiles.push(file);` report.actions.push(`${rel}: enabled experimental.optimizeCss`); } } catch (e) {` report.errors.push(`Failed updating ${rel}: ${e.message}`); } }}function main() { const root = process.cwd(); const timestamp = Date.now(); const report = { timestamp," actions: []," optimizedImages: []," modifiedFiles: []," errors: []};" log("Starting Performance Optimizer.");" ensureDir(path.join(root, "automation-reports")); / Image optimization in public/" optimizeImages(path.join(root, "public"), report); / Ensure Next.js config flags ensureNextConfigFlags(root, report); const outFile = path.join( root,` `performance-optimizer-report-${timestamp}.json` ); fs.writeFileSync(outFile, JSON.stringify(report, null, 2)); log("` `Performance optimization complete. Report: ${path.basename(outFile)}`," "SUCCESS" );}try { main();} catch (e) {""` log(`Performance optimizer failed: ${e.message}`, "ERROR"); process.exit(1);}'"`'"`
-#!/usr/bin/env node;
-/*
- Simple Performance Optimizer;
- - Scans project for large images in public/ and optimizes via sharp if available;
- - Ensures Next.js production optimizations flags are present in next.config.js;
- - Generates a small report file referencing actions taken;
-*/
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -75,17 +59,68 @@ class PerformanceOptimizer {
           error: error.message 
         });
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
+console.log('⚡ Starting Performance Optimizer...');
+
+class PerformanceOptimizer {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async optimizePerformance() {
+    const optimizations = [
+      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
+      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
+      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
+      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
+      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
+    ];
+
+    const results = [];
+    let successfulOptimizations = 0;
+
+    for (const optimization of optimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
+        
+        execSync(optimization.command, { stdio: 'pipe' });
+        
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+      }
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 function log(message, type = 'INFO') {
   const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`${icons[type] || ''} ${message}`);
@@ -105,14 +140,11 @@ function findFiles(dir, exts) {
       results.push(...findFiles(p, exts));
     } else if (exts.includes(path.extname(entry).toLowerCase())) {
       results.push(p);
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
   return results;
 }
 
-<<<<<<< HEAD
 function optimizeImages(publicDir, report) {
   const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
   if (images.length === 0) {
@@ -178,8 +210,7 @@ function ensureNextConfigFlags(rootDir, report) {
           m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
         );
       }
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+#!/usr/bin/env node
 });
       log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
@@ -311,16 +342,8 @@ if (require.main === module) {}
   const optimizer = new PerformanceOptimizer();
   optimizer.optimize().then(success => {})
     process.exit(success ? 0 : 1);
-=======
 #!/usr/bin/env node
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-      if (updated !== original) {
-        fs.writeFileSync(file, updated);
-        report.modifiedFiles.push(file);
-        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -356,12 +379,6 @@ class PerformanceOptimizer {
     const results = [];
     let successfulOptimizations = 0;
 
-<<<<<<< HEAD
-    for (const optimization of optimizations) {
-      try {
-        this.log(`🔧 Running ${optimization.name}...`);
-        this.log(`📝 ${optimization.description}`);
-=======
       if (buildResult.success) {
         // Analyze bundle size
         const buildDir = path.join(this.projectRoot, '.next');
@@ -375,12 +392,7 @@ class PerformanceOptimizer {
             recommendations: this.generateBundleRecommendations(sizeInMB)
           };
         }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       }
-<<<<<<< HEAD
-    } catch (e) {
-      report.errors.push(`Failed updating ${rel}: ${e.message}`);
-=======
     } catch (error) {
       this.results.bundleAnalysis = {
         success: false,
@@ -388,7 +400,6 @@ class PerformanceOptimizer {
         recommendations: ['Failed to analyze bundle size']
       };
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 
   async optimizeImages() {
@@ -401,10 +412,27 @@ class PerformanceOptimizer {
         const imageFiles = fs.readdirSync(imagesDir).filter(file => 
           /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
         );
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+        execSync(optimization.command, { stdio: 'pipe' });
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+    for (const optimization of optimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
         
         this.results.imageOptimization = {
           success: true,
@@ -647,13 +675,10 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       this.log(`Fatal error: ${error.message}`, 'ERROR');
     } finally {
       this.generateReport();
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
     }
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    }
+
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -669,21 +694,8 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
     
-<<<<<<< HEAD
-    return report;
-  }
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 // Run performance optimization
 const optimizer = new PerformanceOptimizer();
-<<<<<<< HEAD
-optimizer.optimizePerformance().catch(console.error);
-=======
     try {
       await this.analyzeBundle();
       await this.optimizeImages();
@@ -698,7 +710,6 @@ optimizer.optimizePerformance().catch(console.error);
   }
 }
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Run the performance optimizer
 if (require.main === module) {
     const optimizer = new PerformanceOptimizer(),
@@ -706,53 +717,8 @@ if (require.main === module) {
   }
 
 module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-console.log('⚡ Zion Tech Group - Performance Optimizer');
-console.log('');
-const performanceReport = {
-    timestamp: new Date().toISOString(),
-    optimizations: [],
-    recommendations: [],
-    metrics: {}
-};
-function analyzeBundleSize() {
-    console.log('\n📦 Analyzing bundle size...');
-    try {
-        if (fs.existsSync('.next')) {
-            const stats = execSync('du -sh .next', { encoding: 'utf8' });
-            const size = stats.trim().split('\t')[0];
-            performanceReport.metrics.bundleSize = size;
-            console.log(`✅ Bundle size: ${size}`);
-            if (size.includes('M') && parseInt(size) > 50) {
-                performanceReport.recommendations.push({
-                    type: 'bundle_size',
-                    message: 'Bundle size is large, consider code splitting',
-                    priority: 'high'
-                });
-            }
-        } else {
-            console.log('⚠️  No build found, run npm run build first');
-        }
-    } catch (error) {
-        console.log(`❌ Error analyzing bundle: ${error.message}`);
-=======
 
-      if (updated !== original) {
-        fs.writeFileSync(file, updated);
-        report.modifiedFiles.push(file);
-        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
-      }
-    } catch (e) {
-      report.errors.push(`Failed updating ${rel}: ${e.message}`);
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
-    }
-  }
-}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 function main() {
   const root = process.cwd();
   const timestamp = Date.now();
@@ -781,18 +747,6 @@ function main() {
 
   log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-try {
-  main();
-} catch (e) {
-  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
-  process.exit(1);
-}
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 function generateOptimizationRecommendations() {
     console.log('\n💡 Generating optimization recommendations...');
     // Image optimization
@@ -829,17 +783,12 @@ console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.pr
 console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium').length}`);
 console.log(`\n📄 Report saved to: ${reportPath}`);
 process.exit(0);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 // Run performance optimization
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().catch(console.error);
->>>>>>> origin/main
-=======
-=======
+// Run performance optimization
+const optimizer = new PerformanceOptimizer();
+optimizer.optimizePerformance().catch(console.error);
 
 try {
   main();
@@ -847,9 +796,5 @@ try {
   log(`Performance optimizer failed: ${e.message}`, 'ERROR');
   process.exit(1);
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+}
 optimizer.optimizePerformance().catch(console.error);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

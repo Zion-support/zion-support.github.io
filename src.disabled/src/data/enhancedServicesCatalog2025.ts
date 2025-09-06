@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 interface EnhancedServicesCatalog2025Props {
   // Add props here as needed
@@ -11,11 +9,3 @@ export default function EnhancedServicesCatalog2025({ }: EnhancedServicesCatalog
       <p>This component is currently under development.</p>
     </div>
   );
-
-}
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

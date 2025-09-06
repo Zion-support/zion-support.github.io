@@ -1,28 +1,19 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const { code, event, url, referrer } = req && req.body || {};
   if (!code || !event) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -45,11 +36,7 @@ export default async function handler(
     return res && res.status(200).json({ saved: true });
 
   } catch (e: any) {
-    return res && res.status(200).json({ saved: false, error: e?.message });
-
-  }
-}
-=======
+    return res.status(200).json({ saved: false, error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -75,36 +62,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ saved: true })
   } catch (e: any) {
-
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status ($1).json ({ $2 })) {
-  $2
-}
-  const { code, event, url, referrer } = req.body || {}
-  if (return res.status ($1).json ({ $2 })) {
-  $2
-}
-  const using_placeholder =;
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
-      "placeholder - key";
-=======
-
     return res.status(200).json({ saved: false, error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req, res) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     // Check condition
 if ( {) {
@@ -173,8 +137,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

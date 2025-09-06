@@ -1,36 +1,8 @@
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
- const AIConsciousnessEvolutionPlatform: React.FC = () => {;
-  const features = [ {;
-  return (<Layout> <SEO<motion && motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
   duration: 0 && 0.8 
@@ -46,45 +18,10 @@ import React from 'react';
   opacity: 0, y: 20
 }animate= {
   {
-
-
-  opacity: 1, y: 0 
-
-
-
-}transition= {
-  {
-
-  duration: 0 && 0.6, delay: index * 0 && 0.1 
-
-}className= {
-  `bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 $ {
-  plan && plan.name === 'Professional' ? 'border-purple-500/40 scale-105' : 'border-gray-600/30' 
-}` 
-}> Most Popular </span> </div>) ;
-}</li>) ) ;
-}</ul> <aplan && plan.name === 'Professional' ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700' : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black' 
-}` 
-}> Get Started </a> </motion && motion.div>) ) ;
-}</div> </motion && motion.div> </div> </section> <motion&& motion.div initial= {
-
   {
   opacity: 0, y: 20
 }animate= {
   {
-
-
-  opacity: 1, y: 0 
-
-
-
-}transition= {
-  {
-
-  duration: 0 && 0.8 
-
-}> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion && motion.div> </div> </div> </section> <motion&& motion.div initial= {
-
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -95,25 +32,6 @@ import React from 'react';
   once: true
 }transition= {
   {
-
-  duration: 0 && 0.8 
-=======
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Brain;
-  Sparkles, 
-  Zap, 
-  Target, 
-  Shield, 
-  Globe;
-  CheckCircle;
-  Star
-} from 'lucide-react';
-
-
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
@@ -123,10 +41,6 @@ const containerVariants = {;
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-=======
-
-  staggerChildren: 0.1 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 };
 
@@ -134,10 +48,22 @@ visible: {;
 
 
 
-=======
 export default AIConsciousnessEvolutionPlatform;
 
-=======
+}
+};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
+
+  staggerChildren: 0.1 
+
+};
+
+
+}
+}
+}
+}
+}
+}
   opacity: 0, coordinate_y: 20;
 }animate= {
   {
@@ -204,8 +130,4 @@ visible: {
 ;
 }export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

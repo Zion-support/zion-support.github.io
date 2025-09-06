@@ -1,8 +1,13 @@
 
+  const { userId } = req.query
+  const txs = getAllTransactions()
+  const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+  res.status(200).json({ transactions: filtered })
+}
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

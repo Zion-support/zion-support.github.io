@@ -1,4 +1,4 @@
-{
+
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/2025-advanced-services-showcase": "pages/2025-advanced-services-showcase.js",
@@ -612,4 +612,4 @@
   "/search/[slug]": "pages/search/[slug].js",
   "/services/[slug]": "pages/services/[slug].js",
   "/support": "pages/support.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html"}

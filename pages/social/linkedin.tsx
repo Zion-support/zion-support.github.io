@@ -1,27 +1,5 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect } from 'react';
+export default function LinkedInRedirect() {
 
 
 
@@ -30,7 +8,6 @@ export default function LinkedInRedirect() {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
   }, []);
@@ -57,21 +34,19 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
-
-=======
+export default function LinkedInRedirect(req, res) {
+  try {
+	useEffect(() => {;
+		if (typeof window !== 'undefined') {;
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group');
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 
 }
-
-
-=======
-export default function LinkedInRedirect() {
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
-		}
-	}, []);
-
+	}, []),
 	return (
 		<>
 			<Head>
@@ -88,7 +63,6 @@ export default function LinkedInRedirect() {
 		</>
 	)
 }
-
 import Head from 'next / head';
 ;
 export default /**
@@ -130,9 +104,4 @@ if ( {) {
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

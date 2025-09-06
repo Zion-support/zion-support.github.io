@@ -1,47 +1,3 @@
-
-"use client",;
-import Link from "next/link",;
-import { ReactNode } from "react",;
-interface FeatureCardProps {;
-  id: number,;
-  title: string,;
-  description: string,;
-  icon: ReactNode,;
-  color: string,;
-  href: string,;
-  isActive: boolean,;
-  onClick: () => void;
-}
-;
-export function FeatureCard({;
-  title,;
-  description,;
-  icon,;
-  color,;
-  href,;
-  isActive,;
-  onClick;
-}: FeatureCardProps) {;
-  const colorClasses = {;
-    blue: "bg-blue-500/20 hover:bg-blue-500/30 border-blue-500/30",;
-    purple: "bg-purple-500/20 hover:bg-purple-500/30 border-purple-500/30",;
-    green: "bg-green-500/20 hover:bg-green-500/30 border-green-500/30",;
-    red: "bg-red-500/20 hover:bg-red-500/30 border-red-500/30",;
-    yellow: "bg-yellow-500/20 hover:bg-yellow-500/30 border-yellow-500/30",;
-    indigo: "bg-indigo-500/20 hover:bg-indigo-500/30 border-indigo-500/30";
-  };
-  return (;
-    <div;
-      className={`card group cursor-pointer transition-all duration-300 ${;
-        isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105';
-      } ${colorClasses[color as keyof typeof colorClasses]}`}
-      onClick={onClick}
-      onKeyDown={(e) => {;
-        if (e.key === 'Enter' || e.key === ' ') {;
-
-          e.preventDefault();
-          onClick();
-=======
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -69,18 +25,6 @@ function FeatureCard() {
   }
   return (
     <div;
-      className={`card group cursor - pointer transition - all duration - 300 ${
-        is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
-      } ${color_classes[color as keyof typeof color_classes]}`}
-      on_click={on_click}
-      onKeyDown={(e) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          on_click ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }}
       tab_index={0}

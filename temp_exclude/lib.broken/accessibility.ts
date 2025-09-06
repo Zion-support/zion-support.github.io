@@ -53,8 +53,6 @@ export const accessibilityUtils = {;
 export const accessibilityConfig = {; ariaLabels: {,
     navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {,
     skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {,
-
-
 export const accessibilityConfig = {; ariaLabels: {,
     navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {,
     skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {,

@@ -1,46 +1,17 @@
-
-
-
-import { Review } from "@/types/reviews",
-import { ReviewCard } from "./ReviewCard",
-
-=======
-import {Review} from "@/types/reviews";
-import {ReviewCard} from "./ReviewCard";
-=======
-import { Review } from "@/types/reviews",
-import { ReviewCard } from "./ReviewCard",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
+
 export function ReviewsList({
-  reviews
-  isLoading
-  onReportReview
+  reviews,
+  isLoading,
+  onReportReview,
 }: ReviewsListProps) {
   if (isLoading) {
-=======
-import { Review  } from '@/types / reviews';
-import { ReviewCard  } from './ReviewCard';
-interface ReviewsListProps {
-  reviews: Review[];
-  is_loading: boolean;
-  onReportReview: (review_id: string, reason: string) => Promise < boolean>;
-}
-export /**
- * ReviewsList - Function description
- */
-function ReviewsList() {
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className="space - y-4">;
         {Array (3);
@@ -48,18 +19,18 @@ if ( {) {
           .map ((_, i) => (
             <div;
               key={i}
+    return (
+      <div className="space-y-4">
+        {Array(3)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              key={i}
 
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
 interface ReviewsListProps {;
   reviews: Review[],;
-  isLoading: boolean,;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
-}
-
-export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
-  if (isLoading) {;
-    return (
       <div className="space-y-4">;
         {Array(3).fill(0).map((_, i) => (;
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">;
@@ -76,7 +47,6 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
-=======
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -102,18 +72,18 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
 
 
         ))}
-      </div>;
+      </div>
     );
   }
 
-  if (reviews && reviews.length === 0) {;
+  if (reviews.length === 0) {
     return (
-      <div className="text-center py-8 border rounded-lg bg-muted/20">;
-        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>;
-        <p className="text-muted-foreground">;
-          Once reviews are submitted and approved, they will appear here.;
-        </p>;
-      </div>;
+      <div className="text-center py-8 border rounded-lg bg-muted/20">
+        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
+        <p className="text-muted-foreground">
+          Once reviews are submitted and approved, they will appear here.
+        </p>
+      </div>
     );
   }
 
@@ -137,22 +107,6 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
-
-=======
-    <div className="space-y-4">
-      {reviews.map((review) => (
-
-        <ReviewCard 
-          key={review.id} 
-          review={review} 
-          onReport={onReportReview} 
-        />
-
-      ))}
-    </div>
-
-  )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

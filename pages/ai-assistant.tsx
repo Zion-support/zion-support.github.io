@@ -1,4 +1,7 @@
 
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
 
   return (
     <Layout>;
@@ -14,7 +17,6 @@
               AI Assistant;
             </h1>;
             <p className='text-gray-300 text-lg'>;
-=======
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -36,7 +38,6 @@
           </header>;
 
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-=======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
               'Research and summarize documents and web sources',
@@ -82,10 +83,8 @@
       </main>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -101,7 +100,6 @@
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
@@ -110,7 +108,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
@@ -120,8 +117,6 @@
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
@@ -153,12 +148,6 @@ export default function AIAssistantPage() {
   )
 }
 
-    </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

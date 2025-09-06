@@ -1,5 +1,3 @@
-
-
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import handler from '@/pages/api/admin/generate-pitch-deck'
@@ -50,7 +48,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
       "data"
             "error"
       "method"
-
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';
@@ -372,7 +369,4 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     expect(res._getStatusCode()).toBe(500);
   });
 });
-
-=======
       "headers"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

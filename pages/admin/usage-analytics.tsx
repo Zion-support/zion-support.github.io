@@ -1,9 +1,3 @@
-
-
-=======
-
-
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -42,56 +36,12 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
-
-  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
-=======
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const result = await requireAdminRole(ctx);
-  // @ts-ignore;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-};
-type Datum = { label: string, value: number };
-function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
-  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),;
-
-  let acc = 0;
-  const radius = size / 2;
-  const center = radius;
-  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
-
-  const slices = data.map((d, i) => {
-    const start = (acc / total) * 2 * Math.PI;
-    acc += d.value;
-    const end = (acc / total) * 2 * Math.PI;
-    const x1 = center + radius * Math.cos(start);
-    const y1 = center + radius * Math.sin(start);
-    const x2 = center + radius * Math.cos(end);
-    const y2 = center + radius * Math.sin(end);
-    const largeArc = end - start > Math.PI ? 1 : 0;
-    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
-
-    return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
-  });
-  return (;
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -118,11 +68,8 @@ function Funnel({ data }: { data: Datum[] }) {
       ))}
     </div>
   )
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
 import Head from 'next / head',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
@@ -135,7 +82,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Check condition
 if (return result, ) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
   return result;
 },
@@ -161,7 +107,6 @@ function PieChart() {
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
@@ -182,28 +127,15 @@ function LineChart() {
       <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
     </svg>);
 }
-
-/**
- * Funnel - Function description
- */
-function Funnel() {
-
-  return (
-
-=======
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
 
 
-=======
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }
         </div>;
       ))  } catch (error) {
@@ -221,7 +153,6 @@ function Funnel() {
 ;
 export default function UsageAnalytics(req, res) {
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
@@ -235,55 +166,11 @@ export default function UsageAnalytics(req, res) {
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
-      setFunnel(json.funnel || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-export default /**
- * UsageAnalytics - Function description
- */
-function UsageAnalytics() {
-  const [start, set_start] = useState < Date>(new Date (Date.now () - 29 * 24 * 3600 * 1000)),
-  const [end, set_end] = useState < Date>(new Date ()),
-  const [user_type, setUserType] = useState < string>('all'),
-  const [loading, set_loading] = useState (false),
-  const [pagesMostUsed, setPagesMostUsed] = useState < Datum[]>([]),
-  const [events, set_events] = useState < Datum[]>([]),
-  const [line, set_line] = useState<{ date: string, value: number }[]>([]),
-  const [funnel, set_funnel] = useState < Datum[]>([]),
-  const refresh = useCallback (async () => {
-    set_loading (true),
-    try {
-      const params = new URLSearchParams ({ start: start.toISOString (), end: end.toISOString (), user_type }),
-      const res = await fetch (`/api / admin / analytics / summary?${params.to_string ()}`),
-      const json = await res.json (),
-      setPagesMostUsed (json.pagesMostUsed || []),
-      set_events (json.events || []),
-      set_line (json.line || []),
-      set_funnel (json.funnel || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } finally {
-      set_loading (false);
-    }
-
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
-            <div className="font-medium mb-2">Most Used Features</div>
-            <div className="flex items-center gap-4">
-              <PieChart data={pagesMostUsed.slice(0, 6)} />
-              <ul className="text-sm">
-                {pagesMostUsed.slice(0, 6).map((d) => (
-                  <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
-
-
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </ul>
             </div>
           </div>
@@ -302,8 +189,6 @@ function UsageAnalytics() {
             </div>
           </div>
         </div>
-
-
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
@@ -313,11 +198,15 @@ function UsageAnalytics() {
         </div>
       </div>
     </EnhancedLayout>
-
-=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
-=======
+}
+
   }, [start, end, user_type]),
   useEffect (() => { refresh () }, []),
   return (
@@ -383,9 +272,5 @@ function UsageAnalytics() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

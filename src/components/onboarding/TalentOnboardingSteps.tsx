@@ -1,53 +1,24 @@
-
-
-
-
-  return <OnboardingTracker steps={steps} />
-
-=======
-import React from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-export /**
- * TalentOnboardingSteps - Function description
- */
-function TalentOnboardingSteps() {
-  const { user } = use_auth ();
-  const onboarding_status = useOnboardingStatus ();
-  const steps: OnboardingStep[] = [;
-=======
-
-
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
   const steps: OnboardingStep[] = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
-      id: 'profile',
-      label: 'Complete your profile',
-      completed: onboarding_status.profile_completed,
-      link: '/profile',
-      action: 'Update',
-    },
+      id: "profile",
+      label: "Complete your profile",
+      completed: onboardingStatus.profileCompleted,
+      link: "/profile",
+      action: "Update"},
     {
-      id: 'skills',
-      label: 'Add your top skills',
-      completed: onboarding_status.skills_added,
-      link: '/profile / skills',
-      action: 'Add Skills',
-    },
+      id: "skills",
+      label: "Add your top skills",
+      completed: onboardingStatus.skillsAdded,
+      link: "/profile/skills",
+      action: "Add Skills"},
     {
-      id: 'availability',
-      label: 'Set your availability',
-      completed: onboarding_status.availability_set,
-      link: '/profile / availability',
-      action: 'Set',
-    },
+      id: "availability",
+      label: "Set your availability",
+      completed: onboardingStatus.availabilitySet,
+      link: "/profile/availability",
+      action: "Set"},
     {
-
-      id: "match",
-      label: "Receive your first job match",
-      completed: onboardingStatus.matchReceived,
-
-
-

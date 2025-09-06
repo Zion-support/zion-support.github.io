@@ -1,6 +1,3 @@
-
-
-
 import React from "react",
 import {
   Table,
@@ -19,13 +16,9 @@ import {
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
-=======
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -40,57 +33,113 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 1
       name: "Alex Johnson"
       email: "alex@example.com"
       role: "Admin"
       permissions: {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true}},
-
     {
       id: 2
       name: "Jamie Smith"
       email: "jamie@example.com"
       role: "Recruiter"
       permissions: {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false}},
-
     {
       id: 3
       name: "Sam Williams"
       email: "sam@example.com"
       role: "Manager"
       permissions: {
-
-        view_candidates: true,
-        edit_candidates: false,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: true,
-        manage_billing: false}},
-
     {
       id: 4
       name: "Taylor Brown"
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  };
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  }
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings";
+    "Recruiter": "Can manage candidates and job postings";
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"}
+  },
 
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
 
+                  <Switch
+                    checked={member.permissions.viewCandidates}
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "editCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.createJobs} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "createJobs", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "manageTeam", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    checked={member.permissions.viewBilling}
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewBilling", checked)
+                    }
+                  />
+                </TableCell>
+              </TableRow>
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) => 
+                      handlePermissionChange(member.id, "viewBilling", checked)
+import React from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { toast } from "@/hooks/use-toast",;
+import { InfoIcon } from "lucide-react",;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from "@/components/ui/tooltip",;
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
@@ -156,11 +205,6 @@ export function RoleManagement() {;
     "Recruiter": "Can manage candidates and job postings";
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
-=======
-
-      title: "Permission updated",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -175,218 +219,15 @@ export function RoleManagement() {;
               <p className="text-sm text-muted-foreground">{description}</p>;
             </div>;
           ))}
-
-
-                  <Switch 
-                    checked={member.permissions.viewCandidates} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "viewCandidates", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-
-                  <Switch 
-                    checked={member.permissions.editCandidates} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "editCandidates", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-
-                  <Switch 
-                    checked={member.permissions.createJobs} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "createJobs", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-
-                  <Switch 
-                    checked={member.permissions.manageTeam} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "manageTeam", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-        </div>;
-      </div>;
-
-      <div className="rounded-md border">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Team Member</TableHead>;
-              <TableHead>Role</TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  View Candidates;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can view candidate profiles and applications;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Edit Candidates;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can edit candidate information and status;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Create Jobs;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can create and publish job listings;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Manage Team;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can add, edit, and remove team members;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Billing Access;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can view and manage billing information;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {teamMembers && teamMembers.map((member) => (;
-              <TableRow key={member && member.id}>;
-                <TableCell>;
-                  <div className="font-medium">{member && member.name}</div>;
-                  <div className="text-sm text-muted-foreground">;
-                    {member && member.email}
-                  </div>;
-                </TableCell>;
-                <TableCell>;
-                  <select
-                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                    defaultValue={member && member.role}>;
-                    <option value="Admin">Admin</option>;
-                    <option value="Recruiter">Recruiter</option>;
-                    <option value="Manager">Manager</option>;
-                    <option value="Viewer">Viewer</option>;
-                  </select>;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.viewCandidates} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "viewCandidates", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.editCandidates} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "editCandidates", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.createJobs} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "createJobs", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.manageTeam} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "manageTeam", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.viewBilling} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "viewBilling", checked);
-
                     }
                   />;
                 </TableCell>;
               </TableRow>;
-=======
 
                   <Switch 
                     checked={member.permissions.viewBilling} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-  );
-}
-
-=======
         view_candidates: true,
         edit_candidates: false,
         create_jobs: false,
@@ -569,4 +410,3 @@ export function RoleManagement() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

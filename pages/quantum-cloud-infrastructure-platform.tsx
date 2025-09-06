@@ -66,8 +66,9 @@ import ServiceLanding from '../components/sections/ServiceLanding';
     </>;
   );
 
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
-=======
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
 		<>
@@ -98,14 +99,6 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 	)
 }
 
-=======
-import React from 'react';
-import Head from 'next / head';
-import ServiceLanding from '../components / sections / ServiceLanding';
-export default /**
- * QuantumCloudInfrastructurePlatformPage - Function description
- */
-function QuantumCloudInfrastructurePlatformPage() {
   return (
     <>;
       <Head>;
@@ -145,9 +138,5 @@ function QuantumCloudInfrastructurePlatformPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

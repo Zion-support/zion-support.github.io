@@ -1,11 +1,11 @@
-
-
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
+}
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null;
 };
-
-
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
@@ -38,20 +38,25 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   };
 }
 
-
+export function getArticlesByCategory(articles: HelpArticle[], category: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.category === category);
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+export function getArticlesByTag(articles: HelpArticle[], tag: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.tags.includes(tag));
+}
+
+export function searchArticles(articles: HelpArticle[], query: string): HelpArticle[] {
+  const queryLower = query && query.toLowerCase();
+  return articles && articles.filter(article => 
+    article && article.title.toLowerCase().includes(queryLower) ||
+    article && article.content.toLowerCase().includes(queryLower) ||
+    article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower))
+  );
+}
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
-  getArticleById: (id: string) => null;
 }
-;
-export const logSupportEventToOperator = (event: any) =>: any {
-  // Add support event logging functionality here;
-  return null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}

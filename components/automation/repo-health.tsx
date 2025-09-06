@@ -1,29 +1,23 @@
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string;
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
+ 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 
 
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-};
-type Props = { report: Report | null },;
-export const getStaticProps: GetStaticProps<Props> = async () => {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'publicautomationrepo-health && health.json');
-    const raw = fs && fs.readFileSync(file, 'utf8');
-    const data = JSON && JSON.parse(raw);
-
-
-=======
 ;
 }
 type Props = { report: Report | null },
@@ -32,25 +26,19 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { report: data }, revalidate: 3600 }
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
-
-};
-
 export default function RepoHealth(): any ({ report }: Props) {;
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function RepoHealth({ report }: Props) {
+export default function RepoHealth({ report }: Props) {;
   if (!report) return <div>No report yet. Check back soon.</div>;
-
   return (
 
     <div className="space-y-6">;
@@ -79,14 +67,6 @@ export default function RepoHealth(): any ({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
-  );
-}
-
-=======
 }
 ;
 export default /**
@@ -124,11 +104,3 @@ if (return <div > No report yet. Check back soon.</div>) {
         </ul>;
       </section>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

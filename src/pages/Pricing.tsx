@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import Button from '../components/Button';
-import Card from '../components/Card';
-import Modal from '../components/Modal';
+import React from 'react';
+import { Check, Star } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
-const Pricing: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+const Pricing = () => {
   const plans = [
     {
       name: 'Starter',
@@ -14,11 +10,11 @@ const Pricing: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started',
       features: [
-        'Up to 5 team members',
-        'Basic AI services',
+        'Basic AI consultation',
         'Email support',
-        'Standard security',
-        '1GB storage'
+        'Monthly security scan',
+        'Basic cloud setup',
+        '5 hours of support'
       ],
       popular: false
     },
@@ -28,12 +24,13 @@ const Pricing: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 25 team members',
-        'Advanced AI services',
+        'Advanced AI solutions',
         'Priority support',
-        'Enhanced security',
-        '10GB storage',
-        'Custom integrations'
+        'Weekly security audits',
+        'Full cloud management',
+        '20 hours of support',
+        'Custom integrations',
+        'Performance monitoring'
       ],
       popular: true
     },
@@ -41,163 +38,98 @@ const Pricing: React.FC = () => {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations with complex needs',
       features: [
-        'Unlimited team members',
-        'Full AI suite',
+        'Custom AI development',
         '24/7 dedicated support',
-        'Enterprise security',
-        'Unlimited storage',
-        'Custom development',
-        'SLA guarantee'
+        'Daily security monitoring',
+        'Multi-cloud architecture',
+        'Unlimited support hours',
+        'Custom integrations',
+        'Advanced analytics',
+        'Dedicated account manager',
+        'SLA guarantees'
       ],
       popular: false
     }
   ];
 
-  const handleSelectPlan = (planName: string) => {
-    setSelectedPlan(planName);
-    setIsModalOpen(true);
-  };
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
+    <>
+      <SEOHead 
+        title="Pricing Plans - Affordable Technology Solutions | Zion Tech Group"
+        description="Choose the perfect plan for your business needs. Flexible pricing for AI services, cybersecurity, cloud infrastructure, and custom software development."
+        keywords="pricing, technology solutions, AI services pricing, cybersecurity pricing, cloud services pricing, software development cost"
+      />
+      <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Pricing Plans
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Choose the perfect plan for your business needs. All plans include our core 
-            AI and technology services with flexible scaling options.
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Pricing Plans</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our core services with different levels of support and features.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div
-              key={plan.name}
-              className={`relative bg-slate-800 rounded-lg shadow-lg p-8 border-2 transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-blue-500 ring-2 ring-blue-500 ring-opacity-50' 
-                  : 'border-slate-700 hover:border-blue-400'
+              key={index}
+              className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
+                  <div className="bg-blue-500 text-white px-4 py-2 rounded-full flex items-center space-x-1">
+                    <Star size={16} />
+                    <span className="text-sm font-semibold">Most Popular</span>
+                  </div>
                 </div>
               )}
               
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-gray-400 mb-4">{plan.description}</p>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p className="text-gray-600 mb-4">{plan.description}</p>
                 <div className="flex items-baseline justify-center">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
+                  <span className="text-gray-600 ml-1">{plan.period}</span>
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-300">{feature}</span>
+                  <li key={featureIndex} className="flex items-start">
+                    <Check className="text-green-500 mr-3 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <Button
-                variant={plan.popular ? 'primary' : 'outline'}
-                size="large"
-                className="w-full"
-                onClick={() => handleSelectPlan(plan.name)}
+              <button
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-blue-500 text-white hover:bg-blue-600'
+                    : 'bg-gray-900 text-white hover:bg-gray-800'
+                }`}
               >
-                Choose {plan.name}
-              </Button>
+                Get Started
+              </button>
             </div>
           ))}
         </div>
 
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-8">Need a Custom Solution?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            We understand that every business is unique. Contact us to discuss 
-            custom pricing and solutions tailored to your specific requirements.
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            We offer tailored solutions for unique business requirements. Contact us to discuss your specific needs.
           </p>
-          <Button variant="outline" size="large" onClick={() => window.location.href = '/contact'}>
+          <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
             Contact Sales
-          </Button>
-        </div>
-
-        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Can I change plans anytime?</h3>
-              <p className="text-gray-300">
-                Yes, you can upgrade or downgrade your plan at any time. Changes take effect 
-                immediately and we'll prorate any billing differences.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Is there a free trial?</h3>
-              <p className="text-gray-300">
-                We offer a 14-day free trial for all plans. No credit card required to get started.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">What payment methods do you accept?</h3>
-              <p className="text-gray-300">
-                We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Do you offer discounts?</h3>
-              <p className="text-gray-300">
-                Yes, we offer annual billing discounts and special pricing for non-profits and educational institutions.
-              </p>
-            </div>
-          </div>
+          </button>
         </div>
       </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title={`Choose ${selectedPlan} Plan`}
-      >
-        <div className="text-center">
-          <p className="text-gray-600 mb-6">
-            You're about to select the {selectedPlan} plan. This will redirect you to our secure checkout process.
-          </p>
-          <div className="flex space-x-4">
-            <Button
-              variant="outline"
-              onClick={() => setIsModalOpen(false)}
-              className="flex-1"
-            >
-              Cancel
-            </Button>
-            <Button
-              variant="primary"
-              onClick={() => {
-                setIsModalOpen(false);
-                // In a real app, this would redirect to checkout
-                alert('Redirecting to checkout...');
-              }}
-              className="flex-1"
-            >
-              Continue to Checkout
-            </Button>
-          </div>
-        </div>
-      </Modal>
     </div>
+    </>
   );
 };
 

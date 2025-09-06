@@ -24,9 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ProductsAdminPageProps {
   // Add props here as needed
-
-
-
 export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
   return (
     <div>
@@ -34,11 +31,22 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+}
+}
+}
 }
 
-=======
 
 
+
+
+
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+}
+}
+}

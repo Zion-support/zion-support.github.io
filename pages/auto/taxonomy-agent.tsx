@@ -1,5 +1,4 @@
 
-
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -10,21 +9,21 @@ const TaxonomyAgent: NextPage = () => {
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
         <p>Suggests topic tags for each page to improve discovery and navigation.</p>
+      </main>
+    </div>
+  )
+}
+export default TaxonomyAgent;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
-=======
-=======
-        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </main>
     </div>
   )
 },
 
+export default TaxonomyAgent,;
+export default TaxonomyAgent,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

@@ -1,12 +1,3 @@
-
-
-      <Head>
-        <title>Authentication Error - Zion Tech Marketplace</title>
-        <meta name="description" content="Authentication error page" />
-      </Head>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -24,14 +15,6 @@
                 <li>• Network connectivity issues</li>
                 <li>• Temporary service unavailability</li>
               </ul>
-
-
-              <div className="pt-4 space-y-2">
-                <Button asChild className="w-full">
-                  <Link href="/auth/login">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Try Again
                   </Link>
                 </Button>
@@ -41,13 +24,6 @@
                   </Link>
                 </Button>
               </div>
-
-
-              <div className="text-center text-sm text-muted-foreground pt-4">
-                Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           </CardContent>
@@ -115,17 +91,7 @@ function ErrorPage() {
     </>);
 
 }
-=======
-
-}
-
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

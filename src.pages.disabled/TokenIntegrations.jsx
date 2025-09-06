@@ -24,9 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface TokenIntegrationsProps {
   // Add props here as needed
-
-
-
 export default function TokenIntegrations({ }: TokenIntegrationsProps) {
   return (
     <div>
@@ -34,11 +31,22 @@ export default function TokenIntegrations({ }: TokenIntegrationsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
+:src.pages.disabled/TokenIntegrations.jsx
+}
+}
+}
+}
+}
 }
 
-=======
 
 
+
+
+
+:src.pages.disabled/TokenIntegrations.jsx
+}
+}
+}
+}
+}

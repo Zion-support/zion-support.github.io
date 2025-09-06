@@ -15,50 +15,32 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@assets': path.resolve(__dirname, './src/assets')
-    }
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
+  css: {
+    postcss: false
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: []
+  },
+  server: {
+    port: 3000,
+    host: true
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
-    sourcemap: false,
+    outDir: 'dist',
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-        },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const name = assetInfo.name || '';
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
-          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
-          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
-          return 'assets/[name]-[hash].[ext]';
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          animations: ['framer-motion']
         }
       }
-    },
-    chunkSizeWarningLimit: 1000
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      'lucide-react',
-      'clsx',
-      'tailwind-merge'
-    ],
-    exclude: ['@radix-ui/react-icons']
-  },
-  server: { 
-    port: 3000, 
-    host: true, 
-    open: true 
-  },
-  preview: { 
-    port: 4173, 
-    host: true, 
-    open: true 
+    }
   }
 });

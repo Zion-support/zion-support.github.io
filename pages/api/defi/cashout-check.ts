@@ -1,4 +1,7 @@
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { KycProfile } from '../../../utils/kyc';
+import fs from 'fs';
+import path from 'path';
 
   } catch {
     return {}
@@ -21,8 +24,6 @@
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 function load(): Record<string, KycProfile> {
@@ -36,5 +37,30 @@ function load(): Record<string, KycProfile> {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { userId, amount, currency } = req.body as { userId?: string, amount?: number, currency?: string },;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  if (amount <= THRESHOLD) return res.status( allowed: true, reason: 'Below threshold' ).json({$2});
+  if (!profile) return res.status( allowed: false, reason: 'KYC not started' ).json({$2});
+  if (profile.status !== 'approved') return res.status(200).json({ allowed: false, reason: 'KYC not approved' });
+  if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' });
+  return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}

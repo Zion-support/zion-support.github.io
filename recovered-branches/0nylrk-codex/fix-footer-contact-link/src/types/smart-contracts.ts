@@ -1,7 +1,5 @@
 
 
-
-
 export interface SmartContractInfo {;
 
 
@@ -15,29 +13,13 @@ export interface SmartContractInfo {;
   createdAt: string;
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
-
 ;
-export interface SmartContractInfo {
-  id: string;
-  transaction_hash?: string;
-  network_name?: BlockchainNetwork;
-  block_number?: number;
-  deployed_address?: string;
-  contract_type: 'escrow' | 'milestone' | 'simple_agreement';
-  metadata_url?: string;
-  created_at: string;
-  created_by: string,
-  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
-
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
+}
 }
 export interface EscrowContractDetails {
-=======
-}
-
 
 export interface EscrowContractDetails {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   client: string;
   talent: string;
   amount: number;
@@ -54,8 +36,6 @@ export interface DeploymentOptions {;
   useEscrow: boolean
 
   deployToChain: boolean
-=======
-  completion_deadline: string,
   arbitrator?: string;
 }
 export interface DeploymentOptions {
@@ -69,4 +49,4 @@ export interface DeploymentOptions {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

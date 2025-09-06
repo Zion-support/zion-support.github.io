@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 
 interface Props {
   children: ReactNode;
@@ -11,32 +15,31 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-  public static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
-  public render() {
+  render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
-          <div className="text-center p-8">
-            <h1 className="text-4xl font-bold mb-4">Oops! Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Refresh Page
+              Reload Page
             </button>
           </div>
         </div>
