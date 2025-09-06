@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -254,7 +257,17 @@ this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        ` Smart Dependency Optimization "failed": ${error.message}"
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+        ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

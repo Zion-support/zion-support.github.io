@@ -1,14 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 const TestimonialCarousel = () => {
   const testimonials = [
     {
       id: 1,
+<<<<<<< HEAD
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "Zion Tech transformed our business with their AI solutions. The results exceeded our expectations.",
@@ -28,12 +35,37 @@ const TestimonialCarousel = () => {
       content: "Their cybersecurity solutions are top-notch. We feel completely protected.",
       rating: 5
     }
+=======
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech transformed our business with their AI solutions. The results exceeded our expectations.',
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      content: 'Outstanding IT services and support. They helped us migrate to the cloud seamlessly.',
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: 'Emily Rodriguez',
+      company: 'SecureNet Ltd.',
+      content: 'Their cybersecurity solutions are top-notch. We feel completely protected.',
+      rating: 5,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ];
 
   return (
     <div className="relative">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
         {testimonials.map((testimonial) => (
+=======
+        {testimonials.map(testimonial => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-lg">
             <div className="flex mb-4">
               {[...Array(testimonial.rating)].map((_, i) => (
@@ -55,9 +87,16 @@ const TestimonialCarousel = () => {
 };
 
 export default TestimonialCarousel;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -427,7 +466,14 @@ export function TestimonialCarousel() {;
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

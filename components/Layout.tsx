@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 import Head from 'next/head';
 
@@ -14,6 +17,10 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 
 
 class ErrorBoundary extends React.Component {
@@ -191,6 +198,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 export default Layout;
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -280,9 +288,35 @@ export default function Layout({
     </>
   );
 }
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+  );
+};
+
+export default Layout;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

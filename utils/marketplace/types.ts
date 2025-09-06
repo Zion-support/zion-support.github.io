@@ -160,6 +160,7 @@ export interface Project {;
   startDateIso: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   status: ProjectStatus;
   timeline: Milestone[];
   documents: ProjectDocument[];
@@ -182,6 +183,24 @@ export type MarketplaceDb = {;
 =======
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+=======
+<<<<<<< HEAD
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+=======
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
@@ -197,6 +216,12 @@ export interface ProjectNote {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
@@ -210,6 +235,11 @@ export interface ProjectNote {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

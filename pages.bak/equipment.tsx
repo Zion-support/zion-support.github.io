@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from \'next/link\'; import Head from \'next/head\'; export default function Equipment() { return ( <> <Head> <title>Equipment - Zion Tech Group</title> <meta name=\"description\" content=\"Browse and purchase technology equipment including servers,network hardware,and IoT devices.\" />\" <meta name=\"keywords\" content=\"technology equipment,servers,network hardware,IoT devices,technology solutions\" />\" <link rel=\"canonical\" href=\""https\": </Head> \" <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\" <div className=\"max-w-6xl mx-auto px-4 py-16\">\" <div className=\"text-center mb-12\">\" <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">Technology Equipment</h1>\" <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Find the right technology equipment for your business needs </p> </div> \" <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\">\" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Servers & Storage</h3>\" <p className=\"text-slate-300 mb-4\">High-performance servers and storage solutions</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Rack servers</li> <li>• Blade servers</li> <li>• Storage arrays</li> <li>• Backup systems</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-green-400\">Network Equipment</h3>\" <p className=\"text-slate-300 mb-4\">Networking hardware and infrastructure</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Switches and routers</li> <li>• Wireless access points</li> <li>• Firewalls</li> <li>• Load balancers</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-purple-400\">IoT Devices</h3>\" <p className=\"text-slate-300 mb-4\">Internet of Things devices and sensors</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Environmental sensors</li> <li>• Smart cameras</li> <li>• Industrial sensors</li> <li>• Edge computing devices</li> </ul> </div> </div> \" <div className=\"text-center\">\" <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Browse Equipment </Link>\" <Link href=\"/marketplace\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View Marketplace </Link> </div> </div> </main> </> );\"}
 const Link from "next/link"; import Head from "next/head"; export default function Equipment() { return ( <> <Head> <title>Equipment - Zion Tech Group</title> <meta name="description" content="Browse and purchase technology equipment including servers,network hardware,and IoT devices." />" <meta name="keywords" content="technology equipment,servers,network hardware,IoT devices,technology solutions" />" <link rel="canonical" href="https: </Head> " <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">" <div className="max-w-6xl mx-auto px-4 py-16">" <div className="text-center mb-12">" <h1 className="text-4xl md:text-5xl font-bold mb-6">Technology Equipment</h1>" <p className="text-xl text-slate-300 max-w-3xl mx-auto"> Find the right technology equipment for your business needs </p> </div> " <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">" <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-blue-400">Servers & Storage</h3>" <p className="text-slate-300 mb-4">High-performance servers and storage solutions</p>" <ul className="text-slate-400 space-y-2"> <li> Rack servers</li> <li> Blade servers</li> <li> Storage arrays</li> <li> Backup systems</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-green-400">Network Equipment</h3>" <p className="text-slate-300 mb-4">Networking hardware and infrastructure</p>" <ul className="text-slate-400 space-y-2"> <li> Switches and routers</li> <li> Wireless access points</li> <li> Firewalls</li> <li> Load balancers</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-purple-400">IoT Devices</h3>" <p className="text-slate-300 mb-4">Internet of Things devices and sensors</p>" <ul className="text-slate-400 space-y-2"> <li> Environmental sensors</li> <li> Smart cameras</li> <li> Industrial sensors</li> <li> Edge computing devices</li> </ul> </div> </div> " <div className="text-center">" <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4"> Browse Equipment </Link>" <Link href="/marketplace" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"> View Marketplace </Link> </div> </div> </main> </> );"}'"'"
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -24,7 +29,11 @@ interface EquipmentProps {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,7 +42,10 @@ const Link from "next/link"; import Head from "next/head"; export default functi
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -47,11 +59,42 @@ interface EquipmentProps {
   // Add props here as needed
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Equipment({ }: EquipmentProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default function Equipment({ }: EquipmentProps) {
+  return (
+    <div>
+      <h1>Equipment</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> main
+export default function Equipment({ }: EquipmentProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -95,6 +138,7 @@ export default function Equipment(): any ({ }: EquipmentProps) {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +148,9 @@ export default function Equipment(): any ({ }: EquipmentProps) {;
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,7 +168,10 @@ export default function Equipment(): any ({ }: EquipmentProps) {;
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -129,6 +179,7 @@ export default function Equipment(): any ({ }: EquipmentProps) {;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -136,3 +187,9 @@ export default function Equipment(): any ({ }: EquipmentProps) {;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

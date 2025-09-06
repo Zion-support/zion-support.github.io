@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -18,7 +21,6 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -34,6 +36,7 @@ const customJestConfig = {
       ]
     }]
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
@@ -58,6 +61,8 @@ const customJestConfig = {
 };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   collectCoverageFrom: [
     'components/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
@@ -76,6 +81,10 @@ const customJestConfig = {
     '<rootDir>/supabase.disabled/',
     '<rootDir>/dao/',
     '<rootDir>/pages.disabled/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
   ],
 }
 
@@ -83,6 +92,7 @@ const customJestConfig = {
 module.exports = createJestConfig(customJestConfig)
 =======
 module.exports = createJestConfig(customJestConfig)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   coverageReporters: ['text', 'lcov'],
@@ -97,3 +107,5 @@ module.exports = createJestConfig(customJestConfig)
 };
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

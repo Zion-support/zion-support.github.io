@@ -146,21 +146,21 @@ import SEOHead from '../components/SEOHead';
 
 const HomePage: React.FC = () => (
   <>
-    <SEOHead 
+    <SEOHead
       title="Zion Tech Group - Leading AI & Technology Solutions"
       description="Transform your business with cutting-edge AI solutions, cybersecurity, and cloud infrastructure. Leading technology company delivering innovative solutions for a smarter future."
       keywords="AI solutions, cybersecurity, cloud infrastructure, machine learning, automation, technology consulting, digital transformation"
     />
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
     {/* Hero Section */}
-    <motion.div 
+    <motion.div
       className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       <div className="text-center mb-16">
-        <motion.h1 
+        <motion.h1
           className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -168,7 +168,7 @@ const HomePage: React.FC = () => (
         >
           Zion Tech Group
         </motion.h1>
-        <motion.p 
+        <motion.p
           className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -188,7 +188,7 @@ const HomePage: React.FC = () => (
       </div>
 
       {/* Services Grid */}
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -230,7 +230,7 @@ const HomePage: React.FC = () => (
       </motion.div>
 
       {/* Why Choose Us Section */}
-      <motion.div 
+      <motion.div
         className="text-center"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -241,12 +241,12 @@ const HomePage: React.FC = () => (
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {[
-            { title: "Innovation", description: "Pioneering the next generation of technology." },
-            { title: "Expertise", description: "Team of industry-leading professionals." },
-            { title: "Reliability", description: "Trusted solutions for critical operations." },
-            { title: "Scalability", description: "Solutions designed to grow with you." },
-            { title: "Security", description: "Robust protection for all your data." },
-            { title: "Support", description: "24/7 dedicated customer assistance." }
+            { title: 'Innovation', description: 'Pioneering the next generation of technology.' },
+            { title: 'Expertise', description: 'Team of industry-leading professionals.' },
+            { title: 'Reliability', description: 'Trusted solutions for critical operations.' },
+            { title: 'Scalability', description: 'Solutions designed to grow with you.' },
+            { title: 'Security', description: 'Robust protection for all your data.' },
+            { title: 'Support', description: '24/7 dedicated customer assistance.' },
           ].map((item, index) => (
             <motion.div
               key={item.title}
@@ -255,8 +255,8 @@ const HomePage: React.FC = () => (
               transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
-              <Card 
-                title={item.title} 
+              <Card
+                title={item.title}
                 description={item.description}
                 className="h-full"
               />

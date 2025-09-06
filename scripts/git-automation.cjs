@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -8,10 +9,19 @@
         cwd: process.cwd(),
         timeout: 60000,
         ...options
+=======
+  async runCommand(command, options = {}) {
+    try {
+      const { stdout, stderr } = await execAsync(command, { 
+        cwd: process.cwd(), 
+        timeout: 60000, 
+        ...options 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       });
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
+<<<<<<< HEAD
       return {
         success: false,
         stdout: error.stdout || "",
@@ -22,6 +32,20 @@
   async checkGitStatus() {
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
+=======
+      return { 
+        success: false, 
+        stdout: error.stdout || "", 
+        stderr: error.stderr || error.message 
+      };
+    }
+  }
+
+  async checkGitStatus() {
+    this.log('Checking git status...');
+    const result = await this.runCommand('git status --porcelain');
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (result.success) {
       const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
       this.log(`Found ${changes.length} changes`);
@@ -31,9 +55,17 @@
       return [];
     }
   }
+<<<<<<< HEAD
   async addAllChanges() {
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
+=======
+
+  async addAllChanges() {
+    this.log('Adding all changes...');
+    const result = await this.runCommand('git add .');
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (result.success) {
       this.log('✅ All changes added');
       return true;
@@ -42,9 +74,17 @@
       return false;
     }
   }
+<<<<<<< HEAD
   async commitChanges(message) {
     this.log(`Committing changes: ${message}`);
     const result = await this.runCommand(`git commit -m "${message}"`);
+=======
+
+  async commitChanges(message) {
+    this.log(`Committing changes: ${message}`);
+    const result = await this.runCommand(`git commit -m "${message}"`);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (result.success) {
       this.log('✅ Changes committed');
       return true;
@@ -53,9 +93,17 @@
       return false;
     }
   }
+<<<<<<< HEAD
   async pushChanges(branch = 'main') {
     this.log(`Pushing changes to ${branch}...`);
     const result = await this.runCommand(`git push origin ${branch}`);
+=======
+
+  async pushChanges(branch = 'main') {
+    this.log(`Pushing changes to ${branch}...`);
+    const result = await this.runCommand(`git push origin ${branch}`);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (result.success) {
       this.log('✅ Changes pushed');
       return true;
@@ -64,76 +112,138 @@
       return false;
     }
   }
+<<<<<<< HEAD
   async mergeToMain() {
     this.log('Merging to main branch...');
+=======
+
+  async mergeToMain() {
+    this.log('Merging to main branch...');
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Checkout main branch
     const checkoutResult = await this.runCommand('git checkout main');
     if (!checkoutResult.success) {
       this.log('❌ Failed to checkout main branch');
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Pull latest changes
     const pullResult = await this.runCommand('git pull origin main');
     if (!pullResult.success) {
       this.log('❌ Failed to pull latest changes');
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Merge current branch
     const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements"');
     if (!mergeResult.success) {
       this.log('❌ Failed to merge changes');
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Push merged changes
     const pushResult = await this.pushChanges('main');
     if (!pushResult.success) {
       this.log('❌ Failed to push merged changes');
       return false;
     }
+<<<<<<< HEAD
     this.log('✅ Successfully merged to main branch');
     return true;
   }
   async runFullWorkflow() {
     this.log('Starting full git automation workflow...');
+=======
+
+    this.log('✅ Successfully merged to main branch');
+    return true;
+  }
+
+  async runFullWorkflow() {
+    this.log('Starting full git automation workflow...');
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Check git status
     const changes = await this.checkGitStatus();
     if (changes.length === 0) {
       this.log('No changes to commit');
       return true;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Add all changes
     const added = await this.addAllChanges();
     if (!added) {
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Commit changes
     const committed = await this.commitChanges('Automated improvements and fixes');
     if (!committed) {
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Push changes
     const pushed = await this.pushChanges();
     if (!pushed) {
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Merge to main
     const merged = await this.mergeToMain();
     if (!merged) {
       return false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log('Full git automation workflow completed successfully');
     return true;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle command line arguments
 if (require.main === module) {
   const gitAutomation = new GitAutomation();
   const command = process.argv[2];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   switch (command) {
     case "status":
       gitAutomation.checkGitStatus();
@@ -163,12 +273,22 @@ if (require.main === module) {
       process.exit(1);
   }
 }
+<<<<<<< HEAD
 module.exports = GitAutomation;
+=======
+
+module.exports = GitAutomation;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
  * Handles git operations, commits, pushes, and merges;
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -192,7 +312,17 @@ const path = require('path')
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(" Git automation workflow "failed": ${error.message}")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      this.log(" Git automation workflow "failed": ${error.message}")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log(" Git automation workflow "failed": ${error.message}")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

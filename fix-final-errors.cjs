@@ -5,6 +5,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,7 +21,11 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -125,6 +132,9 @@ files.forEach(file => {
 =======
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -141,7 +151,11 @@ files.forEach(file => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -162,6 +176,11 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
     "replacement"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<<< HEAD:fix-final-errors.cjs
 =======
 <<<<<<< HEAD
@@ -245,10 +264,17 @@ filesToFix.forEach(file => {
 console.log(`Fixed final errors in ${fixedCount} files.`);
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     "replacement"
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

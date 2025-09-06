@@ -9,19 +9,30 @@ import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+<<<<<<< HEAD
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+export default function CybersecurityPage() {
+  const features = [
+    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
     <Layout>
       <Head>
@@ -39,10 +50,13 @@ export default function CybersecurityPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             </div>
           </header>
           <section>
@@ -52,6 +66,7 @@ export default function CybersecurityPage() {
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
+<<<<<<< HEAD
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -63,6 +78,14 @@ export default function CybersecurityPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                </div>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -71,8 +94,35 @@ export default function CybersecurityPage() {
                 <div className="text-gray-200 font-semibold mb-2">Mobile Device Management (MDM)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
               </a>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            </div>
+          </section>
+        </div>
+      </div>
+    </Layout>
+  )
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+export default function CybersecurityPage(req, res) {
+  try {
+
+}
+
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+;
+export default /**
+ * CybersecurityPage - Function description
+ */
+function CybersecurityPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const features = [;
     'Zero Trust architectures and identity - first segmentation_cloud posture hardening, secrets management, and key rotation_threat detection, incident response playbooks, and tabletop exercises_compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
   const solutions = [;
@@ -126,11 +176,15 @@ export default function CybersecurityPage() {
               <a href="/mobile - device - management" className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40 transition - colors">;
                 <div className="text - gray - 200 font - semibold mb - 2">Mobile Device Management (MDM)</div>;
                 <p className="text - gray - 300 text - sm">Learn more</p>;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               </a>;
             </div>;
           </section>;
         </div>;
+<<<<<<< HEAD
       </div>;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -141,3 +195,7 @@ export default function CybersecurityPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

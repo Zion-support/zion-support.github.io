@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from \'next/link\'; import Head from \'next/head\'; export default function QuantumComputingMicroSaaS() { return ( <> <Head> <title>Quantum Computing Platform - Micro SaaS - Zion Tech Group</title> <meta name=\"description\" content=\"Quantum computing micro SaaS platform for complex optimization problems and quantum algorithm development.\" />\" <meta name=\"keywords\" content=\"quantum computing,micro SaaS,quantum algorithms,optimization,quantum simulation\" />\" <link rel=\"canonical\" href=\""https\": </Head> \" <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\" <div className=\"max-w-6xl mx-auto px-4 py-16\">\" <div className=\"text-center mb-12\">\" <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">Quantum Computing Platform</h1>\" <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Access quantum computing power through our cloud-based micro SaaS platform </p> </div> \" <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\">\" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-cyan-400\">Quantum Algorithms</h3>\" <p className=\"text-slate-300 mb-4\">Pre-built quantum algorithms for common optimization problems</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Traveling salesman solver</li> <li>• Portfolio optimization</li> <li>• Machine learning</li> <li>• Cryptography</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-indigo-400\">Quantum Simulation</h3>\" <p className=\"text-slate-300 mb-4\">Simulate quantum systems and processes</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Molecular simulation</li> <li>• Material science</li> <li>• Drug discovery</li> <li>• Financial modeling</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-violet-400\">API Access</h3>\" <p className=\"text-slate-300 mb-4\">Easy integration with your existing applications</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• RESTful API</li> <li>• SDK libraries</li> <li>• Documentation</li> <li>• Support</li> </ul> </div> </div> \" <div className=\"text-center\">\" <Link href=\"/contact\" className=\"px-8 py-3 bg-cyan-600 hover:bg-cyan-700 rounded-lg font-semibold transition-colors mr-4\"> Access Quantum Platform </Link>\" <Link href=\"/micro-saas\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All Micro SaaS </Link> </div> </div> </main> </> );\"}
 const Link from "next/link"; import Head from "next/head"; export default function QuantumComputingMicroSaaS() { return ( <> <Head> <title>Quantum Computing Platform - Micro SaaS - Zion Tech Group</title> <meta name="description" content="Quantum computing micro SaaS platform for complex optimization problems and quantum algorithm development." />" <meta name="keywords" content="quantum computing,micro SaaS,quantum algorithms,optimization,quantum simulation" />" <link rel="canonical" href="https: </Head> " <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">" <div className="max-w-6xl mx-auto px-4 py-16">" <div className="text-center mb-12">" <h1 className="text-4xl md:text-5xl font-bold mb-6">Quantum Computing Platform</h1>" <p className="text-xl text-slate-300 max-w-3xl mx-auto"> Access quantum computing power through our cloud-based micro SaaS platform </p> </div> " <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">" <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-cyan-400">Quantum Algorithms</h3>" <p className="text-slate-300 mb-4">Pre-built quantum algorithms for common optimization problems</p>" <ul className="text-slate-400 space-y-2"> <li> Traveling salesman solver</li> <li> Portfolio optimization</li> <li> Machine learning</li> <li> Cryptography</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-indigo-400">Quantum Simulation</h3>" <p className="text-slate-300 mb-4">Simulate quantum systems and processes</p>" <ul className="text-slate-400 space-y-2"> <li> Molecular simulation</li> <li> Material science</li> <li> Drug discovery</li> <li> Financial modeling</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-violet-400">API Access</h3>" <p className="text-slate-300 mb-4">Easy integration with your existing applications</p>" <ul className="text-slate-400 space-y-2"> <li> RESTful API</li> <li> SDK libraries</li> <li> Documentation</li> <li> Support</li> </ul> </div> </div> " <div className="text-center">" <Link href="/contact" className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 rounded-lg font-semibold transition-colors mr-4"> Access Quantum Platform </Link>" <Link href="/micro-saas" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"> View All Micro SaaS </Link> </div> </div> </main> </> );"}'"'"
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -24,7 +29,11 @@ interface QuantumcomputingProps {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,7 +42,10 @@ const Link from "next/link"; import Head from "next/head"; export default functi
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -47,11 +59,42 @@ interface QuantumcomputingProps {
   // Add props here as needed
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Quantumcomputing({ }: QuantumcomputingProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default function Quantumcomputing({ }: QuantumcomputingProps) {
+  return (
+    <div>
+      <h1>Quantumcomputing</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> main
+export default function Quantumcomputing({ }: QuantumcomputingProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -95,6 +138,7 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +148,9 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,7 +168,10 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -129,6 +179,7 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -136,3 +187,9 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

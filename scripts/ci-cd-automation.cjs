@@ -1,12 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**
  * CI/CD Pipeline Automation;
  * Replaces GitHub Actions ci-cd.yml workflow;
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -23,12 +30,25 @@ class CICDAutomation {}
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.report.steps.push({})
       timestamp,
       type,
@@ -38,7 +58,11 @@ class CICDAutomation {}
     try {}
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
+<<<<<<< HEAD
         "encoding": 'utf8',
+=======
+        "encoding": 'utf8', 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -83,12 +107,20 @@ class CICDAutomation {}
     this.report.status = this.report.errors.length === 0 ? 'success' : 'failed';
     this.report.duration = endTime - this.startTime;
     this.report.endTime = endTime.toISOString();
+<<<<<<< HEAD
     const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
+=======
+
+    const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
+    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log(`Report saved "to": ${reportPath}`)};
   async run() {}
     try {}
       this.log('Starting CI/CD Pipeline Automation');
+<<<<<<< HEAD
       // Install dependencies;
       await this.installDependencies();
       // Run tests;
@@ -97,6 +129,21 @@ class CICDAutomation {}
       await this.runLinting();
       // Build application;
       await this.buildApplication();
+=======
+      
+      // Install dependencies;
+      await this.installDependencies();
+      
+      // Run tests;
+      await this.runTests();
+      
+      // Run linting;
+      await this.runLinting();
+      
+      // Build application;
+      await this.buildApplication();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('CI/CD Pipeline completed successfully', 'success')} catch (error) {}
       this.log(`CI/CD Pipeline "failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()};
@@ -109,7 +156,17 @@ if ( {})
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = CICDAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = CICDAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = CICDAutomation;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

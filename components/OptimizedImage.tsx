@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default OptimizedImage;
 =======
@@ -19,23 +20,27 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 =======
 import React from 'react';
 import Image from 'next/image';
+=======
+import React from "react";
+import Image from "next/image";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface OptimizedImageProps {
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  priority?: boolean,
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
   quality?: number;
-};
+}
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
   height = 600,
-  className = '',
+  className = "",
   priority = false,
-  quality = 75
+  quality = 75,
 }) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
@@ -78,4 +83,7 @@ export default OptimizedImage;
 };
 
 export default OptimizedImage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

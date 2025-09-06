@@ -33,7 +33,11 @@ const Services = ({ className }) => {
   );
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/NeonGlow.jsx
 =======
 export default Services;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.broken/pages/Services.jsx
+=======
+export default Services;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

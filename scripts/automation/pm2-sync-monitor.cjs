@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 /**;
  * PM2 Sync Monitor System;
@@ -28,6 +31,10 @@
  * - Alert system;
  */;
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 /**;
  * PM2 Sync Monitor System;
  * Health check and status monitoring for the PM2 sync automation system;
@@ -41,10 +48,18 @@
  * - Status dashboard;
  * - Alert system;
  */;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const http = require("http");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class $1 {}
   constructor() {}
   this.config = {}
@@ -102,11 +117,17 @@ class $1 {}
     this.log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
+=======
+      const logMessage = `[${timestamp}] [${level}] ${message}`;`
+      console.log("logMessage);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       try {}
   console.log(logMessage);
       try {}
@@ -133,12 +154,25 @@ class $1 {}
   async initialize() {}
   try {}
   this.log("Initializing PM2 Sync Monitor System...");
+<<<<<<< HEAD
       // Start monitoring loops;
       this.startMonitoringLoops();
       // Start health check server;
       this.startHealthCheckServer();
       // Initial health check;
       await this.performHealthCheck();
+=======
+
+      // Start monitoring loops;
+      this.startMonitoringLoops();
+
+      // Start health check server;
+      this.startHealthCheckServer();
+
+      // Initial health check;
+      await this.performHealthCheck();
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log("PM2 Sync Monitor System initialized successfully");
       this.isRunning = true} catch (error) {}
   this.log(`Initialization "failed": ${error.message}`, "ERROR");
@@ -150,12 +184,24 @@ class $1 {}
   // Health check loop;
     setInterval(async () => {}
   await this.performHealthCheck()}, this.config.monitorInterval);
+<<<<<<< HEAD
     // Metrics collection loop;
     setInterval(async () => {}
   await this.collectMetrics()}, this.config.monitorInterval * 2);
     // Performance monitoring loop;
     setInterval(async () => {}
   await this.monitorPerformance()}, this.config.monitorInterval * 3);
+=======
+
+    // Metrics collection loop;
+    setInterval(async () => {}
+  await this.collectMetrics()}, this.config.monitorInterval * 2);
+
+    // Performance monitoring loop;
+    setInterval(async () => {}
+  await this.monitorPerformance()}, this.config.monitorInterval * 3);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Cleanup loop;
     setInterval(async () => {}
   await this.cleanupOldData()}, this.config.monitorInterval * 10);
@@ -168,11 +214,21 @@ class $1 {}
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
       this.metrics.healthChecks++;
+<<<<<<< HEAD
       const healthStatus = await this.checkSystemHealth();
+=======
+
+      const healthStatus = await this.checkSystemHealth();
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (healthStatus.isHealthy) {}
   this.metrics.successfulChecks++;
         this.metrics.systemStatus = "healthy";
@@ -181,6 +237,10 @@ class $1 {}
         this.metrics.systemStatus = "unhealthy";
         this.log(Health check "failed": ${healthStatus.issues.join(", ")}",WARN";
         );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
       this.metrics.totalChecks++;
@@ -207,6 +267,10 @@ class $1 {}
 ;
   async checkSystemHealth() {}
   const issues = [];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
   // Check PM2 processes;
       const pm2Status = await this.checkPM2Status();
@@ -214,6 +278,10 @@ class $1 {}
   issues.push(...pm2Status.issues);
         isHealthy = false};
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Check file system;
       const fsStatus = await this.checkFileSystem();
       if (!fsStatus.isHealthy) {}
@@ -226,6 +294,10 @@ class $1 {}
   issues.push(...gitStatus.issues);
         isHealthy = false};
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Check build status;
       const buildStatus = await this.checkBuildStatus();
       if (!buildStatus.isHealthy) {}
@@ -251,21 +323,39 @@ class $1 {}
   try {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async checkPM2Status() {}
   try {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });
       const processes = JSON.parse(output);
+<<<<<<< HEAD
       const issues = [];
       let isHealthy = true;
       // Check if all required processes are running;
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
+=======
+
+      const issues = [];
+      let isHealthy = true;
+
+      // Check if all required processes are running;
+      const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       requiredProcesses.forEach(processName => {})
   requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);
         if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};
       }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return { isHealthy, issues };
     } catch (error) {}
   return {}
@@ -318,6 +408,10 @@ class $1 {}
       // Check if git repository exists;
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Check if git repository exists;
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");
@@ -330,6 +424,10 @@ class $1 {}
   "cwd": this.config.projectRoot,
         "encoding": "utf8"}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
         isHealthy = false};
@@ -354,9 +452,17 @@ class $1 {}
       let isHealthy = true;
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
+<<<<<<< HEAD
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
       const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
+=======
+
+      // Check if build artifacts exist;
+      const buildDirs = [".next", "dist", "build"];
+      const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (!hasBuildArtifacts) {}
   issues.push("No build artifacts found");
         isHealthy = false};
@@ -395,6 +501,10 @@ class $1 {}
       // Check if node_modules exists;
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Check if node_modules exists;
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");
@@ -550,6 +660,10 @@ class $1 {}
   try {}
   // Collect system metrics;
       this.metrics.performance = await this.getSystemPerformance();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Calculate success rate;
       if (this.metrics.healthChecks > 0) {}
   this.metrics.successRate =;
@@ -557,6 +671,10 @@ class $1 {}
 ;
       // Calculate uptime;
       this.metrics.uptime = Date.now() - this.metrics.startTime;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async collectMetrics() {}
   try {}
   // Collect system metrics;
@@ -580,12 +698,20 @@ class $1 {}
   // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
       const cpuPercent = (cpuUsage.user + cpuUsage.system) / 1000000;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Get memory usage;
       const memoryUsage = process.memoryUsage();
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       // Get disk usage;
       const diskUsage = await this.getDiskUsage();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return {}
   "cpu": Math.round(cpuPercent * 100) / 100,
         "memory": Math.round(memoryPercent * 100) / 100,
@@ -624,8 +750,15 @@ class $1 {}
       const lines = output.trim().split("\n");
       const [", "usageLine"] = lines;
       const [", "used", "available"] = usageLine.split(/\s+/);
+<<<<<<< HEAD
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
+=======
+
+      const total = parseInt(used) + parseInt(available);
+      const usagePercent = Math.round((parseInt(used) / total) * 100);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return { usagePercent };
     } catch (error) {}
   return { "usagePercent": 0   };
@@ -641,6 +774,10 @@ class $1 {}
 });
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } catch (error) {}
   return { "usagePercent": 0 };
     };
@@ -653,6 +790,10 @@ class $1 {}
   "encoding": "utf8",
         "timeout": 5000}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
   this.log("High memory usage detected, restarting processes...", "WARN");
@@ -691,6 +832,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
         files.forEach(file => {})
   const filePath = path.join(logDir, "file);
           const stats = fs.statSync(filePath);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           if (now - stats.mtime.getTime() > maxAge) {}
   fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");
       const [, usageLine] = lines;
@@ -756,6 +901,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
         res.end("Not Found")};
     }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)
       )})};
@@ -766,6 +915,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
       "stack": error.stack,
       "timestamp": Date.now()}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (this.metrics.errors.length > this.config.maxErrors) {}
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};
   };
@@ -867,11 +1020,17 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
 ;
 // Handle process signals;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
+=======
+process.on("SIGINT", async () => {}
+  console.log("\nReceived SIGINT, shutting down gracefully...");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle process signals;
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
@@ -879,6 +1038,10 @@ process.on("SIGINT", async () => {}
   await global.pm2SyncMonitor.stop()};
   process.exit(0)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 process.on("SIGTERM", async () => {}
   console.log("\nReceived SIGTERM, shutting down gracefully...");
   if (global.pm2SyncMonitor) {}
@@ -896,7 +1059,17 @@ if (require.main === module) {}
 ;
 module.exports = PM2SyncMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = PM2SyncMonitor;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = PM2SyncMonitor;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = PM2SyncMonitor;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

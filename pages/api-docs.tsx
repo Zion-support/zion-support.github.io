@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -6,14 +7,78 @@
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from 'react';
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import { motion } from 'framer-motion';
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
+import Head from 'next/head';
+import MainLayout from '../components/layout/MainLayout';
+import { 
+  Code, 
+  Book, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Database, 
+  Server, 
+  Lock, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+import Link from 'next/link';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+const apiEndpoints = [
+  {
+    title: 'Authentication API',
+    description: 'Secure authentication and authorization endpoints',
+    icon: Lock,
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],
+    endpoints: [
+      '/api/auth/login',
+      '/api/auth/register',
+      '/api/auth/refresh',
+      '/api/auth/logout'
+    ]
+  },
+  {
+    title: 'User Management API',
+    description: 'User profile and account management',
+    icon: Globe,
+    methods: ['GET', 'PUT', 'DELETE'],
+    endpoints: [
+      '/api/users/profile',
+      '/api/users/update',
+      '/api/users/delete'
+    ]
+  },
+  {
+    title: 'Data API',
+    description: 'Data retrieval and manipulation endpoints',
+    icon: Database,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    endpoints: [
+      '/api/data/retrieve',
+      '/api/data/create',
+      '/api/data/update',
+      '/api/data/delete'
+    ]
+  },
+  {
+    title: 'Analytics API',
+    description: 'Analytics and reporting endpoints',
+    icon: Server,
+    methods: ['GET', 'POST'],
+    endpoints: [
+      '/api/analytics/metrics',
+      '/api/analytics/reports'
+    ]
+=======
+
+
+import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
 
 <<<<<<< HEAD
@@ -21,22 +86,12 @@ import Head from 'next/head';
 
 
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { 
   ArrowRight,
   Server,
   Lock,
   Brain,
   Cloud;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -102,6 +157,7 @@ const apiEndpoints = [;
     icon: Server,;
     methods: ['POST', 'GET', 'PUT'],;
     endpoint: '/api/it-services';
+<<<<<<< HEAD
   }
 ];
 
@@ -728,10 +784,14 @@ function ApiDocsPage() {
       '/api/analytics/metrics',
       '/api/analytics/reports'
     ]
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }
 ];
 
 export default function APIDocsPage() {
+<<<<<<< HEAD
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -827,5 +887,170 @@ export default function APIDocsPage() {
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export default function ApiDocsPage() {
+  return (
+    <>
+      <Head>
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+origin/automation-improvements-final
+
+export default function APIDocsPage() {;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <Head>;
+        <title>API Documentation - Zion Tech Group | Developer Resources</title>;
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />;
+        <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />;
+      </Head>;
+
+      {/* Hero Section */}
+
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+        <div className="absolute inset-0">;
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+        </div>;
+
+        <div className="container mx-auto px-4 relative z-10">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className="text-center">;
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+              API Documentation;
+            </h1>;
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">;
+              Comprehensive API documentation for integrating with Zion Tech Group services. ;
+              Build powerful applications with our RESTful APIs.;
+            </p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+      {/* API Endpoints Section */}
+      <section className="py-20 bg-white">;
+        <div className="container mx-auto px-4">;
+          <motion&& motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Explore our comprehensive API endpoints for seamless integration with our services.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className="grid md:grid-cols-2 gap-8">;
+            {apiEndpoints && apiEndpoints.map((endpoint, index) => {;
+              const IconComponent = endpoint && endpoint.icon;
+              return (
+                  <Link
+                    href={`/api-docs/${endpoint && endpoint.endpoint.replace('/api/', '')}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors">;
+                    View Documentation;
+                    <ArrowRight className="w-4 h-4 ml-1" />;
+                  </Link>;
+                </motion && motion.div>;
+              );
+            })}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">;
+        <div className="container mx-auto px-4 text-center">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+      </div>
+    </Layout>
+  );
+}
+import Layout from '../components/Layout';
+export default function APIDocsPage() {
+export default function ApiDocsPage() {
+  return (
+    <>
+      <Head>
+        <title>API Docs | Zion Tech Group</title>
+        <meta name='description' content='API reference and guides.' />
+<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+
+      </Head>
+      <div className="container mx-auto px-4 py-16 text-gray-200">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>;
+            <p className="text-xl mb-8 max-w-2xl mx-auto">;
+              Our developer support team is here to help you integrate our APIs successfully.;
+            </p>;
+            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+              Contact Developer Support;
+            </Link>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+      </Head>
+      <div className="container mx-auto px-4 py-16 text-gray-200">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+      </div>
+);
+origin/main
+    </>
+  )
+}
+}
+    </Layout>;
+);
+    </>
+  )
+    </>
+  )
+import React from 'react';
+import Head from 'next/head';
+export default function ApiDocsPage(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>API Docs | Zion Tech Group</title>;
+        <meta name='description' content='API reference and guides.' />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/api-docs' />;
+      </Head>;
+      <div className="container mx-auto px-4 py-16 text-gray-200">;
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

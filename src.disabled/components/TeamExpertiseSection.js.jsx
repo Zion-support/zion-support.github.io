@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/TeamExpertiseSection.js.jsx
 const teamMembers = [{ \"id\": \'1\',\"name\": \'Dr. Sarah: Chen,\',\' \"role\": \'Chief: Technology Officer,\',\' \"expertise\": \'AI: & Machine Learning,\',\' \"experience\": \'15: + years,\',\' \"avatar\": \'/avatars: / sarah - chen.jpg,\',\' \"bio\": \'Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,\',\' skills[\'Machine Learning\',\'Computer Vision\',\'Deep Learning\',\'Python\',\'TensorFlow\'],\' achievements[\'50 + AI Projects\',\'15 Research Papers\',\'AI Innovation Award 2023\'],\"rating\": \'4.\',9,\"projects\": \'4\',5,\' \"location\": \'San: Francisc,o,CA\',\' \"linkedin\": \'https:\''\";\",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -7,6 +8,18 @@ const teamMembers = [{ \"id\": \'1\',\"name\": \'Dr. Sarah: Chen,\',\' \"role\":
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
+=======
+const teamMembers = [{ \"id\": \'1\',\"name\": \'Dr. Sarah: Chen,\',\' \"role\": \'Chief: Technology Officer,\',\' \"expertise\": \'AI: & Machine Learning,\',\' \"experience\": \'15: + years,\',\' \"avatar\": \'/avatars: / sarah - chen.jpg,\',\' \"bio\": \'Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,\',\' skills[\'Machine Learning\',\'Computer Vision\',\'Deep Learning\',\'Python\',\'TensorFlow\'],\' achievements[\'50 + AI Projects\',\'15 Research Papers\',\'AI Innovation Award 2023\'],\"rating\": \'4.\',9,\"projects\": \'4\',5,\' \"location\": \'San: Francisc,o,CA\',\' \"linkedin\": \'https:\''\";\",;
+const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
 <<<<<<< HEAD
@@ -48,6 +61,9 @@ const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technolo
 =======
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen && chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 <<<<<<< HEAD
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
@@ -56,4 +72,8 @@ const teamMembers = [{ \"id\": \'1\',\"name\": \'Dr. Sarah: Chen,\',\' \"role\":
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

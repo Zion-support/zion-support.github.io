@@ -1,7 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/ITOnsiteServicesPage.jsx
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+=======
+import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
+const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
@@ -35,6 +49,7 @@ class ErrorBoundary extends React.Component {
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -57,6 +72,9 @@ const React from "react"; export default function ITOnsiteServicesPage() { retur
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 =======
 <<<<<<< HEAD
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
@@ -66,4 +84,8 @@ const React from "react"; export default function ITOnsiteServicesPage() { retur
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

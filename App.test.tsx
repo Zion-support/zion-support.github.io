@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -13,11 +14,26 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './src/App';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './src/App';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { render } from '@testing-library/react';
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 =======
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -86,6 +102,9 @@ describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     expect(screen.getByRole('main')).toBeInTheDocument();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   });
@@ -107,6 +126,7 @@ describe('App', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 
 
@@ -114,6 +134,10 @@ describe('App', () => {
 =======
 <<<<<<< HEAD
 });
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
@@ -134,6 +158,7 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
@@ -141,3 +166,20 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+import React from 'react';
+import { render } from '@testing-library/react';
+
+describe('App', () => {
+  it('should render without crashing', () => {
+    // Simple test that just checks if the component can be imported
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

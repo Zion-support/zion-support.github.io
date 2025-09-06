@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -168,9 +171,12 @@ class ErrorAnalyticsDashboard {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log("[${timestamp}] [${level}] ${message}")}
   async collectErrorReports() {
     try {
@@ -662,7 +668,11 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       })}
     return trends}
   analyzeFixSuccessRates(reports) {
+<<<<<<< HEAD
     const fixReports = reports.filter(report =>
+=======
+    const fixReports = reports.filter(report => 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
     const successRates = [];
@@ -926,7 +936,11 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       const fileDistribution = this.analyzeFileDistribution(reports);
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
+<<<<<<< HEAD
       const avgSuccessRate = fixSuccessRates.length > 0
+=======
+      const avgSuccessRate = fixSuccessRates.length > 0 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -990,7 +1004,17 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ErrorAnalyticsDashboard
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = ErrorAnalyticsDashboard
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = ErrorAnalyticsDashboard
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

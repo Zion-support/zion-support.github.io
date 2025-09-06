@@ -2,6 +2,7 @@
 module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   darkMode: "class",
   content: [
 <<<<<<< HEAD
@@ -25,16 +26,27 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+  darkMode: "class",
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         background: 'var(--background)',
         foreground: 'var(--foreground)',
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -610,29 +622,40 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
 <<<<<<< HEAD
+<<<<<<< HEAD
         mono: ['JetBrains Mono', 'monospace'],
 =======
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         'scale-in': 'scaleIn 0.3s ease-out',
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'spin-slow': 'spin 8s linear infinite'
 =======
         'spin-slow': 'spin 8s linear infinite',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+        'spin-slow': 'spin 8s linear infinite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       },
       keyframes: {
         fadeIn: {
@@ -673,14 +696,19 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
 <<<<<<< HEAD
+<<<<<<< HEAD
         '5xl': '2.5rem'
 =======
         '5xl': '2.5rem',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+        '5xl': '2.5rem',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
       }
@@ -690,10 +718,16 @@ module.exports = {
       },
     },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     require('@tailwindcss/aspect-ratio'),
@@ -714,3 +748,8 @@ module.exports = {
   ],
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

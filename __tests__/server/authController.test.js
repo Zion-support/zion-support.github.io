@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 "await";
 =======
 <<<<<<< HEAD
@@ -12,9 +17,14 @@ describe('Basic Test', () => {
   });
 });
 =======
+<<<<<<< HEAD
 const { describe, it, expect, vi, beforeEach } = require(
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+const { describe, it, expect, vi, beforeEach } = require(
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
   'vitest')'
@@ -34,7 +44,10 @@ const { describe, it, expect, vi, beforeEach } = require(
 =======
 const { describe, it, expect, vi, beforeEach } = require(
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   'vitest')';
 const { createRequest, createResponse } = require(
   'node-mocks-http')';
@@ -75,8 +88,11 @@ describe(
     expect(mockedSend).toHaveBeenCalled();
     expect(res._getStatusCode()).toBe(200)})});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -84,7 +100,10 @@ describe(
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { createRequest,createResponse } = require( 'node-mocks-http')';; const sgMail = require( '@sendgrid/mail')';; const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; default: { setApiKey: vi.fn(,),send: vi.fn()}})); const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {'; const { createRequest,createResponse } = require( 'node-mocks-http')'; const sgMail = require( @sendgrid/mail'); const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ default: { setApiKe y: vi.fn(),send: vi.fn() }})); const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( 'sends: an email via SendGrid',async () => {'; const req = createRequest({ method: 'POS,T,'; body: { email:';test@example.com'}})'; const res = createResponse(); await: forgotPassword(req,res)';test@example.com' }}); const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
@@ -94,5 +113,13 @@ const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { creat
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'await';
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

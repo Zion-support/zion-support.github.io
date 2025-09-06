@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 
@@ -39,6 +41,7 @@ checks.forEach(check => {
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
   "timestamp": new Date().toISOString(),
@@ -1003,5 +1006,33 @@ if (require.main === module) {
 
 module.exports = HealthCheckMonitor;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+const { execSync } = require('child_process');
+
+console.log('🏥 Running Health Check...');
+
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name}: OK`);
+  } catch (error) {
+    console.log(`❌ ${check.name}: FAILED`);
+  }
+});
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

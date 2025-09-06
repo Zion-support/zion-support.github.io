@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,12 +24,22 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import SiteFooter from \'../src/components/SiteFooter\'; const \"About\": NextPage = () => {; return (; <> <Head> <title>About Us - Zion Tech Group></div> <meta name=\"description\" content=\"Learn about Zion Tech Group\'s mission to provide cutting-edge technology solutions and our team of expert professionals.\" /> ></div> <Navigation /> ; <main className=\"min-h-screen bg-gray-900 pt-16\"> <div className=\"container mx-auto px-4 py-16\"> <div className=\"max-w-4xl mx-auto text-center text-white\"> <h1 className=\"text-5xl font-bold mb-8\"> About <span className=\"bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">Zion Tech Group></div> ></div> <p className=\"text-xl text-gray-300 mb-12 leading-relaxed\"> We are a leading technology solutions provider dedicated to transforming businesses ; through innovative AI,cloud architecture,and cutting-edge development services.; ></div> <div className=\"grid \"md\": grid-cols-3 gap-8 mt-16\"> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-blue-400\">Our Mission></div> <p className=\"text-gray-300\"> To empower businesses with cutting-edge technology solutions that drive growth,; efficiency,and innovation in the digital age.; ></div> ></div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-purple-400\">Our Vision></div> <p className=\"text-gray-300\"> To be the global leader in AI-powered technology solutions,; setting the standard for innovation and excellence.; ></div> ></div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-pink-400\">Our Values></div> <p className=\"text-gray-300\"> Innovation,integrity,excellence,and client success are the ; core values that guide everything we do.; ></div> ></div> ></div> ></div> ></div> ></div> <SiteFooter /> ></div> );}; export default About;
 import React from 'react';
 interface AboutProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -34,6 +50,19 @@ interface AboutProps {
 
 export default function About({ }: AboutProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+}
+export default function About({ }: AboutProps) {
+=======
+=======
+
+
+
+export default function About({ }: AboutProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
     <div>
       <h1>About</h1>
@@ -41,11 +70,14 @@ export default function About({ }: AboutProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
 =======
 >>>>>>> origin/main
@@ -69,5 +101,20 @@ export default function About({ }: AboutProps) {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+  return (
+    <div>;
+      <h1>About</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  );
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

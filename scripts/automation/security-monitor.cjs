@@ -1,12 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -18,9 +25,12 @@ class $1 {}
   log(message, type = "info") {}
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
 ;
   async ensureDirectoryExists(dirPath) {}
@@ -53,6 +63,10 @@ class $1 {}
           for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`)};
         } else {}
   this.log("No security vulnerabilities found", "success");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async runCommand(command, options = {}) {}
   try {}
   const result = execSync(command, {})
@@ -102,6 +116,10 @@ class $1 {}
 ;
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
     const result = await this.runCommand("npm ls --json");
@@ -229,6 +247,7 @@ class $1 {}
   };
 };
 ;
+<<<<<<< HEAD
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 <<<<<<< HEAD
@@ -236,3 +255,16 @@ const monitor = new SecurityMonitor();
 =======
 monitor.run().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+// Run the security monitor;
+const monitor = new SecurityMonitor();
+<<<<<<< HEAD
+<<<<<<< HEAD
+monitor.run().catch(console.error);
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+monitor.run().catch(console.error);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -194,7 +197,17 @@ const glob = require("glob")
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error("Automation "failed": ")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error("Automation "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error("Automation "failed": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

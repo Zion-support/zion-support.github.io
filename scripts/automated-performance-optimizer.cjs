@@ -1,16 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -68,9 +74,12 @@ const { execSync } = require("child_process")
     const results = {"timestamp"}
     const reportFile = path.join(this.reportsDir, "performance-optimization-report.json")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log(` Performance optimization report "generated"`)
 // console.log("\n� Performance Analysis "Summary": ")
     console.log(`�  Total "images"`)
@@ -79,7 +88,17 @@ const { execSync } = require("child_process")
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       console.log("\n� High Priority "Optimizations")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      console.log("\n� High Priority "Optimizations")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.log("\n� High Priority "Optimizations")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

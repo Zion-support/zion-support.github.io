@@ -8,6 +8,7 @@ import path from 'path';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -23,6 +24,12 @@ export default defineConfig({
 =======
     },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   },
   server: {
     port: 3000,
@@ -52,22 +59,29 @@ export default defineConfig({
     host: true
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
-    minify: 'terser',
+    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react'],
           router: ['react-router-dom']
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+          vendor: ["react", "react-dom"],
+          ui: ["framer-motion", "lucide-react"],
+          router: ["react-router-dom"]
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         }
       }
     },
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
         drop_debugger: true
       }
     }
@@ -80,4 +94,17 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+        drop_debugger: true,
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+  },
+});
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

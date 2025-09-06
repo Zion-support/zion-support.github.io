@@ -2,8 +2,8 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +15,11 @@
     "build:netlify": "node scripts/build-with-error-handling.js",
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    "dev": "next dev",
+    "build": "next build",
+    "build:netlify": "node scripts/build-with-error-handling.js",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -309,11 +314,17 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
 =======
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
+=======
+    "@reduxjs/toolkit": "^2.8.2",
+    "@stripe/stripe-js": "^2.3.0",
+    "@sendgrid/mail": "^8.1.5",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -321,8 +332,11 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
+<<<<<<< HEAD
     "@types/mongodb": "^4.0.6",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -353,6 +367,10 @@
     "import-fresh": "^3.3.1",
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
+<<<<<<< HEAD
+=======
+    "mongodb": "^6.19.0",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
@@ -390,12 +408,12 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.8.2",
-    "sharp": "^0.34.3",
     "react-hook-form": "^7.62.0",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^15.7.3",
     "react-is": "^19.1.1",
+    "react-router-dom": "^7.8.2",
+    "sharp": "^0.34.3",
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
@@ -425,17 +443,11 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
-    "@types/next": "^8.0.7",
-    "@types/node": "^18.0.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
-    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
-    "eslint": "^9.35.0",
     "axe-core": "^4.10.3",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -455,7 +467,8 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "vite": "^7.1.4"
+    "vite": "^7.1.4",
+    "web-vitals": "^5.1.0"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -483,8 +496,12 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

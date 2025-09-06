@@ -1,8 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import React from "react";
+import Layout from "../components/Layout";
+import React from 'react';
+import Layout from '../components/Layout';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function Status() {
   return (
     <Layout
@@ -12,6 +20,7 @@ export default function Status() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+<<<<<<< HEAD
 
 =======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -23,6 +32,8 @@ export default function Status() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
 origin/automation-improvements-final
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>
@@ -32,11 +43,16 @@ origin/automation-improvements-final
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
     </Layout>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 =======
+=======
+    </Layout>;
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -65,5 +81,8 @@ function Status() {
         </div>;
       </div>;
     </Layout>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }

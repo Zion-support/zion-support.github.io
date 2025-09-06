@@ -26,6 +26,8 @@ import { useState, useEffect } from 'react';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "isDesktop":width >= 1024})},;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -139,6 +141,7 @@ interface Breakpoints {
     return () => window && window.removeEventListener(;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   'react';
 interface ResponsiveState {
   "screenWidth": number;
@@ -247,6 +250,7 @@ import { useState,useEffect } from 'react'; interface ResponsiveState { screenWi
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
@@ -255,3 +259,35 @@ import { useState,useEffect } from 'react'; interface ResponsiveState { screenWi
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+interface Breakpoints {
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
+  '2xl': number;
+}
+;
+
+  return state}
+export default useResponsive
+import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
+
+import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window && window.innerWidth; const height = window && window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window && window.addEventListener( 'resize',updateDimensions); return () => window && window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
+const default_breakpoints: Breakpoints = {
+const defaultBreakpoints: Breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  '2xl': 1536,
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

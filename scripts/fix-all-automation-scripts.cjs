@@ -1,13 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
 const util = require('util');
+<<<<<<< HEAD
 const execAsync = util.promisify(exec);
+=======
+
+const execAsync = util.promisify(exec);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class AutomationScriptFixer {}
   constructor() {}
     this.logFile = path.join(__dirname, '../logs/script-fixer.log');
@@ -21,9 +30,12 @@ class AutomationScriptFixer {}
     try {}
       await fs.appendFile(this.logFile, logEntry);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       console.log(`[${level}] ${message}`)} catch (error) {`}
       console.error(`Failed to write to log "file": ${error.message}`)};
   };
@@ -33,6 +45,10 @@ class AutomationScriptFixer {}
       path.join(this.projectRoot, 'logs'),
       path.join(this.projectRoot, 'reports');
     ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const dir of dirs) {}
       try {}
         await fs.mkdir(dir, { "recursive": true })} catch (error) {}
@@ -44,7 +60,13 @@ class AutomationScriptFixer {}
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
       path.join(this.projectRoot, 'scripts/automation');
     ];
+<<<<<<< HEAD
     const scriptFiles = [];
+=======
+
+    const scriptFiles = [];
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const dir of scriptDirs) {}
       try {}
         const files = await fs.readdir(dir);
@@ -60,6 +82,10 @@ class AutomationScriptFixer {}
     try {}
       const content = await fs.readFile(filePath, 'utf8');
       let fixedContent = content;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Fix common issues;
       const fixes = [// Fix malformed require statements;]
         {}
@@ -100,6 +126,10 @@ class AutomationScriptFixer {}
           "replacement": 'this.projectRoot = path.join(__dirname, "..");\n  }"
         };
       ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fix.pattern.test(fixedContent)) {}
@@ -138,18 +168,35 @@ class AutomationScriptFixer {}
   async run() {}
     await this.log('Starting automation script fixing process...', 'INFO');
     await this.ensureDirectories();
+<<<<<<< HEAD
     const scriptFiles = await this.findScriptFiles();
     await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
     let fixedCount = 0;
     let testedCount = 0;
     for (const scriptFile of scriptFiles) {}
       await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
+=======
+
+    const scriptFiles = await this.findScriptFiles();
+    await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
+
+    let fixedCount = 0;
+    let testedCount = 0;
+
+    for (const scriptFile of scriptFiles) {}
+      await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       const wasFixed = await this.fixScriptFile(scriptFile);
       if (wasFixed) {}
         fixedCount++};
       // Test the script;
       const testResult = await this.testScript(scriptFile);
       testedCount++;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (testResult.success) {}
         await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`, 'SUCCESS')} else {`}
         await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`, 'ERROR')};
@@ -166,9 +213,17 @@ class AutomationScriptFixer {}
       "fixedScripts": this.fixedScripts,
       "errors": this.errors;
     };
+<<<<<<< HEAD
     await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
     await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, 'INFO');
     await this.log(`Report saved "to": ${this.reportFile}`, 'INFO');
+=======
+
+    await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
+    await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, 'INFO');
+    await this.log(`Report saved "to": ${this.reportFile}`, 'INFO');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return report};
 };
 // Run the fixer;
@@ -176,7 +231,17 @@ if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AutomationScriptFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = AutomationScriptFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = AutomationScriptFixer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

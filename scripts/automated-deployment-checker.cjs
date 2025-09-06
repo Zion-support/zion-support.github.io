@@ -1,16 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -53,16 +59,29 @@ const { execSync } = require("child_process")
     const results = {"timestamp": new Date().toISOString(),"buildOutput": this.checkBuildOutput(),"environmentVariables"}
     const reportFile = path.join(this.reportsDir, "deployment-check-report.json")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log(` Deployment check report "generated"`)
 // console.log("\n� Deployment Check "Summary": ")
     console.log(` Environment variables "configured"`)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.log(` Git status "clean"`)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    console.log(` Git status "clean"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.log(` Git status "clean"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

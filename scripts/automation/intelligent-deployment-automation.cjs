@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**
  * Intelligent Deployment Automation;
  * Advanced deployment system with blue-green, canary, and rollback capabilities;
  * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -25,9 +32,12 @@ const http = require('http')
           url: process.env.STAGING_URL || 'http://localhost:3001'
           healthEndpoint: '/api/health'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -119,7 +129,17 @@ const http = require('http')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

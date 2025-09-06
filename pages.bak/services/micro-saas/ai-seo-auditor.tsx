@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AISEOAuditor() { return ( <Article title=\"AI SEO Auditor\" subtitle=\"Automated technical SEO and content insights with prioritized fixes\" price=\"from $199/mo\" bullets={[\'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',\'NLP-driven content gap analysis vs. competitors with keyword clusters\',\'One-click Github PRs for meta,schema,and sitemap fixes\',\'Weekly executive report and anomaly alerts via Slack/Email\' ]} links={{ \"website\": \'https: contact: \'mailto:kleber@ziontechgroup.com\' }} /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
 module.exports = default function AISEOAuditor() { return ( <Article title="AI SEO Auditor" subtitle="Automated technical SEO and content insights with prioritized fixes" price="from $199/mo" bullets={["Crawls site maps and pages; flags Core Web Vitals and indexability issues","NLP-driven content gap analysis vs. competitors with keyword clusters","One-click Github PRs for meta,schema,and sitemap fixes","Weekly executive report and anomaly alerts via Slack/Email" ]} links={{ website: "https: contact: "mailto:kleber@ziontechgroup.com" }} /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -24,7 +29,11 @@ interface AiseoauditorProps {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,7 +42,10 @@ module.exports = default function AISEOAuditor() { return ( <Article title="AI S
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -47,11 +59,42 @@ interface AiseoauditorProps {
   // Add props here as needed
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Aiseoauditor({ }: AiseoauditorProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default function Aiseoauditor({ }: AiseoauditorProps) {
+  return (
+    <div>
+      <h1>Aiseoauditor</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> main
+export default function Aiseoauditor({ }: AiseoauditorProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -97,6 +140,7 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +150,9 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,7 +170,10 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -131,6 +181,7 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -138,3 +189,9 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

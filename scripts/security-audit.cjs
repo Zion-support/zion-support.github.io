@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node
 =======
 <<<<<<< HEAD
@@ -9,6 +11,7 @@ const path = require('path');
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
@@ -203,5 +206,19 @@ console.log('Security audit completed');
 =======
 auditor.run().catch(console.error);
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔒 Running security audit...');
+console.log('✅ Security audit completed');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

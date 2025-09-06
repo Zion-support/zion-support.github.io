@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   };
@@ -66,6 +67,38 @@ origin/automation-improvements-final
 import React from 'react';
 // Define HTMLAnchorElement if not available
 interface HTMLElement {
+=======
+import React from "react";
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+// Define HTMLAnchorElement if not available;
+interface HTMLElement {;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   className: string;
   id: string;
   innerHTML: string;
@@ -73,10 +106,15 @@ interface HTMLElement {
   style: { [key: string]: string }
 }
 
+<<<<<<< HEAD
 
 interface HTMLAnchorElement extends HTMLElement {;
 
   tagName: 'A';
+=======
+interface HTMLAnchorElement extends HTMLElement {
+  tagName: "A";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   href: string;
   target: string;
 }
@@ -96,6 +134,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
+<<<<<<< HEAD
 origin/main
 function resolveHref(href: Href): string {
 =======
@@ -171,10 +210,49 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <a href={resolved} className={className} {...rest}>
+=======
+function resolveHref(href: Href): string {
+  if (typeof href === "string") return href;
+  return href?.pathname || (href as { href?: string })?.href || "#";
+}
+
+export default function Link({
+  href,
+  children,
+  className,
+  ...rest
+}: LinkProps) {
+  const resolved = resolveHref(href);
+
+
+export default function Link({ href, children, className, ...rest }: LinkProps) {;
+
+
+  const resolved = resolveHref(href);
+  if (React.isValidElement(children)) {
+    const existingClass =
+      (children.props as { className?: string })?.className || "";
+    const mergedClassName = [existingClass, className]
+      .filter(Boolean)
+      .join(" ");
+
+    return React.cloneElement(
+      children as React.ReactElement<{ href?: string; className?: string }>,
+      {
+        href: resolved,
+        className: mergedClassName,
+        ...rest,
+      },
+    );
+  }
+  return (
+    <a href={resolved} className={class_name} {...rest}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {children}
     </a>
   );
 }
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
@@ -214,3 +292,5 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

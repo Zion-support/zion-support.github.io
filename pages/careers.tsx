@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -14,15 +15,38 @@ import { motion } from "framer-motion";
 =======
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Careers - Zion Tech Group"
+      description="Join our team and help shape the future of technology"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
+          <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
 <<<<<<< HEAD
-
-
 
 import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default Page;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   Users,
   MapPin,
   Clock,
@@ -39,6 +63,7 @@ import {
   Globe,
   CheckCircle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -48,6 +73,8 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -169,13 +196,6 @@ const values = [
     description:
 ];
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -217,6 +237,7 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -423,6 +444,8 @@ const values = [;
 const Careers: React.FC<CareersProps> = ({ className }) => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -442,6 +465,7 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -468,6 +492,8 @@ export default function CareersPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -676,19 +702,6 @@ function CareersPage() {
                 We're looking for passionate individuals who want to make a;
                 difference.;
               </p>;
-<<<<<<< HEAD
-=======
-
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
-                  See Benefits;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Why Join Us */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -696,27 +709,6 @@ function CareersPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Why Join Zion Tech Group?;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                We're not just a company - we're a community of innovators,;
-                creators, and problem-solvers working together to build amazing;
-                technology solutions.;
-              </p>;
-            </motion && motion.div>;
-            <div className="max-w-6xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {benefits && benefits.map((benefit, index) => (;
-                  <motion&& motion.div
-                    key={benefit && benefit.title}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -731,91 +723,10 @@ function CareersPage() {
                     <p className="text-gray-600">{benefit && benefit.description}</p>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-=======
-
-=======
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="#open - positions";
-                  className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
-                >;
-                  View Open Positions;
-                </a>;
-                <a;
-                  href="#benefits";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - gray - 900 transition - all duration - 300 font - semibold";
-                >;
-                  See Benefits;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Why Join Us */}
-        <section className="py - 20 bg - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center mb - 16";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
-                Why Join Zion Tech Group?;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                We're not just a company - we're a community of innovators,
-                creators, and problem - solvers working together to build amazing;
-                technology solutions.;
-              </p>;
-            </motion.div>;
-            <div className="max - w-6xl mx - auto">;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {benefits.map ((benefit, index) => (
-                  <motion.div;
-                    key={benefit.title}
-                    className="bg - gray - 50 p - 6 rounded - lg hover:shadow - lg transition - shadow duration - 300";
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >;
-                    <div className="text - blue - 600 mb - 4">;
-                      <benefit.icon className="w - 12 h - 12" />;
-                    </div>;
-                    <h3 className="text - xl font - semibold text - gray - 900 mb - 3">;
-                      {benefit.title}
-                    </h3>;
-                    <p className="text - gray - 600">{benefit.description}</p>;
-                  </motion.div>))}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Our Values;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                These core values guide everything we do and shape our company;
-                culture.;
-              </p>;
-            </motion && motion.div>;
-            <div className="max-w-4xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {values && values.map((value, index) => (;
-                  <motion&& motion.div
-                    key={value && value.title}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -827,54 +738,10 @@ function CareersPage() {
                     <p className="text-gray-600">{value && value.description}</p>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-=======
-
-=======
-        {/* Our Values */}
-        <section className="py - 20 bg - gray - 50">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center mb - 16";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
-                Our Values;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                These core values guide everything we do and shape our company;
-                culture.;
-              </p>;
-            </motion.div>;
-            <div className="max - w-4xl mx - auto">;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-                {values.map ((value, index) => (
-                  <motion.div;
-                    key={value.title}
-                    className="bg - white p - 6 rounded - lg shadow - lg";
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >;
-                    <h3 className="text - xl font - semibold text - gray - 900 mb - 3">;
-                      {value.title}
-                    </h3>;
-                    <p className="text - gray - 600">{value.description}</p>;
-                  </motion.div>))}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Open Positions */}
         <section id="open - positions" className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -884,23 +751,6 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
-                Open Positions;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                Explore our current job openings and find the perfect role for;
-                you.;
-              </p>;
-            </motion.div>;
-            <div className="max - w-6xl mx - auto">;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {job_openings.map ((job, index) => (
-                  <motion.div;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={job.id}
                     className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -911,79 +761,11 @@ function CareersPage() {
                     <div className="flex items - center justify - between mb - 4">;
                       <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
                         {job.department}
-<<<<<<< HEAD
-=======
-
-                      </span>;
-                      <span className="text - gray - 500 text - sm">{job.type}</span>;
-                    </div>;
-                    <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
-                      {job.title}
-                    </h3>;
-                    <p className="text - gray - 600 mb - 4">{job.description}</p>;
-                    <div className="space - y-2 mb - 6">;
-                      <div className="flex items - center text - sm text - gray - 600">;
-                        <MapPin className="w - 4 h - 4 mr - 2" />;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {job.location}
                       </div>;
                       <div className="flex items - center text - sm text - gray - 600">;
                         <Clock className="w - 4 h - 4 mr - 2" />;
                         {job.experience}
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Open Positions;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Explore our current job openings and find the perfect role for;
-                you.;
-              </p>;
-            </motion && motion.div>;
-            <div className="max-w-6xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {jobOpenings && jobOpenings.map((job, index) => (;
-                  <motion&& motion.div
-                    key={job && job.id}
-                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">;
-                        {job && job.department}
-                      </span>;
-                      <span className="text-gray-500 text-sm">{job && job.type}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">;
-                      {job && job.title}
-                    </h3>;
-                    <p className="text-gray-600 mb-4">{job && job.description}</p>;
-                    <div className="space-y-2 mb-6">;
-                      <div className="flex items-center text-sm text-gray-600">;
-                        <MapPin className="w-4 h-4 mr-2" />;
-                        {job && job.location}
-                      </div>;
-                      <div className="flex items-center text-sm text-gray-600">;
-                        <Clock className="w-4 h-4 mr-2" />;
-                        {job && job.experience}
-                      </div>;
-                    </div>;
-                    <div className="mb-6">;
-                      <h4 className="font-semibold text-gray-900 mb-2">;
-                        Key Requirements:;
-                      </h4>;
-                      <ul className="space-y-1">;
-                        {job && job.requirements;
-                          .slice(0, 3);
-                          .map((requirement, idx) => (;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <li
                               key={idx}
                               className="flex items-center text-sm text-gray-600">;
@@ -991,33 +773,12 @@ function CareersPage() {
                               {requirement}
                             </li>;
                           ))}
-<<<<<<< HEAD
-=======
-
-                      </ul>;
-                    </div>;
-                    <div className="mb-6">;
-                      <h4 className="font-semibold text-gray-900 mb-2">;
-                        Benefits:;
-                      </h4>;
-                      <div className="flex flex-wrap gap-2">;
-                        {job && job.benefits.map((benefit, idx) => (;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <span
                             key={idx}
                             className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
                             {benefit}
                           </span>;
                         ))}
-<<<<<<< HEAD
-=======
-
-                      </div>;
-                    </div>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <a
                       href={`/careers/${job && job.id}`}
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">;
@@ -1026,67 +787,11 @@ function CareersPage() {
                     </a>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-=======
-
-=======
-                      </div>;
-                    </div>;
-                    <div className="mb - 6">;
-                      <h4 className="font - semibold text - gray - 900 mb - 2">;
-                        Key Requirements:;
-                      </h4>;
-                      <ul className="space - y-1">;
-                        {job.requirements;
-                          .slice (0, 3);
-                          .map ((requirement, idx) => (
-                            <li;
-                              key={idx}
-                              className="flex items - center text - sm text - gray - 600";
-                            >;
-                              <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2" />;
-                              {requirement}
-                            </li>))}
-                      </ul>;
-                    </div>;
-                    <div className="mb - 6">;
-                      <h4 className="font - semibold text - gray - 900 mb - 2">;
-                        Benefits:;
-                      </h4>;
-                      <div className="flex flex - wrap gap - 2">;
-                        {job.benefits.map ((benefit, idx) => (
-                          <span;
-                            key={idx}
-                            className="bg - gray - 100 text - gray - 700 px - 2 py - 1 rounded text - xs";
-                          >;
-                            {benefit}
-                          </span>))}
-                      </div>;
-                    </div>;
-                    <a;
-                      href={`/careers/${job.id}`}
-                      className="w - full bg - gradient - to - r from - blue - 500 to - purple - 600 text - white py - 3 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold flex items - center justify - center";
-                    >;
-                      Apply Now;
-                      <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                    </a>;
-                  </motion.div>))}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
@@ -1106,6 +811,7 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -1174,31 +880,19 @@ function CareersPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    </MainLayout>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     </MainLayout>
-=======
+    </MainLayout>
     </Layout>
-<<<<<<< HEAD
     </MainLayout>;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </MainLayout>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
@@ -1226,3 +920,6 @@ const Page = () => {
 export default Page;
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

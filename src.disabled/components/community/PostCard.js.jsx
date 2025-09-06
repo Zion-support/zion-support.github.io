@@ -1,6 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React from';react'';"export": { function }';"export": default function PostCard({ post }) { return() <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>' <div className='flex items-start space-x-4'>' <img' src={post.author.avatar} alt={post.author.name}' className='w-10 h-10 rounded-full' / / />' <div className='flex-1'>' <h3 className='text-lg font-semibold text-zion-cyan mb-2'>' {post.title}' </h3>' <p className='text-zion-slate-light mb-3 line-clamp-3'>' {post.content}' </p>' <div className='flex items-center justify-between text-sm text-zion-slate-light'>' <span>By {post.author.name}</span>' <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>' <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>' <span>{post.replies.length} replies</span>' <span>{post.likes} likes</span> ''';'';
+=======
+import React from\';react\'';\"export\": { function }\';\"export\": default function PostCard({ post }) { return() <div className=\'bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4\'>\' <div className=\'flex items-start space-x-4\'>\' <img\' src={post.author.avatar} alt={post.author.name}\' className=\'w-10 h-10 rounded-full\' / / />\' <div className=\'flex-1\'>\' <h3 className=\'text-lg font-semibold text-zion-cyan mb-2\'>\' {post.title}\' </h3>\' <p className=\'text-zion-slate-light mb-3 line-clamp-3\'>\' {post.content}\' </p>\' <div className=\'flex items-center justify-between text-sm text-zion-slate-light\'>\' <span>By {post.author.name}</span>\' <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>\' <div className=\'flex items-center space-x-4 mt-2 text-sm text-zion-slate-light\'>\' <span>{post.replies.length} replies</span>\' <span>{post.likes} likes</span> \''\';\'';
+const React from";react"";export: { function }";export: default function PostCard({ post }) { return() <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">" <div className="flex items-start space-x-4">" <img" src={post.author.avatar} alt={post.author.name}" className="w-10 h-10 rounded-full" / / />" <div className="flex-1">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">" {post.title}" </h3>" <p className="text-zion-slate-light mb-3 line-clamp-3">" {post.content}" </p>" <div className="flex items-center justify-between text-sm text-zion-slate-light">" <span>By {post.author.name}</span>" <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>" <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light">" <span>{post.replies.length} replies</span>" <span>{post.likes} likes</span> """;"";'"'"
+import _React from';react'';"export": { function }';"export": default function PostCard({ post }) { return() <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>' <div className='flex items-start space-x-4'>' <img' src={post.author.avatar} alt={post.author.name}' className='w-10 h-10 rounded-full' / / />' <div className='flex-1'>' <h3 className='text-lg font-semibold text-zion-cyan mb-2'>' {post.title}' </h3>' <p className='text-zion-slate-light mb-3 line-clamp-3'>' {post.content}' </p>' <div className='flex items-center justify-between text-sm text-zion-slate-light'>' <span>By {post.author.name}</span>' <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>' <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>' <span>{post.replies.length} replies</span>' <span>{post.likes} likes</span> ''';'';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
 <<<<<<< HEAD
@@ -47,6 +61,9 @@ import _React from';react'';"export": { function }';"export": default function P
 =======
 import _React from';react'';"export": { function }';"export": default function PostCard({ post }) { return () <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>' <div className='flex items-start space-x-4'>' <img' src={post && post.author.avatar} alt={post && post.author.name}' className='w-10 h-10 rounded-full' / / />' <div className='flex-1'>' <h3 className='text-lg font-semibold text-zion-cyan mb-2'>' {post && post.title}' </h3>' <p className='text-zion-slate-light mb-3 line-clamp-3'>' {post && post.content}' </p>' <div className='flex items-center justify-between text-sm text-zion-slate-light'>' <span>By {post && post.author.name}</span>' <span>{new Date(post && post.createdAt).toLocaleDateString()}</span> </div>' <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>' <span>{post && post.replies.length} replies</span>' <span>{post && post.likes} likes</span> ''';'';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 <<<<<<< HEAD
 import _React from';react'';"export": { function }';"export": default function PostCard({ post }) { return() <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>' <div className='flex items-start space-x-4'>' <img' src={post.author.avatar} alt={post.author.name}' className='w-10 h-10 rounded-full' / / />' <div className='flex-1'>' <h3 className='text-lg font-semibold text-zion-cyan mb-2'>' {post.title}' </h3>' <p className='text-zion-slate-light mb-3 line-clamp-3'>' {post.content}' </p>' <div className='flex items-center justify-between text-sm text-zion-slate-light'>' <span>By {post.author.name}</span>' <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>' <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>' <span>{post.replies.length} replies</span>' <span>{post.likes} likes</span> ''';'';
@@ -56,4 +73,8 @@ const React from";react"";export: { function }";export: default function PostCar
 import _React from';react'';"export": { function }';"export": default function PostCard({ post }) { return() <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>' <div className='flex items-start space-x-4'>' <img' src={post.author.avatar} alt={post.author.name}' className='w-10 h-10 rounded-full' / / />' <div className='flex-1'>' <h3 className='text-lg font-semibold text-zion-cyan mb-2'>' {post.title}' </h3>' <p className='text-zion-slate-light mb-3 line-clamp-3'>' {post.content}' </p>' <div className='flex items-center justify-between text-sm text-zion-slate-light'>' <span>By {post.author.name}</span>' <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>' <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>' <span>{post.replies.length} replies</span>' <span>{post.likes} likes</span> ''';'';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

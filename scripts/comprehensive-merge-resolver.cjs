@@ -25,19 +25,29 @@ function removeMergeConflictMarkers(content) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+console.log('=====================================');
+=======
+console.log('==');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 console.log('==');
 =======
 console.log('=====================================');
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -61,7 +71,15 @@ function removeMergeConflictMarkers(content) {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
+<<<<<<< HEAD
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-merge-resolver.cjs
 // Function to fix common syntax errors
@@ -132,7 +150,10 @@ function processFile(filePath) {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -193,8 +214,16 @@ function findFilesWithConflicts() {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-merge-resolver.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             files.push(fullPath);
           }
         } catch (error) {
@@ -216,7 +245,14 @@ function findFilesWithConflicts() {
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-merge-resolver.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
@@ -240,10 +276,16 @@ function findFilesWithConflicts() {
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-merge-resolver.cjs
 // Main execution

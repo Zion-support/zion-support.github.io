@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -6,6 +7,21 @@
 'use strict';
 const { execSync, spawnSync } = require('"node": child_process');
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+#!/usr/bin/env node;
+'use strict';
+
+const { execSync, spawnSync } = require('"node": child_process');
+
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -16,27 +32,61 @@ function run(command, options = {}) {}
 	return result.status === 0};
 function main() {}
 	let ok = true;
+<<<<<<< HEAD
 	// Ensure deps are installed;
 	ok = run('corepack enable >/dev/null 2>&1 || true') && ok;
 	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
+=======
+
+	// Ensure deps are installed;
+	ok = run('corepack enable >/dev/null 2>&1 || true') && ok;
+	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 	// Lint, type-check, tests;
 	ok = run('npm run lint') && ok;
 	ok = run('npm run type-check') && ok;
 	ok = run('npm run test') && ok;
+<<<<<<< HEAD
 	// Security;
 	ok = run('npm run "security": audit') && ok;
+=======
+
+	// Security;
+	ok = run('npm run "security": audit') && ok;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 	// Selected automations (best-effort);
 	run('node scripts/code-quality-checks.cjs || true');
 	run('node scripts/performance-monitor.cjs || true');
 	run('node scripts/security-audit.cjs || true');
 	run('node scripts/seo-optimizer.cjs || true');
+<<<<<<< HEAD
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
 <<<<<<< HEAD
 =======
+=======
+
+	if (!ok) {}
+		console.error('\nAutomation runner encountered failures. See logs above.');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
 };
 main();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

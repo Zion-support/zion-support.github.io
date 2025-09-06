@@ -6,6 +6,10 @@ export function nextVersionFor(state: MultiverseState, entityKey: string): numbe
 }
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 export interface Version {
   major: number;
   minor: number;
@@ -23,6 +27,12 @@ export function parseVersion(versionString: string): Version {
   };
 }
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 export function nextVersionFor(
   state: MultiverseState,

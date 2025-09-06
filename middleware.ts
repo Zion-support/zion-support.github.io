@@ -1,7 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
   // Security headers
     "camera=(), microphone=(), geolocation=()",
@@ -15,7 +28,9 @@
 
   return response;
     return response;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Security headers
@@ -49,24 +64,42 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   return NextResponse.next();
 >>>>>>> main
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
 
-return response;
-}
 export const config = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const config = {
   matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

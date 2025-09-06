@@ -44,6 +44,46 @@ export const i18n = {
 export const supportedLocales = ["en", "pt", "es", "ar"] as const;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  language: 'en',
+  resolvedLanguage: 'en';
+};
+
+
+export const supported_locales = ['en', 'pt', 'es', 'ar'] as const;
+;
+export function is_rtl (locale: string): boolean {
+  return ['ar', 'he', 'fa', 'ur'].includes (locale);
+}
+export const i18n = {
+=======
+
+
+export function isRtl(locale: string): boolean {;
+
+  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+}
+export const i18n = {
+
+
+
+=======
+
+  language: 'en',
+  resolved_language: 'en';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+=======
+}
+export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export function isRtl(locale: string): boolean {
   return ["ar", "he", "fa", "ur"].includes(locale);
 }
@@ -52,6 +92,12 @@ export const i18n = {
   resolvedLanguage: "en",
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -62,6 +108,11 @@ export const i18n = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

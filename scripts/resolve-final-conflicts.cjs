@@ -2,12 +2,20 @@
 
 const fs = require('fs');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fix.cjs
 console.log('🔧 Ultimate Syntax Fix');
 console.log('=');
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 
+=======
+
+<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
+<<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 console.log('🔧 Resolving Final Conflicts');
 console.log('============================');
 
@@ -16,8 +24,19 @@ function resolveMergeConflicts(content) {
   return content
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/resolve-final-conflicts.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
+=======
+console.log('🔧 Final Build Fix');
+console.log('====');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -29,41 +48,73 @@ function fixAllSyntax(content) {
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
+<<<<<<< HEAD
 
     // Fix malformed meta tags
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
 
+=======
+    
+    // Fix malformed meta tags
+    .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
+    .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix semicolons in wrong places
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix array and object syntax
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
     .replace(/\]\s*\}\s*$/gm, ']}')
+<<<<<<< HEAD
 
     // Fix empty objects and arrays
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
 
+=======
+    
+    // Fix empty objects and arrays
+    .replace(/\{\s*\}/g, '{}')
+    .replace(/\[\s*\]/g, '[]')
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
+<<<<<<< HEAD
 
     // Clean up extra semicolons
     .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
 
+=======
+    
+    // Clean up extra semicolons
+    .replace(/;;+/g, ';')
+    .replace(/;\s*;/g, ';')
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
@@ -96,11 +147,24 @@ for (const file of filesToFix) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fix.cjs
     const originalContent = content;
 
     content = fixAllSyntax(content);
 
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
+<<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+=======
+    const originalContent = content;
+    
+    content = fixAllSyntax(content);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -129,7 +193,11 @@ console.log('\n📝 Committing syntax fixes...');
 try {
   execSync('git add .', { cwd: '/workspace' }
 });
+<<<<<<< HEAD
   execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }
+=======
+  execSync('git commit -m "fix: Final build fix for all remaining syntax errors"', { cwd: '/workspace' }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 });
   console.log('✅ Syntax fixes committed');
 } catch (error) {
@@ -145,10 +213,20 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
+<<<<<<< HEAD
 console.log('\n🎉 Ultimate syntax fix completed!');
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+
+console.log('\n🎉 Final build fix completed!');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/resolve-final-conflicts.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

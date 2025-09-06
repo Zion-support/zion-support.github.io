@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const axios = require("child_process")
 const fs = require("fs")
 const path = require("path")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   constructor(baseUrl = ""https": //ziontechgroup.com")
   log(message, level = "info")
     this.log(` "Checking"`)
@@ -71,7 +77,17 @@ const path = require("path")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       return { "success": false, "error"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      return { "success": false, "error"}
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      return { "success": false, "error"}
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -47,7 +47,17 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
+<<<<<<< HEAD
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/pages/building-your-application/configuring/typescript for more information.
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+/// <reference path="./.next/types/routes.d.ts" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

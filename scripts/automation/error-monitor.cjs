@@ -1,12 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class $1 {}
   constructor() {}
   this.projectRoot = "/workspace";
@@ -32,13 +39,20 @@ class $1 {}
   log(level, ...args) {}
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
@@ -286,6 +300,10 @@ class $1 {}
 ;
   shutdown() {}
   this.log("info", "Error Monitor shutting down...`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   shutdown() {}
   this.log("info", "Error Monitor shutting down...");
     this.isRunning = false;
@@ -301,7 +319,17 @@ monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

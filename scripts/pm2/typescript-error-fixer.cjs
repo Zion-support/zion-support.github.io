@@ -1,16 +1,34 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**
  * TypeScript Error Fixer Service;
  * Automatically fixes TypeScript-specific errors;
  */
+<<<<<<< HEAD
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 
+=======
+
+const fs = // // require('fs');
+const path = // // require('path');
+const { execSync } = // // require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -19,6 +37,7 @@ class TypeScriptErrorFixer {}
     this.typeAnnotationFix = process.env.TYPE_ANNOTATION_FIX === 'true';
     this.interfaceGeneration = process.env.INTERFACE_GENERATION === 'true';
     this.maxComplexity = parseInt(process.env.MAX_COMPLEXITY) || 10;
+<<<<<<< HEAD
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
@@ -26,6 +45,12 @@ class TypeScriptErrorFixer {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    
+    this.fixesApplied = 0;
+    this.fixesFailed = 0;
+    this.fixesSkipped = 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.fixedFiles = new Set()};
   log(level, message, data = null) {}
     const timestamp = new Date().toISOString();
@@ -36,7 +61,18 @@ class TypeScriptErrorFixer {}
       data,
       service: 'typescript-error-fixer'
     };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -51,17 +87,34 @@ class TypeScriptErrorFixer {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting TypeScript Error Fixer Service...');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       this.ensureDirectories();
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
+<<<<<<< HEAD
       this.log('info', 'TypeScript Error Fixer Service started successfully');
 <<<<<<< HEAD
 
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      
+      this.log('info', 'TypeScript Error Fixer Service started successfully');
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -76,13 +129,25 @@ class TypeScriptErrorFixer {}
     })};
   async performTypeScriptFixes() {}
     this.log('info', 'Starting TypeScript error fixing process...');
+<<<<<<< HEAD
     try {}
       this.resetCounters();
       const errors = await this.getTypeScriptErrors();
+=======
+    
+    try {}
+      this.resetCounters();
+      const errors = await this.getTypeScriptErrors();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (errors.length === 0) {}
         this.log('info', 'No TypeScript errors found');
         return};
       this.log('info', `Found ${errors.length} TypeScript errors`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       for (const error of errors) {}
         if (this.fixesApplied >= 50) break; // Limit fixes per run;
         try {}
@@ -102,11 +167,19 @@ class TypeScriptErrorFixer {}
   async getTypeScriptErrors() {}
     try {}
       const result = execSync('npx tsc --noEmit --json', { })
+<<<<<<< HEAD
         cwd: this.projectRoot,
+=======
+        cwd: this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         encoding: 'utf8',
         stdio: 'pipe'
       }
 });
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (result) {}
         const parsed = JSON.parse(result);
         return parsed.errors || []};
@@ -118,6 +191,10 @@ class TypeScriptErrorFixer {}
   parseTypeScriptErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -128,30 +205,50 @@ class TypeScriptErrorFixer {}
           message: match[4].trim(),
           code: 'TS_ERROR'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         })};
     }
 });
+=======
+        })};
+    }
+});
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return errors};
   async fixTypeScriptError(error) {}
     if (!error.file || !fs.existsSync(error.file)) {}
       this.fixesSkipped++;
       return};
     this.log('info', `Fixing TypeScript error in: ${error.file}`);
+<<<<<<< HEAD
     try {}
       const content = fs.readFileSync(error.file, 'utf8');
       const lines = content.split('\n');
+=======
+    
+    try {}
+      const content = fs.readFileSync(error.file, 'utf8');
+      const lines = content.split('\n');
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (error.line > lines.length) {}
         this.fixesSkipped++;
         return};
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (this.shouldSkipLine(line)) {}
         this.fixesSkipped++;
         return};
       const fixedLine = await this.fixTypeScriptLine(line, error, lines, lineIndex);
+<<<<<<< HEAD
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         const fixedContent = lines.join('\n');
@@ -166,6 +263,29 @@ class TypeScriptErrorFixer {}
 =======
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      
+      if (fixedLine !== line) {}
+        lines[lineIndex] = fixedLine;
+        const fixedContent = lines.join('\n');
+        
+        // Create backup;
+        await this.createBackup(error.file);
+        
+        // Write fixed content;
+        fs.writeFileSync(error.file, fixedContent, 'utf8');
+        
+        this.fixesApplied++;
+        this.fixedFiles.add(error.file);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+        
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -174,6 +294,7 @@ class TypeScriptErrorFixer {}
   };
   shouldSkipLine(line) {}
     const trimmed = line.trim();
+<<<<<<< HEAD
     return !trimmed ||
            trimmed.startsWith('//') ||
            trimmed.startsWith('/*') ||
@@ -186,6 +307,17 @@ class TypeScriptErrorFixer {}
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
     let fixedLine = line;
+=======
+    return !trimmed || 
+           trimmed.startsWith('//') || 
+           trimmed.startsWith('/*') || 
+           trimmed.startsWith('*') ||
+           trimmed.startsWith('import') ||
+           trimmed.startsWith('export')};
+  async fixTypeScriptLine(line, error, allLines, lineIndex) {}
+    let fixedLine = line;
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix common TypeScript errors;
     if (error.message.includes('Cannot find name')) {}
       fixedLine = this.fixUndefinedName(line, error, allLines, lineIndex)} else if (error.message.includes('Type')) {}
@@ -197,6 +329,7 @@ class TypeScriptErrorFixer {}
   fixUndefinedName(line, error, allLines, lineIndex) {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
+<<<<<<< HEAD
     const undefinedName = nameMatch[1];
 <<<<<<< HEAD
 
@@ -206,6 +339,22 @@ class TypeScriptErrorFixer {}
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
+=======
+    
+    const undefinedName = nameMatch[1];
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+    // Try to find the name in the file;
+    const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
+    const matches = line.match(namePattern);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (matches) {}
       // Check if it should be imported;
       if (this.shouldBeImported(undefinedName, allLines)) {}
@@ -232,12 +381,25 @@ class TypeScriptErrorFixer {}
   fixModuleError(line, error, allLines, lineIndex) {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
+<<<<<<< HEAD
     const moduleName = moduleMatch[1];
 <<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    
+    const moduleName = moduleMatch[1];
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -248,12 +410,25 @@ class TypeScriptErrorFixer {}
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
+<<<<<<< HEAD
     const propertyName = propertyMatch[1];
 <<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    
+    const propertyName = propertyMatch[1];
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -276,10 +451,20 @@ class TypeScriptErrorFixer {}
     let firstUsage = -1;
     let declaration = -1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -288,10 +473,18 @@ class TypeScriptErrorFixer {}
       };
     }
 });
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)};
   addImportStatement(name, allLines) {}
     // Find the best place to add import;
     let importIndex = 0;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (let i = 0; i < allLines.length; i++) {}
       if (allLines[i].trim().startsWith('import')) {}
         importIndex = i + 1} else if (allLines[i].trim() && !allLines[i].trim().startsWith('//')) {}
@@ -299,6 +492,10 @@ class TypeScriptErrorFixer {}
     };
     // Add import statement;
     allLines.splice(importIndex, 0, `import { ${name} } from 'react';`);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return allLines.join('\n')};
   addVariableDeclaration(line, name) {}
     // Add variable declaration;
@@ -309,11 +506,16 @@ class TypeScriptErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
+<<<<<<< HEAD
       fs.copyFileSync(filePath, backupPath);
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      
+      fs.copyFileSync(filePath, backupPath);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   };
@@ -326,14 +528,18 @@ class TypeScriptErrorFixer {}
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
       },
       fixedFiles: Array.from(this.fixedFiles),
       recommendations: this.generateRecommendations();
     };
+<<<<<<< HEAD
     const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log('info', `TypeScript fix report generated: ${reportPath}`);
@@ -344,6 +550,17 @@ class TypeScriptErrorFixer {}
     return report};
   generateRecommendations() {}
     const recommendations = [];
+=======
+
+    const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log('info', `TypeScript fix report generated: ${reportPath}`);
+    return report};
+  generateRecommendations() {}
+    const recommendations = [];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (this.fixesFailed > 0) {}
       recommendations.push({})
         priority: 'high',
@@ -359,6 +576,10 @@ class TypeScriptErrorFixer {}
     return recommendations};
   startContinuousFixing() {}
     this.log('info', 'Starting continuous TypeScript fixing...');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     setInterval(async () => {}
       await this.performTypeScriptFixes()}, 600000); // 10 minutes;
   };
@@ -369,31 +590,61 @@ class TypeScriptErrorFixer {}
 };
 // Start the service;
 const fixer = new TypeScriptErrorFixer();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
   process.exit(0)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
   process.exit(1)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 process.on('unhandledRejection', (reason, promise) => {}
   fixer.log('error', 'Unhandled rejection', { reason, promise }
 });
   process.exit(1)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

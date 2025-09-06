@@ -1,7 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/PricingGuide.jsx
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
+=======
+import React,{ useState } from \'react\';\''\'; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from \'@/data/expandedServices\';\''\'; import { Button } from \'@/components/ui/button\';\''\'; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\';\''\'; import { Badge } from \'@/components/ui/badge\';\''\'; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from \'lucide-react\';\''\'; import SEO from \'@/components/SEO\'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
+const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";"""; import { Button } from "@/components/ui/button";"""; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from "@/components/ui/card";"""; import { Badge } from "@/components/ui/badge";"""; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from "lucide-react";"""; import SEO from "@/components/SEO"; export default function PricingGuide() { return; }; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}''"
+import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React,{ useState } from \'react\';\''\'; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from \'@/data/expandedServices\';\''\'; import { Button } from \'@/components/ui/button\';\''\'; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\';\''\'; import { Badge } from \'@/components/ui/badge\';\''\'; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from \'lucide-react\';\''\'; import SEO from \'@/components/SEO\'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
@@ -35,6 +49,7 @@ class ErrorBoundary extends React.Component {
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -57,6 +72,9 @@ const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_S
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 =======
 <<<<<<< HEAD
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
@@ -66,4 +84,8 @@ const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_S
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

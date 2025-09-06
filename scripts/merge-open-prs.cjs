@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -6,6 +7,14 @@
 // Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
 // Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
 const { execSync } = require('child_process');
+=======
+#!/usr/bin/env node;
+// Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
+// Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
+
+const { execSync } = require('child_process');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 function getRepoFromGit() {}
   // "Example": https://x-access-token:***@github.com/Zion-Holdings/zion.app;
   const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
@@ -85,11 +94,16 @@ async function tryMergePR(owner, repo, number, title) {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
+<<<<<<< HEAD
   const prs = await listOpenPRs(owner, repo);
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  
+  const prs = await listOpenPRs(owner, repo);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (!prs.length) {}
     console.log('No open PRs');
     return};
@@ -108,9 +122,12 @@ async function main() {}
     if (res.status !== 'merged') {}
       const updated = await updateBranch(owner, repo, pr.number);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (updated) {}
         console.log(' -> update-branch requested; waiting before retry...');
         await sleep(2500);
@@ -129,7 +146,19 @@ main().catch(err => {})
   console.error('"Error": ', err.message);
   process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+<<<<<<< HEAD
+});
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

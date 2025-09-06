@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 <<<<<<< HEAD
@@ -52,6 +53,10 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
 import Link from 'next/link';
+=======
+import React from "react";
+import Link from "next/link";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 interface CardProps {
   title: string;
@@ -61,31 +66,16 @@ interface CardProps {
   icon?: string;
 }
 
-<<<<<<< HEAD
-function Card({ title, href, description, bullets, icon }: CardProps) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-=======
 function Card({ title, href, description, bullets = [], icon }: CardProps) {
   return (
     <Link
       href={href}
       className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
     >
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       <div className="flex items-center mb-4">
         {icon && <span className="text-2xl mr-3">{icon}</span>}
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       </div>
-<<<<<<< HEAD
-      <p className="text-gray-600 mb-4">{description}</p>
-      {bullets && (
-        <ul className="space-y-2 mb-6">
-          {bullets.map((bullet, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600 text-sm">{bullet}</span>
-=======
       <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
       {bullets.length > 0 && (
         <ul className="space-y-1">
@@ -93,25 +83,21 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
             <li key={index} className="text-sm text-gray-600 flex items-center">
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
               {bullet}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
             </li>
           ))}
         </ul>
       )}
-<<<<<<< HEAD
-      <Link
-        href={href}
-        className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-      >
-        Learn More
-      </Link>
-    </div>
-=======
     </Link>
   );
 }
 
-function ServiceCard({ title, href, description, bullets = [], icon }: CardProps) {
+function ServiceCard({
+  title,
+  href,
+  description,
+  bullets = [],
+  icon,
+}: CardProps) {
   return (
     <Link
       href={href}
@@ -133,7 +119,6 @@ function ServiceCard({ title, href, description, bullets = [], icon }: CardProps
         </ul>
       )}
     </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
   );
 }
 
@@ -146,7 +131,8 @@ export default function HomePage() {
           Zion Tech Group
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of intelligent services.
+          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with
+          our comprehensive suite of intelligent services.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -168,8 +154,9 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
-            Get Started
+            Explore Services
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,6 +172,8 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           <a
             href="https://ziontechgroup.com"
             target="_blank"
@@ -204,11 +193,16 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
+<<<<<<< HEAD
             View Services
+=======
+            Visit Main Site
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           </a>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Services Grid */}
@@ -284,12 +278,17 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Featured Services */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Core Services
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions for modern businesses, from AI-powered tools to complete IT infrastructure.
+            Comprehensive solutions for modern businesses, from AI-powered tools
+            to complete IT infrastructure.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,7 +301,7 @@ export default function HomePage() {
               "Payment integration",
               "User authentication",
               "Analytics dashboard",
-              "API development"
+              "API development",
             ]}
             icon="🚀"
           />
@@ -315,7 +314,7 @@ export default function HomePage() {
               "Machine learning models",
               "Natural language processing",
               "Computer vision",
-              "Predictive analytics"
+              "Predictive analytics",
             ]}
             icon="🤖"
           />
@@ -328,7 +327,7 @@ export default function HomePage() {
               "DevOps & CI/CD",
               "Infrastructure management",
               "Security solutions",
-              "24/7 support"
+              "24/7 support",
             ]}
             icon="💻"
           />
@@ -368,9 +367,12 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Why Choose Zion Tech Group?
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We combine technical expertise with business acumen to deliver solutions that drive real results.
+            We combine technical expertise with business acumen to deliver
+            solutions that drive real results.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -435,29 +437,45 @@ export default function HomePage() {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Delivery</h3>
-            <p className="text-gray-600">Rapid development and deployment with agile methodologies</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Fast Delivery
+            </h3>
+            <p className="text-gray-600">
+              Rapid development and deployment with agile methodologies
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🔒</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
-            <p className="text-gray-600">Enterprise-grade security and 99.9% uptime guarantee</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Secure & Reliable
+            </h3>
+            <p className="text-gray-600">
+              Enterprise-grade security and 99.9% uptime guarantee
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🎯</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Solutions</h3>
-            <p className="text-gray-600">Tailored solutions that fit your specific business needs</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Custom Solutions
+            </h3>
+            <p className="text-gray-600">
+              Tailored solutions that fit your specific business needs
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📞</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
-            <p className="text-gray-600">Round-the-clock technical support and maintenance</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              24/7 Support
+            </h3>
+            <p className="text-gray-600">
+              Round-the-clock technical support and maintenance
+            </p>
           </div>
         </div>
       </section>
@@ -468,8 +486,15 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
           <p className="text-xl text-gray-600 mb-8">
             Let's discuss how we can help you achieve your technology goals
+=======
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Let's discuss your project and create a custom solution that drives
+            real business value. Our team has delivered 1000+ successful
+            projects across various industries.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -492,6 +517,7 @@ export default function HomePage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -579,11 +605,24 @@ function FeatureCard({ title, description }: { title: string; description: strin
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   return (
+=======
+}
+
+function FeatureCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -606,3 +645,6 @@ function FeatureCard({ title, description }: { title: string; description: strin
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,11 +80,88 @@ import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { promises as fs } from "fs";
 import path from "path";
 
 const DATA_DIR = path.join(process.cwd(), "data");
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+// File system database utilities
+export const fsDb = {
+  // Add file system database functionality here
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import { promises as fs } from 'fs';
+import path from 'path';
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +186,21 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -146,6 +239,12 @@ export async function writeJsonAsync<T>(
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export function writeJson<T>(relativePath: string, value: T): void {
   const full = path.join(dataRoot, relativePath);
   ensureDir(path.dirname(full));
@@ -189,6 +288,11 @@ export const fs_db = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

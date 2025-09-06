@@ -3,6 +3,10 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -113,7 +117,11 @@ if (found.length) report.overallStatus = 'warning';
 <<<<<<< HEAD
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class SecurityScanner {}
   constructor() {}
     this.securityReport = {}
@@ -304,15 +312,29 @@ class SecurityScanner {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 /**
  * Security Scanner
  * Automatically scans for security vulnerabilities
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+const { execSync } = require('child_process');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 console.log('🔒 Zion Tech Group - Security Scanner');
 console.log('=====================================');
@@ -328,15 +350,26 @@ const securityReport = {
         failed: 0,
         warnings: 0,
         vulnerabilities: 0
+<<<<<<< HEAD
+    }
+=======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 };
 function runSecurityCheck(name, checkFunction) {
     securityReport.summary.total++;
     console.log(`\n🔍 Security Check: ${name}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -420,6 +453,7 @@ class SecurityScanner {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     
 =======
 #!/usr/bin/env node
@@ -448,8 +482,67 @@ class SecurityScanner {
 =======
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
+=======
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Security Scanner
+ * Comprehensive security scanning and enhancement automation
+ */
+class SecurityScanner {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.results = {
+      dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
+      codeSecurity: { success: false, issues: [], fixes: [] },
+      headersSecurity: { success: false, headers: [], recommendations: [] },
+      contentSecurityPolicy: { success: false, policy: '', recommendations: [] },
+      authenticationSecurity: { success: false, checks: [], recommendations: [] }
+    };
+  }
+
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Security Scanner
+ * Comprehensive security scanning and enhancement automation
+ */
+class SecurityScanner {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.results = {
+      dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
+      codeSecurity: { success: false, issues: [], fixes: [] },
+      headersSecurity: { success: false, headers: [], recommendations: [] },
+      contentSecurityPolicy: { success: false, policy: '', recommendations: [] },
+      authenticationSecurity: { success: false, checks: [], recommendations: [] }
+    };
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -550,13 +643,30 @@ runSecurityCheck('Dependency Security', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+  }
+
+  async checkSensitiveFiles() {
+    this.log("🔐 Checking for sensitive files...");
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }
 
   async auditDependencies() {
@@ -605,6 +715,9 @@ runSecurityCheck('Dependency Security', () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 =======
   }
@@ -617,6 +730,7 @@ runSecurityCheck('Dependency Security', () => {
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     try {
       const sensitiveFiles = [
         ".env",
@@ -721,6 +835,16 @@ runSecurityCheck('Security Headers', () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      if (!permissionIssues) {
+        this.fixes.push("File permissions are secure");
+        this.log("✅ File permissions are secure");
+      }
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
       // Try to fix vulnerabilities
       if (vulnerabilities > 0) {
@@ -740,6 +864,9 @@ runSecurityCheck('Security Headers', () => {
         fixes
       };
 <<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -756,6 +883,7 @@ runSecurityCheck('Security Headers', () => {
         this.log("✅ File permissions are secure");
       }
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     } catch (error) {
       this.log(`❌ Failed to check file permissions: ${error.message}`, "ERROR");
       this.errors.push(error.message);
@@ -1127,7 +1255,10 @@ export function securityHeaders(req, res, next) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     } else {
         return {
             status: 'fail',
@@ -1140,6 +1271,7 @@ export function securityHeaders(req, res, next) {
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
   ensureLogDir() {
     const logsDir = path.dirname(this.logFile);
@@ -1223,11 +1355,16 @@ runSecurityCheck('HTTPS Configuration', () => {
             recommendation: 'Ensure HTTPS is properly configured for production'
         };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     
     // Save detailed report
 <<<<<<< HEAD
@@ -1308,11 +1445,59 @@ scanner.runSecurityScan().catch(console.error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  async runSecurityFix() {
+    this.log("🔧 Running security fixes...");
+    try {
+      execSync("npm audit fix", {
+        cwd: this.projectRoot,
+        stdio: "inherit"
+      });
+      this.fixes.push("Security vulnerabilities fixed");
+      this.log("✅ Security vulnerabilities fixed");
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+    
+    // Save detailed report
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalDuration,
+      results: this.results,
+      summary: {
+        dependenciesAudited: this.results.dependencyAudit.success,
+        codeScanned: this.results.codeSecurity.success,
+        headersConfigured: this.results.headersSecurity.success,
+        cspConfigured: this.results.contentSecurityPolicy.success,
+        authChecked: this.results.authenticationSecurity.success
+      }
+    };
+    
+    this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
+    this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
+    
+    try {
+      await this.auditDependencies();
+      await this.scanCodeSecurity();
+      await this.setupSecurityHeaders();
+      await this.setupContentSecurityPolicy();
+      await this.checkAuthenticationSecurity();
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+    } catch (error) {
+      this.log(`⚠️ Security fix had issues: ${error.message}`, "WARN");
+    }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 });
 <<<<<<< HEAD
 =======
@@ -1348,9 +1533,15 @@ runSecurityCheck('File Permissions', () => {
                 }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }
 
   log(message) {
@@ -1382,7 +1573,12 @@ runSecurityCheck('File Permissions', () => {
           status: 'passed', 
           description: check.description,
           error: null 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         });
         passedChecks++;
       } catch (error) {
@@ -1424,7 +1620,9 @@ runSecurityCheck('File Permissions', () => {
 =======
 console.log(`\n📄 Report saved to: ${reportPath}`);
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         });
+<<<<<<< HEAD
         
         if (issues.length === 0) {
             return {
@@ -1615,6 +1813,83 @@ scanner.run().catch(console.error);
       
       if (secretCheck.success && secretCheck.output.trim()) {
         this.log(`⚠️ Potential secret found: ${pattern}`, 'WARN');
+<<<<<<< HEAD
+      }
+    }
+  }
+
+  async generateSecurityReport() {
+    this.log('📊 Generating security report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      scans: {
+        dependencies: 'completed',
+        code: 'completed',
+        secrets: 'completed'
+      },
+      recommendations: [
+        'Regularly update dependencies to latest secure versions',
+        'Implement proper secret management using environment variables',
+        'Add security headers to Next.js configuration',
+        'Enable HTTPS in production',
+        'Implement rate limiting for API endpoints',
+        'Add input validation and sanitization',
+        'Regular security audits and penetration testing'
+      ]
+    };
+
+    const reportFile = path.join(__dirname, 'logs', 'security-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📄 Security report saved to: ${reportFile}`);
+  }
+
+  async scan() {
+    this.log('🔒 Starting security scan...');
+    
+    await this.scanDependencies();
+    await this.scanCode();
+    await this.checkSecrets();
+    await this.generateSecurityReport();
+    
+    this.log('🎉 Security scan completed!');
+  }
+
+  async start() {
+    this.log('🚀 Security Scanner started');
+    
+    // Initial scan
+    await this.scan();
+    
+    // Set up periodic scans every 4 hours
+    setInterval(async () => {
+      await this.scan();
+    }, 4 * 60 * 60 * 1000);
+
+    this.log('🔄 Security Scanner is running. Scans every 4 hours.');
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const scanner = new SecurityScanner();
+  scanner.start().catch(console.error);
+}
+
+module.exports = SecurityScanner;
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+        passedChecks++;
+      } catch (error) {
+        console.log(`⚠️ ${check.name} completed with warnings`);
+        results.push({ 
+          name: check.name, 
+          status: 'warning', 
+          description: check.description,
+          error: error.message 
+        });
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       }
     }
   }
@@ -1684,6 +1959,9 @@ if (require.main === module) {
 
 module.exports = SecurityScanner;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
     this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
     
@@ -1695,6 +1973,9 @@ module.exports = SecurityScanner;
 const scanner = new SecurityScanner();
 scanner.runSecurityScan().catch(console.error);
 <<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -1704,4 +1985,8 @@ scanner.runSecurityScan().catch(console.error);
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

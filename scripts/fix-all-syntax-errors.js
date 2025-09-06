@@ -5,6 +5,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 
 
 =======
@@ -30,7 +38,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node \s*\n\s*\)/g,"\n)") content = content.replace(/(\w+)\s*}\s*$/gm,"$1;\n}") content = content.replace(/(\w+)\s*\)\s*$/gm,"$1;\n)") return content} fixStringConcatenation(content) { content = content.replace(/["]\s*,\s*\n\s*["""]/g,") content = content.replace(/["""]\s*,\s*\n\s*["]/g,""") content = content.replace(/["]\s*,\s*["""]/g,") content = content.replace(/["""]\s*,\s*[`]/g,""") return content} fixObjectSyntax(content) { content = content.replace(/(\w+):\s*([^}]+)\s*;\s*}/g,"$"1": '$2\n'}") content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\)/g,"$"1": $2\n)") content = content.replace(/(\w+):\s*([^}]+)\s*;\s*]/g,"$"1": $2\n]") return content} fixFunctionSyntax(content) { content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm,"function $1() {\n") content = content.replace(/(\w+)\s*\(\s*\)\s*{\s*$/gm,"$1() {\n") return content} fixConditionalSyntax(content) { content = content.replace(/\?\s*([^:]+)\s*,\s*$/gm,"? $1 :") content = content.replace(/\?\s*([^:]+)\s*,\s*\n/gm,"? $1 :\n") return content} } const fixer = new SyntaxErrorFixer() fixer.fixAllScripts().catch(_console.error))
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 >>>>>>> origin/main
@@ -38,4 +50,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

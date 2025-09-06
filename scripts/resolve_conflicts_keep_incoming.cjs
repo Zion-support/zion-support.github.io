@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -17,9 +20,12 @@ function getAllFiles(dir) {}
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (!text.includes('')) return false;
   const lines = text.split('\n');
   const out = [];
@@ -55,9 +61,12 @@ function main() {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
@@ -66,7 +75,17 @@ function main() {}
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

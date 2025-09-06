@@ -1,10 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class ErrorFixer {}
   constructor() {}
     this.logFile = 'logs/pm2/error-fixer.log';
@@ -23,9 +30,12 @@ class ErrorFixer {}
     const logMessage = `[${timestamp}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(message);
   };
   error(message) {}
@@ -36,6 +46,10 @@ class ErrorFixer {}
   };
   async fixSyntaxErrors() {}
     this.log('Starting syntax error fixing...');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       const fixes = [{}]
           "pattern": /;/g,
@@ -58,12 +72,23 @@ class ErrorFixer {}
           "description": 'Fix template literal className attributes'
         };
       ];
+<<<<<<< HEAD
       let totalFixed = 0;
       const files = this.getSourceFiles();
+=======
+
+      let totalFixed = 0;
+      const files = this.getSourceFiles();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       for (const file of files) {}
         try {}
           let content = fs.readFileSync(file, 'utf8');
           let fileFixed = false;
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           for (const fix of fixes) {}
             const before = content;
             content = content.replace(fix.pattern, fix.replacement);
@@ -89,6 +114,10 @@ class ErrorFixer {}
   };
   async fixLintingErrors() {}
     this.log('Starting linting error fixing...');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
@@ -106,6 +135,10 @@ class ErrorFixer {}
     const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     const files = [];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
@@ -115,9 +148,17 @@ class ErrorFixer {}
   };
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
+<<<<<<< HEAD
     for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+=======
+    
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (stat.isDirectory()) {}
         this.getFilesRecursively(fullPath, extensions, files);
       } else if (extensions.some(ext => item.endsWith(ext))) {}
@@ -127,11 +168,22 @@ class ErrorFixer {}
   };
   async run() {}
     this.log('Starting error fixing automation...');
+<<<<<<< HEAD
     try {}
       const syntaxFixed = await this.fixSyntaxErrors();
       const lintingFixed = await this.fixLintingErrors();
       this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
         - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
+=======
+    
+    try {}
+      const syntaxFixed = await this.fixSyntaxErrors();
+      const lintingFixed = await this.fixLintingErrors();
+      
+      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
+        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return {}
         syntaxFixed,
         lintingFixed,
@@ -156,7 +208,17 @@ if (require.main === module) {}
 });
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ErrorFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = ErrorFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = ErrorFixer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

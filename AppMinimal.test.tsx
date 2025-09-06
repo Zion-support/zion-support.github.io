@@ -1,7 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> main
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -9,6 +32,16 @@ import AppMinimal from './AppMinimal';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
@@ -17,7 +50,12 @@ describe('AppMinimal', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
 =======
@@ -26,10 +64,16 @@ describe('AppMinimal', () => {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
   it('displays correct content', () => {
     render(<AppMinimal />);
@@ -43,13 +87,24 @@ describe('AppMinimal', () => {
 });
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<AppMinimal />)}
 }); it('handles user interactions',() => { render(<AppMinimal />)})}
@@ -57,7 +112,10 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import AppM
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </AppMinimal>'
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 
@@ -83,11 +141,16 @@ describe('AppMinimal'
   it('displays correct content'
   it('handles user interactions'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 });
 =======
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
 =======
@@ -109,6 +172,7 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 </AppMinimal>'
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
@@ -117,3 +181,23 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+import { render, screen } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
+import AppMinimal from './AppMinimal'
+describe('AppMinimal'
+  it('renders without crashing'
+    expect(screen.getByRole('main'
+  it('displays correct content'
+  it('handles user interactions'
+});
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

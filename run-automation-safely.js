@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<<<<<<< HEAD:corrupted_backup/run-automation-safely.js
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD:run-automation-safely.js
 =======
@@ -35,8 +41,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/run-automation-safely.js
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:run-automation-safely.js
+=======
 >>>>>>> main:corrupted_backup/run-automation-safely.js
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node const { execSync,spawn } = require('child_process'); const fs = require('fs') const path = require('path') class SafeAutomationRunner { constructor() { this.logDir = path.join(__dirname,'automation','logs'); this.ensureLogDir(); this.startTime = Date.now()this.results = { completed: []; failed: []; skipped: [],}} ensureLogDir() { if () { fs.mkdirSync(this.logDir,{ recursive: true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message) { ) { fs.mkdirSync(this.logDir,{ recursive: true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}};`;  const logFile = path.join(this.logDir,'safe-automation.log';); fs.appendFileSync(logFile,logMessage + '\n')} async runCommand() { this.log(`🔧 ${description }`); try { const result = execSync(command,{ encoding: 'utf8',stdio: 'pip;e;'; timeout: timeout })this.log(`✅ ${description} completed successfully`); this.results.completed.push(description); return { success: true output: result }} catch(error) { this.log(`❌ ${description } failed: ${error.message}`,'ERROR'); this.results.failed.push({ description,error: error.message }); return { success: false error: error.message }} } async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner'); await this.runCommand('npm --version','Check npm version',10000); await this.runCommand('node --version','Check node version',10000); await this.runCommand('npm run lint: check','Run linting check',120000); await this.runCommand('npm run type-check','Run TypeScript type check',120000); await this.runCommand('npm test','Run tests',180000); await this.runCommand('npm run build','Build application',300000); await this.runCommand('npm audit --audit-level=moderate','Security audit',60000); this.generateReport() } generateReport() { const duration = Date.now() - this.startTimeconst report = { timestamp: new Date().toISOStrin,g(,); duration: `${Math.round(duratio,n / 1000,)}s`; results: this.results summary: { total: this.results.completed.length + this.results.failed.length completed: this.results.completed.length failed: this.results.failed.length successRate: `${Math.round((this.results.completed.length / (this.results.completed.length + this.results.failed.lengt,h)) * 100,)}%`} }; const reportFile = path.join(this.logDir,'automation-report.json';); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log('📊 Automation Report Generated')this.log(`✅ Completed: ${report.summary.completed }`)this.log(`❌ Failed: ${report.summary.failed }`)this.log(`📈 Success Rate: ${report.summary.successRate }`)} } if() { const runner = new SafeAutomationRunner;(;); runner.runAutomationScripts().catch(error => { console.error('Automation runner failed: ,',error); process.exit(1) })} module.exports = SafeAutomationRunner;
 #!/usr/bin/env node
 /**
@@ -129,8 +143,12 @@ if() { const runner = new SafeAutomationRunner;(;);
     process.exit(1) })}
 module.exports = SafeAutomationRunner;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD:corrupted_backup/run-automation-safely.js
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD:run-automation-safely.js
 <<<<<<< HEAD
@@ -162,6 +180,7 @@ module.exports = SafeAutomationRunner;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD:run-automation-safely.js
 #!/usr/bin/env node const { execSync,spawn } = require('child_process'); const fs = require('fs') const path = require('path') class SafeAutomationRunner { constructor() { this.logDir = path.join(__dirname,'automation','logs'); this.ensureLogDir(); this.startTime = Date.now()this.results = { completed: []; failed: []; skipped: [],}} ensureLogDir() { if () { fs.mkdirSync(this.logDir,{ recursive: true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message) { ) { fs.mkdirSync(this.logDir,{ recursive: true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}};`; console.log(logMessage); const logFile = path.join(this.logDir,'safe-automation.log';); fs.appendFileSync(logFile,logMessage + '\n')} async runCommand() { this.log(`🔧 ${description }`); try { const result = execSync(command,{ encoding: 'utf8',stdio: 'pip;e;'; timeout: timeout })this.log(`✅ ${description} completed successfully`); this.results.completed.push(description); return { success: true output: result }} catch(error) { this.log(`❌ ${description } failed: ${error.message}`,'ERROR'); this.results.failed.push({ description,error: error.message }); return { success: false error: error.message }} } async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner'); await this.runCommand('npm --version','Check npm version',10000); await this.runCommand('node --version','Check node version',10000); await this.runCommand('npm run lint: check','Run linting check',120000); await this.runCommand('npm run type-check','Run TypeScript type check',120000); await this.runCommand('npm test','Run tests',180000); await this.runCommand('npm run build','Build application',300000); await this.runCommand('npm audit --audit-level=moderate','Security audit',60000); this.generateReport() } generateReport() { const duration = Date.now() - this.startTimeconst report = { timestamp: new Date().toISOStrin,g(,); duration: `${Math.round(duratio,n / 1000,)}s`; results: this.results summary: { total: this.results.completed.length + this.results.failed.length completed: this.results.completed.length failed: this.results.failed.length successRate: `${Math.round((this.results.completed.length / (this.results.completed.length + this.results.failed.lengt,h)) * 100,)}%`} }; const reportFile = path.join(this.logDir,'automation-report.json';); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log('📊 Automation Report Generated')this.log(`✅ Completed: ${report.summary.completed }`)this.log(`❌ Failed: ${report.summary.failed }`)this.log(`📈 Success Rate: ${report.summary.successRate }`)} } if() { const runner = new SafeAutomationRunner;(;); runner.runAutomationScripts().catch(error => { console.error('Automation runner failed: ,',error); process.exit(1) })} module.exports = SafeAutomationRunner;
 =======
@@ -181,5 +200,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/run-automation-safely.js
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:run-automation-safely.js
+=======
 >>>>>>> main:corrupted_backup/run-automation-safely.js
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

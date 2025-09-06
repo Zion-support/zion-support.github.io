@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,6 +10,17 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
+=======
+import Link from "next/link";
+
+export const metadata = {
+  title:
+    "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
+  description:
+    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
+  keywords:
+    "AI services, micro SaaS, IT services, FinTech, HealthTech, EdTech, cloud migration, DevOps, SRE, enterprise software",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 };
 =======
 import Link from 'next/link';
@@ -23,42 +35,48 @@ export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
           Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
           we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
+=======
+          Transform your business with cutting-edge technology solutions. From
+          AI-powered micro SaaS to enterprise FinTech platforms, we deliver
+          measurable outcomes with 99.9% uptime, bank-grade security, and 24/7
+          expert support.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         </p>
       </div>
 
       {/* Statistics Section */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard 
-            number="500+" 
-            label="Successful Projects" 
-            description="Delivered worldwide" 
+          <StatCard
+            number="500+"
+            label="Successful Projects"
+            description="Delivered worldwide"
           />
-          <StatCard 
-            number="$2B+" 
-            label="Combined Market Value" 
-            description="Generated for clients" 
+          <StatCard
+            number="$2B+"
+            label="Combined Market Value"
+            description="Generated for clients"
           />
-          <StatCard 
-            number="99.9%" 
-            label="Uptime Guarantee" 
-            description="Enterprise reliability" 
+          <StatCard
+            number="99.9%"
+            label="Uptime Guarantee"
+            description="Enterprise reliability"
           />
-          <StatCard 
-            number="300%" 
-            label="Average ROI" 
-            description="Client return on investment" 
+          <StatCard
+            number="300%"
+            label="Average ROI"
+            description="Client return on investment"
           />
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -86,6 +104,8 @@ export default function ServicesOverviewPage() {
 =======
       {/* Core Services Grid */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 <<<<<<< HEAD
 
@@ -122,6 +142,7 @@ export default function ServicesOverviewPage() {
           bullets={[
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
@@ -143,6 +164,11 @@ export default function ServicesOverviewPage() {
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+            "15+ specialized micro SaaS tools",
+            "End-to-end development & deployment",
+            "Revenue optimization & scaling",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           ]}
           icon="🚀"
           pricing="From $2,999/month"
@@ -167,6 +193,7 @@ export default function ServicesOverviewPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           description="LLM applications, RAG systems, and AI automation"
           bullets={[
             'Custom LLM development',
@@ -177,12 +204,15 @@ export default function ServicesOverviewPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
             "15+ AI service categories",
             "Custom LLM development",
-            "Enterprise AI integration"
+            "Enterprise AI integration",
           ]}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           description="LLM applications, RAG systems, and MLOps pipelines"
@@ -191,6 +221,8 @@ export default function ServicesOverviewPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           icon="🤖"
           pricing="From $5,000/project"
 =======
@@ -205,16 +237,19 @@ export default function ServicesOverviewPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           description="Cloud migration, DevOps, and security solutions"
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
             "15+ IT service categories",
             "Cloud migration & optimization",
-            "24/7 monitoring & support"
+            "24/7 monitoring & support",
           ]}
           icon="⚙️"
           pricing="From $3,000/month"
@@ -226,7 +261,7 @@ export default function ServicesOverviewPage() {
           bullets={[
             "15+ FinTech service categories",
             "Bank-grade security & compliance",
-            "Real-time payment processing"
+            "Real-time payment processing",
           ]}
           icon="💳"
           pricing="From $25,000/project"
@@ -238,7 +273,7 @@ export default function ServicesOverviewPage() {
           bullets={[
             "15+ HealthTech service categories",
             "HIPAA-compliant solutions",
-            "Medical AI & diagnostics"
+            "Medical AI & diagnostics",
           ]}
           icon="🏥"
           pricing="From $40,000/project"
@@ -250,7 +285,7 @@ export default function ServicesOverviewPage() {
           bullets={[
             "15+ EdTech service categories",
             "Personalized learning AI",
-            "Multi-platform compatibility"
+            "Multi-platform compatibility",
           ]}
           icon="🎓"
           pricing="From $30,000/project"
@@ -285,6 +320,7 @@ export default function ServicesOverviewPage() {
           bullets={[
             "Process automation",
             "Workflow optimization",
+<<<<<<< HEAD
             "AI-powered automation"
           ]}
           icon="⚡"
@@ -294,6 +330,11 @@ export default function ServicesOverviewPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+            "AI automation",
+          ]}
+          icon="⚡"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           pricing="From $2,500/month"
         />
         <ServiceCard
@@ -303,12 +344,17 @@ export default function ServicesOverviewPage() {
           bullets={[
             "BI dashboards",
             "Predictive analytics",
+<<<<<<< HEAD
             "Data engineering"
+=======
+            "Data engineering",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           ]}
           icon="📊"
           pricing="From $4,000/month"
         />
       </div>
+<<<<<<< HEAD
       
       {/* Additional Services Section */}
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
@@ -471,12 +517,19 @@ export default function ServicesOverviewPage() {
       </section>
       
       {/* Why Choose Us Section */}
+=======
+
+      {/* Statistics Section */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Proven track record of delivering exceptional results for businesses across industries.
+              Proven track record of delivering exceptional results for
+              businesses across industries.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -503,8 +556,9 @@ export default function ServicesOverviewPage() {
           </div>
         </div>
       </section>
-      
+
       <CTA />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -589,6 +643,8 @@ function ServiceCard({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     </div>
   );
 }
@@ -599,7 +655,11 @@ function ServiceCard({
   description,
   bullets,
   icon,
+<<<<<<< HEAD
   pricing
+=======
+  pricing,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }: {
 <<<<<<< HEAD
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
@@ -667,15 +727,20 @@ function ServiceCard({
         ))}
       </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="text-lg font-semibold text-blue-600">
         {pricing}
       </div>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+      <div className="text-lg font-semibold text-blue-600">{pricing}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     </Link>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function StatCard({ 
   number, 
@@ -685,6 +750,16 @@ function StatCard({
   number: string; 
   label: string; 
   description: string; 
+=======
+function StatCard({
+  number,
+  label,
+  description,
+}: {
+  number: string;
+  label: string;
+  description: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }) {
   return (
     <div className="text-center">
@@ -705,12 +780,18 @@ function CTA() {
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
 =======
         Talk to our experts about your project. We'll help you choose the right
         service and create a custom solution for your business needs.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+        Join 500+ successful businesses that trust Zion Tech Group for their
+        technology needs. Get a free consultation and discover how our solutions
+        can drive 300% ROI and accelerate your growth.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
@@ -760,5 +841,9 @@ function CTA() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

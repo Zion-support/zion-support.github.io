@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require("child_process");
@@ -287,7 +293,15 @@ if (require.main === module) {
 
 module.exports = { detectAllErrors };
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -414,8 +428,20 @@ function checkSyntaxErrors(content")
         "message": "Missing semicolon"
         "type": "syntax"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(" Error detection "failed": ")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Error detection "failed": ")
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Error detection "failed": ")
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

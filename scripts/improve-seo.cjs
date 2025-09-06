@@ -1,13 +1,32 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
   try {}
     const pagesDir = path.join(process.cwd(), 'pages;';);
     const componentsDir = path.join(process.cwd(), 'components;';);
+<<<<<<< HEAD
     // Add meta tags to pages;
     const metaTemplate = '
 import Head from 'next/hea;d;';
+=======
+    
+    // Add meta tags to pages;
+    const metaTemplate = '
+import Head from 'next/hea;d;';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function Page() {}
   return (;)
     <>
@@ -27,6 +46,10 @@ export default function Page() {}
     </>
   )};
       ";
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Generate sitemap;
       const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
@@ -55,6 +78,7 @@ export default function Page() {}
     <priority>0.7</priority>
   </url>
 </urlset;>;`;`
+<<<<<<< HEAD
       fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
       // Generate robots.txt;
       const robotsContent = "User-"agent": *
@@ -66,13 +90,45 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
+      
+      // Generate robots.txt;
+      const robotsContent = "User-"agent": *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml;";
+      
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 improveSEO();
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+improveSEO();
+      
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+improveSEO();
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,15 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**
  * Smart Performance Optimizer Automation;
  * Monitors and optimizes application performance;
  */
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class SmartPerformanceOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -32,6 +43,7 @@ class SmartPerformanceOptimizer {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -51,6 +63,27 @@ class SmartPerformanceOptimizer {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+=======
+        console.log(message)};
+    analyzeBundleSize() {}
+        this.log('Analyzing bundle size...');
+        
+        try {}
+            // Build the project first;
+            execSync('npm run build', { })
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
+            }
+});
+            
+            // Analyze bundle;
+            const bundleAnalysis = execSync('npm run analyze', { })
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             this.log('Bundle analysis completed');
             return { "status": 'success', "output": bundleAnalysis }} catch (error) {}
             this.log(`Bundle analysis "failed": ${error.message}`);
@@ -58,6 +91,7 @@ class SmartPerformanceOptimizer {}
     };
     checkBuildPerformance() {}
         this.log('Checking build performance...');
+<<<<<<< HEAD
         const startTime = Date.now(;);
         try {}
             execSync('npm run build', { })
@@ -67,6 +101,21 @@ class SmartPerformanceOptimizer {}
 });
             const buildTime = Date.now() - startTi;m;e;
             this.log(`Build completed in ${buildTime}ms`);
+=======
+        
+        const startTime = Date.now(;);
+        
+        try {}
+            execSync('npm run build', { })
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
+            }
+});
+            
+            const buildTime = Date.now() - startTi;m;e;
+            this.log(`Build completed in ${buildTime}ms`);
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "buildTime": buildTime,
@@ -77,12 +126,22 @@ class SmartPerformanceOptimizer {}
     };
     optimizeImages() {}
         this.log('Optimizing images...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             // This would typically use a tool like imagemin;
             // For now, we'll just check if images exist;
             const publicDir = path.join(this.projectRoot, 'public';);
             const imageFiles = this.findImageFiles(publicDir;);
+<<<<<<< HEAD
             this.log(`Found ${imageFiles.length} image files`);
+=======
+            
+            this.log(`Found ${imageFiles.length} image files`);
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "imagesFound": imageFiles.length,
@@ -97,12 +156,23 @@ class SmartPerformanceOptimizer {}
     findImageFiles(dir) {}
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
         const files = [];
+<<<<<<< HEAD
         if () return file) {}
     ) return file}s;
+=======
+        
+        if () return file) {}
+    ) return file}s;
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             if () {}
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
@@ -115,6 +185,10 @@ class SmartPerformanceOptimizer {}
         return files}};
     checkLighthouseMetrics() {}
         this.log('Checking Lighthouse metrics...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // This would typically run Lighthouse programmatically;
         // For now, we'll return mock data;
         return {;}
@@ -132,6 +206,10 @@ class SmartPerformanceOptimizer {}
         }};
     generateOptimizationReport() {}
         this.log('Generating performance optimization report...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -143,8 +221,15 @@ class SmartPerformanceOptimizer {}
             },
             "optimizations": this.generateOptimizationSuggestions();
        };
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Performance report saved to ${this.reportFile}`);
+=======
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Performance report saved to ${this.reportFile}`);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return report};
     generateOptimizationSuggestions() {}
         return [;]
@@ -158,6 +243,10 @@ class SmartPerformanceOptimizer {}
         ]};
     async run() {}
         this.log('Smart Performance Optimizer started');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             const report = this.generateOptimizationReport(;);
             this.log('Smart Performance Optimizer completed successfully');
@@ -173,7 +262,17 @@ if ( {})
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = SmartPerformanceOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = SmartPerformanceOptimizer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = SmartPerformanceOptimizer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

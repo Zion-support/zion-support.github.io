@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -67,6 +68,8 @@ export function ContactSection() {
       body: JSON.stringify(formData)})
       .then(async (res) => {
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
@@ -76,13 +79,21 @@ const ContactSection: React.FC = () => {
     name: '',
     email: '',
     company: '',
+<<<<<<< HEAD
     message: ''
+=======
+    message: '',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
+<<<<<<< HEAD
       [e.target.name]: e.target.value
+=======
+      [e.target.name]: e.target.value,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     });
   };
 
@@ -93,8 +104,12 @@ const ContactSection: React.FC = () => {
     alert('Thank you for your message! We\'ll get back to you soon.');
   };
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -151,7 +166,7 @@ fetch("/api/contact", {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology? 
+            Ready to transform your business with cutting-edge technology?
             Let's discuss how we can help you achieve your goals.
           </p>
         </div>
@@ -451,6 +466,10 @@ export function ContactSection() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -483,10 +502,17 @@ export function ContactSection() {;
 };
 
 export default ContactSection;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -502,3 +528,8 @@ export default ContactSection;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

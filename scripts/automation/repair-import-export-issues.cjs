@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 function deriveAlias(modulePath) {}
 	const base = modulePath.split('/').filter(Boolean).pop() || 'module';
 	const alias = base.replace(/[^a-zA-Z0-9_$]/g, '_');
@@ -39,8 +46,15 @@ function fixExportDefaultConst(filePath, content) {}
 function processFile(fullPath) {}
 	const original = fs.readFileSync(fullPath, 'utf8');
 	let content = original;
+<<<<<<< HEAD
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
+=======
+
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 	if (content !== original) {}
 		fs.writeFileSync(fullPath, content, 'utf8');
 		return true};
@@ -57,9 +71,12 @@ function run() {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 			try {}
 				if (processFile(fp)) {}
 					changed++};
@@ -69,7 +86,17 @@ function run() {}
 	};
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 run();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+run();
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+run();
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

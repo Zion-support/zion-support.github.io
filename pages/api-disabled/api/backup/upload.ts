@@ -1,0 +1,183 @@
+<<<<<<< HEAD:pages/api/backup/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { Web3Storage, File } from 'web3.storage',;
+;
+const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
+
+export const config = { api: { bodyParser: { sizeLimit: '2mb' } } },
+
+import { Web3Storage, File } from 'web3.storage';
+const TOKEN = process.env.WEB3_STORAGE_TOKEN |''
+export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).end()
+  if (!TOKEN) return res.status(400).json({ error: 'Missing WEB3_STORAGE_TOKEN' })
+  try {
+    const data = req.body
+    const client = new Web3Storage({ token: TOKEN })
+    const files = [new File([JSON.stringify(data, null, 2)], 'profile.json', { type: 'application/json' })]
+    const cid = await client.put(files, { wrapWithDirectory: false })
+
+    return res.status(200).json({ cid })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message |'Backup failed' })
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return res.status(500).json({ error: e?.message || 'Backup failed' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Web3Storage, File } from 'web3.storage';
+const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';
+export const config = { api: { bodyParser: { sizeLimit: '2mb' } } };
+export default async function handler(req, res) {
+<<<<<<< HEAD
+  try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    return res.status(500).json({ error: e?.message |'Backup failed' })
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import { Web3Storage, File } from 'web3.storage',
+;
+const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
+export const config = { api: { body_parser: { size_limit: '2mb' } } },
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Web3Storage, File } from 'web3.storage';
+const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';
+export const config = { api: { body_parser: { size_limit: '2mb' } } }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/backup/upload.ts
+export default async /**
+ * handler - Function description
+ */;
+function handler() {;
+  if (return res.status (405).end ()) {
+  $2
+}
+  if (return res.status (400).json ({ error: 'Missing WEB3_STORAGE_TOKEN' })) {
+  $2
+}
+  try {;
+    const data = req.body;
+    const client = new Web3Storage ({ token: TOKEN });
+    const files = [new File ([JSON.stringify (data, null, 2)], 'profile.json', { type: 'application / json' })];
+    const cid = await client.put (files, { wrapWithDirectory: false });
+    return res.status (200).json ({ cid });
+  } catch (e: any) {;
+    return res.status (500).json ({ error: e?.message || 'Backup failed' });
+  }
+<<<<<<< HEAD:pages/api/backup/upload.ts
+<<<<<<< HEAD
+}
+
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+    return res.status(500).json({ error: e?.message || 'Backup failed' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Web3Storage, File } from 'web3.storage';
+const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';
+export const config = { api: { bodyParser: { sizeLimit: '2mb' } } };
+export default async function handler(req, res) {
+  try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  if (req.method !== 'POST') return res.status(405).end(),;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const files = [new File([JSON.stringify(data, null, 2)], 'profile.json', { type: 'application/json' })];
+    const cid = await client.put(files, { wrapWithDirectory: false });
+    return res.status(200).json({ cid });
+  } catch (error) {
+    return res.status(500).json({ error: e?.message || 'Backup failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  }
+}
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/backup/upload.ts

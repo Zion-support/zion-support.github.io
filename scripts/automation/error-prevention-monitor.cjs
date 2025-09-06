@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -11,9 +14,12 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 console.log('🛡️ Starting error prevention monitor...');
 class ErrorPreventionMonitor {
   constructor() {
@@ -192,9 +198,15 @@ class ErrorPreventionMonitor {
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
     try {
+<<<<<<< HEAD
       execSync('bash start-simple-error-prevention.sh', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
+=======
+      execSync('bash start-simple-error-prevention.sh', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       });
       this.log('Auto-fix process completed')} catch (error) {
       this.log(`Auto-fix process "failed": ${error.message}`)}
@@ -202,9 +214,15 @@ class ErrorPreventionMonitor {
   checkBuildStatus() {
     try {
       this.log('Checking build status...');
+<<<<<<< HEAD
       execSync('yarn build', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
+=======
+      execSync('yarn build', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       });
       this.log('Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
@@ -224,9 +242,12 @@ class ErrorPreventionMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
@@ -348,7 +369,11 @@ class ErrorPreventionMonitor {
       }
       // Check for multiple CSS frameworks
       const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
+<<<<<<< HEAD
       const foundFrameworks = cssFrameworks.filter(framework =>
+=======
+      const foundFrameworks = cssFrameworks.filter(framework => 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         packageJson.dependencies && packageJson.dependencies[framework]
       );
       if (foundFrameworks.length > 1) {
@@ -655,7 +680,17 @@ if (require.main === module) {
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 monitor.run();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+monitor.run();
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+monitor.run();
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

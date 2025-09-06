@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 /**;
  * Returns true if the file should be processed;
@@ -26,6 +33,10 @@ function cleanContent(content) {}
       .replace(/>\s*"\s*$/u, ">");
       .replace(/^"\s*$/u, "");
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   let out = lines.join("\n");
   // In-line fixes across the whole file;
   out = out;
@@ -34,6 +45,10 @@ function cleanContent(content) {}
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // In-line fixes across the whole file;
   out = out;
     // Comma followed by stray apostrophe (e.g., Shield,"");
@@ -42,6 +57,10 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
     .replace(/>\s*"\s*</g, "><");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return out};
 ;
 function walk(dir, files = []) {}
@@ -68,10 +87,20 @@ function $1() {}
         changed += 1};
     } catch (e) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -80,7 +109,17 @@ function $1() {}
 ;
 if (require.main === module) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   main()};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  main()};
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  main()};
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

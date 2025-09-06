@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \'react\'; import Head from \'next/head\'; import ServiceLanding from \'../components/sections/ServiceLanding\'; export default function EdgeComputingOrchestrationPlatformAliasPage() { return ( <> <Head> <title>Edge Computing Orchestration Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Distributed orchestration and optimization for edge fleets with placement,telemetry,and policies.\" />\" <link rel=\"canonical\" href=\""https\": </Head> <ServiceLanding\" title=\"Edge Computing Orchestration Platform description=\"Deploy,orchestrate,and monitor workloads across edge sites with low latency,offline tolerance,and zero-touch provisioning.\"" subtitle=\"Turn any location into a smart edge\" pricePerMonthUSD={3499}\" implementationWeeks=\"4–8 weeks roiNote=\"Reduce latency and bandwidth costs while improving reliability\" features={[Fleet provisioning and zero-touch onboarding\",\" \"Policy-driven placement and rollouts\",Local-first processing with cloud sync\",\" \"Resilient messaging and data replication\",Observability and remote diagnostics\",\" \"Security with TPM/attestation and secrets\" ]}\" industries={[\"Retail\",\"Manufacturing\",\"Energy\",\"Telco\"]}\" canonical=\""https\": /> </> );\"}
 const React from "react"; import Head from "next/head"; import ServiceLanding from "./components/sections/ServiceLanding"; export default function EdgeComputingOrchestrationPlatformAliasPage() { return ( <> <Head> <title>Edge Computing Orchestration Platform | Zion Tech Group</title> <meta name="description" content="Distributed orchestration and optimization for edge fleets with placement,telemetry,and policies." />" <link rel="canonical" href="https: </Head> <ServiceLanding" title="Edge Computing Orchestration Platform description="Deploy,orchestrate,and monitor workloads across edge sites with low latency,offline tolerance,and zero-touch provisioning."" subtitle="Turn any location into a smart edge" pricePerMonthUSD={3499}" implementationWeeks="48 weeks roiNote="Reduce latency and bandwidth costs while improving reliability" features={[Fleet provisioning and zero-touch onboarding"," "Policy-driven placement and rollouts",Local-first processing with cloud sync"," "Resilient messaging and data replication",Observability and remote diagnostics"," "Security with TPM/attestation and secrets" ]}" industries={["Retail","Manufacturing","Energy","Telco"]}" canonical="https: /> </> );"}'"'"
 import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function EdgeComputingOrchestrationPlatformAliasPage() { return ( <> <Head> <title>Edge Computing Orchestration Platform | Zion Tech Group</title> <meta name="description" content="Distributed orchestration and optimization for edge fleets with placement,telemetry,and policies." />" <link rel="canonical" href=""https": </Head> <ServiceLanding" title="Edge Computing Orchestration Platform description="Deploy,orchestrate,and monitor workloads across edge sites with low latency,offline tolerance,and zero-touch provisioning."" subtitle="Turn any location into a smart edge" pricePerMonthUSD={3499}" implementationWeeks="4–8 weeks roiNote="Reduce latency and bandwidth costs while improving reliability" features={[Fleet provisioning and zero-touch onboarding"," "Policy-driven placement and rollouts",Local-first processing with cloud sync"," "Resilient messaging and data replication",Observability and remote diagnostics"," "Security with TPM/attestation and secrets" ]}" industries={["Retail","Manufacturing","Energy","Telco"]}" canonical=""https": /> </> );"}
@@ -10,6 +11,8 @@ import _React from 'react'; import Head from 'next/head'; import ServiceLanding 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 =======
@@ -71,7 +74,13 @@ import _React from 'react'; import Head from 'next/head'; import ServiceLanding 
 import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function EdgeComputingOrchestrationPlatformAliasPage() { return ( <> <Head> <title>Edge Computing Orchestration Platform | Zion Tech Group</title> <meta name="description" content="Distributed orchestration and optimization for edge fleets with placement,telemetry,and policies." />" <link rel="canonical" href=""https": </Head> <ServiceLanding" title="Edge Computing Orchestration Platform description="Deploy,orchestrate,and monitor workloads across edge sites with low latency,offline tolerance,and zero-touch provisioning."" subtitle="Turn any location into a smart edge" pricePerMonthUSD={3499}" implementationWeeks="4–8 weeks roiNote="Reduce latency and bandwidth costs while improving reliability" features={[Fleet provisioning and zero-touch onboarding"," "Policy-driven placement and rollouts",Local-first processing with cloud sync"," "Resilient messaging and data replication",Observability and remote diagnostics"," "Security with TPM/attestation and secrets" ]}" industries={["Retail","Manufacturing","Energy","Telco"]}" canonical=""https": /> </> );"}
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

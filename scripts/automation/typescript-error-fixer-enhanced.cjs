@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -104,7 +107,17 @@ async log(message, type = "INFO")
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(""Error": ")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(""Error": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(""Error": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

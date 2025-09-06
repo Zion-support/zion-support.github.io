@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 
 interface LazyComponentProps {
@@ -20,6 +21,16 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent;
 =======
 
+<<<<<<< HEAD
+=======
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
+=======
+import React, { Suspense, ReactNode } from 'react';
+import LoadingSpinner from '../LoadingSpinner';
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -30,11 +41,11 @@ export default LazyComponent;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface LazyComponentProps {
-  component: ComponentType < Record < string, unknown>>;
+  children: ReactNode;
   fallback?: ReactNode;
-  [key: string]: unknown
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
@@ -97,7 +108,14 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
   ...props;
+=======
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  children, 
+  fallback = <LoadingSpinner /> 
+}) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
+<<<<<<< HEAD
     <Suspense fallback={fallback}>;
       <Component {...props} />;
     </Suspense>);
@@ -110,4 +128,16 @@ import React from 'react',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
+  );
+};
+
+export default LazyComponent;
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

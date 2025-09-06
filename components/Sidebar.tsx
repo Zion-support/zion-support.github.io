@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -89,51 +92,12 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-
-  const navigation = {
-    'Services': [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-    ],
-    'Solutions': [
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-      { name: 'Cybersecurity', href: '/solutions/cybersecurity' },
-      { name: 'Data Analytics', href: '/solutions/data-analytics' },
-    ],
-    'Industries': [
-      { name: 'Healthcare', href: '/industries/healthcare' },
-      { name: 'Finance', href: '/industries/finance' },
-      { name: 'Manufacturing', href: '/industries/manufacturing' },
-    ],
-  };
-
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-  ];
-
-  const handleDropdownToggle = (title: string) => {
-    setOpenDropdowns(prev => 
-      prev.includes(title) 
-        ? prev.filter(item => item !== title)
-        : [...prev, title]
-    );
-  };
-
-=======
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -151,7 +115,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   return (
     <AnimatePresence>
       {isOpen && (
@@ -169,12 +132,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-<<<<<<< HEAD
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
           >
             <div className="p-6">
               {/* Header */}
@@ -187,61 +146,17 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </div>
                 <button
                   onClick={onClose}
-<<<<<<< HEAD
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-=======
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
-                      className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
-                    >
-                      <span className="font-medium">{title}</span>
-                      {openDropdowns.includes(title) ? (
-                        <ChevronDown className="w-4 h-4" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" />
-                      )}
-                    </button>
-                    <AnimatePresence>
-                      {openDropdowns.includes(title) && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="ml-4 space-y-1"
-                        >
-                          {links.map((link) => (
-                            <Link
-                              key={link.name}
-                              href={link.href}
-                              className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                              onClick={onClose}
-                            >
-                              {link.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </nav>
-
-=======
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
                     >
                       <span>{title}</span>
@@ -271,7 +186,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                 ))}
               </nav>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -288,17 +202,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>24/7 Support Available</p>
-                </div>
-=======
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -320,7 +223,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               </div>
             </div>
           </motion.div>
@@ -328,11 +230,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
-};
-
-export default Sidebar;
-=======
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -772,5 +669,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-c52f
+<<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

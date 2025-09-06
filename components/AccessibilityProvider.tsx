@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { createContext, useContext, useState, ReactNode } from "react";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -13,13 +14,13 @@ interface AccessibilityContextType {
   reducedMotion: boolean;
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
+=======
+import React, { createContext, useContext, ReactNode } from "react";
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface AccessibilityContextType {
-  high_contrast: boolean;
-  large_text: boolean;
-  reduced_motion: boolean;
-  toggleHighContrast: () => void;
-  toggleLargeText: () => void;
-  toggleReducedMotion: () => void;
+  announceToScreenReader: (message: string) => void;
+  setFocus: (elementId: string) => void;
 }
 <<<<<<< HEAD
 const AccessibilityContext = createContext<
@@ -30,11 +31,32 @@ export const useAccessibility = () => {
 export const useAccessibility = () => {;
 =======
 
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 
+interface AccessibilityProviderProps {
+  children: ReactNode;
+}
 
-export const useAccessibility = () => {;
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById("live-region");
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  };
 
+  const setFocus = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.focus();
+    }
+  };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
@@ -61,10 +83,25 @@ const AccessibilityContext = createContext<;
   if (context === undefined) {;
     throw new Error(;
       "useAccessibility must be used within an AccessibilityProvider",;
+=======
+  return (
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+      {children}
+    </AccessibilityContext.Provider>
+  );
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     );
   }
   return context;
 };
+<<<<<<< HEAD
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
@@ -113,3 +150,5 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
     toggleLargeText,
     toggleReducedMotion,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

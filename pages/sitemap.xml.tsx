@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { GetServerSideProps } from 'next';
 
 const Sitemap = () => {
@@ -49,4 +53,44 @@ ${staticPages
   };
 };
 
+<<<<<<< HEAD
 export default Sitemap;
+=======
+export default Sitemap;
+=======
+     `;
+       });
+       .join("")}
+   </urlset>;
+ `;
+}
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting;
+}
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  const sitemap = generateSiteMap();
+  res.setHeader("Content-Type", "text/xml");
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+  return {
+    props: {}
+  }
+}
+export default SiteMap;
+  // We generate the XML sitemap with the posts data;
+  const sitemap = generateSiteMap ();
+;
+  res.set_header ("Content - Type", "text / xml");
+  // we send the XML to the browser;
+  res.write (sitemap);
+  res.end ();
+;
+  return {
+    props: {},
+  }
+}
+;
+export default SiteMap;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const GreenITPage = () => {; return (; <> <SEOHead title=\"Green IT - Zion Tech Group\" description=\"Our sustainability and green IT initiatives.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Green IT></div> <p className=\"text-gray-600\">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const GreenITPage = () => {; return (; <> <SEOHead title="Green IT - Zion Tech Group" description="Our sustainability and green IT initiatives." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Green IT></div> <p className="text-gray-600">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const GreenITPage = () => {; return (; <> <SEOHead title=\"Green IT - Zion Tech Group\" description=\"Our sustainability and green IT initiatives.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Green IT></div> <p className=\"text-gray-600\">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
@@ -7,6 +8,10 @@ import _React from 'react'; import SEOHead from '../src/components/SEOHead'; con
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -43,7 +48,19 @@ import _React from 'react'; import SEOHead from '../src/components/SEOHead'; con
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const GreenITPage = () => {; return (; <> <SEOHead title=\"Green IT - Zion Tech Group\" description=\"Our sustainability and green IT initiatives.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Green IT></div> <p className=\"text-gray-600\">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const GreenITPage = () => {; return (; <> <SEOHead title="Green IT - Zion Tech Group" description="Our sustainability and green IT initiatives." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Green IT></div> <p className="text-gray-600">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const GreenITPage = () => {; return (; <> <SEOHead title=\"Green IT - Zion Tech Group\" description=\"Our sustainability and green IT initiatives.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Green IT></div> <p className=\"text-gray-600\">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const GreenITPage = () => {; return (; <> <SEOHead title="Green IT - Zion Tech Group" description="Our sustainability and green IT initiatives." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Green IT></div> <p className="text-gray-600">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,16 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**;
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -87,7 +93,17 @@ const path = require("path")"
     "default"
   process.on("SIGINT")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   process.on(")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  process.on(")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  process.on(")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

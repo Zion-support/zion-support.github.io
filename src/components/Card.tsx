@@ -28,8 +28,18 @@ const Card: React.FC<CardProps> = ({
   onClick 
 }) => {
   return (
+<<<<<<< HEAD
     <div 
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
+=======
+<<<<<<< HEAD
+    <div
+      className={`bg-white rounded-lg shadow-md p-6 ${className}`}
+=======
+    <motion.div 
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer ${className}`}
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       onClick={onClick}
     >
       {title && (
@@ -45,7 +55,13 @@ const Card: React.FC<CardProps> = ({
 
 <<<<<<< HEAD
 export default Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export default Card;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+export default Card;
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

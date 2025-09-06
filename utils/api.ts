@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 // Define RequestInit if not available
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface File extends Blob {
   name: string;
   lastModified: number;
 }
+<<<<<<< HEAD
 interface Blob {
   size: number;
   type: string;
@@ -93,6 +97,9 @@ interface ApiResponse<T = unknown> {
   error?: string;
   success: boolean,
 
+=======
+  last_modified: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
 interface Blob {
   size: number;
@@ -117,8 +124,19 @@ interface URLSearchParams {
   toString(): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
+<<<<<<< HEAD
 type RequestCache = 'default' | 'no-store' | 'reload' | 'no-cache' | 'force-cache' | 'only-if-cached';
 type RequestCredentials = 'omit' | 'same-origin' | 'include';
+=======
+type RequestCache =
+  | "default"
+  | "no-store"
+  | "reload"
+  | "no-cache"
+  | "force-cache"
+  | "only-if-cached";
+type RequestCredentials = "omit" | "same-origin" | "include";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface Headers {
   append(name: string, value: string): void;
   delete(name: string): void;
@@ -127,9 +145,24 @@ interface Headers {
   set(name: string, value: string): void;
 }
 type HeadersInit = Headers | string[][] | Record<string, string>;
+<<<<<<< HEAD
 type RequestMode = 'navigate' | 'same-origin' | 'no-cors' | 'cors';
 type RequestRedirect = 'follow' | 'error' | 'manual';
 type ReferrerPolicy = 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
+=======
+type RequestMode = "navigate" | "same-origin" | "no-cors" | "cors";
+type RequestRedirect = "follow" | "error" | "manual";
+type ReferrerPolicy =
+  | "no-referrer"
+  | "no-referrer-when-downgrade"
+  | "origin"
+  | "origin-when-cross-origin"
+  | "same-origin"
+  | "strict-origin"
+  | "strict-origin-when-cross-origin"
+  | "unsafe-url";
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface RequestInit {
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -141,11 +174,15 @@ interface RequestInit {
   mode?: RequestMode;
   redirect?: RequestRedirect;
   referrer?: string;
+<<<<<<< HEAD
   referrerPolicy?: ReferrerPolicy;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   signal?: AbortSignal | null;
   window?: any;
   timeout?: number;
 }
+<<<<<<< HEAD
 // Define AbortController if not available
 interface AbortController {
   signal: AbortSignal;
@@ -156,6 +193,12 @@ interface AbortController {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+interface AbortSignal extends EventTarget {
+  aborted: boolean;
+  onabort: ((this: AbortSignal, ev: Event) => any) | null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
 export class ApiClient {
   private baseURL: string;
@@ -216,6 +259,7 @@ export class ApiClient {
     });
   }
 }
+<<<<<<< HEAD
 
 export const apiClient = new ApiClient();
 
@@ -223,10 +267,13 @@ export const apiClient = new ApiClient();
 
 export const apiClient = new ApiClient();
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Define AbortSignal if not available
 interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
+<<<<<<< HEAD
 origin/main
 }
 =======
@@ -370,12 +417,63 @@ export type { ApiResponse, RequestOptions }
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 export interface ApiResponse<T = any> {
   data: T;
   message?: string;
   success: boolean;
 }
+<<<<<<< HEAD
+=======
+interface RequestOptions extends RequestInit {
+  timeout?: number;
+}
+declare global {
+  interface RequestInit {
+    timeout?: number;
+  }
+}
+class ApiClient {
+  private baseURL: string;
+
+  constructor(baseURL: string = "", defaultHeaders: HeadersInit = {}) {
+    this.baseURL = baseURL;
+    this.default_headers = default_headers;
+  }
+  async request < T = unknown>(
+    endpoint: string,
+    options: RequestOptions = {},
+  ): Promise<ApiResponse<T>> {
+    const url = `${this.baseURL}${endpoint}`;
+    const controller = new AbortController();
+
+    // Set timeout if provided
+    if (options.timeout) {
+      setTimeout(() => controller.abort(), options.timeout);
+    }
+
+    }
+    try {
+
+        ...options,
+        signal: controller && controller.signal,
+        headers: {
+          ...this && this.defaultHeaders,
+          ...options && options.headers,
+        },
+      });
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`);
+      }
+
+      const data = await response && response.json();
+
+      return {
+>>>>>>> main
 
 export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -411,13 +509,84 @@ class ApiClient {
       };
     } catch (error) {
       return {
+<<<<<<< HEAD
         data: null as any,
         success: false,
         message: error instanceof Error ? error.message : 'Unknown error'
       };
     }
+=======
+
+
+
+export type { ApiResponse, RequestOptions };
+export type { ApiResponse, RequestOptions };
+export type { ApiResponse, RequestOptions };
+
+    });
+  }
+  async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
+      headers: {
+        'Content-Type': 'application/json'
+        ...options?.headers
+      }
+    }
+  }
+
+  async get<T = unknown>(
+    endpoint: string,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: "GET" });
+  }
+
+  async post<T = unknown>(
+    endpoint: string,
+    data?: any,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'POST',
+      body: data ? JSON.stringify (data) : undefined,
+      headers: {
+        "Content-Type": "application/json",
+        ...options?.headers,
+      },
+    });
+  }
+
+  async put<T = unknown>(
+    endpoint: string,
+    data?: any,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'PUT',
+      body: data ? JSON.stringify (data) : undefined,
+      headers: {
+        "Content-Type": "application/json",
+        ...options?.headers,
+      },
+    });
+  }
+
+  async delete<T = unknown>(
+    endpoint: string,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: "DELETE" });
+>>>>>>> main
   }
 }
 
 export const apiClient = new ApiClient();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+=======
+export type { ApiResponse, RequestOptions };
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

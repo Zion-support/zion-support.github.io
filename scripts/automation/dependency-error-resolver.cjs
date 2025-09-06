@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -280,9 +283,12 @@ throw error}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async runDependencyCheck() {
     try {
@@ -365,8 +371,13 @@ throw error}
       execSync('npm ci --dry-run', { "stdio": 'pipe' });
       return { "success": true, "issues": [] }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
+<<<<<<< HEAD
       return {
         "success": false,
+=======
+      return { 
+        "success": false, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
@@ -404,8 +415,13 @@ throw error}
       }
       return { "success": duplicates.length === 0, duplicates }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
+<<<<<<< HEAD
       return {
         "success": false,
+=======
+      return { 
+        "success": false, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
@@ -422,7 +438,11 @@ throw error}
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()
       ]);
+<<<<<<< HEAD
       const totalIssues = vulnCheck.count + outdatedCheck.count +
+=======
+      const totalIssues = vulnCheck.count + outdatedCheck.count + 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
         this.log('No dependency issues found', 'INFO');
@@ -432,7 +452,11 @@ throw error}
       let resolutionsApplied = 0;
       // Fix vulnerabilities and outdated dependencies
       resolutionsApplied += await this.resolveDependencyIssues(
+<<<<<<< HEAD
         vulnCheck.vulnerabilities,
+=======
+        vulnCheck.vulnerabilities, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         outdatedCheck.outdated
       );
       // Fix package-lock issues
@@ -512,7 +536,17 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = DependencyErrorResolver
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = DependencyErrorResolver
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = DependencyErrorResolver
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

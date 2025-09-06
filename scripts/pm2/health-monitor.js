@@ -1,7 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+    
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -114,6 +125,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
     
 <<<<<<< HEAD
@@ -121,6 +135,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -174,6 +189,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         } else {}
           this.error(alert.message);,
         }
+<<<<<<< HEAD
+      }
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -372,6 +390,9 @@ healthMonitor.run().catch(error = > {; process.exit(1)});
         cpu: null
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
@@ -507,8 +528,12 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
               size: stats.size;
               sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100;
               lastModified: stats.mtime})
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       return health;
     } catch (error) {}
       this.error(`System health check failed: ${error.message}`);,
@@ -579,6 +604,12 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
               });,
             }
           }
+<<<<<<< HEAD
+        }
+      } catch (error) {}
+        this.log(`Failed to get system processes: ${error.message}`, 'WARNING');',
+      }
+=======
         })
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 <<<<<<< HEAD
@@ -624,6 +655,9 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
         totalSize: 0
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1702,8 +1736,12 @@ const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {_;
   process.exit(1)});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       return processes;
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
@@ -1872,9 +1910,19 @@ if (require.main === module) {}
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+module.exports = HealthMonitor;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+=======
 
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 
@@ -1895,6 +1943,9 @@ healthMonitor.run().catch(error = > {process.exit(1)});
 =======
 module.exports = HealthMonitor;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = HealthMonitor;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/automate-test-improve-and-merge-code-8ee2
@@ -3433,10 +3484,17 @@ healthMonitor.run().catch(error => {_;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

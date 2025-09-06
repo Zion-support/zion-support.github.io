@@ -1,10 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/main
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Accessibility configuration;
 export const accessibilityConfig = {;
   // ARIA labels for common elements;
@@ -37,7 +46,11 @@ export const accessibilityConfig = {;
     "escapeKey": true,
     "enterKey": true,
     "spaceKey": true,}
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Accessibility utilities;
 export const accessibilityUtils = {;
   // Generate unique IDs for ARIA attributes;
@@ -56,6 +69,7 @@ export const accessibilityUtils = {;
     document.body.appendChild(announcement);
     setTimeout(() => {;
       document.body.removeChild(announcement),}, 1000),}
+<<<<<<< HEAD
 =======
 }
 <<<<<<< HEAD
@@ -71,6 +85,34 @@ export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigatio
 =======
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;,},1000);,;,} }
 <<<<<<< HEAD
+=======
+}
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;,},1000);,;,} }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+=======
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+>>>>>>> main
+=======
+>>>>>>> main
+>>>>>>> main
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+>>>>>>> main
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +126,12 @@ export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigatio
 
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -92,8 +140,16 @@ export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigatio
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 >>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
@@ -128,16 +184,31 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> main
 =======
@@ -151,6 +222,7 @@ export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigatio
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -158,3 +230,9 @@ export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigatio
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,16 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import {
 =======
+=======
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
+<<<<<<< HEAD
       question: "What services does Zion Tech offer?",
       answer: "We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow."
     },
@@ -34,6 +42,31 @@ const FaqSection = () => {
       question: "How do you ensure data security?",
       answer: "We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data."
     }
+=======
+      question: 'What services does Zion Tech offer?',
+      answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.',
+    },
+    {
+      question: 'How long does implementation take?',
+      answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation.',
+    },
+    {
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance.',
+    },
+    {
+      question: 'What makes Zion Tech different?',
+      answer: 'We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries.',
+    },
+    {
+      question: 'Do you work with small businesses?',
+      answer: 'Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to fit any budget and requirement.',
+    },
+    {
+      question: 'How do you ensure data security?',
+      answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data.',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ];
 
   const toggleFaq = (index: number) => {
@@ -80,9 +113,16 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -426,9 +466,16 @@ export function FaqSection() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

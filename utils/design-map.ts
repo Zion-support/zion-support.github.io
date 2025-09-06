@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DesignMapSection = {;
   id: string;
   title: string;
@@ -213,6 +214,17 @@ export interface TokenSet {
 =======
 export type UIKitKind = "ios" | "android" | "web";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export type UIKitKind = "ios" | "android" | "web";
+=======
+<<<<<<< HEAD
+export type UIKitKind = "ios" | "android" | "web";
+=======
+<<<<<<< HEAD
+export interface TokenSet {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 export interface TokenSet {;
   colors: Record<string, string>;
@@ -231,6 +243,12 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   return {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
   tokens: TokenSet;
@@ -267,6 +285,7 @@ class ErrorBoundary extends React.Component {
   };
 
 export type TokenSet = {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   colors: Record<string, string>;
   typography: {;
@@ -286,10 +305,31 @@ export async function buildTokenSet(): Promise<TokenSet> {;
       if (typeof value === 'string') {;
         colors[newKey] = value;
       } else if (typeof value === 'object') {;
+=======
+  colors: Record<string, string>;
+  typography: {
+    fontSizes: Record<string, string>;
+  };
+};
+
+export async function buildTokenSet(): Promise<TokenSet> {
+  // Dynamically import Tailwind config for color extraction;
+  const tailwindConfig = require('../tailwind && tailwind.config.js');
+  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
+  const colors: Record<string, string> = {};
+
+  function flattenColors(prefix: string, obj: any) {
+    Object && Object.entries(obj || {}).forEach(([key, value]) => {
+      const newKey = prefix ? `${prefix}.${key}` : key;
+      if (typeof value === 'string') {
+        colors[newKey] = value;
+      } else if (typeof value === 'object') {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         flattenColors(newKey, value);
       }
     });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   flattenColors('', extendedColors);
@@ -311,6 +351,8 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {;
       'README.md': '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.theme/index.ts': "import { extendTheme } from '@chakra-ui/react', export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}}),";
       'components/Button.tsx': "import { Button as CButton } from '@chakra-ui/react', export function Button(props: any){ return <CButton colorScheme=\"cyan\" {...props} /> }"}
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
   flattenColors('', extendedColors);
 
@@ -635,8 +677,13 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -654,7 +701,33 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
       sm: 8,
       md: 16,
       lg: 24,
+<<<<<<< HEAD
       xl: 32,
+=======
+<<<<<<< HEAD
+      xl: 32,
+=======
+      xl: 32;
+    }
+  }
+}
+export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
+  const tokens = await buildTokenSet (file_id);
+;
+  return {
+          background_color: tokens.colors.primary,
+          padding: tokens.spacing.md;
+        }
+      }
+<<<<<<< HEAD
+}
+  };
+
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     },
 <<<<<<< HEAD
     tokens;

@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';''}
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -10,6 +15,7 @@ import React from';react' const LinkHealthChecker = ({ links,className = ' }) =>
 import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {'''';''}
 import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {'''';''}
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';''}
 =======
@@ -17,5 +23,20 @@ import { CheckCircle,XCircle,AlertTriangle,ExternalLink const LinkHealthChecker 
 const { CheckCircle,XCircle,AlertTriangle,ExternalLink const LinkHealthChecker = ({ links,className = " }) => { const [linkStatuses,setLinkStatuses] = useState ([]) const [isChecking,setIsChecking] = useState (false) "";"""";"""
 import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';''}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+<<<<<<< HEAD
+=======
+
+
+
+
+import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';''}
+import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {'''';''}
+import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {'''';''}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

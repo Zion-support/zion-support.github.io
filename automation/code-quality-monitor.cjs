@@ -49,9 +49,17 @@ async function checkCodeComplexity() {
 }
 async function checkCodeDuplication() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   console.log('[INFO] Checking for code duplication...');
   const duplications = [
     {
@@ -197,11 +205,19 @@ class CodeQualityMonitor {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
   
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const duplications = [{
 async function checkCodeComplexity() {}
   console.log('[INFO] Checking code complexity...');
@@ -230,10 +246,17 @@ async function checkCodeDuplication() {}
     { "file": 'pages/ai-services.tsx', "line": 7, "duplicateOf": 'pages/about.tsx' },
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (duplications.length > 0) {
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications
@@ -248,8 +271,12 @@ async function checkCodeDuplication() {}
     
     
     
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     duplications
@@ -269,6 +296,10 @@ async function checkCodeStyle() {
     
 =======
     
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -294,8 +325,17 @@ async function checkCodeStyle() {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+    
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
@@ -385,6 +425,9 @@ async function checkTypeScriptQuality() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -393,7 +436,11 @@ async function checkTypeScriptQuality() {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }
 }
 async function checkTestCoverage() {
@@ -413,6 +460,10 @@ async function checkTestCoverage() {
   
 <<<<<<< HEAD
   
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -445,6 +496,9 @@ async function checkDocumentationCoverage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
   
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   
 =======
 <<<<<<< HEAD
@@ -465,6 +519,7 @@ async function checkDocumentationCoverage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -477,8 +532,17 @@ async function checkDocumentationCoverage() {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+  
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   };
 };
 async function checkTestCoverage() {}
@@ -514,11 +578,21 @@ async function runCodeQualityMonitor() {}
   const docCoverageResult = await checkDocumentationCoverage();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
 
@@ -532,7 +606,11 @@ async function runCodeQualityMonitor() {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const results = [complexityResult,]
     duplicationResult,
     styleResult,
@@ -551,6 +629,31 @@ async function runCodeQualityMonitor() {}
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    process.exit(1);
+  } else {
+    
+=======
+<<<<<<< HEAD
+    process.exit(1);
+  } else {
+    
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+    process.exit(1);
+  } else {
+    
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     process.exit(1);
   } else {
 =======
@@ -594,6 +697,9 @@ async function runCodeQualityMonitor() {}
   } else {
     
 <<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -625,7 +731,11 @@ async function runCodeQualityMonitor() {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -677,6 +787,8 @@ runCodeQualityMonitor();
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
   };
 };
 runCodeQualityMonitor();
@@ -697,9 +809,28 @@ runCodeQualityMonitor();
   };
 };
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 runCodeQualityMonitor();
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+  };
+};
+runCodeQualityMonitor();
+  };
+};
+runCodeQualityMonitor();
+runCodeQualityMonitor();
+  };
+};
+runCodeQualityMonitor();
+runCodeQualityMonitor();
+  };
+};
+runCodeQualityMonitor();
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -724,7 +855,11 @@ runCodeQualityMonitor();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
@@ -737,6 +872,12 @@ monitor.analyzeCodeQuality().then(metrics => {
 =======
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -754,4 +895,8 @@ monitor.analyzeCodeQuality().then(metrics => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

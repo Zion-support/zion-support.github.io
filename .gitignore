@@ -115,7 +115,10 @@ automation/data/*.json
 !automation/data/autonomous-config.json
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -126,8 +129,15 @@ coverage/
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 # Generated reports
 automation-reports/
 health-check-report-*.json
@@ -184,13 +194,28 @@ health-check-report.json
 performance-metrics.json
 security-scan-report.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+
+core
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 core
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

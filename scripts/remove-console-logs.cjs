@@ -52,7 +52,14 @@ function processFile(filePath) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -106,8 +113,19 @@ function main() {
 }
 if (require.main === module) {
   main().catch(console.error)}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 module.exports = { removeConsoleStatements, processFile };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+module.exports = { removeConsoleStatements, processFile };
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

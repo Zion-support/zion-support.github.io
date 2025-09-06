@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:automation/test-cursor-automation.js
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
@@ -17,14 +24,30 @@
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
@@ -39,6 +62,10 @@
 >>>>>>>> main:corrupted_backup/test-cursor-automation.js
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
@@ -49,19 +76,54 @@
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/test-cursor-automation.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+=======
+=======
+========
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/test-cursor-automation.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node
 /**
  * Test Script for Cursor Chat Automation
  * This script tests the automation system without starting full automation
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:automation/test-cursor-automation.js
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<<< HEAD:corrupted_backup/test-cursor-automation.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+========
+=======
+<<<<<<<< HEAD:automation/test-cursor-automation.js
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
         // Test session creation
@@ -81,6 +143,7 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test session termination
         automation.terminateSession('test-session');
 
+<<<<<<< HEAD
 =======
 
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
@@ -147,6 +210,15 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/test-cursor-automation.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -163,7 +235,11 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
 
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n');
@@ -227,10 +303,15 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:automation/test-cursor-automation.js
 <<<<<<< HEAD
 =======
@@ -245,6 +326,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>>> main:corrupted_backup/test-cursor-automation.js
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -254,8 +339,24 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/test-cursor-automation.js
+=======
+
+=======
+
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/test-cursor-automation.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {
       // Create automation instance
       const automation = new CursorInterfaceAutomation();
@@ -324,8 +425,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/test-cursor-automation.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:automation/test-cursor-automation.js
 
 
@@ -335,15 +444,25 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -351,6 +470,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -361,10 +482,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 <<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 
@@ -372,6 +502,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 >>>>>>>> main:corrupted_backup/test-cursor-automation.js
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 =======
 >>>>>>> main
@@ -382,8 +516,29 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+
+=======
+
+========
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/test-cursor-automation.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const CursorInterfaceAutomation = require('./cursor-interface-automation');
 async function runTests() {
   console.log('🧪 Testing Cursor Chat Automation System...\n');
@@ -452,9 +607,12 @@ async function runTests() {
     process.exit(1);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
 // Run tests if this script is executed directly
 if (require.main === module) {
@@ -473,8 +631,21 @@ if (require.main === module) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/test-cursor-automation.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+========
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   runTests();
 }
 module.exports = { runTests };
@@ -482,11 +653,17 @@ module.exports = { runTests };
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     runTests();
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   runTests();
 }
@@ -497,6 +674,13 @@ module.exports = { runTests };
     runTests();
 }
 =======
+=======
+  runTests();
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+module.exports = { runTests };
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ========
 <<<<<<< HEAD
@@ -504,7 +688,10 @@ module.exports = { runTests };
     runTests();
 }
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   runTests();
 }
 module.exports = { runTests };
@@ -513,10 +700,13 @@ module.exports = { runTests };
 
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:automation/test-cursor-automation.js
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -525,6 +715,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     runTests();
 }
@@ -533,7 +727,27 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/test-cursor-automation.js
+    runTests();
+}
+=======
+  runTests();
+}
+module.exports = { runTests };
+<<<<<<<< HEAD:corrupted_backup/test-cursor-automation.js
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   runTests();
 }
 module.exports = { runTests };
@@ -544,6 +758,10 @@ module.exports = { runTests };
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -551,5 +769,17 @@ module.exports = { runTests };
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+=======
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/test-cursor-automation.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -2,6 +2,16 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+=======
+import React from \'react\';\''\'; import { Helmet } from \'react-helmet-async\'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>\"; <div className=\"min-h-screen bg-gray-50 py-12\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\"> Developer Portal\"; </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>\"; <div className=\"bg-white rounded-lg shadow-lg p-8\"> <p className=\"text-gray-600 text-center\">\'; Developer portal coming soon. We\'re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+const React from "react";"""; import { Helmet } from "react-helmet-async"; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">"; Developer portal coming soon. We"re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"""
+import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 <<<<<<< HEAD
 
@@ -71,6 +81,9 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
 =======
@@ -79,4 +92,8 @@ const React from "react";"""; import { Helmet } from "react-helmet-async"; const
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

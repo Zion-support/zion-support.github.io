@@ -49,6 +49,8 @@ import { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -259,6 +261,7 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
   return { data, loading, error, execute }};
 export default useApi;
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 ) => {
   const [loading, set_loading] = useState (false);
@@ -338,31 +341,44 @@ interface UseApiProps {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+import { useState, useEffect } from 'react';
+
+interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 interface UseApiOptions {
   immediate?: boolean;
-  onSuccess?: (data: any) => void;
-  onError?: (error: any) => void}
-export const useApi = <T = any>(
-  apiFunction: (...args: any[]) => Promise<T>,
+}
+
+export function useApi<T>(
+  apiCall: () => Promise<T>,
   options: UseApiOptions = {}
-) => {
+): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
-  const execute = useCallback(async (...args: any[]) => {
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchData = async () => {
+    setLoading(true);
+    setError(null);
+    
     try {
-      setLoading(true);
-      setError(null);
-      const result = await apiFunction(...args);
+      const result = await apiCall();
       setData(result);
-      options.onSuccess?.(result);
-      return result} catch (err) {
-      setError(err);
-      options.onError?.(err);
-      throw err} finally {
-      setLoading(false)}
-  }, [apiFunction, options]);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
+<<<<<<< HEAD
     if (options.immediate) {
       execute()}
   }, [execute, options.immediate]);
@@ -375,7 +391,11 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
 <<<<<<< HEAD
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function UseApi({ }: UseApiProps) {
   return (
     <div>
@@ -388,6 +408,8 @@ export default function UseApi({ }: UseApiProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 }
 ursor/add-new-services-and-deploy-updates-0462
 interface ApiState<T> {
@@ -500,6 +522,7 @@ function UseApi() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -513,6 +536,7 @@ function UseApi() {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
@@ -521,3 +545,26 @@ function UseApi() {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+    if (options.immediate !== false) {
+      fetchData();
+    }
+  }, []);
+
+  return {
+    data,
+    loading,
+    error,
+    refetch: fetchData,
+  };
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

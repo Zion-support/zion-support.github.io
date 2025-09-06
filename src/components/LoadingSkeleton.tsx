@@ -8,11 +8,11 @@ interface SkeletonProps {
   rounded?: boolean;
 }
 
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
-  height = 'h-4', 
-  width = 'w-full', 
-  rounded = true 
+const Skeleton: React.FC<SkeletonProps> = ({
+  className = '',
+  height = 'h-4',
+  width = 'w-full',
+  rounded = true,
 }) => {
   return (
     <motion.div
@@ -23,7 +23,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
       transition={{
         duration: 1.5,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       }}
     />
   );

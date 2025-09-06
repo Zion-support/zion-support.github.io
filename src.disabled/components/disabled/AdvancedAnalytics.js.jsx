@@ -3,6 +3,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
+=======
+import React,{ useState,useEffect } from\';react\' import { motion } from\';\';framer-motion\' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from\';\';lucide-react\' \"export\": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ \"visitors\": \'0\',\"conversions\": \'0\',\"revenue\": \'0\',\"bounceRate\": \'0\',\"avgSessionDuration\": \'0\',\"topPages\": \'[]\',\"trafficSources\": \'[]\',\"deviceTypes\": \'[]\'}) const [timeRange,setTimeRange] = useState(\'';7d\') const [isLoading,setIsLoading] = useState(true) useEffect(() => {\'';
+const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";"""
+import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 
 
 =======
@@ -35,6 +45,9 @@ import React,{ useState,useEffect } from\';react\' import { motion } from\';\';f
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";"""
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
 =======
@@ -43,4 +56,8 @@ const React,{ useState,useEffect } from";react" import { motion } from";";framer
 import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

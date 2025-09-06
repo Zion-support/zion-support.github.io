@@ -5,6 +5,7 @@ publish = "dist"
 [build.environment]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   NODE_VERSION = "18"
 =======
 <<<<<<< HEAD
@@ -19,6 +20,14 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -27,9 +36,15 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> main
 
 # Security and caching headers for static assets
 [[headers]]
@@ -98,6 +113,7 @@ status = 301
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
@@ -115,3 +131,13 @@ status = 301
   to = "/services/affiliate-attribution-suite/"
   status = 301
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

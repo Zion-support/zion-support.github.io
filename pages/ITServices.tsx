@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -60,6 +61,8 @@ import Layout from "../components/Layout";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function ITServices() {
   return (
     <Layout
@@ -69,84 +72,15 @@ export default function ITServices() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
-=======
-
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>
           <div className="text-center">
-<<<<<<< HEAD
-=======
-
-            <p className="text-gray-600">IT Services page is under construction.</p>
-
-          </div>
-        </div>
-      </div>
-    </Layout>
-=======
-export default function ITServices() {;
-  return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              IT Services;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Complete IT solutions to power your digital transformation.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">;
-=======
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * ITServices - Function description
- */
-function ITServices() {
-  return (
-    <Layout;
-      title="IT Services - Zion Tech Group";
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              IT Services;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Complete IT solutions to power your digital transformation.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-              IT Services page is under construction.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-
-=======
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -170,6 +104,32 @@ import {
   Database,
   Smartphone,
   Monitor,
+=======
+import { Star } from 'lucide-react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+=======
+import Layout from '../components/Layout';
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+import { 
+  Server, 
+  Shield, 
+  Cloud, 
+<<<<<<< HEAD
+  Database, 
+  Network, 
+  Lock, 
+  Monitor, 
+  HardDrive, 
+  Wifi, 
+  Smartphone, 
+  Laptop, 
+  Globe, 
+  CheckCircle, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ArrowRight,
   CheckCircle,
   Clock,
@@ -187,13 +147,90 @@ import {
   Mail,
   MapPin,
   FileText,
+  Cpu
+=======
+  Network, 
+  Database, 
+  Smartphone, 
+  Monitor, 
+  ArrowRight, 
+  CheckCircle, 
+  Clock,
+  Users,
+  Globe,
+  Lock,
+  Zap,
+  Settings,
+  BarChart3,
+  Headphones,
+  Wrench,
+  HardDrive,
+  Wifi,
+  Phone,
+  Mail,
+  MapPin,
+  FileText,
   Cpu;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 } from 'lucide-react';
 
 const itServices = [
   {
+<<<<<<< HEAD
     category: "Managed IT Services",
     icon: Server,
+=======
+<<<<<<< HEAD
+    title: 'Cloud Infrastructure Management',
+    description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
+    icon: Cloud,
+    features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', '24/7 monitoring'],
+    price: '$2,500/month',
+    benefits: ['Scalable infrastructure', 'Reduced operational costs', 'Enhanced security', 'Improved performance']
+  },
+  {
+    title: 'Network Security Solutions',
+    description: 'Advanced cybersecurity measures to protect your business from threats.',
+    icon: Shield,
+    features: ['Firewall management', 'Intrusion detection', 'Vulnerability assessments', 'Security audits'],
+    price: '$1,800/month',
+    benefits: ['Threat protection', 'Compliance assurance', 'Risk mitigation', 'Peace of mind']
+  },
+  {
+    title: 'Database Administration',
+    description: 'Expert database management and optimization services.',
+    icon: Database,
+    features: ['Performance tuning', 'Backup strategies', 'Data migration', 'Monitoring'],
+    price: '$1,200/month',
+    benefits: ['Optimized performance', 'Data protection', 'Reduced downtime', 'Expert support']
+  },
+  {
+    title: 'IT Support & Helpdesk',
+    description: '24/7 technical support for all your IT needs.',
+    icon: Monitor,
+    features: ['Remote assistance', 'Hardware support', 'Software installation', 'User training'],
+    price: '$800/month',
+    benefits: ['Quick response times', 'Expert technicians', 'Reduced downtime', 'User satisfaction']
+  },
+  {
+    title: 'Network Design & Implementation',
+    description: 'Custom network solutions tailored to your business requirements.',
+    icon: Network,
+    features: ['Network planning', 'Hardware selection', 'Installation', 'Testing'],
+    price: '$3,000/project',
+    benefits: ['Reliable connectivity', 'Scalable design', 'Future-proof architecture', 'Expert implementation']
+  },
+  {
+    title: 'Server Management',
+    description: 'Complete server administration and maintenance services.',
+    icon: Server,
+    features: ['Server setup', 'Performance monitoring', 'Updates & patches', 'Backup management'],
+    price: '$1,500/month',
+    benefits: ['Reliable servers', 'Optimal performance', 'Data protection', 'Minimal downtime']
+=======
+    category: "Managed IT Services",
+    icon: Server,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     color: "from-blue-500 to-cyan-500",
     services: [
       {
@@ -459,143 +496,26 @@ const processSteps = [
     step: "05",
     title: "Optimization",
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }
 ];
 
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
+<<<<<<< HEAD
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
+=======
+<<<<<<< HEAD
+  { number: "24/7", label: "Support Available" },
+  { number: "500+", label: "Systems Managed" },
+  { number: "15min", label: "Average Response Time" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 ];
-<<<<<<< HEAD
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete IT solutions to power your digital transformation.
-            </p>
-<<<<<<< HEAD
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-              >
-                Get Free IT Consultation
-              </Link>
-              <Link 
-                href="#services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold"
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* IT Services Categories */}
-      <section id="services" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              IT Service Categories
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Complete IT solutions designed to support your business operations and drive growth.
-            </p>
-          </motion.div>
-          {itServices.map((category, categoryIndex) => (
-            <motion.div
-              key={categoryIndex}
-              className="mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center mb-8">
-                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
-                  <category.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-gray-900">
-                  {category.category}
-                </h3>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={serviceIndex}
-                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-all duration-300 group"
-                    whileHover={{ y: -5 }}
-                  >
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">
-                      {service.name}
-                    </h4>
-                    <p className="text-gray-600 mb-4">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="text-lg font-bold text-blue-600">
-                          {service.pricing}
-                        </div>
-                        <div className="text-sm text-gray-500">
-                          Delivery: {service.delivery}
-                        </div>
-                      </div>
-                      <Link
-                        href="/contact"
-                        className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
-                      >
-                        Get Quote
-                      </Link>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-      {/* Micro SaaS Solutions */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              IT Management Micro SaaS Solutions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Specialized IT management tools that can be deployed quickly and scaled with your business.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaS.map((solution, index) => (
-=======
 
 <<<<<<< HEAD
 export default function ITServices() {
@@ -682,7 +602,6 @@ export default function ITServicesPage() {
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
->>>>>>> main
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -781,23 +700,6 @@ export default function ITServicesPage() {
                     {solution.name}
                   </h3>
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-600 mb-4">
-                  {solution.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex justify-between items-center">
-                  <div className="text-2xl font-bold text-green-600">
-                    {solution.pricing}
-                  </div>
-=======
                 
 <<<<<<< HEAD
                 <p className="text-gray-600 mb-4">
@@ -846,8 +748,11 @@ export default function ITServicesPage() {
                 
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <Link
                     href="/contact"
                     className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
@@ -859,6 +764,7 @@ export default function ITServicesPage() {
             ))}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -876,6 +782,9 @@ export default function ITServicesPage() {
 
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -889,6 +798,7 @@ export default function ITServicesPage() {
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
               A proven methodology that ensures successful IT implementation and maximum value for your investment.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </motion.div>
 
@@ -1005,6 +915,8 @@ export default function ITServicesPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />
@@ -1018,14 +930,18 @@ export default function ITServicesPage() {
                 <MapPin className="h-5 w-5 mr-2" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1049,3 +965,23 @@ export default function ITServicesPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+=======
+  { number: "15min", label: "Response Time" },
+  { number: "500+", label: "IT Projects Completed" },
+  { number: "24/7", label: "Support Available" }
+];
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              IT Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete IT solutions to power your digital transformation.
+            </p>
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

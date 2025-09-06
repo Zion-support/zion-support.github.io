@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -7,6 +8,11 @@ import { describe, it, expect, vi } from 'vitest';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -33,8 +39,13 @@ describe('AccessibilityEnhancer'
     fireEvent.keyDown(element, { "key"
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -49,9 +60,12 @@ describe('AccessibilityEnhancer', () => {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   it('applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
@@ -67,10 +81,13 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '0');
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
   it('handles keyboard events correctly', () => {
     const handleClick = vi.fn();
@@ -87,9 +104,12 @@ describe('AccessibilityEnhancer', () => {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   it('applies focus styles when focusable', () => {
     render(
       <AccessibilityEnhancer
@@ -109,12 +129,15 @@ describe('AccessibilityEnhancer', () => {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 });
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   it('disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>
@@ -132,7 +155,31 @@ describe('AccessibilityEnhancer', () => {
 });
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
+import { describe, it, expect, vi } from 'vitest'
+describe('AccessibilityEnhancer'
+  it('renders children correctly'
+    expect(screen.getByTestId('test-child'
+    expect(screen.getByText('Test Content'
+  it('applies accessibility props correctly'
+    const element = screen.getByRole('button'
+    expect(element).toHaveAttribute('aria-label', 'Test Button'
+    expect(element).toHaveAttribute('tabindex', '0'
+  it('handles keyboard events correctly'
+    const element = screen.getByRole('button'
+    fireEvent.keyDown(element, { "key"
+    fireEvent.keyDown(element, { "key";
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,6 +1,18 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
 
 
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs
 =======
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs").promises;"const path = require("path");"const { exec } = require("child_process");"const util = require("util");const execAsync = util.promisify(exec);class SimpleMergeResolver { constructor() {" this.projectRoot = path.join(__dirname, "."); this.fixedFiles = []; this.errors = []}" async log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async findConflictedFiles() { try {" const { stdout } = await execAsync("git diff --name-only --diff-filter=U", { cwd: this.projectRoot });" return stdout.trim().split("\n").filter(file => file)} catch (error) {""` await this.log(`Error finding conflicted files: ${error.message}`, "ERROR"); return []} } async resolveFileConflicts(filePath) { try {" const content = await fs.readFile(filePath, "utf8"); / Simple conflict resolution - take the first version (HEAD) let resolvedContent = content; / Remove merge conflict markers and keep HEAD version""`"`
 #!/usr/bin/env node
@@ -9,10 +21,23 @@ console.log('🔧 Simple merge resolver - fixing syntax errors...');
   async log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     }
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs
 // Fix the specific syntax errors we identified
 const files = [
   'components/Footer.tsx',
@@ -23,9 +48,35 @@ const files = [
   'pages/contact.tsx',
   'pages/index.tsx'
 ];
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
@@ -208,12 +259,34 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs
 }
 });
 }
 });
 
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+}
+});
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+});
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs
   async resolveFileConflicts(filePath) {
     try {
       const content = await fs.readFile(filePath, 'utf8');
@@ -257,9 +330,25 @@ if (require.main === module) {
   main().catch(console.error)}
 module.exports = SimpleMergeResolver;
 
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+}
+});
+}
+});
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
@@ -273,6 +362,7 @@ const util = require('util')
       return stdout.trim().split('\n')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-merge-resolver.cjs
 
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -280,3 +370,42 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/simple-merge-resolver.cjs

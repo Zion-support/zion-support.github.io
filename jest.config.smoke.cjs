@@ -8,12 +8,7 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
-<<<<<<< HEAD
 const customJestConfig = {
-=======
-const config = {
-  testEnvironment: 'jsdom',
->>>>>>> main
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
@@ -45,7 +40,11 @@ const config = {
     '<rootDir>/temp_components/',
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapping: {
@@ -81,6 +80,8 @@ const config = {
 };
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
@@ -88,6 +89,7 @@ const config = {
 };
 
 module.exports = createJestConfig(customJestConfig);
+<<<<<<< HEAD
 =======
   coverageThreshold: {
     global: {
@@ -104,3 +106,5 @@ module.exports = createJestConfig(customJestConfig);
 module.exports = createJestConfig(config);
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

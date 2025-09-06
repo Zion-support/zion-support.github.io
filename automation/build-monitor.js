@@ -27,6 +27,10 @@ class BuildMonitor {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -185,8 +189,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -207,6 +219,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -282,8 +298,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -307,6 +331,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -338,8 +366,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
       
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -550,6 +586,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -566,8 +606,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -595,6 +643,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = BuildMonitor;
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -745,6 +798,9 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor(),
 <<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
   monitor.run().catch(console.error)}
 <<<<<<< HEAD
@@ -761,4 +817,8 @@ module.exports = BuildMonitor;
 =======
 module.exports = BuildMonitor;
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

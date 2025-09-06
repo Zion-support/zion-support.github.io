@@ -7,6 +7,10 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }},
 =======
 <<<<<<< HEAD
@@ -33,12 +37,17 @@ const qualityChecks = [{
     },
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }},
 
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     }},
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
@@ -191,6 +200,9 @@ const qualityChecks = [{
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -199,16 +211,26 @@ const qualityChecks = [{
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       
       
 <<<<<<< HEAD
@@ -250,6 +272,9 @@ const qualityChecks = [{
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -258,12 +283,20 @@ const qualityChecks = [{
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
         
@@ -319,6 +352,9 @@ const qualityChecks = [{
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -327,11 +363,19 @@ const qualityChecks = [{
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
         
@@ -420,7 +464,11 @@ const report = {
     "failed": totalCount - successCount}};
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 <<<<<<< HEAD
@@ -432,11 +480,15 @@ const report = {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -448,7 +500,11 @@ const report = {
 =======
 
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -457,6 +513,10 @@ const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -482,8 +542,16 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -504,12 +572,16 @@ console.log(' Code Quality Checker Starting...\n')
     "status"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
     "status"
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     "status"
     "status"
 <<<<<<< HEAD
@@ -519,6 +591,9 @@ console.log(' Code Quality Checker Starting...\n')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     "status"
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -527,4 +602,8 @@ console.log(' Code Quality Checker Starting...\n')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

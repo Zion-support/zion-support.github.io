@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 import { execSync } from "child_process";
 
@@ -6,6 +10,18 @@ console.log("🔧 Performing selective merge of main source files...");
 // List of main source directories to merge
 const mainSourceDirs = [
 =======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+
+
+console && console.log('🔧 Performing selective merge of main source files...');
+// List of main source directories to merge
+const mainSourceDirs = [
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -14,6 +30,13 @@ console.log ('🔧 Performing selective merge of main source files...');
 // List of main source directories to merge;
 const mainSourceDirs = [;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   'pages/',
   'components/',
   'utils/',
@@ -111,7 +134,38 @@ const mergeSpecificFiles = () =>: any {
 
     return true;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in selective merge:", error.message);
+=======
+<<<<<<< HEAD
+    console.error("Error in selective merge:", error.message);
+=======
+<<<<<<< HEAD
+=======
+
+  if (mergeSpecificFiles()) {
+    console && console.log('✅ Selective merge completed');
+    // Add the merged files
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console && console.log('📝 Files added to staging area');
+      // Commit the changes
+      execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
+      console && console.log('✅ Changes committed');
+      
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    } catch (error) {
+      console && console.error('Error committing changes:', error && error.message);
+    }
+  } else {
+    console && console.log('❌ Selective merge failed');
+  }
+}
+main();
+    console.error ('Error in selective merge:', error.message);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     return false;
   }
 };

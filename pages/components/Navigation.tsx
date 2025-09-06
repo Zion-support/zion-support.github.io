@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ArrowRight,
   Award,
@@ -39,6 +40,29 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react';
+import MainLayout from '../../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Navigation - Zion Tech Group"
+      description="Navigation component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Navigation</h1>
+          <p className="text-xl text-gray-600">Navigation component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   BookOpen,
   Brain,
   Building,
@@ -73,6 +97,7 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   Truck,
@@ -143,6 +168,8 @@ import {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   Clock,
   DollarSign,
   Cpu,
@@ -182,6 +209,7 @@ import {;
   DollarSign as Money;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -189,23 +217,17 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
-
-
 =======
-} from 'lucide-react';
->>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 } from 'lucide-react';
+
+
 
 
 <<<<<<< HEAD
-
-
 =======
 =======
 
@@ -213,6 +235,8 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ArrowRight
   Award
   BarChart3
@@ -255,6 +279,7 @@ import {
   X
   Zap
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 } from "lucide-react";
 
@@ -270,6 +295,8 @@ origin/main
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const navigationItems = [
   {
     title: "Services"
@@ -334,16 +361,6 @@ const navigation_items = [;
         popular: false
       }
       {
-<<<<<<< HEAD
-=======
-
-        title: "Cloud Solutions",
-        href: "/cloud - solutions",
-        icon: Cloud,
-        description: "Scalable cloud infrastructure",
-        popular: false,
-      },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "Data Analytics",
         href: "/data - analytics",
@@ -428,14 +445,6 @@ const navigation_items = [;
     ],
   },
   {
-<<<<<<< HEAD
-=======
-    title: "Resources",
-    href: "/resources",
-    icon: FileText,
-    submenu: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "Blog"
         href: "/blog"
@@ -443,15 +452,6 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
-<<<<<<< HEAD
-=======
-
-        title: "Case Studies",
-        href: "/case - studies",
-        icon: BarChart3,
-        description: "Success stories and results",
-      },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "White Papers",
         href: "/white - papers",
@@ -459,15 +459,6 @@ const navigation_items = [;
         description: "In - depth research reports",
       },
       {
-<<<<<<< HEAD
-=======
-        title: "Tutorials",
-        href: "/tutorials",
-        icon: BookOpen,
-        description: "Step - by - step guides",
-      },
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "FileTextation"
         href: "/docs"
@@ -477,15 +468,6 @@ const navigation_items = [;
     ]
   }
   {
-<<<<<<< HEAD
-=======
-
-    title: "Company",
-    href: "/about",
-    icon: Building,
-    submenu: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "About Us"
         href: "/about"
@@ -525,6 +507,7 @@ const navigation_items = [;
     ]
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -759,9 +742,10 @@ export default function Navigation() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -772,6 +756,7 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -780,6 +765,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -804,6 +791,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -857,58 +845,22 @@ function Navigation() {
               >;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-
-          <Link href="/" className="flex items-center space-x-2">;
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
-              <span className="text-white font-bold text-xl">Z</span>;
-            </div>;
-            <div>;
-              <div className="text-xl font-bold text-gray-900">;
-                Zion Tech Group;
-              </div>;
-              <div className="text-sm text-gray-500">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
-<<<<<<< HEAD
-=======
-          <Link href="/" className="flex items - center space - x-2">;
-            <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
-              <span className="text - white font - bold text - xl">Z</span>;
-            </div>;
-            <div>;
-              <div className="text - xl font - bold text - gray - 900">;
-                Zion Tech Group;
-              </div>;
-              <div className="text - sm text - gray - 500">;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
-<<<<<<< HEAD
-=======
-
-                  href={item && item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
-                  <item && item.icon className="w-5 h-5" />;
-                  <span>{item && item.title}</span>;
-                  <ChevronDown className="w-4 h-4" />;
-                </Link>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -957,28 +909,12 @@ function Navigation() {
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
-<<<<<<< HEAD
-=======
-
-            </div>;
-          </div>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
-=======
-
-          </button>;
-        </div>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
@@ -1168,6 +1104,7 @@ function Navigation() {
       </div>;
     </nav>);
 }
+<<<<<<< HEAD
 =======
 import React from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
@@ -1191,3 +1128,6 @@ const Page = () => {
 export default Page;
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,6 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 const { useState,useCallback,useRef,useEffect } from "react" export const useAICodeGeneration = () => {; const { trackEvent } = useAnalytics({; enableTracking: "true enableUserBehaviorTracking: true"}); const [isGenerating,setIsGenerating] = useState(false); const [isAnalyzing,setIsAnalyzing] = useState(false); const [generatedCode,setGeneratedCode] = useState(); const [codeAnalysis,setCodeAnalysis] = useState(null); const [suggestions,setSuggestions] = useState([]); const [history,setHistory] = useState([]); const generationTimeoutRef = useRef());,return <div>Component></div> }} "export default ComponentName;""""
 =======
 import { useState,useCallback,useRef,useEffect } from \"react\" export const useAICodeGeneration = () => {; const { trackEvent } = useAnalytics({; \"enableTracking\": \'true enableUserBehaviorTracking: true\'}); const [isGenerating,setIsGenerating] = useState(false); const [isAnalyzing,setIsAnalyzing] = useState(false); const [generatedCode,setGeneratedCode] = useState(); const [codeAnalysis,setCodeAnalysis] = useState(null); const [suggestions,setSuggestions] = useState([]); const [history,setHistory] = useState([]); const generationTimeoutRef = useRef());,return <div>Component></div> }} \'export default ComponentName;\"
 const { useState,useCallback,useRef,useEffect } from "react" export const useAICodeGeneration = () => {; const { trackEvent } = useAnalytics({; enableTracking: "true enableUserBehaviorTracking: true"}); const [isGenerating,setIsGenerating] = useState(false); const [isAnalyzing,setIsAnalyzing] = useState(false); const [generatedCode,setGeneratedCode] = useState(); const [codeAnalysis,setCodeAnalysis] = useState(null); const [suggestions,setSuggestions] = useState([]); const [history,setHistory] = useState([]); const generationTimeoutRef = useRef());,return <div>Component></div> }} "export default ComponentName;""""
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+<<<<<<< HEAD
+=======
+import { useState,useCallback,useRef,useEffect } from \"react\" export const useAICodeGeneration = () => {; const { trackEvent } = useAnalytics({; \"enableTracking\": \'true enableUserBehaviorTracking: true\'}); const [isGenerating,setIsGenerating] = useState(false); const [isAnalyzing,setIsAnalyzing] = useState(false); const [generatedCode,setGeneratedCode] = useState(); const [codeAnalysis,setCodeAnalysis] = useState(null); const [suggestions,setSuggestions] = useState([]); const [history,setHistory] = useState([]); const generationTimeoutRef = useRef();,return <div>Component>
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

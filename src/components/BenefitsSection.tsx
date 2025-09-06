@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
@@ -14,12 +15,15 @@ interface BenefitsSectionProps {
 const getBenefits = (t: any) => [
   {
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 <<<<<<< HEAD
 import React from 'react';
 
 const BenefitsSection = () => {
   const benefits = [
     {
+<<<<<<< HEAD
       icon: "🚀",
       title: "Faster Implementation",
       description: "Get your solutions up and running quickly with our streamlined processes."
@@ -49,6 +53,37 @@ const BenefitsSection = () => {
       title: "Latest Technology",
       description: "Stay ahead with cutting-edge AI and IT solutions."
     }
+=======
+      icon: '🚀',
+      title: 'Faster Implementation',
+      description: 'Get your solutions up and running quickly with our streamlined processes.',
+    },
+    {
+      icon: '💰',
+      title: 'Cost Effective',
+      description: 'Reduce operational costs while improving efficiency and productivity.',
+    },
+    {
+      icon: '🔒',
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime guarantee for all services.',
+    },
+    {
+      icon: '📈',
+      title: 'Scalable Solutions',
+      description: 'Grow your business with solutions that scale with your needs.',
+    },
+    {
+      icon: '🎯',
+      title: 'Expert Support',
+      description: '24/7 support from our team of certified professionals.',
+    },
+    {
+      icon: '⚡',
+      title: 'Latest Technology',
+      description: 'Stay ahead with cutting-edge AI and IT solutions.',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ];
 
   return (
@@ -73,9 +108,16 @@ const BenefitsSection = () => {
 };
 
 export default BenefitsSection;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const getBenefits = (t: any) => [
 
 
@@ -380,7 +422,14 @@ function Page() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

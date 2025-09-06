@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 /**;
  * Dependency Manager - PM2 Automation;
@@ -15,6 +18,10 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -38,9 +45,12 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
@@ -85,6 +95,10 @@ class $1 {}
   "type": "SYSTEM_ERROR",
         "message": error.message,
         "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // 3. Clean corrupted dependencies;
       if (status.corruptedDeps.length > 0) {}
   const cleanupActions = await this.cleanCorruptedDependencies();
@@ -98,12 +112,20 @@ class $1 {}
       // 5. Update outdated dependencies;
       const updateActions = await this.updateDependencies();
       actions.push(...updateActions);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // 6. Generate dependency report;
       const report = await this.generateDependencyReport(;)
         status,
         actions,
         errors;
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // 7. Commit changes if successful;
       if (actions.length > 0 && errors.length === 0) {}
   await this.commitDependencyChanges(actions)};
@@ -139,6 +161,10 @@ class $1 {}
   "type": "INVALID_VERSION",
                   "dependency": dep,
                   "current": version,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           // Check for invalid versions;
           if (packageJson.dependencies) {}
   for (const ["dep", "version"] of Object.entries(;)
@@ -172,6 +198,10 @@ class $1 {}
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
       if (fs.existsSync(nodeModulesPath)) {}
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } catch (error) {}
   status.packageJsonIssues.push({})
   "type": "PARSE_ERROR",
@@ -183,6 +213,10 @@ class $1 {}
       if (fs.existsSync(nodeModulesPath)) {}
   const corrupted = await this.findCorruptedPackages(nodeModulesPath);
         status.corruptedDeps = corrupted;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if (corrupted.length > 0) {}
   status.needsReinstall = true};
       } else {}
@@ -201,14 +235,28 @@ class $1 {}
 ;
   async findCorruptedPackages(nodeModulesPath) {}
   const corrupted = [];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
   const packages = fs.readdirSync(nodeModulesPath);
       for (const pkg of packages) {}
   if (pkg.startsWith(".")) continue;
+<<<<<<< HEAD
       for (const pkg of packages) {}
   if (pkg.startsWith(".")) continue;
         const pkgPath = path.join(nodeModulesPath, "pkg);
         const pkgJsonPath = path.join(pkgPath", "package.json");
+=======
+
+      for (const pkg of packages) {}
+  if (pkg.startsWith(".")) continue;
+
+        const pkgPath = path.join(nodeModulesPath, "pkg);
+        const pkgJsonPath = path.join(pkgPath", "package.json");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if (fs.existsSync(pkgJsonPath)) {}
   try {}
   const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));
@@ -238,6 +286,10 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "encoding": "utf8",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async checkOutdatedDependencies() {}
   try {}
   const result = execSync("npm outdated --json", {})
@@ -245,6 +297,10 @@ class $1 {}
         "stdio": "pipe",
         "encoding": "utf8"}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       const outdated = JSON.parse(result);
       return Object.entries(outdated).map((["name", "info"]) => ({})
   name,
@@ -260,6 +316,10 @@ class $1 {}
             "current": info.current,
             "wanted": info.wanted,
             "latest": info.latest}))} catch {}
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } catch (error) {}
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {}
@@ -278,6 +338,10 @@ class $1 {}
 ;
   async fixPackageJsonIssues(issues) {}
   const fixes = [];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
   const packagePath = path.join(this.projectRoot, "package.json");
       const packageContent = fs.readFileSync(packagePath, "utf8");
@@ -300,6 +364,10 @@ class $1 {}
   "type": "PACKAGE_JSON_FIX",
               "dependency": issue.dependency,"action": `Fixed invalid version for ${issue.dependency}`,`
               "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       for (const issue of issues) {}
   if (;)
           issue.type === "INVALID_VERSION" ||;
@@ -309,10 +377,18 @@ class $1 {}
             issue.type === "INVALID_VERSION";
               ? packageJson.dependencies;
               : packageJson.devDependencies;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           if (deps && deps[issue.dependency]) {}
   // Set a reasonable default version;
             deps[issue.dependency] = "^1.0.0";
             modified = true;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             fixes.push({})
   "type": "PACKAGE_JSON_FIX",
               "dependency": issue.dependency,"action": `Fixed invalid version for ${issue.dependency}`,`
@@ -333,10 +409,18 @@ class $1 {}
   this.log("Cleaning corrupted dependencies...");
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
       const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (fs.existsSync(nodeModulesPath)) {}
   fs.rmSync(nodeModulesPath, { "recursive": true, "force": true }
 });
         this.log("Removed corrupted node_modules");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         actions.push({})
   "type": "CLEANUP",
           "action": "Removed corrupted node_modules directory",
@@ -349,6 +433,10 @@ class $1 {}
   "type": "CLEANUP",
           "action": "Removed package-lock.json",
           "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         actions.push({})
   "type": "CLEANUP",
           "action": "Removed package-lock.json",
@@ -366,11 +454,19 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe"}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log("Dependencies reinstalled successfully");
       actions.push({})
   "type": "REINSTALL",
         "action": "Successfully reinstalled all dependencies",
         "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       actions.push({})
   "type": "REINSTALL",
         "action": "Successfully reinstalled all dependencies",
@@ -384,6 +480,10 @@ class $1 {}
     try {}
   // Check for outdated dependencies;
       const outdated = await this.checkOutdatedDependencies();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {}
@@ -396,6 +496,10 @@ class $1 {}
   "type": "UPDATE",
                 "dependency": dep.name,"action": `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,`
                 "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {}
   try {}
@@ -403,6 +507,10 @@ class $1 {}
   "cwd": this.projectRoot,
                 "stdio": "pipe"}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               actions.push({})
   "type": "UPDATE",
                 "dependency": dep.name,"action": `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,`
@@ -438,11 +546,19 @@ class $1 {}
       "errors": errors};
     const reportFile = path.join(;)
       this.reportsDir,dependency-report-${Date.now()}.json`;`
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const reportFile = path.join(;)
       this.reportsDir,dependency-report-${Date.now()}.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`Dependency report "generated": ${reportFile}");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return report};
 ;
   async commitDependencyChanges(actions) {}
@@ -464,6 +580,10 @@ this.log(`Dependency report "generated": ${reportFile}");
 // Main execution;
 async function $1() {}
   const manager = new DependencyManager();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   try {}
   const result = await manager.runDependencyManagement();
     if (result.errors.length === 0 && result.actions.length > 0) {}
@@ -481,7 +601,17 @@ if (require.main === module) {}
   main()};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = DependencyManager;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = DependencyManager;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = DependencyManager;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

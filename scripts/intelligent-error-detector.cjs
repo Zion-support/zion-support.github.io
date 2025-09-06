@@ -1,16 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   log(message, level = "INFO")
       fs.mkdirSync(this.reportsDir, { "recursive"})
       const content = fs.readFileSync(filePath, "utf8")
@@ -75,7 +81,17 @@ const { execSync } = require("child_process")
     this.scanDirectory(path.join(this.projectRoot, "pages")
     this.scanDirectory(path.join(this.projectRoot, "components")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     this.log("� Error detection completed!", "SUCCESS")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    this.log("� Error detection completed!", "SUCCESS")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    this.log("� Error detection completed!", "SUCCESS")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

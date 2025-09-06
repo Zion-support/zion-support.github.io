@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -24,9 +27,12 @@ import { execSync, spawn } from;
     const lines = output.split('\\n')
           type: 'lint'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   '
       console.log(')
   '
@@ -55,7 +61,17 @@ import { execSync, spawn } from;
     if (line.includes('console.')
     if (message.includes('single quotes')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       lines[lineIndex] = line.replace(/"/g, ")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      lines[lineIndex] = line.replace(/"/g, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

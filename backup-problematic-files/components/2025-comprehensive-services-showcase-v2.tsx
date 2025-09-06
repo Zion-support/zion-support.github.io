@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
 
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react',;
@@ -23,36 +24,107 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
     ...industrySpecificSolutions2025V2;
 
     ...emergingTechBreakthroughs2025V2
+=======
+import React from "react";
+import SEO from "./seo/Seo";
+import { motion } from "framer-motion";
+import {
+  Brain,
+  Zap,
+  Shield,
+  Circle,
+  ArrowRight,
+  Check,
+  Star,
+  TrendingUp,
+  Users,
+  Globe,
+  Lock,
+  Cloud,
+  Smartphone,
+  Building,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
+
+// Import our new 2025 V2 innovative services
+import { advancedMicroSaasExpansion2025V2 } from "../data/2025-advanced-micro-saas-expansion-v2";
+import { advancedITServices2025 } from "../data/2025-advanced-it-services";
+import { advancedAIServices2025 } from "../data/2025-advanced-ai-services";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export default function ComprehensiveServicesShowcase2025V2() {
+  const allNewServices = [
+    ...advancedMicroSaasExpansion2025V2,
+    ...advancedITServices2025,
+    ...advancedAIServices2025,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
   ];
   const serviceCategories = [
     {
-      id: 'micro-saas',
-      name: 'Innovative Micro SAAS',
+      id: "micro-saas",
+      name: "Innovative Micro SAAS",
       icon: <Smartphone className="w-8 h-8" />,
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
       color: 'from-blue-500 to-cyan-500',
       services: innovativeMicroSaas2025ExpansionV2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     };
+=======
+      color: "from-blue-500 to-cyan-500",
+      services: advancedMicroSaasExpansion2025V2,
+      description: "Cutting-edge micro SAAS solutions for modern businesses",
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
     {
-      id: 'it-infrastructure',
-      name: 'IT Infrastructure Services',
+      id: "it-infrastructure",
+      name: "IT Infrastructure Services",
       icon: <Cloud className="w-8 h-8" />,
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
       color: 'from-purple-500 to-pink-500',
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions'
     };
+=======
+      color: "from-purple-500 to-pink-500",
+      services: advancedITServices2025,
+      description: "Advanced IT infrastructure and security solutions",
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
     {
-      id: 'ai-services',
-      name: 'AI & Machine Learning',
+      id: "ai-services",
+      name: "AI & Machine Learning",
       icon: <Brain className="w-8 h-8" />,
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
       color: 'from-green-500 to-emerald-500',
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation'
     };
+=======
+      color: "from-green-500 to-emerald-500",
+      services: advancedAIServices2025,
+      description: "Intelligent AI solutions for business transformation",
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
     {
-      id: 'industry-solutions',
-      name: 'Industry Solutions',
+      id: "industry-solutions",
+      name: "Industry Solutions",
       icon: <Building className="w-8 h-8" />,
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
       color: 'from-orange-500 to-red-500',
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries'
@@ -65,14 +137,29 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
       services: emergingTechBreakthroughs2025V2,
       description: 'Breakthrough technologies of the future'
     }
+=======
+      color: "from-orange-500 to-red-500",
+      services: advancedITServices2025,
+      description: "Specialized solutions for specific industries",
+    },
+    {
+      id: "emerging-tech",
+      name: "Emerging Technology",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      services: advancedAIServices2025,
+      description: "Breakthrough technologies of the future",
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
   ];
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    mobile: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
       <SEOHead 
         title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
@@ -80,6 +167,21 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
 
         keywords={["micro SAAS", "IT infrastructure", "AI services", "industry solutions", "emerging technology", "Zion Tech Group"]}
       />;
+=======
+      <SEO
+        title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
+        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
+        keywords={[
+          "micro SAAS",
+          "IT infrastructure",
+          "AI services",
+          "industry solutions",
+          "emerging technology",
+          "Zion Tech Group",
+        ]}
+      />
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
       {/* Hero Section */}
 
 import React from 'react',
@@ -244,8 +346,14 @@ function ComprehensiveServicesShowcase2025V2() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
+=======
+            Experience the future of technology with our revolutionary portfolio
+            of innovative micro SAAS, IT infrastructure, AI services, industry
+            solutions, and emerging technology breakthroughs.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -303,12 +411,16 @@ function ComprehensiveServicesShowcase2025V2() {
             </div>
             <div className="text-center">
               <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Email Us
+              </h3>
               <p className="text-cyan-400 text-lg">{contactInfo.email}</p>
             </div>
             <div className="text-center">
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Visit Us
+              </h3>
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
             </div>
           </motion.div>
@@ -341,6 +453,10 @@ function ComprehensiveServicesShowcase2025V2() {
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
           <motion.div
             className="space-y-20"
             variants={staggerContainer}
@@ -351,7 +467,9 @@ function ComprehensiveServicesShowcase2025V2() {
             {serviceCategories.map((category) => (
               <motion.div key={category.id} variants={fadeInUp}>
                 <div className="text-center mb-12">
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
+                  <div
+                    className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}
+                  >
                     {category.icon}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -361,10 +479,18 @@ function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
                       key={service.id}
+=======
+                      key={"id" in service ? service.id : index}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       whileHover={{ y: -5 }}
                     >
@@ -374,6 +500,7 @@ function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -404,6 +531,36 @@ function ComprehensiveServicesShowcase2025V2() {
                         Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
                       </a>;
 
+=======
+
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center text-sm text-cyan-400">
+                          <TrendingUp className="w-4 h-4 mr-2" />
+                          {(service as any).marketSize || "Growing Market"}
+                        </div>
+                        <div className="flex items-center text-sm text-green-400">
+                          <Star className="w-4 h-4 mr-2" />
+                          {(service as any).growthRate || "High Growth"}
+                        </div>
+                      </div>
+
+                      <div className="mb-6">
+                        <div className="text-2xl font-bold text-white mb-2">
+                          Starting at{" "}
+                          {(service as any).pricing?.starter ||
+                            (service as any).price ||
+                            "Contact Us"}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          {(service as any).pricing?.professional
+                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`
+                            : `${(service as any).price || "Contact Us"} ${(service as any).period || ""}`}
+                        </div>
+                      </div>
+
+                      <a
+                        href={`/services/${(service as any).slug || service.name.toLowerCase().replace(/\s+/g, "-")}`}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -436,6 +593,10 @@ function ComprehensiveServicesShowcase2025V2() {
           >
             Market Impact & Growth
           </motion.h2>
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx
           <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
 
@@ -448,19 +609,27 @@ function ComprehensiveServicesShowcase2025V2() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>
+              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                25+
+              </div>
               <div className="text-white text-lg">New Services Added</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">$150B+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                $150B+
+              </div>
               <div className="text-white text-lg">Total Addressable Market</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">40%+</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                40%+
+              </div>
               <div className="text-white text-lg">Average Annual Growth</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
+                5
+              </div>
               <div className="text-white text-lg">Service Categories</div>
             </div>
           </motion.div>
@@ -493,7 +662,8 @@ function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Join thousands of businesses already transforming their operations with our cutting-edge solutions.
+            Join thousands of businesses already transforming their operations
+            with our cutting-edge solutions.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -523,6 +693,9 @@ function ComprehensiveServicesShowcase2025V2() {
     </div>
   );
 }
+<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
     </div>);
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:components/2025-comprehensive-services-showcase-v2.tsx

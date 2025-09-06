@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -19,15 +20,126 @@ import { motion } from "framer-motion";
 =======
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
+const apiFeatures = [
+  {
+    icon: Code,
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API endpoints for easy integration',
+    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
+  },
+  {
+    icon: Shield,
+    title: 'Security',
+    description: 'Enterprise-grade security with authentication and encryption',
+    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
+  },
+  {
+    icon: Zap,
+    title: 'Performance',
+    description: 'High-performance API with caching and optimization',
+    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
+  },
+  {
+    icon: Book,
+    title: 'Documentation',
+    description: 'Comprehensive documentation with examples and guides',
+    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
+  }
+];
+
+export default function APIPage() {
+  return (
+    <Layout
+      title="API - Zion Tech Group"
+      description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."
+      keywords="API, REST API, developer tools, integration, SDK"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              API Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Powerful APIs for integrating with Zion Tech Group services. 
+              Build amazing applications with our developer-friendly APIs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {apiFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 shadow-lg"
+              >
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
+                </div>
+                
+                <p className="text-gray-600 mb-6">{feature.description}</p>
+                
+                <ul className="space-y-2">
+                  {feature.features.map((item, idx) => (
+                    <li key={idx} className="flex items-center text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
 <<<<<<< HEAD
-
-
-
-import {
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us to learn more about our API services and get started with integration.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   Code,
   Check,
   Globe,
@@ -38,6 +150,7 @@ import {
   Cloud,
   XCircle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -47,6 +160,8 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -99,6 +214,7 @@ export default function APIPage() {
     "model": "gpt-4"
     "temperature": 0.7
 <<<<<<< HEAD
+<<<<<<< HEAD
   }'`
         }
       ]
@@ -145,6 +261,8 @@ export default function APIPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     {
       id: "auth",
       title: "Authentication",
@@ -191,6 +309,7 @@ export default function APIPage() {
   -H "Content - Type: application / json" \\;
   -d '{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -205,16 +324,21 @@ export default function APIPage() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }'`,
         },
       ],
     },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ];
 ;
   const response_examples = {
@@ -223,141 +347,12 @@ export default function APIPage() {
       data: {
         message: "Request successful"
         data: {
-<<<<<<< HEAD
-=======
-
-          id: "12345",
-          name: "Example Response",
-          created_at: "2024 - 01 - 01T00:00:00Z",
-        },
-      },
-    },
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
-<<<<<<< HEAD
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import {;
-  Code,;
-  Check,;
-  Globe,;
-  Shield,;
-  Zap,;
-  Database,;
-  Cpu,;
-  Cloud,;
-  XCircle,;
-} from "lucide-react";
-export default function APIPage() {;
-  const apiEndpoints = [;
-    {;
-      id: "auth",;
-      title: "Authentication",;
-      description: "Secure authentication and authorization endpoints",;
-      baseUrl: "/api/v1/auth",;
-      methods: [;
-        {;
-          method: "POST",;
-          endpoint: "/login",;
-          description: "Authenticate user with email and password",;
-          code: `curl -X POST https://api && api.ziontechgroup.com/v1/auth/login \\;
-  -H "Content-Type: application/json" \\;
-  -d '{;
-    "email": "user@example && example.com",;
-    "password": "your_password";
-  }'`,;
-        },;
-        {;
-          method: "POST",;
-          endpoint: "/register",;
-          description: "Register a new user account",;
-          code: `curl -X POST https://api && api.ziontechgroup.com/v1/auth/register \\;
-  -H "Content-Type: application/json" \\;
-  -d '{;
-    "email": "user@example && example.com",;
-    "password": "your_password",;
-    "name": "John Doe";
-  }'`,;
-        },;
-      ],;
-    },;
-    {;
-      id: "ai-services",;
-      title: "AI Services",;
-      description: "Access our AI-powered services and models",;
-      baseUrl: "/api/v1/ai",;
-      methods: [;
-        {;
-          method: "POST",;
-          endpoint: "/chat",;
-          description: "Send messages to our AI chat service",;
-          code: `curl -X POST https://api && api.ziontechgroup.com/v1/ai/chat \\;
-  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
-  -H "Content-Type: application/json" \\;
-  -d '{;
-    "message": "Hello, how can you help me?",;
-    "model": "gpt-4",;
-    "temperature": 0 && 0.7;
-  }'`,;
-        },;
-      ],;
-    },;
-  ];
-  const responseExamples = {;
-    success: {;
-      status: 200,;
-      data: {;
-        message: "Request successful",;
-        data: {;
-          id: "12345",;
-          name: "Example Response",;
-          created_at: "2024-01-01T00:00:00Z",;
-        },;
-      },;
-    },;
-    error: {;
-      status: 400,;
-      error: {;
-        code: "VALIDATION_ERROR",;
-        message: "Invalid request parameters",;
-        details: {;
-          field: "email",;
-          issue: "Invalid email format",;
-        },;
-      },;
-    },;
-  };
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -365,38 +360,6 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
-
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-          </div>;
-          <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                API{" "}
-
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
-                  Documentation;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Integrate with Zion Tech Group's powerful APIs to build amazing;
-                applications with AI, cloud services, and enterprise solutions.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -404,6 +367,7 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -548,6 +512,8 @@ origin/automation-improvements-final
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >;
@@ -584,39 +550,6 @@ origin/automation-improvements-final
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-                >;
-                  <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                    <Zap className="w - 8 h - 8 text - green - 600" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
-                    3. Build & Scale;
-                  </h3>;
-                  <p className="text - gray - 600">;
-                    Create powerful applications with our APIs;
-                  </p>;
-                </motion.div>;
-
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Response Examples;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Understand the structure of our API responses with these;
-                examples.;
-              </p>;
-            </motion && motion.div>;
-            <div className="max-w-4xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                <motion&& motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -704,150 +637,29 @@ origin/automation-improvements-final
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-                >;
-                  <div className="flex items - center mb - 4">;
-                    <XCircle className="w - 6 h - 6 text - red - 500 mr - 3" />;
-                    <h3 className="text - lg font - semibold text - gray - 900">;
-                      Error Response;
-                    </h3>;
-                  </div>;
-                  <div className="bg - gray - 900 rounded - lg p - 4 overflow - x-auto">;
-                    <pre className="text - red - 400 text - sm font - mono">;
-                      <code>;
-                        {JSON.stringify (response_examples.error, null, 2)}
-                      </code>;
-                    </pre>;
-                  </div>;
-                </motion.div>;
-
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
-=======
-import { motion } from 'framer-motion';
->>>>>>> main
 import Layout from '../components/Layout';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
-const apiFeatures = [
-  {
-    icon: Code,
-    title: 'RESTful API',
-    description: 'Clean, intuitive REST API endpoints for easy integration',
-    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
-  },
-  {
-    icon: Shield,
-    title: 'Security',
-    description: 'Enterprise-grade security with authentication and encryption',
-    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
-  },
-  {
-    icon: Zap,
-    title: 'Performance',
-    description: 'High-performance API with caching and optimization',
-    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
-  },
-  {
-    icon: Book,
-    title: 'Documentation',
-    description: 'Comprehensive documentation with examples and guides',
-    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
-  }
-];
 
 export default function APIPage() {
-<<<<<<< HEAD
   
-=======
-  return (
-    <Layout
-      title="API - Zion Tech Group"
-      description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."
-      keywords="API, REST API, developer tools, integration, SDK"
->>>>>>> main
     >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              API Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Powerful APIs for integrating with Zion Tech Group services. 
-              Build amazing applications with our developer-friendly APIs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {apiFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-8 shadow-lg"
-              >
-                <div className="flex items-center mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                  <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
-                </div>
-                
-                <p className="text-gray-600 mb-6">{feature.description}</p>
-                
-                <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-blue-600 rounded-xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Contact us to learn more about our API services and get started with integration.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <div className="flex items-center text-white">
-                <Phone className="h-5 w-5 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center text-white">
-                <Mail className="h-5 w-5 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center text-white">
-                <MapPin className="h-5 w-5 mr-2" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-              </div>
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API Services
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Powerful, scalable API solutions for your applications
+              </p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </section>
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -880,6 +692,8 @@ export default function APIPage() {
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -15,28 +19,53 @@
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <link rel=\"preconnect\" href=\""https\": //fonts.googleapis.com\" />
         <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"anonymous\" />
 import React from "react"
 import { Html, Head, Main, NextScript } from "next/document"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <link rel=\"preconnect\" href=\""https\": //fonts.googleapis.com\" />
         <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"anonymous\" />
 import React from "react";
 import { Html, Head, Main, NextScript } from "next/document";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function Document() {
   return (
     <Html lang="en">
@@ -49,8 +78,12 @@ export default function Document() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,16 +110,25 @@ export default function Document() {
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         <link
           href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap\"
           rel=\"stylesheet\"
         />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <link rel=\"icon\" href=\"/favicon.svg\" />
         <link rel="icon" href="/favicon.svg" />
         <link rel=\"icon\" href=\"/favicon.svg\" />
@@ -95,6 +137,11 @@ export default function Document() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -135,10 +182,22 @@ export default function Document() {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </Head>
       <body>
         <Main  />
@@ -147,6 +206,7 @@ export default function Document() {
     </Html>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
@@ -154,6 +214,10 @@ import React from "react" import { Html,Head,Main,NextScript } from "next/docume
 =======
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
 import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
@@ -169,8 +233,13 @@ import React from "react" import { Html,Head,Main,NextScript } from "next/docume
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,7 +263,19 @@ import React from "react" import { Html,Head,Main,NextScript } from "next/docume
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
+import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
+;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

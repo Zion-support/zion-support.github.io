@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -13,20 +20,31 @@ class BuildErrorAutoFixer {}
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 900000; // 15 minutes;
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive": true })};
     }
 });
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.fixesApplied = 0;
     this.buildHistory = []};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runBuildCheck() {}
     try {}
@@ -43,8 +61,15 @@ class BuildErrorAutoFixer {}
     const errorLines = output.split('\n').filter(line => )
       line.includes('error') || line.includes('"Error": ') || line.includes('Failed') || line.includes('Build failed');
     );
+<<<<<<< HEAD
     const errors = [];
     let currentError = null;
+=======
+    
+    const errors = [];
+    let currentError = null;
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const line of errorLines) {}
       if (line.includes('error') || line.includes('Error:') || line.includes('Failed')) {}
         const match = line.match(/([^:]+):(\d+):(\d+)/);
@@ -79,6 +104,10 @@ class BuildErrorAutoFixer {}
       this.log('Auto-fix is disabled', 'INFO');
       return 0};
     let fixesApplied = 0;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const error of errors) {}
       try {}
         if (await this.fixSingleBuildError(error)) {}
@@ -89,6 +118,10 @@ class BuildErrorAutoFixer {}
     return fixesApplied};
   async fixSingleBuildError(error) {}
     const message = error.message.toLowerCase();
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix common build errors;
     if (message.includes('module not found') || message.includes('cannot find module')) {}
       return await this.fixModuleNotFoundError(error)};
@@ -103,6 +136,10 @@ class BuildErrorAutoFixer {}
     return false};
   async fixModuleNotFoundError(error) {}
     this.log('Attempting to fix module not found error...', 'INFO');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Try to install missing dependencies;
       const moduleMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
@@ -126,18 +163,33 @@ class BuildErrorAutoFixer {}
   };
   async fixSyntaxError(error) {}
     this.log('Attempting to fix syntax error...', 'INFO');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       if (error.file && error.file !== 'unknown') {}
         const content = fs.readFileSync(error.file, 'utf8');
         const lines = content.split('\n');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // Basic syntax fixes;
         const fixes = [this.fixMissingSemicolons.bind(this),]
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);
         ];
+<<<<<<< HEAD
         let originalContent = content;
         let modifiedContent = content;
+=======
+        
+        let originalContent = content;
+        let modifiedContent = content;
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         for (const fix of fixes) {}
           try {}
             const result = fix(lines, error);
@@ -157,10 +209,18 @@ class BuildErrorAutoFixer {}
   };
   async fixMemoryError(error) {}
     this.log('Attempting to fix memory error...', 'INFO');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Clean build artifacts;
       execSync('rm -rf .next out dist build', { "stdio": 'pipe' }
 });
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Increase Node.js memory limit for build;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (packageJson.scripts && packageJson.scripts.build) {}
@@ -174,6 +234,10 @@ class BuildErrorAutoFixer {}
   };
   async fixPermissionError(error) {}
     this.log('Attempting to fix permission error...', 'INFO');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Fix file permissions;
       execSync('chmod -R 755 .', { "stdio": 'pipe' }
@@ -187,13 +251,25 @@ class BuildErrorAutoFixer {}
   };
   async fixDependencyError(error) {}
     this.log('Attempting to fix dependency error...', 'INFO');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Try to fix peer dependency issues;
       execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' }
 });
+<<<<<<< HEAD
       // If that doesn't work, try to update dependencies;
       execSync('npm update', { "stdio": 'pipe' }
 });
+=======
+      
+      // If that doesn't work, try to update dependencies;
+      execSync('npm update', { "stdio": 'pipe' }
+});
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('Fixed dependency issues', 'INFO');
       return true} catch (fixError) {}
       this.log(`Failed to fix dependency "error": ${fixError.message}`, 'ERROR');
@@ -218,6 +294,10 @@ class BuildErrorAutoFixer {}
       const line = lines[lineIndex];
       const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (openBrackets > closeBrackets) {}
         const missingBrackets = openBrackets - closeBrackets;
         const closingBrackets = ')}]'.slice(0, missingBrackets);
@@ -235,6 +315,10 @@ class BuildErrorAutoFixer {}
       const line = lines[lineIndex];
       const singleQuotes = (line.match(/'/g) || []).length;
       const doubleQuotes = (line.match(/"/g) || []).length;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (singleQuotes % 2 !== 0) {}
         lines[lineIndex] = line + "'";
         return {}
@@ -266,18 +350,38 @@ class BuildErrorAutoFixer {}
     return { "modified": false, "content": lines.join('\n') }};
   async runAutoFix() {}
     this.log('Starting build error auto-fix...');
+<<<<<<< HEAD
     try {}
       // Get current build errors;
       const checkResult = await this.runBuildCheck();
+=======
+    
+    try {}
+      // Get current build errors;
+      const checkResult = await this.runBuildCheck();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (checkResult.success) {}
         this.log('No build errors found - no fixes needed', 'INFO');
         return};
       this.log(`Found ${checkResult.errors.length} build errors, attempting to fix...`, 'INFO');
+<<<<<<< HEAD
       // Apply fixes;
       const fixesApplied = await this.fixBuildErrors(checkResult.errors);
       this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
       // Run build check again to see if fixes worked;
       const postCheckResult = await this.runBuildCheck();
+=======
+      
+      // Apply fixes;
+      const fixesApplied = await this.fixBuildErrors(checkResult.errors);
+      
+      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
+      
+      // Run build check again to see if fixes worked;
+      const postCheckResult = await this.runBuildCheck();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       const report = {}
         "timestamp": new Date().toISOString(),
         "initialErrors": checkResult.errors.length,
@@ -285,9 +389,17 @@ class BuildErrorAutoFixer {}
         "remainingErrors": postCheckResult.errors.length,
         "success": postCheckResult.success;
       };
+<<<<<<< HEAD
       // Save report;
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+=======
+      
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Update build history;
       this.buildHistory.push(report);
       if (this.buildHistory.length > 50) {}
@@ -297,14 +409,25 @@ class BuildErrorAutoFixer {}
   };
   async startAutoFixer() {}
     this.log('Starting build error auto-fixer...');
+<<<<<<< HEAD
     // Run initial fix;
     await this.runAutoFix();
+=======
+    
+    // Run initial fix;
+    await this.runAutoFix();
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Set up periodic fixing;
     setInterval(async () => {}
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
   getStatus() {}
     return {}
@@ -317,21 +440,43 @@ class BuildErrorAutoFixer {}
 // Main execution;
 if (require.main === module) {}
   const fixer = new BuildErrorAutoFixer();
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = BuildErrorAutoFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = BuildErrorAutoFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = BuildErrorAutoFixer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

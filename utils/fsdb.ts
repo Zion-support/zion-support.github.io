@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -99,6 +100,36 @@ export function read_json < T>(file_path: string, default_value: T): T {
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
+<<<<<<< HEAD
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
+  }
+}
+  }
+}
+
+<<<<<<< HEAD
+  }
+}
+
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+
+  } catch (error) {
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -106,10 +137,29 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
       return JSON.parse(content);
     }
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     console.error("Error reading file:", error);
   }
   return defaultValue;
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+
+    }
+  } catch (error) {
+    console.error('Error reading file:', error);
+=======
+
+  await writeAllDisputes(all);
+  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 export function writeJson<T>(filePath: string, data: T): void {
   try {
@@ -119,9 +169,27 @@ export function writeJson<T>(filePath: string, data: T): void {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
     console.error("Error writing file:", error);
+=======
+<<<<<<< HEAD
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+=======
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   }
 }
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -12,6 +13,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 =======
 
@@ -55,7 +64,11 @@ class ErrorBoundary extends React.Component {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 import React from 'react';
 import Link from 'next/link';
@@ -321,12 +334,17 @@ export default function Services() {;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms.
 							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes.
 =======
 							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
 							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
+							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 							Explore our full capabilities at{' '}
 							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}
 							Check our latest additions in the{' '}
@@ -364,10 +382,14 @@ export default function Services() {;
 						</div>
 						<p className='mt-6 text-sm text-gray-500'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							Pricing based on market research from leading technology consultancies and enterprise software vendors.
 =======
 							Pricing based on market research from leading technology consultancies and enterprise software vendors. 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+							Pricing based on market research from leading technology consultancies and enterprise software vendors. 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 							For custom enterprise solutions and volume discounts, see our{' '}
 							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.
 						</p>
@@ -934,10 +956,14 @@ export default function Services() {;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							Cutting-edge AI solutions and automation tools that transform how businesses operate.
 =======
 							Cutting-edge AI solutions and automation tools that transform how businesses operate. 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+							Cutting-edge AI solutions and automation tools that transform how businesses operate. 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 							Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
 						</p>
 					</div>
@@ -1083,10 +1109,14 @@ export default function Services() {;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							Enterprise-grade IT solutions and infrastructure management services.
 =======
 							Enterprise-grade IT solutions and infrastructure management services. 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+							Enterprise-grade IT solutions and infrastructure management services. 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 							Professional implementation with 99.9% uptime guarantee.
 						</p>
 					</div>
@@ -1232,10 +1262,14 @@ export default function Services() {;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							Specialized software solutions designed to solve specific business challenges.
 =======
 							Specialized software solutions designed to solve specific business challenges. 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+							Specialized software solutions designed to solve specific business challenges. 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 							Ready-to-deploy tools with customizable features and integrations.
 						</p>
 					</div>
@@ -1429,10 +1463,14 @@ export default function Services() {;
 						</p>
 					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 					
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+					
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 					{/* Pricing Tiers */}
 					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
@@ -1538,10 +1576,14 @@ export default function Services() {;
 							</p>
 						</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 						
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+						
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 							<div className='text-center'>
 								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>
@@ -1601,6 +1643,7 @@ export default function Services() {;
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 <<<<<<< HEAD
+<<<<<<< HEAD
 								aria-label='Back to homepage'
 							>
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
@@ -1627,6 +1670,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
@@ -1637,6 +1682,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 				</div>;
 			</section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 		</PageTransition>;
 		</Layout>;
@@ -1673,4 +1724,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

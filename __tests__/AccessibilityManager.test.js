@@ -1,10 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -13,15 +22,27 @@
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
 import AccessibilityManager from '../components/AccessibilityManager';';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 describe('AccessibilityManager', () => {'}
   test('renders without crashing', () => {'}
     render(<AccessibilityManager />);,
@@ -82,7 +103,11 @@ describe('AccessibilityManager', () => {'
   test('applies correct styling', () => {'
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -111,5 +136,36 @@ describe('AccessibilityManager', () => {
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+describe('AccessibilityManager', () => {'}
+  test('renders without crashing', () => {'}
+    render(<AccessibilityManager />);,
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();';,
+  });,
+  test('displays correct content', () => {'}
+    render(<AccessibilityManager />);,
+  });,
+  test('handles user interactions', () => {'}
+    render(<AccessibilityManager />);,
+  });,
+  test('applies correct styling', () => {'}
+    render(<AccessibilityManager />);,
+  });
+import _React from 'react'
+'
+import '@testing-library/jest-dom';
+import AccessibilityManager from '../components/AccessibilityManager';
+describe('AccessibilityManager', () => {'
+  test('renders without crashing', () => {'
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
+  test('displays correct content', () => {'
+  test('handles user interactions', () => {'
+  test('applies correct styling', () => {'
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

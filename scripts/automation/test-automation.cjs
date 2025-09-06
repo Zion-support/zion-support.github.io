@@ -1,12 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 class $1 {}
   constructor() {}
   this.projectRoot = path.resolve(__dirname, "../../");
@@ -30,16 +37,28 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
+<<<<<<< HEAD
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
+=======
+
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+    
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -68,6 +87,10 @@ class $1 {}
       }
 });
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
         reject(error)})})};
 ;
@@ -85,6 +108,10 @@ class $1 {}
     try {}
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async runBuild() {}
   this.log("Building project for testing...");
     try {}
@@ -156,6 +183,10 @@ class $1 {}
   // Start a simple HTTP server to test the build;
       const httpServer = require("http-server");
       const serverPath = path.join(this.projectRoot, "dist");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Check if http-server is available;
       try {}
   await this.runCommand("npx http-server --version")} catch (error) {}
@@ -170,8 +201,15 @@ class $1 {}
           "cwd": this.projectRoot,
           "stdio": "pipe"};
       );
+<<<<<<< HEAD
       // Wait a bit for server to start;
       await new Promise(resolve => setTimeout(resolve, 3000));
+=======
+
+      // Wait a bit for server to start;
+      await new Promise(resolve => setTimeout(resolve, 3000));
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Test if server is responding;
       try {}
   const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)
@@ -205,6 +243,10 @@ serverProcess.kill();
   // Check if test script exists;
       const packageJson = JSON.parse(;)
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async runTests() {}
   this.log("Running tests...");
     try {}
@@ -212,6 +254,10 @@ serverProcess.kill();
       const packageJson = JSON.parse(;)
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (!packageJson.scripts.test) {}
   this.log("No test script found in package.json", "WARN");
         return {}
@@ -268,6 +314,10 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
         "arch": process.arch}};
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return report};
 ;
   async run() {}
@@ -279,9 +329,18 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
   "step": "install-dependencies",
       "success": depsResult,
       "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
   async run() {}
   this.log("Starting test automation...");
     const results = [];
+=======
+
+  async run() {}
+  this.log("Starting test automation...");
+
+    const results = [];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Install dependencies;
     const depsResult = await this.installDependencies();
     results.push({})
@@ -289,6 +348,10 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
       "success": depsResult,
       "timestamp": new Date().toISOString()}
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
         "ERROR";
@@ -350,7 +413,17 @@ if (require.main === module) {}
     process.exit(1)})};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = TestAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = TestAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = TestAutomation;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

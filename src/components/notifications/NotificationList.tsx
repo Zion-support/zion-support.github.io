@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -25,12 +26,34 @@ interface NotificationListProps {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Bell } from 'lucide-react';
@@ -52,6 +75,7 @@ interface NotificationListProps {
   onClearAll: () => void;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,
@@ -73,6 +97,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             className="mt-2"
             onClick={onRetry}
 =======
+=======
+export const NotificationList: React.FC<NotificationListProps> = ({
+  loading,
+  notifications,
+  onMarkAsRead,
+  onMarkAllAsRead,
+  onClearAll,
+}) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (loading) {
     return (
       <div className="space-y-3">
@@ -111,6 +144,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             size="sm"
             onClick={onMarkAllAsRead}
             disabled={notifications.every(n => n.read)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             Try Again
@@ -124,13 +158,67 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         </div>
 <<<<<<< HEAD
 =======
+=======
+          >
+            Mark all as read
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={onClearAll}
+          >
+            Clear all
+          </Button>
+        </div>
+      </div>
+      
+      <ScrollArea className="h-96">
+        <div className="space-y-2">
+          {notifications.map((notification) => (
+            <div
+              key={notification.id}
+              className={`p-3 rounded-lg border cursor-pointer transition-colors ${
+                notification.read
+                  ? 'bg-gray-50 border-gray-200'
+                  : 'bg-blue-50 border-blue-200'
+              }`}
+              onClick={() => onMarkAsRead(notification.id)}
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h4 className="text-sm font-medium text-gray-900">
+                    {notification.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {notification.message}
+                  </p>
+                  <p className="text-xs text-gray-500 mt-2">
+                    {new Date(notification.timestamp).toLocaleString()}
+                  </p>
+                </div>
+                <div className={`w-2 h-2 rounded-full ${
+                  notification.type === 'error' ? 'bg-red-500' :
+                  notification.type === 'warning' ? 'bg-yellow-500' :
+                  notification.type === 'success' ? 'bg-green-500' :
+                  'bg-blue-500'
+                }`} />
+              </div>
+            </div>
+          ))}
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </ScrollArea>
     </div>
   );
 };
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -333,6 +421,16 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>;
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -411,7 +509,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

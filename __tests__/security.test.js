@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -37,7 +43,11 @@ test && test.describe('"Security"
 
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { test, expect } = require('@playwright/test')';
 test.describe('"Security": Tests', () => {';
   test('"HTTPS": is enforced', async ({ page }) => {';
@@ -133,8 +143,11 @@ test.describe('"Security": Tests', () => {';
       expect(rel).toContain('noopener')}
   })})';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -142,7 +155,10 @@ test.describe('"Security": Tests', () => {';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 const { test,expect } = require('@playwright/test')';; test.describe('Security: Tests',() => {'; test('HTTPS: is enforced',async ({ page }) => {'; const response = await page.goto('/')';; const url = response.url(); expect(url).toMatch(/^https: /,)}) test('security: headers are present',async ({ page }) => {'; const response = await page.goto('/')';; const headers = response.headers(); expect(headers['x-frame-options']).toBeTruthy()';; expect(headers['x-content-type-options']).toBe('nosniff')';; expect(headers['x-xss-protection']).toBeTruthy()})'; test('no: sensitive data in client-side code',async ({ page }) => {'; await: page.goto('/')';; const content = await page.content(); const sensitivePatterns = [ /passwords*[:=]s*['"][^'"]+['"]/i,"; /api[_-]?keys*[:=]s*['"][^'"]+['"]/i,"; /secrets*[:=]s*['"][^'"]+['"]/i,"; /tokens*[:=]s*['"][^'"]+['"]/i"]; for: (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)} }) test('forms are protected against CSRF',async ({ page }) => {'; await: page.goto('/contact')';; const forms = page.locator('form')';; const count = await forms.count(); for: (let i = 0; i: < count; i++) { const form = forms.nth(i); const csrfToken = form.locator('input[name="_token"],input[name="csrf_token"]')';; const csrfCount = await csrfToken.count(); expect(csrfCount).toBeGreaterThan(0)} }) test('external links are safe',async ({ page }) => {'; await: page.goto('/')';; const externalLinks = page.locator('a[href^="http"]')';; const count = await externalLinks.count(); for: (let i = 0; i: < count; i++) { const link = externalLinks.nth(i); const href = await link.getAttribute('href')';; const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')}'})}) const url = response.url(); expect(url).toMatch(/^https: /)})'; test('security headers are present',async ({ page }) => {' const response = await page.goto('/'); const headers = response.headers(); ; expect(headers['x-frame-options']).toBeTruthy(); expect(headers['x-content-type-options']).toBe('nosniff'); expect(headers['x-xss-protection']).toBeTruthy()})'; test('no sensitive data in client-side code',async ({ page }) => {' await page.goto('/'); const content = await page.content(); const sensitivePatterns = [' /passwords*[:=]s*['"][^'"]+['"]/i," /api[_-]?keys*[:=]s*['"][^'"]+['"]/i," /secrets*[:=]s*['"][^'"]+['"]/i," /tokens*[:=]s*['"][^'"]+['"]/i ]; for (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)} }); " test('forms are protected against CSRF',async ({ page }) => {' await page.goto('/contact')'; const forms = page.locator('form'); const count = await forms.count(); for (let i = 0; i < count; i++) { const form = forms.nth(i); const csrfToken = form.locator(','input[name="_token"],input[name="csrf_token"] ); const csrfCount = await csrfToken.count(); expect(csrfCount).toBeGreaterThan(0)} })'; test('external links are safe',async ({ page }) => {' await page.goto('/')'; const externalLinks = page.locator('a[href^="http"]); const count = await externalLinks.count(); for (let i = 0; i < count; i++) { const link = externalLinks.nth(i); const href = await link.getAttribute('href')';; const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')} })})';
@@ -152,5 +168,19 @@ const { test,expect } = require('@playwright/test')';; test.describe('Security: 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const { test, expect } = require('@playwright/test')'
+test && test.describe('"Security"
+  test('"HTTPS"
+  test('"security"
+  test('"no"
+      /tokens*[:=]s*['"][^'"
+      /tokens*[:=]s*['"][^'";
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -8,18 +8,31 @@ export function securityMiddleware("request": NextRequest) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 export function securityMiddleware(request: NextRequest) {;
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 export function securityMiddleware("request": NextRequest) {;
   const response = NextResponse && NextResponse.next();
   // Apply security headers;
+<<<<<<< HEAD
+  securityHeaders.forEach(({ key, value }) => {;
+    response.headers.set(key, value)});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
   securityHeaders && securityHeaders.forEach(({ key, value }) => {;
     response && response.headers.set(key, value)});
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Apply Content Security Policy;
   const cspString = Object.entries(contentSecurityPolicy.directives);
     .map(([key, values]) => `${key} ${values.join(" ")}`);
@@ -31,11 +44,17 @@ export function securityMiddleware("request": NextRequest) {;
   response.headers.set("X-RateLimit-Reset", new Date(Date.now() + 3600000).toISOString());
   return response}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export const config = {;
   "matcher": [;
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
@@ -54,6 +73,7 @@ export function securityMiddleware(request: NextRequest) {const response = NextR
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 export function securityMiddleware(request: NextRequest) {const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 <<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 export const config = {;
   "matcher": [;
 <<<<<<< HEAD
@@ -123,5 +143,12 @@ export function securityMiddleware(request: NextRequest) {; const response = Nex
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

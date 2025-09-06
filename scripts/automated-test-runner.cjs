@@ -13,7 +13,10 @@
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -24,8 +27,16 @@
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/automated-test-runner.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("child_process")
@@ -38,7 +49,10 @@ const path = require("path")
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -128,8 +142,16 @@ testRunner.runTests().catch(error => {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/automated-test-runner.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       "timestamp"
       summary: {total: 0,"passed": 0,"failed"}
 // console.log("🧪 Starting Automated Test Suite...")
@@ -175,8 +197,11 @@ testRunner.runTests().catch(error => {
 =======
     console.log(`\n� Detailed report saved "to"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
   console.error("Fatal "error": ")
 =======
@@ -190,5 +215,14 @@ testRunner.runTests().catch(error => {
   console.error("Fatal "error": ")
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/automated-test-runner.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -34,12 +40,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function PlatformEngineering() {; return (; <Article; title=\"Platform Engineering\"; subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\"; price=\"from $18k/project\"; bullets={[; \'Backstage or Internal Developer Portal setup with scorecards\',; \'Paved road templates for services,infra,and CI/CD\',; \'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',; \'Developer experience \"metrics\": \'DORA\',lead time,MTTR\'; ]} /> );} ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return (; <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: ></div> );} ;
 import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -56,6 +72,16 @@ interface PlatformengineeringProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,7 +91,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function Platformengineering({ }: PlatformengineeringProps) {
   return (
     <div>
@@ -73,6 +103,7 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -87,6 +118,11 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
 =======
 >>>>>>> origin/main
@@ -123,5 +159,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

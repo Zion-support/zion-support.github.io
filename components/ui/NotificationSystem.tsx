@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 export interface Notification {
@@ -8,6 +9,8 @@ export interface Notification {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
@@ -176,12 +179,17 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 
 
 import React from 'react';
+=======
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+>>>>>>> main
 
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
-  title?: string;
+  title: string;
   message: string;
+  duration?: number;
 }
 <<<<<<< HEAD
 interface NotificationSystemProps {
@@ -202,9 +210,13 @@ export function useToast() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-export function NotificationProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([]),
+interface NotificationContextType {
+  notifications: Notification[];
+  addNotification: (notification: Omit<Notification, 'id'>) => void;
+  removeNotification: (id: string) => void;
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
     const id = Math.random().toString(36).slice(2),
@@ -230,7 +242,49 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+
+interface NotificationProviderProps {
+  children: ReactNode;
+}
+
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
+  const addNotification = (notification: Omit<Notification, 'id'>) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const newNotification = { ...notification, id };
+    
+    setNotifications(prev => [...prev, newNotification]);
+
+    if (notification.duration !== 0) {
+      setTimeout(() => {
+        removeNotification(id);
+      }, notification.duration || 5000);
+    }
+  };
+
+  const removeNotification = (id: string) => {
+    setNotifications(prev => prev.filter(notification => notification.id !== id));
+  };
+
+  return (
+    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
+      {children}
+      <NotificationContainer />
+    </NotificationContext.Provider>
+  );
+};
+
+const NotificationContainer: React.FC = () => {
+  const { notifications, removeNotification } = useNotifications();
+
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {notifications.map((notification) => (
+<<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <div
           key={notification.id}
@@ -259,11 +313,19 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             )}
           </div>
         </div>
+=======
+        <NotificationItem
+          key={notification.id}
+          notification={notification}
+          onRemove={removeNotification}
+        />
+>>>>>>> main
       ))}
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NotificationSystem;
 =======
               {notification.title && (
@@ -297,7 +359,29 @@ export default NotificationSystem;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
+=======
+const NotificationItem: React.FC<{
+  notification: Notification;
+  onRemove: (id: string) => void;
+}> = ({ notification, onRemove }) => {
+  const icons = {
+    success: CheckCircle,
+    error: AlertCircle,
+    warning: AlertTriangle,
+    info: Info,
+  };
 
+  const colors = {
+    success: 'bg-green-500',
+    error: 'bg-red-500',
+    warning: 'bg-yellow-500',
+    info: 'bg-blue-500',
+  };
+
+  const Icon = icons[notification.type];
+>>>>>>> main
+
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -351,26 +435,42 @@ function NotificationProvider() {
 if (return null) {
   $2
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
-    <div className="fixed top - 4 right - 4 z - 50 space - y-2">;
-      {notifications.map ((notification) => (
-        <div;
-          key={notification.id}
-          className={`max - w-sm w - full border rounded - lg p - 4 shadow - lg ${getNotificationStyles (notification.type)}`}
-        >;
-          <div className="flex items - start justify - between">;
-            <div className="flex - 1">;
-              {notification.title && (
-                <h4 className="font - medium mb - 1">{notification.title}</h4>)}
-              <p className="text - sm">{notification.message}</p>;
-            </div>;
+    <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
+      <div className="flex items-start">
+        <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />
+        <div className="flex-1">
+          <h4 className="font-semibold">{notification.title}</h4>
+          <p className="text-sm opacity-90">{notification.message}</p>
+        </div>
+        <button
+          onClick={() => onRemove(notification.id)}
+          className="ml-3 flex-shrink-0 hover:opacity-75"
+        >
+          <X className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
+};
 
-}
-
-
-
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+export const useNotifications = () => {
+  const context = useContext(NotificationContext);
+  if (context === undefined) {
+    throw new Error('useNotifications must be used within a NotificationProvider');
+  }
+  return context;
+};
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
