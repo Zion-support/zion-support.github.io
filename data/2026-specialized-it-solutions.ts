@@ -1,11 +1,92 @@
+<<<<<<< HEAD
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 };
 
+<<<<<<< HEAD
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
+    launchDate: '2024-05-25'
+    customers: 67
+    rating: 4.4
+    reviews: 33
+  }
+      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
+    launchDate: '2024-05-25',
+    customers: 67,
+    rating: 4.4,
+    reviews: 33,
+  },;
+];
+export const getSpecializedITSolutions2026ByCategory = (category: string) => {
+  return specializedITSolutions2026.filter(
+    solution => solution.category === category;
+  );
+}
+export const getPopularSpecializedITSolutions2026 = () => {
+};
+
+export const getPopularSpecializedITSolutions2026 = () => {;
+  return specializedITSolutions2026.filter(solution => solution.popular);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 ];
@@ -18,16 +99,27 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution && solution.price.replace('$', ''));
+=======
+  return specializedITSolutions2026.filter(solution => {;
+    const price = parseInt(solution.price.replace('$', ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 }
-
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -53,7 +145,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.8,
     reviews: 45
   };
-
   // Cybersecurity & Threat Intelligence
   {
     id: 'ai-cybersecurity-threat-intelligence', name: 'AI Cybersecurity Threat Intelligence Platform',
@@ -81,7 +172,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.7,
     reviews: 78
   };
-
   // Data Engineering & Analytics
   {
     id: 'ai-data-engineering-platform', name: 'AI Data Engineering Platform',
@@ -109,7 +199,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.6,
     reviews: 34
   };
-
   // API Management & Integration
   {
     id: 'ai-api-management-platform', name: 'AI API Management Platform',
@@ -137,7 +226,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.5,
     reviews: 22
   };
-
   // Network Monitoring & Management
   {
     id: 'ai-network-monitoring-suite', name: 'AI Network Monitoring Suite',
@@ -165,7 +253,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.4,
     reviews: 39
   };
-
   // Database Management & Optimization
   {
     id: 'ai-database-optimization-platform', name: 'AI Database Optimization Platform',
@@ -193,7 +280,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.3,
     reviews: 28
   };
-
   // IT Service Management
   {
     id: 'ai-itsm-platform', name: 'AI IT Service Management Platform',
@@ -221,7 +307,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.5,
     reviews: 45
   };
-
   // Backup & Disaster Recovery
   {
     id: 'ai-backup-disaster-recovery', name: 'AI Backup & Disaster Recovery Platform',
@@ -248,17 +333,18 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
     reviews: 33
+<<<<<<< HEAD
+    website: string;
+  }
+=======
   }
 ];
-
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(solution => solution.category === category)
 };
-
 export const getPopularSpecializedITSolutions2026 = () => {
   return specializedITSolutions2026.filter(solution => solution.popular)
 };
-
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution.price.replace('$', ''));
@@ -266,8 +352,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
 
   })
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
@@ -293,7 +377,77 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 =======
 
 export interface SpecializedITSolution2026 {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  })
+};
+<<<<<<< HEAD
+;
+export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
+  return specializedITSolutions2026.filter (
+    solution => solution.category === category);
+}
+
+export interface SpecializedITSolution2026 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+export const getPopularSpecializedITSolutions2026 = () =>: any {
+  return specializedITSolutions2026.filter (solution => solution.popular);
+}
+;
+export const getSpecializedITSolutions2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return specializedITSolutions2026.filter (solution => {
+    const price = parse_int (solution.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+
+export interface SpecializedITSolution2026 {;
 
 };
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

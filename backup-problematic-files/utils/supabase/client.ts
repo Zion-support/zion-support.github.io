@@ -4,5 +4,4 @@ const supabaseUrl =
 const supabaseAnonKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key",
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+export const supabase = createClient(supabaseUrl, supabaseAnonKey),;

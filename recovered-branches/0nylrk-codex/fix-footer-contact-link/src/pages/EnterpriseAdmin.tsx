@@ -8,6 +8,7 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
+<<<<<<< HEAD
 
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
@@ -31,6 +32,16 @@ export default function EnterpriseAdmin() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+}
+  }
+  return (
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -45,6 +56,7 @@ export default /**
 function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
+<<<<<<< HEAD
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 ;
@@ -67,4 +79,20 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ export default function EnterpriseAdmin () {
+  const {
+  user 
+}= useAuth ();
+//Check if user has enterprise admin role 
+}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>) 
+}
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

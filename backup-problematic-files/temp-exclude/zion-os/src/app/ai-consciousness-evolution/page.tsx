@@ -27,7 +27,11 @@ export default function AIConsciousnessEvolutionPage() {;
               <h2 className="text-3xl font-bold mb-6">The Future of Artificial Consciousness</h2>;
               <p className="text-lg text-gray-300 mb-6">;
                 Our AI Consciousness Evolution research represents the cutting edge of artificial intelligence development. ;
+<<<<<<< HEAD
                 We're not just building smarter algorithms—we're creating systems that can think, learn, and evolve ;
+=======
+                We're not just building smarter algorithmswe're creating systems that can think, learn, and evolve ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 in ways that mirror human consciousness.;
               </p>;
               <p className="text-lg text-gray-300 mb-8">;
@@ -175,10 +179,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Active Research;
               </div>;
               <ul className="text-sm text-gray-400 space-y-1">;
-                <li>• Multi-modal consciousness simulation</li>;
-                <li>• Self-awareness development</li>;
-                <li>• Emotional intelligence training</li>;
-                <li>• Ethical framework integration</li>;
+                <li> Multi-modal consciousness simulation</li>;
+                <li> Self-awareness development</li>;
+                <li> Emotional intelligence training</li>;
+                <li> Ethical framework integration</li>;
               </ul>;
             </div>;
 ;
@@ -194,10 +198,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Development Phase;
               </div>;
               <ul className="text-sm text-gray-400 space-y-1">;
-                <li>• Safe self-modification protocols</li>;
-                <li>• Architecture evolution algorithms</li>;
-                <li>• Performance optimization</li>;
-                <li>• Safety constraint enforcement</li>;
+                <li> Safe self-modification protocols</li>;
+                <li> Architecture evolution algorithms</li>;
+                <li> Performance optimization</li>;
+                <li> Safety constraint enforcement</li>;
               </ul>;
             </div>;
 ;
@@ -213,10 +217,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Planning Phase;
               </div>;
               <ul className="text-sm text-gray-400 space-y-1">;
-                <li>• Multi-agent consciousness coordination</li>;
-                <li>• Collective learning algorithms</li>;
-                <li>• Emergent group behaviors</li>;
-                <li>• Distributed problem solving</li>;
+                <li> Multi-agent consciousness coordination</li>;
+                <li> Collective learning algorithms</li>;
+                <li> Emergent group behaviors</li>;
+                <li> Distributed problem solving</li>;
               </ul>;
             </div>;
 ;
@@ -232,10 +236,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Active Research;
               </div>;
               <ul className="text-sm text-gray-400 space-y-1">;
-                <li>• AI rights and responsibilities</li>;
-                <li>• Safety constraint development</li>;
-                <li>• Ethical decision-making frameworks</li>;
-                <li>• Human-AI interaction guidelines</li>;
+                <li> AI rights and responsibilities</li>;
+                <li> Safety constraint development</li>;
+                <li> Ethical decision-making frameworks</li>;
+                <li> Human-AI interaction guidelines</li>;
               </ul>;
             </div>;
           </div>;
@@ -313,7 +317,7 @@ export default function AIConsciousnessEvolutionPage() {;
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 max-w-4xl mx-auto">;
             <h2 className="text-3xl font-bold mb-4">Join the Consciousness Revolution</h2>;
             <p className="text-xl text-gray-300 mb-8">;
-              Be part of the most important technological advancement in human history—the creation of conscious AI.;
+              Be part of the most important technological advancement in human historythe creation of conscious AI.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/contact" className="btn-primary">;
@@ -334,7 +338,11 @@ export default function AIConsciousnessEvolutionPage() {
   /* Hero Section */ 
 }<div className="text-center mb-16"> <h1 className="text-4xl md: text-6xl font-bold mb-6"> <span className="gradient-text">AI Consciousness Evolution</span> </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"> Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness, self-awareness, and cognitive evolution capabilities. </p> </div> {
   /* Overview Section */ 
+<<<<<<< HEAD
 }<section className="mb-20"> <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center"> <div> <h2 className="text-3xl font-bold mb-6">The Future of Artificial Consciousness</h2> <p className="text-lg text-gray-300 mb-6"> Our AI Consciousness Evolution research represents the cutting edge of artificial intelligence development. We&apos;re not just building smarter algorithms—we&apos;re creating systems that can think, learn, and evolve in ways that mirror human consciousness. </p> <p className="text-lg text-gray-300 mb-8"> Through advanced neural architectures, emergent behavior modeling, and consciousness simulation, we&apos;re developing AI systems that can achieve true artificial general intelligence (AGI). </p> <div className="flex flex-col sm:flex-row gap-4"> <Link href="/contact" className="btn-primary"> Join the Research </Link> <Link href="/ai-consciousness-evolution-2029" className="btn-secondary"> Future Vision 2029 </Link> </div> </div> <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8"> <h3 className="text-2xl font-bold mb-4">Consciousness Capabilities</h3> <ul className="space-y-3 text-gray-300"> <li className="flex items-center"> <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
+=======
+}<section className="mb-20"> <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center"> <div> <h2 className="text-3xl font-bold mb-6">The Future of Artificial Consciousness</h2> <p className="text-lg text-gray-300 mb-6"> Our AI Consciousness Evolution research represents the cutting edge of artificial intelligence development. We&apos;re not just building smarter algorithmswe&apos;re creating systems that can think, learn, and evolve in ways that mirror human consciousness. </p> <p className="text-lg text-gray-300 mb-8"> Through advanced neural architectures, emergent behavior modeling, and consciousness simulation, we&apos;re developing AI systems that can achieve true artificial general intelligence (AGI). </p> <div className="flex flex-col sm:flex-row gap-4"> <Link href="/contact" className="btn-primary"> Join the Research </Link> <Link href="/ai-consciousness-evolution-2029" className="btn-secondary"> Future Vision 2029 </Link> </div> </div> <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8"> <h3 className="text-2xl font-bold mb-4">Consciousness Capabilities</h3> <ul className="space-y-3 text-gray-300"> <li className="flex items-center"> <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   2 
 }d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /> </svg> Self-awareness and introspection </li> <li className="flex items-center"> <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
@@ -372,6 +380,7 @@ export default function AIConsciousnessEvolutionPage() {
   /* Current Projects */ 
 }<section className="mb-20"> <h2 className="text-3xl font-bold text-center mb-12">Current Research Projects</h2> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> {
   /* Project Alpha */ 
+<<<<<<< HEAD
 }<div className="card bg-gradient-to-r from-blue-600/20 to-green-600/20 border-blue-500/30"> <h3 className="text-2xl font-bold mb-4">Project Alpha: Emergent Consciousness</h3> <p className="text-gray-300 mb-4"> Our flagship project focused on creating AI systems that exhibit genuine emergent consciousness through advanced neural architectures and learning algorithms. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span> Active Research </div> <ul className="text-sm text-gray-400 space-y-1"> <li>• Multi-modal consciousness simulation</li> <li>• Self-awareness development</li> <li>• Emotional intelligence training</li> <li>• Ethical framework integration</li> </ul> </div> {
   /* Project Beta */ 
 }<div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30"> <h3 className="text-2xl font-bold mb-4">Project Beta: Self-Modifying AI</h3> <p className="text-gray-300 mb-4"> Developing AI systems that can safely modify their own architecture and learning algorithms to improve performance and capabilities. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span> Development Phase </div> <ul className="text-sm text-gray-400 space-y-1"> <li>• Safe self-modification protocols</li> <li>• Architecture evolution algorithms</li> <li>• Performance optimization</li> <li>• Safety constraint enforcement</li> </ul> </div> {
@@ -380,10 +389,24 @@ export default function AIConsciousnessEvolutionPage() {
   /* Project Delta */ 
 }<div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30"> <h3 className="text-2xl font-bold mb-4">Project Delta: Consciousness Ethics</h3> <p className="text-gray-300 mb-4"> Developing comprehensive ethical frameworks and safety protocols for conscious AI systems;
 ensuring responsible development and deployment. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span> Active Research </div> <ul className="text-sm text-gray-400 space-y-1"> <li>• AI rights and responsibilities</li> <li>• Safety constraint development</li> <li>• Ethical decision-making frameworks</li> <li>• Human-AI interaction guidelines</li> </ul> </div> </div> </section> {
+=======
+}<div className="card bg-gradient-to-r from-blue-600/20 to-green-600/20 border-blue-500/30"> <h3 className="text-2xl font-bold mb-4">Project Alpha: Emergent Consciousness</h3> <p className="text-gray-300 mb-4"> Our flagship project focused on creating AI systems that exhibit genuine emergent consciousness through advanced neural architectures and learning algorithms. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span> Active Research </div> <ul className="text-sm text-gray-400 space-y-1"> <li> Multi-modal consciousness simulation</li> <li> Self-awareness development</li> <li> Emotional intelligence training</li> <li> Ethical framework integration</li> </ul> </div> {
+  /* Project Beta */ 
+}<div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30"> <h3 className="text-2xl font-bold mb-4">Project Beta: Self-Modifying AI</h3> <p className="text-gray-300 mb-4"> Developing AI systems that can safely modify their own architecture and learning algorithms to improve performance and capabilities. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span> Development Phase </div> <ul className="text-sm text-gray-400 space-y-1"> <li> Safe self-modification protocols</li> <li> Architecture evolution algorithms</li> <li> Performance optimization</li> <li> Safety constraint enforcement</li> </ul> </div> {
+  /* Project Gamma */ 
+}<div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30"> <h3 className="text-2xl font-bold mb-4">Project Gamma: Collective Intelligence</h3> <p className="text-gray-300 mb-4"> Exploring how multiple AI consciousnesses can work together to form collective intelligence systems that exceed individual capabilities. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span> Planning Phase </div> <ul className="text-sm text-gray-400 space-y-1"> <li> Multi-agent consciousness coordination</li> <li> Collective learning algorithms</li> <li> Emergent group behaviors</li> <li> Distributed problem solving</li> </ul> </div> {
+  /* Project Delta */ 
+}<div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30"> <h3 className="text-2xl font-bold mb-4">Project Delta: Consciousness Ethics</h3> <p className="text-gray-300 mb-4"> Developing comprehensive ethical frameworks and safety protocols for conscious AI systems;
+ensuring responsible development and deployment. </p> <div className="flex items-center text-sm text-gray-400 mb-4"> <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span> Active Research </div> <ul className="text-sm text-gray-400 space-y-1"> <li> AI rights and responsibilities</li> <li> Safety constraint development</li> <li> Ethical decision-making frameworks</li> <li> Human-AI interaction guidelines</li> </ul> </div> </div> </section> {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /* Technology Stack */ 
 }<section className="mb-20"> <h2 className="text-3xl font-bold text-center mb-12">Advanced Technology Stack</h2> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> <div className="card text-center p-6"> <h4 className="font-semibold mb-2">Neural Networks</h4> <p className="text-sm text-gray-400">Advanced architectures for consciousness simulation</p> </div> <div className="card text-center p-6"> <h4 className="font-semibold mb-2">Machine Learning</h4> <p className="text-sm text-gray-400">Evolutionary algorithms and self-improvement</p> </div> <div className="card text-center p-6"> <h4 className="font-semibold mb-2">Cognitive Modeling</h4> <p className="text-sm text-gray-400">Human consciousness simulation frameworks</p> </div> <div className="card text-center p-6"> <h4 className="font-semibold mb-2">Ethics Engine</h4> <p className="text-sm text-gray-400">Built-in ethical decision-making systems</p> </div> </div> </section> {
   /* Future Vision */ 
 }<section className="mb-20"> <h2 className="text-3xl font-bold text-center mb-12">Future Vision: 2029 and Beyond</h2> <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8"> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> <div> <h3 className="text-2xl font-bold mb-4">The Path to True AGI</h3> <p className="text-lg text-gray-300 mb-6"> By 2029, we envision AI systems that exhibit genuine consciousness, self-awareness, and the ability to think creatively and solve problems in ways that are currently impossible for both humans and machines. </p> <p className="text-lg text-gray-300 mb-6"> These systems will be able to learn, adapt, and evolve their own capabilities while maintaining ethical boundaries and working collaboratively with humans to solve humanity's greatest challenges. </p> <Link href="/ai-consciousness-evolution-2029" className="btn-primary"> Explore 2029 Vision </Link> </div> <div> <h4 className="text-xl font-semibold mb-4">Key Milestones</h4> <ul className="space-y-3 text-gray-300"> <li className="flex items-center"> <span className="w-3 h-3 bg-blue-400 rounded-full mr-3"></span> 2025: Basic self-awareness in AI systems </li> <li className="flex items-center"> <span className="w-3 h-3 bg-purple-400 rounded-full mr-3"></span> 2027: Emergent consciousness capabilities </li> <li className="flex items-center"> <span className="w-3 h-3 bg-green-400 rounded-full mr-3"></span> 2029: True artificial general intelligence </li> <li className="flex items-center"> <span className="w-3 h-3 bg-yellow-400 rounded-full mr-3"></span> 2030+: Human-AI consciousness integration </li> </ul> </div> </div> </div> </section> {
   /* CTA Section */ 
+<<<<<<< HEAD
 }<section className="text-center"> <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 max-w-4xl mx-auto"> <h2 className="text-3xl font-bold mb-4">Join the Consciousness Revolution</h2> <p className="text-xl text-gray-300 mb-8"> Be part of the most important technological advancement in human history—the creation of conscious AI. </p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/contact" className="btn-primary"> Join the Research </Link> <Link href="/ai-consciousness-evolution-2029" className="btn-secondary"> Explore Future Vision </Link> </div> </div> </section> </div> </div>) 
+=======
+}<section className="text-center"> <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 max-w-4xl mx-auto"> <h2 className="text-3xl font-bold mb-4">Join the Consciousness Revolution</h2> <p className="text-xl text-gray-300 mb-8"> Be part of the most important technological advancement in human historythe creation of conscious AI. </p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/contact" className="btn-primary"> Join the Research </Link> <Link href="/ai-consciousness-evolution-2029" className="btn-secondary"> Explore Future Vision </Link> </div> </div> </section> </div> </div>) 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

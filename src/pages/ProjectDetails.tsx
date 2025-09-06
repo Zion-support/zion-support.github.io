@@ -389,7 +389,7 @@ function ProjectDetailsContent() {
                   <div className='flex items - start gap - 4'>;
                     <Avatar className='h - 10 w - 10'>;
                       {project.talent_profile?.profile_picture_url ? (
-                        <img;
+                        <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
@@ -399,7 +399,7 @@ function ProjectDetailsContent() {
 
 
                       ) : (
-                        <User className='h-6 w-6' />
+                        <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
@@ -441,8 +441,8 @@ function ProjectDetailsContent() {
                         {project && project.talent_profile?.professional_title ||;
 
                           'Professional'}
-                      </p>;
-                      {isClient && (;
+                      </p>
+                      {isClient && (
                         <Button
                           variant='outline'
                           size='sm'
@@ -489,7 +489,7 @@ function ProjectDetailsContent() {
                     <Avatar className="h-10 w-10">
 
                       {project.talent_profile?.profile_picture_url ? (
-                        <img;
+                        <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
@@ -499,7 +499,7 @@ function ProjectDetailsContent() {
 
 
                       ) : (
-                        <User className='h-6 w-6' />
+                        <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
@@ -1042,9 +1042,9 @@ function ProjectDetailsContent() {
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className='space-y-2'>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-sm font-medium'>Current Status:</span>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
 
@@ -1267,7 +1267,7 @@ function ProjectDetailsContent() {
     </>);
 
 }
-setIsSubmittingNote (true);
+setIsSubmittingNote (true)
 try {
 
   // Check condition

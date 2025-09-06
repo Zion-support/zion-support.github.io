@@ -29,7 +29,7 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean;
   }
->(({ class_name, inset, children, ...props }, ref) => (
+>(({ className, inset, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
 
@@ -148,7 +148,7 @@ const DropdownMenuItem = React.forward_ref<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
   }
->(({ class_name, inset, ...props }, ref) => (
+>(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
     ref={ref}
 
@@ -200,12 +200,12 @@ className={cn (
       class_name)}
     checked={checked}
     {...props}
-  >;
-    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
-      <DropdownMenuPrimitive.ItemIndicator>;
-        <Check className=&quot;h - 4 w - 4&quot; />;
-      </DropdownMenuPrimitive.ItemIndicator>;
-    </span>;
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <DropdownMenuPrimitive.ItemIndicator>
+        <Check className="h-4 w-4" />
+      </DropdownMenuPrimitive.ItemIndicator>
+    </span>
     {children}
 
 
@@ -237,12 +237,12 @@ className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
     {...props}
-  >;
-    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
-      <DropdownMenuPrimitive.ItemIndicator>;
-        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
-      </DropdownMenuPrimitive.ItemIndicator>;
-    </span>;
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <DropdownMenuPrimitive.ItemIndicator>
+        <Circle className="h-2 w-2 fill-current" />
+      </DropdownMenuPrimitive.ItemIndicator>
+    </span>
     {children}
 
   </DropdownMenuPrimitive.RadioItem>));
@@ -257,7 +257,7 @@ const DropdownMenuLabel = React.forward_ref<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
   }
->(({ class_name, inset, ...props }, ref) => (
+>(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Label;
     ref={ref}
 
@@ -317,7 +317,8 @@ const DropdownMenuShortcut = ({
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
 
       {...props}
-    />);
+    />;
+  );
 }
 
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;

@@ -10,7 +10,7 @@ export const CreateResumeForm = ({
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
+    if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -27,11 +27,11 @@ export const CreateResumeForm = ({
 
             <input
               type='text'
-              placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
+              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
               className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
               value={newResumeTitle}
-              onChange={e => setNewResumeTitle(e && e.target.value)}
-            />;
+              onChange={e => setNewResumeTitle(e.target.value)}
+            />
             <Button
               onClick={handleSubmit}
 
@@ -52,7 +52,7 @@ export const CreateResumeForm = ({
 
 
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
+    if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -85,7 +85,7 @@ export const CreateResumeForm = ({
           <div className="flex gap-2 max-w-md mx-auto">;
             <input
               type="text"
-              placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
+              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               value={newResumeTitle}
 
@@ -94,7 +94,7 @@ export const CreateResumeForm = ({
 
           <Button
             variant="ghost"
-            onClick = {onCancel,}
+            onClick={onCancel}
             className="mt-4"
           >
 

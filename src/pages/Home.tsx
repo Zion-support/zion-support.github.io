@@ -26,114 +26,83 @@ const FeatureCard = ({ title, description }: { title: string; description: strin
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="py-20 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Leading provider of AI-powered micro SaaS solutions, intelligent automation, 
-          and cutting-edge IT services that transform businesses and drive exponential growth.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            to="/services" 
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
-          >
-            Explore Services
-          </Link>
-          <a 
-            href="https://ziontechgroup.com" 
-            className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
-          >
-            Visit Main Site
-          </a>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card
-            title="Micro SaaS"
-            href="/services"
-            description="End-to-end product engineering with billing, auth, analytics and growth."
-            icon="🚀"
-          />
-          <Card 
-            title="AI Services" 
-            href="/services" 
-            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
-            icon="🤖" 
-          />
-          <Card 
-            title="IT Services" 
-            href="/services" 
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
-            icon="⚙️" 
-          />
-          <Card
-            title="Business Automation"
-            href="/services"
-            description="Intelligent automation tools that streamline operations and boost productivity by 300%."
-            icon="⚡"
-          />
-          <Card
-            title="AI Copilots"
-            href="/services"
-            description="Intelligent assistants that enhance productivity and automate complex tasks."
-            icon="🧠"
-          />
-          <Card
-            title="Data Analytics"
-            href="/services"
-            description="Advanced analytics and BI solutions that transform data into actionable insights."
-            icon="📊"
-          />
-          <Card
-            title="AI-Powered CRM"
-            href="/services"
-            description="Revolutionary CRM with AI automation that boosts sales by 300% and predicts customer behavior."
-            icon="🎯"
-          />
-          <Card
-            title="AI Content Optimizer"
-            href="/services"
-            description="AI-powered content creation that increases engagement by 400% and automates SEO optimization."
-            icon="✍️"
-          />
-          <Card
-            title="Cybersecurity Suite"
-            href="/services"
-            description="Enterprise-grade security solutions with 24/7 monitoring and threat detection."
-            icon="🔒"
-          />
-        </div>
-      </section>
-
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We combine technical expertise with business acumen to deliver solutions that drive real results.
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-6xl font-extrabold mb-4">
+            Zion Tech Group
+          </h1>
+          <p className="text-2xl text-gray-300 mb-8">
+            Leading AI & Technology Solutions for a Smarter Future
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="primary" size="large">
+              Explore Our Services
+            </Button>
+            <Button variant="secondary" size="large">
+              Get Started
+            </Button>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <FeatureCard 
-            title="Fast Delivery" 
-            description="Rapid prototyping and deployment with modern tools and practices." 
-          />
-          <FeatureCard 
-            title="Scalable Architecture" 
-            description="Built for growth with cloud-native, microservices architecture." 
-          />
-          <FeatureCard 
-            title="24/7 Support" 
-            description="Round-the-clock monitoring and support for your critical systems." 
-          />
-          <FeatureCard 
-            title="Cost Effective" 
-            description="Optimized solutions that reduce operational costs and improve efficiency." 
-          />
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ServiceCard
+              title="AI Services"
+              description="Transform your business with cutting-edge AI solutions."
+              icon="✨"
+            />
+            <ServiceCard
+              title="Cybersecurity"
+              description="Protect your digital assets with advanced security solutions."
+              icon="🔒"
+            />
+            <ServiceCard
+              title="Cloud Infrastructure"
+              description="Scale your operations with robust cloud solutions."
+              icon="☁️"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card title="Innovation" description="Pioneering the next generation of technology." />
+            <Card title="Expertise" description="Team of industry-leading professionals." />
+            <Card title="Reliability" description="Trusted solutions for critical operations." />
+            <Card title="Scalability" description="Solutions designed to grow with you." />
+            <Card title="Security" description="Robust protection for all your data." />
+            <Card title="Support" description="24/7 dedicated customer assistance." />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8">Let's discuss how we can help you achieve your goals.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact">
+              <Button variant="secondary" size="large">
+                Contact Us
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button variant="primary" size="large">
+                View Services
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

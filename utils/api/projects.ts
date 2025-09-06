@@ -1,5 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+<<<<<<< HEAD
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+export interface Milestone {;
 
 
+=======
+  Project,
+  Milestone,
+  MilestoneStatus,
+<<<<<<< HEAD
+  isMilestoneStatus,;
+=======
+  isMilestoneStatus
+>>>>>>> main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -44,8 +67,11 @@ export interface Project {
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface Milestone {
   id: string;
   title: string;
@@ -57,16 +83,20 @@ export interface Milestone {
   created_at: string;
   updated_at: string;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return projects.find(p => p.id === id) |null;
 
-=======
   return projects && projects.find(p => p && p.id === id) || null,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function getAllProjects(): Project[] {
 =======
-
 
 export function getProjectById(id: string): Project | null {;
   return projects.find(p => p.id === id) || null;
@@ -79,10 +109,13 @@ export function getAllProjects(): Project[] {;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+<<<<<<< HEAD
+=======
 
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -90,8 +123,11 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -102,8 +138,11 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
@@ -120,13 +159,20 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
+<<<<<<< HEAD
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+=======
 
     updatedAt: new Date().toISOString();
 
@@ -140,6 +186,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
@@ -147,7 +194,10 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project && project.milestones.push(newMilestone);
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return newMilestone;
 }
 
@@ -162,14 +212,20 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
   if (!milestone) return null,
   
   Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return milestone;
 }
 
@@ -184,13 +240,18 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
 
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
   
   project && project.milestones.splice(index, 1);
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
+=======
 
 =======
   projectMembers.push(member);
@@ -364,6 +425,7 @@ export function getProjectTimeline(projectId: string): Array<{
 }
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Mock storage;
 const projects: Project[] = [];
 ;
@@ -428,6 +490,8 @@ if (return false) {
 ;
   return true;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -437,3 +501,4 @@ if (return false) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

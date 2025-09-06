@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ModernLayoutdynamic from '../components/ModernLayout.dynamic';
+describe('ModernLayoutdynamic', () => {
+  test('renders without crashing', () => {
+    render(<ModernLayoutdynamic />);
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<ModernLayoutdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<ModernLayoutdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<ModernLayoutdynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ModernLayoutdynamic from "./components/ModernLayout.dynamic"; describe("ModernLayoutdynamic",() => { test("renders without crashing",() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId("modernlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ModernLayoutdynamic />)}); test("handles user interactions",() => { render(<ModernLayoutdynamic />)}); test("applies correct styling",() => { render(<ModernLayoutdynamic />)})});''"
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ModernLayout from '../components/ModernLayout.dynamic';
+=======
 
 
 import React from 'react';
@@ -10,6 +37,8 @@ import React from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -24,6 +53,7 @@ describe('ModernLayoutdynamic'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
@@ -31,20 +61,9 @@ describe('ModernLayout', () => {
   });
 
   test('displays correct content', () => {
-    render(<ModernLayout />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-
-  test('handles user interactions', () => {
-    render(<ModernLayout />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
-    render(<ModernLayout />);
-    // Add styling tests here
-  });
 });
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 =======
 import { render, screen } from '@testing - library / react';
@@ -59,3 +78,12 @@ describe ('ModernLayout', () => {
     // Test content display;
 });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

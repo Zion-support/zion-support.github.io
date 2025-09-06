@@ -1,4 +1,24 @@
+<<<<<<< HEAD:backup-problematic-files/pages_disabled/accessibility.tsx
 import React from 'react';
+=======
+import * as React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+import {
+  Eye, 
+  Ear, 
+  Hand, 
+  Brain, 
+  CheckCircle, 
+  AlertTriangle,
+  Globe,
+  Users,
+  Award,
+  Target,
+  Heart,
+  FileText,
+  Settings
+} from 'lucide-react';
+>>>>>>> main:pages_disabled/accessibility.tsx
 
 interface AccessibilityProps {
   className?: string;
@@ -262,7 +282,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                 </h2>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-gray-600 mb-6">
-                    At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance – it's about creating inclusive digital experiences that empower all users.
+                    At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance  it's about creating inclusive digital experiences that empower all users.
                   </p>
                   <p className="text-gray-600 mb-6">
                     We continuously work to improve our products and services, incorporating feedback from users with disabilities and staying up-to-date with the latest accessibility standards and best practices.

@@ -19,7 +19,7 @@ const contactInfo = {;
 },;
 const serviceCategories = [;
   {;
-    title: '🧠 Revolutionary AI Services',;
+    title: ' Revolutionary AI Services',;
     icon: Brain,;
     services: [;
       { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', price: '$299/month' },;
@@ -29,7 +29,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⚛️ Quantum & Emerging Tech',;
+    title: ' Quantum & Emerging Tech',;
     icon: Atom,;
     services: [;
       { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' },;
@@ -39,7 +39,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🏙️ Enterprise IT Solutions',;
+    title: ' Enterprise IT Solutions',;
     icon: Cpu,;
     services: [;
       { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', price: '$399/month' },;
@@ -49,7 +49,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🛒 Business Automation',;
+    title: ' Business Automation',;
     icon: ShoppingCart,;
     services: [;
       { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', price: '$249/month' },;
@@ -316,7 +316,7 @@ export default function UltraFuturisticFooter2034() {
               
               <div className="flex items-center space-x-2 text-gray-400">
                 <Heart className="w-4 h-4 text-red-400" />
-                <span className="text-sm">Made with ❤️ for the future</span>
+                <span className="text-sm">Made with  for the future</span>
               </div>
             </div>
           </div>
@@ -334,7 +334,7 @@ export default function UltraFuturisticFooter2034() {
               </div>;
               <div className="flex items-center space-x-2 text-gray-400">;
                 <Heart className="w-4 h-4 text-red-400" />;
-                <span className="text-sm">Made with ❤️ for the future</span>;
+                <span className="text-sm">Made with  for the future</span>;
               </div>;
             </div>;
           </div>;

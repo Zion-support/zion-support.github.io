@@ -97,13 +97,13 @@ export default function SpaceTechPage() {;
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
-                <li>• High-speed satellite internet</li>;
-                <li>• Global connectivity solutions</li>;
-                <li>• Remote region communications</li>;
-                <li>• Emergency communications</li>;
+                <li> High-speed satellite internet</li>;
+                <li> Global connectivity solutions</li>;
+                <li> Remote region communications</li>;
+                <li> Emergency communications</li>;
               </ul>;
               <Link href="/space-tech/satellite-communications" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             ;
@@ -120,13 +120,13 @@ export default function SpaceTechPage() {;
                 data analytics for climate and resource management.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
-                <li>• High-resolution imaging</li>;
-                <li>• Environmental monitoring</li>;
-                <li>• Climate change tracking</li>;
-                <li>• Resource management</li>;
+                <li> High-resolution imaging</li>;
+                <li> Environmental monitoring</li>;
+                <li> Climate change tracking</li>;
+                <li> Resource management</li>;
               </ul>;
               <Link href="/space-tech/earth-observation" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             ;
@@ -143,13 +143,13 @@ export default function SpaceTechPage() {;
                 infrastructure for future space exploration missions.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
-                <li>• Space station development</li>;
-                <li>• Orbital platforms</li>;
-                <li>• Space habitats</li>;
-                <li>• Launch infrastructure</li>;
+                <li> Space station development</li>;
+                <li> Orbital platforms</li>;
+                <li> Space habitats</li>;
+                <li> Launch infrastructure</li>;
               </ul>;
               <Link href="/space-tech/space-infrastructure" className="text-purple-400 hover:text-purple-300 text-sm font-medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             ;
@@ -167,13 +167,13 @@ export default function SpaceTechPage() {;
                 location-based services for global applications.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
-                <li>• Satellite navigation</li>;
-                <li>• Precision positioning</li>;
-                <li>• Location services</li>;
-                <li>• Autonomous navigation</li>;
+                <li> Satellite navigation</li>;
+                <li> Precision positioning</li>;
+                <li> Location services</li>;
+                <li> Autonomous navigation</li>;
               </ul>;
               <Link href="/space-tech/navigation-systems" className="text-green-400 hover:text-green-300 text-sm font-medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             ;
@@ -190,13 +190,13 @@ export default function SpaceTechPage() {;
                 technology development for space exploration.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
-                <li>• Scientific platforms</li>;
-                <li>• Space experiments</li>;
-                <li>• Technology development</li>;
-                <li>• Research collaboration</li>;
+                <li> Scientific platforms</li>;
+                <li> Space experiments</li>;
+                <li> Technology development</li>;
+                <li> Research collaboration</li>;
               </ul>;
               <Link href="/space-tech/space-research" className="text-red-400 hover:text-red-300 text-sm font-medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             ;
@@ -213,13 +213,13 @@ export default function SpaceTechPage() {;
                 and space industry partnerships.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
-                <li>• Space strategy development</li>;
-                <li>• Regulatory compliance</li>;
-                <li>• Industry partnerships</li>;
-                <li>• Investment guidance</li>;
+                <li> Space strategy development</li>;
+                <li> Regulatory compliance</li>;
+                <li> Industry partnerships</li>;
+                <li> Investment guidance</li>;
               </ul>;
               <Link href="/space-tech/consulting" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;
@@ -533,6 +533,7 @@ export default function SpaceTechPage() {;
 }<div className="card group hover:bg-yellow-500/10 transition-colors"> <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30"> <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
 }d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3> <p className="text-gray-400 mb-4"> High-speed satellite internet, global connectivity solutions;
+<<<<<<< HEAD
 and communication infrastructure for remote regions. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li>• High-speed satellite internet</li> <li>• Global connectivity solutions</li> <li>• Remote region communications</li> <li>• Emergency communications</li> </ul> <Link href="/space-tech/satellite-communications" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"> Learn More → </Link> </div> {
   /* Earth Observation */ 
 }<div className="card group hover:bg-blue-500/10 transition-colors"> <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30"> <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
@@ -542,21 +543,44 @@ and communication infrastructure for remote regions. </p> <ul className="space-y
 }<div className="card group hover:bg-purple-500/10 transition-colors"> <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30"> <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
 }d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Space Infrastructure</h3> <p className="text-gray-400 mb-4"> Development of space stations, orbital platforms, and infrastructure for future space exploration missions. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li>• Space station development</li> <li>• Orbital platforms</li> <li>• Space habitats</li> <li>• Launch infrastructure</li> </ul> <Link href="/space-tech/space-infrastructure" className="text-purple-400 hover:text-purple-300 text-sm font-medium"> Learn More → </Link> </div> {
+=======
+and communication infrastructure for remote regions. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li> High-speed satellite internet</li> <li> Global connectivity solutions</li> <li> Remote region communications</li> <li> Emergency communications</li> </ul> <Link href="/space-tech/satellite-communications" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"> Learn More  </Link> </div> {
+  /* Earth Observation */ 
+}<div className="card group hover:bg-blue-500/10 transition-colors"> <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30"> <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
+  2 
+}d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Earth Observation</h3> <p className="text-gray-400 mb-4"> Advanced satellite imaging, environmental monitoring, and data analytics for climate and resource management. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li> High-resolution imaging</li> <li> Environmental monitoring</li> <li> Climate change tracking</li> <li> Resource management</li> </ul> <Link href="/space-tech/earth-observation" className="text-blue-400 hover:text-blue-300 text-sm font-medium"> Learn More  </Link> </div> {
+  /* Space Infrastructure */ 
+}<div className="card group hover:bg-purple-500/10 transition-colors"> <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30"> <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
+  2 
+}d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Space Infrastructure</h3> <p className="text-gray-400 mb-4"> Development of space stations, orbital platforms, and infrastructure for future space exploration missions. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li> Space station development</li> <li> Orbital platforms</li> <li> Space habitats</li> <li> Launch infrastructure</li> </ul> <Link href="/space-tech/space-infrastructure" className="text-purple-400 hover:text-purple-300 text-sm font-medium"> Learn More  </Link> </div> {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /* Navigation Systems */ 
 }<div className="card group hover:bg-green-500/10 transition-colors"> <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30"> <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
 }d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
+<<<<<<< HEAD
 }d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Navigation Systems</h3> <p className="text-gray-400 mb-4"> Advanced satellite navigation, positioning systems, and location-based services for global applications. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li>• Satellite navigation</li> <li>• Precision positioning</li> <li>• Location services</li> <li>• Autonomous navigation</li> </ul> <Link href="/space-tech/navigation-systems" className="text-green-400 hover:text-green-300 text-sm font-medium"> Learn More → </Link> </div> {
   /* Space Research */ 
 }<div className="card group hover:bg-red-500/10 transition-colors"> <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30"> <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
 }d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Space Research</h3> <p className="text-gray-400 mb-4"> Scientific research platforms, space experiments, and technology development for space exploration. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li>• Scientific platforms</li> <li>• Space experiments</li> <li>• Technology development</li> <li>• Research collaboration</li> </ul> <Link href="/space-tech/space-research" className="text-red-400 hover:text-red-300 text-sm font-medium"> Learn More → </Link> </div> {
+=======
+}d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Navigation Systems</h3> <p className="text-gray-400 mb-4"> Advanced satellite navigation, positioning systems, and location-based services for global applications. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li> Satellite navigation</li> <li> Precision positioning</li> <li> Location services</li> <li> Autonomous navigation</li> </ul> <Link href="/space-tech/navigation-systems" className="text-green-400 hover:text-green-300 text-sm font-medium"> Learn More  </Link> </div> {
+  /* Space Research */ 
+}<div className="card group hover:bg-red-500/10 transition-colors"> <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30"> <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
+  2 
+}d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Space Research</h3> <p className="text-gray-400 mb-4"> Scientific research platforms, space experiments, and technology development for space exploration. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li> Scientific platforms</li> <li> Space experiments</li> <li> Technology development</li> <li> Research collaboration</li> </ul> <Link href="/space-tech/space-research" className="text-red-400 hover:text-red-300 text-sm font-medium"> Learn More  </Link> </div> {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /* Space Consulting */ 
 }<div className="card group hover:bg-indigo-500/10 transition-colors"> <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30"> <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 
 }d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /> </svg> </div> <h3 className="text-xl font-semibold mb-3">Space Strategy Consulting</h3> <p className="text-gray-400 mb-4"> Strategic guidance for space initiatives, regulatory compliance;
+<<<<<<< HEAD
 and space industry partnerships. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li>• Space strategy development</li> <li>• Regulatory compliance</li> <li>• Industry partnerships</li> <li>• Investment guidance</li> </ul> <Link href="/space-tech/consulting" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium"> Learn More → </Link> </div> </div> </div> </section> {
+=======
+and space industry partnerships. </p> <ul className="space-y-2 mb-6 text-sm text-gray-400"> <li> Space strategy development</li> <li> Regulatory compliance</li> <li> Industry partnerships</li> <li> Investment guidance</li> </ul> <Link href="/space-tech/consulting" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium"> Learn More  </Link> </div> </div> </div> </section> {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /* Industry Applications */ 
 }<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-600/10 to-orange-600/10"> <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold mb-4"> Industry Applications </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto"> Space technology solutions across diverse industries </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="card"> <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6"> <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 

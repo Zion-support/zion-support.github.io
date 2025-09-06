@@ -83,20 +83,20 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
       <div className="space-y-2">
         <textarea className="w-full border rounded-md px-3 py-2" rows={3} placeholder="Write a private note (abuse, spam, special support)" value={text} onChange={(e) => setText(e.target.value)} />
-        <button disabled={!text.trim() || adding} onClick={addNote} className="px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50">{adding ? 'Adding…' : 'Add Note'}</button>
+        <button disabled={!text.trim() || adding} onClick={addNote} className="px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50">{adding ? 'Adding' : 'Add Note'}</button>
       </div>
 
       <div className="border-t pt-3">
         <div className="text-sm opacity-70 mb-2">Notes are private, time-stamped, and include author ID.</div>
         {loading ? (
-          <div className="text-sm">Loading…</div>
+          <div className="text-sm">Loading</div>
         ) : notes.length === 0 ? (
           <div className="text-sm opacity-70">No notes yet.</div>
         ) : (
           <ul className="space-y-2">
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
-                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
                 <div>{n.text}</div>
               </li>
             ))}

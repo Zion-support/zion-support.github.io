@@ -51,3 +51,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message ?? "Progress error" });
   }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

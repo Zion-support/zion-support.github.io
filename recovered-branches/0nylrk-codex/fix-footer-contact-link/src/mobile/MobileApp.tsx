@@ -12,6 +12,9 @@ import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
 
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <MobileThemeProvider>
       <Routes>
@@ -35,10 +38,28 @@ export function MobileApp() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Route path="/post - job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div > Profile page</div>} />;
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>;
     </MobileThemeProvider>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </MobileThemeProvider>);
+}
+        <Route path="/post-job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div>Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

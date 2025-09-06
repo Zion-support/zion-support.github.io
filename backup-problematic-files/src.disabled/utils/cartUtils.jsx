@@ -1,5 +1,3 @@
-"export\": const validateCartItem = item => { export const updateItemQuantity = (cart,export const removeFromCart = (cart,itemId) => { export const mergeCarts = (cart1,cart2) => { export const mergeCartItems = (cart1,cart2) => { export const isCartEmpty = cart => { export const importCartData = cartData => { export const getCartSummary = cart => { export const getCartKey = (userId = null) => { export const getCartItemCount = cart => { export const formatPrice = (price,currency = \'USD\') => { export const exportCartData = cart => { export const clearCart = () => { export const calculateTax = subtotal => { export const calculateShipping = subtotal => { export const calculateCartTotal = cart => { export const calculateCartSubtotal = cart => { export const addToCart = (cart,newItem) => { itemId,quantity) => {\''\"";
-export: const validateCartItem = item => { export const updateItemQuantity = (cart,export const removeFromCart = (cart,itemId) => { export const mergeCarts = (cart1,cart2) => { export const mergeCartItems = (cart1,cart2) => { export const isCartEmpty = cart => { export const importCartData = cartData => { export const getCartSummary = cart => { export const getCartKey = (userId = null) => { export const getCartItemCount = cart => { export const formatPrice = (price,currency = "USD") => { export const exportCartData = cart => { export const clearCart = () => { export const calculateTax = subtotal => { export const calculateShipping = subtotal => { export const calculateCartTotal = cart => { export const calculateCartSubtotal = cart => { export const addToCart = (cart,newItem) => { itemId,quantity) => {"""";'"'"
 import React from 'react';
 interface CartUtilsProps {
   // Add props here as needed
@@ -11,6 +9,15 @@ export default function CartUtils({ }: CartUtilsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 }
 
+=======
+}
+
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -10,6 +10,7 @@ export interface TokenTransaction {
 export interface TokenTransaction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   userId: string;
   type: "earn" | "spend" | "transfer";
@@ -32,11 +33,14 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
+<<<<<<< HEAD
+=======
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -52,6 +56,8 @@ function loadTransactions(): TokenTransaction[] {
     return [];
   }
 }
+<<<<<<< HEAD
+=======
 
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
@@ -71,6 +77,12 @@ function load_config (): TokenConfig {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+=======
 
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
@@ -108,8 +120,11 @@ export function addTransaction(
   saveTransactions(transactions);
   return newTransaction;
 }
-
-
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
 
 export function getConfig(): TokenConfig {;
   return loadConfig();
@@ -120,8 +135,6 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
-
-
   const transactions = loadTransactions();
   let balance = 0;
 

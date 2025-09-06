@@ -112,9 +112,7 @@ export default function AccountSettings() {
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>
-                Manage your personal information and privacy
-              </CardDescription>
+              <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-2">
@@ -210,9 +208,7 @@ export default function AccountSettings() {
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>
-                Manage your Web3 connections and features
-              </CardDescription>
+              <CardDescription>Manage your Web3 connections and features</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-2">

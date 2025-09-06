@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import Link from "next/link",;
@@ -24,7 +26,26 @@ function AIBusinessManagerPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+import Link from "next/link";
+export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Group";
+  description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.";
+  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"}
+export default function AIBusinessManagerPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Autonomous Business Manager - Zion Tech Group",;
+  description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",;
+  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},;
+export default function AIBusinessManagerPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -46,6 +67,8 @@ function AIBusinessManagerPage() {
                 learning, and autonomous decision - making to manage your business operations;
                 with unprecedented efficiency and intelligence.;
               </p>;
+<<<<<<< HEAD
+=======
 
               <p className="text - lg text - gray - 300 leading - relaxed">;
                 From strategic planning to daily operations, the system continuously learns,
@@ -56,6 +79,7 @@ function AIBusinessManagerPage() {
                 From strategic planning to daily operations, the system continuously learns,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
@@ -106,6 +130,8 @@ function AIBusinessManagerPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
               <p className="text - gray - 400">;
@@ -116,6 +142,7 @@ function AIBusinessManagerPage() {
                 AI-powered strategic planning that analyzes market conditions,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
             </div>;
@@ -173,6 +200,8 @@ function AIBusinessManagerPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
               <p className="text - gray - 400">;
@@ -183,6 +212,7 @@ function AIBusinessManagerPage() {
                 Data-driven growth strategies with market expansion analysis,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 customer acquisition optimization, and revenue maximization.;
               </p>;
             </div>;
@@ -201,6 +231,8 @@ function AIBusinessManagerPage() {
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -211,6 +243,7 @@ function AIBusinessManagerPage() {
                 Continuously gathers data from all business systems,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 market sources, and external factors.;
               </p>;
             </div>;
@@ -218,6 +251,8 @@ function AIBusinessManagerPage() {
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Analysis & Learning</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -228,6 +263,7 @@ function AIBusinessManagerPage() {
                 AI algorithms analyze patterns, learn from outcomes,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and identify optimization opportunities.;
               </p>;
             </div>;
@@ -235,6 +271,8 @@ function AIBusinessManagerPage() {
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Decision Making</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -245,6 +283,7 @@ function AIBusinessManagerPage() {
                 Autonomous decisions are made based on data analysis,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 business rules, and predictive models.;
               </p>;
             </div>;
@@ -270,6 +309,8 @@ function AIBusinessManagerPage() {
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
             <div className="card">;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -280,10 +321,13 @@ function AIBusinessManagerPage() {
                 Inventory management, pricing optimization, customer service automation,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and supply chain optimization.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Financial Services</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -294,10 +338,13 @@ function AIBusinessManagerPage() {
                 Risk assessment, portfolio management, fraud detection,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and regulatory compliance automation.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Manufacturing</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -308,10 +355,13 @@ function AIBusinessManagerPage() {
                 Production optimization, quality control, predictive maintenance,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and supply chain management.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Healthcare</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -322,6 +372,7 @@ function AIBusinessManagerPage() {
                 Patient scheduling, resource allocation, treatment optimization,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and administrative efficiency.;
               </p>;
             </div>;

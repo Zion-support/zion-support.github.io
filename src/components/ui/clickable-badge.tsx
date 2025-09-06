@@ -22,13 +22,14 @@ export function ClickableBadge({;
   onRemove,;
   ...props;
 }: ClickableBadgeProps) {;
-  return (
-    <div
-      className={cn(
-        badgeVariants({ variant })
-        "group flex items-center gap-1"
-        onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
-        className
+  return (;
+    <div;
+      className={cn(;
+        badgeVariants({ variant }),;
+        "group flex items-center gap-1",;
+        onRemove && "pl-2.5 pr-1.5 py-1";
+        className;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
 
     </div>

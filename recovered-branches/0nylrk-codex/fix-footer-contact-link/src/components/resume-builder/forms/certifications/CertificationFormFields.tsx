@@ -1,5 +1,16 @@
 import {
   FormField,
+=======
+<<<<<<< HEAD
+
+
+  FormField,
+FormField,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  FormField,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   FormItem,
   FormLabel,
   FormControl,
@@ -21,7 +32,11 @@ export function CertificationFormFields({
         <FormField
           control={form && form.control}
           name="name"
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export /**
  * CertificationFormFields - Function description
  */
@@ -32,6 +47,7 @@ function CertificationFormFields() {
         <FormField;
           control={form.control}
           name="name";
+<<<<<<< HEAD
 
           render={({ field }) => (
             <FormItem>
@@ -72,6 +88,24 @@ function CertificationFormFields() {
             </FormItem>)}
         />;
         <FormField;
+=======
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Issuing Organization</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Amazon Web Services, PMI, etc."
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <FormField
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           control={form.control}
           name="issuing_organization";
 
@@ -84,6 +118,8 @@ function CertificationFormFields() {
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
           render={({ field }) => (;
             <FormItem>;
@@ -95,7 +131,15 @@ function CertificationFormFields() {
         />;
         <FormField;
 
+=======
+        />
+        <FormField
+        />;
+        <FormField;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           control={form.control}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           name="expiration_date"
           render={({ field }) => (
             <FormItem>
@@ -111,10 +155,18 @@ function CertificationFormFields() {
 
 
 
+=======
+                <Input type="date" {...field} value={field.value || ""} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           )}
         />;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <FormField
           control={form && form.control}
           name="expiration_date"
@@ -134,16 +186,38 @@ function CertificationFormFields() {
           )}
         />;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+=======
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+            <FormItem>;
+              <FormLabel > Issuing Organization</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="Amazon Web Services, PMI, etc.";
+                  {...field}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <FormField
           control={form && form.control}
           name="credential_id"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Credential ID (Optional)</FormLabel>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               </FormControl>;
               <FormMessage />;
@@ -155,6 +229,8 @@ function CertificationFormFields() {
           control={form.control}
           name="issue_date";
           render={({ field }) => (
+<<<<<<< HEAD
+<<<<<<< HEAD
             <FormItem>;
               <FormLabel > Issue Date</FormLabel>;
               <FormControl>;
@@ -222,3 +298,47 @@ function CertificationFormFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <FormItem>
+              <FormLabel>Credential URL (Optional)</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="https://www.credential.com/verify/abc123"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+    </>
+  );
+}
+;
+
+  ),;}
+ </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Issue Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Expiration Date (Optional) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Credential window.URL (Optional) </FormLabel> <FormControl> </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> </>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

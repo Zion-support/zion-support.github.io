@@ -1,6 +1,15 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+
+const ROOT = process.cwd();
+const pagesDir = path.join(ROOT, 'pages');
+const outDir = path.join(ROOT, 'data', 'reports', 'seo');
+
+function getAllFiles(dir, list = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes:true })) {
+=======
 ;
 const ROOT = process.cwd();
 const pagesDir = path.join(ROOT, 'pages');
@@ -8,12 +17,27 @@ const outDir = path.join(ROOT, 'data', 'reports', 'seo');
 ;
 function getAllFiles(dir, list = []) {;
   for (const entry of fs.readdirSync(dir, { withFileTypes:true })) {;
+>>>>>>> 207d7230e0649fa517bb469b27623282180528c9
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) getAllFiles(full, list);
     else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) list.push(full);
   }
   return list;
 }
+<<<<<<< HEAD
+
+function hasMetaDescription(content) {
+  return /<meta\s+name=\"description\"/i.test(content);
+}
+
+async function main() {
+  fs.mkdirSync(outDir, { recursive:true });
+  const files = getAllFiles(pagesDir);
+  const issues = [];
+  for (const f of files) {
+    const content = fs.readFileSync(f, 'utf8');
+    if (!hasMetaDescription(content)) {
+=======
 ;
 function hasMetaDescription(content) {;
   return /<meta\s+name=\"description\"/i.test(content);
@@ -26,6 +50,7 @@ async function main() {;
   for (const f of files) {;
     const content = fs.readFileSync(f, 'utf8');
     if (!hasMetaDescription(content)) {;
+>>>>>>> 207d7230e0649fa517bb469b27623282180528c9
       issues.push({ file:path.relative(ROOT, f), issue:'Missing meta description' });
     }
   }
@@ -36,5 +61,9 @@ async function main() {;
   fs.writeFileSync(path.join(outDir, `latest.json`), JSON.stringify(payload, null, 2));
   console.log('SEO report generated');
 }
+<<<<<<< HEAD
+
+=======
 ;
+>>>>>>> 207d7230e0649fa517bb469b27623282180528c9
 main().catch((e) => { console.error(e); process.exit(1); });

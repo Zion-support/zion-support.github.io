@@ -5,6 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -24,5 +25,16 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
+<<<<<<< HEAD
+    .replace(/'/g, '&#039,')
+}
+
+    .replace(/'/g, '&#039,');
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+=======
+<<<<<<< HEAD
     .replace(/'/g, '&#039,')
 };

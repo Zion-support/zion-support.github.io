@@ -6,7 +6,6 @@ export default function ForgotPasswordPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Enter your email to reset your password.</p>
     </div>
     </div>
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   )
 import React from 'react';
 export default function ForgotPasswordPage() {;

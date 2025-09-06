@@ -38,37 +38,37 @@ export default function WebsitePerformanceMonitorPage() {
     {
       name: 'Core Web Vitals',
       description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
-      icon: '⚡',
+      icon: '',
       color: 'text-blue-400'
     },
     {
       name: 'Page Load Time',
       description: 'Comprehensive analysis of page load performance across different devices and locations.',
-      icon: '🚀',
+      icon: '',
       color: 'text-green-400'
     },
     {
       name: 'Uptime Monitoring',
       description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
-      icon: '🔄',
+      icon: '',
       color: 'text-purple-400'
     },
     {
       name: 'Mobile Performance',
       description: 'Mobile-first performance testing and optimization recommendations.',
-      icon: '📱',
+      icon: '',
       color: 'text-orange-400'
     },
     {
       name: 'SEO Impact',
       description: 'Performance metrics that directly affect your search engine rankings and visibility.',
-      icon: '🔍',
+      icon: '',
       color: 'text-cyan-400'
     },
     {
       name: 'User Experience',
       description: 'Real user experience metrics and conversion impact analysis.',
-      icon: '👥',
+      icon: '',
       color: 'text-pink-400'
     }
   ],;

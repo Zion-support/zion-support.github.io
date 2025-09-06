@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +25,10 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -31,10 +37,17 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 
 
 
@@ -42,20 +55,81 @@ export default function SearchPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  const initial = params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { useEffect, useState } from "react",
+import { useNavigate, useSearchParams } from "react-router-dom",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import { useAISearch } from "@/hooks/useAISearch";
+import { AppLayout } from "@/layout/AppLayout";
+export default function SearchPage() {
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+  const initial = params.get("q") |"";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
+import { useAISearch } from "@/hooks/useAISearch",
+import { AppLayout } from "@/layout/AppLayout",
+export default function SearchPage() {
+  const [params] = useSearchParams(),
+  const navigate = useNavigate(),
+  const initial = params.get("q") || "",
+  const [query, setQuery] = useState(initial),
+  const { results, loading, search } = useAISearch(),
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
 
   const initial = params && params.get("q") || "";
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
 
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from "react",;
+import { useNavigate, useSearchParams } from "react-router-dom",;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { SearchSuggestion } from "@/types/search",;
+import { useAISearch } from "@/hooks/useAISearch",;
+import { AppLayout } from "@/layout/AppLayout",;
+;
+export default function SearchPage() {;
+  const [params] = useSearchParams(),;
+  const navigate = useNavigate(),;
+  const initial = params.get("q") || "",;
+  const [query, setQuery] = useState(initial),;
+  const { results, loading, search } = useAISearch(),;
+  const suggestions:SearchSuggestion[] = generateSearchSuggestions(),;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (initial) {;
       search(initial);
     }
+<<<<<<< HEAD
   }, [initial]);
 
   const handleSubmit = (e: React && React.FormEvent) => {;
@@ -66,6 +140,15 @@ export default function SearchPage() {;
 
 =======
 
+=======
+
+  }, [initial]);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+    search(query)
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -73,26 +156,53 @@ export default function SearchPage() {;
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  return (
+    <AppLayout>
+      <main className="container mx-auto px-4 py-8">
+        <form onSubmit={handleSubmit} className="mb-6">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
 
+<<<<<<< HEAD
           />;
         </form>;
+
+
+<<<<<<< HEAD
+=======
 
 
 =======
 
 
+          />
+        </form>
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -128,9 +238,17 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          />;
+        </form>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -148,6 +266,8 @@ export default function SearchPage() {;
                 <p className="text-zion-slate-light">{r && r.description}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
         )}
 
@@ -157,6 +277,51 @@ export default function SearchPage() {;
 }
 
 =======
+=======
+  }, [initial]),;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    navigate(`/search?q=${encodeURIComponent(query)}`),;
+    search(query),;
+  },;
+;
+  return (;
+    <AppLayout>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={suggestions}
+            placeholder="Search talent, jobs, and projects...";
+          />;
+        </form>;
+;
+        {loading && <p className="text-zion-slate-light">Searching...</p>}
+        {!loading && results.length === 0 && (;
+          <p className="text-zion-slate-light">No results found.</p>;
+        )}
+        {!loading && results.length > 0 && (;
+          <div className="space-y-4">;
+            {results.map((r) => (;
+              <div;
+                key={`${r.type}-${r.id}`}
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4";
+              >;
+                <p className="text-xs uppercase text-zion-slate-light mb-1">;
+                  {r.type}
+                </p>;
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>;
+                <p className="text-zion-slate-light">{r.description}</p>;
+              </div>;            ))}
+          </div>;
+        )}
+      </main>;
+    </AppLayout>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -220,4 +385,57 @@ if ( {) {
       </main>;
     </AppLayout>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
+  loading && <p className="text-zion-slate-light">Searching...</p> 
+}{
+  !loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>) 
+}{
+  !loading && results.length > 0 && (<div className="space-y-4"> {
+  results.map ( (r) => (<div key= {
+  `$ {
+  r.type 
+}-$ {
+  r.id 
+}` 
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > <p className="text-xs uppercase text-zion-slate-light mb-1"> {
+  r.type 
+}</p> <h3 className="text-lg font-bold text-white"> {
+  r.title 
+}</h3> <p className="text-zion-slate-light"> {
+  r.description 
+}</p> </div>) ) 
+}</div>) 
+}</main> </AppLayout>) 
+}
+        {loading && <p className="text-zion-slate-light">Searching...</p>}
+        {!loading && results.length === 0 && (
+          <p className="text-zion-slate-light">No results found.</p>
+        )}
+        {!loading && results.length > 0 && (
+          <div className="space-y-4">
+            {results.map((r) => (
+              <div
+                key={`${r.type}-${r.id}`}
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+              >
+                <p className="text-xs uppercase text-zion-slate-light mb-1">
+                  {r.type}
+                </p>
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>
+                <p className="text-zion-slate-light">{r.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+    </AppLayout>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

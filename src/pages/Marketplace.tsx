@@ -7,7 +7,7 @@ import { use_router } from 'next / router';
 import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
 import ProductCard from '@/components / ProductCard';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { use_translation } from 'react - i18next';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { AuthModal } from '@/components / auth / AuthModal';
@@ -30,8 +30,8 @@ import {
         ))}
       </select>;
     </div>;
-    <div className='flex items - center gap - 2'>;
-      <SortAsc className='h - 4 w - 4 text - muted - foreground' />;
+    <div className="flex items-center gap-2">;
+      <SortAsc className="h-4 w-4 text-muted-foreground" />;
       <select;
         value={min_rating}
         on_change={e => setMinRating (Number (e.target.value))}
@@ -166,8 +166,8 @@ export default function Marketplace() {
 
 
             ))}
-          </div>;
-        </motion && motion.div>;
+          </div>
+        </motion.div>
       )}
       {/* End of Results */}
 
@@ -182,8 +182,8 @@ export default function Marketplace() {
 
             🎉 You've explored all available products!;
           </div>;
-          <div className='text-sm text-muted-foreground'>;
-            Showing {products && products.length} AI-powered solutions;
+          <div className="text-sm text-muted-foreground">;
+            Showing {products.length} AI-powered solutions;
           </div>;
 
         </motion.div>;
@@ -276,8 +276,8 @@ export default function Marketplace() {
   category: filter_category ;
 
 });
-sort: sort_by ;
-}';
+sort: sortBy ;
+};';
 //Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
 
 //Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation || location && location.includes (filterLocation && filterLocation.toLowerCase () ) ) && (!filterAvailability || availability === filterAvailability && filterAvailability.toLowerCase () ) items && items.sort ( (a, b) => {;
@@ -304,7 +304,7 @@ case 'newest': ;
 }"
 
 }className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
-  t ('marketplace && marketplace.hero title') ";
+  t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
 
   t ('marketplace && marketplace.hero subtitle') ";
@@ -332,7 +332,7 @@ case 'newest': ;
 }"
 
 }className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
-  t ('marketplace && marketplace.hero title') ";
+  t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
 
   t ('marketplace && marketplace.hero subtitle') ;
@@ -355,7 +355,7 @@ case 'newest': ;
 }"
 
 }> <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
-  t ('marketplace && marketplace.hero title') ";
+  t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
 
   t ('marketplace && marketplace.hero subtitle') ;
@@ -717,8 +717,8 @@ if ( {) {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion && motion.button>) ;
 
 }</AnimatePresence> </div>) ;
-}'";
-  );
+}'"
+  )
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -775,42 +775,42 @@ const Marketplace = () =>: any {
   return (
     <>;
       <Head>;
-        <title > Marketplace - Zion Tech Group</title>;
+        <title>Marketplace - Zion Tech Group</title>;
         <meta name="description" content="Professional Marketplace services"  />;
       </Head>;
-      <div className="min - h-screen bg - gray - 50">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">;
-          <div className="text - center">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">;
+      <div className="min-h-screen bg-gray-50">;
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
+          <div className="text-center">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
               Marketplace;
             </h1>;
-            <p className="text - xl text - gray - 600 mb - 12">;
+            <p className="text-xl text-gray-600 mb-12">;
               Professional Marketplace services and solutions;
             </p>;
-            <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
-              <div className="bg - white p - 6 rounded - lg shadow - md">;
-                <h2 className="text - 2xl font - semibold mb - 4">Our Services</h2>;
-                <ul className="text - gray - 600 space - y-2">;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
+                <ul className="text-gray-600 space-y-2">;
                   <li>• Professional Solutions</li>;
                   <li>• Expert Implementation</li>;
-                  <li>• 24 / 7 Support</li>;
+                  <li>• 24/7 Support</li>;
                   <li>• Custom Development</li>;
                 </ul>;
               </div>;
-              <div className="bg - white p - 6 rounded - lg shadow - md">;
-                <h2 className="text - 2xl font - semibold mb - 4">Why Choose Us</h2>;
-                <ul className="text - gray - 600 space - y-2">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
+                <ul className="text-gray-600 space-y-2">;
                   <li>• Industry Expertise</li>;
                   <li>• Proven Results</li>;
                   <li>• Scalable Solutions</li>;
                   <li>• Competitive Pricing</li>;
                 </ul>;
               </div>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;
               </Link>;
-              <Link href="/contact/" className="bg - gray - 600 text - white px - 6 py - 3 rounded - lg hover:bg - gray - 700 transition - colors">;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
                 Contact Us;
               </Link>;
             </div>;

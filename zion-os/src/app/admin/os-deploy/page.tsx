@@ -27,6 +27,9 @@ import React, { useState } from "react";
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
+<<<<<<< HEAD
+        {/* Header */}
+=======
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
@@ -55,7 +58,6 @@ ai: 'Advanced AI capabilities and automation',
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
         </div>;
-
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
@@ -78,6 +80,8 @@ ai: 'Advanced AI capabilities and automation',
                   required
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
+<<<<<<< HEAD
+=======
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -109,6 +113,8 @@ ai: 'Advanced AI capabilities and automation',
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
+<<<<<<< HEAD
+=======
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -119,6 +125,8 @@ ai: 'Advanced AI capabilities and automation',
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+<<<<<<< HEAD
+=======
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -130,8 +138,11 @@ ai: 'Advanced AI capabilities and automation',
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 />;
               </div>;
             </div>;
@@ -200,7 +211,6 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
             </div>;
           </div>;
-
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
@@ -216,8 +226,8 @@ ai: 'Advanced AI capabilities and automation',
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <input
-=======
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
                 <input;
@@ -258,7 +268,6 @@ ai: 'Advanced AI capabilities and automation',
                   className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group";
                 >;
                   <input;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     id={`feature-${k}`}
                     type="checkbox";
                     name="features";
@@ -287,6 +296,7 @@ ai: 'Advanced AI capabilities and automation',
               Additional Features
             </h2>
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   id="treasury"
                   type="checkbox"
@@ -314,6 +324,7 @@ ai: 'Advanced AI capabilities and automation',
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   id="governance"
                   type="checkbox"
@@ -341,6 +352,7 @@ ai: 'Advanced AI capabilities and automation',
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   id="moderation"
                   type="checkbox"
@@ -368,6 +380,7 @@ ai: 'Advanced AI capabilities and automation',
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   id="partnerships"
                   type="checkbox"
@@ -396,6 +409,7 @@ ai: 'Advanced AI capabilities and automation',
               {loading ? "Deploying..." : "Deploy Digital Economy"}
             </button>
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === "success"
@@ -791,6 +805,44 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
+<<<<<<< HEAD
+                {message}
+              </div>;
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+                }`}>;
+                {message}
+              </div>;
+            )}
+          </div>;
+        </form>;
+      </div>;
+    </div>;
+  );
+          {/* Submit Button */}
+          <div className="text - center">;
+            <button;
+              disabled={loading}
+              className="btn - primary text - lg px - 12 py - 4 disabled:opacity - 50 disabled:cursor - not - allowed hover - lift";
+            >;
+              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
+            </button>;
+            {message && (
+              <div;
+                className={`mt - 6 p - 4 rounded - lg ${
+                  message_type === 'success';
+                    ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
+                    : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
+                }`}
+              >;
+                {message}
+              </div>)}
+=======
 
 
 

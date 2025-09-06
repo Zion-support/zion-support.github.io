@@ -6,7 +6,13 @@ import { format } from "date-fns";
  */
 
 export const formatDate = (dateString: string): string => {
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from './date - fns';
 /**;
 * Formats a date string into a readable format;
@@ -14,13 +20,18 @@ import { format } from './date - fns';
 * @returns Formatted date string;
 */;
 export const format_date = (date_string: string): string => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     return format(new Date(dateString), "PP");
   } catch (e) {
     return dateString;
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,7 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "timestamp": "2025-09-06T10:57:00.075Z",
   "totalDuration": 5762,
   "improvements": [
@@ -1374,3 +1376,4 @@
   }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

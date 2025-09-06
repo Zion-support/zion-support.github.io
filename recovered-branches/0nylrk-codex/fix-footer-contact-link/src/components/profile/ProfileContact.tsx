@@ -53,6 +53,8 @@ export function ProfileContact({
           </a>;
         </div>;
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
@@ -90,6 +92,11 @@ export function ProfileContact({
 }
 
 =======
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
@@ -110,6 +117,8 @@ export function ProfileContact({
       </form>;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -118,3 +127,37 @@ export function ProfileContact({
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  )
+  )
+
+<<<<<<< HEAD
+  ),;}
+ interface ProfileContactProps {
+  email?: string;
+profileName: string;
+profileType: 'service' | 'talent' 
+}export function ProfileContact ({
+  email, profileName, profileType 
+}: ProfileContactProps) {
+  const handleSendMessage = (e: React.FormEvent) => {
+  e.preventDefault ();
+setIsSending (true);
+//Here would be the actual API call to send the message setTimeout ( () => {
+  
+}, 1000);
+};
+  `mailto:$ {
+  email 
+}` 
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) 
+}
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

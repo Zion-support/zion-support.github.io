@@ -110,7 +110,7 @@ function EducationFormFields() {
           />;
 
           <FormField
-            control={form && form.control}
+            control={form.control}
             name='degree'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel>Degree</FormLabel>;
@@ -139,7 +139,7 @@ function EducationFormFields() {
         </div>;
 
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='field_of_study'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
@@ -204,7 +204,7 @@ function EducationFormFields() {
 
 
             )}
-          />;
+          />
 
           <div className='space-y-4'>;
             <FormField
@@ -214,14 +214,14 @@ function EducationFormFields() {
 
 
                     <Checkbox
-                      checked = {field && field.value,}
-                      onCheckedChange = {field && field.onChange,}
-                    />;
-                  </FormControl>;
-                  <div className='space-y-1 leading-none'>;
-                    <FormLabel>I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>;
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>I am currently studying here</FormLabel>
+                  </div>
+                </FormItem>
               )}
 
             />;
@@ -267,7 +267,7 @@ function EducationFormFields() {
                     <FormMessage />;
                   </FormItem>;
                 )}
-              />;
+              />
             )}
 
 
@@ -276,7 +276,7 @@ function EducationFormFields() {
         </div>;
 
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='location'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
@@ -331,11 +331,11 @@ function EducationFormFields() {
 
 
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='description'
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
-              <FormControl>;
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'
                   className='min-h-[100px]'

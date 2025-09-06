@@ -46,8 +46,6 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
     </div>
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
   onFilterChange,
@@ -79,4 +77,26 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;
+},; export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
+<Tabs defaultValue= {
+  filter 
+}onValueChange= {
+  (value) => onFilterChange (value as FilterType) 
+}> <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full" > <TabsTrigger value="all" className="text-xs" >All</TabsTrigger> <TabsTrigger value="unread" className="text-xs" >Unread</TabsTrigger> <TabsTrigger value="onboarding" className="text-xs" >Onboarding</TabsTrigger> <TabsTrigger value="messages" className="text-xs" >Messages</TabsTrigger> <TabsTrigger value="system" className="text-xs" >System</TabsTrigger> </TabsList> </Tabs> </div>) 
+};
+  );
+}
+
+  )
+},
+};
+  )
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -60,13 +60,11 @@ export function ApplicationRow(): any ({;
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
   return (
-    <TableRow key={application && application.id}>;
-      <TableCell>;
-        <div className='flex items-center gap-3'>;
-          <AvatarPrimitive className='h-9 w-9'>;
-            {' '}
-            {/* Using renamed AvatarPrimitive */}
-            {application && application.talent_profile?.profile_picture_url && !avatarError ? (;
+    <TableRow key={application.id}>
+      <TableCell>
+        <div className="flex items-center gap-3">
+          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
+            {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
 
 
@@ -230,20 +228,21 @@ export function ApplicationRow({;
   return (;
     <TableRow key={application.id}>;
       <TableCell>;
-        <div className='flex items - center gap - 3'>;
-          <AvatarPrimitive className='h - 9 w - 9'>;
-            {' '}
-            {/* Using renamed AvatarPrimitive */}
-            {application.talent_profile?.profile_picture_url && !avatar_error ? (
+        <div className="flex items-center gap-3">;
+          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
+            {application.talent_profile?.profile_picture_url && !avatarError ? (;
               <Image;
-                src={application.talent_profile.profile_picture_url}
-                alt={talent_name}
-                width={36} // Corresponds to h - 9 w - 9 (9 * 4px = 36px);
-                height={36} // Corresponds to h - 9 w - 9;
-                className='rounded - full object - cover' // Ensure rounded and object - cover;
-                on_error={() => setAvatarError (true)}
-                priority={false}              />) : (
-              <User className='h - 5 w - 5 text - gray - 400' />)}
+                src={application.talent_profile.profile_picture_url} ;
+                alt={talentName}
+                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px);
+                height={36} // Corresponds to h-9 w-9;
+                className="rounded-full object-cover" // Ensure rounded and object-cover;
+                onError={() => setAvatarError(true)}
+                priority={false}
+              />;
+            ) : (;
+              <User className="h-5 w-5 text-gray-400" />;
+            )}
           </AvatarPrimitive>;
           <div>;
             <div className='font - medium'>{talent_name}</div>;
@@ -290,7 +289,7 @@ export function ApplicationRow({;
             </a>;
           </Button>;
         ) : (;
-          <span className='text-muted-foreground text-sm'>No resume</span>;
+          <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
       <TableCell className='text-right'>;

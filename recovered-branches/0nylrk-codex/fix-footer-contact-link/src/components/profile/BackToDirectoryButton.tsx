@@ -16,6 +16,8 @@ export function BackToDirectoryButton() {
       </Button>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -47,8 +49,34 @@ function BackToDirectoryButton() {
 =======
   )
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+} <Button variant="outline" asChild className="my-8"> <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"> <ArrowLeft className="mr-2 h-4 w-4" /> 
+  );
+}
+}
+;
+
+}
+;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,6 +1,7 @@
 interface ChangelogManagerProps {
-  platform: AppPlatform;
+  platform: AppPlatform
 }
+
 type ChangelogEntry = {
 
   id: string;
@@ -9,7 +10,7 @@ type ChangelogEntry = {
   changes: string,
 
 }
-    });
+    })
   }
 
 
@@ -100,16 +101,38 @@ import { AppPlatform } from "./MetadataManager",;
 interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
-
+;
 type ChangelogEntry = {;
-  id: string;
-  version: string;
-  date: string;
-  changes: string,;
-};
-
-
-
+  id: string,;
+  version: string,;
+  date: string,;
+  changes: string;
+},;
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {;
+  const [entries, setEntries] = useState<ChangelogEntry[]>([;
+    {;
+      id: "1",;
+      version: "1.0.0",;
+      date: "2025-05-15",;
+      changes: "Initial release of the Zion AI Marketplace app.";
+    }
+  ]),;
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({;
+    version: "",;
+    date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),;
+    changes: "";
+  }),;
+  const handleAddEntry = () => {;
+    if (!newEntry.version || !newEntry.changes) return,;
+    const entry: ChangelogEntry = {;
+      ...newEntry,;
+      id: Math.random().toString(36).substring(2, 9);
+    },;
+    setEntries([entry, ...entries]),;
+    setNewEntry({;
+      version: "",;
+      date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),;
+      changes: "";
     });
   },;
   const handleRemoveEntry = (id: string) => {;
@@ -129,11 +152,11 @@ type ChangelogEntry = {;
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
-              <Input
-                placeholder="Version (e && e.g. 1 && 1.0.1)"
-                name="version"
-                value = {newEntry && newEntry.version,}
-                onChange = {handleInputChange,}
+              <Input;
+                placeholder="Version (e.g. 1.0.1)";
+                name="version";
+                value={newEntry.version}
+                onChange={handleInputChange}
               />;
 
               <Input;

@@ -1,3 +1,24 @@
+import React from 'react';
+<<<<<<< HEAD
+
+
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  CheckCircle
+  Users
+  Building
+  Globe
+  Award
+  Clock
+  BarChart3
+  Cloud
+  Shield
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -5,20 +26,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -35,12 +52,10 @@ import React from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import MainLayout from '../src/components/layout/MainLayout';
-=======
-import MainLayout from '../src / components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ArrowRight,
   Phone,
   Mail,
@@ -118,24 +133,26 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
+<<<<<<< HEAD
 =======
-import {;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  TrendingUp,;
-  CheckCircle,;
-  Users,;
-  Building,;
-  Globe,;
-  Award,;
-  Clock,;
-  BarChart3,;
-  Cloud,;
+=======
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  Globe,
+  Award,
+  Clock,
+  BarChart3,
+  Cloud,
   Shield;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
-
 const caseStudies = [;
   {;
     id: 1,;
@@ -192,12 +209,11 @@ const caseStudies = [;
     image: "/images/case-studies/healthcare-security && security.jpg";
   }
 ];
-
 const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "50+", label: "Happy Clients" },;
   { number: "99 && 99.9%", label: "Success Rate" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   { number: "24/7", label: "Support Available" }
 ];
 
@@ -217,6 +233,8 @@ const stats = [;
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Success{' '}
+<<<<<<< HEAD
+=======
 
                 <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">;
                   Stories;
@@ -231,6 +249,7 @@ const stats = [;
         </section>;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Stats Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -249,12 +268,15 @@ const stats = [;
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
 
             </div>;
           </div>;
         </section>;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -262,6 +284,58 @@ const stats = [;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                    key={study.id}
+                    className="bg - white rounded - lg shadow - lg overflow - hidden";
+                    initial={{ opacity: 0, coordinate_y: 30 }}
+                    whileInView={{ opacity: 1, coordinate_y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >;
+                    <div className="grid grid - cols - 1 lg:grid - cols - 2">;
+                      <div className="p - 8">;
+                        <div className="flex items - center mb - 4">;
+                          <span className="bg - green - 100 text - green - 800 px - 3 py - 1 rounded - full text - sm font - semibold mr - 4">;
+                            {study.industry}
+                          {study.title}
+                        </h3>
+                        <p className="text-gray-600 mb-6">
+                          <strong>Client:</strong> {study.client}
+                        </p>
+                        <div className="space-y-4 mb-6">
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                            <p className="text-gray-600">{study.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                            <p className="text-gray-600">{study.solution}</p>
+                          </div>
+                        </div>
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
+                          <ul className="space-y-2">
+                            {study.results.map((result, idx) => (
+                              <li key={idx} className="flex items-center text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                {result}
+                              </li>;
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {study.technologies.map((tech, idx) => (
+                            <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                              {tech}
+                            </span>;
+                          ))}
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center text-sm text-gray-600">
+                            <Users className="w-4 h-4 mr-2" />
+                            {study.team}
+export default function CaseStudiesPage() {
+=======
 
   ArrowRight,
   Phone,
@@ -346,13 +420,14 @@ export default /**
  * CaseStudiesPage - Function description
  */
 function CaseStudiesPage() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
-    <MainLayout;
-      title="Case Studies - Zion Tech Group";
-      description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions.";
-      keywords="case studies, success stories, client projects, technology solutions, AI implementation";
-    >;
-      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
+      keywords="case studies, success stories, client projects, technology solutions, AI implementation"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg - gradient - to - br from - green - 900 via - teal - 900 to - blue - 900 text - white py - 20 overflow - hidden">;
           <div className="absolute inset - 0">;
@@ -527,7 +602,6 @@ function CaseStudiesPage() {
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
                           <h4 className="text-xl font-semibold mb-2">Project Overview</h4>;
                           <p className="text-green-100">;
-=======
                           </span>;
                           <span className="text - gray - 500 text - sm">{study.duration}</span>;
                         </div>;
@@ -588,13 +662,18 @@ function CaseStudiesPage() {
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+=======
 
                   </motion.div>))}
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -607,6 +686,7 @@ function CaseStudiesPage() {
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
@@ -614,6 +694,11 @@ function CaseStudiesPage() {
                 </a>;
                 <a
                   href="/services"
+<<<<<<< HEAD
+import Head from 'next/head';
+
+
+=======
 
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
                   Explore Our Services;
@@ -636,11 +721,15 @@ export default function CaseStudiesPage() {;
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 
-export default function CaseStudiesPage() {;
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <Layout>;
       <Head>;
@@ -651,6 +740,12 @@ export default function CaseStudiesPage() {;
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
 
+<<<<<<< HEAD
+
+import Head from 'next/head';
+
+
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 
@@ -661,19 +756,27 @@ import Head from 'next/head';
 =======
 =======
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
  </Head> </section> </Layout>
 =======
+export default function CaseStudiesPage() {
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 	return (
 		<Layout>
 			<Head>
@@ -687,6 +790,16 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
+}
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage(req, res) {
+  try {
+	return (;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         />;
       </Head>;
@@ -717,9 +830,12 @@ export default function CaseStudiesPage() {
 	);
 }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -760,6 +876,10 @@ export default function CaseStudiesPage() {
 import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
+<<<<<<< HEAD
+
+
+=======
 export default /**
  * CaseStudiesPage - Function description
  */
@@ -804,3 +924,25 @@ return (
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Success stories and case studies from our clients"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> main

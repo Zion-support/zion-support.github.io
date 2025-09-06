@@ -32,11 +32,15 @@ function escape_html() {
 =======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 function escapeHtml(str: string) {
   return String(str)

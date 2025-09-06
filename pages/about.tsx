@@ -1,8 +1,143 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
+import { 
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake,
+  Brain, 
+  Users, 
+  Award, 
+  Target, 
+  Heart,
+  Globe, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  DollarSign, 
+  Clock, 
+  BarChart3,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+
+const values = [
+  {
+    icon: Lightbulb,
+    title: 'Innovation',
+    description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.'
+  },
+  {
+    icon: Shield,
+    title: 'Security',
+    description: 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.'
+  },
+  {
+    icon: Users,
+    title: 'Collaboration',
+    description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.'
+  },
+  {
+    icon: Target,
+    title: 'Excellence',
+    description: 'We strive for excellence in everything we do, delivering high-quality solutions that exceed expectations.'
+  }
+];
+
+const team = [
+  {
+    name: 'John Smith',
+    role: 'CEO & Founder',
+    expertise: 'Strategic Leadership',
+    experience: '15+ years in technology leadership'
+  },
+  {
+    name: 'Sarah Johnson',
+    role: 'CTO',
+    expertise: 'Technical Innovation',
+    experience: '12+ years in AI and cloud technologies'
+  },
+  {
+    name: 'Mike Chen',
+    role: 'Lead Developer',
+    expertise: 'Full-Stack Development',
+    experience: '10+ years in modern web technologies'
+  }
+];
+
+const achievements = [
+  {
+    stat: '500+',
+    title: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries',
+    icon: CheckCircle
+  },
+  {
+    stat: '99.9%',
+    title: 'Client Satisfaction',
+    description: 'Consistently high client satisfaction ratings',
+    icon: Star
+  },
+  {
+    stat: '24/7',
+    title: 'Support Available',
+    description: 'Round-the-clock support for all our clients',
+    icon: Clock
+  },
+  {
+    stat: '50+',
+    title: 'Team Members',
+    description: 'Expert professionals dedicated to your success',
+    icon: Users
+  }
+];
+>>>>>>> main
 
 
 import React from "react";
 import Layout from "../components/Layout";
 
+<<<<<<< HEAD
+import React from 'react';
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Brain,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  BarChart3,
+  Heart,
+  Lightbulb,
+  Rocket,
+  Lock,
+  TrendingUp;
+} from 'lucide-react';
+
+
+
+=======
 =======
 import React from 'react';
 
@@ -10,12 +145,16 @@ import React from 'react';
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -23,6 +162,8 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
+<<<<<<< HEAD
+=======
 
 
 
@@ -60,7 +201,9 @@ const AboutPage: React.FC = () => {
       color: "from-pink-500 to-rose-500"
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     };
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       icon: Shield,
       title: "Trust & Security",
@@ -97,6 +240,8 @@ const AboutPage: React.FC = () => {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
+<<<<<<< HEAD
+=======
 
 =======
       } catch (error) {
@@ -107,11 +252,14 @@ import SmartFooter from '../components/SmartFooter';
   ];
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
+<<<<<<< HEAD
+=======
 
 
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
@@ -122,10 +270,22 @@ export default function AboutPage() {
   ],
 
 
+=======
+    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
+<<<<<<< HEAD
+=======
 
 
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
@@ -133,31 +293,40 @@ export default function AboutPage() {
     },
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       icon: Shield,
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
+<<<<<<< HEAD
+=======
 
 
     },
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
+<<<<<<< HEAD
+=======
 
 
       color: 'from-indigo-500 to-purple-500'
     },
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       icon: Users,
       title: 'Client Success',
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
+<<<<<<< HEAD
+=======
 
 
       } catch (error) {
@@ -168,6 +337,16 @@ export default function AboutPage() {
   ],
 
 
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -177,14 +356,18 @@ export default function AboutPage() {
 
 
 
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/automation-improvements-final
 
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -207,6 +390,8 @@ export default function AboutPage() {
       color: 'from-purple-500 to-pink-500'
     },
     {
+<<<<<<< HEAD
+=======
       name: 'Quantum Team',
       role: 'Quantum Computing',
       description: 'Specialists in quantum algorithms and quantum-resistant cryptography',
@@ -266,6 +451,7 @@ import Head from 'next/head',
 import Button from '../components/ui/Button',
 export default function AboutPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>About | Zion Tech Group</title>
@@ -322,14 +508,14 @@ export default AboutPage,
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
-=======
 export default function About() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -354,16 +540,21 @@ export default function About() {;
           </div>;
         </div>;
       </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </Layout>;
 
 
   );
 }
+<<<<<<< HEAD
+=======
 
 =======
 
 
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -410,8 +601,15 @@ export default function About() {;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{/* Values Section */}
+=======
 
         {/* Values Section */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -533,10 +731,12 @@ export default function About() {;
       </div>
     </>
   );
+<<<<<<< HEAD
+name: 'Kleber',
 =======
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       name: 'Kleber',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
       image: '/api/placeholder/150/150',
@@ -656,11 +856,10 @@ export default function AboutPage() {
     </>
   )
 
-
-
-};
-
 export default AboutPage;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
@@ -673,6 +872,7 @@ export default AboutPage;
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -703,5 +903,98 @@ function About() {
       </div>;
     </Layout>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    <MainLayout
+      title="About Us - Zion Tech Group"
+      description="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge technology solutions."
+      keywords="about us, company, team, mission, values, technology solutions"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-white mb-6">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to transforming businesses 
+              through innovative AI solutions, IT services, and micro SaaS applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {achievements.map((achievement, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">{achievement.stat}</div>
+                <div className="text-white font-semibold mb-2">{achievement.title}</div>
+                <div className="text-gray-300 text-sm">{achievement.description}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+              >
+                <div className="flex items-center mb-4">
+                  <value.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-white">{value.title}</h3>
+                </div>
+                <p className="text-gray-300">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Work With Us?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us today to discuss your project and see how we can help.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

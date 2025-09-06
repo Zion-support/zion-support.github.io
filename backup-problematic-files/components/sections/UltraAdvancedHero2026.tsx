@@ -101,7 +101,7 @@ export default function UltraAdvancedHero2026() {;
               <div className="text-gray-300 text-sm">Metaverse Services</div>
             </div>
             <div className="text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl">
-              <div className="text-3xl font-bold text-green-400">∞</div>
+              <div className="text-3xl font-bold text-green-400"></div>
               <div className="text-gray-300 text-sm">Possibilities</div>
             </div>
           </motion.div>
@@ -222,7 +222,7 @@ export default function UltraAdvancedHero2026() {;
           }}
           className="absolute top-20 right-20 text-6xl opacity-20"
         >
-          🚀
+          
         </motion.div>
         
         <motion.div
@@ -237,7 +237,7 @@ export default function UltraAdvancedHero2026() {;
           }}
           className="absolute bottom-20 left-20 text-6xl opacity-20"
         >
-          ⚛️
+          
         </motion.div>
         
         <motion.div
@@ -252,7 +252,7 @@ export default function UltraAdvancedHero2026() {;
           }}
           className="absolute top-1/3 left-10 text-5xl opacity-20"
         >
-          🧠
+          
         </motion.div>
         
         <motion.div
@@ -267,7 +267,7 @@ export default function UltraAdvancedHero2026() {;
           }}
           className="absolute bottom-1/3 right-10 text-5xl opacity-20"
         >
-          🌐
+          
         </motion.div>
       </div>
     </section>

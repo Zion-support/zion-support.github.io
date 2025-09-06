@@ -54,11 +54,16 @@ const ContentRoutes = () => {;
     </Routes>
   );
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ContentRoutes;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';
 import Home from "@/pages / Home";
@@ -103,12 +108,103 @@ const ContentRoutes = () =>: any {
     </Routes>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContentRoutes;
+<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      ;
+      {/* Help Center Routes */}
+      <Route path="/help" element={<HelpCenterPage />} />;
+      <Route path="/support" element={<HelpCenterPage />} />;
+      ;
+      {/* Blog Routes */}
+      <Route path="/blog" element={<Blog />} />;
+      <Route path="/blog/:slug" element={<BlogPost />} />;
+      ;
+      {/* Green IT Route */}
+      <Route path="/green-it" element={<GreenIT />} />;
+      ;
+      {/* Careers Route */}
+      <Route path="/careers" element={<Careers />} />;
+;
+      {/* Account Settings */}
+      <Route path="/settings/account" element={<AccountSettings />} />;
+      ;
+      {/* Project Room */}
+      <Route path="/project-room/:projectId" element={<ProjectRoom />} />;
+      ;
+      {/* Video Call */}
+      <Route path="/video-call/:roomId" element={<VideoCall />} />;
+;
+      {/* Global Search Route */}
+      <Route path="/search" element={<SearchPage />} />;
+      ;
+      {/* Sitemap Page */}
+      <Route path="/sitemap-page" element={<SitemapPage />} />;
+    </Routes>;
+  ),;
+},;
+;
+export default ContentRoutes,; const ContentRoutes = () => {
+  return (<Routes> {
+  /* Content Routes */ 
+}<Route path="/" element= {
+  <Home /> 
+}/> <Route path="/home" element= {
+  <Home /> 
+}/> <Route path="/about" element= {
+  <About /> 
+}/> {
+  /* Help Center Routes */ 
+}<Route path="/help" element= {
+  <HelpCenterPage /> 
+}/> <Route path="/support" element= {
+  <HelpCenterPage /> 
+}/> {
+  /* Blog Routes */ 
+}<Route path="/blog" element= {
+  <Blog /> 
+}/> <Route path="/blog/:slug" element= {
+  <BlogPost /> 
+}/> {
+  /* Green IT Route */ 
+}<Route path="/green-it" element= {
+  <GreenIT /> 
+}/> {
+  /* Careers Route */ 
+}<Route path="/careers" element= {
+  <Careers /> 
+}/> {
+  /* Account Settings */ 
+}<Route path="/settings/account" element= {
+  <AccountSettings /> 
+}/> {
+  /* Project Room */ 
+}<Route path="/project-room/:projectId" element= {
+  <ProjectRoom /> 
+}/> {
+  /* Video Call */ 
+}<Route path="/video-call/:roomId" element= {
+  <VideoCall /> 
+}/> {
+  /* Global Search Route */ 
+}<Route path="/search" element= {
+  <SearchPage /> 
+}/> {
+  /* Sitemap Page */ 
+}<Route path="/sitemap-page" element= {
+  <SitemapPage /> 
+}/> 
+};
+export default ContentRoutes;
+export default ContentRoutes;
+export default ContentRoutes;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

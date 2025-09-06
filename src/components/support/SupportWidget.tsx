@@ -11,9 +11,9 @@ export function SupportWidget() {
   const router = useRouter();
 
   return (
-    <>;
+    <>
       {/* Fixed button in the bottom right */}
-      {!isOpen && (;
+      {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
           size="icon"
@@ -24,7 +24,7 @@ export function SupportWidget() {
         </Button>
       )}
       {/* Support panel */}
-      {isOpen && (;
+      {isOpen && (
         <div
           className={cn(
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",

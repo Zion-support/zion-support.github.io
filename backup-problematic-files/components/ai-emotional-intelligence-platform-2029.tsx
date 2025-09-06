@@ -178,7 +178,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {;
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8"
             >
               <Brain className="w-4 h-4 mr-2" />
-              🚀 2029 Revolutionary AI Technology
+               2029 Revolutionary AI Technology
             </motion.div>
 
             {/* Main Heading */}

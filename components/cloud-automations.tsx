@@ -1,19 +1,6 @@
-
-
-
-
-
-=======
-export default function CloudAutomationsPage() {;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CloudAutomationsPage() {
-=======
 
 export default function CloudAutomationsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [data, setData] = useState<any>(null);
   useEffect(() => {;
     fetch('/api/cloud-automations-status');
@@ -22,8 +9,6 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
       .then(setData);
       .catch(() => setData({ ok: false }));
-
-=======
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -31,29 +16,15 @@ export default function CloudAutomationsPage() {
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
-  return (
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </div>;
         ))}
-
-      </div>;
-    </div>;
   );
 }
-
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
                 {JSON.stringify (value.metrics, null, 2)}
               </pre>            ) : null}        {items.map (([key, value]: any) => (
@@ -67,11 +38,3 @@ export default function CloudAutomationsPage() {
           </div>))}
       </div>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

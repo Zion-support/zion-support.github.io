@@ -58,7 +58,7 @@ interface WizardStep {
     url: string;
 
   }
-  skip_text?: string;
+  skipText?: string
 interface OnboardingWizardProps {
 
     url: string;
@@ -267,7 +267,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           >;
 
             {steps[currentStep]?.skipText}
-          </Button>;
+          </Button>
         )}
 
 
@@ -278,7 +278,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardFooter>;
     </Card>;
   );
-
 }
 
 

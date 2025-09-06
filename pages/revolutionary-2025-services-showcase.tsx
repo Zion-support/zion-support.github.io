@@ -1,9 +1,12 @@
-
-
+<<<<<<< HEAD
 =======
 
 
 =======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -120,15 +123,21 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500',
     services: allServices.filter(s => s.category.includes('Logistics')),
     gradient: 'from-orange-500/20 to-red-500/20'
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -241,6 +250,20 @@ const serviceCategories = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+  }
+}
+const serviceCategories = [
+  {
+    id: 'ai-consciousness'
+    title: ' AI Consciousness & Emotional Intelligence'
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
+    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: allServices.filter(s => s.category.includes('AI Consciousness') |s.category.includes('Healthcare AI'))
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+  }
+=======
 
   }
 }
@@ -278,6 +301,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
   }),
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>
       <Head>
@@ -287,6 +311,8 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+<<<<<<< HEAD
+=======
 
 
         {/* Hero Section */  } catch (error) {
@@ -297,13 +323,17 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
           <div className="container mx-auto relative z-10">
             <motion.div
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -319,9 +349,12 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -347,6 +380,8 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
 import React, { useState } from 'react',
 import Head from 'next / head',
@@ -359,7 +394,7 @@ import {
   Package, Bot, Car, Building2, Monitor, Cpu,
   Zap, Atom, Database, Cloud, Lock, Code,
   Phone, Mail, MapPin, ExternalLink, ChevronDown,
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon;
+Award, Target, Zap as ZapIcon, Globe as GlobeIcon;
 } from 'lucide-react',
 // Import the new revolutionary services;
 import { revolutionary2025Services } from '../data / revolutionary - 2025 - innovative - services',
@@ -420,7 +455,7 @@ const service_categories = [;
   {
     id: 'fintech',
     title: '🏦 Financial Technology Revolution',
-    description: 'AI - powered trading and quantum risk management',
+description: 'AI - powered trading and quantum risk management',
     icon: DollarSign,
     color: 'from - green - 500 to - emerald - 500',
     services: all_services.filter (string => s.category.includes ('Financial Technology')),
@@ -438,7 +473,7 @@ const service_categories = [;
   {
     id: 'edtech',
     title: '🎓 Education Technology Revolution',
-    description: 'AI - powered personalized learning and 10x faster knowledge acquisition',
+description: 'AI - powered personalized learning and 10x faster knowledge acquisition',
     icon: Users,
     color: 'from - blue - 500 to - cyan - 500',
     services: all_services.filter (string => s.category.includes ('Education Technology')),
@@ -447,7 +482,7 @@ const service_categories = [;
   {
     id: 'sustainability',
     title: '🌱 Sustainability & Green Technology',
-    description: 'AI - powered environmental solutions for carbon neutrality',
+description: 'AI - powered environmental solutions for carbon neutrality',
     icon: Globe,
     color: 'from - green - 500 to - emerald - 500',
     services: all_services.filter (string => s.category.includes ('Sustainability')),
@@ -458,7 +493,7 @@ const service_categories = [;
     title: '🚛 Logistics & Supply Chain',
     description: '99.9% delivery accuracy and zero waste supply chain',
     icon: Package,
-    color: 'from - orange - 500 to - red - 500',
+color: 'from - orange - 500 to - red - 500',
     services: all_services.filter (string => s.category.includes ('Logistics')),
     gradient: 'from - orange - 500 / 20 to - red - 500 / 20';
   }
@@ -536,34 +571,29 @@ function Revolutionary2025ServicesShowcase() {
           </div>;
         </section>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Search and Filter Section */}
         <section className="py - 8 px - 4 border - b border - gray - 800">;
           <div className="container mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
               {/* Search */}
+<<<<<<< HEAD
+=======
 
 
         {/* Search and Filter Section */  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        <section className="py-8 px-4 border-b border-gray-800">
-          <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-              {/* Search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search revolutionary services..."
+<<<<<<< HEAD
+=======
 
               <div className="relative flex - 1 max - w-md">;
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
@@ -576,11 +606,14 @@ function Revolutionary2025ServicesShowcase() {
                 />;
               </div>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Filters */}
               <div className="flex flex - wrap gap - 4 items - center">;
                 {/* Category Filter */}
-
-
+                <div className="relative">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
                   value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -617,9 +650,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="all">All Categories</option>
@@ -631,8 +661,11 @@ function Revolutionary2025ServicesShowcase() {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Sort Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -650,9 +683,12 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="popularity">Most Popular</option>
@@ -663,6 +699,8 @@ function Revolutionary2025ServicesShowcase() {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
+<<<<<<< HEAD
+=======
 
 
                 {/* View Mode */  } catch (error) {
@@ -673,6 +711,7 @@ function Revolutionary2025ServicesShowcase() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
                     onClick={() => setViewMode('grid')}
@@ -695,6 +734,8 @@ function Revolutionary2025ServicesShowcase() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
                 <div className="relative">;
                   <select;
@@ -749,12 +790,16 @@ function Revolutionary2025ServicesShowcase() {
           </div>;
         </section>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Services Grid */}
         <section className="py - 16 px - 4">;
           <div className="container mx - auto">;
             {/* Results Count */}
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -767,14 +812,19 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
                 {selectedCategory !== 'all' && (
                   <> in <span className="text-white font-semibold">{serviceCategories.find(c => c.id === selectedCategory)?.title.split(' ').slice(1).join(' ')}</span></>
+<<<<<<< HEAD
+=======
 
             <div className="mb - 8">;
               <p className="text - gray - 400">;
@@ -807,6 +857,7 @@ function Revolutionary2025ServicesShowcase() {
                         {/* Popular Badge */}
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -819,13 +870,19 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <AnimatePresence mode="wait">
               {viewMode === 'grid' ? (
                 <motion.div
                   key="grid"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -846,13 +903,19 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
                   {sortedServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -881,6 +944,13 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+                        {service.popular && (
+                          <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            POPULAR
+                          </div>
+                        )}
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -889,15 +959,30 @@ function Revolutionary2025ServicesShowcase() {
                           <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
                             POPULAR;
                           </div>)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {/* Service Icon */}
                         <div className="text - 4xl mb - 4">{service.icon}</div>;
 
                         {/* Service Title */}
                         <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                           {service.name}
+<<<<<<< HEAD
+                        </h3>
+                        {/* Tagline */}
+                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                          {service.tagline}
+                        </p>
+                        {/* Price */}
+                        <div className="text-3xl font-bold text-white mb-4">
+                          {service.price}
+                          <span className="text-lg text-gray-400 font-normal">{service.period}</span>
+                        </div>
+                        {/* Features */}
+=======
 
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -923,7 +1008,6 @@ function Revolutionary2025ServicesShowcase() {
 }
 
                         </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Tagline */}
                         <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                           {service.tagline}
@@ -946,6 +1030,8 @@ function Revolutionary2025ServicesShowcase() {
                                 <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                 {feature}
 
+<<<<<<< HEAD
+=======
                         {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -953,13 +1039,17 @@ function Revolutionary2025ServicesShowcase() {
 }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
                           <ul className="space-y-1">
                             {service.features.slice(0, 4).map((feature, featureIndex) => (
                               <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                 {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -978,9 +1068,12 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>
@@ -991,6 +1084,8 @@ function Revolutionary2025ServicesShowcase() {
                             <div className="text-sm text-gray-200">{service.growthRate}</div>
                           </div>
                         </div>
+<<<<<<< HEAD
+=======
 
 
                         {/* Action Buttons */  } catch (error) {
@@ -1001,6 +1096,7 @@ function Revolutionary2025ServicesShowcase() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">
@@ -1014,6 +1110,9 @@ function Revolutionary2025ServicesShowcase() {
                             </button>
                           </Link>
                         </div>
+<<<<<<< HEAD
+                        {/* Contact Info */}
+=======
 
                               </li>))}
                           </ul>;
@@ -1088,39 +1187,55 @@ function Revolutionary2025ServicesShowcase() {
                                 <h3 className="text - xl font - bold text - white">{service.name}</h3>;
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
                             <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               {service.contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                             </Link>
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           </div>
                           <div className="flex items-center gap-2 text-blue-400">
                             <Mail className="w-3 h-3" />
                             <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               {service.contactInfo.email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                             </Link>
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           </div>
                         </div>
                       </div>
@@ -1134,7 +1249,10 @@ function Revolutionary2025ServicesShowcase() {
               ) : (
                 <motion.div
                   key="list"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1155,13 +1273,19 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="space-y-6"
                 >
                   {sortedServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1190,14 +1314,43 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="flex-1">
                           <div className="flex items-start gap-4 mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             <div className="flex-1">
                               <div className="flex items-center gap-3 mb-2">
                                 <h3 className="text-xl font-bold text-white">{service.name}</h3>
+<<<<<<< HEAD
+                                {service.popular && (
+                                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                                    POPULAR
+                                  </span>
+                                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                              </div>
+                              <p className="text-gray-300 text-sm">{service.tagline}</p>
+                            </div>
+                          </div>
+                          <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
+                              <ul className="space-y-1">
+                                {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                                    {feature}
+                                  </li>
+                                ))}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 {service.popular && (
 
@@ -1231,6 +1384,7 @@ function Revolutionary2025ServicesShowcase() {
                                   </span>))}
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                     {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1242,8 +1396,11 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               </ul>
                             </div>
                             <div>
@@ -1251,6 +1408,8 @@ function Revolutionary2025ServicesShowcase() {
                               <div className="flex flex-wrap gap-2">
                                 {service.technology.slice(0, 6).map((tech, techIndex) => (
                                   <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">
+<<<<<<< HEAD
+=======
 
                                     {tech  } catch (error) {
     console.error("Error:", error);
@@ -1264,6 +1423,7 @@ function Revolutionary2025ServicesShowcase() {
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               </div>;
                             </div>;
                           </div>;
@@ -1326,9 +1486,12 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
                               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
@@ -1342,20 +1505,28 @@ function Revolutionary2025ServicesShowcase() {
                               </button>
                             </Link>
                           </div>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
                               <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+<<<<<<< HEAD
+=======
 
 
                                 {service.contactInfo.mobile  } catch (error) {
@@ -1367,10 +1538,13 @@ function Revolutionary2025ServicesShowcase() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             </div>
                             <div className="flex items-center gap-2 text-blue-400">
                               <Mail className="w-3 h-3" />
                               <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
+<<<<<<< HEAD
+=======
 
 
                                 {service.contactInfo.email  } catch (error) {
@@ -1382,11 +1556,14 @@ function Revolutionary2025ServicesShowcase() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
+<<<<<<< HEAD
+=======
 
 
                   ))  } catch (error) {
@@ -1409,6 +1586,7 @@ function Revolutionary2025ServicesShowcase() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
@@ -1419,6 +1597,8 @@ function Revolutionary2025ServicesShowcase() {
                     setSearchTerm('')
 
                     setSelectedCategory('all')
+<<<<<<< HEAD
+=======
 
 
                   }  } catch (error) {
@@ -1429,11 +1609,14 @@ function Revolutionary2025ServicesShowcase() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters
                 </button>
               </div>
+<<<<<<< HEAD
+=======
 
                               <span className="text - lg text - gray - 400 font - normal">{service.period}</span>;
                             </div>;
@@ -1532,6 +1715,7 @@ function Revolutionary2025ServicesShowcase() {
 }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
             <motion.div
@@ -1555,7 +1739,10 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -1607,10 +1794,15 @@ function Revolutionary2025ServicesShowcase() {
       </div>
     </>
 
+<<<<<<< HEAD
+}
+
+=======
 =======
 }
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
@@ -1660,11 +1852,26 @@ function Revolutionary2025ServicesShowcase() {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
+=======
+    </>);
+=======
+                        {/* Right Column */  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
     </>);
 }
+
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

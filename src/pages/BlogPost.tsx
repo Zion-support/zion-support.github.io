@@ -143,7 +143,7 @@ if ( {) {
         setRelatedPosts (related) } else {
         router.replace ('/blog');
       }
-      setIsLoading (false);
+      setIsLoading(false)
     }
 
     fetchPost()
@@ -260,10 +260,11 @@ if ( {) {
 }
 
     return (
-      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
-        <p > Article not found.</p>;
-        <Button on_click={(, ) => router.push ('/blog')}>Back to Blog</Button>;
-      </div>);
+      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
+        <p>Article not found.</p>
+        <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
+      </div>
+    )
   }
 
 
@@ -284,7 +285,7 @@ if (return '') {
     const url = encodeURIComponent (window.location.href);
     const title = encodeURIComponent (post.title);
     switch (platform) {
-      case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
+      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
 
       case 'facebook':;
@@ -449,11 +450,11 @@ if (return '') {
           
 
           {/* Article header */}
-          <div className='mb - 8 max - w-4xl mx - auto'>;
-            <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
+          <div className="mb-8 max-w-4xl mx-auto">
+            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
               {post.category}
-            </span>;
-            <h1 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
 
               asChild>;
@@ -522,31 +523,31 @@ if (return '') {
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Facebook'
-                        title='Share on Facebook'>;
-                        <Facebook className='h-4 w-4 mr-2' />;
-                        <span>Facebook</span>;
-                      </a>;
+                        title='Share on Facebook'                      >
+                        <Facebook className='h-4 w-4 mr-2' />
+                        <span>Facebook</span>
+                      </a>
                       <a
                         href={getShareUrl('twitter')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Twitter'
-                        title='Share on Twitter'>;
-                        <Twitter className='h-4 w-4 mr-2' />;
-                        <span>Twitter</span>;
-                      </a>;
+                        title='Share on Twitter'                      >
+                        <Twitter className='h-4 w-4 mr-2' />
+                        <span>Twitter</span>
+                      </a>
                       <a
                         href={getShareUrl('linkedin')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on LinkedIn'
-                        title='Share on LinkedIn'>;
-                        <Linkedin className='h-4 w-4 mr-2' />;
-                        <span>LinkedIn</span>;
-                      </a>;
-                    </div>;
+                        title='Share on LinkedIn'                      >
+                        <Linkedin className='h-4 w-4 mr-2' />
+                        <span>LinkedIn</span>
+                      </a>
+                    </div>
                   )}
 
             </h1>;
@@ -897,7 +898,7 @@ if (return '') {
             </div>;
 
             {/* Navigation */}
-            <div className='flex justify-between items-center mt-12'>;
+            <div className="flex justify-between items-center mt-12">
               <Button
                 variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -1115,7 +1116,7 @@ export default function Page() {;
               {blog_post.featured && (<span className="px - 4 py - 2 bg - yellow - 500 / 20 text - yellow - 400 text - sm rounded - full font -medium">;
                   Featured Article;
                 </span>) }
-            </div>;
+            </div>
             {/* Title */}
 
             <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6 leading -tight">;
@@ -1123,50 +1124,50 @@ export default function Page() {;
             </h1>;
 
             {/* Excerpt */}
-            <p className="text - xl text - gray - 300 mb - 8 leading -relaxed">;
-              {blog_post.excerpt}
-            </p>;
+            <p className="text-xl text-gray - 300 mb-8 leading -relaxed">
+              {blogPost.excerpt}
+            </p>
             {/* Article Meta */}
-            <div className="flex flex - wrap items - center justify - between gap - 4 py - 6 border - t border - b border - slate -700 / 50">;
-              <div className="flex items - center space - x - 6">;
-                <div className="flex items - center space - x - 2">;
-                  <User className="w - 5 h - 5 text - cyan -400" />;
-                  <div>;
-                    <span className="text - white font -medium">;
-                      {blog_post.author}
-                    </span>;
-                    <span className="text - gray - 400 text - sm block">;
-                      {blog_post.author_role}
-                    </span>;
-                  </div>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Calendar className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">;
-                    {format_date (blog_post.date) }
-                  </span>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Clock className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">{blog_post.read_time}</span>;
-                </div>;
-              </div>;
-              <div className="flex items - center space - x - 4">;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Heart className="w - 5 h - 5" />;
-                  <span>{blog_post.likes}</span>;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Bookmark className="w - 5 h - 5" />;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Share2 className="w - 5 h - 5" />;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+            <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">
+              <div className="flex items - center space - x-6">
+                <div className="flex items - center space - x-2">
+                  <User className="w-5 h-5 text-cyan -400" />
+                  <div>
+                    <span className="text-white font -medium">
+                      {blogPost.author}
+                    </span>
+                    <span className="text-gray - 400 text-sm block">
+                      {blogPost.authorRole}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items - center space - x-2">
+                  <Calendar className="w-5 h-5 text-cyan -400" />
+                  <span className="text-gray -300">
+                    {formatDate(blogPost.date) }
+                  </span>
+                </div>
+                <div className="flex items - center space - x-2">
+                  <Clock className="w-5 h-5 text-cyan -400" />
+                  <span className="text-gray -300">{blogPost.readTime}</span>
+                </div>
+              </div>
+              <div className="flex items - center space - x-4">
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Heart className="w-5 h-5" />
+                  <span>{blogPost.likes}</span>
+                </button>
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Bookmark className="w-5 h-5" />
+                </button>
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Share2 className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* Article Content */}
       <section className="py - 12">;
         <div className="container mx - auto px - 4">;
@@ -1190,12 +1191,12 @@ export default function Page() {;
               className="prose prose - invert prose - lg max - w - none">;
 
               {/* Featured Image */}
-              <div className="w - full h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - 2xl border border - cyan - 400 / 30 flex items - center justify - center mb - 12">;
-                <div className="text - center">;
-                  <BookOpen className="w - 20 h - 20 text - cyan - 400 mx - auto mb - 4" />;
-                  <p className="text - gray -300">Featured Article Image</p>;
-                </div>;
-              </div>;
+              <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">
+                <div className="text-center">
+                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4" />
+                  <p className="text-gray -300">Featured Article Image</p>
+                </div>
+              </div>
               {/* Article Content */}
 
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost && blogPost.content }}
@@ -1233,14 +1234,14 @@ export default function Page() {;
               <div className="flex flex - wrap gap - 2">;
                 {blog_post.tags.map (tag => (<span;
                     key={tag}
-                    className="px - 3 py - 1 bg - slate - 700 / 50 text - cyan - 400 text - sm rounded - full border border - slate - 600 / 50 hover:border - cyan - 400 / 50 transition - all duration -200">;
+                    className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
                     {tag}
                   </span>) ) }
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Author Bio */}
 
       <section className="py - 12">;

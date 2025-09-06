@@ -8,6 +8,10 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 // Utility to detect network connectivity. navigator && navigator.onLine is not reliable in
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+// Utility to detect network connectivity. navigator.onLine is not reliable in
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // all environments, so we also try a small request with a short timeout.
 export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== "undefined" && !navigator.onLine) {

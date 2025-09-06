@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import React, { useEffect, useState } from 'react',;
@@ -30,8 +32,6 @@ export default function IdentitySettingsPage() {
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
       else setError(data.error || 'Not found')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../../utils / kyc',
@@ -54,13 +54,48 @@ function load() {
   $2
 }
       else set_error (data.error || 'Not found');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+import type { KycProfile } from '../../../utils/kyc',;
+import { ProfileBadges } from '../../../components/ui/ProfileBadges',;
+export default function IdentitySettingsPage() {
+  const [userId, setUserId] = useState('demo-user'),
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [error, setError] = useState(''),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React, { useEffect, useState } from 'react';
+
+import Head from 'next/head';
+import type { KycProfile } from '../../../utils/kyc';
+import { ProfileBadges } from '../../../components/ui/ProfileBadges';
+export default function IdentitySettingsPage() {
+
+  const [userId, setUserId] = useState('demo-user')
+  const [profile, setProfile] = useState<KycProfile | null>(null)
+  const [error, setError] = useState('')
+  async function load() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    try {
+      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
+      const data = await res.json()
+      if (data.ok) setProfile(data.profile)
+      else setError(data.error |'Not found')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (e) {
-
-      set_error ('Failed to fetch');
-
+      setError('Failed to fetch')
     }
   }
+<<<<<<< HEAD
+=======
 
 
   }, []),
@@ -102,11 +137,49 @@ function load() {
         {error && <div className="mt - 3 text - sm text - red - 600">{error}</div>}
       </main>;
     </>);
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../../utils/kyc';
+import { ProfileBadges } from '../../../components/ui/ProfileBadges';
+export default function IdentitySettingsPage(req, res) {
+  try {
+  const [userId, setUserId] = useState('demo-user');
+  const [profile, setProfile] = useState<KycProfile | null>(null);
+  const [error, setError] = useState('');
+  async function load() {;
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    try {
+      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
+      const data = await res.json();
+      if (data.ok) setProfile(data.profile);
+      else setError(data.error || 'Not found');
+    } catch (error) {
+      setError('Failed to fetch');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
@@ -115,8 +188,11 @@ function load() {
     </>
   );
 };
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -137,8 +213,11 @@ function load() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

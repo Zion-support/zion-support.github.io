@@ -20,7 +20,7 @@ const contactInfo = {;
 },;
 const serviceCategories = [;
   {;
-    title: '🚀 2028 Futuristic Innovations',;
+    title: ' 2028 Futuristic Innovations',;
     icon: Rocket,;
     color: 'from-violet-600 to-purple-600',;
     description: 'Beyond the future of technology',;
@@ -32,7 +32,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🏙️ Smart City & Infrastructure',;
+    title: ' Smart City & Infrastructure',;
     icon: Building,;
     color: 'from-blue-600 to-cyan-600',;
     description: 'Intelligent urban solutions',;
@@ -44,7 +44,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⚛️ Quantum & Advanced Tech',;
+    title: ' Quantum & Advanced Tech',;
     icon: Atom,;
     color: 'from-indigo-600 to-blue-600',;
     description: 'Quantum computing and beyond',;
@@ -56,7 +56,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🤖 AI & Machine Learning',;
+    title: ' AI & Machine Learning',;
     icon: Brain,;
     color: 'from-emerald-600 to-teal-600',;
     description: 'Next-generation AI solutions',;
@@ -68,7 +68,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⛓️ Blockchain & Web3',;
+    title: ' Blockchain & Web3',;
     icon: Layers,;
     color: 'from-orange-600 to-red-600',;
     description: 'Decentralized solutions',;
@@ -80,7 +80,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🚗 Autonomous & Mobility',;
+    title: ' Autonomous & Mobility',;
     icon: Car,;
     color: 'from-red-600 to-pink-600',;
     description: 'Self-driving and mobility solutions',;
@@ -92,7 +92,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🏥 Healthcare & Biotech',;
+    title: ' Healthcare & Biotech',;
     icon: Heart,;
     color: 'from-pink-600 to-rose-600',;
     description: 'Advanced healthcare solutions',;
@@ -104,7 +104,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🎓 Education & Training',;
+    title: ' Education & Training',;
     icon: GraduationCap,;
     color: 'from-green-600 to-emerald-600',;
     description: 'Next-generation learning',;
@@ -116,7 +116,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⚖️ Legal & Compliance',;
+    title: ' Legal & Compliance',;
     icon: Scale,;
     color: 'from-slate-600 to-gray-600',;
     description: 'Legal technology solutions',;
@@ -128,7 +128,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🌍 Sustainability & Green Tech',;
+    title: ' Sustainability & Green Tech',;
     icon: Leaf,;
     color: 'from-emerald-600 to-green-600',;
     description: 'Environmental solutions',;
@@ -141,25 +141,25 @@ const serviceCategories = [;
   }
 ],;
 const companyLinks = [;
-  { name: '🏠 Home', href: '/', icon: Home },;
-  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },;
-  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },;
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },;
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },;
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },;
-  { name: '🎯 About Us', href: '/about', icon: Users },;
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
+  { name: ' Home', href: '/', icon: Home },;
+  { name: ' 2028 Services', href: '/2028-services-showcase', icon: Rocket },;
+  { name: ' Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },;
+  { name: ' 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },;
+  { name: ' Case Studies', href: '/case-studies', icon: Briefcase },;
+  { name: ' Blog & Resources', href: '/blog', icon: BookOpen },;
+  { name: ' About Us', href: '/about', icon: Users },;
+  { name: ' Contact', href: '/contact', icon: MessageCircle },;
+  { name: ' Support', href: '/support', icon: ShieldCheck }
 ],;
 const resourceLinks = [;
-  { name: '📖 Documentation', href: '/docs', icon: BookOpen },;
-  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },;
-  { name: '💡 API Reference', href: '/api', icon: Code },;
-  { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench },;
-  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },;
-  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },;
-  { name: '🔐 Security Center', href: '/security', icon: Shield },;
-  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
+  { name: ' Documentation', href: '/docs', icon: BookOpen },;
+  { name: ' Video Tutorials', href: '/tutorials', icon: Video },;
+  { name: ' API Reference', href: '/api', icon: Code },;
+  { name: ' Developer Tools', href: '/dev-tools', icon: Wrench },;
+  { name: ' Mobile Apps', href: '/mobile', icon: Smartphone },;
+  { name: ' Cloud Services', href: '/cloud', icon: Cloud },;
+  { name: ' Security Center', href: '/security', icon: Shield },;
+  { name: ' Analytics', href: '/analytics', icon: BarChart3 }
 ],
 
 export default function UltraFuturisticNavigation2028() {
@@ -300,7 +300,7 @@ export default function UltraFuturisticNavigation2028() {
                 className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2"
               >
                 <link.icon className="w-4 h-4" />
-                <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+                <span>{link.name.replace(/^[]/g, '').trim()}</span>
               </a>
             ))}
           </div>;
@@ -403,7 +403,7 @@ export default function UltraFuturisticNavigation2028() {
                       className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
-                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+                      <span className="text-purple-200">{link.name.replace(/^[]/g, '').trim()}</span>
                     </a>
                   ))}
                 </div>;

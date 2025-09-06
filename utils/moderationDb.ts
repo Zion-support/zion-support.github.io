@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+export interface ModerationFlag {
+export interface ModerationFlag {;
 
 
+export interface ModerationFlag {
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -9,18 +17,11 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-=======
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+=======
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
@@ -33,19 +34,7 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
 }
 
-export async function updateFlag(id: string, updates: Partial<ModerationFlag>): Promise<ModerationFlag | null> {
-  const flagIndex = flags.findIndex(flag => flag.id === id);
-  if (flagIndex === -1) return null;
-  
-  flags[flagIndex] = {
-    ...flags[flagIndex],
-    ...updates,
-    updatedAt: new Date(),
-  };
-  return flags[flagIndex];
-}
-
-export async function getAllFlags(): Promise<ModerationFlag[]> {
+export async function readAllFlags(): Promise<ModerationFlag[]> {;
   return [...flags];
 }
 

@@ -13,8 +13,8 @@ export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' })
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (
     <figure className="border rounded-md p-3 text-sm">
-      <blockquote className="italic opacity-90">“{quote}”</blockquote>
-      <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
+      <blockquote className="italic opacity-90">{quote}</blockquote>
+      <figcaption className="mt-2 font-medium opacity-80"> {author}</figcaption>
     </figure>
-  )
+  );
 }

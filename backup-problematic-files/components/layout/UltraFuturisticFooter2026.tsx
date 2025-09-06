@@ -276,7 +276,7 @@ export default function UltraFuturisticFooter2026() {
         >
           <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2026 Zion Tech Group. All rights reserved. | 
+               2026 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">
                 Privacy Policy
               </a>
@@ -304,7 +304,7 @@ export default function UltraFuturisticFooter2026() {
         >;
           <div className="flex flex-col md: flex-row justify-between items-center">;
             <div className="text-gray-400 text-sm mb-4 md:mb-0">;
-              © 2026 Zion Tech Group. All rights reserved. |;
+               2026 Zion Tech Group. All rights reserved. |;
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">;
                 Privacy Policy;
               </Link>;

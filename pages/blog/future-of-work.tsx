@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
+import React from 'react',
+export default function FutureOfWork() {
+  return (
+=======
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function FutureOfWork() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -13,7 +17,6 @@ export default /**
  * FutureOfWork - Function description
  */
 function FutureOfWork() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Head>;
@@ -100,7 +103,6 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text-white/90 mb-4'>;
-=======
           The Future of Work: Human - AI Collaboration | Zion Tech Group;
         </title>;
         <meta;
@@ -198,6 +200,8 @@ function FutureOfWork() {
                 </p>;
               </section>;
 
+<<<<<<< HEAD
+=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - green - 400'>;
                   New Roles and Opportunities;
@@ -228,10 +232,13 @@ function FutureOfWork() {
 
                   These roles require a unique blend of technical skills and;
                   human understanding—qualities that are becoming increasingly;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   valuable in the modern workplace.;
                 </p>;
               </section>;
 
+<<<<<<< HEAD
+=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - blue - 400'>;
                   Skills for the Future;
@@ -290,13 +297,15 @@ function FutureOfWork() {
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Our workplace design principles ensure that AI systems enhance;
                   rather than disrupt human workflows.;
                 </p>;
               </section>;
+<<<<<<< HEAD
+=======
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
                   Measuring Success;
@@ -350,6 +359,7 @@ function FutureOfWork() {
                     className='px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300';
                   >;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Explore Solutions;
                   </Link>;
                 </div>;
@@ -358,6 +368,8 @@ function FutureOfWork() {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -366,3 +378,4 @@ function FutureOfWork() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

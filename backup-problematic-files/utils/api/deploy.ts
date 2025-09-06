@@ -1,7 +1,6 @@
 import fs from "fs"
 import path from "path"
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
 function toSlug(_name: string): string {_return name
     .toLowerCase()
@@ -68,7 +67,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   if (input.modules.token || input.tokenActivation) {
     ensureDir(tokenDir),
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
     writeTextFile(
       tokenConfigPath,
       JSON.stringify(
@@ -96,7 +94,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     ),
     assets.push({ kind: "file", path: wpPath, description: "Whitepaper v1.0" }),
     logs.push({ timestamp: nowIso(), level: "info", action: "whitepaper_generated" }),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
     writeTextFile(
       roadmapPath,
@@ -132,7 +129,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // Schedule launch stream (/summit)
   ensureDir(eventsDir),
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   writeTextFile(
     summitEventPath,
     JSON.stringify(
@@ -148,7 +144,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // 4. Activate Public Pages (record intent)
   const pagesActivationPath = path.join(baseDir, "pages.json"),
   const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   writeTextFile(
     pagesActivationPath,
     JSON.stringify(
@@ -185,6 +180,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     assets,
     logs,
     summary,
-    version}
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+    version};
 }

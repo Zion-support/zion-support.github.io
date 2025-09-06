@@ -5,7 +5,10 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -13,12 +16,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
+<<<<<<< HEAD
+=======
 
   };
-
   if (!personId || !fromNation || !toNation || !role || !startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -26,6 +31,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`
   const version = nextVersionFor(state, entityKey)
   const event = {
+<<<<<<< HEAD
+    eventId: uuidv4()
+    type: "talent_mobility" as const
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
+  upsertEvent(state, event)
+  writeState(state)
+  const body = { ...event, propagate: false }
+  const headers: Record<string, string> = {}
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig
+    eventId: uuidv4(),
+    type: "talent_mobility" as const,
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()},
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -37,7 +63,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)

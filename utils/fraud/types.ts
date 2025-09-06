@@ -13,6 +13,11 @@ export interface AdminAction {
 
 
 export interface AdminAction {;
+export interface AdminAction {
+
+
+
+export interface AdminAction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
@@ -28,6 +33,11 @@ export interface AdminAction {;
 
 
 export interface FraudDetectionResult {;
+<<<<<<< HEAD
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+=======
 
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -41,11 +51,15 @@ export interface FraudDetectionResult {;
 export interface FraudDetectionConfig {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   enabled: boolean;
   rules: {
-    suspicious_activity: {
+    suspiciousActivity: {
       enabled: boolean;
 
+<<<<<<< HEAD
+
+=======
       threshold: number,
     }
     fake_profile: {

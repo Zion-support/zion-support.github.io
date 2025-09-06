@@ -24,8 +24,8 @@ export const safeEnv = {
 export function getEnv(key: string, defaultValue = ''): string {
   if (
     typeof (globalThis as any).process !== 'undefined' &&
-    (globalThis as any).process && process.env &&
-    typeof (globalThis as any).process && process.env[key] === 'string'
+    (globalThis as any).process.env &&
+    typeof (globalThis as any).process.env[key] === 'string'
   ) {
 
     return (globalThis as any).process && process.env[key];
@@ -41,7 +41,7 @@ export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 
 // Export the polyfilled process object
-export const processEnv =
+export const processEnv = null;
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process && process.env
 /**;

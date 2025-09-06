@@ -6,13 +6,12 @@
   res && res.end();
 
 }
-
+<<<<<<< HEAD
 =======
   const { provider } = req.query as { provider: string };
   const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
   res.writeHead(302, { Location: callbackUrl });
   res.end()
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 export default /**
  * handler - Function description
@@ -27,12 +26,16 @@ function handler() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -44,6 +47,23 @@ export default function handler(req, res) {
   const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
   res.writeHead(302, { Location: callbackUrl });
   res.end();
+<<<<<<< HEAD
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

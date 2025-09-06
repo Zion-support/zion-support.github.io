@@ -9,8 +9,8 @@ interface ActiveFiltersProps {
   toggleRegion: (region: string) => void
   priceRange: [number, number]
   setPriceRange: (range: [number, number]) => void
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number]) => void
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;interface ActiveFiltersProps {
   selectedSkills: string[]
   toggleSkill: (skill: string,) => void
@@ -70,31 +70,20 @@ import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
 
 interface ActiveFiltersProps {;
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;interface ActiveFiltersProps {;
   selectedSkills: string[],;
-  toggleSkill: (skill: string,) => void,;
+  toggleSkill: (skill: string) => void,;
   selectedAvailability: string[],;
-  toggleAvailability: (status: string,) => void,;
+  toggleAvailability: (status: string) => void,;
   selectedRegions: string[],;
-  toggleRegion: (region: string,) => void,;
+  toggleRegion: (region: string) => void,;
   priceRange: [number, number],;
-  setPriceRange: (range: [number, number],) => void,;
+  setPriceRange: (range: [number, number]) => void,;
   experienceRange: [number, number],;
-  setExperienceRange: (range: [number, number],) => void,;
+  setExperienceRange: (range: [number, number]) => void,;
   clearFilters: () => void;
 }
-
-export function ActiveFilters(): any ({;
+;
+export function ActiveFilters({;
   selectedSkills,;
   toggleSkill,;
   selectedAvailability,;
@@ -105,18 +94,17 @@ export function ActiveFilters(): any ({;
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
-  clearFilters,;
+  clearFilters;
 }: ActiveFiltersProps) {;
   // Check if any filters are active;
   const hasActiveFilters =;
-    selectedSkills && selectedSkills.length > 0 ||;
-    selectedAvailability && selectedAvailability.length > 0 ||;
-    selectedRegions && selectedRegions.length > 0 ||;
+    selectedSkills.length > 0 ||;
+    selectedAvailability.length > 0 ||;
+    selectedRegions.length > 0 ||;
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
-
   if (!hasActiveFilters) return null;
 
   return (
@@ -126,11 +114,12 @@ export function ActiveFilters(): any ({;
       {selectedSkills && selectedSkills.map(skill => (;
         <ClickableBadge
           key={skill}
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleSkill(skill)}        >;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={() => toggleSkill(skill)}
+        >;
           {skill}
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
+          <X className="h-3 w-3" />
+        </ClickableBadge>
       ))}
 
 
@@ -138,15 +127,14 @@ export function ActiveFilters(): any ({;
 
         <ClickableBadge
           key={status}
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleAvailability(status)}        >;
-          {status === 'full-time';
-            ? 'Full-time';
-            : status === 'part-time';
-              ? 'Part-time';
-              : 'Project-based'}
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => toggleAvailability(status)}
+        >;
+          {status === 'full-time' ? 'Full-time' :;
+           status === 'part-time' ? 'Part-time' :;
+           'Project-based'}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
       ))}
 
 
@@ -154,8 +142,9 @@ export function ActiveFilters(): any ({;
 
         <ClickableBadge
           key={region}
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleRegion(region)}        >;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => toggleRegion(region)}
+        >;
           {region}
 
 
@@ -277,7 +266,6 @@ export function ActiveFilters(): any ({;
       </Button>;
     </div>;
   );
-
 }
 
 

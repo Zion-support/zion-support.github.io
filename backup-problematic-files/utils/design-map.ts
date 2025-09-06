@@ -1,8 +1,8 @@
+const tailwindConfig = require('../tailwind.config.js')
 export type DesignMapSection = {_id: string
   title: string
   description?: string
   items: { id: string, title: string, description?: string }[]
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 }
 
 export type DesignMap = {_route: string
@@ -126,7 +126,6 @@ export type TokenSet = {
 
 export async function buildTokenSet(): Promise<TokenSet> {
   // Dynamically import Tailwind config for color extraction
-  const tailwindConfig = require('../tailwind.config.js')
   const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
   const colors: Record<string string> = {}
 
@@ -165,5 +164,5 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {_
     const _res = await fetch(`${base.replace(/\/$/, _'')}/api/design-tokens`)
     if (!res.ok) return null
     return (await res.json()) as Partial<TokenSet>
-  } catch {_return null}
+  } catch {_return null};
 }

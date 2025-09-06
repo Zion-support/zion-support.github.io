@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -11,6 +14,8 @@
             <span className="text-white/60 mx-2">→</span>
             <span className="text-white">Data Analytics Transformation</span>
           </nav>
+<<<<<<< HEAD
+=======
 
 
           {/* Header */  } catch (error) {
@@ -21,6 +26,7 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
               Healthcare Industry
@@ -32,6 +38,8 @@
               How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform
             </p>
           </header>
+<<<<<<< HEAD
+=======
 
 =======
 import React from 'react',
@@ -81,6 +89,7 @@ function CaseStudyPage() {
             {/* Company Overview */}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Case Study Content */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -92,9 +101,6 @@ function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -108,9 +114,12 @@ function CaseStudyPage() {
                   A large healthcare network serving multiple communities with hospitals, 
 =======
                   A large healthcare network serving multiple communities with hospitals,
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -129,16 +138,17 @@ function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
-
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -163,16 +173,17 @@ function CaseStudyPage() {
                 </ul>
               </div>
             </section>
-
-
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -186,9 +197,12 @@ function CaseStudyPage() {
                   We built a comprehensive data analytics platform that provides real-time insights, 
 =======
                   We built a comprehensive data analytics platform that provides real-time insights,
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   predictive modeling, and automated reporting for improved patient care and operational efficiency.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -203,20 +217,18 @@ function CaseStudyPage() {
                       Advanced big data infrastructure processes millions of patient records, 
 =======
                       Advanced big data infrastructure processes millions of patient records,
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       lab results, and operational data points in real-time.
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Machine Learning</h4>
                     <p className="text-white/80">
-
-
-                      ML algorithms identify patterns, predict outcomes, and provide
-
-
                       personalized treatment recommendations.
                     </p>
                   </div>
@@ -231,9 +243,12 @@ function CaseStudyPage() {
                       Live dashboards provide instant insights into patient conditions, 
 =======
                       Live dashboards provide instant insights into patient conditions,
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       resource utilization, and operational metrics.
                     </p>
                   </div>
@@ -246,27 +261,32 @@ function CaseStudyPage() {
 
 =======
                       Advanced predictive models forecast patient outcomes, readmission risks, 
+<<<<<<< HEAD
+                      Advanced predictive models forecast patient outcomes, readmission risks,
+=======
 =======
                       Advanced predictive models forecast patient outcomes, readmission risks,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       and resource requirements.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-
-
             {/* Results */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -316,16 +336,17 @@ function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
-
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -334,8 +355,6 @@ function CaseStudyPage() {
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-purple-400 font-semibold">{tech}</span>
                     </div>
-
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -571,9 +590,12 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -609,20 +631,27 @@ export default function CaseStudyPage(req, res) {
                 </div>
               </div>
             </section>
-
-
             {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  This case study demonstrates the real impact of data analytics transformation.
+                  Let&apos,s discuss how we can help you achieve similar results.
+                  Let's discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link
 
 
 
@@ -649,6 +678,8 @@ export default function CaseStudyPage(req, res) {
       </div>
     </>
   )
+<<<<<<< HEAD
+=======
 
 =======
 }
@@ -780,6 +811,7 @@ export default function CaseStudyPage(req, res) {
                       <h4 className="text-lg font-semibold text-white">Data Assessment & Planning (Months 1-2)</h4>;
                       <p className="text-white/70">Comprehensive data audit and system architecture design</p>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </div>;
                   </div>;
                   <div>;
@@ -870,8 +902,6 @@ export default function CaseStudyPage(req, res) {
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case - studies";
-                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - purple - 400 / 50 transition - all duration - 300";
                   >;
                     View All Case Studies;
                   </Link>;
@@ -881,8 +911,91 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
+=======
     </>);
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          {/* Breadcrumb */}
+          <nav className=&quot;mb-8&quot;>
+            <Link href=&quot;/&quot; className=&quot;text-white/60 hover:text-white transition-colors&quot;>
+              Home
+            </Link>
+            <span className=&quot;text-white/60 mx-2&quot;>→</span>
+            <Link href=&quot;/case-studies&quot; className=&quot;text-white/60 hover:text-white transition-colors&quot;>
+              Case Studies
+            </Link>
+            <span className=&quot;text-white/60 mx-2&quot;>→</span>
+            <span className=&quot;text-white&quot;>Data Analytics Transformation</span>
+          </nav>
+
+          {/* Header */}
+          <header className=&quot;text-center mb-16&quot;>
+            <div className=&quot;inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6&quot;>
+              Healthcare Industry
+            </div>
+            <h1 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+              Data Analytics Transformation
+            </h1>
+            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
+              How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform
+            </p>
+          </header>
+
+          {/* Case Study Content */}
+          <div className=&quot;max-w-4xl mx-auto&quot;>
+            {/* Company Overview */}
+            <section className=&quot;mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Company Overview</h2>
+              <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
+                <h3 className=&quot;text-2xl font-semibold text-purple-400 mb-4&quot;>Healthcare Provider</h3>
+                <p className=&quot;text-white/90 text-lg mb-4&quot;>
+                  A large healthcare network serving multiple communities with hospitals, 
+                  clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
+                </p>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-6&quot;>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-purple-400&quot;>5+</div>
+                    <div className=&quot;text-white/70&quot;>Hospitals</div>
+                  </div>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-purple-400&quot;>50+</div>
+                    <div className=&quot;text-white/70&quot;>Clinics</div>
+                  </div>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-purple-400&quot;>$200M+</div>
+                    <div className=&quot;text-white/70&quot;>Annual Budget</div>
+=======
+
+import React from 'react';
+
+import Head from 'next/head';
+import Link from 'next/link';
+export default function CaseStudyPage() {
+  return (
+    <>
+      <Head>
+        <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
+        <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <main className="container mx-auto px-6 py-12">
+<<<<<<< HEAD
+          {/* Breadcrumb */}
+=======
+          {/* Breadcrumb */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

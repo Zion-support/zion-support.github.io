@@ -13,6 +13,9 @@ function load(): Record<string, KycProfile> {
     return {};
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true }),

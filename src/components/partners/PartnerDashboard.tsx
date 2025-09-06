@@ -43,7 +43,7 @@ export function PartnerDashboard() {
   },
   
   return (
-    <div className='space-y-6'>;
+    <div className="space-y-6">
       {/* Stats Overview */}
 
 
@@ -151,11 +151,12 @@ export function PartnerDashboard() {
 
 
         </CardHeader>
-        <CardContent className='flex justify-center items-center p-6'>
-          <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full'>
-            <LineChart className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
-            <p className='text-zion-slate-light'>
-              Detailed analytics will be available soon
+        <CardContent>
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+            <p className="text-zion-slate-light mb-4">No referrals yet</p>
+            <p className="text-xs text-zion-slate-light">
+              Start sharing your referral links to earn rewards
             </p>
           </div>
         </CardContent>

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import Link from "next/link",;
@@ -22,15 +24,35 @@ export default /**
 function CybersecurityPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+import Link from "next/link";
+export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
+  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
+  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
+export default function CybersecurityPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
+  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",;
+  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
+export default function CybersecurityPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    <div className="min-h-screen">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Cybersecurity Services</span>;
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto text-center">;
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
+            <span className="gradient-text">Cybersecurity Services</span>;
           </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;
+<<<<<<< HEAD
+=======
 
             security solutions. From threat detection to compliance management,
 
@@ -39,6 +61,7 @@ function CybersecurityPage() {
             security solutions. From threat detection to compliance management,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
@@ -132,6 +155,8 @@ function CybersecurityPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 5H7a2 2 0 00 - 2 2v10a2 2 0 002 2h8a2 2 0 002 - 2V7a2 2 0 00 - 2-2h - 2M9 5a2 2 0 002 2h2a2 2 0 002 - 2M9 5a2 2 0 012 - 2h2a2 2 0 012 2m - 3 7h3m - 3 4h3m - 6-4h.01M9 16h.01" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Security Assessment</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -142,6 +167,7 @@ function CybersecurityPage() {
                 Comprehensive security assessments including penetration testing,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -161,6 +187,8 @@ function CybersecurityPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+=======
 
 
                 Ensure compliance with industry standards including SOC2, ISO 27001,;
@@ -172,7 +200,17 @@ function CybersecurityPage() {
               <p className="text - gray - 400 mb - 4">;
                 Ensure compliance with industry standards including SOC2, ISO 27001,
                 GDPR, and industry - specific regulations.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
+              <p className="text-gray-400 mb-4">;
+<<<<<<< HEAD
+                Ensure compliance with industry standards including SOC2, ISO 27001;
+=======
+                Ensure compliance with industry standards including SOC2, ISO 27001,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                GDPR, and industry-specific regulations.;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• SOC2 compliance</li>;

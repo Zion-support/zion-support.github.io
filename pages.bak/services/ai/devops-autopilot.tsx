@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -14,9 +17,30 @@ interface DevopsautopilotProps {
 
 
 
-export default function Devopsautopilot({ }: DevopsautopilotProps) {
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+import React from 'react';
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+interface DevopsautopilotProps {
+  // Add props here as needed
+}
+>>>>>>> main
+export default function Devopsautopilot({ }: DevopsautopilotProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -54,16 +78,35 @@ interface DevopsautopilotProps {;
   // Add props here as needed;
 }
 export default function Devopsautopilot(): any ({ }: DevopsautopilotProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.bak/services/ai/devops-autopilot.tsx
   return (
     <div>;
       <h1>Devopsautopilot</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

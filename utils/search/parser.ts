@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+  };
+
+  const apiKey =
+    process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+  if (!apiKey) return base;
+=======
 
 export async function parseQueryToFilters(
   query: string,

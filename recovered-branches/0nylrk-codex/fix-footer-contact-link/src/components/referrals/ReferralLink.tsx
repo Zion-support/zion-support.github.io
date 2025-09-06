@@ -1,23 +1,60 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
@@ -52,6 +89,8 @@ export function ReferralLink({
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface ReferralLinkProps {;
   referralLink: string,;
@@ -83,6 +122,8 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Input
               value={referralLink}
               readOnly
@@ -215,12 +256,25 @@ function ReferralLink() {
             >;
               <Share className="h - 4 w - 4" />;
 
+=======
+            <Button ;
+              variant="outline" ;
+              size="sm";
+              className="flex items-center gap-2";
+              onClick={() => onShare('linkedin')}
+            >;
+              <Share className="h-4 w-4" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     </Card>);
 }
 
@@ -231,3 +285,37 @@ function ReferralLink() {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  )
+  )
+
+    </Card>;
+  ),;}
+ interface ReferralLinkProps {
+  referralLink: string;
+onCopy: () => void;
+onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void 
+}export function ReferralLink ({
+  referralLink, onCopy, onShare 
+}: ReferralLinkProps) {
+  const [copied, setCopied] = useState (false);
+const handleCopy = () => {
+  onCopy ();
+setCopied (true);
+setTimeout ( () => setCopied (false), 2000) 
+};
+mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link className=" h-5 w-5"/> Your Referral Link </CardTitle> <CardDescription> Share this link with others to earn rewards when they join and complete onboarding </CardDescription> </CardHeader> <CardContent> <div className=" flex flex-col space-y-3"> <div className=" flex space-x-2"> <Input value= {
+  referralLink 
+}readOnly className=" font-mono text-sm"/> Copied to clipboard! </p>) 
+}</div> </CardContent> <CardFooter className=" border-t bg-muted/50 p-4"> <div className=" flex flex-col sm:flex-row w-full justify-between items-center gap-4"> <p className=" text-sm text-muted-foreground">Share on social media:</p> <div className=" flex space-x-2"> <Button > <Twitter className=" h-4 w-4"/> Twitter </Button> <Button > <Facebook className=" h-4 w-4"/> Facebook </Button> <Button > <Share className=" h-4 w-4" /> LinkedIn </Button> </div> </div> </CardFooter> </Card>) 
+}
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+  )
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

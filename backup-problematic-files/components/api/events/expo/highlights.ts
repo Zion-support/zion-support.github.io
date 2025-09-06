@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
     const { OpenAI } = await import('openai'),;
     const client = new OpenAI({ apiKey }),;
-    const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify(top)}`,;
+    const prompt = `Summarize todays top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify(top)}`,;
     const chat = await client.chat.completions.create({ model: 'gpt-4o-mini', messages: [{ role: 'user', content: prompt }], temperature: 0.3 });
     const content = chat.choices?.[0]?.message?.content || baseSummary;
     return res.status(200).json({ summary: content, provider: 'openai' });

@@ -25,6 +25,10 @@ export interface AmlProvider {
     country: string;
   }): Promise<AmlResult>;
 }
+export interface AmlProvider {
+  check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
+  check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
+}
 class MockAmlProvider implements AmlProvider {
   async checkPerson(params: {
     fullLegalName: string;
@@ -54,20 +58,23 @@ class MockAmlProvider implements AmlProvider {
     return { status: "clear" };
   }
 }
+<<<<<<< HEAD
+}
+
+export function getAmlProvider(): AmlProvider {;
+  return new MockAmlProvider();
+=======
 
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
 }
-
 export function generateAmlCheckId(): string {
   return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-
 export function isAmlCheckExpired(check: AmlCheck): boolean {
   return new Date(check.expiresAt) < new Date();
 }
-
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   const colors = {
     low: 'green',
@@ -77,8 +84,6 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   };
   return colors[riskLevel];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ();
@@ -99,9 +104,13 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     }
     return { status: 'clear' }
   }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

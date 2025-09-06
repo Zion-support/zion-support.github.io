@@ -101,7 +101,7 @@ const Homepage2043: React.FC = () => {;
       company: "QuantumTech Industries",
       content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
       rating: 5,
-      avatar: "👩‍🔬"
+      avatar: ""
     },
     {
       name: "Marcus Rodriguez",
@@ -109,7 +109,7 @@ const Homepage2043: React.FC = () => {;
       company: "SpaceMining Corp",
       content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",
       rating: 5,
-      avatar: "👨‍🚀"
+      avatar: ""
     },
     {
       name: "Dr. Emily Watson",
@@ -117,7 +117,7 @@ const Homepage2043: React.FC = () => {;
       company: "Consciousness Research Institute",
       content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
       rating: 5,
-      avatar: "👩‍💻"
+      avatar: ""
   }, []),;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices],;
@@ -186,7 +186,7 @@ const Homepage2043: React.FC = () => {;
       company: "QuantumTech Industries",;
       content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",;
       rating: 5,;
-      avatar: "👩‍🔬";
+      avatar: "";
     },;
     {;
       name: "Marcus Rodriguez",;
@@ -194,7 +194,7 @@ const Homepage2043: React.FC = () => {;
       company: "SpaceMining Corp",;
       content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",;
       rating: 5,;
-      avatar: "👨‍🚀";
+      avatar: "";
     },;
     {;
       name: "Dr. Emily Watson",;
@@ -202,7 +202,7 @@ const Homepage2043: React.FC = () => {;
       company: "Consciousness Research Institute",;
       content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",;
       rating: 5,;
-      avatar: "👩‍💻";
+      avatar: "";
     }
   ],;
   const handleGetStarted = useCallback(() => {;
@@ -519,7 +519,7 @@ const Homepage2043: React.FC = () => {;
                   transition={{ duration: 0.5 }}
                   className="text-center max-w-4xl mx-auto"
                 >
-                  <div className="text-8xl mb-6">💬</div>
+                  <div className="text-8xl mb-6"></div>
                   <blockquote className="text-2xl text-white mb-8 leading-relaxed italic">
                     "{testimonials[currentTestimonialIndex].content}"
                   </blockquote>

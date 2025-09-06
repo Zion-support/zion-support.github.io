@@ -18,4 +18,4 @@ const PerformanceOptimizationChat: NextPage = () => {
   )
 },
 
-export default PerformanceOptimizationChat,
+export default PerformanceOptimizationChat,;

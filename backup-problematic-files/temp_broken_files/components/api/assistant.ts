@@ -14,11 +14,19 @@ Context about Zion AI Marketplace:
 - Vendors can list their AI models/services with pricing, usage tiers, and documentation
 
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
+<<<<<<< HEAD
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
 3) How does pricing work?  → Vendors set pricing, users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
 4) How do I integrate APIs?  → Each product page includes API docs and keys—follow Quickstart steps or SDKs when available.
 5) How do I get support?  → Use in-app support, contact the vendor, or reach Zion’s support channel.
+=======
+1) What is Zion?   A marketplace to find and integrate AI models and services.
+2) How do I list my AI model or service?   Create a vendor account, submit product details, pricing, and docs for review.
+3) How does pricing work?   Vendors set pricing, users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
+4) How do I integrate APIs?   Each product page includes API docs and keysfollow Quickstart steps or SDKs when available.
+5) How do I get support?   Use in-app support, contact the vendor, or reach Zions support channel.
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 Style: - Use bullets and short paragraphs
 - Include links or navigation hints only if known (otherwise describe where to look)
@@ -47,5 +55,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' },
     return res.status(200).json({ message })
   } catch (error: any) {
-    console.error('Assistant API error:', error?.message || error),
+    console.error('Assistant API error:', error?.message || error),;
     return res.status(500).json({ error: 'Assistant request failed' })  }}

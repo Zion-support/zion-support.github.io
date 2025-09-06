@@ -122,6 +122,8 @@ export function ServiceTypeStep({
               AI specialists, developers, consultants
             </p>
           </Card>
+<<<<<<< HEAD
+<<<<<<< HEAD
 
           <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
@@ -145,11 +147,27 @@ export function ServiceTypeStep({
             Select a specific {formData.serviceType}
           </h3>
 
+=======
+<<<<<<< HEAD
+      {formData.serviceType && (
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+=======
+
+      {formData.serviceType && (
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
               placeholder={`Search ${formData.serviceType}...`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
@@ -187,11 +205,18 @@ export function ServiceTypeStep({
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
 
+=======
+    </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;
@@ -260,6 +285,8 @@ export function ServiceTypeStep({
                     rating={Math.floor (Math.random () * 2) + 3}
                     review_count={Math.floor (Math.random () * 50) + 10}
                     image={item.image}
+<<<<<<< HEAD
+<<<<<<< HEAD
                     description="Sample listing description";
                   />;
                 </div>))) : (
@@ -271,3 +298,22 @@ export function ServiceTypeStep({
     </div>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+                    description="Sample listing description"
+                  />
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-8 text-zion-slate-light">
+                No items found. Please try a different search.
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

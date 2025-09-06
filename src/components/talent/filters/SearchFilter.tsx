@@ -51,7 +51,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
 
         />;
-        <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;
+        <p id="talent-search-help" className="sr-only">;
           Type a name or skill to filter results;
         </p>;
       </div>;

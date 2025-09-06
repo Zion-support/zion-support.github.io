@@ -20,7 +20,6 @@ interface QuoteDetailsProps {
 }
 
 import {format} from "date-fns";
-=======
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Not specified";
@@ -31,7 +30,30 @@ import {format} from "date-fns";
     }
   };
 
-=======
+}
+
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null;
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not specified";
+    try {
+      return format(new Date(dateString), "PPP");
+    } catch (e) {
+      return dateString;
+    }
+  }
+  };
+import {format} from "date-fns";
+
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not specified";
+    try {
+      return format(new Date(dateString), "PPP");
+    } catch (e) {
+      return dateString;
+    }
+  };
+
 import React from "react",;
 import {;
   Dialog,;
@@ -47,12 +69,10 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
-
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -94,22 +114,7 @@ if (return "Not specified") {
     } catch (e) {
 
 
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';
-    try {;
-      return format(new Date(dateString), 'PPP');
-    } catch (e) {;
 
-      return dateString;
-    }
-
-  },
-
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -274,9 +279,6 @@ if (return "Not specified") {
     </Dialog>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

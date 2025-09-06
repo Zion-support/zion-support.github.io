@@ -37,12 +37,10 @@ import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
 
-
-
-
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
-
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
@@ -54,7 +52,6 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview");
     }
-  };
 
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
@@ -204,42 +201,6 @@ function DetailsStep() {;
   );
 }
 
-import React, { useState } from './react';
-import { MobileHeader } from '../components / common / MobileHeader';
-import { BottomNavigation } from '../components / common / BottomNavigation';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Label } from '@/components / ui / label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Zap, ChevronLeft, ChevronRight } from './lucide-react';
-import { Badge } from '@/components / ui / badge';
-import { Card, CardContent } from '@/components / ui / card';
-;
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-;
-export /**
- * MobileJobPost - Function description
- */
-function MobileJobPost() {
-  const [current_step, setCurrentStep] = useState < JobPostStep>("details");
-;
-  const goToNextStep = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("requirements");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("budget");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("preview");
     }
   }
 ;
@@ -445,7 +406,6 @@ function RequirementsStep() {
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
@@ -493,7 +453,6 @@ function BudgetStep() {;
 
       <div className="space-y-2">;
         <Label htmlFor="paymentType">Payment Type</Label>;
-=======
   const [new_skill, setNewSkill] = useState ("");
 ;
   const add_skill = () =>: any {
@@ -668,10 +627,6 @@ function BudgetStep() {
   );
 }
 
-
-
-
-
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -772,9 +727,3 @@ function PreviewStep() {
       <Button variant="outline" className="w - full">Edit Job Post</Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

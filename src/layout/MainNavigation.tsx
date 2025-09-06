@@ -59,9 +59,9 @@ if ( {) {
       return;
 
     }
-    setIsMobileMenuOpen (false);
+    setIsMobileMenuOpen(false)
   }
-  const base_links = [;
+  const baseLinks = [
     {
       key: 'home'
       href: '/'
@@ -122,102 +122,89 @@ interface MainNavigationProps {;
   unreadCount?: number,;
   className?: string;
 }
-
-interface MainNavigationProps {;
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-
-export function MainNavigation(): any ({;
-  isAdmin = false,;
-  unreadCount = 0,;
-  className,;
-}: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state;
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { count } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items && items.length;
-  const router = useRouter(); // Changed from useLocation;
-  const { t } = useTranslation();
-
-  const handleCartClick = (e: React && React.MouseEvent,) => {;
+;
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
+  const { user } = useAuth(),;
+  const isAuthenticated = !!user,;
+  const [loginOpen, setLoginOpen] = useState(false),;
+  const { count } = useFavorites(),;
+  const { items } = useCart(),;
+  const cartCount = items.length,;
+  const router = useRouter(), // Changed from useLocation;
+  const { t } = useTranslation(),;
+  const handleCartClick = (e: React.MouseEvent) => {;
     if (!isAuthenticated) {;
-      e && e.preventDefault();
-      setLoginOpen(true);
+      e.preventDefault(),;
+      setLoginOpen(true),;
       return;
     }
     setIsMobileMenuOpen(false);
-  };
-
+  },;
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-      matches: (path: string) => path === '/',    },;
+      matches: (path: string) => path === '/';
+    },;
     {;
       key: 'marketplace',;
       href: '/marketplace',;
-      matches: (path: string) => path && path.startsWith('/marketplace'),    },;
+      matches: (path: string) => path.startsWith('/marketplace');
+    },;
     {;
       key: 'categories',;
       href: '/categories',;
-      matches: (path: string) => path && path.startsWith('/categories'),    },;
+      matches: (path: string) => path.startsWith('/categories');
+    },;
     {;
       key: 'talent',;
       href: '/talent',;
-      matches: (path: string) =>;
-        path && path.startsWith('/talent') && !path && path.includes('/talent-dashboard'),    },;
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
+    },;
     {;
       key: 'equipment',;
       href: '/equipment',;
-      matches: (path: string) => path && path.startsWith('/equipment'),    },;
+      matches: (path: string) => path.startsWith('/equipment');
+    },;
     {;
       key: 'community',;
       href: '/community',;
-      matches: (path: string) =>;
-        path && path.startsWith('/community') || path && path.startsWith('/forum'),;
-    },;
-  ];
-
-  const links = baseLinks && baseLinks.map(link => ({;
-    ...link,;
-    name: t(`nav.${link && link.key}`),;
-  }));
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
+    }
+  ],;
+  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;
   // Add authenticated-only links;
   if (isAuthenticated) {;
-    links && links.push({;
+    links.push({;
       key: 'dashboard',;
-      name: t('nav && nav.dashboard'),;
+      name: t('nav.dashboard'),;
       href: '/dashboard',;
-      matches: (path: string) =>;
-        path === '/dashboard' ||;
-        path === '/client-dashboard' ||;
-        path === '/talent-dashboard',;
-    });  }
-
+      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
+    });
+  }
+;
   // Add admin-only links;
   if (isAdmin) {;
-    links && links.push({;
+    links.push({;
       key: 'analytics',;
-      name: t('nav && nav.analytics'),;
+      name: t('nav.analytics'),;
       href: '/analytics',;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
 
   return (
-    <>;
+    <>
       <button
-        className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
+        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
-        aria-controls='main-navbar-collapse';
-        aria-label='Toggle navigation'      >;
-        <span className='navbar-toggler-icon'></span>;
-      </button>;
+        aria-controls="main-navbar-collapse"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
       <nav
         className={cn('navbar', className)}
         role='navigation'
@@ -225,7 +212,7 @@ export function MainNavigation(): any ({;
 
 
         <div
-          id='main-navbar-collapse'
+          id="main-navbar-collapse"
           className={cn(
 
 
@@ -282,14 +269,14 @@ export function MainNavigation(): any ({;
                     <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
 
                       {count}
-                    </span>;
+                    </span>
                   )}
-                </Link>;
-              </li>;
+                </Link>
+              </li>
             )}
             {/* Wallet link */}
-            {isAuthenticated && (;
-              <li className='nav-item'>;
+            {isAuthenticated && (
+              <li className='nav-item'>
                 <Link
                   href='/wallet'
                   aria-label='Wallet'
@@ -308,8 +295,8 @@ export function MainNavigation(): any ({;
 
             )}
             {/* Messages link */}
-            {isAuthenticated && (;
-              <li className='nav-item'>;
+            {isAuthenticated && (
+              <li className='nav-item'>
                 <Link
                   href='/messages'
                   aria-label='Messages'
@@ -332,13 +319,14 @@ export function MainNavigation(): any ({;
                 </Link>;
               </li>;
             )}
+;
             {/* Cart icon with badge */}
-            <li className='nav-item'>;
-              <HoverCard openDelay={100}>;
-                <HoverCardTrigger asChild>;
+            <li className="nav-item">
+              <HoverCard openDelay={100}>
+                <HoverCardTrigger asChild>
                   <Link
-                    href='/cart'
-                    aria-label={t('nav && nav.cart')}
+                    href="/cart"
+                    aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
 
@@ -358,33 +346,7 @@ export function MainNavigation(): any ({;
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.starts_with ('/categories'),    },
-    {
-      key: 'talent',
-      href: '/talent',
-      matches: (path: string) =>;
-        path.starts_with ('/talent') && !path.includes ('/talent - dashboard'),    },
-    {
-      key: 'equipment',
-      href: '/equipment',
-      matches: (path: string) => path.starts_with ('/equipment'),    },
-    {
-      key: 'community',
-      href: '/community',
-      matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),
-    },
-  ];
-  const links = base_links.map (link => ({
-    ...link,
-    name: t (`nav.${link.key}`),
-  }));
-  // Add authenticated - only links;
-  // Check condition
-if ( {) {
-  $2
+      matches: (path: string)  => path.startsWith('/contact')
 }
     links.push ({
       key: 'dashboard',
@@ -610,9 +572,9 @@ function Page() { []);
     <nav class_name = {`${class_name}`}>;
 
       {/* Desktop Navigation */}
-      <div className="hidden lg: flex items - center space - x-1">;
-        {base_links.map ((link (
-          <div key={link.key}>;
+      <div className="hidden lg: flex items-center space-x-1">
+        {baseLinks.map((link (
+          <div key={link.key}>
             {link.children ? (
 
                       </span>;
@@ -1010,7 +972,7 @@ export default function Page() {; []);
               </HoverCard>
             </li>
           </ul>
-          <div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>
+          <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">
             <LanguageSelector />
           </div>
         </div>

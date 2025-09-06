@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 {
   "timestamp": "2025-09-05T23:42:38.003Z",
   "gitStatus": {
@@ -87,3 +89,4 @@
     "suggestionsCount": 1
   }
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

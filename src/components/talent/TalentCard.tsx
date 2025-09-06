@@ -110,10 +110,9 @@ const TalentCardComponent = ({;
       onViewProfile(talent && talent.id);
     }
   },;
-
-  const handleRequestHire = (e: React && React.MouseEvent,) => {;
-    e && e.preventDefault(),;
-    e && e.stopPropagation(),;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
@@ -140,9 +139,9 @@ const TalentCardComponent = ({;
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent && talent.profile_picture_url ? (;
+          <div className="relative mr-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
+              {talent.profile_picture_url ? (
                 <img
 
 
@@ -186,18 +185,18 @@ const TalentCardComponent = ({;
             
 
             {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent && talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.location}</span>;
-                </div>;
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
               )}
-              {talent && talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.availability_type}</span>;
-                </div>;
+              {talent.availability_type && (
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span>{talent.availability_type}</span>
+                </div>
               )}
 
 
@@ -240,8 +239,8 @@ const TalentCardComponent = ({;
                 </span>;
 
               )}
-            </div>;
-          </div>;
+            </div>
+          </div>
         )}
 
 

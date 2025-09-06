@@ -13,8 +13,8 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div className="bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg">
         <div className="p-4 border-b flex items-center justify-between">
-          <div className="font-semibold">Review Flag — {flag.id}</div>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">✕</button>
+          <div className="font-semibold">Review Flag  {flag.id}</div>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-700"></button>
         </div>
         <div className="p-4 space-y-4 text-sm">
           <div className="grid grid-cols-2 gap-4">
@@ -66,5 +66,5 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
       </div>
     </div>
-  )
+  );
 }

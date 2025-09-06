@@ -11,12 +11,11 @@ function ensureLogFile() {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
   if (!name || typeof name !== 'string') return res.status(400).json({ error: 'Invalid event name' });
 
   const nowIso = new Date().toISOString();
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -29,6 +28,8 @@ function ensureLogFile() {
   if () fs.mkdir_sync (LOG_DIR, { recursive: true }), ) {
   $2
 }
+<<<<<<< HEAD
+=======
   if () fs.writeFileSync (LOG_FILE, '')) {
   $2
 }
@@ -45,6 +46,7 @@ function handler() {
   $2
 }
   const now_iso = new Date ().toISOString (),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const nowIso = new Date().toISOString(),
   const event = {

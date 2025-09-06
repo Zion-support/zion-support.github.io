@@ -66,12 +66,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),;
   const [sortBy, setSortBy] = useState<string>('popular'),;
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀' },;
-    { id: 'ai', name: 'AI & ML', icon: '🧠' },;
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },;
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },;
-    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },;
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
+    { id: 'all', name: 'All Services', icon: '' },;
+    { id: 'ai', name: 'AI & ML', icon: '' },;
+    { id: 'quantum', name: 'Quantum', icon: '' },;
+    { id: 'blockchain', name: 'Blockchain', icon: '' },;
+    { id: 'enterprise', name: 'Enterprise', icon: '' },;
+    { id: 'emerging', name: 'Emerging Tech', icon: '' }
   ],;
   const priceRanges = [;
     { id: 'all', name: 'All Prices' },;
@@ -255,7 +255,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      ⭐ Most Popular
+                       Most Popular
                     </div>
                   )}
 ;
@@ -284,7 +284,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
+                          <span className="text-cyan-400 mr-2"></span>
                           {feature}
                         </li>;
                       ))}
@@ -308,14 +308,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                   {/* ROI Highlight */}
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
+                    <div className="text-sm text-green-400 font-semibold mb-1"> ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
                     </div>;
                   </div>;
                   {/* Market Position */}
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
-                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
+                    <div className="text-sm text-cyan-400 font-semibold mb-2"> Market Position</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.marketPosition}
                     </div>;
@@ -372,9 +372,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
               </Button>
             </div>
             <div className="mt-6 text-sm text-gray-400">
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
+              <p> Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
+              <p> Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
+              <p> Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
             </div>
           </div>
         </motion.div>
@@ -405,9 +405,9 @@ export default EnhancedServiceShowcase,
               </Button>;
             </div>;
             <div className="mt-6 text-sm text-gray-400">;
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>;
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>;
+              <p> Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
+              <p> Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>;
+              <p> Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>;
             </div>;
           </div>;
         </motion.div>;

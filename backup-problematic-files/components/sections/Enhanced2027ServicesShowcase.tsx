@@ -413,7 +413,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-6xl mb-4">🔍</div>
+            <div className="text-6xl mb-4"></div>
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
             <p className="text-gray-400 mb-8">
               Try adjusting your search terms or category filter to find what you're looking for.

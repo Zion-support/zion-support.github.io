@@ -33,7 +33,6 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
       if (document.activeElement === firstElement) {
         lastElement.focus();
         e.preventDefault();
-=======
 export const generate_id = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random ().to_string (36).substr (2, 9)}`;
 }
@@ -77,7 +76,6 @@ if ( {) {
 }
         last_element.focus ();
         e.prevent_default ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } else {
       // Check condition
@@ -89,6 +87,13 @@ if ( {) {
       }
     }
   }
+<<<<<<< HEAD
+}
+export const isHighContrast = (color1: string, color2: string): boolean => {
+  return getContrastRatio(color1, color2) >= 4.5;
+}
+export const validateAriaLabel = (element: HTMLElement): boolean => {
+=======
 
 
   element.addEventListener("keydown", handleTabKey);
@@ -155,6 +160,7 @@ export const isElementInViewport = (element: HTMLElement): boolean => {;
 
   const rect = element.getBoundingClientRect();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -189,6 +195,11 @@ export const createSkipLink = (
       scrollToElement(target);
     }
   });
+<<<<<<< HEAD
+  
+
+  return skipLink;
+}
 
   return skipLink;
 };

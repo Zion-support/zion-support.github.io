@@ -17,7 +17,7 @@ const contactInfo = {;
 },;
 const serviceCategories = [;
   {;
-    title: '🚀 2028 Futuristic Innovations',;
+    title: ' 2028 Futuristic Innovations',;
     services: [;
       { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },;
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },;
@@ -26,7 +26,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🏙️ Smart City & Infrastructure',;
+    title: ' Smart City & Infrastructure',;
     services: [;
       { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' },;
       { name: 'IoT Energy Management System', href: '/iot-energy-management-system' },;
@@ -35,7 +35,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⚛️ Quantum & Advanced Tech',;
+    title: ' Quantum & Advanced Tech',;
     services: [;
       { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },;
       { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform' },;
@@ -44,7 +44,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🤖 AI & Machine Learning',;
+    title: ' AI & Machine Learning',;
     services: [;
       { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation' },;
       { name: 'AI Education Platform', href: '/ai-education-platform' },;
@@ -143,7 +143,7 @@ export default function UltraFuturisticFooter2028() {
           {/* Service Categories */}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
-              🚀 Our Services
+               Our Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {serviceCategories.map((category) => (
@@ -232,7 +232,7 @@ export default function UltraFuturisticFooter2028() {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-sm text-purple-300">
-              © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.
+               2028 Zion Tech Group. All rights reserved. Leading the future of technology.
             </div>
 
             {/* Legal Links */}

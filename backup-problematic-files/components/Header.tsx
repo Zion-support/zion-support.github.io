@@ -1,60 +1,100 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ChevronDown, Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import Link from "next/link";
+import {
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ChevronDown,
+  Menu,
+  X,
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const servicesDropdown = [
   {
-    title: 'AI Services',
-    href: '/ai-services',
-    description: 'Artificial Intelligence Solutions',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">🤖</div>
+    title: "AI Services",
+    href: "/ai-services",
+    description: "Artificial Intelligence Solutions",
+    icon: () => (
+      <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
+    ),
   },
   {
-    title: 'Web Development',
-    href: '/web-development',
-    description: 'Custom Web Applications',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">🌐</div>
+    title: "Web Development",
+    href: "/web-development",
+    description: "Custom Web Applications",
+    icon: () => (
+      <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
+    ),
   },
   {
-    title: 'Mobile Apps',
-    href: '/mobile-apps',
-    description: 'iOS & Android Development',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">📱</div>
+    title: "Mobile Apps",
+    href: "/mobile-apps",
+    description: "iOS & Android Development",
+    icon: () => (
+      <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
+    ),
   },
   {
-    title: 'Cloud Solutions',
-    href: '/cloud-solutions',
-    description: 'Cloud Infrastructure & Migration',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">☁️</div>
-  }
+    title: "Cloud Solutions",
+    href: "/cloud-solutions",
+    description: "Cloud Infrastructure & Migration",
+    icon: () => (
+      <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
+    ),
+  },
 ];
 
 const solutionsDropdown = [
   {
-    title: 'Digital Transformation',
-    href: '/digital-transformation',
-    description: 'Complete digital overhaul for your business',
-    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">🔄</div>
+    title: "Digital Transformation",
+    href: "/digital-transformation",
+    description: "Complete digital overhaul for your business",
+    icon: () => (
+      <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center"></div>
+    ),
   },
   {
-    title: 'Automation',
-    href: '/automation',
-    description: 'Streamline your business processes',
-    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">⚙️</div>
-  }
+    title: "Automation",
+    href: "/automation",
+    description: "Streamline your business processes",
+    icon: () => (
+      <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center"></div>
+    ),
+  },
 ];
 
 const industriesDropdown = [
-  { name: 'Healthcare', href: '/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">🏥</div> },
-  { name: 'Finance', href: '/finance', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">💰</div> },
-  { name: 'E-commerce', href: '/ecommerce', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">🛒</div> }
+  {
+    name: "Healthcare",
+    href: "/healthcare",
+    icon: () => (
+      <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div>
+    ),
+  },
+  {
+    name: "Finance",
+    href: "/finance",
+    icon: () => (
+      <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div>
+    ),
+  },
+  {
+    name: "E-commerce",
+    href: "/ecommerce",
+    icon: () => (
+      <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div>
+    ),
+  },
 ];
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' }
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -74,20 +114,35 @@ export default function Header() {
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:text-blue-300">
+                  +1 302 464 0950
+                </a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="hover:text-blue-300"
+                >
+                  kleber@ziontechgroup.com
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-blue-200">24/7 Support Available</span>
               <div className="flex space-x-2">
-                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300">
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a href="#" className="hover:text-blue-300">
+                  <Twitter className="w-4 h-4" />
+                </a>
+                <a href="#" className="hover:text-blue-300">
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a href="#" className="hover:text-blue-300">
+                  <Instagram className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -103,7 +158,9 @@ export default function Header() {
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <div>
-              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
+              <div className="text-xl font-bold text-gray-900">
+                Zion Tech Group
+              </div>
               <div className="text-xs text-gray-500">Technology Solutions</div>
             </div>
           </Link>
@@ -132,12 +189,20 @@ export default function Header() {
                     <div className="p-6">
                       <div className="grid grid-cols-2 gap-4">
                         {servicesDropdown.map((service) => (
-                          <Link key={service.title} href={service.href} className="group">
+                          <Link
+                            key={service.title}
+                            href={service.href}
+                            className="group"
+                          >
                             <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                               <service.icon />
                               <div>
-                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
-                                <p className="text-sm text-gray-600">{service.description}</p>
+                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                                  {service.title}
+                                </h3>
+                                <p className="text-sm text-gray-600">
+                                  {service.description}
+                                </p>
                               </div>
                             </div>
                           </Link>
@@ -170,12 +235,20 @@ export default function Header() {
                   >
                     <div className="p-6">
                       {solutionsDropdown.map((solution) => (
-                        <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
+                        <Link
+                          key={solution.title}
+                          href={solution.href}
+                          className="group block mb-4 last:mb-0"
+                        >
                           <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                             <solution.icon />
                             <div>
-                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{solution.title}</h3>
-                              <p className="text-sm text-gray-600">{solution.description}</p>
+                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                                {solution.title}
+                              </h3>
+                              <p className="text-sm text-gray-600">
+                                {solution.description}
+                              </p>
                             </div>
                           </div>
                         </Link>
@@ -207,9 +280,15 @@ export default function Header() {
                   >
                     <div className="p-4">
                       {industriesDropdown.map((industry) => (
-                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                        <Link
+                          key={industry.name}
+                          href={industry.href}
+                          className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        >
                           <industry.icon />
-                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
+                          <span className="text-gray-700 group-hover:text-blue-600">
+                            {industry.name}
+                          </span>
                         </Link>
                       ))}
                     </div>
@@ -243,11 +322,12 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="p-2"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <button onClick={toggleMenu} className="p-2">
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -257,7 +337,7 @@ export default function Header() {
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden"
             >

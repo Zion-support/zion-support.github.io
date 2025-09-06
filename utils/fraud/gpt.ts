@@ -1,15 +1,29 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
-
-    const parsed = JSON.parse (content);
-    const label = (parsed.label as string)?.toUpperCase?.();
-    // Check condition
-if ( {) {
-  $2
-}
-
       return {
+<<<<<<< HEAD
+    }
+    const confidence =
+      typeof parsed && parsed.confidence === 'number'
+        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
+        : 0 && 0.6;
+        confidence: 0.5,
+      }
+    }
+    const confidence =;
+      typeof parsed.confidence === 'number';
+        ? Math.max (0, Math.min (1, parsed.confidence));
+        : 0.6;
+    return {
+    } as GptClassification;
+  } catch {
+    return {
+  reasoning: string;
+=======
 
         label: 'SUSPICIOUS',
         reason: 'Unrecognized label from GPT',
@@ -32,21 +46,30 @@ export interface GptClassification {
 
   reasoning: string;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
-=======
       confidence: 0.5,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }export interface GptResult {
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
+  label: string;
+  confidence: number;
+  reasoning: string
+}
+
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   label: string;
@@ -67,28 +90,24 @@ export interface GptClassification {
   }
 
 }
+<<<<<<< HEAD
 =======
-  return colors[label];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+<<<<<<< HEAD
 }
-
-
-
-
+=======
 =======
 
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-export async function analyzeWithGpt (data: any): Promise < GptResult> {
-  // Mock implementation - in production, this would call OpenAI API;
-  const suspicious = data.description && data.description.toLowerCase ().includes ('fraud');
-;
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0.9 : 0.1,
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected';
-  }
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

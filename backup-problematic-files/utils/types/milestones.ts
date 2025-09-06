@@ -38,4 +38,3 @@ export function isMilestoneStatus(_value: string): value is MilestoneStatus {_re
     value === 'Paid'
   )
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

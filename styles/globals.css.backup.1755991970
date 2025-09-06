@@ -305,6 +305,13 @@ h2 {
 <<<<<<< HEAD
   background-clip: text;
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  background-clip: text;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   box-shadow: var(--holographic-glow);
 }
 

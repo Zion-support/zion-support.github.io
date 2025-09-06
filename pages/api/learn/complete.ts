@@ -4,6 +4,8 @@ import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -20,6 +22,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
@@ -39,6 +46,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).json({ ok: true, user })
 =======
+<<<<<<< HEAD
+=======
+    return res.status(200).json({ ok: true, user })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',

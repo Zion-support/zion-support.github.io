@@ -1,62 +1,22 @@
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-import React from 'react';
-
-
-
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import SEO from "../components/SEO";
+describe("SEO", () => {
+  test("renders without crashing", () => {
+    render(<SEO />);
+    expect(screen.getByTestId("seo")).toBeInTheDocument();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  });
+});
 =======
-
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    expect(screen.getByTestId('seo')).toBeInTheDocument();
-=======
-import { render, screen } from '@testing - library / react';
-import '@testing - library / jest - dom';
-import SEO from '../components / SEO';
-describe ('SEO', () => {
-  test ('renders without crashing', () => {
-    render (<SEO />);
-    expect (screen.getByTestId ('seo')).toBeInTheDocument ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  });
-});
-=======
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import SEO from '../components/SEO'
-describe('SEO'
-  test('renders without crashing'
-    expect(screen.getByRole('main'
-  test('displays correct content'
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
->>>>>>> origin/automation-improvements-final
-=======
-describe('SEO';
-  test('renders without crashing';
-    expect(screen && screen.getByRole('main';
-  test('displays correct content';
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-describe('SEO', () => {
-  test('renders without crashing', () => {
-    render(<SEO />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<SEO />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

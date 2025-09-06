@@ -2,6 +2,7 @@ summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
+<<<<<<< HEAD
 
 
 export function TalentCardContent(): any ({;
@@ -13,13 +14,13 @@ export function TalentCardContent(): any ({;
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div>;
+    <div>
       {/* Location */}
-      {timezone && (;
-        <div className='flex items-center gap-2 text-sm text-zion-slate-light mb-3'>;
-          <MapPin className='h-3 w-3' />;
-          <span>{timezone}</span>;
-        </div>;
+      {timezone && (
+        <div className='flex items-center gap-2 text-sm text-zion-slate-light mb-3'>
+          <MapPin className='h-3 w-3' />
+          <span>{timezone}</span>
+        </div>
       )}
       {/* Short bio or summary - longer on hover for desktop */}
       <div
@@ -100,6 +101,7 @@ function TalentCardContent() {
           {summary || bio}
         </p>;
       </div>;
+      {/* Skills */}
       <TalentCardSkills skills={skills} />;
     </div>);
 }

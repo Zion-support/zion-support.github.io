@@ -1,6 +1,6 @@
 } from 'lucide-react';
-import { use_auth } from '@/hooks / use_auth';
-import { use_points } from '@/hooks / use_points';
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
 import {
 
   Card
@@ -28,8 +28,8 @@ import {;
   Card,
   CardContent,
   CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 
 
@@ -59,7 +59,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
 
-  async function handleRedeem(): any (reward: {;
+  async function handleRedeem(reward: {
     id: string;
     cost: number;
     title: string;
@@ -129,7 +129,7 @@ if (return) {
         }),
 
       });
-      await fetch_ledger ();
+      await fetchLedger();
     } finally {
 
   }) {    if (!user?.id) return;  async function handleRedeem(): any (reward: { id: string, cost: number, title: string }) {;
@@ -139,12 +139,8 @@ if (return) {
       await fetch('/api/points/redeem', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          userId: user && user.id,;
-          cost: reward && reward.cost,;
-          reward: reward && reward.title,;
-        }),;
-      });
+        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title });
+      }),;
       await fetchLedger();
     } finally {;
       setRedeeming(false);    }      });
@@ -455,12 +451,12 @@ if ( {) {
                   <div;
 
                     key={index}
-                    className='flex items - start gap - 3 p - 3 rounded - lg border';
-                  >;
-                    <div className='text - primary mt - 1'>{opportunity.icon}</div>;
-                    <div className='flex - 1'>;
-                      <h4 className='font - medium'>{opportunity.title}</h4>;
-                      <p className='text - sm text - muted - foreground'>;
+                    className='flex items-start gap-3 p-3 rounded-lg border'
+                  >
+                    <div className='text-primary mt-1'>{opportunity.icon}</div>
+                    <div className='flex-1'>
+                      <h4 className='font-medium'>{opportunity.title}</h4>
+                      <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
 
               <CardContent className="space-y-4">
@@ -787,12 +783,12 @@ if ( {) {
               <div;
 
                 key={index}
-                className='flex items - start gap - 3 p - 3 rounded - lg border';
-              >;
-                <div className='text - primary mt - 1'>{opportunity.icon}</div>;
-                <div className='flex - 1'>;
-                  <h4 className='font - medium'>{opportunity.title}</h4>;
-                  <p className='text - sm text - muted - foreground'>;
+                className='flex items-start gap-3 p-3 rounded-lg border'
+              >
+                <div className='text-primary mt-1'>{opportunity.icon}</div>
+                <div className='flex-1'>
+                  <h4 className='font-medium'>{opportunity.title}</h4>
+                  <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
 
                   </p>              <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">;
@@ -1011,9 +1007,10 @@ if ( {) {
                       on_click={() => handle_redeem (reward)}
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
-                    </Button>) : (
-                    <p className='text - xs text - muted - foreground'>;
-                      Need more points;
+                    </Button>
+                  ) : (
+                    <p className='text-xs text-muted-foreground'>
+                      Need more points
                     </p>                  )}
                     <p className="text - xs text - muted - foreground">Need more points</p>;
                 <div>;
@@ -1059,10 +1056,7 @@ if ( {) {
 
 
                 {ledger.map(entry => (
-                  <div
-                    key={entry.id}
-                    className='flex items-center justify-between py-2 border-b'
-                  >
+                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
 
           </CardContent>;
@@ -1098,8 +1092,8 @@ if ( {) {
                           addSuffix: true,;
 
                         })}
-                      </p>;
-                    </div>;
+                      </p>
+                    </div>
                     <Badge
                       variant='outline'
                       className={
@@ -1111,7 +1105,9 @@ if ( {) {
                       }                      variant="outline";
                       className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
                     >;
-                      {entry && entry.delta >= 0 ? '+' : ''}                      {entry && entry.delta} pts                    </Badge>;
+                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta} pts;
+                    </Badge>;
                   </div>;
 
 

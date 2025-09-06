@@ -348,13 +348,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({;
                       <div className="text-xs text-gray-400 space-y-1">
                         {getPerformanceScore() < 90 && (
                           <>
-                            <div>• Optimize images and assets</div>
-                            <div>• Minimize JavaScript bundles</div>
-                            <div>• Enable compression and caching</div>
+                            <div> Optimize images and assets</div>
+                            <div> Minimize JavaScript bundles</div>
+                            <div> Enable compression and caching</div>
                           </>
                         )}
                         {getPerformanceScore() >= 90 && (;
-                          <div>• Excellent performance! Keep monitoring for any regressions.</div>;
+                          <div> Excellent performance! Keep monitoring for any regressions.</div>;
                         )}
                       </div>;
                     </div>;

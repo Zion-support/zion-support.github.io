@@ -1,9 +1,12 @@
-
-
+<<<<<<< HEAD
 =======
 
 
 =======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
@@ -108,9 +111,12 @@ const sampleServices: Service[] = [
     category: 'Space',
     features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
     link: '/space-tech'
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -135,10 +141,17 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Define a common service interface;
 interface Service {;
   id?: string,;
@@ -152,7 +165,10 @@ interface Service {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 ;
@@ -233,9 +249,11 @@ const sampleServices: Service[] = [;
 }
 ],
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ServicesIndexPage() {
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
       extraServices as unknown[]
@@ -260,18 +278,24 @@ export default function ServicesIndexPage() {
       realServicesQ42025 as unknown[]
     )
     return acc
+<<<<<<< HEAD
+=======
 
 
   }, {} as Record<string Service[]>),
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }, {} as Record<string, Service[]>),
 
 =======
   }, {} as Record<string Service[]>),
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -294,7 +318,10 @@ export default function ServicesIndexPage() {
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {featuredServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -303,6 +330,36 @@ export default function ServicesIndexPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
+<<<<<<< HEAD
+                      key={`${service.id |service.name}-${index}`}
+                      service={service}
+                      variant="quantum"
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+            {/* Latest Services */}
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+
+
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+
+                      key={`${service.id || service.name}-${index}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      service={service  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      variant="quantum"
+                    />
+=======
 
 
                       key={`${service.id || service.name}-${index}`}
@@ -324,6 +381,7 @@ export default function ServicesIndexPage() {
 
                       variant="quantum"
                     />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,8 +400,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {latestServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -365,6 +426,8 @@ export default function ServicesIndexPage() {
               </section>
             )}
             {/* Services by Category */}
+<<<<<<< HEAD
+=======
 
 =======
                       key={`${service.id || service.name}-${index}`  } catch (error) {
@@ -401,12 +464,15 @@ export default function ServicesIndexPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-20">
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Services by Category
               </h2>
               <div className="space-y-12">
                 {categories.map((category) => {
+<<<<<<< HEAD
+=======
 
 import type { NextPage } from 'next',
 import Head from 'next / head',
@@ -442,7 +508,7 @@ interface Service {
   price?: string,
   category?: string,
   popular?: boolean,
-  launch_date?: string,
+launch_date?: string,
   [key: string]: unknown, // Allow additional properties;
 }
 // Define a unified service interface;
@@ -456,7 +522,7 @@ interface Service {
   features: string[],
   popular?: boolean,
   icon?: string,
-  link?: string;
+link?: string;
 }
 // Sample services for now;
 const sample_services: Service[] = [;
@@ -486,7 +552,7 @@ const sample_services: Service[] = [;
     name: 'Cybersecurity',
     tagline: 'Enterprise security solutions',
     description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
-    price: '$1, 999 / month',
+price: '$1, 999 / month',
     category: 'Security',
     features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
     link: '/cybersecurity';
@@ -626,7 +692,7 @@ if (return null, ) {
                           {category === 'Government' && '🏛️'}
                           {category === 'Energy' && '⚡'}
                           {category === 'Transportation' && '🚗'}
-                        </span>;
+</span>;
                         {category}
 
 
@@ -654,6 +720,7 @@ if (return null, ) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
                           {categoryServices.length} services
                         </span>
@@ -670,6 +737,9 @@ if (return null, ) {
                         {category_services.slice (0, 6).map ((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026;
                             key={`${service.id || service.name}-${index}`}
+<<<<<<< HEAD
+                            service={service}
+=======
 
                             service={service}
                             variant="default";
@@ -695,6 +765,7 @@ if (return null, ) {
 
                             service={service}
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -705,9 +776,12 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             variant="default"
                           />
                         ))  } catch (error) {
@@ -719,14 +793,16 @@ if (return null, ) {
                       {categoryServices.length > 6 && (
                         <div className="mt-6 text-center">
                           <Link
-
                             href={`/services/category/${toSlug(category)}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
                           >
                             View All {category} Services
@@ -735,7 +811,6 @@ if (return null, ) {
                             </svg>
                           </Link>
                         </div>
-
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -755,9 +830,12 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="text-center">
               <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -790,27 +868,18 @@ if (return null, ) {
         </div>
       </UltraFuturisticBackground>
         {categories.map((cat) => (
-
-
-          <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
-
-
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
                 const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string }
                 const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id |service.name |'') } catch { return toSlug(service.id |service.name |'') } })() : toSlug(service.id |service.name |'')
                 return (
-
-
-                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
-                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
-
-
                     <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
                     <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline |service.description}</p>
                     <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
                     <div className="flex gap-3">
+<<<<<<< HEAD
+=======
 
 
                       <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
@@ -821,6 +890,7 @@ if (return null, ) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {featuredServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -829,12 +899,29 @@ if (return null, ) {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
+<<<<<<< HEAD
+                    key={`${service.id |service.name}-${index}`}
+                    service={service}
+                    variant="quantum"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+          {/* Latest Services */}
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
                     key={`${service.id || service.name}-${index}`}
                     service={service}
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -845,9 +932,12 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     variant="quantum"
                   />
                 ))  } catch (error) {
@@ -868,8 +958,11 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {latestServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -891,8 +984,11 @@ if (return null, ) {
             </section>
           )}
           {/* Services by Category */}
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -923,16 +1019,21 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
             </h2>
             <div className="space-y-12">
               {categories.map((category) => {
+<<<<<<< HEAD
+=======
 
               </div>;
             </section>;
@@ -1051,7 +1152,7 @@ if (return null, ) {
                         {category === 'Government' && '🏛️'}
                         {category === 'Energy' && '⚡'}
                         {category === 'Transportation' && '🚗'}
-                      </span>;
+</span>;
                       {category}
 
 
@@ -1063,6 +1164,7 @@ if (return null, ) {
                     <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
                       <span className="text-3xl">
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className="mb-20">;
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
               Services by Category;
@@ -1076,9 +1178,12 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -1091,7 +1196,10 @@ if (return null, ) {
                           key={`${service.id || service.name}-${index}`}
 
                           service={service}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1102,10 +1210,13 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           variant="default"
                         />
                       ))}
@@ -1113,6 +1224,8 @@ if (return null, ) {
                     {categoryServices.length > 6 && (
                       <div className="text-center mt-6">
                         <Link
+<<<<<<< HEAD
+=======
 
 
                           href={`/services/category/${toSlug(category)}`  } catch (error) {
@@ -1123,6 +1236,7 @@ if (return null, ) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
                         >
                           View All {category} Services ({categoryServices.length})
@@ -1138,10 +1252,13 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -1151,8 +1268,13 @@ if (return null, ) {
                       <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-
-
+                      {service.name}
+                    </h3>
+                    <p className="text-cyan-400 text-sm mb-4">
+                      {service.tagline}
+                    </p>
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {service.description}
                       {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1172,14 +1294,19 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </p>
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
 
                       <span className="text - sm text - gray - 400 bg - gray - 800 px - 3 py - 1 rounded - full">;
                         {category_services.length} services;
@@ -1223,6 +1350,7 @@ if (return null, ) {
                       {service.features.slice (0, 3).map ((feature, feature_index) => (
                         <div key={feature_index} className="flex items - center text - sm text - gray - 400">;
                           <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {feature}
                         </div>))}
                     </div>;
@@ -1231,11 +1359,167 @@ if (return null, ) {
 
                         {service.price}
                       </div>;
+<<<<<<< HEAD
+=======
+=======
+=======
+          <section className="mb-20">;
+            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
+              Services by Category;
+            </h2>;
+            <div className="space-y-12">;
+              {categories.map((category) => {;
+                const categoryServices = servicesByCategory[category];
+                if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+                      {category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
+                        {categoryServices.length} services
+                      </span>
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {categoryServices.slice(0, 6).map((service: Service, index: number) => (
+                        <UltraFuturisticServiceCard2026
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          key={`${service.id |service.name}-${index}`}
+=======
+                          key={`${service.id || service.name}-${index}`}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          service={service}
+=======
+                          key={`${service.id || service.name}-${index}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          service={service  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          variant="default"
+                        />
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>
+                    {categoryServices.length > 6 && (
+                      <div className="text-center mt-6">
+                        <Link
+<<<<<<< HEAD
+                          href={`/services/category/${toSlug(category)}`}
+=======
+                          href={`/services/category/${toSlug(category)}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
+                        >
+                          View All {category} Services ({categoryServices.length})
+                        </Link>
+                      </div>
+<<<<<<< HEAD
+                    )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
+                          <span className="text-2xl font-bold">{service.name.charAt(0)}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+<<<<<<< HEAD
+                      {service.name}
+                    </h3>
+                    <p className="text-cyan-400 text-sm mb-4">
+                      {service.tagline}
+                    </p>
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {service.description}
+=======
+                      {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </h3>
+                    <p className="text-cyan-400 text-sm mb-4">
+                      {service.tagline  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </p>
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {service.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </p>
+                    <div className="space-y-2 mb-6">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="text-2xl font-bold text-white">
+                        {service.price}
+                      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {service.link && (
                         <a;
                           href={service.link}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1280,35 +1564,19 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               </div>
-
-                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300";
-                        >;
-                          Learn More;
-                        </a>)}
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-            {filtered_services.length === 0 && (
-              <div className="text - center py - 12">;
-                <p className="text - gray - 400 text - lg">No services found matching your criteria.</p>;
-              </div>)}
-          </div>;
-        </section>;
-
         {/* Call to Action */}
+<<<<<<< HEAD
+=======
         <section className="py - 20 px - 4">;
           <div className="container mx - auto max - w-4xl text - center">;
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1321,8 +1589,11 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
@@ -1368,7 +1639,10 @@ if (return null, ) {
   )
         <section className="py-20 px-4">;
           <div className="container mx-auto max-w-4xl text-center">;
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
@@ -1415,7 +1689,10 @@ if (return null, ) {
 =======
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -1424,6 +1701,10 @@ if (return null, ) {
       />;
     </div>);
 }
+<<<<<<< HEAD
+
+};
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1431,6 +1712,7 @@ if (return null, ) {
 };
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1501,8 +1783,11 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

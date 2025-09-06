@@ -1,8 +1,40 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumPost, ForumCategory} from "@/types/community";
+import {useAuth} from "@/hooks/useAuth";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast",
+import { ForumPost, ForumCategory } from "@/types/community";
+import { useAuth } from "@/hooks/useAuth";
+import { ForumPost, ForumCategory } from "@/types/community",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PostFormValues {
 
   title: string
@@ -12,7 +44,9 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -52,13 +86,18 @@ const mockPost: ForumPost = {;
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -78,32 +117,99 @@ const mockPost: ForumPost = {
   isFeatured: true
 },
 
+<<<<<<< HEAD
 
 
 
 
+=======
+const mockPost: ForumPost = {
+  id: "1"
+  title: "Best practices for AI model fine-tuning"
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..."
+  authorId: "user1"
+  authorName: "Alex Johnson"
+  authorAvatar: "https://i.pravatar.cc/150?img=3"
+  authorRole: "Verified Talent"
+  categoryId: "ai-tools"
+  tags: ["machine-learning", "fine-tuning", "gpt"];
+  createdAt: "2025-04-01T12:00:00Z"
+  updatedAt: "2025-04-01T12:00:00Z"
+  upvotes: 48
+  downvotes: 2
+  replyCount: 12
+  isAnswered: true
+  isFeatured: true
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default function EditPostPage() {;
+  const { postId } = useParams() as { postId?: string };
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+export default function EditPostPage() {
+  const { postId } = useParams() as { postId?: string }
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);
+  const { postId } = useParams() as { postId?: string },
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
+  const { user } = useAuth(),
+  const [post, setPost] = useState<ForumPost | null>(mockPost),
+  const [isLoading, setIsLoading] = useState(true),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }, [postId]),
   
 
 
-  if (isLoading) {
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  if (isLoading) {
 
   useEffect(() => {;
     // In a real app, we would fetch the post data here;
     // For now, we'll just use the mock data;
     setIsLoading(false);
   }, [postId]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  if (isLoading) {;
+    return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (isLoading) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+=======
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  if (isLoading) {;
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
@@ -111,6 +217,8 @@ const mockPost: ForumPost = {
           </div>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     );
   }
 
@@ -118,6 +226,15 @@ const mockPost: ForumPost = {
   if (!post) {;
 
     return (
+=======
+  if (!post) {;
+    return (
+    ),;
+  }
+  ;
+  if (!post) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <AppLayout>;
         <div className="container py-8">;
           <h1>Post not found</h1>;
@@ -126,9 +243,30 @@ const mockPost: ForumPost = {
           </Button>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
     );
   }
 
+=======
+  }, [postId]);
+  }, [postId]),
+  
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <div className="container py-8">
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
+          </div>
+        </div>
+      </AppLayout>
+    )
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!post) {
     return (
       <AppLayout>
@@ -142,14 +280,40 @@ const mockPost: ForumPost = {
     )
   }
   // Check if the user is the author or an admin
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  const isAuthor = user?.id === post.authorId;
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
+  const isAuthor = user?.id === post.authorId,
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  
+  if (!isAuthor && !isAdmin) {
+    return (
+      <AppLayout>
+        <div className="container py-8">
+          <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>
+          <p className="mb-4">You don't have permission to edit this post.</p>
+          <Button asChild>
+            <Link to={`/community/post/${postId}`}>Back to Post</Link>
+          </Button>
+        </div>
+      </AppLayout>
+    )
+  }
+  const initialValues: Partial<PostFormValues> = {
+    title: post.title
+    content: post.content
+    categoryId: post.categoryId as ForumCategory
+    tags: post.tags.join(", ")
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const isAuthor = user?.id === post.authorId,
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   
 
 
   if (!isAuthor && !isAdmin) {
-=======
 
   // Check if the user is the author or an admin;
   const isAuthor = user?.id === post && post.authorId;
@@ -158,6 +322,21 @@ const mockPost: ForumPost = {
   if (!isAuthor && !isAdmin) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+<<<<<<< HEAD
+=======
+    ),;
+  }
+  ;
+  // Check if the user is the author or an admin;
+  const isAuthor = user?.id === post.authorId,;
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
+  ;
+  if (!isAuthor && !isAdmin) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;
@@ -167,6 +346,8 @@ const mockPost: ForumPost = {
           </Button>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     );
   }
 
@@ -175,6 +356,15 @@ const mockPost: ForumPost = {
 
 
 
+=======
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -182,12 +372,24 @@ const mockPost: ForumPost = {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }),
       
 
 
+<<<<<<< HEAD
+=======
+      });
+      }),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -196,8 +398,12 @@ const mockPost: ForumPost = {
         description: "There was a problem updating your post"
         variant: "destructive"
       })
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const initialValues: Partial<PostFormValues> = {;
     title: post && post.title,;
     content: post && post.content,;
@@ -223,41 +429,103 @@ const mockPost: ForumPost = {
         description: "There was a problem updating your post",;
         variant: "destructive";
       });
+<<<<<<< HEAD
 
     }
   }
 =======
+=======
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
     <AppLayout>;
 
+<<<<<<< HEAD
+=======
+  return (
+    <AppLayout>;
+    }
+  }
+  },
+
+  return (
+    <AppLayout>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+      />
+      <div className="container py-8">
+        <div className="flex items-center gap-3 mb-6">
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+            Forum
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground hover:text-foreground">
+            Post
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-sm font-medium">Edit</span>
+        </div>
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        <PostForm
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          isEditing={true}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 
 =======
+=======
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -377,9 +645,57 @@ export default function EditPostPage() {;
         title="Edit Post | Community Forum | Zion AI Marketplace";
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
 
+=======
+      />;
+    ),;
+  }
+  ;
+  const initialValues:Partial<PostFormValues> = {;
+    title:post.title,;
+    content:post.content,;
+    categoryId:post.categoryId as ForumCategory,;
+    tags:post.tags.join(", ");
+  },;
+;
+  const handleSubmit = async (values:PostFormValues) => {;
+    try {;
+      // Here we would normally update the post in the database;
+      // For now, we'll just simulate a successful update;
+      ;
+      toast({;
+        title:"Post updated",;
+        description:"Your post has been updated successfully";
+      }),;
+      ;
+      // Redirect back to the post;
+      navigate(`/community/post/${postId}`),;
+    } catch (error) {;
+      toast({;
+        title:"Error",;
+        description:"There was a problem updating your post",;
+        variant:"destructive";
+      }),;
+    }
+  },;
+;
+  return (;
+    <AppLayout>;
+      <SEO ;
+        title="Edit Post | Community Forum | Zion AI Marketplace";
+        description="Edit your discussion post in the Zion AI Marketplace community forum.";
+        keywords="community, forum, discussion, edit post";
+      />;
+      ;
+      />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -392,6 +708,8 @@ export default function EditPostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Edit</span>;
         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
 
@@ -404,6 +722,11 @@ export default function EditPostPage() {;
     </AppLayout>;
   );
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { Link, use_navigate, use_params } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -437,13 +760,9 @@ const mock_post: ForumPost = {
   reply_count: 12,
   is_answered: true,
   is_featured: true;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
+<<<<<<< HEAD
 export default /**
  * EditPostPage - Function description
  */
@@ -561,5 +880,34 @@ if ( {) {
         />;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+        ;
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
+        ;
+        <PostForm ;
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
+        <PostForm;
+          initialValues={initialValues} ;
+          onSubmit={handleSubmit} ;
+          isEditing={true} ;
+        />;
+      </div>;
+    </AppLayout>;
+};
+return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> Post </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Edit</span> </div> <h1 className="text-3xl font-bold mb-8" >Edit Post</h1> <PostForm initialValues= {
+  initialValues 
+}onSubmit= {
+  handleSubmit 
+}isEditing= {
+  true 
+}/> </div> </AppLayout>) 
+}
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

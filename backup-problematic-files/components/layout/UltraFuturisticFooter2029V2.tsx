@@ -303,7 +303,7 @@ export default function UltraFuturisticFooter2029V2() {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              © 2025 Zion Tech Group. All rights reserved. | 
+               2025 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</a> | 
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</a>
             </motion.div>

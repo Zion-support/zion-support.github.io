@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
 
+=======
+import React from "react";
+
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Switch} from "@/components/ui/switch";
+import {toast} from "@/hooks/use-toast";
+import {InfoIcon} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import {
   Table,
@@ -19,13 +33,16 @@ import {
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
-=======
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -40,64 +57,229 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 1
       name: "Alex Johnson"
       email: "alex@example.com"
       role: "Admin"
       permissions: {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         view_candidates: true,
         edit_candidates: true,
         create_jobs: true,
         manage_team: true,
         view_billing: true,
         manage_billing: true}},
+<<<<<<< HEAD
 
+=======
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true}}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 2
       name: "Jamie Smith"
       email: "jamie@example.com"
       role: "Recruiter"
       permissions: {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         view_candidates: true,
         edit_candidates: true,
         create_jobs: true,
         manage_team: false,
         view_billing: false,
         manage_billing: false}},
+<<<<<<< HEAD
 
+=======
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false}}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 3
       name: "Sam Williams"
       email: "sam@example.com"
       role: "Manager"
       permissions: {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         view_candidates: true,
         edit_candidates: false,
         create_jobs: true,
         manage_team: false,
         view_billing: true,
         manage_billing: false}},
+<<<<<<< HEAD
 
+=======
+        viewCandidates: true
+        editCandidates: false
+        createJobs: true
+        manageTeam: false
+        viewBilling: true
+        manageBilling: false}}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 4
       name: "Taylor Brown"
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+        viewCandidates: true
+        editCandidates: false
+        createJobs: false
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false}}]
+  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
+    // In a real app, this would make an API call to update permissions
+    toast({
+      title: "Permission updated"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  };
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  }
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings";
+    "Recruiter": "Can manage candidates and job postings";
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"}
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+
+                  <Switch
+                    checked={member.permissions.viewCandidates}
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "editCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.createJobs} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "createJobs", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "manageTeam", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    checked={member.permissions.viewBilling}
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewBilling", checked)
+                    }
+                  />
+                </TableCell>
+              </TableRow>
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) => 
+                      handlePermissionChange(member.id, "viewBilling", checked)
+import React from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { toast } from "@/hooks/use-toast",;
+import { InfoIcon } from "lucide-react",;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from "@/components/ui/tooltip",;
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
     {;
       id: 1,;
       name: "Alex Johnson",;
+<<<<<<< HEAD
+<<<<<<< HEAD
       email: "alex@example && example.com",;
+=======
+      email: "alex@example.com",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      email: "alex@example && example.com",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       role: "Admin",;
       permissions: {;
         viewCandidates: true,;
@@ -109,7 +291,15 @@ export function RoleManagement() {;
     {;
       id: 2,;
       name: "Jamie Smith",;
+<<<<<<< HEAD
+<<<<<<< HEAD
       email: "jamie@example && example.com",;
+=======
+      email: "jamie@example.com",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      email: "jamie@example && example.com",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       role: "Recruiter",;
       permissions: {;
         viewCandidates: true,;
@@ -121,7 +311,15 @@ export function RoleManagement() {;
     {;
       id: 3,;
       name: "Sam Williams",;
+<<<<<<< HEAD
+<<<<<<< HEAD
       email: "sam@example && example.com",;
+=======
+      email: "sam@example.com",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      email: "sam@example && example.com",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       role: "Manager",;
       permissions: {;
         viewCandidates: true,;
@@ -133,34 +331,13 @@ export function RoleManagement() {;
     {;
       id: 4,;
       name: "Taylor Brown",;
+<<<<<<< HEAD
+<<<<<<< HEAD
       email: "taylor@example && example.com",;
-      role: "Viewer",;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: false,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false}}],;
-
-  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {;
-    // In a real app, this would make an API call to update permissions;
-    toast({;
-      title: "Permission updated",;
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
-  };
-
-  const roleDescriptions: Record<string, string> = {;
-
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"}
 =======
 
       title: "Permission updated",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -224,9 +401,219 @@ export function RoleManagement() {;
                 </TableCell>
                 <TableCell className="text-center">
 
+
+import React from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { toast } from "@/hooks/use-toast",;
+import { InfoIcon } from "lucide-react",;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from "@/components/ui/tooltip",;
+;
+export function RoleManagement() {;
+  // Mock team members data;
+  const teamMembers = [;
+    {;
+      email: "taylor@example.com",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      email: "taylor@example && example.com",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      role: "Viewer",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: false,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false}}],;
+
+  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {;
+    // In a real app, this would make an API call to update permissions;
+    toast({;
+      title: "Permission updated",;
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  };
+
+  const roleDescriptions: Record<string, string> = {;
+
+    "Admin": "Full access to all features and settings";
+    "Recruiter": "Can manage candidates and job postings";
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"}
+
+  return (
+<<<<<<< HEAD
+=======
+      id:1,;
+      name:"Alex Johnson",;
+      email:"alex@example.com",;
+      role:"Admin",;
+      permissions:{;
+        viewCandidates:true,;
+        editCandidates:true,;
+        createJobs:true,;
+        manageTeam:true,;
+        viewBilling:true,;
+        manageBilling:true}},;
+    {;
+      id:2,;
+      name:"Jamie Smith",;
+      email:"jamie@example.com",;
+      role:"Recruiter",;
+      permissions:{;
+        viewCandidates:true,;
+        editCandidates:true,;
+        createJobs:true,;
+        manageTeam:false,;
+        viewBilling:false,;
+        manageBilling:false}},;
+    {;
+      id:3,;
+      name:"Sam Williams",;
+      email:"sam@example.com",;
+      role:"Manager",;
+      permissions:{;
+        viewCandidates:true,;
+        editCandidates:false,;
+        createJobs:true,;
+        manageTeam:false,;
+        viewBilling:true,;
+        manageBilling:false}},;
+    {;
+      id:4,;
+      name:"Taylor Brown",;
+      email:"taylor@example.com",;
+      role:"Viewer",;
+      permissions:{;
+        viewCandidates:true,;
+        editCandidates:false,;
+        createJobs:false,;
+        manageTeam:false,;
+        viewBilling:false,;
+        manageBilling:false}}],;
+;
+  const handlePermissionChange = (memberId:number, permission:string, value:boolean) => {;
+    // In a real app, this would make an API call to update permissions;
+    toast({;
+      title:"Permission updated",;
+      description:`Permission ${permission} has been ${value ? "granted" :"revoked"}.`}),;
+  },;
+;
+  const roleDescriptions:Record<string string> = {;
+    "Admin":"Full access to all features and settings",;
+    "Recruiter":"Can manage candidates and job postings",;
+    "Manager":"Can view candidates and create jobs",;
+    "Viewer":"Read-only access to candidates"},;
+;
+  return (;
+  },;
+  const roleDescriptions: Record<string string> = {;
+    "Admin": "Full access to all features and settings",;
+    "Recruiter": "Can manage candidates and job postings",;
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"};
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    <div className="space-y-6">;
+      <div>;
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
+=======
+          {Object.entries(roleDescriptions).map(([role, description]) => (;
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">;
+              <div className="flex items-center gap-2 mb-2">;
+                <Badge variant={role === "Admin" ? "default" :"outline"}>{role}</Badge>;
+          {Object.entries(roleDescriptions).map(([role, description]) => (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">;
+              <div className="flex items-center gap-2 mb-2">;
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;
+              </div>;
+              <p className="text-sm text-muted-foreground">{description}</p>;
+            </div>;
+          ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
+
+
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+
+
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
+
+
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "editCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+
+
+                  <Switch 
+                    checked={member.permissions.createJobs} 
+
+
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "createJobs", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+
+
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
+
+
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "manageTeam", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+
         </div>;
       </div>;
 
+=======
+;
+        </div>;
+      </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -311,6 +698,7 @@ export function RoleManagement() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+<<<<<<< HEAD
             {teamMembers && teamMembers.map((member) => (;
               <TableRow key={member && member.id}>;
                 <TableCell>;
@@ -323,6 +711,21 @@ export function RoleManagement() {;
                   <select
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member && member.role}>;
+=======
+            {teamMembers.map((member) => (;
+              <TableRow key={member.id}>;
+                <TableCell>;
+                  <div className="font-medium">{member.name}</div>;
+                  <div className="text-sm text-muted-foreground">;
+                    {member.email}
+                  </div>;
+                </TableCell>;
+                <TableCell>;
+                  <select;
+                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
+                    defaultValue={member.role}
+                  >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <option value="Admin">Admin</option>;
                     <option value="Recruiter">Recruiter</option>;
                     <option value="Manager">Manager</option>;
@@ -330,63 +733,135 @@ export function RoleManagement() {;
                   </select>;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
                   <Switch
                     checked={member && member.permissions.viewCandidates} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "viewCandidates", checked);
+=======
+                  <Switch ;
+                    checked={member.permissions.viewCandidates} ;
+                    onCheckedChange={(checked) => ;
+                      handlePermissionChange(member.id, "viewCandidates", checked);
+                  <Switch;
+                    checked={member.permissions.viewCandidates} ;
+                    onCheckedChange={(checked) =>;
+                      handlePermissionChange(member.id, "viewCandidates", checked);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
                   <Switch
                     checked={member && member.permissions.editCandidates} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "editCandidates", checked);
+=======
+                  <Switch ;
+                    checked={member.permissions.editCandidates} ;
+                    onCheckedChange={(checked) => ;
+                      handlePermissionChange(member.id, "editCandidates", checked);
+                  <Switch;
+                    checked={member.permissions.editCandidates} ;
+                    onCheckedChange={(checked) =>;
+                      handlePermissionChange(member.id, "editCandidates", checked);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
                   <Switch
                     checked={member && member.permissions.createJobs} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "createJobs", checked);
+=======
+                  <Switch ;
+                    checked={member.permissions.createJobs} ;
+                    onCheckedChange={(checked) => ;
+                      handlePermissionChange(member.id, "createJobs", checked);
+                  <Switch;
+                    checked={member.permissions.createJobs} ;
+                    onCheckedChange={(checked) =>;
+                      handlePermissionChange(member.id, "createJobs", checked);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
                   <Switch
                     checked={member && member.permissions.manageTeam} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "manageTeam", checked);
+=======
+                  <Switch ;
+                    checked={member.permissions.manageTeam} ;
+                    onCheckedChange={(checked) => ;
+                      handlePermissionChange(member.id, "manageTeam", checked);
+                  <Switch;
+                    checked={member.permissions.manageTeam} ;
+                    onCheckedChange={(checked) =>;
+                      handlePermissionChange(member.id, "manageTeam", checked);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
                   <Switch
                     checked={member && member.permissions.viewBilling} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "viewBilling", checked);
 
+=======
+                  <Switch ;
+                    checked={member.permissions.viewBilling} ;
+                    onCheckedChange={(checked) => ;
+                      handlePermissionChange(member.id, "viewBilling", checked);
+                  <Switch;
+                    checked={member.permissions.viewBilling} ;
+                    onCheckedChange={(checked) =>;
+                      handlePermissionChange(member.id, "viewBilling", checked);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />;
                 </TableCell>;
               </TableRow>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   <Switch 
                     checked={member.permissions.viewBilling} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+            ))}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </TableBody>;
         </Table>;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         view_candidates: true,
         edit_candidates: false,
         create_jobs: false,
@@ -569,4 +1044,38 @@ export function RoleManagement() {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ import {
+  Table;
+TableBody;
+TableCell;
+TableHead;
+TableHeader;
+import {
+  Tooltip;
+TooltipContent;
+TooltipProvider;
+//Mock team members data const teamMembers = [ {
+  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
+  //In a real app, this would make an API call to update permissions toast ({
+  space-y-6"> <div> </div>) ) 
+}</div> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Team Member</TableHead> <TableHead>Role</TableHead> <TableHead className=" text-center"> <div className=" flex items-center justify-center gap-1"> View Candidates <TooltipProvider> <Tooltip> <TooltipTrigger> <InfoIcon className=" h-4 w-4 text-muted-foreground"/> </TooltipTrigger> <TooltipContent> Can view candidate profiles and applications </TooltipContent> </Tooltip> </TooltipProvider> </div> </TableHead> <TableHead className=" text-center"> <div className=" flex items-center justify-center gap-1"> Edit Candidates <TooltipProvider> <Tooltip> <TooltipTrigger> <InfoIcon className=" h-4 w-4 text-muted-foreground"/> </TooltipTrigger> <TooltipContent> Can edit candidate information and status </TooltipContent> </Tooltip> </TooltipProvider> </div> </TableHead> <TableHead className=" text-center"> <div className=" flex items-center justify-center gap-1"> Create Jobs <TooltipProvider> <Tooltip> <TooltipTrigger> <InfoIcon className=" h-4 w-4 text-muted-foreground"/> </TooltipTrigger> <TooltipContent> Can create and publish job listings </TooltipContent> </Tooltip> </TooltipProvider> </div> </TableHead> <TableHead className=" text-center"> <div className=" flex items-center justify-center gap-1"> Manage Team <TooltipProvider> <Tooltip> <TooltipTrigger> <InfoIcon className=" h-4 w-4 text-muted-foreground"/> </TooltipTrigger> <TooltipContent> Can add, edit, and remove team members </TooltipContent> </Tooltip> </TooltipProvider> </div> </TableHead> <TableHead className=" text-center"> <div className=" flex items-center justify-center gap-1"> Billing Access <TooltipProvider> <Tooltip> <TooltipTrigger> <InfoIcon className=" h-4 w-4 text-muted-foreground"/> </TooltipTrigger> <TooltipContent> Can view and manage billing information </TooltipContent> </Tooltip> </TooltipProvider> </div> </TableHead> </TableRow> </TableHeader> <TableBody> {
+  teamMembers.map ( (member) => (<TableRow key= {
+  member.id 
+}> <TableCell> </div> </TableCell> <TableCell> <select > <option value=" Admin">Admin</option> <option value=" Recruiter">Recruiter</option> <option value=" Manager">Manager</option> <option value=" Viewer">Viewer</option> </select> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center" > <Switch /> </TableCell> </TableRow>) ) 
+}</TableBody> </Table> </div> </div>) 
+}
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

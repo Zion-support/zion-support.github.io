@@ -5,6 +5,7 @@ interface ReviewsListProps {
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
+<<<<<<< HEAD
 
 export function ReviewsList({
   reviews,
@@ -50,6 +51,31 @@ export function ReviewsList({
     );
   }
 
+=======
+=======
+          ))}
+>>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      </div>
+    );
+  }
+
+  if (reviews.length === 0) {
+    return (
+      <div className="text-center py-8 border rounded-lg bg-muted/20">
+        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
+        <p className="text-muted-foreground">
+          Once reviews are submitted and approved, they will appear here.
+        </p>
+      </div>
+    );
+  }
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
   // Check condition
@@ -70,7 +96,8 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <div className="space-y-4">
       {reviews.map((review) => (
@@ -80,5 +107,13 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

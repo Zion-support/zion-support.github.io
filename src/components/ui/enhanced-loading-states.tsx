@@ -114,22 +114,16 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
   on_complete,
 
 }) => {
-  const [active_step, setActiveStep] = useState (0);
-  const progress = ((active_step + 1) / steps.length) * 100;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      setActiveStep (current_step);
+  const [activeStep, setActiveStep] = useState(0)
+  const progress = ((activeStep + 1) / steps.length) * 100
+  useEffect((,) => {
+    if (currentStep !== undefined) {
+      setActiveStep(currentStep)
     }
-  }, [current_step]);
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_timeout (on_complete, 500);
+  }, [currentStep])
+  useEffect((,) => {
+    if (activeStep === steps.length - 1 && onComplete) {
+      setTimeout(onComplete, 500)
     }
 
     </div>;
@@ -166,21 +160,20 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
   steps,;
   currentStep = 0,;
   showProgress = true,;
-  onComplete,;
+  onComplete;
 }) => {;
-  const [activeStep, setActiveStep] = useState(0);
-  const progress = ((activeStep + 1) / steps && steps.length) * 100;
-  useEffect((,) => {;
+  const [activeStep, setActiveStep] = useState(0),;
+  const progress = ((activeStep + 1) / steps.length) * 100,;
+  useEffect(() => {;
     if (currentStep !== undefined) {;
       setActiveStep(currentStep);
     }
-  }, [currentStep]);
-
-  useEffect((,) => {;
-    if (activeStep === steps && steps.length - 1 && onComplete) {;
+  }, [currentStep]),;
+  useEffect(() => {;
+    if (activeStep === steps.length - 1 && onComplete) {;
       setTimeout(onComplete, 500);
     }
-  }, [activeStep, steps && steps.length, onComplete]);
+  }, [activeStep, steps.length, onComplete]),
 
 
   return (
@@ -255,7 +248,7 @@ interface SkeletonProps {
 
               className
             ),}
-          />;
+          />
         ))}
 
   class_name?: string;
@@ -332,8 +325,8 @@ if ( {) {
       window.addEventListener ('online', handle_online);
       window.addEventListener ('offline', handle_offline);
       return () => {
-        window.removeEventListener ('online', handle_online);
-        window.removeEventListener ('offline', handle_offline);
+        window.removeEventListener('online', handleOnline)
+        window.removeEventListener('offline', handleOffline)
       }
     }
 
@@ -342,7 +335,7 @@ if ( {) {
   const getErrorConfig = () =>: any {
 
     switch (variant) {
-      case 'network':;
+      case 'network':
         return {
 
           icon: is_online ? Wifi : WifiOff,
@@ -356,7 +349,7 @@ if ( {) {
           color: 'text - orange - 500',
 
         }
-      case 'timeout':;
+      case 'timeout':
         return {
 
           icon: Clock,
@@ -367,7 +360,7 @@ if ( {) {
           color: 'text - yellow - 500',
 
         }
-      case 'permission':;
+      case 'permission':
         return {
 
           icon: AlertTriangle,
@@ -377,24 +370,45 @@ if ( {) {
           color: 'text - red - 500',
 
         }
-      default:;
+      default:
         return {
 
       </div>;
     );
   }
-
-      />;
+;
+  return (;
+    <div;
+      className={cn(;
+        baseClasses,;
+        variantClasses[variant],;
+        animationClasses[animation],;
+        className;
+      )}
+    />;
   );
-};
-//Enhanced error state component ;
-}return undefined;
-}, []);
-const getErrorConfig = () => {;
-  switch (variant) {';
-  case 'network': return {';
-  icon: isOnline ? Wifi : WifiOff,  title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'), description: description || (isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.' ;
-
+},;
+// Enhanced error state component;
+interface ErrorStateProps {;
+  error?: Error | string | null,;
+  title?: string,;
+  description?: string,;
+  action?: {;
+    label: string,;
+    onClick: () => void;
+  },;
+  secondaryAction?: {;
+    label: string,;
+    onClick: () => void;
+  },;
+  variant?: 'network' | 'generic' | 'timeout' | 'permission',;
+  showRetry?: boolean,;
+  retryCount?: number,;
+  maxRetries?: number,;
+  onRetry?: () => void,;
+  className?: string;
+}
+;
 export const ErrorState: React.FC<ErrorStateProps> = ({;
   error,;
   title,;
@@ -406,58 +420,50 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
   retryCount = 0,;
   maxRetries = 3,;
   onRetry,;
-  className,;
+  className;
 }) => {;
-  const [isOnline, setIsOnline] = useState(true);
-
+  const [isOnline, setIsOnline] = useState(true),;
   useEffect(() => {;
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
+    const handleOnline = () => setIsOnline(true),;
+    const handleOffline = () => setIsOnline(false),;
     if (typeof window !== 'undefined') {;
-      setIsOnline(navigator && navigator.onLine);
-      window && window.addEventListener('online', handleOnline);
-      window && window.addEventListener('offline', handleOffline);
-
+      setIsOnline(navigator.onLine),;
+      window.addEventListener('online', handleOnline),;
+      window.addEventListener('offline', handleOffline),;
       return () => {;
-        window && window.removeEventListener('online', handleOnline);
-        window && window.removeEventListener('offline', handleOffline);
-      };
+        window.removeEventListener('online', handleOnline),;
+        window.removeEventListener('offline', handleOffline);
+      }
     }
-
+;
     return undefined;
-  }, []);
-
+  }, []),;
   const getErrorConfig = () => {;
     switch (variant) {;
       case 'network':;
         return {;
           icon: isOnline ? Wifi : WifiOff,;
-          title:;
-            title || (isOnline ? 'Connection Error' : 'No Internet Connection'),;
-          description:;
-            description ||;
-            (isOnline;
-              ? 'Unable to connect to our servers. Please check your connection.';
-              : 'You appear to be offline. Please check your internet connection.'),;
-          color: 'text-orange-500',;
-        };
+          title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'),;
+          description: description || (isOnline;
+            ? 'Unable to connect to our servers. Please check your connection.';
+            : 'You appear to be offline. Please check your internet connection.';
+          ),;
+          color: 'text-orange-500';
+        },;
       case 'timeout':;
         return {;
           icon: Clock,;
           title: title || 'Request Timeout',;
-          description:;
-            description ||;
-            'The request took too long to complete. Please try again.',;
-          color: 'text-yellow-500',;
-        };
+          description: description || 'The request took too long to complete. Please try again.',;
+          color: 'text-yellow-500';
+        },;
       case 'permission':;
         return {;
           icon: AlertTriangle,;
           title: title || 'Access Denied',;
-          description:;
-            description || "You don't have permission to access this resource.",;
-          color: 'text-red-500',;
-        };
+          description: description || 'You don\'t have permission to access this resource.',;
+          color: 'text-red-500';
+        },;
       default:;
         return {;
           icon: AlertTriangle,;
@@ -566,7 +572,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             {canRetry && (
 
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
-              </Button>;
+              </Button>
             )}
 
 
@@ -615,8 +621,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             )}
           </div>
           {!isOnline && (
-            <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>
-              <WifiOff className='h-4 w-4' />
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <WifiOff className="h-4 w-4" />
               <span>Offline</span>
             </div>
           )}
@@ -791,10 +797,11 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
   if (isLoading) {
     return (
-      <Badge variant='outline' className={cn ('text - xs', class_name)}>;
-        <LoadingSpinner size='sm' />;
-        <span className='ml - 1'>Loading...</span>;
-      </Badge>);
+      <Badge variant="outline" className={cn('text-xs', className)}>
+        <LoadingSpinner size="sm" />
+        <span className="ml-1">Loading...</span>
+      </Badge>
+    )
   }
 
 
@@ -804,8 +811,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
 
       {loadTime && (
-        <Badge variant='outline' className={getPerformanceColor(loadTime)}>
-          <Zap className='h-3 w-3 mr-1' />
+        <Badge variant="outline" className={getPerformanceColor(loadTime)}>
+          <Zap className="h-3 w-3 mr-1" />
           {loadTime}ms
         </Badge>
       )}

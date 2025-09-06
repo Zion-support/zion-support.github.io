@@ -724,7 +724,7 @@ export default function MicroSAASServicesPage() {;
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2 mt-3">Best For:</h4>
                       <ul className="space-y-1">
                         {service.useCases.map((useCase, useCaseIndex) => (
-                          <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
+                          <li key={useCaseIndex} className="text-xs text-gray-300"> {useCase}</li>
                         ))}
                       </ul>
                     </div>
@@ -734,7 +734,7 @@ export default function MicroSAASServicesPage() {;
                     <h4 className="text-sm font-semibold text-yellow-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
+                        <li key={benefitIndex} className="text-xs text-gray-300"> {benefit}</li>
                       ))}
                     </ul>
                   </div>
@@ -966,7 +966,7 @@ export default function MicroSAASServicesPage() {;
           
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved. | 
+               2024 Zion Tech Group. All rights reserved. | 
               <a href="/privacy" className="hover:text-yellow-400 transition-colors ml-2">Privacy Policy</Link> | 
               <a href="/terms" className="hover:text-yellow-400 transition-colors ml-2">Terms of Service</Link>
             </p>
@@ -1133,7 +1133,7 @@ export default function MicroSAASServicesPage() {;
           </div>;
           <div className="border-t border-white/20 mt-8 pt-8 text-center">;
             <p className="text-gray-400 text-sm">;
-              © 2024 Zion Tech Group. All rights reserved. |;
+               2024 Zion Tech Group. All rights reserved. |;
               <a href="/privacy" className="hover:text-yellow-400 transition-colors ml-2">Privacy Policy</a> |;
               <a href="/terms" className="hover:text-yellow-400 transition-colors ml-2">Terms of Service</a>;
             </p>;

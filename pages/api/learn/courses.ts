@@ -30,8 +30,11 @@ const mockCourses = [
   },
 ];
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
@@ -62,23 +65,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
 
-    const { category, level, isFree } = req && req.query;
-
-    const filtered = courses && courses.filter((c: any) => {
-      if (category && c && c.category !== category) return false;
-      if (level && c && c.level !== level) return false;
+    const filtered = courses.filter((c: any) => {
+      if (category && c.category !== category) return false;
+      if (level && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
+        const freeVal = isFree === 'true' |isFree === true;
         const freeVal = isFree === 'true' || isFree === true;
-        if (c && c.isFree !== freeVal) return false;
-=======
-        const freeVal = isFree === 'true' || isFree === true;
-        if (c.isFree !== freeVal) return false
-
+        if (c.isFree !== freeVal) return false;
       }
       return true;
     });
+    res.status(200).json({ courses: filtered });
 
-    res && res.status(200).json({ courses: filtered });
+
+    res.status(200).json({ courses: filtered });
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? "Failed to load courses" });
   }

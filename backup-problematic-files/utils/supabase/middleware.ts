@@ -11,5 +11,4 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/dashboard/']},
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+  matcher: ['/dashboard/dashboard/']},;

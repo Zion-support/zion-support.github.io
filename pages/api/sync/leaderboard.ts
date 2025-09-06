@@ -5,7 +5,10 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -20,6 +23,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${subjectId}:${period |"global"}:${category}`
   const version = nextVersionFor(state, entityKey)
   const event = {
+<<<<<<< HEAD
+=======
 
     eventId: uuidv4(), type: "leaderboard_entry" as const,
     payload: {
@@ -29,6 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     timestamp: Date.now()};
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     eventId: uuidv4(),
     type: "leaderboard_entry" as const,
     payload: { id: entityKey, subjectId, score, category, period, rank },
@@ -44,8 +50,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)

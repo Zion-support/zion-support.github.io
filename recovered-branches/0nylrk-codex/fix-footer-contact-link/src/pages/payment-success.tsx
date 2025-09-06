@@ -46,3 +46,26 @@ export default function PaymentSuccess() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+    </div>);
+}
+    </div>);
+}
+    </div>;
+  );}
+ </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Successful!</h1> <p className="text-zion-slate-light mb-6" > Your payment has been processed successfully. You now have access to all the premium features. </p> <div className="flex flex-col space-y-3" > <Button onClick= {
+  () => navigate ('/dashboard') 
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Go to Dashboard </Button> <Button 
+}
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

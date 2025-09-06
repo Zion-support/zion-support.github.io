@@ -63,5 +63,3 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
   );
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

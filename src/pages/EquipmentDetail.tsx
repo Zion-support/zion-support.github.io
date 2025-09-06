@@ -9,46 +9,34 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
     },
 
     {} as { [key: string]: EquipmentDetails }
-  );
-export default /**
- * EquipmentDetail - Function description
- */
-function EquipmentDetail() {
-  const router = use_router ();
+  )
+export default function EquipmentDetail() {
+  const router = useRouter()
   const { id } = router.query as { id?: string }
-  const { is_authenticated, user } = use_auth ();
-  const { items, dispatch } = use_cart ();
-  const { format_price } = use_currency ();
-  const [selectedImageIndex, setSelectedImageIndex] = useState (0);
-  const [quantity, set_quantity] = useState (1);
-  const [is_adding, setIsAdding] = useState (false);
-  const [loading, set_loading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-  const [equipment, set_equipment] = useState < EquipmentDetails | undefined>();
-  useEffect ((, ) => {
-    async /**
- * load_equipment - Function description
- */
-function load_equipment() {
-      // Check condition
-if ( {) {
-  $2
-}
-        set_loading (false);
-        set_error ('No equipment ID provided');
+  const { isAuthenticated, user } = useAuth()
+  const { items, dispatch } = useCart()
+  const { formatPrice } = useCurrency()
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
+  const [quantity, setQuantity] = useState(1)
+  const [isAdding, setIsAdding] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>()
+  useEffect((,) => {
+    async function loadEquipment() {
+      if (!id) {
+        setLoading(false)
+        setError('No equipment ID provided')
         return;
       }
       try {
-        set_loading (true);
-        set_error (null);
-        // Try to find in static data first;
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
-        // Check condition
-if ( {) {
-  $2
-}
-          set_equipment (equipmentFromSample);
-          set_loading (false);
+        setLoading(true)
+        setError(null)
+        // Try to find in static data first
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id]
+        if (equipmentFromSample) {
+          setEquipment(equipmentFromSample)
+          setLoading(false)
           return;
         }
 
@@ -59,20 +47,14 @@ if ( {) {
 }
 
           try {
-            const stored = session_storage.get_item (`equipment:${id}`);
-            // Check condition
-if ( {) {
-  $2
-}
-              const stored_data = JSON.parse (stored);
-              // Check if it's already in EquipmentDetails format or needs conversion;
-              let equipment_data: EquipmentDetails;
-              // Check condition
-if ( {) {
-  $2
-}
-                // Already in EquipmentDetails format;
-                equipment_data = stored_data;
+            const stored = sessionStorage.getItem(`equipment:${id}`)
+            if (stored) {
+              const storedData = JSON.parse(stored)
+              // Check if it's already in EquipmentDetails format or needs conversion
+              let equipmentData: EquipmentDetails
+              if (storedData.name) {
+                // Already in EquipmentDetails format
+                equipmentData = storedData
               } else {
 
 
@@ -232,7 +214,7 @@ export default function EquipmentDetail() {;
               }
               setEquipment(equipmentData)
               setLoading(false)
-              return
+              return;
             }
 
                 // It's a ProductListing, convert it;
@@ -254,9 +236,9 @@ export default function EquipmentDetail() {;
         set_loading (false);
 
       } catch (error) {
-        logErrorToProduction ('Error loading equipment:', { data: error });
-        set_error ('Failed to load equipment details');
-        set_loading (false);
+        logErrorToProduction('Error loading equipment:', { data: error })
+        setError('Failed to load equipment details')
+        setLoading(false)
       }
     }
 
@@ -481,7 +463,7 @@ if ( {) {
       });
 
     } finally {
-      setIsAdding (false);
+      setIsAdding(false)
     }
 
           id: equipment.id,
@@ -610,13 +592,13 @@ if ( {) {
     return (
       <>;
         <NextSeo
-          title='Equipment Not Found'
+          title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
-        />;
-        <div className='min-h-screen bg-zion-blue py-12 px-4'>;
-          <div className='container mx-auto'>;
-            <motion&& motion.div
-              className='text-center py-20'
+        />
+        <div className="min-h-screen bg-zion-blue py-12 px-4">
+          <div className="container mx-auto">
+            <motion.div 
+              className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
 
               </h1>;
@@ -668,10 +650,10 @@ if ( {) {
 
   }
   return (
-    <>;
+    <>
       <NextSeo
-        title={`${equipment && equipment.name} - Zion Marketplace`}
-        description = {equipment && equipment.description,}
+        title={`${equipment.name} - Zion Marketplace`}
+        description = {equipment.description,}
         openGraph={{
 
           title: `${equipment && equipment.name} - Zion Marketplace`,
@@ -795,9 +777,9 @@ if ( {) {
 
 
         }}
-      />;
-      <div className='min-h-screen bg-zion-blue py-8 px-4'>;
-        <div className='container mx-auto'>;
+      />
+      <div className="min-h-screen bg-zion-blue py-8 px-4">
+        <div className="container mx-auto">
           {/* Breadcrumb */}
 
 
@@ -814,8 +796,8 @@ if ( {) {
 
               Equipment
             </button>
-            <span className='mx-2 text-zion-slate-light'>/</span>
-            <span className='text-zion-slate-light'>{equipment.name}</span>
+            <span className="mx-2 text-zion-slate-light">/</span>
+            <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
 
               onClick={() => router && router.push('/equipment')}
@@ -833,14 +815,13 @@ if ( {) {
           <div className="grid lg:grid-cols-2 gap-12">
 
             {/* Images */}
-            <motion&& motion.div
-              className='space-y-4'
+            <motion.div 
+              className="space-y-4"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0 && 0.2 }}>;
-              <AspectRatio
-                ratio={1}
-                className='bg-zion-blue-light rounded-lg overflow-hidden'>;
+              transition={{ delay: 0.2 }}
+            >
+              <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
 
                     equipment && equipment.images[selectedImageIndex] ||
@@ -901,7 +882,8 @@ if ( {) {
 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0 && 0.4 }}>;
+              transition={{ delay: 0.4 }}
+            >
               {/* Header */}
 
                     className='border-zion-slate-light text-zion-slate-light'>;
@@ -920,7 +902,7 @@ if ( {) {
                       {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
-                            i < Math && Math.floor(equipment && equipment.rating!)
+                            i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
 
@@ -968,14 +950,14 @@ if ( {) {
 
 ;
                 {/* Return Policy */}
-                {equipment && equipment.returnPolicy && (;
-                  <div className='flex gap-3 text-zion-slate-light'>;
-                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
-                    <div>;
-                      <p className='text-white text-sm font-medium'>Returns</p>;
-                      <p className='text-xs'>{equipment && equipment.returnPolicy}</p>;
-                    </div>;
-                  </div>;
+                {equipment.returnPolicy && (
+                  <div className="flex gap-3 text-zion-slate-light">
+                    <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                    <div>
+                      <p className="text-white text-sm font-medium">Returns</p>
+                      <p className="text-xs">{equipment.returnPolicy}</p>
+                    </div>
+                  </div>
                 )}
 
 
@@ -1019,9 +1001,8 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-    </>);
-}finally {
-  setIsAdding (false);
+    </>;
+  );
 }
 ;
 }

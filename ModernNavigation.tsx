@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import React from './react';
 ;
@@ -6,31 +8,27 @@ interface ModernNavigationProps {
   class_name?: string;
 }
 
-
-export default function ModernNavigation() {
-
-=======
-interface ModernNavigationProps {
-
-
-=======
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function ModernNavigation({
+  className = "",
+}: ModernNavigationProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
+<<<<<<< HEAD
+=======
     </div>
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
+=======
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -40,6 +38,7 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -60,6 +59,8 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
+=======
 
 export default /**
  * ModernNavigation - Function description
@@ -85,3 +86,4 @@ function ModernNavigation() {
 }
 >>>>>>> origin/main
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

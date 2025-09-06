@@ -82,76 +82,82 @@ const Services: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            href="/services/micro-saas"
-            title="Micro SaaS"
-            description="End-to-end product development with billing, auth, and analytics"
-            bullets={[
-              "Foundational architecture",
-              "Billing + subscriptions",
-              "Growth analytics",
-            ]}
-            icon="🚀"
-          />
-          <ServiceCard
-            href="/services/ai-services"
-            title="AI Services"
-            description="LLM applications, RAG systems, and MLOps pipelines"
-            bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-            icon="🤖"
-          />
-          <ServiceCard
-            href="/services/it-services"
-            title="IT Services"
-            description="Cloud migration, DevOps, and security solutions"
-            bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-            icon="⚙️"
-          />
-          <ServiceCard
-            href="/services/ai-powered-crm"
-            title="AI-Powered CRM"
-            description="Revolutionary CRM with AI automation, predictive analytics, and 300% sales boost"
-            bullets={["Intelligent lead scoring", "Smart sales automation", "Advanced analytics", "AI customer service"]}
-            icon="🎯"
-          />
-          <ServiceCard
-            href="/services/ai-content-optimizer"
-            title="AI Content Optimizer"
-            description="AI-powered content creation and optimization that increases engagement by 400%"
-            bullets={["AI content generation", "SEO optimization", "Performance analytics", "Multi-language support"]}
-            icon="✍️"
-          />
-          <ServiceCard
-            href="/services/ai-finance-analyzer"
-            title="AI Finance Analyzer"
-            description="Advanced financial analysis with real-time insights and automated investment recommendations"
-            bullets={["Market analysis", "Portfolio optimization", "Financial planning", "Risk assessment"]}
-            icon="💰"
-          />
-          <ServiceCard
-            href="/services/ai-healthcare-assistant"
-            title="AI Healthcare Assistant"
-            description="Revolutionary healthcare AI for diagnosis support, patient monitoring, and treatment optimization"
-            bullets={["Diagnosis support", "Patient monitoring", "Clinical decisions", "Healthcare analytics"]}
-            icon="🏥"
-          />
-          <ServiceCard
-            href="/services/cybersecurity-suite"
-            title="Cybersecurity Suite"
-            description="Comprehensive security solutions with threat detection, monitoring, and 24/7 protection"
-            bullets={["Threat detection", "Vulnerability management", "Network security", "SOC services"]}
-            icon="🔒"
-          />
-          <ServiceCard
-            href="/services/cloud-optimization"
-            title="Cloud Optimization"
-            description="AI-powered cloud optimization that reduces costs by 40% and improves performance by 60%"
-            bullets={["Cost optimization", "Performance tuning", "Security hardening", "Migration services"]}
-            icon="☁️"
-          />
+
+        {/* Main Services */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ServiceCard
+              title="AI Services"
+              description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+              icon="🤖"
+            />
+            <ServiceCard
+              title="Cybersecurity"
+              description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+              icon="🔒"
+            />
+            <ServiceCard
+              title="Cloud Infrastructure"
+              description="Scale your operations with robust cloud solutions, migration services, and infrastructure management."
+              icon="☁️"
+            />
+          </div>
         </div>
-        <CTA />
+
+        {/* Additional Services */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Additional Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card title="Digital Transformation" description="Modernize your business processes and operations with digital solutions." />
+            <Card title="Data Analytics" description="Turn your data into actionable insights with advanced analytics and reporting." />
+            <Card title="Mobile Development" description="Create powerful mobile applications for iOS and Android platforms." />
+            <Card title="Web Development" description="Build responsive, scalable web applications and websites." />
+            <Card title="IT Consulting" description="Strategic technology consulting to optimize your IT infrastructure." />
+            <Card title="24/7 Support" description="Round-the-clock technical support and maintenance services." />
+          </div>
+        </div>
+
+        {/* Process Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">1</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
+              <p className="text-gray-600">We analyze your needs and requirements to understand your goals.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">2</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Planning</h3>
+              <p className="text-gray-600">We create a detailed project plan and timeline for implementation.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">3</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
+              <p className="text-gray-600">We build and implement the solution using best practices and modern technologies.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">4</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
+              <p className="text-gray-600">We provide ongoing support and maintenance to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-8">
+            Contact us today to discuss your project requirements and get a free consultation.
+          </p>
+          <a 
+            href="/contact" 
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Free Consultation
+          </a>
+        </div>
       </div>
     </div>
   );
