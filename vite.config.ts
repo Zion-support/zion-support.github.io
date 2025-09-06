@@ -17,9 +17,6 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets')
     }
   },
-  css: {
-    postcss: false
-  },
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
