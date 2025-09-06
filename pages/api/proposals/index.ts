@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -42,6 +43,15 @@ async function ensureStore() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
+
+async function ensureStore() {
+  await fs.ensureFile(FILE_PATH);
+  try {
+    const raw = await fs.readFile(FILE_PATH, 'utf8');
+if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -74,8 +84,8 @@ export default async function handler(
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
   }
-  if (req.method === "POST") {
-    const body = req.body |{}
+  if (req.method === 'POST') {
+    const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
 =======
 
@@ -187,6 +197,7 @@ if ( {) {
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
     const item = {
+<<<<<<< HEAD
       id: body.id
       title: body.title
       target_institution: body.target_institution
@@ -263,3 +274,20 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+id: body.id,
+      title: body.title,
+      targetInstitution: body.targetInstitution,
+      regionalScope: body.regionalScope,
+      type: body.type,
+      status: body.status || 'Draft',
+      createdAt: new Date().toISOString(),
+    };
+    data.items.unshift(item);
+    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res.status(201).json(item);
+  }
+  res.status(405).json({ error: 'Method not allowed' });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

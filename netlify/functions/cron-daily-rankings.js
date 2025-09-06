@@ -63,6 +63,7 @@ if ( {) {
     }
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -73,6 +74,14 @@ exports.handler = async function() {
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
     const entries = Object.values(users).map((u) => ({
+=======
+      statusCode: 200
+      body: JSON.stringify({ ok: true, topCount: top.length })
+    }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       userId: u.userId,
       name: u.name || u.userId,
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc, p) => acc + (p.percent || 0), 0)
@@ -99,6 +108,7 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -111,6 +121,12 @@ if ( {) {
   $2
 }
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
+=======
+
+    const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2);
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily.json', content, message: 'chore(automation): daily rankings update', token })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
 <<<<<<< HEAD
@@ -167,6 +183,7 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 },
 },
@@ -182,3 +199,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

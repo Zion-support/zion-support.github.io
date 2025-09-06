@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -57,6 +58,17 @@ export default function handler(req, res) {
 }
     note: 'This is a stub export. Connect to persistence to return real deployment state.'};
   res.setHeader('Content-Typeapplication/json');
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (!id || typeof id !== 'string') {
+    return res.status(400).json({ error: 'Missing id' })
+  }
+  // In a real system, look up persisted deployment by id
+  const fake = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json(fake)
 }
   } catch (error) {

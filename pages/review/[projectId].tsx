@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
@@ -7,6 +8,9 @@ import { findProjectById } from "../../utils/dataStore";
 
 type Props = {;
 
+=======
+type Props = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
@@ -22,29 +26,52 @@ type Props = {
 
   if (!valid) {
     return (
+<<<<<<< HEAD
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string }
-  const { role, fromId } = ctx.query as {
-    role?: "client" | "talent";
-    fromId?: string;
+=======
+      <main className='max-w-2xl mx-auto p-6'>
+        <h1 className='text-2xl font-semibold mb-3'>Review unavailable</h1>
+        <p className='text-sm text-gray-600'>
+          {reason || 'You cannot submit a review for this project.'}
+        </p>
+      </main>
+    );
   }
-  if (!projectId |!role |!fromId) {
+
+  return (
+    <main className='max-w-2xl mx-auto p-6'>
+      <h1 className='text-2xl font-semibold mb-6'>Leave a review</h1>
+      <ReviewForm initial={{ projectId, fromRole, fromId }} />
+    </main>
+  );
+};
+
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const { projectId } = ctx.query as { projectId: string };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const { role, fromId } = ctx.query as {
+    role?: 'client' | 'talent';
+    fromId?: string;
+  };
+
+  if (!projectId || !role || !fromId) {
     return {
       props: {
-        projectId: projectId |""
-        fromRole: role |"client"
-        fromId: fromId |""
-        valid: false
-        reason: "Missing parameters"
-      }
-    }
+        projectId: projectId || '',
+        fromRole: role || 'client',
+        fromId: fromId || '',
+        valid: false,
+        reason: 'Missing parameters',
+      },
+    };
   }
   const project = await findProjectById(projectId);
   if (!project) {
-    return {
+return {
       props: {
         projectId
         fromRole: role
@@ -79,6 +106,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   } as any;
 }
 export default ReviewSubmitPage;
+<<<<<<< HEAD
 
   )
 },
@@ -158,3 +186,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

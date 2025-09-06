@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
@@ -40,6 +41,13 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { initialRequests: requests }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+import { GetServerSideProps  } from 'next';
+import { useState  } from 'react';
+import { readJson } from '../../utils/fsDb';
+export const getServerSideProps: GetServerSideProps;
+    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 },;
@@ -79,6 +87,7 @@ export default function SupportRequests(req, res) {
             </div>
             {r.status !== 'resolved' && (
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
+<<<<<<< HEAD
 
   );
 };
@@ -101,3 +110,12 @@ export default function SupportRequests(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

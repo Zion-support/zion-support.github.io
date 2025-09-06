@@ -108,6 +108,7 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
   );export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -155,3 +156,6 @@ export default function Page(req, res) {
 ;
 
 
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
                     src = {activeConversation && activeConversation.context_data.image_url,}
                     alt = {activeConversation && activeConversation.context_data.title || "Context",}
 
@@ -8,6 +9,24 @@
     activeMessages
     sendMessage
 
+=======
+import React, { useState, useEffect, useRef } from 'react';
+import { format  } from 'date-fns';
+import { MessageSquare } from 'lucide-react'
+import { useMessaging  } from '@/context/MessagingContext';
+import { Button  } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { AspectRatio  } from '@/components/ui/aspect-ratio';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessageBubble  } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+export function ConversationDetailView() {
+  const { user } = useAuth();
+  const { 
+    activeConversation;
+    activeMessages;
+    sendMessage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState('');
@@ -267,5 +286,37 @@ export function ConversationDetailView() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+});
+<AvatarImage src= {;
+  activeConversation.other user.avatar url ;
+}alt= {;
+  activeConversation.other user.name ;
+}/> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User' ;
+}</div> </div> </div> </div> {;
+  activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {;
+  1/1 ";
+}className="rounded bg-zion-blue-dark/30 overflow-hidden" > <img /> </AspectRatio> </div>) ;
+}<div> {;
+  activeConversation.context data.description ;
+}</div>) ;
+}</div> </div> </div>) ;
+}<p>No messages yet. Start the conversation!</p> </div>) : (groupedMessages.map ( (group, groupIndex) => (<div key= {;
+  group.date ;
+}> <MessageBubble key= {;
+  message.id ;
+}message= {;
+  message ;
+}isUserMessage= {;
+  message.sender id === user?.id ;
+}/>) ) ;
+}</div> </div>) ) ) ;
+}<div ref= {;
+  messagesEndRef ;
+}/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

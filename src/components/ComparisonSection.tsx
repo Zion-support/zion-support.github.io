@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -117,6 +118,34 @@ function ComparisonSection() {
                   },
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { GradientHeading } from './GradientHeading';
+import { Button } from './ui/button';
+import { CheckCircle2 } from 'lucide-react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from './ui/table';
+
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button";
+import { CheckCircle2 } from 'lucide-react'
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {[
+{
+                    service: 'Server Hosting',
+                    traditional: '$1,200/mo',
+                    zion: '$650/mo',
+                    savings: '45%',
+                  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {
                     service: 'IT Equipment'
                     traditional: 'Full Purchase'
@@ -159,7 +188,12 @@ function ComparisonSection() {
                     </TableCell>;
                     <TableCell className='text - center text - green - 400 font - bold'>;
                       {item.savings}
+<<<<<<< HEAD
 
+=======
+                    </TableCell>
+                  </TableRow>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -225,6 +259,7 @@ export function ComparisonSection() {
             </Table>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -249,6 +284,26 @@ export function ComparisonSection() {
               Calculate Your Savings
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+<div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>
+            <div className='flex items-start'>
+              <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />
+              <p className='text-white'>
+                <span className='font-bold'>Total Annual Savings: </span>
+                <span className='text-green-400 font-bold text-xl'>
+                  Up to 65%
+                </span>
+                <span className='block text-sm text-zion-slate-light mt-1'>
+                  Results may vary based on specific requirements and service
+                  levels
+                </span>
+              </p>
+            </div>
+
+            <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap'>
+              Calculate Your Savings
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
@@ -278,6 +333,7 @@ export function ComparisonSection() {;
 
 
     </section>
+<<<<<<< HEAD
 
 
 import { GradientHeading } from './GradientHeading';
@@ -452,3 +508,7 @@ export function ComparisonSection() {;
     </section>);
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

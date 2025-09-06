@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json");
+=======
+const FILE_PATH = path.join(
+  process.cwd(),
+  'data',
+  'proposals',
+  'comments.json'
+);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 async function ensure() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
@@ -28,6 +38,7 @@ export default async function handler(
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const comment = {
+<<<<<<< HEAD
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region |"Global"
@@ -71,10 +82,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const comment = {
 <<<<<<< HEAD
       id: Date.now().toString(),
+=======
+id: Date.now().toString(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       proposalId: body.proposalId,
       region: body.region || 'Global',
       author: body.author || 'anon',
       text: body.text || '',
+<<<<<<< HEAD
 =======
       id: Date.now().toString(), proposalId: body.proposalId
       region: body.region || 'Global', author: body.author || 'anon'
@@ -87,10 +102,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: body.text || ''
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       createdAt: new Date().toISOString()
+=======
+      createdAt: new Date().toISOString(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
+<<<<<<< HEAD
 
   }
 }
@@ -273,3 +292,9 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+  res.status(405).json({ error: 'Method not allowed' });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

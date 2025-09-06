@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -93,6 +94,29 @@ export function FooterNewsletter(): React.ReactElement {
       >
       <label htmlFor='newsletter-email' className='sr-only'>
 
+=======
+import React, { useState, useRef } from 'react';
+import { Input  } from '@/components/ui/input';
+import { Button  } from '@/components/ui/button';
+import { useToast  } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function FooterNewsletter(): React.ReactElement {
+  const [email, setEmail] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const { toast } = useToast();
+  const EMAIL_REGEX = null;
+  return (
+    <form
+      id="footer-newsletter-form"
+      aria-label="Newsletter sign-up"
+      onSubmit={handleSubmit}
+      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
+    >
+      <label htmlFor="newsletter-email" className="sr-only">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         Email address for newsletter subscription
       </label>
       <Input
@@ -370,6 +394,7 @@ export function FooterNewsletter(): React.ReactElement {;
         )}
       </Button>
     </form>
+<<<<<<< HEAD
   )
 }
 }
@@ -763,3 +788,6 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

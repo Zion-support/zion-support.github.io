@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const TaxonomyAgent: NextPage = () => {
   return (
@@ -27,3 +28,9 @@ export default TaxonomyAgent,;
 export default TaxonomyAgent,
 
 
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const TaxonomyAgent: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

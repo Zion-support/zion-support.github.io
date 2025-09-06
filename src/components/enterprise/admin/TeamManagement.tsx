@@ -1,4 +1,67 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React, { useState } from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+  DialogTrigger} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Badge } from "@/components/ui/badge";
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from "@/hooks/use-toast";
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
+  // Mock team members data
+  const teamMembers = null;
+import React, { useState } from 'react'; import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+} from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Badge } from '@/components/ui/badge'
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+  DialogTrigger} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Badge } from "@/components/ui/badge"
+import { toast } from "@/hooks/use-toast"
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false)
+  const [newMemberEmail, setNewMemberEmail] = useState('')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Mock team members data
   const teamMembers = [
     {
@@ -161,6 +224,7 @@ if ( {) {
     setNewMemberEmail ('');
     setIsAddingMember (false);
   }
+<<<<<<< HEAD
   const handleRemoveMember = (_memberId: number, ) =>: any {
     // In a real app, this would make an API call to remove the member;
     toast ({
@@ -210,6 +274,8 @@ if ( {) {
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -585,6 +651,7 @@ export function TeamManagement() {;
               </TableRow>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -655,3 +722,36 @@ export function TeamManagement() {;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+
+  //In a real app, this would make an API call to remove the member toast ({;
+  ;
+};
+  //In a real app, this would make an API call to resend the invitation toast ({;
+  ;
+};";
+  handleAddMember ";
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  teamMembers.map ( (member) => (<TableRow key= {;
+  member.id ";
+}> <TableCell> .join ("") ;
+}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {;
+  member.role ;
+}</TableCell> <TableCell> <Badge > {;
+  member.status ;
+}</Badge> </TableCell> <TableCell> {;
+  member.lastActive ";
+}</TableCell> <TableCell className="text-right"> onClick={;
+  () => handleResendInvite (member.email) ";
+}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={;
+  () => handleRemoveMember (member.id) ";
+}> <Trash className="h-4 w-4" /> </Button>) ;
+}</div> </TableCell> </TableRow>) ) ;
+}</TableBody> </Table> </div> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

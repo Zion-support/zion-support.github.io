@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
@@ -79,6 +80,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: state.lastSyncedAt
     events
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";

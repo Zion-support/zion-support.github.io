@@ -22,6 +22,7 @@
         <ModeToggle />
       </div>
     </div>
+<<<<<<< HEAD
   )
 
 
@@ -42,3 +43,15 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}> {';
+  item.badge > 9 ? '9+' : item.badge ;
+}</span>) ;
+}</div> {;
+  item.name ;
+}</Link>) ) ";
+}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

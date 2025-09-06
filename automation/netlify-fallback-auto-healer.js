@@ -16,6 +16,7 @@ return result;
   statusCode: 500;
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node
@@ -40,11 +41,16 @@ exports.handler = async (_event, _context) => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     try {
         // Basic fallback logic
         const result = {
             statusCode: 200
             body: JSON.stringify({
+<<<<<<< HEAD
 
                 message: 'auto-healer executed locally as fallback'
                 timestamp: new Date().toISOString()
@@ -110,6 +116,21 @@ exports.handler = async (_event, _context) => {
                 error: 'Fallback execution failed',
                 message: error && error.message
 
+=======
+                message: 'auto-healer executed locally as fallback';
+                timestamp: new Date().toISOString();
+                fallback: true
+            })
+        }
+        return result
+    } catch (error) {
+        console.error('Fallback execution error:', error);
+        return {
+            statusCode: 500;
+            body: JSON.stringify({
+                error: 'Fallback execution failed';
+                message: error.message
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             })
 
             status_code: 200,
@@ -168,6 +189,7 @@ exports.handler = async (_event, _context) => {;
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -178,3 +200,6 @@ exports.handler = async (_event, _context) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/arxiv-research.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -16,6 +17,9 @@ export default function ArxivResearchPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 40)
 
+=======
+  const items: any[] = (data?.items || []).slice(0, 40);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -32,6 +36,7 @@ export default function ArxivResearchPage() {
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 };
 
@@ -57,3 +62,7 @@ export default function ArxivResearchPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

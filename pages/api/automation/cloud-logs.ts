@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -181,6 +182,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   const remote = await fetchFromGitHub()
 >>>>>>> main
+=======
+    const repoUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ logs: remote })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

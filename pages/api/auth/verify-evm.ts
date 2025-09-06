@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
 const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import jwt from 'jsonwebtoken';
+import { ethers } from 'ethers';
+const JWT_SECRET = null;
+    return res.status(200).json({ ok: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -64,7 +72,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       "Set-Cookie"
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
+<<<<<<< HEAD
     return res && res.status(200).json({ ok: true });
+=======
+    return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
@@ -75,6 +87,7 @@ export default async function handler(req, res) {
 
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -190,3 +203,7 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

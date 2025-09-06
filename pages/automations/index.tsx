@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -36,4 +37,17 @@ const AutomationsIndex: NextPage = () => {
     </main>;
   );
 },;
+=======
+import type { NextPage } from 'next';
+import Link from 'next/link';
+const AutomationsIndex: NextPage;
+            </div>
+          </Link>
+        ))}
+      </div>
+    </main>
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default AutomationsIndex;

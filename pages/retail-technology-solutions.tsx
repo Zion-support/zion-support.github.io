@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 			title="Retail Technology Solutions"
 			slug="retail-technology-solutions"
@@ -12,6 +13,12 @@
 				"Store ops: labor planning and task automation"
 				"Omni-channel journey orchestration"
 
+=======
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function RetailTechnologySolutions() {
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
@@ -71,6 +78,7 @@ return (
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/retail-technology-solutions";
 		/>;
 	);
@@ -81,3 +89,6 @@ return (
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

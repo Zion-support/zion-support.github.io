@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { Input } from '@/components/ui/input',;
@@ -5,12 +6,44 @@ import { Button } from '@/components/ui/button',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout',;
+=======
+import {
+  Mail,
+  AlertCircle,
+  CheckCircle,
+  Clock,
+  RefreshCw,
+  ArrowLeft,
+  Eye,;
+} from 'lucide-react';
+import { AuthLayout } from '@/layout';
+import { supabase } from '@/integrations/supabase/client'; // Import Supabase client
+import { useAuth } from '@/hooks/useAuth'; // Import useAuth to access user state
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+
+export default function VerifyStatus() {
+  const router = useRouter();
+  const { user: authUser, isLoading: authLoading } = useAuth(); // Get user from AuthContext
+  const { email: emailParam } = router.query;
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [isResending, setIsResending] = useState(false);
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
+  const [countdown, setCountdown] = useState(0);
+
+  useEffect(() => {
+    if (typeof emailParam === 'string') {
+setEmail(emailParam);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
 ;
 export default function VerifyStatus() {
 
+<<<<<<< HEAD
   const router = useRouter(),
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
   const { email: emailParam } = router.query,
@@ -25,17 +58,25 @@ export default function VerifyStatus() {
   useEffect(() => {
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
+=======
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [emailParam]),
 
   // Countdown timer for resend button
   useEffect(() => {
+<<<<<<< HEAD
     let interval: NodeJS.Timeout,
+=======
+let interval: NodeJS.Timeout;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (countdown > 0) {
       interval = setInterval(() => {
-        setCountdown(prev => prev - 1)
-      }, 1000)
+        setCountdown(prev => prev - 1);
+      }, 1000);
     }
+<<<<<<< HEAD
     return () => clearInterval(interval)
   }, [countdown]),
 
@@ -91,10 +132,20 @@ export default function VerifyStatus(req, res) {
 
 
       return
+=======
+    return () => clearInterval(interval);
+  }, [countdown]);
+
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address');
+return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     setIsResending(true)
     setError('')
     setMessage('')
+<<<<<<< HEAD
     }
     return () => clearInterval(interval)
   }, [countdown]),
@@ -113,40 +164,93 @@ export default function VerifyStatus(req, res) {
 
     }
       return
+=======
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+setMessage(
+          'Verification email sent successfully! Please check your inbox.'
+        );
+        setLastSentTime(new Date());
+        setCountdown(60); // 60 second cooldown
+      } else {
+        setError(data.message || 'Failed to resend verification email');
+      }
+    } catch (err) {
+      setError('Network error. Please try again.');
+    } finally {
+      setIsResending(false);
+    }
+  }
+  const handleCheckStatus = async () => {
+    if (!email) {
+      setError('Please enter your email address');
+return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     setIsCheckingStatus(true)
     setError('')
     setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
+<<<<<<< HEAD
+=======
+const { error: refreshError } = await supabase.auth.refreshSession();
+
+      if (refreshError) {
+        // Don't treat all refresh errors as critical for this check,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         // as user might not have a session yet or it might be invalid.
-        logWarn('Error during session refresh:', { data: refreshError.message })
+        logWarn('Error during session refresh:', {
+          data: refreshError.message,
+        });
       }
+
       // Get the current user details from Supabase
-      const { data: { user }, error: getUserError } = await supabase.auth.getUser()
+      const {
+        data: { user },
+        error: getUserError,
+      } = await supabase.auth.getUser();
+
       if (getUserError) {
-        setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`)
-        setIsCheckingStatus(false)
-        return
+        setError(
+          `Failed to get user status: ${getUserError.message}. Please try logging in directly.`
+        );
+        setIsCheckingStatus(false);
+        return;
       }
       if (user && user.email_confirmed_at) {
         setMessage('Email is verified! Redirecting to login...')
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
         setTimeout(() => {
-          router.push(`/auth/login?email=${encodeURIComponent(email)}`)
-        }, 2000)
+router.push(`/auth/login?email=${encodeURIComponent(email)}`);
+        }, 2000);
       } else if (user) {
-        setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.')
-        setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.')
-        setError(''), // Clear previous errors
+        setMessage(
+          'Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.'
+        );
+        setMessage(
+          'Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.'
+        );
+        setError(''); // Clear previous errors
       } else {
         // This case means there's no active user session found by Supabase client.
         // This is expected if they haven't clicked the link from a different browser/device context yet.
-        setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.')
-        setError('')
+        setMessage(
+          'No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.'
+        );
+        setError('');
       }
     } catch (err: any) {
+<<<<<<< HEAD
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
   useEffect(() => {;
@@ -207,6 +311,43 @@ export default function VerifyStatus(req, res) {
       set_error ('Please enter your email address'),
       return;
     }
+=======
+      logErrorToProduction('Error checking verification status:', {
+        data: err,
+      });
+      setError(
+        'An unexpected error occurred while checking status. Please try again.'
+      );
+    } finally {
+      setIsCheckingStatus(false);
+    }
+  }
+  const handleTryLogin = () => {
+router.push(`/auth/login?email=${encodeURIComponent(email)}`);
+  };
+
+  const handleGoBack = () => {
+    router.back();
+  };
+
+  return (
+    <AuthLayout>
+<div className='flex min-h-screen items-center justify-center p-4'>
+        <div className='w-full max-w-md space-y-6'>
+          {/* Header */}
+          <div className='text-center'>
+            <div className='mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
+              <Mail className='h-6 w-6 text-blue-600' />
+            </div>
+            <h1 className='text-2xl font-bold text-gray-900'>
+              Email Verification
+            </h1>
+            <p className='text-sm text-gray-600 mt-2'>
+  return (
+    <AuthLayout>
+      <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Header */}
 
 
@@ -230,15 +371,16 @@ export default function VerifyStatus(req, res) {
   }
 }
           {message && (
-            <Alert className="border-green-500 bg-green-50 text-green-900">
-              <CheckCircle className="h-4 w-4" />
+<Alert className='border-green-500 bg-green-50 text-green-900'>
+              <CheckCircle className='h-4 w-4' />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
           {error && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
+<Alert variant='destructive'>
+              <AlertCircle className='h-4 w-4' />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
+<<<<<<< HEAD
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -252,12 +394,22 @@ export default function VerifyStatus(req, res) {
 }
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+=======
+          )}
+          {/* Email Input */}
+<div className='space-y-2'>
+            <label
+              htmlFor='email'
+              className='block text-sm font-medium text-gray-700'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Email Address
             </label>
             <Input
-              id="email"
-              type="email"
+              id='email'
+              type='email'
               value={email}
+<<<<<<< HEAD
               value={email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -270,9 +422,14 @@ export default function VerifyStatus(req, res) {
 }
               placeholder="Enter your email address"
               className="w-full"
+=======
+              onChange={e => setEmail(e.target.value)}
+              placeholder='Enter your email address'
+              className='w-full'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             />
             {email && (
-              <p className="text-xs text-gray-500">
+              <p className='text-xs text-gray-500'>
                 We'll check the verification status for this email address
               </p>
             )}
@@ -290,6 +447,7 @@ export default function VerifyStatus(req, res) {
   }
 }
           {email && (
+<<<<<<< HEAD
 
             <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
               <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
@@ -298,17 +456,29 @@ export default function VerifyStatus(req, res) {
                 <p>• Click the link in the email to verify your account</p>;
                 <p>• Return here or try logging in after verification</p>;
               </div>;
+=======
+<div className='bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4'>
+              <h3 className='text-sm font-medium text-slate-900 dark:text-slate-100 mb-2'>
+                Verification Status
+              </h3>
+              <div className='text-sm text-slate-700 dark:text-slate-300 space-y-1'>
+                <p>• Check your email inbox for a verification link</p>
+                <p>• Click the link in the email to verify your account</p>
+                <p>• Return here or try logging in after verification</p>
+              </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {lastSentTime && (
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
-                  <Clock className="h-3 w-3 mr-1" />
+<p className='text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center'>
+                  <Clock className='h-3 w-3 mr-1' />
                   Last email sent: {lastSentTime.toLocaleTimeString()}
                 </p>
               )}
             </div>
           )}
           {/* Action Buttons */}
-          <div className="space-y-3">
+<div className='space-y-3'>
             {/* Check Status Button */}
+<<<<<<< HEAD
               disabled={!email |isCheckingStatus}
               disabled={!email || isCheckingStatus}
 
@@ -355,17 +525,25 @@ export default function VerifyStatus(req, res) {
 }
               className="w-full"
               variant="outline"
+=======
+            <Button
+              onClick={handleCheckStatus}
+              disabled={!email || isCheckingStatus}
+className='w-full'
+              variant='outline'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {isCheckingStatus ? (
                 <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                  <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
                   Checking Status...
                 </>
               ) : (
                 <>
-                  <Eye className="h-4 w-4 mr-2" />
+<Eye className='h-4 w-4 mr-2' />
                   Check Verification Status
                 </>
+<<<<<<< HEAD
               disabled={!email |isResending |countdown > 0}
               disabled={!email || isResending || countdown > 0}
 
@@ -397,19 +575,30 @@ export default function VerifyStatus(req, res) {
 }
               className="w-full"
               variant="secondary"
+=======
+              )}
+            </Button>
+            {/* Resend Email Button */}
+            <Button
+              onClick={handleResendEmail}
+              disabled={!email || isResending || countdown > 0}
+className='w-full'
+              variant='secondary'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {isResending ? (
                 <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                  <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
                   Sending Email...
                 </>
               ) : countdown > 0 ? (
                 <>
-                  <Clock className="h-4 w-4 mr-2" />
+<Clock className='h-4 w-4 mr-2' />
                   Resend in {countdown}s
                 </>
               ) : (
                 <>
+<<<<<<< HEAD
               on_click={handleCheckStatus}
               disabled={!email || isCheckingStatus}
               className="w - full";
@@ -447,41 +636,76 @@ export default function VerifyStatus(req, res) {
                 </>)}
             </Button>;
 
+=======
+<Mail className='h-4 w-4 mr-2' />
+                  Resend Verification Email
+                </>
+              )}
+            </Button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
-              className="w-full"
+className='w-full'
             >
               Try Login
             </Button>
           </div>
+<<<<<<< HEAD
           {/* Help Text */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           <div className="text-center text-sm text-gray-500 space-y-2">
+=======
+          {/* Help Text */}
+<div className='text-center text-sm text-gray-500 space-y-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <p>
-              Can't find the verification email? Check your spam folder or try a different email address.
+              Can't find the verification email? Check your spam folder or try a
+              different email address.
             </p>
             <Button
+<<<<<<< HEAD
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
+=======
+              onClick={handleGoBack}
+              variant='ghost'
+              size='sm'
+              className='text-blue-600 hover:text-blue-500'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <ArrowLeft className="h-4 w-4 mr-1" />
+              <ArrowLeft className='h-4 w-4 mr-1' />
               Go Back
             </Button>
           </div>
+<<<<<<< HEAD
               variant="ghost"
               className="w-full text-sm"
+=======
+          {/* Additional Options */}
+<div className='border-t pt-4 space-y-2'>
+            <Button
+              onClick={() => router.push('/signup')}
+              variant='ghost'
+              className='w-full text-sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Use Different Email Address
             </Button>
             <Button
+<<<<<<< HEAD
               variant="ghost"
               className="w-full text-sm"
+=======
+              onClick={() => router.push('/contact')}
+variant='ghost'
+              className='w-full text-sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Contact Support
             </Button>
@@ -489,6 +713,7 @@ export default function VerifyStatus(req, res) {
         </div>
       </div>
     </AuthLayout>
+<<<<<<< HEAD
   )
 
 
@@ -500,3 +725,6 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

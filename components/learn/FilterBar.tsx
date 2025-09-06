@@ -86,10 +86,14 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 type Props = {
   category: string;
   level: string;
@@ -109,6 +113,7 @@ export default function FilterBar({
         value={category}
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
+<<<<<<< HEAD
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
 <<<<<<< HEAD
   category: string
@@ -143,6 +148,10 @@ class ErrorBoundary extends React.Component {
   }
 
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
+=======
+        <option value=''>All Categories</option>
+export default function FilterBar({ category, level, isFree, onChange }: Props) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
@@ -162,20 +171,17 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         <option>Cloud Architecture</option>
       </select>
       <select
-        className='border rounded px-3 py-2 bg-white dark:bg-black'
+className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={level}
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >
-        <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
-        onChange={(e) => onChange({ category, level: e.target.value, isFree })}
-      >
-        <option value="">All Levels</option>
+        <option value=''>All Levels</option>
         <option>Beginner</option>
         <option>Intermediate</option>
         <option>Advanced</option>
       </select>
       <select
-        className='border rounded px-3 py-2 bg-white dark:bg-black'
+className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={isFree}
         onChange={e => onChange({ category, level, isFree: e.target.value })}
       >
@@ -185,15 +191,8 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
       </select>
     </div>;
     </div>
-  );        value={isFree}
-        onChange={(e) => onChange({ category, level, isFree: e.target.value })}
-      >
-        <option value="">All Pricing</option>
-        <option value="true">Free</option>
-        <option value="false">Paid</option>
-      </select>
-    </div>
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -331,3 +330,5 @@ function FilterBar() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

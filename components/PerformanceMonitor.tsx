@@ -128,6 +128,59 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
+<<<<<<< HEAD
+=======
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+// Only run on client side
+    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
+    const measurePerformance = () => {
+<<<<<<< HEAD
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
+      
+      const performanceData = null;
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize;
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize;
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        } : null
+      };
+
+=======
+      const navigationEntries = window.performance.getEntriesByType('navigation');
+      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
+      const performanceData = {
+        // Navigation timing
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+        // Paint timing
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length
+// Memory usage (if available)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+      }
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
+      }
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+         
+        console.log('Performance Metrics:', performanceData);
+      }
+    }
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);

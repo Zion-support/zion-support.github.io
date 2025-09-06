@@ -1,5 +1,6 @@
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { useEffect, useState  } from './react';
 export /**
  * BackToTopButton - Function description
@@ -33,19 +34,32 @@ export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
   useEffect(() => {;
     const updateVisibility = () => {;
+=======
+
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       setVisible(window.scrollY > 400);
     };
     updateVisibility();
     window.addEventListener('scroll', updateVisibility);
     return () => window.removeEventListener('scroll', updateVisibility);
   }, []);
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
     document.documentElement.scrollTo(opts);
     document.body.scrollTo(opts);
   };
+<<<<<<< HEAD
   
   return (
     <button
@@ -64,3 +78,13 @@ export function BackToTopButton() {;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  
+    >
+      <ArrowUp className='h-5 w-5' />
+    </button>
+  );
+
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -93,6 +94,13 @@ export default function ProjectPage() {
     if (json.ok) {
       setProject(json.project)
 
+=======
+import { useEffect, useState } from "react",
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
+export default function ProjectPage() {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       setShowFeedback(true)
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
@@ -208,6 +216,7 @@ export default function ProjectPage() {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
+<<<<<<< HEAD
 
   );
 };
@@ -252,3 +261,18 @@ export default function ProjectPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+            )}
+          </div>
+        </div>
+      )}
+      <FeedbackModal
+        isOpen={showFeedback}
+        onClose={() => setShowFeedback(false)}
+        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        userHeaders={headers}
+      />
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

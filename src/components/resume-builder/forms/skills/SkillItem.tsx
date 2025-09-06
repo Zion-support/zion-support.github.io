@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Trash2 } from 'lucide-react'
 
 import { SkillItemProps } from './types'
@@ -166,3 +167,13 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
 }
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react';
+import { SkillItemProps } from './types';
+
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

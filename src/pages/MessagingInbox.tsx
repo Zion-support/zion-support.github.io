@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {;
 import { useRouter } from 'next/router'; // Changed from react-router-dom
@@ -8,6 +9,22 @@ import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react'
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react';
+import { useMessaging } from '@/context/MessagingContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView } from '@/components/messaging';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
@@ -23,16 +40,24 @@ export default function MessagingInbox() {
 
 export default function MessagingInbox() {
 
+<<<<<<< HEAD
   const {
     conversations
     activeConversation
     setActiveConversation
 
+=======
+  const { 
+    conversations;
+    activeConversation;
+    setActiveConversation;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     markAsRead;
     fetchConversations;
 export default function MessagingInbox() {
 
     isLoading
+<<<<<<< HEAD
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
@@ -81,6 +106,10 @@ export default function MessagingInbox() {
     router.push(`/call/${roomId}`), // Changed from navigate
   },
   
+=======
+  } = useMessaging();
+  const isMobile = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -187,6 +216,7 @@ export default function MessagingInbox() {;
 }/>) ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
+<<<<<<< HEAD
 }'"}
 
         logErrorToProduction ('Failed to load conversations:', { data: error }),
@@ -292,3 +322,6 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 
   )
 }
+=======
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

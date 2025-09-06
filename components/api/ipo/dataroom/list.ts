@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -103,3 +104,11 @@ function handler() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const section = String(req.query.section || 'General');
+  const dir = resolveDataPath(path.join('dataroom', section));
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+const files = fs.readdirSync(dir).map(name => ({ name }));
+  appendAuditLog({ type: 'file_list', section });
+  res.status(200).json(files);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

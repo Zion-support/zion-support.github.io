@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 id?: string,;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -221,6 +222,13 @@ import Image from 'next / image';interface ListingCardProps {
   class_name?: string,
   profile_type?: 'service' | 'talent';
 }
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link";
+import Image from "next/image";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface ListingCardProps {
   id?: string;
   title: string;
@@ -228,6 +236,7 @@ interface ListingCardProps {
   images?: string[];
   category: string;
   tags?: string[];
+<<<<<<< HEAD
   author?: { name: string; id?: string; avatar_url?: string; email?: string }
   class_name?: string;
   profile_type?: 'service' | 'talent';
@@ -240,6 +249,67 @@ function ListingCard() {
   const profile_id =;
     id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1');
       >;
+=======
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string;
+  profileType?: 'service' | 'talent'
+}
+
+export function ListingCard({ 
+  id;
+  title;
+  description;
+  images;
+  category;
+  tags;
+  author;
+  className;
+  profileType;
+        className
+      )}
+    >
+import React from 'react'
+import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import Image from 'next/image';interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+}
+interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+export function ListingCard({
+  id
+  title
+  description
+  images
+  category
+  tags
+  author
+  className
+  profileType = 'service'
+}: ListingCardProps) {
+  // Generate a profile ID based on the listing data
+  // In a real app, this would be a proper ID from the database
+  const profileId =
+    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
+      >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       {images && images.length > 0 && images[0] && (
         <div className='h - 48 w - full overflow - hidden relative'>;
           <Image;
@@ -266,6 +336,7 @@ function ListingCard() {
             {tags.map ((tag, i) => (
               <Badge;
                 key={i}
+<<<<<<< HEAD
                 variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
               >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
@@ -299,3 +370,34 @@ function ListingCard() {
 }"}) })";
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                variant='outline'
+                className='border-zion-slate-dark text-zion-slate-light'
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+{author && (
+          <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
+            {author.avatarUrl ? (
+              <Image
+                src={author.avatarUrl}
+                alt={author.name}
+                width={32}
+                height={32}
+                className='rounded-full mr-2'
+                loading='lazy'
+              />
+            ) : (
+              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
+            )}
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

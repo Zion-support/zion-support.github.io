@@ -23,12 +23,15 @@ interface QuickAction {;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
+<<<<<<< HEAD
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -45,6 +48,7 @@ import {
   Package
   Monitor
 } from 'lucide-react'
+<<<<<<< HEAD
 
 interface QuickAction {
 =======
@@ -99,6 +103,8 @@ import {
   Package,
   Monitor,
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface QuickAction {
   id: string;
   label: string;
@@ -106,6 +112,7 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
   dangerous?: boolean;
 export /**
  * QuickActions - Function description
@@ -434,6 +441,12 @@ export function QuickActions() {;
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  dangerous?: boolean
+export function QuickActions() {
+  const { user } = useAuth();
+  const isAdmin = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -498,6 +511,7 @@ export function QuickActions() {;
                   {category}
                 </Badge>
               </div>
+<<<<<<< HEAD
               <div className="space-y-2">
                 {categoryActions.map((action) => (
                   <div key={action.id} className="space-y-1">
@@ -730,3 +744,11 @@ if ( {) {
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+            )
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

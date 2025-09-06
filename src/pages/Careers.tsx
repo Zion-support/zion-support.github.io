@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Benefits list
   const benefits = [
     {
@@ -84,6 +85,18 @@
 
 
 
+=======
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
+import { CAREER_JOBS } from '@/data/careersJobs';
+
+export default function Careers() {
+  const applyEmail = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -243,6 +256,7 @@ export default function Careers() {;
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 
@@ -334,3 +348,6 @@ const Careers: React.FC = () => {
 
 export default Careers;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

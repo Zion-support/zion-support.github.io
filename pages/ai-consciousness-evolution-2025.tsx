@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
@@ -7,6 +8,10 @@
 				"Evaluation harness for subjective tasks"
 				"Multi-modal context fusion (text, voice, UI)"
 
+=======
+import React from 'react';
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Partnered research roadmap and governance"
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
@@ -40,6 +45,7 @@
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025";
 		/>;
 	);
@@ -47,4 +53,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -23,6 +24,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     console.error('Translation error', err)
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: 'Translation failed' })
   };
 };
@@ -45,6 +51,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
@@ -105,3 +112,6 @@ if (|| targets.length === 0) {) {
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

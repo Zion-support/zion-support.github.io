@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
       <Link href="/" className="flex items - center">;
@@ -8,6 +9,9 @@ return (
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+=======
+  const logoToUse = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -78,6 +82,7 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
+<<<<<<< HEAD
 
       />;
     </Link>;
@@ -103,3 +108,8 @@ if ( {) {
 
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      />
+    </Link>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

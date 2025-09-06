@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AISalesIntelligencePlatform() {
 	return (
@@ -39,6 +40,9 @@ export default function AISalesIntelligencePlatform() {
 				"Forecasting with scenario simulations"
 				"CRM automations for notes, tasks, and next steps"
 
+=======
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
@@ -124,6 +128,7 @@ return (
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform";
 		/>;
 	);
@@ -142,3 +147,6 @@ return (
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

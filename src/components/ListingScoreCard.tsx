@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
 <<<<<<< HEAD
+=======
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { StarIcon } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
@@ -20,6 +27,7 @@ interface ListingScoreCardProps {
   category: string;
   tags?: string[];
   author?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 interface ListingScoreCardProps {
@@ -33,10 +41,17 @@ interface ListingScoreCardProps {
   aiScore?: number,
   rating?: number,
   reviewCount?: number,
+=======
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 
 export function ListingScoreCard({ 
+<<<<<<< HEAD
   title, 
   description, 
   image, 
@@ -277,6 +292,22 @@ function ListingScoreCard() {
         </p>;
 
 <<<<<<< HEAD
+=======
+  title;
+  description;
+  image;
+  category;
+  tags;
+  author;
+  authorImage;
+  aiScore;
+  rating;
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+                  )}
+                />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -445,6 +476,7 @@ function ListingScoreCard() {
             <span className="text-sm text-zion-slate-light">{author}</span>
           </div>
         )}
+<<<<<<< HEAD
       </div>;
     </div>;
 <<<<<<< HEAD
@@ -455,3 +487,8 @@ function ListingScoreCard() {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

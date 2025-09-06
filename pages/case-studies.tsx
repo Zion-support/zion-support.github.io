@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
@@ -129,6 +130,27 @@ const stats = [
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
+=======
+import React from 'react',
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage() {
+  return (
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
+      keywords="case studies, success stories, client projects, technology solutions, AI implementation"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -490,7 +512,9 @@ import Head from 'next/head';
 
 
   );
+
  </Head> </section> </Layout>
+<<<<<<< HEAD
 export default function CaseStudiesPage() {
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
@@ -590,3 +614,5 @@ import Layout from '../components / Layout';
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

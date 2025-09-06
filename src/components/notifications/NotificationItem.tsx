@@ -1,4 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+// Use the centralized icon wrapper to avoid missing icons
+import { Check, Trash2, ChevronRight } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { formatDistanceToNow  } from 'date-fns';
+import { cn } from '@/lib/utils';
+import { Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger } from '@/components/ui/tooltip';
+import { useRouter  } from 'next/router';
+import { Notification, NotificationType } from '@/context/notifications';
+export const getTypeIcon = null;
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger} from '@/components/ui/tooltip'
+import { useRouter } from 'next/router'
+import { Notification, NotificationType } from '@/context/notifications'
+      return <span className="text-blue-500">💬</span>
+      return <span className="text-orange-500">📦</span>
+    default:
+      return <span className="text-gray-500">📣</span>
+  notification: Notification
+  onMarkAsRead: (id: string) => Promise<void>
+  onDismiss: (id: string) => Promise<void>
+  onMarkAsRead
+  onDismiss
+}) => {
+      className={cn(
+                  onMarkAsRead(notification.id); import React from 'react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -310,6 +346,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
       </div>
     </div>
+<<<<<<< HEAD
   )
 =======
         </div>
@@ -318,3 +355,26 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   );
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+interface NotificationItemProps {;
+  notification: Notification;
+onMarkAsRead: (id: string) => Promise<void>;
+onDismiss: (id: string) => Promise<void> ;
+}export const NotificationItem: React.FC<NotificationItemProps> = ({;
+  notification;
+onMarkAsRead;
+onDismiss ;
+}) => {;
+  const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
+  addSuffix: true ';
+}) : 'Just now' ;
+}</p> {;
+  notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
+  handleClick ;
+}> </Button>) ";
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

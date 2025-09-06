@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
   readState
@@ -24,10 +25,15 @@ import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -238,11 +244,44 @@ export default async function handler(req, res) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+}
+  const { milestoneId, title, timestamp } = req.body as {
+    milestoneId: string;
+    title: string;
+    timestamp?: number;
+  };
+  if (!milestoneId || !title)
+    return res.status(400).json({ error: 'milestoneId, title required' });
+
+  const version = nextVersionFor(state, milestoneId);
+  const event = {
+    eventId: uuidv4(),
+type: 'leaderboard_entry' as const, // reuse as a generic announcement carrier with category
+    payload: {
+      id: milestoneId,
+      subjectId: milestoneId,
+      score: 0,
+      category: `milestone:${title}`,
+      period: undefined,
+      rank: undefined,
+    },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now(),
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
+<<<<<<< HEAD
   if (sig) headers["x-zion-signature"] = sig;
 <<<<<<< HEAD
 =======
@@ -287,14 +326,25 @@ export default async function handler(req, res) {
       .filter((p) => !p.paused)
       .map(async (peer) => {
 const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+=======
+if (sig) headers['x-zion-signature'] = sig;
+
+  await Promise.all(
+    state.config.peers
+      .filter(p => !p.paused)
+      .map(async peer => {
+        const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
 
         } catch {}
       })
   );
+
   return res
     .status(200)
+<<<<<<< HEAD
 
     .json({ status: "created", version, eventId: event && event.eventId });
 }
@@ -407,3 +457,8 @@ if (headers["x - zion - signature"] = sig) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    .json({ status: 'created', version, eventId: event.eventId });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

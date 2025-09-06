@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/hf-models.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -11,6 +12,9 @@ export default function HfModelsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
 
+=======
+  const items: any[] = (data?.items || []).slice(0, 60);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -23,6 +27,7 @@ export default function HfModelsPage() {
           ))}
         </ul>
       </div>
+<<<<<<< HEAD
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes} · {it.pipeline_tag}</div>
             </li>
           ))  } catch (error) {
@@ -38,3 +43,8 @@ export default function HfModelsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+    </EnhancedLayout>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

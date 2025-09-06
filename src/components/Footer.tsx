@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -14,6 +15,64 @@ import React from 'react';
 import React from 'react';
 
 export default function Footer() {
+=======
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === "" || envVar;
+                behavior: 'smooth' 
+              })
+            }}
+            className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
+            aria-label="Back to top"
+          >
+            <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            <span>Back to Top</span>
+          </button>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-primary/20">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-foreground/80 text-sm">
+              &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md: mt-0">
+              <Link
+                href="/privacy"
+                className="text-foreground/80 hover:text-primary text-sm transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-foreground/80 hover:text-primary text-sm transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/status"
+                className="text-foreground/80 hover:text-primary text-sm transition-colors"
+              >
+                API Status
+              </Link>
+            </div>
+import React from 'react'
+import { Link } from 'react-router-dom'
+import {
+  Twitter
+  Linkedin
+  Facebook
+  Instagram
+  Github
+  ChevronUp
+} from 'lucide-react'
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <footer className="bg-gray-800 text-white py-8 mt-auto">
       <div className="container mx-auto px-4">
@@ -127,6 +186,7 @@ const Footer: React.FC = () => {
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
+<<<<<<< HEAD
           </p>
 =======
         <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
@@ -170,6 +230,14 @@ const Footer: React.FC = () => {
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+          </div>
+          <div className="flex space-x-6 mt-4 sm:mt-0">
+            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
+            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
+          </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 <<<<<<< HEAD
@@ -181,7 +249,10 @@ export default Footer;
 =======
     </footer>
   );
+<<<<<<< HEAD
 };
 
 export default Footer;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

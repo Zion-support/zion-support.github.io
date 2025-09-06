@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { useRouter } from 'next/router'; // Changed from useParams
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from 'next/image';
 import { Button  } from '@/components/ui/button';
 import { NEW_PRODUCTS  } from '@/data/newProductsData';
@@ -5,6 +10,7 @@ import { useCart  } from '@/context/CartContext';
 import { toast  } from '@/hooks/use-toast';
 import { SEO  } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 export default function ProductPage() {;
 ;
   const router = useRouter();
@@ -85,6 +91,17 @@ export default function ProductPage() {;
     return <div className="p-6 text-white">Loading product details...</div>
   }
   if (!product) {
+=======
+export default function ProductPage() {
+
+  const router = null;
+  return (
+    <>
+      <SEO
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       />
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
@@ -151,9 +168,13 @@ product.title ;
 }description= {product.description ;
 }ogImage= {product.images?.[0] ;
 }/> </Button> </div> </>) ;
+<<<<<<< HEAD
 }';
 }
         </Button>;
       </div>;
     </>);
 ;
+=======
+}'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

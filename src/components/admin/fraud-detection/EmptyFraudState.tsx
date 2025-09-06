@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void
@@ -6,6 +7,15 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters,
+  onResetFilters 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 },) => {
   return (
     <div className="text-center py-12">
@@ -26,6 +36,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -170,3 +181,16 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+interface EmptyFraudStateProps {
+  hasFilters: boolean;
+  onResetFilters: () => void
+}
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters;
+  onResetFilters 
+}) => {
+  return (
+    <div className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

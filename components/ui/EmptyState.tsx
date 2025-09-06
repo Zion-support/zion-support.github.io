@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React from 'react',
+import Link from 'next/link';
+import EnhancedButton from './EnhancedButton';
+export type EmptyStateProps = any;
+import React from "react";
+import Link from "next/link";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {
   title: string;
@@ -34,6 +43,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
       {description && (;
         <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';
@@ -69,6 +79,15 @@ function EmptyState() {
 }
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
+=======
+      {(primaryAction |secondaryAction) && (
+        <div className='flex gap-2 mt-2'>
+          {primaryAction && (
+            <Link href={primaryAction.href}>
+              <a>
+                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
+export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
@@ -78,6 +97,12 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
+<<<<<<< HEAD
+=======
+<EnhancedButton variant='secondary' size='md'>
+                  {secondaryAction.label}
+                </EnhancedButton>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </a>
             </Link>
           )}
@@ -92,5 +117,10 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
           )}
         </div>;
       )}
+<<<<<<< HEAD
 }
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

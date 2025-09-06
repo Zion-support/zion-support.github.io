@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -37,9 +38,18 @@ import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 <<<<<<< HEAD
+=======
+  name: string;
+  page?: string;
+  userType?: string;
+  properties?: Record<string, any>;
+  at: string;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 type EventRow = {
 
+<<<<<<< HEAD
 =======
 type EventRow = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -70,6 +80,16 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 >>>>>>> main
         rows.push(obj)
       } catch {}
+=======
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return [];
+    const raw = fs.readFileSync(LOG_FILE, 'utf8');
+    const lines = raw.split('\n').filter(Boolean);
+    const start = startIso ? new Date(startIso) : null;
+    const end = endIso ? new Date(endIso) : null;
+    const rows: EventRow[] = [];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
 <<<<<<< HEAD
     return rows;
@@ -83,16 +103,46 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  await ensureAdminFromApi(req, res);
+  
+  const { startIso, endIso } = req.query;
+  const events = parseLines(startIso as string, endIso as string);
+  
+  const pagesMostUsed = events
+    .filter(e => e.page)
+    .reduce((acc, e) => {
+      acc[e.page!] = (acc[e.page!] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+  
+  const eventCounts = events.reduce((acc, e) => {
+    acc[e.name] = (acc[e.name] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  const funnel = events
+    .filter(e => e.name === 'page_view')
+    .map(e => e.page)
+    .filter(Boolean);
+  
+  res.status(200).json({ pagesMostUsed, events: eventCounts, line: events.length, funnel });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value)
 
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -116,6 +166,23 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
 >>>>>>> main
+=======
+    .sort((a, b) => b.value - a.value);
+
+  const days = Object.keys(byDay).sort();
+const line = days.map(d => ({ date: d, value: byDay[d] }));
+
+  const funnelStages = [
+    'Visit',
+    'AI Prompt Used',
+    'Post Created',
+    'Message Sent',
+  ];
+  const funnel = funnelStages.map(stage => ({
+    label: stage,
+    value: byEvent[stage] || 0,
+  }));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 <<<<<<< HEAD
@@ -126,6 +193,7 @@ function featureFromPath (page?: string): string {
 if (return 'other', ) {
   $2
 }
+<<<<<<< HEAD
   const p = page.toLowerCase (),
   if (|| p.includes ('ai')) return 'AI services', ) {
   $2
@@ -193,3 +261,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

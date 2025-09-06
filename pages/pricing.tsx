@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -157,6 +158,17 @@ import {
   Globe2 as Globe2Icon
   Bot as BotIcon
     ChevronRight as ChevronRightIcon
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices  } from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services  } from '../data/innovative-micro-saas-v2';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 =======
 =======
@@ -359,6 +371,7 @@ import {
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+<<<<<<< HEAD
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
@@ -1075,6 +1088,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       name: 'Enterprise IT Services',;
       description: 'Comprehensive enterprise solutions',;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export default function PricingPage() {
+  const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -1084,6 +1101,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       period: billingCycle === "monthly" ? "/month" : "/month",
       savings: billingCycle === "yearly" ? "Save 20%" : "",
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
@@ -1107,6 +1125,34 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         'Advanced AI & Quantum Computing',
         'Priority Support (24 / 7)',
         '60 - Day Free Trial',
+=======
+'Access to 50+ Core Services',
+        'Basic AI Integration',
+        'Standard Support (24/7)',
+        '30-Day Free Trial',
+        'Basic Analytics Dashboard',
+        'Email Support',
+        '99.5% Uptime Guarantee',
+        'Standard Security Features',
+      ],
+      icon: <Sparkles className='w-8 h-8' />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaVariant: 'secondary' as const,
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 149 : 119,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+'Access to 200+ Premium Services',
+        'Advanced AI & Quantum Computing',
+        'Priority Support (24/7)',
+        '60-Day Free Trial',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced Analytics & Reporting',
         'Phone & Email Support',
         '99.9% Uptime Guarantee',
@@ -1114,6 +1160,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         'Custom Integrations',
         'Team Collaboration Tools',
         'API Access',
+<<<<<<< HEAD
         'White - label Options',
       ],
       icon: <Crown className='w - 8 h - 8' />,
@@ -1132,6 +1179,27 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         'Full Quantum AI & Autonomous Systems',
         'Dedicated Support Team (24 / 7)',
         '90 - Day Free Trial',
+=======
+        'White-label Options',
+      ],
+      icon: <Crown className='w-8 h-8' />,
+      variant: 'holographic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaVariant: 'primary' as const,
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 499 : 399,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+'Access to ALL 500+ Services',
+        'Full Quantum AI & Autonomous Systems',
+        'Dedicated Support Team (24/7)',
+        '90-Day Free Trial',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Enterprise Analytics & AI Insights',
         'Dedicated Account Manager',
         '99.99% Uptime SLA',
@@ -1139,12 +1207,18 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         'Custom Development Services',
         'Advanced Team Management',
         'Full API & SDK Access',
+<<<<<<< HEAD
         'Custom Branding & White - label',
         'On - premise Deployment Options',
+=======
+        'Custom Branding & White-label',
+        'On-premise Deployment Options',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced AI Training & Customization',
         'Priority Feature Development',
         'Global Infrastructure Access',
       ],
+<<<<<<< HEAD
       icon: <Rocket className='w - 8 h - 8' />,
       variant: 'neural' as const,
       popular: false,
@@ -1344,11 +1418,20 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
 
 =======
+=======
+      icon: <Rocket className='w-8 h-8' />,
+      variant: 'neural' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      ctaVariant: 'primary' as const,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   // Service category pricing examples
   const serviceCategoryPricing = [
     {
+<<<<<<< HEAD
       category: "Quantum AI & Computing",
       services: [
         "Quantum AI Platform",
@@ -1407,17 +1490,85 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       ],
       startingPrice: "$299/month",
       icon: <Rocket className="w-6 h-6" />,
+=======
+      category: 'Quantum AI & Computing',
+services: [
+        'Quantum AI Platform',
+        'Neural Network Training',
+        'Quantum Optimization',
+      ],
+      startingPrice: '$99/month',
+      icon: <Brain className='w-6 h-6' />,
+    },
+    {
+      category: 'Autonomous Systems',
+      services: [
+        'AI Factory Management',
+        'Robotic Process Automation',
+        'Smart Manufacturing',
+      ],
+      startingPrice: '$149/month',
+      icon: <Factory className='w-6 h-6' />,
+    },
+    {
+      category: 'Healthcare & Biotech',
+      services: [
+        'Drug Discovery AI',
+        'Medical Imaging Analysis',
+        'Genomic Research Platform',
+      ],
+      startingPrice: '$199/month',
+      icon: <FlaskConical className='w-6 h-6' />,
+    },
+    {
+      category: 'Cybersecurity',
+      services: [
+        'Quantum Encryption',
+        'Threat Intelligence',
+        'Zero-Trust Security',
+      ],
+      startingPrice: '$129/month',
+      icon: <Shield className='w-6 h-6' />,
+    },
+    {
+      category: 'Financial Technology',
+      services: [
+        'AI Trading Platform',
+        'Risk Management',
+        'Portfolio Optimization',
+      ],
+      startingPrice: '$179/month',
+      icon: <DollarSign className='w-6 h-6' />,
+    },
+    {
+      category: 'Space Technology',
+      services: [
+        'Satellite Management',
+        'Space Data Analytics',
+        'Mission Planning AI',
+      ],
+      startingPrice: '$299/month',
+      icon: <Rocket className='w-6 h-6' />,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     },
   ];
 
   // Value propositions
   const valuePropositions = [
     {
+<<<<<<< HEAD
       title: "Unprecedented ROI",
       description: "Average 300% ROI within 6 months",
       icon: <TrendingUp className="w-8 h-8" />,
       metric: "300%",
       detail: "Average ROI",
+=======
+      title: 'Unprecedented ROI',
+      description: 'Average 300% ROI within 6 months',
+icon: <TrendingUp className='w-8 h-8' />,
+      metric: '300%',
+      detail: 'Average ROI',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     },
     {
       title: "Time to Value",
@@ -1441,11 +1592,14 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       detail: "Uptime SLA",
     },
   ];
+<<<<<<< HEAD
 
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -1691,6 +1845,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
               </span>
             </Button>
           </div>
@@ -1712,6 +1867,21 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
+=======
+              href='/comprehensive-pricing-2026'
+              variant='primary'
+              size='lg'
+              className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30'
+            >
+              <span className='flex items-center'>
+                <Rocket className='mr-3 w-6 h-6' />
+                View 2026 Comprehensive Pricing
+              </span>
+            </Button>
+          </div>
+{/* Billing Toggle */}
+          <div className='flex items-center justify-center gap-4 mb-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
               Monthly;
@@ -1774,6 +1944,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 )
               }
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
 =======
@@ -1782,6 +1953,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
 =======
@@ -1805,6 +1980,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 =======
               />
             </button>
+<<<<<<< HEAD
             <span
               className={`text-lg ${billingCycle === "yearly" ? "text-white" : "text-gray-400"}`}
             >
@@ -1816,6 +1992,13 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 }`}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<span
+              className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
+            >
+              Yearly
+              <span className='ml-2 text-sm text-green-400'>Save 20%</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </span>
           </div>
         </div>
@@ -1840,6 +2023,7 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
           </div>;
         </div>;
         {/* Pricing Tiers */}
+<<<<<<< HEAD
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index) => (
@@ -2142,6 +2326,10 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {" "}
+=======
+<div className='mb-20'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingTiers.map((tier, index) => (
               <UltraFuturisticCard
                 key={tier.name}
@@ -2152,15 +2340,26 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
               >
                 {tier.popular && (
+<<<<<<< HEAD
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center">
 <Star className="w-4 h-4 mr-2" />
+=======
+<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center'>
+                      <Star className='w-4 h-4 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 <div className="text-center p-8">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
+=======
+<div className='text-center p-8'>
+                  <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {tier.icon}
                   </div>
 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -2299,7 +2498,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   >
                     {tier.cta}
-                    <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
+                    <ArrowRight className='ml-2 w-5 h-5' />
+                  </Button>
                 </div>
               </UltraFuturisticCard>
 
@@ -2307,6 +2507,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </div>
         </div>
         {/* Value Propositions */}
+<<<<<<< HEAD
         {/* Value Propositions */}
         {/* Value Propositions */}
         <div className="mb-20">
@@ -2351,10 +2552,27 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
   }
 }
                 </div>
+=======
+<div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Why Choose Zion Tech Group?
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {valuePropositions.map((proposition, index) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
+<<<<<<< HEAD
+=======
+className='text-center p-6'
+              >
+                <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4'>
+                  {proposition.icon}
+                </div>
+                <h3 className='text-xl font-bold text-white mb-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {proposition.title}
                 </h3>
                 <p className='text-gray-300 text-sm mb-4'>
@@ -2365,7 +2583,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 </div>
                 <div className='text-sm text-gray-400'>
                   {proposition.detail}
-                </div>              </UltraFuturisticCard>
+                </div>
+              </UltraFuturisticCard>
             ))}
           </div>
         </div>
@@ -2447,6 +2666,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </div>;
         </div>;
         {/* Service Category Pricing Examples */}
+<<<<<<< HEAD
         <div className='mb - 20'>;
           <h2 className='text - 3xl font - bold text - white mb - 12 text - center'>;
             Service Category Pricing;
@@ -2545,6 +2765,13 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 }
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+<div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Service Category Pricing
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
                 key={index}
@@ -2612,7 +2839,11 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                       key={idx}
                       className="text-sm text-gray-300 flex items-center"
                     >
+<<<<<<< HEAD
                       <Check className="w-4 h-4 text-green-400 mr-2" />{" "}
+=======
+                      <Check className='w-4 h-4 text-green-400 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {service}
                     </li>
                   ))}
@@ -2634,6 +2865,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>
+<<<<<<< HEAD
                 
                 <Button
                   href="/services"
@@ -2657,6 +2889,16 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   Explore Services
 <<<<<<< HEAD
                   <ChevronRight className="ml-2 w-4 h-4" />
+=======
+<Button
+                  href='/services'
+                  variant='secondary'
+                  size='sm'
+                  className='w-full'
+                >
+                  Explore Services
+                  <ChevronRight className='ml-2 w-4 h-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </UltraFuturisticCard>
 
@@ -2676,10 +2918,11 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </div>
         </div>
         {/* Popular Services Pricing */}
-        <div className='mb-20'>
+<div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Popular Services Pricing
           </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
@@ -2774,11 +3017,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 }
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {" "}
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {popularServices.slice(0, 6).map((service, index) => (
               <UltraFuturisticCard
                 key={service.id}
                 variant={service.variant as any}
                 interactive={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2788,6 +3035,9 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="p-6"
+=======
+className='p-6'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
@@ -2833,14 +3083,19 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   </div>
                   <ul className="text-xs text-gray-300 space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
+<<<<<<< HEAD
                       <li key={idx} className="flex items-center">
                         <Check className="w-3 h-3 text-green-400 mr-2" />{" "}
+=======
+                      <li key={idx} className='flex items-center'>
+                        <Check className='w-3 h-3 text-green-400 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Button
+<Button
                   href={service.link}
 <<<<<<< HEAD
 =======
@@ -2913,8 +3168,12 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
                 >
                   Learn More
+<<<<<<< HEAD
                   <ExternalLink className="ml-2 w-4 h-4" />
 <<<<<<< HEAD
+=======
+                  <ExternalLink className='ml-2 w-4 h-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </UltraFuturisticCard>
 
@@ -2948,6 +3207,19 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </div>
         </div>
         {/* FAQ Section */}
+<<<<<<< HEAD
+=======
+<div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Frequently Asked Questions
+          </h2>
+          <div className='max-w-4xl mx-auto space-y-4'>
+            <UltraFuturisticCard variant='quantum' className='p-6'>
+              <h3 className='text-lg font-bold text-white mb-3'>
+                What's included in the free trial?
+              </h3>
+              <p className='text-gray-300'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 All plans include a generous free trial period with full access
                 to the selected services. No credit card required to start your
                 trial.
@@ -3027,6 +3299,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3035,12 +3308,20 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
         <div className="mb-20">
 =======
               </p>{" "}
+=======
+              </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </UltraFuturisticCard>
           </div>
         </div>
         {/* Contact Information */}
+<<<<<<< HEAD
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
+=======
+<div className='mb-16'>
+          <h2 className='text-3xl font-bold text-white mb-8 text-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             Get In Touch
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -3082,13 +3363,18 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {contactInfo.address}
               </p>
+<<<<<<< HEAD
               <p className="text-gray-400 text-sm mt-2">
                 Global operations
               </p>{" "}
+=======
+              <p className='text-gray-400 text-sm mt-2'>Global operations</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </UltraFuturisticCard>
           </div>
         </div>
         {/* CTA Section */}
+<<<<<<< HEAD
         <div className="text-center">
           <UltraFuturisticCard
             variant="quantum-holographic-advanced"
@@ -3320,6 +3606,9 @@ variant='primary'
 =======
         {/* CTA Section */}
         <div className='text-center'>
+=======
+<div className='text-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <UltraFuturisticCard
             variant='quantum-holographic-advanced'
             className='p-12'
@@ -3539,6 +3828,7 @@ variant='primary'
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
                 Setup
               </p>
+<<<<<<< HEAD
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
@@ -3807,3 +4097,14 @@ origin/automation-improvements-final
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              <p className='mt-2'>
+                ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
+              </p>
+            </div>
+          </UltraFuturisticCard>
+        </div>
+      </div>
+</Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

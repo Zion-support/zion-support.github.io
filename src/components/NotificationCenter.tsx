@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 unreadCount, ;
     markAsRead, ;
@@ -8,6 +9,9 @@ unreadCount, ;
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
 import { Button } from '@/components/ui/button',
@@ -20,6 +24,7 @@ import {
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
+<<<<<<< HEAD
 } from '@/components/notifications',
 import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
@@ -123,6 +128,11 @@ export const NotificationCenter: React.FC = () => {;
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
 =======
+=======
+ } from '@/components/notifications';
+import { FilterType } from '@/components/notifications/NotificationFilter';
+export const NotificationCenter: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -191,6 +201,7 @@ export const NotificationCenter: React.FC = () => {;
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
+<<<<<<< HEAD
   )
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
@@ -257,3 +268,48 @@ export const NotificationCenter: React.FC = () => {;
 =======
         <NotificationHeader
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+
+}, [open, loadedOnce, fetchNotifications]);
+}catch (err) {;
+  logErrorToProduction ('Failed to mark notifications as read:', {;
+  data: err ;
+});
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+  variant: 'error' ;
+}) ;
+
+};
+
+  (v) => setOpen (v ?? false) ;
+}> <PopoverTrigger asChild> {';
+  unreadCount > 9 ? '9+' : unreadCount ;
+}</span>) ;
+}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {;
+  unreadCount ;
+}onMarkAllAsRead= {;
+  handleMarkAllAsRead ;
+}/> <NotificationFilter filter= {;
+  filter as FilterType ;
+}onFilterChange= {;
+  handleFilterChange ;
+}/> <NotificationList loading= {;
+  loading ;
+}error= {;
+  error ;
+}notifications= {;
+  filteredNotifications ;
+}onMarkAsRead= {;
+  markAsRead ;
+}onDismiss= {;
+  dismissNotification ;
+}onRetry= {;
+  fetchNotifications ;
+}/> <NotificationFooter onClose= {;
+  () => setOpen (false) ;
+}/> </PopoverContent> </Popover>) ;
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

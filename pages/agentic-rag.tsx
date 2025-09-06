@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
@@ -24,6 +25,16 @@ export default function AgenticRAGPage() {
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
+=======
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+export default function AgenticRAGPage() {
+	const contactInfo = null;
+	return (
+		<UltraFuturisticMatrixBackground>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -83,6 +94,7 @@ export default function AgenticRAGPage() {
 			</div>
 		</UltraFuturisticMatrixBackground>
 	)
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -168,3 +180,6 @@ return (
   </UltraFuturisticMatrixBackground>);
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

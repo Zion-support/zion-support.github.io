@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,10 +422,39 @@ module.exports = BuildOptimizer;
 
 
 =======
+=======
+}};
+; async analyzeBuild() {; try {; this.log('🏗️ Analyzing current build...');
+; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this.projectRoot,
+    stdio: 'pipe'})};
+; const buildStats = {; totalSize: 0, fileCount: 0, largestFiles: [], jsFiles: [], cssFiles: [],
+    assetFiles: []};
+; const analyzeDirectory = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; analyzeDirectory(fullPath)} else {; const fileInfo = {; path: fullPath.replace(this.projectRoot + '/dist/', ''); size: stat.size,
+    sizeKB: Math.round(stat.size / 1024 * 100) / 100};
+; buildStats.totalSize + = stat.size; buildStats.fileCount++;
+; if (item.endsWith('.js')) {; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {; buildStats.cssFiles.push(fileInfo)} else {; buildStats.assetFiles.push(fileInfo)}}})};
+; analyzeDirectory('dist');
+; // Sort files by size; const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size); .slice(0, 10);
+; buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;
+; return {; success: true,
+    stats: buildStats}} catch (error) {; return {; success: false, error: error.message, stats: null}}};
+; async checkBundleAnalyzer() {; try {; this.log('📊 Checking bundle analyzer availability...');
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer']);
+; return {; available: hasAnalyzer, package: hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {; return {; available: false,
+    error: error.message}}};
+; async checkOptimizationSettings() {; try {; this.log('⚙️ Checking optimization settings...');
+; const settings = {; treeShaking: false, minification: false, codeSplitting: false,
+    compression: false};
+; // Check Next.js config; if (fs.existsSync('next.config.js')) {; const nextConfig = fs.readFileSync('next.config.js', 'utf8'); settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify: true'); settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress: true')};
+; // Check package.json for optimization scripts; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const scripts = packageJson.scripts || {};
+; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ; return {; success: true,
     settings: settings}} catch (error) {; return {; success: false, error: error.message, settings: null}}};
 ; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
       , buildSize: buildStats?.stats?.totalSizeMB || 0, fileCount: buildStats?.stats?.fileCount || 0, optimizationScore: 0,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1950,6 +1980,8 @@ optimizer.run().catch(error => {,;
     compression: false}; // Check Next.js config; if (fs.existsSync('next.config.js')) {const nextConfig = fs.readFileSync('next.config.js', 'utf8'); settings.minification = nextConfig.includes('swcMinify: true') |nextConfig.includes('swcMinify: true'); settings.compression = nextConfig.includes('compress: true') |nextConfig.includes('compress: true')}; // Check package.json for optimization scripts; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const scripts = packageJson.scripts |{}; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'); return {success: true
     settings: settings}} catch (error) {return {; success: false, error: error.message, settings: null}}}; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
       , buildSize: buildStats?.stats?.totalSizeMB |0, fileCount: buildStats?.stats?.fileCount |0, optimizationScore: 0
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     recommendations: []
 ; async analyzeBuild() {_; try {; this.log('🏗️ Analyzing current build...');
 ; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', _{; cwd: this.projectRoot; stdio: 'pipe'})};
@@ -1996,6 +2028,7 @@ optimizer.run().catch(error => {,;
 ;
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
+<<<<<<< HEAD
 optimizer.run().catch(error = > {; process.exit(1)})}};
 ;
   async analyzeBuild() {;
@@ -3058,3 +3091,6 @@ optimizer.run ().catch (error = > { process.exit (1)});
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+optimizer.run().catch(error = > {; process.exit(1)});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

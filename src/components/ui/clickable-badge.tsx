@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function ClickableBadge({
       >
@@ -11,6 +12,10 @@ import React from "react"
 import { cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge-variants"
 
+=======
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
@@ -88,6 +93,7 @@ export function ClickableBadge({;
 
     </div>
   )
+<<<<<<< HEAD
   )
 }
             e.stopPropagation()
@@ -171,3 +177,6 @@ function ClickableBadge() {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

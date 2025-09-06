@@ -30,6 +30,7 @@ import React from 'react';
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
 export default function RAGEvaluationLabPage() {
+<<<<<<< HEAD
 	return (
 		<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -71,3 +72,5 @@ export default function RAGEvaluationLabPage() {
 }
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

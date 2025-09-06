@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useEffect, useState } from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 export default function AdminTokens() {
@@ -53,6 +56,7 @@ export default function AdminTokens() {
     load()
   }, []),
   async function issue() {
+<<<<<<< HEAD
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -65,6 +69,9 @@ export default function AdminTokens() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
+=======
+    const res = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     setConfig(data)
   }
 
@@ -121,6 +128,7 @@ export default function AdminTokens() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 };
 ;
@@ -249,3 +257,7 @@ function save_config() {
               </div>
 
 
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

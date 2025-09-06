@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
+=======
+
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   BookOpen
   Code
@@ -14,7 +27,10 @@ import { ApiKeysManager } from '@/components/developers/ApiKeysManager'
 import { WebhooksManager } from '@/components/developers/WebhooksManager'
 import { ApiDocumentation } from '@/components/developers/ApiDocumentation'
 import { ApiLogs } from '@/components/developers/ApiLogs'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface TabDefinition {
   id: string;
   label: string;
@@ -47,6 +63,7 @@ export function DeveloperPortal() {
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
   return (
+<<<<<<< HEAD
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
@@ -58,6 +75,13 @@ export function DeveloperPortal() {
         </p>
       </div>
 
+=======
+    <div className;
+            return (
+              <button
+                key={tab.id}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
@@ -79,6 +103,7 @@ export function DeveloperPortal() {
         {activeTab === 'logs' && <ApiLogs />}
       </div>
     </div>
+<<<<<<< HEAD
   )
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -187,12 +212,16 @@ function DeveloperPortal() {
 
 
 
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
+<<<<<<< HEAD
 };
 };
   );
@@ -206,5 +235,7 @@ export default function ProtectedDeveloperPortal() {;
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }

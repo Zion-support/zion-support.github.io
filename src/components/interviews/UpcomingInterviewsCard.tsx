@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Filter for confirmed interviews in the future
 =======
 // Filter for confirmed interviews in the future
@@ -113,6 +114,8 @@ function UpcomingInterviewsCard() {
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -121,6 +124,7 @@ import { Interview } from '@/types/interview';
 import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
 import { Calendar, Clock, Video } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Avatar } from '@/components/ui/avatar';
@@ -276,6 +280,18 @@ if ( {) {
 
 
 
+=======
+import { Avatar } from '@/components/ui/avatar';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function UpcomingInterviewsCard() {
+
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const loadInterviews = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -389,6 +405,7 @@ if ( {) {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -519,3 +536,6 @@ if ( {) {
 
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

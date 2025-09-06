@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
@@ -46,6 +51,7 @@ function isRateLimited(ip: string): boolean {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 <<<<<<< HEAD
@@ -281,3 +287,25 @@ export default async function handler(req, res) {
   }
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  try {
+    const { prompt } = req.body || {};
+    if (!prompt) {
+      return res.status(400).json({ error: 'Prompt is required' });
+    }
+
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 500
+    });
+
+    const content = response.choices[0]?.message?.content || '';
+    return res.status(200).json({ content });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

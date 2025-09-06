@@ -32,6 +32,7 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import React from './react';
 (" ");
+<<<<<<< HEAD
 export default /**
  * ForgotPassword - Function description
  */
@@ -59,3 +60,5 @@ function ForgotPassword() {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -8,14 +9,21 @@ const BlockchainSolutions: NextPage = () => {
         <title>BlockchainSolutions - Zion Tech Solutions</title>
         <meta name="description" content="BlockchainSolutions page" />
       </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const BlockchainSolutions: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <main>
         <h1>BlockchainSolutions</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-  )
-}
+);
+};
+
 export default BlockchainSolutions;
+<<<<<<< HEAD
 
 },
 export default BlockchainSolutions,
@@ -43,3 +51,5 @@ export default BlockchainSolutions;
 ;
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -7,6 +8,10 @@
 				"Team dashboards and skill gap analysis"
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook"
 
+=======
+import React from 'react';
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Privacy-first voice and text processing"
 			]}
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
@@ -40,6 +45,7 @@
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training";
 		/>;
 	);
@@ -47,4 +53,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

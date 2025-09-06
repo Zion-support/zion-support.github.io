@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,10 @@ export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
+=======
+id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'
@@ -422,6 +427,7 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
+<<<<<<< HEAD
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
@@ -476,10 +482,13 @@ export const cuttingEdgeITServices2025 = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
+<<<<<<< HEAD
 
   },;
 
@@ -752,3 +761,7 @@ export const cuttingEdgeITServices2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

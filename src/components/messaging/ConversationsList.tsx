@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging',;
@@ -41,6 +42,31 @@ export function ConversationsList({;
     )
   },
 
+=======
+import React, { useMemo } from 'react';
+import { User } from 'lucide-react';
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
+
+import React, { useMemo } from 'react';
+import { User } from 'lucide-react'
+import { Conversation  } from '@/types/messaging';
+import { ConversationItem  } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
+interface ConversationsListProps {
+  conversations: Conversation[];
+  activeConversation: Conversation | null;
+  setActiveConversation: (conversation: Conversation) => void;
+  markAsRead: (conversationId: string) => Promise<void>
+export function ConversationsList({
+  conversations;
+  activeConversation;
+  setActiveConversation;
+  markAsRead
+}: ConversationsListProps) {
+  const itemSize = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
@@ -67,6 +93,7 @@ export function ConversationsList({;
         </List>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 
@@ -188,3 +215,6 @@ export const ConversationsList: React.FC<ConversationsListProps> = ({
   );
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

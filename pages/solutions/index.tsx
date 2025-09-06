@@ -22,6 +22,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
@@ -1289,3 +1290,6 @@ export default SolutionsPage;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const SolutionsPage: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

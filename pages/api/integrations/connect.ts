@@ -3,8 +3,19 @@ import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
 import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules },
+  if (!providerId || !getProviderById(providerId)) {
+    return res.status(400).json({ error: "Invalid providerId" });
+  }
+  const now = null;
+  res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const { providerId, syncRules } = req.body as {
     providerId?: string;
     syncRules?: SyncRules;
@@ -123,4 +134,8 @@ export default function handler(req, res) {
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
 
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

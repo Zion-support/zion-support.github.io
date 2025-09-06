@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
+=======
+import Head from 'next/head';
+import React from 'react';
+type Speaker = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 {
   name: 'Venture Partner'
 }
@@ -42,6 +48,7 @@ export default function SummitPage() {;
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD
   ];
 
   const partners: Partner[] = [;
@@ -99,10 +106,14 @@ export default function SummitPage() {
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
+<<<<<<< HEAD
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
   'Content - Type': 'application / json';
@@ -148,11 +159,48 @@ function SummitPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
+=======
+avatarUrl: '/favicon.svg',
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+      twitter: 'https://twitter.com',
+      linkedin: 'https://www.linkedin.com',
+      highlight: true,
+    },
+    {
+      name: 'Alex Rivera',
+      title: 'Head of Protocol Engineering',
+      avatarUrl: '/favicon.svg',
+bio: 'Leading the architecture of ZionDAO and trust rails.',
+    },
+    {
+      name: 'Jordan Lee',
+      title: 'Zion Alumni | AI Fellow',
+      avatarUrl: '/favicon.svg',
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+twitter: 'https://twitter.com',
+    },
+  ];
+  const partners: Partner[] = [
+    { name: 'Gov Partner' }
+    { name: 'Venture Partner' }
+    { name: 'University Partner' }
+  ];
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setResult(null)
+    try {
+      const res = await fetch('/api/summit/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ ...form, source: 'summit-page' }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed');
       setResult({ ok: true });
       setForm({ name: '', email: '', role: '', country: '' });
+<<<<<<< HEAD
     } catch (err: any) {;
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {;
@@ -165,6 +213,36 @@ function SummitPage() {
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+=======
+    } catch (err: any) {
+      setResult({ error: err?.message |'Unexpected error' });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const livestreamEmbed = () => {
+    if (platform === 'youtube') {
+/>
+      );
+    }
+    if (platform === 'twitch') {
+        />
+      );
+    }
+      />
+    );
+  };
+
+  return (
+    <>
+      <Head>
+        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
+<meta
+          name='description'
+          content='Zion Global Summit: AI, Talent, Trust — Globalized'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -186,12 +264,32 @@ function SummitPage() {
             </a>;
             <a
               href='#agenda'
+<<<<<<< HEAD
+=======
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
+            >
+              Agenda
+            </a>
+          </div>
+        </div>
+      </section>
+
+<div className='grid md:grid-cols-3 gap-6 mt-8'>
+        <section
+          id='agenda'
+          className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
+        >
+          <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
+          <ol className='space-y-3 list-decimal list-inside'>
+            <li>Opening Keynote — Launching Zion Protocol</li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
+<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -200,9 +298,30 @@ function SummitPage() {
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
 
+=======
+<section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+          <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
+          <ul className='space-y-2'>
+            <li>
+              <span className='font-medium'>Date:</span> Nov 12, 2025
+            </li>
+            <li>
+              <span className='font-medium'>Time:</span> 16:00 UTC
+            </li>
+            <li>
+              <span className='font-medium'>Location:</span> Hybrid (Virtual +
+              In‑Person)
+            </li>
+            <li>
+              <span className='font-medium'>Tagline:</span> AI, Talent, Trust —
+              Globalized
+            </li>
+          </ul>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
-      <section
+
+<section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;
@@ -221,8 +340,40 @@ function SummitPage() {
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
+<<<<<<< HEAD
               <p className="mt-3 text-sm">{s.bio}</p>
       <section
+=======
+              <p className='mt-3 text-sm'>{s.bio}</p>
+              <div className='mt-3 flex gap-3 text-sm'>
+                {s.twitter && (
+                  <a
+                    className='underline'
+                    href={s.twitter}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Twitter
+                  </a>
+                )}
+                {s.linkedin && (
+                  <a
+                    className='underline'
+                    href={s.linkedin}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    LinkedIn
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+<section
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
@@ -301,6 +452,7 @@ function SummitPage() {
           {partners.map (p => (
             <div;
               key={p.name}
+<<<<<<< HEAD
               className='h - 16 rounded - md border border - dashed border - gray - 300 dark:border - gray - 700 flex items - center justify - center text - sm opacity - 70';
             >;
               {p.logo_url ? (
@@ -318,6 +470,30 @@ function SummitPage() {
             <select;
               aria - label='Platform';
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
+=======
+              className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
+            >
+              {p.logoUrl ? (
+                <img src={p.logoUrl} alt={p.name} className='max-h-12' />
+              ) : (
+                p.name
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+<section
+        id='livestream'
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
+      >
+        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
+          <h2 className='text-2xl font-bold'>Livestream</h2>
+          <div className='flex flex-wrap items-center gap-2'>
+            <select
+              aria-label='Platform'
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
             >;
@@ -468,12 +644,24 @@ function SummitPage() {
             >
               {submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
+<<<<<<< HEAD
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
             {result?.error && <span className="text-red-600">{result.error}</span>}
+=======
+            {result?.ok && (
+              <span className='text-green-600'>
+                Thank you! You are registered.
+              </span>
+            )}
+            {result?.error && (
+              <span className='text-red-600'>{result.error}</span>
+            )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </form>
       </section>
 
+<<<<<<< HEAD
 }
 }
 }
@@ -565,3 +753,15 @@ function SummitPage() {
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
+=======
+<section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+        <h2 className='text-xl font-semibold'>
+          AI Session Summaries (Optional)
+        </h2>
+        <p className='text-sm opacity-70 mt-2'>
+          Auto-generated summaries and ZionGPT moderation prompts coming soon.
+        </p>
+      </section>
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

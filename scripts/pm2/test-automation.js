@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,15 +239,32 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-class TestAutomation {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async runTests() {try {; this.log('🧪 Running test suite...'); const startTime = Date.now(); // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); const duration = Date.now() - startTime; return {success: true, output: testResult, duration: duration}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |''
-    duration: 0}}}; async runLintTests() {try {; this.log('🔍 Running lint tests...'); const lintResult = execSync('npm run lint', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); return {success: true
-    output: lintResult}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |''}}}; async runTypeCheck() {try {; this.log('📝 Running type check...'); const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); return {success: true
-    output: typeResult}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |''}}}; async generateReport(testResults, lintResults, typeResults) {const report = {; timestamp: new Date().toISOString(), summary: {
-      , tests: testResults.success ? 'passed': 'failed', lint: lintResults.success ? 'passed': 'failed', typeCheck: typeResults.success ? 'passed': 'failed'
+;
+class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()};
+; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
+; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
+; async runTests() {; try {; this.log('🧪 Running test suite...');
+; const startTime = Date.now();
+; // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
+; const duration = Date.now() - startTime;
+; return {; success: true, output: testResult, duration: duration}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || '',
+    duration: 0}}};
+; async runLintTests() {; try {; this.log('🔍 Running lint tests...');
+; const lintResult = execSync('npm run lint', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
+; return {; success: true,
+    output: lintResult}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || ''}}};
+; async runTypeCheck() {; try {; this.log('📝 Running type check...');
+; const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
+; return {; success: true,
+    output: typeResult}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || ''}}};
+; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , tests: testResults.success ? 'passed': 'failed', lint: lintResults.success ? 'passed': 'failed', typeCheck: typeResults.success ? 'passed': 'failed',
     overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'
     }
     details: {, tests: testResults, lint: lintResults
@@ -301,6 +319,7 @@ const { execSync } = require('child_process');
 =======
 // Run the test automation;
 const testAutomation = new TestAutomation();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 testAutomation.run().catch(error = > {; process.exit(1)});
@@ -2560,3 +2579,6 @@ module.exports = TestAutomation;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+testAutomation.run().catch(error = > {; process.exit(1)});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

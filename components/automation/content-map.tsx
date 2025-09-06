@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 ) )
 }</ul> </section> <section>) )
@@ -36,6 +37,12 @@ export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Entry = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -82,6 +89,7 @@ export default function ContentMap(): any ({ report }: Props) {;
           {report.pages.map((p, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
+<<<<<<< HEAD
 }
 ) );
 }</ul> </section> <section>) );
@@ -120,3 +128,10 @@ if (return <div > No content map yet. Check back later.</div>) {
         </ul>;
       </section>;
     </div>);
+=======
+        </ul>
+      </section>
+    </div>
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -86,6 +87,41 @@ fetch("/api/contact", {
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+=======
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
+
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "";
+    email: "";
+    subject: "";
+    message: ""});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: ""
+    email: ""
+    subject: ""
+    message: ""})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string
+  }>({}),
+
+  const handleChange = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
@@ -537,6 +573,7 @@ export default ContactSection;
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
+<<<<<<< HEAD
 
                 </div>;
               </form>;
@@ -582,3 +619,36 @@ description: err.message;
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

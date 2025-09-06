@@ -45,6 +45,7 @@ if ( {) {
 =======
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -111,3 +112,11 @@ export default function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const invoices = null;
+  return res.status(200).json(invoices)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

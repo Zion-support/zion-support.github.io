@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -64,6 +65,11 @@ export default function handler(req, res) {
   state.config.paused = Boolean(paused)
   writeState(state)
 >>>>>>> main
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const { paused } = req.body as { paused: boolean },
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ paused: state.config.paused })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

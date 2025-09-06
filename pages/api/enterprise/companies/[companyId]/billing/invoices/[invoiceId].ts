@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
@@ -9,6 +10,12 @@ export const config = {
   },;
 };
 
+=======
+responseLimit: false,
+  },
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -35,11 +42,28 @@ export const config = {
     return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  if (req.method !== 'GET')
+    return res.status(405).json({ error: 'method_not_allowed' });
+
+  // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
+  const pdfBase64 =
+    'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
+  const pdfBuffer = Buffer.from(pdfBase64, 'base64');
+
+res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    "Content-Disposition"
+    `attachment; filename="invoice-${invoiceId}.pdf"`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
   res.status(200).send(pdfBuffer);
+
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoice: 'PDF buffer' });
@@ -154,3 +178,5 @@ export const config = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  
 
 
@@ -21,6 +22,12 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
   const langs = Object.keys(github);
 
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-8">
       <header className="space-y-2">
@@ -117,5 +124,8 @@ function TechRadar() {
     </div>
 );
 }
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

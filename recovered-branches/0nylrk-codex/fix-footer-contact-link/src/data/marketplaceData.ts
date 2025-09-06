@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -723,10 +724,24 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     availability: "2-4 Weeks"
   }
+=======
+    id: "ai-model-1";
+    title: "GPT-4 API Integration Package";
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
+    category: "AI Models & APIs";
+    price: 1999;
+    currency: "$";
+    tags: ["GPT-4", "API Integration", "NLP"],
+    author: {
+      name: "AI Solutions Inc.";
+      id: "ai-solutions";
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -758,6 +773,9 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'AI models',
+=======
+'AI models',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     'GPT integration',
     'Machine learning',
     'Computer vision',
@@ -775,9 +793,14 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'GPU cluster',
     'Edge computing',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'High performance storage',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   // Convert strings to SearchSuggestion objects
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -850,6 +873,16 @@ export const generateFilterOptions = (): FilterOptions => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = (): FilterOptions => {
+  // Extract unique categories, locations, and availability options from listings
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ].sort();
   const locations = [
     ...new Set(
@@ -895,6 +928,7 @@ availabilityOptions: availability && availability.map (item => ({
   label: item, value: item 
 
 }) );
+<<<<<<< HEAD
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
@@ -1445,3 +1479,8 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

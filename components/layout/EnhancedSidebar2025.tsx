@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ] 
  ] 
 
@@ -33,6 +34,23 @@
 interface SidebarItem {
   name: string,
   href: string,
+=======
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight, Home, Star, Users;
+  Settings, HelpCircle, Mail, Phone, MapPin;
+  Brain, Atom, Shield, Rocket, DollarSign;
+  Globe, Cpu, Database, Lock, Zap;
+  TrendingUp, Award, CheckCircle, Clock;
+  ArrowRight, Search, Menu, X as CloseIcon;
+  Target, BookOpen, Truck, BarChart3;
+  Sparkles, Eye, Lightbulb, Palette, Code
+ } from 'lucide-react';
+interface SidebarItem {
+  name: string;
+  href: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
@@ -41,6 +59,7 @@ interface SidebarItem {
   isHot?: boolean
 }
 
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -2030,3 +2049,6 @@ Contact Us";
       </motion && motion.div>;
     </>;
 ";
+=======
+const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

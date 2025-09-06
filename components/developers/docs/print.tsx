@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   return {
@@ -88,6 +89,12 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
     props: {;
       docs: content as DocsContent}}
     return () => clearTimeout(id);
+=======
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return (
     <div className='p-8 max-w-4xl mx-auto'>;
@@ -101,6 +108,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
               s && s.code.map((c, i) => (;
                 <pre
                   key={i}
+<<<<<<< HEAD
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
                 </pre>;
@@ -112,6 +120,13 @@ export default function PrintDocs({ docs }: PageProps) {
     return () => clearTimeout(id)
   }, []);
 
+=======
+                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
+                >
+                  {c.content}
+                </pre>
+              ))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -168,9 +183,14 @@ function PrintDocs() {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 
   );
 }
 
 
 
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function AIEthicsAutomation() {
   return (
     <>
@@ -247,6 +251,7 @@ export default function AIEthicsAutomation() {
     </>
   )
 }
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 };
@@ -324,3 +329,5 @@ function AIEthicsAutomation() {
           </div>;
         </main>;
       </div>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

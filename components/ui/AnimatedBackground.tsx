@@ -16,6 +16,7 @@ export default function AnimatedBackground() {
             transform: translateY(0px) rotate(0deg);
           }
         }
+<<<<<<< HEAD
       `}</style>;
     </div>;
   );  return (
@@ -124,3 +125,8 @@ function AnimatedBackground() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
+=======
+      `}</style>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

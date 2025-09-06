@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -359,22 +360,41 @@ export default function Support() {
                   </div>
                 </div>
               </motion.div>
+=======
+import { HelpCircle, MessageCircle, Phone, Mail, Clock;
+  BookOpen, Video, FileText, Search, Filter;
+  CheckCircle, ArrowRight, Brain, Atom, Rocket;
+  Shield, Zap, Users, Star, TrendingUp, Code
+ } from 'lucide-react';
+export default function Support() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const supportCategories = null;
+          </div>
+        </section>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Support Channels */}
-        <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-6xl mx-auto">
+<section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
               className="text-center mb-16"
+=======
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                How Can We Help?
-              </h2>
-              <p className="text-xl text-gray-300">
-                Multiple support channels to meet your needs
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Support</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Choose the support channel that works best for you.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
                 <motion.div
+<<<<<<< HEAD
                   key={channel.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -408,28 +428,28 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <channel.icon className="w-6 h-6 text-blue-600" />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Availability:</span>
-                      <span className="text-cyan-400">{channel.availability}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Response:</span>
-                      <span className="text-green-400">{channel.responseTime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Priority:</span>
-                      <span className="text-purple-400">{channel.priority}</span>
-                    </div>
+                  <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
+                  <p className="text-gray-600 mb-4">{channel.description}</p>
+                  <div className="text-sm text-blue-600 font-medium">
+                    {channel.availability}
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Search and Filter */}
         <section className="py - 12 px - 4">;
           <div className="max - w-6xl mx - auto">;
@@ -650,14 +670,38 @@ export default function Support() {
   }
 }
               className="text-center mb-16"
+=======
+
+{/* Contact Info */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-300">
-                Quick answers to common questions and solutions
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">Contact Information</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 302 464 0950</p>
+                </div>
+                <div className="text-center">
+                  <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Email</h3>
+                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <Users className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Address</h3>
+                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
             </motion.div>
+<<<<<<< HEAD
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
@@ -866,10 +910,23 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Support Hours & Availability
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need Immediate Help?
               </h2>
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
 
 
@@ -1045,29 +1102,38 @@ export default Support,
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
+=======
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Contact us now for urgent support needs.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
+<<<<<<< HEAD
                   Contact Support
                   <ArrowRight className="w-5 h-5 ml-2" />
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+=======
+                  Contact Us
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/help"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </a>
-              </div>
-              <div className="mt-8 p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30">
-                <h3 className="text-xl font-bold text-white mb-4">Emergency Support</h3>
-                <p className="text-gray-300 mb-4">
-                  For critical issues affecting production systems, contact our emergency support line: </p>
-                <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>
-                <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>
+                  Help Center
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
     </Layout>
   )
@@ -1232,3 +1298,8 @@ export default SupportPage;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+</div>
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

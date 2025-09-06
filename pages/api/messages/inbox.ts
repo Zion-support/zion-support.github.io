@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   res.status(200).json({ items })
@@ -46,6 +47,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
   const items = listConversations(user.id)
 >>>>>>> main
+=======
+  const user = requireUser(req, res);
+  if (!user) return;
+  if (req.method !== 'GET')
+    return res.status(405).json({ error: 'Method not allowed' });
+  const items = listConversations(user.id);
+  res.status(200).json({ items });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ items })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

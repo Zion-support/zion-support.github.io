@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro'
+=======
+id: 'customer-success-ai-pro',
+    name: 'Customer Success AI Pro',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -428,6 +433,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
+<<<<<<< HEAD
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -722,3 +728,13 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      'Basel III',
+      'Solvency II',
+      'Dodd-Frank',
+      'Financial Regulations',
+      'Risk Management Standards',
+    ],
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

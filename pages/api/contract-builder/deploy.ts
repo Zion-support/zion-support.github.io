@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -20,6 +21,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+=======
+import { Interface } from '[^']*';
+// Simple ABI for demonstration (release/refund)
+const abi = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
     const iface = new Interface(abi)
@@ -27,6 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const tx = {
       data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
+<<<<<<< HEAD
 
   try {
     const iface = new Interface(abi)
@@ -45,6 +52,15 @@ import { Interface } from 'ethers';
 // Simple ABI for demonstration (release/refund);
 import { Interface } from 'ethers';
 // Simple ABI for demonstration (release/refund);
+=======
+    };
+return res.status(200).json({ abi, tx });
+  } catch (e: any) {
+    return res
+      .status(400)
+      .json({ error: e?.message || 'Failed to prepare deployment tx' });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
     return res.status(200).json({ abi, tx })
   } catch (e: any) {

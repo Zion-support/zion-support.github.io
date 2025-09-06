@@ -1,6 +1,7 @@
 import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
+<<<<<<< HEAD
 
 
 import {useRouter} from 'next/router';
@@ -41,6 +42,10 @@ export default function WhitepaperPreview() {
     fetch(`/api/whitepaper/get?id=${id}`);
       .then(r => (r && r.ok ? r && r.json() : Promise && Promise.reject()));
       .then(d => setMarkdown(d && d.markdown || ''));
+=======
+.then(r => (r.ok ? r.json() : Promise.reject()))
+      .then(d => setMarkdown(d.markdown || ''))
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       .catch(() => setNotFound(true));
   }, [id]);
     return (
@@ -48,6 +53,7 @@ export default function WhitepaperPreview() {
         Preview not available or expired.;
       </div>;
     );
+<<<<<<< HEAD
   if (!markdown);
     // In a production app, this would fetch from a real DB.;
     fetch (`/api / whitepaper / get?id=${id}`);
@@ -65,3 +71,13 @@ if (
 
 
 
+=======
+  if (!markdown)
+    return <div className='container mx-auto px-4 py-6'>Loading…</div>;
+  return (
+    <div className='container mx-auto px-4 py-6'>
+      <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
+      <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

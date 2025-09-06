@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -640,3 +641,13 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+import { ProfileData } from "@/types/profile";
+export const MOCK_PROFILES: Record<string, ProfileData> = {
+  "service-provider-1": {
+    id: "service-provider-1";
+    name: "TechSolutions Inc.";
+    title: "Enterprise AI Integration Services";
+    avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

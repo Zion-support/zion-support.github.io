@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -155,3 +156,11 @@ export default async function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '[^']*';
+function ensureAdmin(req: NextApiRequest): boolean {
+  const token = null;
+  res.status(200).json({ items })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

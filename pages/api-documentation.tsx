@@ -16,6 +16,7 @@ export default function APIDocumentationPage() {
         </h1>
         <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
       </section>
+<<<<<<< HEAD
     </Layout>;
   );
 
@@ -72,3 +73,7 @@ class ErrorBoundary extends React.Component {
 ;
 
 
+=======
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

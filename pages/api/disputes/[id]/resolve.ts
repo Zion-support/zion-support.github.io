@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -297,3 +298,15 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '[^']*';
+import { parseUserFromRequest, ensureAdmin } from '[^']*';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+  const user = null;
+  return res.status(405).end('Method Not Allowed')
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

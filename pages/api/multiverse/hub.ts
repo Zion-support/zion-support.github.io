@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -63,6 +64,10 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+  const state = null;
+      lastSyncedAt: state.lastSyncedAt})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {

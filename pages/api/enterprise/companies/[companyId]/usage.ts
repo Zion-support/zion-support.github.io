@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -55,3 +56,25 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const company = null;
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'company_not_found' })
+    ) {
+      return res
+        .status(400)
+        .json({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
+    }
+    const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "company_not_found" });
+  }
+
+  return res.status(405).json({ error: 'method_not_allowed' });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

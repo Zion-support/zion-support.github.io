@@ -1,7 +1,44 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
     <div className='flex items-center justify-end gap-2'>;
+=======
+
+import Link from "next/link";
+import { 
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu",
+import { Button } from "@/components/ui/button";
+import Link from 'next/link'
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+import { Eye, ChevronDown, Loader2 } from 'lucide-react'
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
+interface ApplicationActionsProps {
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+}
+
+export function ApplicationActions({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
+    <div className='flex items-center justify-end gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <Button
         variant='outline'
         size='sm'
@@ -47,6 +84,7 @@ return (
           <DropdownMenuItem
 
             onClick={() => onStatusChange(application.id, 'rejected')}
+<<<<<<< HEAD
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -119,6 +157,9 @@ export function ApplicationActions({
           <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
+=======
+            className='text-red-600'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
 
 
@@ -126,6 +167,7 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -273,3 +315,13 @@ export function ApplicationActions({;
     </div>);
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<Button variant='default' size='sm' asChild>
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+          Contact
+        </Link>
+      </Button>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

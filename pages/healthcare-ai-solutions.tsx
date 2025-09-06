@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 			title="Healthcare AI Solutions"
 			slug="healthcare-ai-solutions"
@@ -12,6 +13,12 @@
 				"Capacity forecasting and staffing optimization"
 				"HIPAA-compliant data pipelines and audit"
 
+=======
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function HealthcareAISolutions() {
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
@@ -71,6 +78,7 @@ return (
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions";
 		/>;
 	);
@@ -81,3 +89,6 @@ return (
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

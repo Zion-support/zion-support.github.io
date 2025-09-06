@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -50,12 +51,17 @@ import {
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
+=======
+import React from 'react',
+import Link from 'next/link';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 <<<<<<< HEAD
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
@@ -85,6 +91,20 @@ export function AuthConfigurationError(): any ({;
       onRetry();
     } else {;
 <<<<<<< HEAD
+=======
+}
+
+export function AuthConfigurationError({ onRetry, showSetupButton;
+export function AuthConfigurationError({
+  onRetry
+  showSetupButton = true
+}: AuthConfigurationErrorProps) {
+  const handleRefresh = () => {
+    if (onRetry) {
+      onRetry()
+    } else {
+      window.location.reload();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   },
 
@@ -124,6 +144,7 @@ if ( {) {
       window.location.reload () }
   }
   return (
+<<<<<<< HEAD
     <div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;
       <div className='max - w-2xl w - full'>;
 export /**
@@ -191,6 +212,38 @@ if ( {) {
 
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
+=======
+<div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
+      <div className='max-w-2xl w-full'>
+        {/* Main Error Card */}
+        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>
+          <div className='text-center mb-6'>
+            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>
+              <AlertTriangle className='h-8 w-8 text-red-600' />
+            </div>
+            <h1 className='text-3xl font-bold text-gray-900 mb-2'>
+              Authentication Service Unavailable
+            </h1>
+            <p className='text-gray-600'>
+              The sign-up system needs to be configured before users can create
+              accounts
+            </p>
+          </div>
+          <Alert variant='destructive' className='mb-6'>
+            <AlertTriangle className='h-4 w-4' />
+            <AlertDescription>
+              <strong>Critical Issue #1:</strong> Auth0 environment variables
+              are not configured. New users cannot sign up until this is
+              resolved.
+            </AlertDescription>
+          </Alert>
+          {/* Technical Details */}
+<div className='bg-gray-50 rounded-lg p-4 mb-6'>
+            <h3 className='font-semibold text-gray-900 mb-2'>
+              Missing Configuration:
+            </h3>
+            <ul className='text-sm text-gray-700 space-y-1'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <li>• AUTH0_SECRET</li>
               <li>• AUTH0_BASE_URL</li>
               <li>• AUTH0_ISSUER_BASE_URL</li>
@@ -225,8 +278,12 @@ if ( {) {
 
           {/* Technical Details */}        {/* Main Error Card */}
           {/* Action Buttons */}
+<<<<<<< HEAD
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
+=======
+<div className='flex flex-col sm:flex-row gap-3 mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {showSetupButton && (
               <Button 
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
@@ -353,6 +410,7 @@ if ( {) {
               onClick={handleRefresh}
               variant='outline'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -374,6 +432,11 @@ if ( {) {
             >
               <RefreshCw className="w-4 h-4 mr-2" />
 
+=======
+              className='flex-1'
+            >
+              <RefreshCw className='w-4 h-4 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Check Again
             </Button>
           </div>
@@ -384,6 +447,7 @@ if ( {) {
           </div>;
 
           {/* Quick Setup Steps */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -401,6 +465,17 @@ if ( {) {
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<div className='border-t pt-6'>
+            <h3 className='font-semibold text-gray-900 mb-3'>
+              Quick Setup Steps:
+            </h3>
+            <ol className='space-y-3 text-sm'>
+              <li className='flex items-start gap-3'>
+                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
+                  1
+                </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -415,6 +490,7 @@ if ( {) {
                   </Link>
                 </div>
               </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <a
                     href="https://manage.auth0.com/"
@@ -431,12 +507,19 @@ if ( {) {
 
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
+=======
+              <li className='flex items-start gap-3'>
+                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
+                  2
+                </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Create Application:</strong>
                   <br />
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -447,6 +530,12 @@ if ( {) {
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<li className='flex items-start gap-3'>
+                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
+                  3
+                </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Configure Environment:</strong>
                   <br />
@@ -563,6 +652,7 @@ if ( {) {
                     npm run dev;
                   </code>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               
@@ -600,11 +690,15 @@ if ( {) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
+=======
+                  to apply changes
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </li>
             </ol>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   to apply changes                </div>                <div>;
@@ -670,6 +764,17 @@ if ( {) {
               href="/marketplace" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        {/* Alternative Actions Card */}
+<div className='bg-blue-50 rounded-xl border border-blue-200 p-6'>
+          <h3 className='font-semibold text-blue-900 mb-3'>
+            Alternative Actions:
+          </h3>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
+            <Link
+              href='/marketplace'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
@@ -740,7 +845,7 @@ if ( {) {
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
             >
               <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className='w-4 h-4' />
             </Link>
               <ExternalLink className="w-4 h-4" />
             </Link>
@@ -748,6 +853,7 @@ if ( {) {
         </div>
         {/* Setup Script Info */}
         {showSetupButton && (
+<<<<<<< HEAD
 =======
           </div>
         </div>
@@ -775,6 +881,18 @@ if ( {) {
 
 
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
+=======
+<div className='mt-6 text-center'>
+            <div className='bg-green-50 rounded-lg border border-green-200 p-4'>
+              <div className='flex items-center justify-center gap-2 text-green-700 mb-2'>
+                <CheckCircle className='w-5 h-5' />
+                <span className='font-semibold'>Automated Setup Available</span>
+              </div>
+              <p className='text-sm text-green-600 mb-3'>
+                Run the setup script to configure Auth0 interactively:
+              </p>
+              <code className='bg-green-100 text-green-800 px-3 py-1 rounded text-sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 npm run setup:auth0
               </code>
             </div>
@@ -849,6 +967,7 @@ if ( {) {
           </div>;
         )}
         {/* Footer */}
+<<<<<<< HEAD
 
 
 
@@ -864,12 +983,24 @@ if ( {) {
             >
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<div className='mt-6 text-center text-sm text-gray-500'>
+          <p>
+            For detailed instructions, see{' '}
+            <button
+              onClick={() =>
+                window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')
+              }
+              className='text-blue-600 hover:underline'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
@@ -1023,3 +1154,7 @@ export default AuthConfigurationError,
 ;
 export default AuthConfigurationError;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+export default AuthConfigurationError;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

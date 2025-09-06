@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
  ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
 
@@ -147,6 +148,16 @@ import Button from '../components/ui/Button';
     website: 'https://ziontechgroup.com';
   };
 
+=======
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button';
+import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
+export default function AboutPage() {
+	const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
       {/* Mission & Vision */}
     <>
@@ -314,6 +325,7 @@ import Button from '../components/ui/Button';
         </section>
       </section>
     </>
+<<<<<<< HEAD
 export default function AboutPage() {;
   const values = [;
     {;
@@ -671,3 +683,7 @@ import Button from '../components/ui/Button';
           </div>;
         </section>;
       </section>;
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

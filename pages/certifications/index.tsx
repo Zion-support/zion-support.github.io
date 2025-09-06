@@ -1,5 +1,6 @@
 import { useEffect, useState  } from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
+<<<<<<< HEAD
 export default function Certifications() {
   const [leaderboard, setLeaderboard] = useState<any[]>([]);
   useEffect(() => {
@@ -10,15 +11,25 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
       </div>
       <div>
         <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
+=======
+
+        </div>
+      </div>
+
+      <div>
+<div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <ol className='list-decimal pl-6 space-y-1 text-sm'>
           {leaderboard.map(u => (
             <li key={u.userId}>
               {u.name} — {u.points} pts
-            </li>          ))}
+            </li>
+          ))}
         </ol>
       </div>
     </div>
 );
+<<<<<<< HEAD
 import { useEffect, useState } from 'react',
 import CertificatePreview from '../../components/learn/CertificatePreview'
 export default function Certifications() {
@@ -82,3 +93,5 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 <<<<<<< HEAD
@@ -288,6 +289,11 @@ const getSteps = (t: any) => [
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
 
+=======
+}
+
+const getSteps = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <<<<<<< HEAD
     <section className="py-16 px-4 bg-white">
@@ -303,10 +309,20 @@ const getSteps = (t: any) => [
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
+<<<<<<< HEAD
 
 
 
 
+=======
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
+            {t('home.how_it_works_subtitle')}
+          </p>
+        </div>
+
+<div className='relative'>
+          {/* Timeline line */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -561,6 +577,7 @@ function HowItWorksSection() {
                       </h3>;
                       <p className='text - zion - slate - light'>;
                         {step.description}
+<<<<<<< HEAD
 
                 </div>;
                 <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
@@ -594,6 +611,9 @@ function HowItWorksSection() {
                     </div>
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto shadow-md">
                       {step.icon}
+=======
+                      </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">
@@ -634,6 +654,7 @@ function HowItWorksSection() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 };
 
 export default HowItWorksSection;
@@ -727,3 +748,6 @@ export default Component;
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

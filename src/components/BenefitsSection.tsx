@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award } from 'lucide-react';
@@ -137,17 +138,30 @@ const getBenefits = (t: any) => [
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
 
+=======
+}
+
+const getBenefits = null;
+  return (
+    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
 
+<<<<<<< HEAD
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {benefits.map((benefit, index) => (
 
 class ErrorBoundary extends React.Component {
@@ -277,6 +291,7 @@ function BenefitsSection() {
 
               key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
@@ -289,6 +304,13 @@ function BenefitsSection() {
                 {benefit.description}
               </p>
             </div>
+=======
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
+            />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
@@ -311,6 +333,7 @@ function BenefitsSection() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 };
 
 export default BenefitsSection;
@@ -394,3 +417,6 @@ function Page() {
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

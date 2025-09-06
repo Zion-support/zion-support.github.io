@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from useNavigate
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
+<<<<<<< HEAD
 import { XCircle } from 'lucide-react'
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
@@ -60,6 +66,7 @@ export default function PaymentCanceled() {;
           <Button
             variant='outline'
             onClick={() => router.push('/dashboard')} // Changed to router.push
+<<<<<<< HEAD
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
           
           <Button 
@@ -106,10 +113,14 @@ import React from 'react';
         </div>
         </div>
       </div>
+=======
+            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Return to Dashboard
           </Button>
         </div>
+<<<<<<< HEAD
       </div>
   )
 import React from 'react',;
@@ -151,3 +162,8 @@ export default function PaymentCanceled() {;
       </div>;
   );
 }
+=======
+</div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

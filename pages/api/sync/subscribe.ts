@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
@@ -104,6 +105,10 @@ export default function handler(req, res) {
 =======
 
   writeState(state)
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ peers: state.config.peers })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -96,8 +96,13 @@ import { Send } from 'lucide-react', // Added Send icon
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
+<<<<<<< HEAD
   id: string,
   title: string,
+=======
+  id: string;
+  title: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   content: string
 import React, { useState, useEffect, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -127,11 +132,131 @@ import { Trash2, Download, Share2 } from 'lucide-react';
       // A better approach for very long content is to paginate in jsPDF directly.;
       // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;
 
+<<<<<<< HEAD
       pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`)
 
     } catch (e: any) {
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),
       setError("Failed to download PDF file. " + e.message)
+=======
+interface DistributionItem {
+  id: string;
+  name: string;
+  percentage: string
+}
+{'
+  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
+}
+{'
+  id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
+}
+{'
+  id: crypto.randomUUID (),  name: 'Community Rewards & Airdrops', percentage: '20'
+}
+{'
+  id: crypto.randomUUID (),  name: 'Public Sale Allocation', percentage: '10'
+}])
+const [isDownloading, setIsDownloading] = useState (false)
+const [isSharing, setIsSharing] = useState (false)
+const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false)
+const [error, setError] = useState<string | null> (null)
+const [shareableLink, setShareableLink] = useState<string | null> (null)
+const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft, setRawDraft] = useState<string | null> (null)
+const [sections, setSections] = useState<WhitepaperSection[]> ([])
+const [showRawDraft, setShowRawDraft] = useState (false)
+}return parsed
+}, [])
+const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
+  return distributionData .map (item => ({
+}if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
+  setError (`Warning: Total distribution is $ {
+  totalPercentage
+}%. Consider adjusting to sum to 100%.`)
+}else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some (d => d.name && d.percentage) ) {
+}try {
+  const apiPayload: any = {
+  tokenName
+tokenSupply: tokenSupply.toString ()
+useCases
+rewardsLogic
+governanceLogic
+legalDisclaimers
+distributionBreakdown
+}
+if (processedDistData.length > 0) {
+  apiPayload.distributionData = processedDistData
+}const {
+  data, error: funcError '
+}= await supabase.functions.invoke ('generate-whitepaper', {
+  body: apiPayload
+})
+if (funcError) {
+  throw new Error (`Supabase function error: $ {
+  funcError.message
+}`)
+}if (data && (data as any) .error) {
+  throw new Error (`Generation error: $ {
+  (data as any) .error
+}`)
+}if (!data |! (data as any) .whitepaperDraft) {'
+  throw new Error ('No whitepaper draft received from the function.')
+}setRawDraft ( (data as any) .whitepaperDraft)
+setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
+}catch (e: any) {
+  logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined, {'
+  message: 'Error generating whitepaper'
+});'
+setError (e.message |'An unexpected error occurred.')
+setSections ([])
+}finally {
+  setIsLoading (false)
+interface DistributionChartItem {
+    );
+  };
+
+  const assembleMarkdownContent = (): string => {
+    let mdContent = `# ${tokenName} - Whitepaper\n\n`
+    mdContent += `**Total Supply:** ${tokenSupply}\n\n`
+    sections.forEach(section => {
+      mdContent += `## ${section.title}\n\n${section.content}\n\n`;
+if (section.title.toLowerCase().includes('token distribution')) {
+        if (distributionChartData.length > 0) {
+          mdContent += `### Distribution Details\n\n`
+          distributionChartData.forEach(item => {
+            mdContent += `- **${item.name}:** ${item.value}%\n`
+          })
+          mdContent += `\n${distributionBreakdown ? `**Additional Notes:** ${distributionBreakdown}\n\n` : ''}`
+        } else if (distributionBreakdown) {
+          mdContent += `**Distribution Notes:** ${distributionBreakdown}\n\n`
+        }
+      }
+    })
+    return mdContent
+  }
+  const handleDownloadMarkdown = () => {
+    setIsDownloading(true)
+    try {
+      const markdown = assembleMarkdownContent()
+      const blob = new Blob([markdown], {
+        type: 'text/markdown;charset=utf-8'
+      })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `${slugify(tokenName |'whitepaper')}_whitepaper.md`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      URL.revokeObjectURL(url)
+      setError(null)
+    } catch (e: any) {
+      logErrorToProduction(
+        e instanceof Error ? e.message : String(e)
+        e instanceof Error ? e : undefined
+        { message: 'Error downloading Markdown' }
+      )
+      setError('Failed to download Markdown file. ' + e.message)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {
       setIsDownloading(false)
     }
@@ -659,4 +784,9 @@ import { Trash2, Download, Share2 } from 'lucide-react';
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 export default WhitepaperGeneratorPage;
+=======
+export default WhitepaperGeneratorPage
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

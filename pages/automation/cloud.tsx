@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 
+=======
+import { useEffect, useState  } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -16,6 +20,10 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
+<<<<<<< HEAD
+=======
+  }, []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div>
@@ -49,6 +57,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </div>
   )
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
   try {
@@ -85,3 +94,6 @@ function CloudAutomationHub() {
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

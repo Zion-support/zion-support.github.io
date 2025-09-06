@@ -121,7 +121,7 @@ import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>
-      <h1 className='text-2xl font-semibold'>Features</h1>
+<h1 className='text-2xl font-semibold'>Features</h1>
       <div className='mt-6 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <Globe2 className='h-6 w-6 text-indigo-500' />
@@ -141,7 +141,8 @@ export default function FeaturesPage() {
           <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>
           <p className='mt-1 text-sm opacity-80'>
             Track deliverables and approvals anywhere.
-          </p>        </div>
+          </p>
+        </div>
       </div>
     </EnhancedLayout>;
   );
@@ -154,6 +155,7 @@ export default function FeaturesPage() {
     </EnhancedLayout>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -181,3 +183,5 @@ export default function FeaturesPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

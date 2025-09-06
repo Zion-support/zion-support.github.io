@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -12,11 +13,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
@@ -118,6 +124,10 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
   ),
 <<<<<<< HEAD
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";

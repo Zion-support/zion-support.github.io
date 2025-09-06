@@ -63,6 +63,7 @@ import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
@@ -79,6 +80,15 @@ import type { AppDispatch } from '@/store',
 import { addItem } from '@/store/cartSlice',
 import { toast } from '@/hooks/use-toast',
 import { useCurrency } from '@/hooks/useCurrency',
+=======
+import { RatingStars } from "@/components/RatingStars",
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch  } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem  } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
@@ -86,6 +96,7 @@ interface ProductListingCardProps {
   view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
+<<<<<<< HEAD
 }
 
 
@@ -1283,3 +1294,5 @@ ProductListingCard.display_name = 'ProductListingCard';
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

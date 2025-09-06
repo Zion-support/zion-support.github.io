@@ -7,6 +7,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: 'metrics_view' });
+<<<<<<< HEAD
 
 import { appendAuditLog } from '../../../utils / api / storage';
 export default /**
@@ -118,3 +119,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const data = null;
+  res.status(200).json(data)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

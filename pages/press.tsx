@@ -110,6 +110,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 export default function PressPage() {
+<<<<<<< HEAD
 	return (
 		<>
 			<SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />
@@ -141,3 +142,20 @@ export default function PressPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return (
+    <>
+      <SEO
+        title='Press | Zion Tech Group'
+        description='News, media resources, and press inquiries.'
+        canonical='/press'
+      />
+      <div className='container mx-auto px-4 py-16'>
+        <h1 className='text-4xl font-bold mb-4'>Press</h1>
+        <p className='text-gray-300'>
+          Media kit and announcements coming soon.
+        </p>
+      </div>
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

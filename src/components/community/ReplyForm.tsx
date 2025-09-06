@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
@@ -14,18 +15,44 @@ import { Textarea } from '@/components/ui/textarea'
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  FormMessage,;
+} from '@/components/ui/form';
+import { Card, CardContent } from '@/components/ui/card';
+
+import { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 interface ReplyFormValues {
   content: string
+<<<<<<< HEAD
 =======
 
 
@@ -217,3 +244,8 @@ export default ReplyForm;
 }
 export default ReplyForm;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+export default ReplyForm;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

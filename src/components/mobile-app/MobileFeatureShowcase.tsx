@@ -1,8 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
 =======
 {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+import React from "react";
+import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+
+export const MobileFeatureShowcase: React.FC;
+}
+export const MobileFeatureShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: <Users className="h-8 w-8 text-zion-cyan" />
+      title: "Hire from Anywhere"
+      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
+    }
+    {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
@@ -225,6 +242,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <p className="text-zion-slate-light">{feature.description}</p>;
             </div>;
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
@@ -240,3 +258,11 @@ export const MobileFeatureShowcase: React.FC = () => {;
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </div>
+      </div>
+    </section>
+  );
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -16,6 +17,35 @@ function InterviewsContent() {
         </div>
       ))
 
+=======
+import React, { useEffect, useState } from 'react';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { InterviewCard } from '@/components/interviews/InterviewCard';
+import { Button } from '@/components/ui/button';
+import { Calendar, Clock, Video } from 'lucide-react';
+import { format, isAfter, parseISO, startOfDay } from 'date-fns';
+
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+import { Button } from "@/components/ui/button";
+import { Calendar, Clock, Video } from 'lucide-react'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");
+  useEffect(() => {
+    // Modified to handle Promise<Interview[]> return type
+    const loadInterviews = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       <SEO
@@ -121,6 +151,7 @@ function InterviewsContent() {
                 </p>
               </div>
             )}
+<<<<<<< HEAD
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -131,3 +162,16 @@ function InterviewsContent() {
     </ProtectedRoute>;
   );
 }
+=======
+          </TabsContent>
+        </Tabs>
+      </main>
+    </>
+  )
+export default function Interviews() {
+  return (
+    <ProtectedRoute>
+      <InterviewsContent />
+    </ProtectedRoute>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

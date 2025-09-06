@@ -4,13 +4,26 @@ import {useEffect, useMemo, useState} from 'react';
 
 
 import Link from 'next/link';
+<<<<<<< HEAD
 
 
+=======
+type Member = any;
+type Member = {
+  id: string;
+  name: string;
+  email: string;
+  role: 'admin' | 'manager' | 'recruiter' | 'viewer'
+}
+type Usage = { monthlyJobPosts: number, budgetCapUsd: number }
+type Invoice = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   number: string;
   amount_usd: number;
   periodStartIso: string;
   periodEndIso: string;
+<<<<<<< HEAD
 
   status: string,;
 };
@@ -25,6 +38,23 @@ export default function CompanyAdmin() {;
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
+=======
+  status: string;
+};
+
+const COMPANY_ID = 'cmp_acme';
+export default function CompanyAdmin() {
+const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
+    'members'
+  );
+  const [members, setMembers] = useState<Member[]>([]);
+  const [usage, setUsage] = useState<Usage | null>(null);
+  const [activity, setActivity] = useState<any[]>([]);
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
+  useEffect(() => {
+fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
+      .then(r => r.json())
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       .then(setMembers);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`)
       .then(r => r.json())
@@ -34,7 +64,9 @@ export default function CompanyAdmin() {;
       .then(setActivity);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
-      .then(setInvoices);  }, []);
+      .then(setInvoices);
+  }, []);
+
   const seatsUsed = members.length;
   return (
 
@@ -60,6 +92,7 @@ export default function CompanyAdmin() {
   return (
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+<<<<<<< HEAD
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
 
         <h1 style={{ margin: 0 }}>Company Admin</h1>
@@ -69,6 +102,23 @@ export default function CompanyAdmin() {
 
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+=======
+<header
+        style={{
+          marginBottom: 16
+          display: 'flex'
+          alignItems: 'center'
+          gap: 12
+        }}
+      >
+        <h1 style={{ margin: 0 }}>Company Admin</h1>
+        <div style={{ marginLeft: 'auto' }}>
+          <Link href='/workspace/acme'>Go to Workspace</Link>
+        </div>
+      </header>
+      <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+{(['members', 'usage', 'activity', 'billing'] as const).map(t => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -86,13 +136,43 @@ export default function CompanyAdmin() {
             }}
           >;
             {t}
+<<<<<<< HEAD
           </button>        ))}
+=======
+          </button>
+        ))}
+      </nav>
+      {tab === 'members' && (
+        <MembersTab members={members} setMembers={setMembers} />
+      )}
+      {tab === 'usage' && usage && (
+        <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />
+      )}
+
+{tab === 'activity' && <ActivityTab events={activity} />}
+
+      {tab === 'billing' && <BillingTab invoices={invoices} />}
+    </main>
+  );
+function MembersTab({
+  members
+  setMembers
+}: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   members: Member[];
   setMembers: (m: Member[]) => void;
-}) {  const [name, setName] = useState('');
+}) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
   const add = async () => {
+<<<<<<< HEAD
+=======
+const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, role }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
     const created = await r && r.json();
     setMembers([created, ...members]);
@@ -178,6 +258,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
       { method: 'DELETE' }
     );
+<<<<<<< HEAD
     setMembers(members && members.filter(m => m && m.id !== id));
   };
 
@@ -194,10 +275,51 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
+=======
+    setMembers(members.filter(m => m.id !== id));
+  }
+  const changeRole = async (id: string, newRole: Member['role']) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
+      method: 'PATCH'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ memberId: id, role: newRole })
+    });
+    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
+  };
+
+  return (
+    <section>
+      <h2>Team members</h2>
+      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
+<input
+          placeholder='Full name'
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <input
+          placeholder='Email'
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
+        <select
+          value={role}
+          onChange={e => setRole(e.target.value as Member['role'])}
+        >
+          <option value='recruiter'>Recruiter</option>
+          <option value='manager'>Manager</option>
+          <option value='viewer'>Viewer</option>
+          <option value='admin'>Admin</option>
+        </select>
+        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
+          Add
+        </button>
+      </div>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
-            <th
+<th
               style={{
                 textAlign: 'left'
                 padding: 8
@@ -343,6 +465,7 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
               }}
             >
               Actions
+<<<<<<< HEAD
             </th>          </tr>
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
       </div>
@@ -356,10 +479,15 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
           </tr>
 
+=======
+            </th>
+          </tr>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </thead>
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
+<<<<<<< HEAD
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -370,10 +498,77 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
                   <option value="admin">Admin</option>
                 </select>
               </td>
+=======
+<td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                {m.name}
+              </td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                {m.email}
+              </td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                <select
+                  value={m.role}
+                  onChange={e =>
+                    changeRole(m.id, e.target.value as Member['role'])
+                  }
+                >
+                  <option value='recruiter'>Recruiter</option>
+                  <option value='manager'>Manager</option>
+                  <option value='viewer'>Viewer</option>
+                  <option value='admin'>Admin</option>
+                </select>
+              </td>
+              <td
+                style={{
+                  padding: 8
+                  borderBottom: '1px solid #f3f4f6'
+                  textAlign: 'right'
+                }}
+              >
+                <button
+                  onClick={() => remove(m.id)}
+                  style={{ color: '#b91c1c' }}
+                >
+                  Remove
+                </button>
+              </td>
+            </tr>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </tbody>
       </table>
     </section>
+<<<<<<< HEAD
+=======
+);
+
+function UsageTab({
+  usage
+  setUsage
+  seatsUsed
+}: {
+  usage: Usage;
+  setUsage: (u: Usage) => void;
+  seatsUsed: number;
+}) {
+  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(
+    usage.monthlyJobPosts
+  );
+  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
+  const save = async () => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {
+      method: 'PATCH'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
+    });
+    setUsage({ monthlyJobPosts, budgetCapUsd });
+  };
+
+  return (
+    <section>
+      <h2>Usage limits</h2>
+<div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section>
       <h2>Usage limits</h2>
@@ -438,20 +633,23 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
         </label>
       </div>
   );
+
 function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
       <h2>Team activity</h2>
       <ul>
-        {events.map(e => (
+{events.map(e => (
           <li key={e.id}>
             <span style={{ color: '#6b7280' }}>
               {new Date(e.timestampIso).toLocaleString()} —{' '}
-            </span>            <strong>{e.actorEmail}</strong> {e.action}
+            </span>
+            <strong>{e.actorEmail}</strong> {e.action}
           </li>
         ))}
       </ul>
     </section>
+<<<<<<< HEAD
   );
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
@@ -500,6 +698,9 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
         </label>
       </div>
 
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
@@ -508,16 +709,71 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
+<<<<<<< HEAD
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>
             <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
+=======
+<th
+              style={{
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
+              }}
+            >
+              Invoice #
+            </th>
+            <th
+              style={{
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
+              }}
+            >
+              Period
+            </th>
+            <th
+              style={{
+                textAlign: 'right'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
+              }}
+            >
+              Amount
+            </th>
+            <th
+              style={{
+                textAlign: 'center'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
+              }}
+            >
+              Status
+            </th>
+            <th
+              style={{
+                textAlign: 'right'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
+              }}
+            >
+              Actions
+            </th>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </tr>
         </thead>
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+<<<<<<< HEAD
+=======
+<td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                {inv.number}
+              </td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -568,6 +824,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
                 <a
                   href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv && inv.id}`}
                   target='_blank'
+<<<<<<< HEAD
                   rel='noreferrer'>;
                   Download PDF;
                 </a>              </td>;
@@ -578,11 +835,20 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+=======
+                  rel='noreferrer'
+                >
+                  Download PDF
+                </a>
+              </td>
+            </tr>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </tbody>
       </table>
     </section>
 );
+<<<<<<< HEAD
 
 }
 }
@@ -622,3 +888,5 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
 ;
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

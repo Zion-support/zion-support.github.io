@@ -7,6 +7,7 @@ import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC started' });
@@ -24,13 +25,20 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {}
   }
+=======
+const DATA_DIR = null;
+    optionalDocuments: getOptionalDocuments(role)})
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
   const {    userId
     role
     fullLegalName
@@ -48,6 +56,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     business_name
     businessRegistrationNumber
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const {
+    userId,
+    role,
+    fullLegalName,
+    businessName,
+    businessRegistrationNumber,
+} = req.body as {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     userId?: string;
   } = req.body as {
     user_id?: string;
@@ -73,6 +90,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lastUpdatedAt: now
       auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
     } as KycProfile);
+<<<<<<< HEAD
   profile && profile.role = role;
   if (fullLegalName) profile && profile.fullLegalName = fullLegalName;
   if (businessName) profile && profile.businessName = businessName;
@@ -89,11 +107,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
   if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
+=======
+
+  profile.role = role;
+  if (fullLegalName) profile.fullLegalName = fullLegalName;
+  if (businessName) profile.businessName = businessName;
+if (businessRegistrationNumber)
+    profile.businessRegistrationNumber = businessRegistrationNumber;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
 
   res.status(200).json({
+<<<<<<< HEAD
     ok: true, profile
     requiredDocuments: getRequiredDocuments(role)
     optionalDocuments: getOptionalDocuments(role)})
@@ -149,5 +176,12 @@ if (
     profile
     required_documents: getRequiredDocuments (role)
 optional_documents: getOptionalDocuments (role)
+=======
+ok: true,
+    profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   });
+
 }

@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { CheckIcon } from 'lucide-react';
+
+interface StepProps {
+  status: "incomplete" | "current" | "complete";
+  label: string;
+  description?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 export function Step({
@@ -26,6 +37,7 @@ export function Step({
   className}: StepProps) {
   return (
     <li
+<<<<<<< HEAD
 
       className={cn(
 
@@ -223,6 +235,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+=======
+      className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -285,6 +300,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
             className="h-full bg-zion-purple transition-all";
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+<<<<<<< HEAD
           />;
         </div>;
       </div>;
@@ -398,3 +414,13 @@ if (status = "current") {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+}/> </div> </div> </div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

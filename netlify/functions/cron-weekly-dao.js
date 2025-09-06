@@ -30,6 +30,7 @@ const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
   try {
+<<<<<<< HEAD
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
     const resp = await fetch (`${base_url}/api / dao / metrics`);
     const data = await resp.json ();
@@ -73,6 +74,17 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN,
     const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
     const content = fs.readFileSync(cachePath, 'utf-8'),
+=======
+    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp.json();
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+    const cachePath = path.join(process.cwd(), 'datadaometrics.json');
+    const content = fs.readFileSync(cachePath, 'utf-8');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
@@ -104,6 +116,7 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -140,3 +153,6 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

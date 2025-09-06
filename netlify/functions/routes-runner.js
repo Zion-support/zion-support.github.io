@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -39,10 +40,22 @@ function runNode(relPath, args = []) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports && exports.handler = async () => {
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '....', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+
+exports.handler = async () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -180,3 +193,11 @@ function log_step() {
   log_step ('routes:generate', () => run_node ('automation / routes - map - generator.cjs')),
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+=======
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+
+  return { statusCode: 200, body: logs.join('\n') };
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

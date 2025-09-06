@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 import { Search } from 'lucide-react'
+=======
+import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help-content';
+import { Search } from 'lucide-react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -29,6 +42,7 @@ function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
   }
+<<<<<<< HEAD
 
 export default /**
  * HelpCenter - Function description
@@ -162,6 +176,13 @@ export default function HelpCenter() {;
     setSelectedArticle(null);
   };
 
+=======
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleCategorySelect = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       <div className='container mx-auto px-4 py-8'>;
@@ -685,4 +706,8 @@ export default function HelpCenter() {;
 
       </div>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

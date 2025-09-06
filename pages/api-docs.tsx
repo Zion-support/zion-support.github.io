@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 import { 
   Code, 
@@ -336,11 +337,14 @@ export default function APIDocsPage() {;
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
         <meta name="description" content="API reference and guides." />
@@ -370,11 +374,22 @@ export default function ApiDocsPage() {
   );
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+=======
+<meta name='description' content='API reference and guides.' />
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
-      <div className="container mx-auto px-4 py-16 text-gray-200">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
-        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
       </div>
+<<<<<<< HEAD
 );
 origin/main
     </>
@@ -407,3 +422,7 @@ export default function ApiDocsPage(req, res) {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

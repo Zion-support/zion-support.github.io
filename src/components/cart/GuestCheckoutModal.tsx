@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -50,6 +51,35 @@ import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe';
 
 interface GuestCheckoutModalProps {;
+=======
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Label  } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle } from '@/components/ui/dialog';
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+} from '@/components/ui/dialog'
+import { User, Mail, MapPin, CreditCard } from 'lucide-react'
+import { isProdDomain } from '@/utils/getStripe';
+interface GuestCheckoutModalProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string; address: string }) => void;
@@ -61,6 +91,7 @@ export default function GuestCheckoutModal(): any ({;
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -86,6 +117,9 @@ export default function GuestCheckoutModal(): any ({;
 
 
 
+=======
+  const handleSubmit = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <<<<<<< HEAD
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -282,6 +316,7 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment
                 </>
               )}
+<<<<<<< HEAD
 
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
@@ -338,3 +373,11 @@ export default function GuestCheckoutModal(): any ({;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+            </Button>
+          </DialogFooter>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

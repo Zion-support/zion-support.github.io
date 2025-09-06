@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
@@ -87,3 +88,9 @@ function TalentOnboardingSteps() {
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const { user } = useAuth();
+  const onboardingStatus = null;
+  return <OnboardingTracker steps={steps} />
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

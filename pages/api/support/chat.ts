@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import OpenAI from 'openai';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
@@ -28,16 +31,22 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
   // Build context with top matched articles as brief references
-  const matchedArticles = articles.filter((a) =>
+const matchedArticles = articles.filter(a =>
     intent.matchedArticleIds.includes(a.id)
   );
   const context = matchedArticles
+<<<<<<< HEAD
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join("\n");
+=======
+    .map(a => `- ${a.title}: /help/${a.slug}`)
+    .join('\n');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   const sysMessage = {
-    role: "system" as const
+    role: 'system' as const,
     content:
+<<<<<<< HEAD
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
@@ -92,6 +101,16 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       temperature: 0.2
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ''),
+  };
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+messages: [sysMessage, ...messages],
+      temperature: 0.2,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
 
     const assistantMessage =
@@ -149,9 +168,14 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         "I could not reach the assistant right now. Please try again in a moment."
     });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

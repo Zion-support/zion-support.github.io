@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -45,11 +46,24 @@ export default function AITalentMatchingPage() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+import React from 'react';
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { Bot, Users, TrendingUp } from 'lucide-react';
+
+export default function AITalentMatchingPage() {
+title: 'Precise Candidate Matching',
+      description:
+        'Leverage AI algorithms to pair your roles with the most qualified experts.',
+      icon: <Bot className='h-8 w-8' />,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
       icon: <Users className="h-8 w-8" />},
     {
+<<<<<<< HEAD
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
@@ -195,6 +209,33 @@ function AITalentMatchingPage() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+      title: 'Scalable Talent Pools',
+      description:
+        'Access a global network of vetted professionals ready for your projects.',
+      icon: <TrendingUp className='h-8 w-8' />,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Emily Stone',
+      role: 'HR Director',
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      avatar: '/placeholder.svg',
+    },
+    {
+      name: 'Raj Patel',
+      role: 'Startup Founder',
+      text: "The quality of candidates has improved dramatically since using Zion's platform.",
+      avatar: '/placeholder.svg',
+    },
+  ];
+
+  
+    />
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -263,6 +304,7 @@ export default function AITalentMatchingPage() {;
       benefits={benefits}
       features={features}
       stats={stats}
+<<<<<<< HEAD
 
     />;
   );
@@ -277,3 +319,10 @@ export default function AITalentMatchingPage() {;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
+    />
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

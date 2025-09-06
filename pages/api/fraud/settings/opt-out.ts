@@ -1,6 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const store = null;
+    return res.status(200).json(updated)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -8,12 +16,21 @@ export default async function handler(
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const store = getFraudStore();
+<<<<<<< HEAD
 
     return res.status(200).json(settings)
+=======
+  if (req.method === "GET") {
+    const userId = (req.query.userId as string) |"";
+    if (!userId) return res.status(400).json({ error: "Missing userId" });
+    const settings = await store.getPrivacySettings(userId);
+return res.status(200).json(settings);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   if (req.method === 'POST') {
     const { userId, optOut } = req.body || {};
+<<<<<<< HEAD
     if (!userId || typeof optOut !== 'boolean') return res.status(400).json({ error: 'Missing userId or optOut' });
     const updated = await store.setPrivacySettings(userId, optOut);
     return res.status(200).json(updated)
@@ -188,3 +205,14 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+if (!userId || typeof optOut !== 'boolean')
+      return res.status(400).json({ error: 'Missing userId or optOut' });
+    const updated = await store.setPrivacySettings(userId, optOut);
+    return res.status(200).json(updated);
+  }
+
+  res.status(405).json({ error: 'Method not allowed' });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

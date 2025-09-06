@@ -1,3 +1,4 @@
+<<<<<<< HEAD
               Something went wrong on our end. We&apos,re working to fix it.
               Something went wrong on our end. We're working to fix it.
               Something went wrong on our end. We&apos,re working to fix it. 
@@ -52,6 +53,12 @@
 
 
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
+=======
+import React from 'react',
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Contact
               </Link>
@@ -60,6 +67,7 @@
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
     <>;
       <Head>;
@@ -114,3 +122,6 @@
       </div>;
     </>);
 }
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

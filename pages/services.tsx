@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
@@ -659,6 +660,23 @@ export default function Services() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
+=======
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect  } from 'react';
+import { ContactInfo  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+export default function Services() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const timer = null;
+                  return (
+                    <div 
+                      key={category.title}
+                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      style={{ transitionDelay: `${index * 200}ms` }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
@@ -736,6 +754,7 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
       services: [
+<<<<<<< HEAD
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ];
 
@@ -777,10 +796,78 @@ import Footer from '../components/Footer';
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
+=======
+        'AI-Powered Video Clip Maker',
+        'Smart Contract Analyzer',
+        'Cybersecurity Threat Intelligence',
+        'Multi-Language Website Translator',
+        'Predictive Inventory Optimizer',
+        'Real-Time Analytics Dashboard',
+        'Automated Customer Support',
+        'Blockchain Transaction Monitor',
+      ],
+      href: '/micro-saas',
+    },
+    {
+      title: 'AI Services',
+      description:
+        'Advanced artificial intelligence solutions for enterprise needs',
+      count: '100+',
+      color: 'purple',
+      services: [
+        'Autonomous AI Agents',
+        'AI-Powered Financial Trading',
+        'AI Legal Document Analysis',
+        'AI-Powered Voice Analytics',
+        'AI-Powered Search & Discovery',
+        'Machine Learning Model Training',
+        'Natural Language Processing',
+        'Computer Vision Solutions',
+      ],
+      href: '/ai-services',
+    },
+    {
+      id: 'it-services',
+      name: 'IT & Cloud Services',
+      description: 'Comprehensive IT solutions for enterprise-grade operations',
+      services: [
+        'Quantum Computing Consulting',
+        'Blockchain & Web3 Solutions',
+        'DevSecOps & Security Automation',
+        'Enterprise Data Platform',
+        'High-Performance Computing',
+        'Cloud Migration Services',
+        'Infrastructure as Code',
+        'Disaster Recovery Solutions',
+      ],
+      href: '/it-services',
+    },
+  ];
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      blue: {
+      
+        bg: 'bg-blue-600',
+        hover: 'hover:bg-blue-700',
+        text: 'text-blue-400',
+        border: 'border-blue-500/40',
+        ring: 'focus:ring-blue-500',
+      },
+      purple: {
+        bg: 'bg-purple-600',
+        hover: 'hover:bg-purple-700',
+        text: 'text-purple-400',
+        border: 'border-purple-500/40',
+ring: 'focus:ring-purple-500',
+      },
+      green: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
         text: 'text-green-400',
         border: 'border-green-500/40',
+<<<<<<< HEAD
 
       id: 'micro-saas',
       title: 'Micro SaaS Development',
@@ -851,10 +938,19 @@ import Footer from '../components/Footer';
 }
   ];
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
+=======
+ring: 'focus:ring-green-500',
+      },
+    };
+    return colors[color as keyof typeof colors] || colors.blue;
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
+<<<<<<< HEAD
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
@@ -954,6 +1050,9 @@ export default function Services() {;
       <Head>;
         <title>Our Services - Zion Tech Group</title>;
         <meta
+=======
+<meta
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.'
         />;
@@ -989,6 +1088,16 @@ export default function Services() {;
               >
                 350+ Innovative Solutions for Modern Businesses
               </p>
+<<<<<<< HEAD
+=======
+              <p
+                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                From cutting-edge AI services to comprehensive IT solutions and
+                specialized micro SaaS products, we provide everything your
+                business needs to thrive in the digital age.
+              </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className="card">
               <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
@@ -1002,11 +1111,12 @@ export default function Services() {;
 
           </section>
           {/* Service Categories */}
-          <section className='py-16 px-4' role='main'>
+<section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
+<<<<<<< HEAD
 
 
                     >
@@ -1230,10 +1340,16 @@ function Services() {
 ;
                     >;
                       <div className='flex items - center justify - between mb - 6'>                        <h3 className={`text - 2xl font - bold ${colors.text}`}>;
+=======
+                    >
+                      <div className='flex items-center justify-between mb-6'>
+                        <h3 className={`text-2xl font-bold ${colors.text}`}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                           {category.title}
                         </h3>;
                         <span className={`text - 3xl font - bold ${colors.text}`}>;
                           {category.count}
+<<<<<<< HEAD
                     >;
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors && colors.text}`}>;
                           {category && category.title}
@@ -1261,6 +1377,27 @@ function Services() {
                       >;
                         View All {category && category.title}
                         <svg
+=======
+                        </span>
+                      </div>
+<p className='text-slate-300 mb-6'>
+                        {category.description}
+                      </p>
+                      <ul className='text-slate-400 space-y-2 mb-8'>
+                        {category.services.map((service, serviceIndex) => (
+                          <li key={serviceIndex} className='flex items-center'>
+                            <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>
+                            {service}
+                          </li>
+                        ))}
+                      </ul>
+<Link
+                        href={category.href}
+                        className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
+                      >
+                        View All {category.title}
+<svg
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                           className='ml-2 w-4 h-4'
                           fill='none'
                           stroke='currentColor'
@@ -1315,17 +1452,61 @@ function Services() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
+<<<<<<< HEAD
                 Contact our experts today to discuss your project requirements;
                 and discover how our innovative solutions can transform your;
                 business.;
               </p>;
 
+=======
+                        d='M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z'
+                      />
+                    </svg>
+                  </div>
+                  <h3 className='text-xl font-bold mb-2'>24/7 Support</h3>
+                  <p className='text-slate-400'>
+                    Round-the-clock technical support and maintenance
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+<section className='py-16 px-4'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <h2 className='text-3xl md:text-4xl font-bold mb-8'>
+                Ready to Get Started?
+              </h2>
+              <p className='text-lg text-slate-300 mb-8'>
+                Contact our experts today to discuss your project requirements
+                and discover how our innovative solutions can transform your
+                business.
+              </p>
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
                   Get a Quote;
                 </Link>;
                 <a
+<<<<<<< HEAD
+=======
+                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
+                >
+                  Call {contact.phone}
+                </a>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'
+                >
+                  Email Us
+                </a>
+              </div>
+</motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
         {/* Services Grid */  } catch (error) {
@@ -1433,6 +1614,7 @@ function Services() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
 }
                       
@@ -1622,3 +1804,5 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

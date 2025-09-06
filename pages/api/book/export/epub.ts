@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from '[^']*';
+import { promises as fs } from '[^']*';
+const Epub = null;
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join('\n')
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -10,6 +23,7 @@ export const config = {
   api: {
     bodyParser: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       sizeLimit: "10mb",
     },
 =======
@@ -17,6 +31,11 @@ export const config = {
     }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },;
+=======
+sizeLimit: '10mb',
+    },
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 function escapeHtml(s: string): string {
@@ -41,6 +60,7 @@ export default async function handler(
   if (req && req.method !== "POST") {
     res && res.status(405).json({ error: "Method not allowed" });
     return;
+<<<<<<< HEAD
     return;
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -103,6 +123,35 @@ export default async function handler(req, res) {
 
 
 
+=======
+  }
+
+  const { project } = req.body as { project: any };
+  if (!project?.meta || !Array.isArray(project?.chapters)) {
+    res.status(400).json({ error: 'Invalid payload' });
+return;
+  }
+  const tmpPath = `/tmp/${randomUUID()}.epub`;
+  const options = {
+title: project.meta.title,
+    author: project.meta.author,
+    publisher: project.meta.publisher || 'Zion',
+    content: project.chapters.map((ch: any) => ({
+      title: ch.title,
+      data: chapterToHtml(ch.content),
+    })),
+  };
+
+  try {
+    await new Epub(options, tmpPath).promise;
+    const buf = await fs.readFile(tmpPath);
+res.setHeader('Content-Type', 'application/epub+zip');
+    res.setHeader(
+      "Content-Disposition"
+      'attachment; filename="zion-os-book.epub"'
+    );
+    res.status(200).send(buf);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
@@ -110,6 +159,7 @@ export default async function handler(req, res) {
       await fs.unlink(tmpPath);
     } catch {}
   }
+<<<<<<< HEAD
 }
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -130,11 +180,14 @@ export default async function handler(req, res) {
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
     .split(/\n\n+/)
+<<<<<<< HEAD
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
@@ -196,3 +249,17 @@ function escape_html (string: string): string {
       "Content - Disposition"
       'attachment; filename="zion - os - book.epub"'
     );
+=======
+.map(p => `<p>${escapeHtml(p)}</p>`)
+    .join('\n');
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+
+}}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

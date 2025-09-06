@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
 
     id: "getting-hired"
@@ -235,3 +236,25 @@ export default ForumCategories;
 =======
 export default ForumCategories;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,;
+} from 'lucide-react';
+import { ForumCategoryInfo } from '@/types/community';
+
+const categories: ForumCategoryInfo[] = [
+  {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
   content: string | null
   generatedAt: string | null
@@ -19,6 +20,10 @@ export default /**
 function ChangelogPage() {
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>
+=======
+type Props = any;
+    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
       {generatedAt && (
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
@@ -31,6 +36,7 @@ function ChangelogPage() {
       {content ? (
         <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
           {content}
+<<<<<<< HEAD
         </pre>) : (
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
         <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
@@ -41,6 +47,11 @@ function ChangelogPage() {
         </pre>
       ) : (
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
+=======
+        </pre>
+      ) : (
+        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           No changelog generated yet.
         </div>
       )}
@@ -82,6 +93,7 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
     </main>;
   );
 }
+<<<<<<< HEAD
   } catch {
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
@@ -109,22 +121,34 @@ export async /**
  * getStaticProps - Function description
  */
 function getStaticProps() {
+=======
+
+export async function getStaticProps() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const file = path.join(process.cwd(), 'CHANGELOG.md');
     const content = fs.readFileSync(file, 'utf8');
     return {
-      props: { content, generatedAt: new Date().toISOString() }
-      revalidate: 300
-    }
+      props: { content, generatedAt: new Date().toISOString() },
+      revalidate: 300,
+    };
   } catch {
+<<<<<<< HEAD
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
+=======
+    return { props: { content: null, generatedAt: null }, revalidate: 300 };
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
+<<<<<<< HEAD
 }
   } catch {
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

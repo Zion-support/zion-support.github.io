@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,3 +15,7 @@ export type { AIAssistantProps } from "./AIAssistant";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export { default as AIAssistant } from './AIAssistant';
+export type { AIAssistantProps } from './AIAssistant';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

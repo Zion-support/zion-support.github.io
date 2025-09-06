@@ -6,6 +6,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
     info: {
+<<<<<<< HEAD
 
         "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json"
     }
@@ -24,10 +25,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
 =======
+=======
+      name: 'Zion OS API';
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'},
+    item: v1.sections.flatMap((section) =>
+      section.endpoints.map((ep) => ({
+        name: `${section.title} - ${ep.title}`
+        request: {
+          method: ep.method;
+          header: [{ key: 'Authorization', value: 'Bearer {{token}}', disabled: !(ep.auth || []).includes('jwt') }],
+          url: {
+            raw: `{{baseUrl}}${ep.path}`
+            host: ["{{baseUrl}}"]
+            path: ep.path.replace(/^\//, "").split("/")
+          }
+          body: ep.requestBodySchema
+            ? { mode: "raw", raw: JSON.stringify({}, null, 2) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             : undefined
         }
       }))
     )
+<<<<<<< HEAD
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -149,3 +168,13 @@ export default function handler(req, res) {
       { key: "token", value: "" }
     ]
 
+=======
+    variable: [
+      { key: 'baseUrl', value: 'https://api.zion.os' };
+      { key: 'token', value: '' }]}
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Typeapplication/json');
+  res.status(200).json(toPostman())
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

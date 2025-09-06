@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -38,6 +43,7 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -537,6 +543,16 @@ if ( {) {
                 }}
               >;
 
+=======
+export function PrimaryNav() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = null;
+                  setLoginOpen(true)
+                }}
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {t('auth.login')}
               </Link>
             )}
@@ -628,9 +644,26 @@ if ( {) {
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div
+<<<<<<< HEAD
 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
+=======
+            className='absolute inset-0 bg-black/50 backdrop-blur-sm'
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden='true'          />
+          <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={returnToPath => setLoginOpen(true)}            />
+          </div>
+        </div>
+      )}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 };
@@ -638,6 +671,7 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }setQuery ('');
 //Track analytics event ;
 
+<<<<<<< HEAD
 }searchSuggestions= {;
   suggestions ;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <LinkonClick={
@@ -646,32 +680,61 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
   t ('auth && auth.login') ";
 }</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
   t ('auth && auth.signup') ;
+=======
+
+}searchSuggestions= {;
+  suggestions ;
+}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={;
+  (e) => {;
+  > {';
+  t ('auth.login') ";
+}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
+  t ('auth.signup') ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }</Link> </>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
 }</div> </div> <ModeToggle /> <LanguageSelector /> {";
+<<<<<<< HEAD
   !isLoggedIn && (<Linkhref="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
   (e) => {;
   e && e.preventDefault ();
 setLoginOpen (true) ;
 }';
 }t ('auth && auth.login') ;
+=======
+  !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={;
+  (e) => {;
+  e.preventDefault ();
+setLoginOpen (true) ;
+}';
+}t ('auth.login') ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }</Link>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
 }</div> {;
   /* Mobile menu button */ ";
 }<button) : (<Menu className="h-6 w-6" />) ";
+<<<<<<< HEAD
 }</button> </div> </header> <divclassName="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
   () => setMobileMenuOpen (false) ";
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenuunreadCount= {
   unreadCount 
 }onClose= {
+=======
+}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;
+  () => setMobileMenuOpen (false) ";
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+  unreadCount ;
+}onClose= {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   () => setMobileMenuOpen (false) ;
 }openLoginModal= {;
   (returnToPath) => setLoginOpen (true) ;
 }/> </div> </div>) ;
 }{;
+<<<<<<< HEAD
   isMobile && <MobileBottomNavunreadCount= {
   unreadCount 
 }/> ;
@@ -955,3 +1018,14 @@ setLoginOpen (true);
 ;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  isMobile && <MobileBottomNav unreadCount= {;
+  unreadCount ;
+}/> ;
+}<LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

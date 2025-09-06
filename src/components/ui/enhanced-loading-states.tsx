@@ -1,9 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { cn  } from '@/lib/utils';
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Loader2
+  AlertTriangle
+  RefreshCw
+  Wifi
+  WifiOff
+  Clock
+  Zap
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
@@ -59,6 +82,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   className?: string;
   showText?: boolean;
   text?: string
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',;
@@ -1092,3 +1116,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  );
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,6 +28,10 @@ import React from 'react';
 export default ApiDocsLayout;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+=======
+import { SearchSuggestion } from '@/types/search';
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'
@@ -54,6 +59,7 @@ import {
 <<<<<<< HEAD
 interface ApiDocsLayoutProps {
   children: React.ReactNode
+<<<<<<< HEAD
 =======
 
 } from "@/data/docsSearchData",
@@ -400,3 +406,8 @@ export default ApiDocsLayout;
 =======
 export default ApiDocsLayout;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

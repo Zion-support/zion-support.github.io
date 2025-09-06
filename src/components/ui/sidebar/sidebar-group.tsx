@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React, { forwardRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { SafeRef } from '@/types/ref-types';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 <<<<<<< HEAD
 =======
@@ -11,6 +19,7 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
@@ -162,3 +171,9 @@ export { SidebarGroup };
   }
 )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+
+SidebarGroup.displayName = 'SidebarGroup';
+export { SidebarGroup };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

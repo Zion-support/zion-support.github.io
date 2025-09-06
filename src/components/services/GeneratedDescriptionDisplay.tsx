@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -10,6 +11,8 @@ import {;
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 interface GeneratedDescriptionDisplayProps {;
   description: string;
@@ -25,6 +28,7 @@ export function GeneratedDescriptionDisplay(): any ({;
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
+<<<<<<< HEAD
 
   const handleSave = () => {;
     onSave(editedDescription);
@@ -35,6 +39,42 @@ export function GeneratedDescriptionDisplay(): any ({;
     });
   };
 
+=======
+  const handleSave = null;
+import React, { useState } from 'react'
+import { useToast } from '@/hooks/use-toast'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardFooter
+} from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
+import { Check, Pencil } from 'lucide-react'
+interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string,) => void
+}
+export function GeneratedDescriptionDisplay({
+  description
+  onSave
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast()
+  const [isEditing, setIsEditing] = useState(false)
+  const [editedDescription, setEditedDescription] = useState(description)
+  const handleSave = () => {
+    onSave(editedDescription)
+    setIsEditing(false)
+    toast({
+      title: 'Description Saved'
+      description: 'Your edited description has been saved.'
+    })
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
@@ -189,6 +229,7 @@ export function GeneratedDescriptionDisplay({;
 }</CardContent> {;
   isEditing && (<CardFooter> <ButtononClick={
   handleSave "
+<<<<<<< HEAD
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"> Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
 }'";
@@ -228,3 +269,8 @@ export function GeneratedDescriptionDisplay({;
 }'";
 }
 ;
+=======
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
+}</Card>)
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

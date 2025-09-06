@@ -1,5 +1,6 @@
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 import {
   Star,
@@ -41,6 +42,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   return (
     <Layout>
       <SEO
+=======
+import { Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Lock, Palette, Factory, Database, Cloud;
+  Cpu, Eye, Target, Users, BarChart3
+ } from 'lucide-react';
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+const Comprehensive2025InnovativeServicesShowcase: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         title='2025 Innovative Services Showcase | Zion Tech Group'
         description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
         keywords={[
@@ -62,6 +71,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>
           <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>
         </div>
+<<<<<<< HEAD
         <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,10 +106,19 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
 
+=======
+
+        <div className='text-center max-w-6xl mx-auto relative z-10'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+className='space-y-6'
+          >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Enhanced Company Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -219,7 +238,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 
+=======
+              transition={{ duration: 0.6, delay: 0.2 }}
+className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <Star className='w-5 h-5' />
               <span>Innovation Leader 2025</span>
@@ -264,7 +288,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+              transition={{ duration: 0.8, delay: 0.4 }}
+className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>
@@ -292,6 +321,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 </div>
                 <div className='text-gray-300 text-sm'>
                   Future Possibilities
+<<<<<<< HEAD
                 </div>              </div>            >
               transition={{ duration: 0.8, delay: 0.4 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -311,21 +341,34 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">
                 <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>
                 <div className="text-gray-300 text-sm">Future Possibilities</div>
+=======
+                </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
       {/* Services Categories */}
+<<<<<<< HEAD
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
+=======
+<section className='py-20 px-4 bg-black/30 relative'>
+        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
+        <div className='max-w-7xl mx-auto relative z-10'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Service Categories
@@ -375,6 +418,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                             service => service && service.category === category && category.name;
                           ).length;
                         }{' '}
+<<<<<<< HEAD
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Service Categories
             </h2>
@@ -494,6 +538,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
                       <div className="text-gray-300 text-sm">
                         {innovative2025MicroSaasBatch.filter(service => service.category === category.name).length} Services
+=======
+                        Services
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
@@ -512,13 +559,27 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
       {/* Featured Services */}
-      <section className='py-20 px-4'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+<section className='py-20 px-4'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+=======
+className='text-center mb-16'
+          >
+            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
+              Featured Services
+            </h2>
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
+              Our most popular and innovative services that are transforming
+              industries
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {innovative2025MicroSaasBatch
               .filter(service => service.popular)
@@ -593,6 +654,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>;
                     <div className='flex items-start space-x-4'>;
                       <div
+<<<<<<< HEAD
                         className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service && service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>;
                         {service && service.icon}
                       </div>;
@@ -627,11 +689,51 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
           <motion.div
 
+=======
+                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}
+                      >
+                        {service.icon}
+                      </div>
+                      <div className='flex-1 min-w-0'>
+                        <h3 className='text-lg font-bold text-white mb-1 truncate'>
+                          {service.name}
+                        </h3>
+                        <p className='text-gray-400 text-sm mb-2 line-clamp-2'>
+                          {service.tagline}
+                        </p>
+                        <div className='text-cyan-400 font-semibold text-sm'>
+                          {service.price}
+                          <span className='text-gray-400'>
+                            /{service.period}
+                          </span>
+                        </div>
+                        <div className='text-xs text-gray-500 mt-2'>
+                          {service.category}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+{/* Contact CTA */}
+      <section className='py-20 px-4'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+=======
+className='space-y-8'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
               Ready to Transform Your Business?
@@ -657,6 +759,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <span>Call Now: +1 302 464 0950</span>;
               </a>;
               <a
+<<<<<<< HEAD
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
               Complete Service Portfolio
             </h2>
@@ -689,3 +792,30 @@ export default Comprehensive2025InnovativeServicesShowcase;
 ;
 export default Comprehensive2025InnovativeServicesShowcase;
 ;
+=======
+                href='mailto:kleber@ziontechgroup.com'
+                className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'
+              >
+                Email Us
+              </a>
+            </div>
+<div className='text-sm text-gray-400'>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>
+                Website:{' '}
+                <a
+                  href='https://ziontechgroup.com'
+                  className='text-cyan-400 hover:text-cyan-300'
+                >
+                  https://ziontechgroup.com
+                </a>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </Layout>
+);
+};
+export default Comprehensive2025InnovativeServicesShowcase;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

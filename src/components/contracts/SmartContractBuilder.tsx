@@ -1,4 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Save } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { ContractForm, ContractFormValues } from './components/ContractForm';
+import { ContractPreview } from './components/ContractPreview';
+import { TemplateManager } from './templates/TemplateManager';
+import { DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';
+import { useSmartContracts } from '@/hooks/useSmartContracts';
+import { toast } from 'sonner';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface SmartContractBuilderProps {
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void
+}
+export function SmartContractBuilder({
+  isOpen;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   onClose;
   talent;
   clientName;
@@ -10,6 +41,7 @@
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
+<<<<<<< HEAD
 
     network: 'ethereum'
     useEscrow: true
@@ -594,6 +626,17 @@ if ( {) {
           <TabsContent value="preview_markdown" className="pt-4">
             {isLoadingLegalDraft && <p>Loading draft...</p>}
             {legalDraftError && <p className="text-red-500">Error: {legalDraftError}</p>}
+=======
+    network: 'ethereum';
+    useEscrow: true;
+    deployToChain: false
+  }),
+  const [deployStatus, setDeployStatus] = useState<string>(''),
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
+  
+  const { deploySmartContract } = useSmartContracts();
+  const handleLoadTemplate = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -1147,6 +1190,7 @@ setActiveTab ("preview");
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
 
 
 ;
@@ -1205,3 +1249,47 @@ setActiveTab ("preview");
 
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        />
+      </DialogContent>
+    </Dialog>
+  );
+
+};
+//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
+  setGeneratedContract (contract);";
+setActiveTab ("preview");
+};";
+  talent ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleFormSubmit ;
+}/> </TabsContent> <div> <ContractPreview generatedContract= {;
+  generatedContract ;
+}talent= {;
+  talent ;
+}onClose= {;
+  onClose ;
+}deploymentInfo= {;
+  deploymentInfo ;
+}/> > {';
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
+}</Button> </div>) ;
+}</div>) ;
+}</TabsContent> </Tabs> <TemplateManager isOpen= {;
+  templateManagerOpen ;
+}onClose= {;
+  () => setTemplateManagerOpen (false) ;
+}onSelectTemplate= {;
+  handleLoadTemplate ;
+}currentValues= {;
+  formValues ;
+}/> </DialogContent> </Dialog>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

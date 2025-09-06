@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -11,6 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -21,8 +24,13 @@ function summarizeModules(
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
+<<<<<<< HEAD
   return active && active.length ? active && active.sort().join(", ") : "None";
+=======
+  return active.length ? active.sort().join(', ') : 'None';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
+
 function missionParagraph(
   region: string
   instanceName: string
@@ -34,16 +42,23 @@ function missionParagraph(
     Object && Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
 }
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
 
     const body = req && req.body || {};
 
     const {
+<<<<<<< HEAD
 
       instanceName
       defaultLanguage = "en"
@@ -54,6 +69,16 @@ export default async function handler(
       modules = {}
       bonusModules = {}
 
+=======
+      instanceName,
+defaultLanguage = 'en',
+      deploymentRegion,
+      tokenActivation = false,
+      governanceMode = 'democratic',
+      branding = {},
+      modules = {},
+      bonusModules = {},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     } = body;
 
 
@@ -154,23 +179,25 @@ if ( {) {
         roadmap: "/roadmap"
         book: {
       publicPages: [
-        "/about"
-        "/manifesto"
-        "/constitution"
-        "/partners"
-        "/academy"
-        "/marketplace"
-        "/dao"
-        `/nation/${defaultLanguage |"en"}`
-      ]
-    }
+        '/about',
+        '/manifesto',
+        '/constitution',
+        '/partners',
+        '/academy',
+        '/marketplace',
+        '/dao',
+        `/nation/${defaultLanguage || 'en'}`,
+      ],
+    };
+
     const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules)
+      activeModulesSummary: summarizeModules(modules, bonusModules),
       mission: missionParagraph(
-        deploymentRegion
-        instanceName
-        modules
+        deploymentRegion,
+        instanceName,
+        modules,
         bonusModules
+<<<<<<< HEAD
       )
     }
           pdf: "/book / manifesto.pdf"
@@ -200,9 +227,15 @@ if ( {) {
       )
     }
 ;
+=======
+      ),
+    };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     const access = {
-      roles: ["Founder", "Superadmin", "DAO Multisig"]
+      roles: ['Founder', 'Superadmin', 'DAO Multisig'],
       export: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       operator,
       access,
@@ -225,6 +258,34 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
+      },
+    };
+
+    return res.status(200).json({
+      success: true,
+      provisionId,
+      instanceName,
+      region: deploymentRegion,
+      language: defaultLanguage || 'en',
+      governanceMode,
+      tokenActivation,
+      branding,
+      modules,
+      bonusModules,
+      createdAt: now,
+version: 'Zion OS v1.0.0',
+      outputActions,
+      operator,
+      access,
+    });
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' });
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message |"Internal error" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   }

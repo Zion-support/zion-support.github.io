@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 interface OrderItem {
   id: string;
   name: string;
@@ -56,6 +57,21 @@ interface Order {
   }, [router.query.id]);
   if (loading) {
 
+=======
+import { useRouter  } from 'next/router';
+import { Button  } from '@/components/ui/button';
+import { Clipboard } from 'lucide-react'
+import Skeleton from '@/components/ui/skeleton';
+import { useGetOrderQuery  } from '@/hooks/useOrder';
+import { generateInvoicePdf  } from '@/utils/generateInvoicePdf';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast  } from '@/hooks/use-toast';
+import { OrderTimeline } from '@/components/orders/OrderTimeline';
+export default function OrderDetailPage() {
+  const router = null;
+  if (isLoading || !order) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;
@@ -386,6 +402,11 @@ export default function OrderDetailPage() {;
 
 
       </div>
+<<<<<<< HEAD
     )
   }
 
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

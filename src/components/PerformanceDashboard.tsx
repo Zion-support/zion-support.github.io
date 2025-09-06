@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState } from 'react'
 import {
   Card
@@ -15,7 +24,10 @@ import { Button } from '@/components/ui/button'
   Shield
   Search
 } from 'lucide-react'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
@@ -79,6 +91,7 @@ interface Improvement {;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {
@@ -973,3 +986,9 @@ export default PerformanceDashboard,
 =======
 export default PerformanceDashboard,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+
+export default PerformanceDashboard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

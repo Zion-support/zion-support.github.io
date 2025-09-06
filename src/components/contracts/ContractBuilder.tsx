@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 isOpen;
   onClose;
   talent;
@@ -34,10 +35,52 @@ isOpen;
           setShowSmartContractBuilder(false);          onClose();
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Save } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { ContractForm, ContractFormValues } from './components/ContractForm';
+import { ContractPreview } from './components/ContractPreview';
+import { TemplateManager } from './templates/TemplateManager';
+import { SmartContractBuilder } from './SmartContractBuilder';
+
+interface ContractBuilderProps {
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void
+}
+export function ContractBuilder({
+  isOpen;
+  onClose;
+  talent;
+  clientName;
+  onContractGenerated
+}: ContractBuilderProps) {
+  const [activeTab, setActiveTab] = useState<string>("form")
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null)
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  ),
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+  const handleLoadTemplate = null;
+          onClose()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
@@ -47,6 +90,10 @@ import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
+=======
+      />
+    )
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   return (
@@ -202,6 +249,7 @@ import { ContractPreview } from "./components/ContractPreview",
         />
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
   )
 }
 }/>)
@@ -280,3 +328,31 @@ import { ContractPreview } from "./components/ContractPreview",
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+};
+
+}/>) ;
+}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {;
+  talent ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleContractGenerated ;
+}/> </TabsContent> />) ;
+}</TabsContent> </Tabs> <TemplateManager isOpen= {;
+  templateManagerOpen ;
+}onClose= {;
+  () => setTemplateManagerOpen (false) ;
+}onSelectTemplate= {;
+  handleLoadTemplate ;
+}currentValues= {;
+  formValues ;
+}/> </DialogContent> </Dialog>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

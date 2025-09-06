@@ -9,8 +9,35 @@ import { useWhitelabel } from "@/context/WhitelabelContext",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import Link from "next/link",
+=======
+import { useAuth } from "@/hooks/useAuth";
+import Link from "next/link";
+import React from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { useWhitelabel } from '@/context/WhitelabelContext'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+  ArrowRight
+  Briefcase
+  PenTool
+  BarChart3
+  Users
+  Shield
+  Globe
+} from 'lucide-react'
+import { useAuth } from '@/hooks/useAuth'
+import Link from 'next/link'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
@@ -19,6 +46,7 @@ export default function ZionHireAI() {
 
 
   return (
+<<<<<<< HEAD
       <SEO 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
@@ -64,13 +92,34 @@ export default function ZionHireAI() {
                 <img
 
 
+=======
+    <>
+                  loading='lazy'
+                />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
           </div>
         </section>
         {/* Features Section */}
+<<<<<<< HEAD
 
 
 
+=======
+<section className='py-16 bg-background'>
+          <div className='container mx-auto px-4 md:px-6'>
+            <div className='text-center mb-12'>
+              <h2 className='text-3xl font-bold tracking-tight'>
+                Powerful AI Hiring Tools
+              </h2>
+              <p className='text-muted-foreground mt-4 max-w-3xl mx-auto'>
+                Our comprehensive suite of AI-powered hiring tools help you
+                streamline your recruiting process, find better candidates, and
+                make data-driven decisions.
+            </div>
+            <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+              <Card className='bg-card border border-border'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Job Description Generator</CardTitle>
@@ -79,13 +128,35 @@ export default function ZionHireAI() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
+=======
+                  <ul className='space-y-2 text-sm'>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Automated skill requirements</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Optimized for inclusivity</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Template
+                      </span>
+                      <span>Industry-specific templates</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Resume Screener</CardTitle>
@@ -109,11 +180,41 @@ export default function ZionHireAI() {
 
                     <li className="flex items-center">
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
+=======
+<Card className='bg-card border border-border'>
+                <CardHeader>
+                  <PenTool className='h-10 w-10 text-zion-purple mb-2' />
+                  <CardTitle>Resume Screener</CardTitle>
+                  <CardDescription>
+                    Automatically evaluate and score candidate resumes against
+                    job requirements.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className='space-y-2 text-sm'>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Identify skill matches</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Experience verification</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Custom
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>Customizable scoring criteria</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -131,11 +232,41 @@ export default function ZionHireAI() {
                       <span>Culture fit prediction</span>
                     </li>
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
+=======
+<Card className='bg-card border border-border'>
+                <CardHeader>
+                  <Users className='h-10 w-10 text-zion-purple mb-2' />
+                  <CardTitle>Candidate Matchmaker</CardTitle>
+                  <CardDescription>
+                    Find the best candidates for each position with AI-powered
+                    matching.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className='space-y-2 text-sm'>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Relevancy scoring</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Culture fit prediction</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Data
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
               
               <Card className="bg-card border border-border">
                 <CardHeader>
@@ -159,10 +290,44 @@ export default function ZionHireAI() {
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
+=======
+<Card className='bg-card border border-border'>
+                <CardHeader>
+                  <Globe className='h-10 w-10 text-zion-purple mb-2' />
+                  <CardTitle>Embeddable Widget</CardTitle>
+                  <CardDescription>
+                    Add an AI assistant to your careers page to answer applicant
+                    questions.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className='space-y-2 text-sm'>
+                    <li className='flex items-center'>
+                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        AI
+                      </span>
+                      <span>Instant FAQ responses</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Custom
+                      </span>
+                      <span>Customizable branding</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Code
+                      </span>
+                      <span>Simple JavaScript snippet</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
+=======
+<Card className='bg-card border border-border'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -171,16 +336,39 @@ export default function ZionHireAI() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
 
 
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
+=======
+                  <ul className='space-y-2 text-sm'>
+                    <li className='flex items-center'>
+                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Data
+                      </span>                      <span>Time-to-hire tracking</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Data
+                      </span>
+                      <span>Candidate funnel metrics</span>
+                    </li>
+                    <li className='flex items-center'>
+                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Data
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>Cost per hire analysis</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 
 
+=======
+<Card className='bg-card border border-border'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
                   <CardDescription>
@@ -201,6 +389,7 @@ export default function ZionHireAI() {
                       </span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+<<<<<<< HEAD
                 <CardHeader>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>White-Labeled Platform</CardTitle>
@@ -221,6 +410,12 @@ export default function ZionHireAI() {
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
                     <li className="flex items-center">
+=======
+                    <li className='flex items-center'>
+                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Access
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>Team roles & permissions</span>
                     </li>
                   </ul>
@@ -230,6 +425,7 @@ export default function ZionHireAI() {
           </div>
         </section>
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
@@ -398,3 +594,27 @@ export default function ZionHireAI() {;
     </>);
 }
 ;
+=======
+<section className='bg-zion-blue-dark py-16'>
+          <div className='container mx-auto px-4 md:px-6 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-4'>
+              Ready to transform your hiring process?
+            </h2>
+            <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
+              Join leading companies using Zion Hire AI to find better talent
+              faster, reduce time-to-hire, and improve candidate experience.
+            </p>
+            <Button
+              size='lg'
+              className='bg-zion-purple hover:bg-zion-purple-light text-white'
+              asChild
+            >
+              <Link href='/enterprise/demo'>Schedule a Demo</Link>
+            </Button>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

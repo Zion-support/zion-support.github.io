@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -215,3 +216,15 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '[^']*';
+import { crm } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { job } = req.body as { job?: Record<string, any> },
+  if (!job) return res.status(400).json({ error: 'Missing job payload' });
+  const state = null;
+  res.status(200).json({ ok: true, results })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

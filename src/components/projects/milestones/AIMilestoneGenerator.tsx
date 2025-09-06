@@ -1,9 +1,42 @@
+<<<<<<< HEAD
 interface AIMilestoneGeneratorProps {;
+=======
+
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Accordion;
+  AccordionContent;
+  AccordionItem;
+  AccordionTrigger } from '@/components/ui/accordion';
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
+import { format, parseISO  } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import {
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from '@/components/ui/accordion'
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
+import { format, parseISO } from 'date-fns'
+  MilestoneInput
+  GeneratedMilestone
+  useMilestoneGenerator
+} from '@/hooks/useMilestoneGenerator'
+import { Badge } from '@/components/ui/badge'
+interface AIMilestoneGeneratorProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
 
 
 
@@ -461,6 +494,21 @@ export function AIMilestoneGenerator({;
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation(),
+=======
+  onAddMilestone: (milestone: GeneratedMilestone) => void
+export function AIMilestoneGenerator({
+  scope;
+  startDate;
+  endDate;
+  projectType;
+  onAddMilestones;
+  onAddMilestone
+}: AIMilestoneGeneratorProps) {
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),
+
+  const handleGenerateMilestones = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
@@ -511,6 +559,7 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -545,3 +594,7 @@ export function AIMilestoneGenerator({;
         </Card>)}
     </div>);
 }
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

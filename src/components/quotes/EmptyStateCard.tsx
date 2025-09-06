@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
+<<<<<<< HEAD
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
@@ -106,3 +107,6 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 }
 
 };
+=======
+type EmptyStateCardProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

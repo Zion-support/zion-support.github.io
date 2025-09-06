@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -6,6 +7,10 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface SpecializedEmergingTechService {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -37,6 +42,7 @@
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -49,11 +55,19 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -487,3 +501,8 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    },
+  ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

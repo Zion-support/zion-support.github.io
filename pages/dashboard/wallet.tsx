@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -13,6 +14,12 @@ import React from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 import dynamic from "next/dynamic",
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+=======
+import React from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -21,6 +28,7 @@ export default function WalletPage() {
       </div>
     </EnhancedLayout>
   )
+<<<<<<< HEAD
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
@@ -46,3 +54,6 @@ function WalletPage() {
       </div>;
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

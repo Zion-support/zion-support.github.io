@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+  TableRow,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 
 import Link from 'next / link'; // Changed from react-router-dom;
@@ -11,6 +15,7 @@ import {
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
   Table,
@@ -58,6 +63,11 @@ import {
   TableBody,
   TableCell,
 
+=======
+TableRow;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth  } from '@/hooks/useAuth';
@@ -74,6 +84,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {;
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+<<<<<<< HEAD
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
@@ -119,6 +130,9 @@ export default function OrdersPage() {
         return status
     }
 
+=======
+  const formatDate = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6">Order History</h1>
@@ -178,6 +192,7 @@ export default function OrdersPage() {
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
 ;
 =======
@@ -210,3 +225,5 @@ export default function OrdersPage() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
   if (req && req.method === "GET") {
 
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+    return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
     });
     return res && res.status(200).json({
@@ -66,6 +72,7 @@ if (state.overrides[idx] = entry) {
       override: updated.overrides.find ((o) => o.job_id === job_id)
     });
   }
+<<<<<<< HEAD
   return res.status (405).json ({ error: "Method not allowed" });
 }
 
@@ -85,3 +92,8 @@ if (state.overrides[idx] = entry) {
   }
 
 
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

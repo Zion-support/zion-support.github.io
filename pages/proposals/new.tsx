@@ -1,24 +1,53 @@
+<<<<<<< HEAD
 
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
+import AIAssistant from '../../components/ui/AIAssistant';
+const NewProposal: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>
       <Head>
         <title>New Proposal - Zion AI Marketplace</title>
       </Head>
-      <h1 className="text-2xl font-semibold mb-4">Create Proposal</h1>
-      <div className="grid gap-4">
-        <label className="text-sm">Job Description / Brief
-          <textarea value={jobBrief} onChange={e => setJobBrief(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
+<h1 className='text-2xl font-semibold mb-4'>Create Proposal</h1>
+
+      <div className='grid gap-4'>
+        <label className='text-sm'>
+          Job Description / Brief
+          <textarea
+            value={jobBrief}
+            onChange={e => setJobBrief(e.target.value)}
+            rows={6}
+            className='mt-1 w-full rounded-md border p-3'
+          />
         </label>
-        <label className="text-sm">Your Resume Summary
-          <textarea value={resumeSummary} onChange={e => setResumeSummary(e.target.value)} rows={4} className="mt-1 w-full rounded-md border p-3" />
+        <label className='text-sm'>
+          Your Resume Summary
+          <textarea
+            value={resumeSummary}
+            onChange={e => setResumeSummary(e.target.value)}
+            rows={4}
+            className='mt-1 w-full rounded-md border p-3'
+          />
         </label>
-        <label className="text-sm">Relevant Experience Highlights
-          <textarea value={relevantExperience} onChange={e => setRelevantExperience(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
+        <label className='text-sm'>
+          Relevant Experience Highlights
+          <textarea
+            value={relevantExperience}
+            onChange={e => setRelevantExperience(e.target.value)}
+            rows={6}
+            className='mt-1 w-full rounded-md border p-3'
+          />
         </label>
       </div>
-      <div className="mt-6 flex items-center justify-between">
-        <h2 className="text-lg font-semibold">Proposal / Cover Letter</h2>
+
+      <div className='mt-6 flex items-center justify-between'>
+        <h2 className='text-lg font-semibold'>Proposal / Cover Letter</h2>
         <AIAssistant
+<<<<<<< HEAD
           buttonLabel="Generate Pitch Based on Profile & Job"
           title="Generate Proposal"
           defaultPrompt={pitchPrompt  } catch (error) {
@@ -36,10 +65,23 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          buttonLabel='Generate Pitch Based on Profile & Job'
+          title='Generate Proposal'
+          defaultPrompt={pitchPrompt}
+          onAccept={setCoverLetter}
+          authorizationToken={operatorToken}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </div>
-      <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
+<textarea
+        value={coverLetter}
+        onChange={e => setCoverLetter(e.target.value)}
+        rows={14}
+        className='mt-2 w-full rounded-md border p-3'
+      />
     </div>
+<<<<<<< HEAD
   )
 
 },
@@ -56,3 +98,9 @@ export default NewProposal,
 export default NewProposal,;
 export default NewProposal,
 
+=======
+  );
+};
+
+export default NewProposal;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip
+  TooltipContent
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
+  let message = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     default:
       break
   }
@@ -149,5 +163,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
       </TooltipContent>
     </Tooltip>
+<<<<<<< HEAD
   )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

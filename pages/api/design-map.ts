@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   try {
@@ -123,6 +124,19 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import {
+  getZionDesignMap,
+  buildTokenSet,
+  fetchLovableTokens,
+} from '../../utils/design-map';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  try {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
@@ -155,6 +169,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -215,3 +230,7 @@ export default async function handler(req, res) {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

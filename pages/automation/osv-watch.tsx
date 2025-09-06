@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/security/osv-report.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -16,6 +17,9 @@ export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
 
+=======
+  const results: any[] = (data?.results || []).slice(0, 50);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -37,6 +41,7 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
   );
 };
@@ -67,3 +72,7 @@ export default function OsvWatchPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

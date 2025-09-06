@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
@@ -9,6 +10,17 @@ import { rateLimit } from "../../utils/rateLimit";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from '[^']*';
+import { readJsonFile, writeJsonFile } from '[^']*';
+import type { Job } from '../../utils/types';
+import { rateLimit } from '[^']*';
+const FILE = null;
+  res.status(405).end('Method Not Allowed')
+}
+export default async function handler(
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -20,8 +32,13 @@ import { rateLimit } from "../../utils/rateLimit";
 <<<<<<< HEAD
   if (req && req.method === "GET") {
     const jobs = readJsonFile<Job[]>(FILE, []);
+<<<<<<< HEAD
     res && res.status(200).json({ jobs });
     return;
+=======
+    res.status(200).json({ jobs });
+return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
     }
     const nowIso = new Date().toISOString();
@@ -209,6 +226,7 @@ if ( {) {
   $2
 }
     const {
+<<<<<<< HEAD
       title
       description
       category
@@ -248,6 +266,30 @@ required_skills = []
 category: String(category || "")
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
+=======
+      title,
+      description,
+      category,
+      requiredSkills = [],
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+clientEmail,
+    } = req.body || {};
+
+    if (!title || !description || !clientEmail) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+    }
+    const nowIso = new Date().toISOString();
+    const job: Job = {
+id: uuidv4(),
+      title: String(title),
+      description: String(description),
+      category: String(category || ''),
+      requiredSkills: Array.isArray(requiredSkills)
+        ? requiredSkills.map(String)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         : []
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
@@ -269,6 +311,7 @@ category: String(category || "")
           (s) =>
         )
       )
+<<<<<<< HEAD
         job && job.category = "Cloud";
       else job && job.category = "General";
 
@@ -428,3 +471,19 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        job.category = 'Cloud';
+      else job.category = 'General';
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res.status(201).json({ job });
+return;
+  }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

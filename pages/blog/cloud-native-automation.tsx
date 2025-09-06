@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import Head from 'next/head';
+=======
+import Head from 'next/head',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
@@ -10,6 +14,7 @@ export default function CloudNativeAutomation() {
           Building Cloud-Native Automation Infrastructure | Zion Tech Group
         </title>
         <meta
+<<<<<<< HEAD
         />
         <meta
           property='og:title'
@@ -95,6 +100,9 @@ export default function CloudNativeAutomation() {
                   <li>Efficient resource allocation and management</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
+=======
+          name;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   service discovery, and failover, ensuring high availability
                   and performance.
                 </p>
@@ -212,6 +220,7 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
+<<<<<<< HEAD
     <>;
       <Head>;
         <title>;
@@ -285,3 +294,6 @@ export default function CloudNativeAutomation() {
             </article>;
           </div>;
         </main>;
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

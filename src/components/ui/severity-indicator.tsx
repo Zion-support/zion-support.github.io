@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 
@@ -6,6 +7,10 @@ size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { cn } from "@/lib/utils",
+=======
+import React from "react";
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
 interface SeverityIndicatorProps {
@@ -18,6 +23,7 @@ interface SeverityIndicatorProps {
   className?: string
 }
 
+<<<<<<< HEAD
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
@@ -27,10 +33,19 @@ export function SeverityIndicator({
 <<<<<<< HEAD
   size = "md",
   className 
+=======
+export function SeverityIndicator({
+  severity,
+  showIcon = true,
+  showText = true,
+  size = 'md',
+  className,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
+<<<<<<< HEAD
         return <AlertCircle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-destructive"
@@ -69,6 +84,32 @@ export function SeverityIndicator ({
     }
   }
 
+=======
+        
+          />
+        );
+      case 'suspicious':
+        
+          />
+        );
+      default:
+        
+          />
+        );
+    }
+  };
+
+  return (
+    <div className={cn('flex items-center gap-1', className)}>
+      {showIcon && getSeverityIcon()}
+      {showText && <span className='capitalize text-sm'>{severity}</span>}
+    </div>
+  );
+
+};
+return (</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <<<<<<< HEAD
 =======
@@ -81,6 +122,7 @@ export function SeverityIndicator ({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
@@ -144,3 +186,6 @@ export function SeverityIndicator({;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

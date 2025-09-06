@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { Sparkles, Search } from 'lucide-react'
 import React from 'react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -10,6 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   serviceType?: string
@@ -425,16 +429,27 @@ if ( {) {
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
+=======
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void;
+  className?: string
+}
+
+export function AIMatchmaker({ serviceType;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
@@ -498,6 +513,7 @@ if ( {) {
               projectDescription={query}
             />;
           )}
+<<<<<<< HEAD
 =======
 
               projectDescription={query}
@@ -549,3 +565,9 @@ if ( {) {
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </div>
+      </CardContent>
+    </Card>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

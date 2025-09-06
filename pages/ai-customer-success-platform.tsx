@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
@@ -61,6 +62,9 @@ return (
 				"Playbook automation (email, CS tasks, in-app guides, offers)",
 				"Expansion signals for upsell/cross-sell",
 				"Executive QBR reports and cohort analytics",
+=======
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]  } catch (error) {
     console.error("Error:", error);
@@ -75,6 +79,7 @@ return (
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform";
 		/>;
 	);
@@ -85,3 +90,6 @@ return (
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,6 +163,9 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST")
+=======
+  const identity = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");

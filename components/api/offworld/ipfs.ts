@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {
   addJSON,
   publishManifesto,;
@@ -39,12 +40,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req.query;
+  const body = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
   try {
     if (req.method === 'POST' && action === 'json') {
       const { cid, provider } = await addJSON(body);
+<<<<<<< HEAD
+=======
+      if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
+return res.status(200).json({ cid, provider });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(
@@ -53,10 +65,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res && res.status(400).json({ error: 'Unsupported action' });
   } catch (e: any) {
+<<<<<<< HEAD
+=======
+    return res.status(500).json({ error: e.message });
+  }
+      return res.status(200).json({ ok })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
 }
+<<<<<<< HEAD
 import {
   addJSON,
   publish_manifesto,
@@ -109,4 +128,6 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

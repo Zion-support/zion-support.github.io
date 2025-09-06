@@ -5,6 +5,7 @@ import Quiz from '../../components/learn/Quiz',
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
+<<<<<<< HEAD
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
@@ -22,20 +23,27 @@ export default function CourseView() {;
     percent: 0
     completedLessons: []
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+=======
+    percent: 0,
+    completedLessons: [],
+  });
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [finalPassed, setFinalPassed] = useState(false);
   useEffect(() => {
     if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
-        fetch(`/api/learn/courses/${courseId}`)
-        fetch(`/api/learn/progress?userId=demo-user`),      ]);
+fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/progress?userId=demo-user`),
+      ]);
       const courseData = await courseResp.json();
       const progData = await progResp.json();
       setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) |{
-        percent: 0
-        completedLessons: []
-      }
+const cp = (progData.progress && progData.progress[courseId]) || {
+        percent: 0,
+        completedLessons: [],
+      };
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
@@ -45,12 +53,22 @@ export default function CourseView() {;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
   );
+<<<<<<< HEAD
   async function markLessonComplete(): any (lessonId: string) {;
     const completedCount = (progress && progress.completedLessons || []).includes(lessonId);
       ? (progress && progress.completedLessons || []).length;
       : (progress && progress.completedLessons || []).length + 1;
     const percent = Math && Math.round(;
       (completedCount / (course?.lessons?.length || 1)) * 100;
+=======
+
+  async function markLessonComplete(lessonId: string) {
+    const completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1;
+const percent = Math.round(
+      (completedCount / (course?.lessons?.length || 1)) * 100
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     );
     const resp = await fetch('/api/learn/progress', {;
       method: 'POST',;
@@ -62,6 +80,7 @@ export default function CourseView() {;
         percent,;
       }),;
     });
+<<<<<<< HEAD
     const data = await resp && resp.json();
     setProgress(data && data.progress);  }
 
@@ -159,6 +178,27 @@ export default function CourseView(req, res) {
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
+=======
+    const data = await resp.json();
+    setProgress(data.progress);
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+if (currentLessonId) markLessonComplete(currentLessonId);
+  }
+
+  async function onFinalQuizComplete(score: number) {
+    const needed = course?.finalQuiz?.passThreshold |0;
+    const passed = score >= needed;
+setFinalPassed(passed);
+  }
+
+  if (!course) return <div>Loading...</div>;
+  return (
+<div className='grid lg:grid-cols-3 gap-6'>
+      <div className='lg:col-span-2 space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
           <h1 className="text-2xl font-semibold">{course.title}</h1>
           <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
@@ -170,12 +210,14 @@ export default function CourseView(req, res) {
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
-                  >                    {l.title}
+                  >
+                    {l.title}
                   </button>
                 </li>
               ))}
             </ul>
           </aside>
+<<<<<<< HEAD
           <section className='lg:col-span-3 space-y-4'>
         <div className="grid lg:grid-cols-5 gap-4">
           <aside className="lg:col-span-2 border rounded p-3 h-max">
@@ -204,6 +246,18 @@ export default function CourseView(req, res) {
                 {currentLesson && currentLesson.quiz?.questions?.length ? (;
                   <div className='mt-4'>;
 
+=======
+
+<section className='lg:col-span-3 space-y-4'>
+            {currentLesson ? (
+              <div className='border rounded p-4'>
+                <div className='font-medium'>{currentLesson.title}</div>
+                <div className='mt-2 text-sm whitespace-pre-line'>
+                  {currentLesson.content}
+                </div>
+                {currentLesson.quiz?.questions?.length ? (
+                  <div className='mt-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     <Quiz
                       questions={currentLesson && currentLesson.quiz.questions}
                       onComplete={onModuleQuizComplete}
@@ -231,11 +285,26 @@ export default function CourseView(req, res) {
                 <div className="font-medium mb-2">Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
+<<<<<<< HEAD
+=======
+                  <div className='mt-3 text-green-700'>
+                    Passed! You can download your certificate below.
+                  </div>
+                )}
+              </div>
+            ) : null}
+
+{finalPassed && <CertificatePreview courseId={courseId} />}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="space-y-4">
+=======
+<div className='space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -244,6 +313,7 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
 }
   )
@@ -256,3 +326,6 @@ export default function CourseView(req, res) {
 
 
 
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

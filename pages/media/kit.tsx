@@ -3,6 +3,7 @@ import Head from 'next/head',
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
+<<<<<<< HEAD
 
 import type {
   MediaBundle
@@ -31,6 +32,11 @@ import {;
   buildPressRelease,;
   buildTimeline,;
 } from '../../utils/mediaKit';
+=======
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+const KitPage = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const KitPage = () => {
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -56,10 +62,69 @@ const KitPage = () => {
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD
+=======
+const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
+    []
+  );
+  const assets: MediaAsset[] = useMemo(
+    () => getDefaultAssets(bundle)
+    [bundle]
+  );
+  const onGenerateTimeline = useCallback(() => {
+    setTimeline(buildTimeline(startDate));
+  }, [startDate]);
+
+  const onDownloadZip = useCallback(async () => {
+    const JSZip = (await import('jszip')).default;
+    const zip = new JSZip();
+    // Add static/dynamic assets
+else if (asset.type === 'binary' && asset.path) {
+        const res = await fetch(asset.path);
+        const blob = await res.blob();
+        zip.file(asset.filename, blob);
+      }
+    }
+    // Add press releases
+    const nowStr = new Date().toISOString().substring(0, 10);
+const prSeed = buildPressRelease('seed-round', {
+      companyName,
+      date: nowStr,
+      raiseAmount,
+    });
+    const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
+    const prToken = buildPressRelease('token-sale', {
+      companyName,
+      date: nowStr,
+      tokenName,
+    });
+    zip.file('press-releases/seed-round.md', prSeed);
+    zip.file('press-releases/launch.md', prLaunch);
+    if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
+    // Add timeline if generated
+    if (timeline.length > 0) {
+      const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
+zip.file('rollout-timeline.txt', tl);
+    }
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const { saveAs } = await import('file-saver');
+    saveAs(blob, `zion-media-kit-${bundle}.zip`);
+  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+
+  const onGeneratePdf = useCallback(async () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+<<<<<<< HEAD
+=======
+    const drawText = (text: string, x: number, y: number, size = 12) => {
+page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
+    };
+
+    let y = 760;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
@@ -217,14 +282,27 @@ if ( {) {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
+<<<<<<< HEAD
     );  }
     )
   },
+=======
+    );
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>
       <Head>
         <title>Media Kit - Zion</title>
+<<<<<<< HEAD
         <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+=======
+<meta
+          name='description'
+          content='Zion media kit: brand, assets, legal, and rollout playbooks.'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
@@ -331,6 +409,7 @@ if ( {) {
               <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
               <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
             </div>
+<<<<<<< HEAD
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
             {assets.map(a => (
@@ -343,15 +422,49 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            {timeline.length > 0 && (
+              <ul className='mt-3 text-sm list-disc list-inside space-y-1'>
+                {timeline.map(t => (
+                  <li key={t.label}>
+                    <span className='font-medium'>{t.label}:</span> {t.date}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+
+<section className='p-4 border rounded-lg'>
+          <h3 className='font-semibold mb-3'>Assets Included</h3>
+          <ul className='grid md:grid-cols-2 gap-3'>
+            {assets.map(a => (
+              <li
+                key={a.filename}
+                className='flex items-center justify-between border rounded p-2'
+              >
+                <span className='text-sm'>{a.filename}</span>
+                {a.path ? (
+                  <a href={a.path} download className='text-blue-600 text-sm'>
+                    Download
+                  </a>
+                ) : (
+                  <span className='text-gray-400 text-xs'>generated</span>
+                )}
+              </li>
+            ))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>
         </section>
-        <section className='p-4 border rounded-lg space-y-4'>
+
+<section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
             <PressReleaseCard type='seed-round' title='Seed round' />
             <PressReleaseCard type='launch' title='Launch' />
             {bundle === 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
+<<<<<<< HEAD
             )}          </div>
 }
 export default KitPage;
@@ -367,10 +480,14 @@ export default KitPage;
           <div className="grid md:grid-cols-3 gap-4">
             <PressReleaseCard type="seed-round" title="Seed round" />
             <PressReleaseCard type="launch" title="Launch" />
+=======
+            )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
       </div>
     </div>
+<<<<<<< HEAD
 
 
         <section className='p-4 border rounded-lg space-y-4'>;
@@ -387,4 +504,9 @@ export default KitPage;
   );
 
 },;
+=======
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default KitPage;

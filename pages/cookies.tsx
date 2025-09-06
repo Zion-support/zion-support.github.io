@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -312,12 +313,21 @@ origin/automation-improvements-final
       </div>;
 
 
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
+<<<<<<< HEAD
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -332,6 +342,30 @@ export default function CookiesPage() {
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
+=======
+        canonical='https://ziontechgroup.com/cookies/'
+      />
+      <div className='container mx-auto px-4 py-24 text-white'>
+        <div className='max-w-3xl mx-auto space-y-6'>
+          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>
+          <p className='text-gray-300'>
+            We use minimal, privacy‑respecting analytics. Some third‑party
+            embeds may set cookies. You can block non‑essential cookies via your
+            browser.
+          </p>
+          <ul className='list-disc list-inside text-gray-300 space-y-1'>
+            <li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+<p className='text-gray-400 text-sm'>
+            Questions?{' '}
+            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+              kleber@ziontechgroup.com
+            </a>
+          </p>
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </Layout>
     </>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -346,7 +380,9 @@ origin/automation-improvements-final
 
 
   );
+
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
       </div>
@@ -370,3 +406,5 @@ origin/automation-improvements-final
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

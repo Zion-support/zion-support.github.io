@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 
 export default function TestPage() {
@@ -60,6 +61,9 @@ export default function TestPage() {;
 }
 import React from 'react'
 import Head from 'next/head'
+=======
+import Head from 'next/head';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function TestPage() {
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -83,6 +87,7 @@ origin/main
       </div>
     </>
   )
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,3 +98,6 @@ origin/main
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

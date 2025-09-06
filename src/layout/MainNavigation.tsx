@@ -1,8 +1,25 @@
+<<<<<<< HEAD
+=======
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useState } from "react",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useTranslation } from "react-i18next",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext";
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
+import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
 
+<<<<<<< HEAD
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
@@ -11,6 +28,18 @@ import { use_auth } from '@/hooks / use_auth';
 import { use_translation } from 'react - i18next';
 import { use_favorites } from '@/hooks / use_favorites';
 import { use_cart } from '@/context / CartContext';
+=======
+export function MainNavigation({ isAdmin;
+                      router.pathname.startsWith('/cart')
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useTranslation } from 'react-i18next'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useCart } from '@/context/CartContext'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Heart,
   MessageSquare,
@@ -438,10 +467,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     onClick={handleCartClick}
                     className={cn(
+<<<<<<< HEAD
 
                       'nav-link',
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
 
+=======
+                      'nav-link'
+                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}>;
@@ -1118,6 +1152,7 @@ export default function Page() {; []);
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
 
 
                         {link && link.name}
@@ -1166,3 +1201,6 @@ export default function Page() {; []);
   )
 }
 ;
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

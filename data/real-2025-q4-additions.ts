@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 export interface Q4Service {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface Q4Service {
@@ -9,6 +10,9 @@ export interface Q4Service {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -28,6 +32,7 @@ export interface Q4Service {
   growthRate?: string;
   variant?: string;
   contactInfo?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2639,3 +2644,19 @@ export const real2025Q4Additions = [
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+mobile: string;
+    email: string;
+    address: string;
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails?: string;
+  launchDate?: string;
+  customers?: number;
+  rating?: number;
+  reviews?: number
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

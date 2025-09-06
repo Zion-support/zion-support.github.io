@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
@@ -76,11 +77,36 @@ export default function TalentProfilePage() {
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
 
+=======
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { TalentProfile } from '@/components/profile/TalentProfile';
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import { BackToDirectoryButton } from '@/components/profile/BackToDirectoryButton';
+import { useTalentProfile } from '@/hooks/useTalentProfile';
+import { HireRequestModal } from '@/components/profile/hire-request';
+import { useAuthStatus } from '@/hooks/talent';
+import { MessageTalentModal } from '@/components/messaging/MessageTalentModal';
+import { StickyAction } from '@/components/ui/sticky-action';
+import { Handshake, MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
+import { UserProfile } from '@/types/auth';
+import { toast } from '@/hooks/use-toast';
+import { SEO } from '@/components/SEO';
+
+export default function TalentProfilePage() {
+        name: '',
+        points: 0,
+      };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   // Handle loading error gracefully
   useEffect((,) => {
     if (error) {
       toast({
+<<<<<<< HEAD
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
@@ -142,6 +168,13 @@ if ( {) {
       }) }        title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"});
+=======
+title: 'Error loading profile',
+        description:
+          'There was a problem loading this talent profile. Please try again.',
+        variant: 'destructive',
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [error])
   if (isLoading) {
@@ -281,6 +314,7 @@ export default function TalentProfilePage() {;
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
         variant: "default"});
@@ -288,11 +322,22 @@ export default function TalentProfilePage() {;
       return
     }
     setIsHireModalOpen(true)
+=======
+title: 'Authentication required',
+        description: 'Please sign in to hire this talent.',
+        variant: 'default',
+      });
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return;
+    }
+    setIsHireModalOpen(true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to message this talent.",
         variant: "default"});
@@ -315,6 +360,25 @@ if ( {) {
 
   return (
     <>;
+=======
+title: 'Authentication required',
+        description: 'Please sign in to message this talent.',
+        variant: 'default',
+      });
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+  return (
+    <>
+      <SEO
+        title = {profile.full_name,}
+        description = {profile.bio |'Talent profile',}
+        ogImage = {profile.profile_picture_url,}
+      />
+<div className='min-h-screen bg-zion-blue pb-12'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <TalentProfile
           profile={profile}
           onRequestHire={handleRequestHire}
@@ -333,6 +397,7 @@ if ( {) {
               size='sm'
               variant='outline'
               className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+<<<<<<< HEAD
         title={profile.full_name}
         description={profile.bio || 'Talent profile'}
         ogImage={profile.profile_picture_url}
@@ -582,3 +647,73 @@ export default function TalentProfilePage() {;
     </>;
   );
 }
+=======
+              onClick={handleMessageTalent}
+            >
+              <MessageSquare className='mr-2 h-4 w-4' />
+              Message
+            </Button>
+          </div>
+        </StickyAction>
+        {/* Request to Hire Modal */}
+        <HireRequestModal
+          talent={profile}
+          isOpen={isHireModalOpen}
+          onClose={() => setIsHireModalOpen(false)}
+          userDetails={userProfile}
+        />
+        {/* Message Talent Modal */}
+        <MessageTalentModal
+          talent={profile}
+          isOpen={isMessageModalOpen}
+          onClose={() => setIsMessageModalOpen(false)}
+        />
+      </div>
+    </>
+  );
+
+}, [error]);
+return;
+}setIsHireModalOpen (true) ;
+};
+const handleMessageTalent = () => {;
+  if (!isAuthenticated) {;
+  toast ({;
+  return;
+}setIsMessageModalOpen (true) ;
+};
+return (<> <SEO title= {;
+  profile.full name ;
+}description= {';
+  profile.bio || 'Talent profile' ;
+}ogImage= {;
+  profile.profile picture url ;
+}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {;
+  profile ;
+}onRequestHire= {;
+  handleRequestHire ;
+}onMessageTalent= {;
+  handleMessageTalent ;
+}/> <BackToDirectoryButton /> {;
+  /* Sticky action buttons that appear when scrolling */ ";
+}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {;
+  /* Request to Hire Modal */ ;
+}<HireRequestModal talent= {;
+  profile ;
+}isOpen= {;
+  isHireModalOpen ;
+}onClose= {;
+  () => setIsHireModalOpen (false) ;
+}userDetails= {;
+  userProfile ;
+}/> {;
+  /* Message Talent Modal */ ;
+}<MessageTalentModal talent= {;
+  profile ;
+}isOpen= {;
+  isMessageModalOpen ;
+}onClose= {;
+  () => setIsMessageModalOpen (false) ;
+}/> </div> </>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

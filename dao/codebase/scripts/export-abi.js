@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -65,12 +66,35 @@ function main() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const fs = require('fs');
+const path = require('path');
+function main() {
+  const outDir = path.join(__dirname, '../abi');
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+  const artifactsDir = path.join(__dirname, '../artifacts/contracts');
+  const abis = [
+    ['VoteToken.solVoteToken'],
+    ['ZionDAO.solZionDAO'],
+    ['QuorumEngine.solQuorumEngine'],
+    ['DelegateRegistry.solDelegateRegistry'],
+    ['ConstitutionStorage.solConstitutionStorage'],
+    ['Treasure/Disbursements.solDisbursements'],
+    ['Treasure/EpochManager.solEpochManager']];
+  for (const [rel, name] of abis) {
+    const p = path.join(artifactsDir, rel, `${name}.json`);
+    if (fs.existsSync(p)) {
+      const json = JSON.parse(fs.readFileSync(p, 'utf8')),
+      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
+      console.log('Exported ABI for', name)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     } else {
       console.warn('Missing artifact for', name)
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -85,3 +109,6 @@ function main() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+main();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

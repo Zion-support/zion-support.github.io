@@ -4405,7 +4405,6 @@ aria-query@^5.0.0, aria-query@5.3.0:
   dependencies:
     dequal "^2.0.3"
 
-<<<<<<< HEAD
 aria-query@^5.3.2:
   version "5.3.2"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz"

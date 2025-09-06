@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ))}
           </div>;
@@ -146,3 +147,16 @@ export function CodeBlock({;
 =======
 export default CodeBlock;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import { Check, Copy } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+import { useState  } from 'react';
+import { Check, Copy } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface CodeBlockProps {
+  );
+
+export default CodeBlock;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

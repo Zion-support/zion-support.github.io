@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function randomString(length: number): string {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+  const charset =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   let res = '';
   const cryptoObj = require('crypto');
   const bytes: Buffer = cryptoObj.randomBytes(length);
   for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
   return res;
+<<<<<<< HEAD
 }
 
 
@@ -36,8 +43,12 @@ function randomString(length: number) {
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return res
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 
@@ -67,6 +78,14 @@ function handler() {
 
 
 =======
+=======
+  const nonce = randomString(16);
+  res.setHeader(
+    'Set-Cookie',
+    `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`
+  );
+  res.status(200).json({ nonce });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ nonce })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

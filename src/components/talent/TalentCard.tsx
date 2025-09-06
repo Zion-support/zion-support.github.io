@@ -18,6 +18,7 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
+<<<<<<< HEAD
 
 
 import { TalentProfile } from "@/types/talent",
@@ -507,3 +508,9 @@ TalentCard.displayName = 'TalentCard',
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
+=======
+export interface TalentCardProps {
+  );
+};
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

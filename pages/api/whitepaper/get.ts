@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -18,6 +19,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const entry = getShared(id)
   if (!entry) return res.status(404).json({ error: 'Not found' })
 >>>>>>> main
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getShared } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' });
+  const entry = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
 <<<<<<< HEAD
 export default function handler(req, res) {

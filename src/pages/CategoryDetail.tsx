@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { useState, useEffect, useRef, Suspense } from "react",
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
+import { ProductListing } from "@/types/listings";
+import { useRouter  } from 'next/router';
+import Link from 'next/link',
+import { toast } from "@/hooks/use-toast";
+import { NextSeo  } from '@/components/NextSeo';
+import { Header } from "@/components/Header",
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const AUTO_SERVICE_TITLES = null;
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import {toast} from "@/hooks/use-toast"
+import {NextSeo} from '@/components/NextSeo'
+import {Header} from "@/components/Header"
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
+import {logErrorToProduction} from '@/utils/productionLogger'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -238,6 +262,7 @@ function generateInnovationListing (index: number): ProductListing {
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
+<<<<<<< HEAD
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
 
@@ -246,6 +271,10 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+=======
+  const seoDescription =
+    category.description |'Explore listings in this category.'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -302,3 +331,22 @@ function generateInnovationListing (index: number): ProductListing {
               ))}
             </div>
           )}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </Suspense>
+    </>
+  );
+
+};
+return (<> <NextSeo title= {;
+  seoTitle ;
+}description= {;
+  seoDescription ;
+}/> <Header /> ← Back to Categories </Link> </div> </p> </div> {;
+  isLoading ? (<ListingGridSkeleton /> />) ) ;
+}</div>) ;
+}</div> </div> </Suspense> </>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

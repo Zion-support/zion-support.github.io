@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -175,6 +176,20 @@ export default function handler(req, res) {
 }
 ;
   if (req.method === 'GET') {
+=======
+const idx = jobs.findIndex(j => j.id === id);
+
+  if (idx === -1) {
+    res.status(404).json({ error: 'Job not found' });
+    return;
+  }
+
+  if (req.method === 'GET') {
+    res.status(200).json({ job: jobs[idx] });
+return;
+  }
+  if (req.method === "GET") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(200).json({ job: jobs[idx] });
     return;
     } catch (error) {
@@ -284,13 +299,14 @@ export default function handler(req, res) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: "Forbidden" });
-      return;
+      res.status(403).json({ error: 'Forbidden' });
+return;
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const {
+<<<<<<< HEAD
       title
       description
       category
@@ -304,6 +320,22 @@ export default function handler(req, res) {
     if (typeof description === "string") job.description = description;
     if (typeof category === "string") job.category = category;
     if (Array.isArray(requiredSkills))
+=======
+      title,
+      description,
+      category,
+      requiredSkills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+    } = req.body || {};
+
+    if (typeof title === 'string') job.title = title;
+    if (typeof description === 'string') job.description = description;
+    if (typeof category === 'string') job.category = category;
+if (Array.isArray(requiredSkills))
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       job.requiredSkills = requiredSkills.map(String);
     if (typeof budgetMinUsd === "number" || budgetMinUsd === null)
       job.budgetMinUsd = budgetMinUsd ?? undefined;
@@ -311,16 +343,21 @@ export default function handler(req, res) {
       job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
+<<<<<<< HEAD
     if (typeof status === "string") job.status = status as Job["status"];
+=======
+    if (typeof status === 'string') job.status = status as Job['status'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job;
     writeJsonFile<Job[]>(FILE, jobs);
 
     res.status(200).json({ job });
-    return;
+return;
   }
 
+<<<<<<< HEAD
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
@@ -331,3 +368,9 @@ res.setHeader("Allow", "GET, PATCH");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  res.setHeader('Allow', 'GET, PATCH');
+  res.status(405).end('Method Not Allowed');
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

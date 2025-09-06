@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -134,6 +135,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
+=======
+const JWT_SECRET = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Verify failed' })

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -20,11 +21,23 @@ import {
 } from "../../../../utils/api/projects";
 import { Milestone } from "../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '[^']*';
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '[^']*';
+import { Milestone } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = null;
+  res.status(405).end('Method Not Allowed')
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId } = req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
+<<<<<<< HEAD
     res.status(404).json({ error: "Project not found" });
     return;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -71,9 +84,14 @@ if (req && req.method === "GET") {
     return;
     res.status(404).json({ error: 'Project not found' });
     return
+=======
+    res.status(404).json({ error: 'Project not found' });
+return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
     return;
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -90,6 +108,12 @@ if (req && req.method === "GET") {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+  if (req.method === 'GET') {
+    res.status(200).json({ milestones: project.milestones });
+return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
@@ -121,7 +145,13 @@ if (req && req.method === "GET") {
 
   if (req.method === 'POST') {
     if (!isClient(project, user)) {
+<<<<<<< HEAD
       res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+=======
+res
+        .status(403)
+        .json({ error: "Only client (or admin) can add milestones" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       return;
     }
     const body = req.body as Partial<Milestone>;
@@ -135,6 +165,7 @@ if (req && req.method === "GET") {
     return;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -234,3 +265,9 @@ if ( {) {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

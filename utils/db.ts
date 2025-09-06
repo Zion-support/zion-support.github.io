@@ -1,5 +1,12 @@
+<<<<<<< HEAD
   }
   return default_value;
+=======
+import fs from 'fs';
+import path from 'path';
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 <<<<<<< HEAD
@@ -147,6 +154,7 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -172,3 +180,5 @@ import path from 'path';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

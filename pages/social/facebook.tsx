@@ -3,10 +3,34 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function FacebookRedirect() {
+<<<<<<< HEAD
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //facebook.com/ziontechgroup')
+=======
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //facebook.com/ziontechgroup')
+		}
+	}, []);
+	return (
+		<>
+			<Head>
+				<title>Facebook | Zion Tech Group</title>
+				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />
+				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />
+				<meta name="robots" content="noindex, nofollow" />
+			</Head>
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
+				<a href="https: //facebook.com/ziontechgroup" className="text-cyan-400 underline">
+					Continue to Facebook
+				</a>
+			</div>
+		</>
+	)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
       window.location.replace('https: //facebook.com/ziontechgroup'),
     };
@@ -15,16 +39,16 @@ export default function FacebookRedirect() {
     <>
       <Head>
         <title>Facebook | Zion Tech Group</title>
-        <link rel='canonical' href='https: //facebook.com/ziontechgroup' />
+        <link rel='canonical' href='https://facebook.com/ziontechgroup' />
         <meta
           httpEquiv='refresh'
-          content='0,url=https://facebook.com/ziontechgroup'
+          content='0;url=https://facebook.com/ziontechgroup'
         />
         <meta name='robots' content='noindex, nofollow' />
       </Head>
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
         <a
-          href='https: //facebook.com/ziontechgroup'
+          href='https://facebook.com/ziontechgroup'
           className='text-cyan-400 underline'
         >
           Continue to Facebook
@@ -32,6 +56,7 @@ export default function FacebookRedirect() {
       </div>
     </>
   );
+<<<<<<< HEAD
 
 }
 export default function FacebookRedirect(req, res) {
@@ -117,3 +142,5 @@ export default function FacebookRedirect() {
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

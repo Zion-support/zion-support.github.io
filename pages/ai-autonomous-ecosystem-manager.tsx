@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -7,6 +8,10 @@
 				"Sandboxing and E2E approvals for sensitive actions"
 				"Cost and performance optimization"
 
+=======
+import React from 'react';
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 			]}
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
@@ -40,6 +45,7 @@
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager";
 		/>;
 	);
@@ -47,4 +53,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

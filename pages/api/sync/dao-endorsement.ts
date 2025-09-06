@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -12,11 +13,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
@@ -32,12 +38,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   if (!fromDAO |!toDAO |!resolutionId |!decision) {
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
+<<<<<<< HEAD
 <<<<<<< HEAD
     eventId: uuidv4(),
     type: "dao_endorsement" as const,
@@ -55,6 +66,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+=======
+eventId: uuidv4(),
+    type: 'dao_endorsement' as const,
+    payload: {
+      id: resolutionId,
+      fromDAO,
+      toDAO,
+      resolutionId,
+      decision,
+      timestamp: timestamp || Date.now(),
+    },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now(),
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   upsertEvent(state, event);
   writeState(state);
@@ -62,6 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
+<<<<<<< HEAD
   if (sig) headers["x-zion-signature"] = sig;
   await Promise.all(
     state.config.peers
@@ -70,10 +98,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
 <<<<<<< HEAD
+=======
+if (sig) headers['x-zion-signature'] = sig;
+
+  await Promise.all(
+    state.config.peers
+      .filter(p => !p.paused)
+      .map(async peer => {
+        const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         try {
-          await axios.post(url, body, { headers, timeout: 5000 })
+          await axios.post(url, body, { headers, timeout: 5000 });
         } catch {}
       })
+<<<<<<< HEAD
   ),
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -118,6 +156,14 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
   ),
 <<<<<<< HEAD
+=======
+  );
+
+return res
+    .status(200)
+    .json({ status: 'created', version, eventId: event.eventId });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";

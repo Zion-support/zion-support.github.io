@@ -25,6 +25,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
 
   return (
     <>;
@@ -147,3 +148,6 @@ function ZeroTrustSecurityPlatformPage() {
 ;
 
 
+=======
+export default function ZeroTrustSecurityPlatformPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

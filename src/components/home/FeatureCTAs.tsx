@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface FeatureCTAsProps {;
   className?: string;
@@ -242,6 +243,27 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       icon: <Calendar className = "h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: '/project-milestones'
     };
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface FeatureCTAsProps {
+  className?: string;
+  style?: React.CSSProperties
+export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
+  const { t } = useTranslation();
+  const features = null;
+        <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />
+      ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
+      link: '/project-milestones'
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
@@ -278,6 +300,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   {feature && feature.badge && (;
                     <Badge
                       variant='secondary'
+<<<<<<< HEAD
                       className='bg-primary/20 text-primary'>                      {t(`badges.${feature && feature.badge}`)}
                     </Badge>;
                   )}
@@ -289,6 +312,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
 
+=======
+                      className='bg-primary/20 text-primary'
+                    >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         className
       )}
 <<<<<<< HEAD
@@ -307,6 +334,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                     </Badge>
                   )}
                 </div>
+<<<<<<< HEAD
 =======
       style={style}>;
       <div className="container mx-auto px-4">;
@@ -331,6 +359,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
+=======
+<CardTitle className='mt-4'>
+                  {t(`features.${feature.key}`)}
+                </CardTitle>
+                {feature.descriptionKey && (
+                  <CardDescription className='line-clamp-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {t(`features.${feature.descriptionKey}`)}
 
                   </CardDescription>;
@@ -341,19 +376,27 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
+<<<<<<< HEAD
 
 
                   <p className="text-sm text-muted-foreground">
+=======
+<p className='text-sm text-muted-foreground'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {t(`features.${feature.detailsKey}`)}
                   </p>;
 
                 )}
               </CardContent>
               <CardFooter>
+<<<<<<< HEAD
                 <Button asChild className="w-full gap-1">
 
 
 
+=======
+<Button asChild className='w-full gap-1'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
@@ -361,6 +404,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                     <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
+<<<<<<< HEAD
                     <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
@@ -373,11 +417,15 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
+=======
+                    <ArrowRight className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -680,3 +728,9 @@ function FeatureCTAs() {
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </div>
+      </div>
+    </section>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

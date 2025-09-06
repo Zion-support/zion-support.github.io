@@ -185,6 +185,7 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 }
 import React from 'react',
@@ -328,3 +329,7 @@ export default function CommunityPage() {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

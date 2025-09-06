@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -40,20 +41,88 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
   }
 }
 export default function AdminIntegrationsPage() {
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+  [key: string]: boolean;
+
+const AdminIntegrationsPage: React.FC = () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+const [syncRules, setSyncRules] = useState<any>({
+    autoCreateContacts: true,
+    pushNotesMode: 'auto',
+    autoSyncApplicants: true,
+    autoUploadResumes: true,
+  });
+  async function refresh() {
+    const [p, s] = await Promise.all([
+      fetch('/api/integrations/providers').then(r => r.json())
+      fetch('/api/integrations/status').then(r => r.json())
+    ]);
+    setProviders(p.providers |[]);
+    setConnections(s.connections |{});
+  }
+  useEffect(() => {
+    refresh();
+  }, []);
+
+  async function connect(providerId: string) {
+    setLoading(true)
+    try {
+      // Open mock oauth popup
+window.open(
+        `/api/integrations/oauth/${providerId}/start`,
+        'oauth',
+        'width=500,height=700'
+      );
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ providerId, syncRules })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await refresh();
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+  async function disconnect(providerId: string) {
+    setLoading(true)
+    try {
+await fetch('/api/integrations/disconnect', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ providerId }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await refresh();
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+  async function resync(providerId: string) {
+    setLoading(true)
+    try {
+await fetch('/api/integrations/resync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ providerId }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await refresh();
     } finally {;
@@ -138,12 +207,18 @@ export default function AdminIntegrationsPage() {
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
             <div>
+<<<<<<< HEAD
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
+=======
+              <div className='font-semibold'>{p.name}</div>
+              <div className='text-xs text-gray-500'>{p.description}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           <StatusIcon status={conn.status} />
         </div>
+<<<<<<< HEAD
         <div className="flex items-center gap-2">
           {!isConnected && (
             <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
@@ -156,6 +231,47 @@ export default function AdminIntegrationsPage() {
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
+=======
+<div className='flex items-center gap-2'>
+          {!isConnected && (
+            <button
+              onClick={() => connect(p.id)}
+              disabled={loading}
+              className='px-3 py-1.5 rounded bg-black text-white text-sm'
+            >
+              Connect
+            </button>
+          )}
+          {isConnected && (
+            <>
+              <button
+                onClick={() => resync(p.id)}
+                disabled={loading}
+                className='px-3 py-1.5 rounded bg-blue-600 text-white text-sm'
+              >
+                Resync Now
+              </button>
+              <button
+                onClick={() => setSelected(p.id)}
+                className='px-3 py-1.5 rounded border text-sm'
+              >
+                Configure
+              </button>
+              <button
+                onClick={() => disconnect(p.id)}
+                disabled={loading}
+                className='px-3 py-1.5 rounded border text-sm'
+              >
+                Disconnect
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+);
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
@@ -181,6 +297,38 @@ export default function AdminIntegrationsPage() {
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
     return (
+<<<<<<< HEAD
+=======
+<div className='fixed inset-0 bg-black/40 flex items-center justify-center'>
+        <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>
+          <div className='font-semibold mb-2'>Sync Rules — {provider.name}</div>
+          <div className='space-y-3 text-sm'>
+            {isCrm ? (
+              <>
+                <label className='flex items-center gap-2'>
+                  <input
+                    type='checkbox'
+                    checked={!!syncRules.autoCreateContacts}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoCreateContacts: e.target.checked
+                      })
+                    }
+                  />{' '}
+                  Auto-create contacts
+                </label>
+                <div>
+                  <div className='mb-1'>Push notes:</div>
+                  <div className='flex gap-3'>
+                    <label className='flex items-center gap-2'>
+                      <input
+                        type='radio'
+                        name='pushNotes'
+                        checked={syncRules.pushNotesMode === 'auto'}
+                        onChange={() =>
+                          setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         }
                       />{' '}
                       Auto;
@@ -197,6 +345,25 @@ export default function AdminIntegrationsPage() {
                           });
                         }
                       />{' '}
+<<<<<<< HEAD
+=======
+                      Manual only
+                    </label>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+<label className='flex items-center gap-2'>
+                  <input
+                    type='checkbox'
+                    checked={!!syncRules.autoSyncApplicants}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoSyncApplicants: e.target.checked
+                      })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -204,6 +371,7 @@ export default function AdminIntegrationsPage() {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
+<<<<<<< HEAD
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
@@ -212,12 +380,101 @@ export default function AdminIntegrationsPage() {
 
         </section>
 
+=======
+                    checked={!!syncRules.autoUploadResumes}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoUploadResumes: e.target.checked
+                      })
+                    }
+                  />{' '}
+                  Auto-upload resumes
+                </label>
+              </>
+            )}
+          </div>
+          <div className='mt-4 flex justify-end gap-2'>
+            <button
+              className='px-3 py-1.5 rounded border text-sm'
+              onClick={() => setSelected(null)}
+            >
+              Close
+            </button>
+            <button
+              className='px-3 py-1.5 rounded bg-black text-white text-sm'
+              onClick={async () => {
+                await connect(provider.id);
+                setSelected(null);
+              }}
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+<Head>
+        <title>Admin Integrations • Zion</title>
+      </Head>
+      <main className='container mx-auto px-4 py-8'>
+        <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>
+        <p className='text-sm text-gray-600 mb-6'>
+          Connect your CRM and ATS to sync contacts, applicants, and activity.
+        </p>
+        <section className='mb-8'>
+          <h2 className='text-lg font-semibold mb-3'>CRM</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {grouped.crm.map(p => (
+              <Card key={p.id} p={p} />
+            ))}
+          </div>
+        </section>
+        <section className='mb-10'>
+          <h2 className='text-lg font-semibold mb-3'>ATS</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {grouped.ats.map(p => (
+              <Card key={p.id} p={p} />
+            ))}
+          </div>
+        </section>
+        <section className='mb-10'>
+          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
+          <div className='text-sm text-gray-600'>Polling endpoints:</div>
+          <ul className='list-disc pl-6 text-sm mt-2'>
+            <li>
+              New Zion Job Posted → GET{' '}
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
+            </li>
+            <li>
+              Talent Matched → GET{' '}
+              <code>
+                /api/integrations/zapier/talent-matched?since=TIMESTAMP
+              </code>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+<h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
+          <ManualOverrideForm />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </main>
       <RulesModal />
     </>
+<<<<<<< HEAD
   );
 function ManualOverrideForm() {;
+=======
+);
+
+function ManualOverrideForm() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
@@ -234,6 +491,7 @@ function ManualOverrideForm() {
   const [disableAtsSync, setDisableAtsSync] = useState(false),
   const [message, setMessage] = useState(''),
   async function save() {
+<<<<<<< HEAD
     setMessage(''),
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
     if (res.ok) setMessage('Saved'), else setMessage('Error'),
@@ -242,6 +500,16 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+    setMessage('');
+const res = await fetch('/api/integrations/overrides', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),
+    });
+    if (res.ok) setMessage('Saved');
+    else setMessage('Error');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
@@ -298,6 +566,7 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
       </div>);  }
   return (
@@ -425,3 +694,6 @@ function save() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

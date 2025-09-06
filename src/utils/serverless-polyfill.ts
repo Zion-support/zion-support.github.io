@@ -15,6 +15,7 @@ declare global {
 }
 
 // CRITICAL: Self polyfill - must be first
+<<<<<<< HEAD
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
@@ -700,6 +701,8 @@ export default {}, // Ensure this can be imported as a module
 export default {}; // Ensure this can be imported as a module
   
 }, // Ensure this can be imported as a module'"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
@@ -711,6 +714,7 @@ if (process.env.NODE_ENV === 'development') {
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
+<<<<<<< HEAD
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
@@ -732,3 +736,6 @@ if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
 export default {}, // Ensure this can be imported as a module;
+=======
+export default {}, // Ensure this can be imported as a module
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

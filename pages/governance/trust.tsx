@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function GovernanceTrustPage() {
   return (
     <>
@@ -6,11 +7,26 @@ export default function GovernanceTrustPage() {
 
 
 
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
               </div>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<section className='space-y-4'>
+          <h2 className='text-2xl font-semibold'>Governance</h2>
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <div className='font-medium mb-1'>Core Stewards</div>
+              <div className='text-sm text-gray-600 dark:text-gray-400'>
+                Appointed via DAO ratification, accountable to publish roadmaps
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 risk registers, and post-mortems.
               </div>
         <section className="space-y-4">
@@ -43,9 +59,11 @@ export default function GovernanceTrustPage() {
               <div className='text-sm text-gray-600 dark:text-gray-400'>
                 Charter versions, MOUs, audits, and on-chain dashboards are
                 publicly accessible and time-stamped.
-              </div>            </div>
+              </div>
+            </div>
           </div>
         </section>
+<<<<<<< HEAD
               </div>;
             ))}
           </div>;
@@ -146,3 +164,20 @@ import Link from 'next / link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+<section className='space-y-2'>
+          <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
+          <p className='text-sm text-gray-600 dark:text-gray-400'>
+            Write a legal-neutral foundation charter for a decentralized AI
+            protocol committed to sovereignty, open knowledge, and trust.
+            Include DAO integration and multiverse grant rights.
+          </p>
+          <Link href='/foundation#charter'>
+            <a className='underline text-sm'>Open Charter Generator</a>
+          </Link>
+        </section>
+      </div>
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

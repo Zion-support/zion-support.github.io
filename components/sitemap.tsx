@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -191,6 +192,12 @@ export default function SitemapPage() {;
 		{ name: 'Support', href: '/support' },
 		{ name: 'Contact', href: '/contact' }
 	];
+=======
+import React from 'react';
+import Head from 'next/head';
+export default function SitemapPage() {
+	const links = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -207,6 +214,7 @@ export default function SitemapPage() {;
 				</ul>
 			</div>
 		</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	);
 
@@ -299,6 +307,10 @@ export default function SitemapPage() {
               className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"
             >
               <a className="text-cyan-300" href={l.href}>
+=======
+	)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {l.name}
               </a>
             </li>
@@ -307,6 +319,7 @@ export default function SitemapPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];
   return (
@@ -448,3 +461,5 @@ function SitemapPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

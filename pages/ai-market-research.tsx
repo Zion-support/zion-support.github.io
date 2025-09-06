@@ -1,5 +1,13 @@
 import Head from 'next/head';
+<<<<<<< HEAD
 
+=======
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AIMarketResearchPage() {
+  const service = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Phone
   Mail
@@ -190,6 +198,7 @@ if (return null) {
 
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
+<<<<<<< HEAD
     s.link.endsWith('/ai-market-research');
   );  if (!service) return null;
 
@@ -212,11 +221,25 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
   if (!service) return null,
+=======
+    s.link.endsWith('/ai-market-research')
+  );
+  if (!service) return null;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
         <link rel="canonical" href="https://ziontechgroup.com/ai-market-research" />
+=======
+<meta name='description' content={service.description} />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/ai-market-research'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -230,6 +253,7 @@ export default function AIMarketResearchPage() {
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
+<<<<<<< HEAD
 
 
 
@@ -244,3 +268,73 @@ export default function AIMarketResearchPage() {
 
 
 
+=======
+                  <li
+                    key={i}
+                    className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5'
+                  >
+                    <Check />
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className='bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit'>
+              <div className='flex items-end justify-between mb-3'>
+                <div>
+                  <div className='text-3xl font-bold text-white text-slate-400 text-base'>
+                    {service.price}
+                    <span>{service.period}</span>
+                  </div>
+                  <div className='text-slate-400'>
+                    {service.trialDays}-day free trial • Setup:{' '}
+                    {service.setupTime}
+                  </div>
+                </div>
+                <div className='flex items-center text-yellow-400 w-4 h-4 mr-1'>
+                  <Star />
+                  {service.rating.toFixed(1)}
+                </div>
+              </div>
+              <a
+                href='/contact'
+                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
+              >
+                Start a Research Sprint
+                <ArrowRight />
+              </a>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2 w-4 h-4 text-indigo-400'>
+                  <Phone />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'>
+                  <Mail />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
+                  <MapPin />
+                  <span>{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<div className="bg-indigo-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Understand Your Market</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Get comprehensive market insights with our AI-powered research and analysis platform.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover: bg-indigo-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

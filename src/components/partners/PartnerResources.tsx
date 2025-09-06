@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ResourceItem {;
   Card,
   CardContent,
@@ -16,6 +17,12 @@ import { Button } from '@/components / ui / button';
 } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';
 <<<<<<< HEAD
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
+import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Card
   CardContent
@@ -33,9 +40,12 @@ import { Button } from '@/components/ui/button'
   Link
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
+<<<<<<< HEAD
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface ResourceItem {
   id: string;
   title: string;
@@ -78,6 +88,7 @@ interface ResourceItem {
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
+<<<<<<< HEAD
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
@@ -159,6 +170,13 @@ export function PartnerResources() {
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      id: 'logo-pack';
+      title: 'Zion AI Logo Pack';
+      description: 'Official logos in various formats (PNG, SVG, JPG)',
+      type: 'image';
+      icon: <FileImage className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -414,6 +432,7 @@ export function PartnerResources() {;
       </Card>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -538,3 +557,9 @@ export function PartnerResources() {;
 
   )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

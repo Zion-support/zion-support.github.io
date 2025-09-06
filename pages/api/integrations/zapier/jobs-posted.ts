@@ -1,9 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  const { since } = req.query as { since?: string },
+  const state = null;
+  res.status(200).json({ events })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,7 +29,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     (e) => e.type === "zion.job.posted" && e.timestamp > sinceTs
   );
   res.status(200).json({ events });
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -98,3 +111,5 @@ function handler() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

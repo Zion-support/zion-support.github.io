@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,54 @@ marketAdvantage: 'First platform to combine content creation, optimization, and 
 };
 
 <<<<<<< HEAD
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface ComprehensiveMicroSaasService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  benefits: string[];
+  capabilities: string[];
+  marketAdvantage: string
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -828,6 +877,7 @@ capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
 }];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -844,3 +894,5 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

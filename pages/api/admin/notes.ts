@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -15,6 +16,11 @@ type Note = {
 <<<<<<< HEAD
 const notesStore: Note[] = []
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
+type Note = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   targetType: string;
   targetId: string;
@@ -23,6 +29,7 @@ const notesStore: Note[] = []
   createdAt: number;
 };
 
+<<<<<<< HEAD
 const notesStore: Note[] = [];
 
 
@@ -132,3 +139,40 @@ export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const isAdmin = req.headers['x-admin'] === 'true';
+  if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
+
+  if (req.method === 'GET') {
+    const { targetType, targetId } = req.query;
+    if (!targetType || Array.isArray(targetType))
+      return res.status(400).json({ error: 'Invalid targetType' });
+    if (!targetId || Array.isArray(targetId))
+      return res.status(400).json({ error: 'Invalid targetId' });
+    const notes = notesStore
+      .filter(n => n.targetType === targetType && n.targetId === targetId)
+      .sort((a, b) => b.createdAt - a.createdAt);
+    return res.status(200).json({ notes });
+  }
+
+  if (req.method === 'POST') {
+    const authorId = String(req.headers['x-admin-user'] || 'admin');
+    const { targetType, targetId, text } = req.body || {};
+    if (!targetType || !targetId || !text?.trim())
+      return res.status(400).json({ error: 'Missing fields' });
+    const note: Note = {
+      id: randomUUID(),
+      content: req.body.content || '',
+      createdAt: new Date().toISOString()
+    };
+    return res.status(200).json({ ok: true, note });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
+export function getAllNotes(): Note[] {
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

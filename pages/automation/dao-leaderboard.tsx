@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/dao-leaderboard.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -16,6 +17,9 @@ export default function DaoLeaderboardPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 25)
 
+=======
+  const items: any[] = (data?.items || []).slice(0, 25);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -29,6 +33,7 @@ export default function DaoLeaderboardPage() {
               </div>
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
+<<<<<<< HEAD
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -62,3 +67,11 @@ function DaoLeaderboardPage() {
       </div>;
 
 
+=======
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

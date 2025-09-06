@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
@@ -122,6 +123,9 @@ export default async function handler(req, res) {
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
+=======
+  if (scope;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const entityId = getEntityId(event);
@@ -154,10 +158,11 @@ export default async function handler(req, res) {
   writeState(currentState);
   const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string, string> = {}
-    const localBody = { ...event, propagate: false }
-    const baseSignature = require("../../../utils/sync/signature");
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+const baseSignature = require('../../../utils/sync/signature');
     const sig = baseSignature.signPayload(localBody);
+<<<<<<< HEAD
     if (sig) headers["x-zion-signature"] = sig;
 }
   } catch (error) {
@@ -276,3 +281,26 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
+=======
+    if (sig) headers['x-zion-signature'] = sig;
+
+    await Promise.all(
+      currentState.config.peers
+        .filter(p => !p.paused)
+        .map(async peer => {
+          const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+          try {
+            await axios.post(url, localBody, { headers, timeout: 5000 });
+          try {
+            await axios.post(url, localBody, { headers, timeout: 5000 })
+          } catch {
+            // ignore peer failure
+          }
+        })
+);
+  }
+
+  return res.status(200).json({ status: 'accepted', entityId });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

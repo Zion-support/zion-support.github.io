@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -39,3 +40,15 @@ function toSDL() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+function toSDL() {
+  return typedefs.join('\n');
+}
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "text/plain");
+  res.status(200).send(toSDL());
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

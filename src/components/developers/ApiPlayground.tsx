@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const options: RequestInit = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -52,12 +53,15 @@ if ( {) {
       } else {
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   name: string
 type: string
@@ -425,3 +429,6 @@ if (contentType?.includes ('application/json') ) {;
 =======
 export default ApiPlayground;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+interface Param {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

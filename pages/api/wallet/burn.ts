@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   try {
@@ -17,6 +18,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = feature
       ? burnForFeature(userId, feature, metadata)
       : burnTokens(userId, Math.floor(amount), reason || "burn", metadata),
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const { userId, amount, reason, feature, metadata } = req.body || {},
+  if (!userId) return res.status(400).json({ error: "userId required" });
+  try {
+    const tx = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })

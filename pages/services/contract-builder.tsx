@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
@@ -38,3 +39,11 @@ router.replace ('/automation / contract - builder');
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect() {
+  const router = null;
+  return null
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

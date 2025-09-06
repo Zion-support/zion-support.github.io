@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
@@ -163,6 +164,13 @@ export default function ContractBuilderPage(req, res) {
                 paymentSchedule  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+import React, { useEffect, useMemo, useState } from 'react',
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/router';
+type PaymentType = any;
+    URL.revokeObjectURL(url)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <div className="max-w-5xl mx-auto">
@@ -412,6 +420,7 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+<<<<<<< HEAD
 
   );
 };
@@ -434,3 +443,12 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+            {contract}
+          </article>
+        </div>
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

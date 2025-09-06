@@ -17,9 +17,18 @@ function handler() {
 }
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},
+  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
+  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
+  try {
+    const vendor = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -102,6 +111,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
+<<<<<<< HEAD
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor })
@@ -113,6 +123,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       name;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
+      caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
+    res.status(201).json({ vendor })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -191,6 +206,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -198,3 +214,5 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -8,14 +9,21 @@ const ResetPassword: NextPage = () => {
         <title>ResetPassword - Zion Tech Solutions</title>
         <meta name="description" content="ResetPassword page" />
       </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const ResetPassword: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <main>
         <h1>ResetPassword</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-  )
-}
+);
+};
+
 export default ResetPassword;
+<<<<<<< HEAD
 
 },
 export default ResetPassword,
@@ -43,3 +51,5 @@ export default ResetPassword;
 ;
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

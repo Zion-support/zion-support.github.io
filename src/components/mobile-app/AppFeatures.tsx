@@ -1,8 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+=======
+
+import React from "react";
+import { Brain, Clock, Award, Zap } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+const features = null;
+}
+const features = [
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,
     title: "1-Click Hiring",
@@ -167,6 +177,7 @@ export const AppFeatures: React.FC = () => {;
 };
 
 "
+<<<<<<< HEAD
 
 
     <section className="py - 16 bg - zion - blue">;
@@ -223,3 +234,5 @@ export const AppFeatures: React.FC = () => {";
 =======
 ";
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

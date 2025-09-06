@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -7,6 +8,10 @@
 				"Playbooks for incident response and customer recovery"
 				"Compliance logging and role-based access"
 
+=======
+import React from 'react';
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
@@ -40,6 +45,7 @@
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations";
 		/>;
 	);
@@ -47,4 +53,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,11 @@ import Head from 'next/head';
 
 export default function Page() {
 
+=======
+import Head from 'next/head';
+export default function Page(){
+export default function Page() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -47,6 +53,7 @@ export default function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
   );  return (
   return (
     </div>;
@@ -215,3 +222,6 @@ function Page() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -103,6 +103,7 @@ origin/automation-improvements-final
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
 ursor/integrate-build-improve-and-re-verify-8f7d
     // Log the error to console or error reporting service
@@ -165,6 +166,11 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+       
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }

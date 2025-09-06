@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -200,10 +201,19 @@ const benefits = [;
   },];
 
 export default function CybersecurityServices() {;
+=======
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+const contactInfo = null;
+              we provide comprehensive protection that adapts to evolving threats.
+export default function CybersecurityServices() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
-        <title>
+<title>
           Cybersecurity Services - Zion Tech Group | Next-Generation Security
           Solutions
         </title>
@@ -259,10 +269,16 @@ export default function CybersecurityServices() {;
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
-        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
+
+        <div className='relative z-10 container mx-auto px-4 text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+className='max-w-4xl mx-auto'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400" />
@@ -277,9 +293,16 @@ export default function CybersecurityServices() {;
               <br />
               <span className="text-white">Cybersecurity</span>
             </h1>
+<<<<<<< HEAD
 
 
 
+=======
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Protect your business with cutting-edge cybersecurity solutions.
+              From zero trust security to AI threat intelligence, we provide
+              comprehensive protection that adapts to evolving threats.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -301,16 +324,27 @@ export default function CybersecurityServices() {;
                 </button>
               </Link>
                   <span>Get Protected</span>
+<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+=======
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
               </Link>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
         {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>;
           <div className='w-4 h-4 bg-red-400 rounded-full'></div>;
         </div>;
+=======
+{/* Floating Elements */}
+        <div className='absolute top-20 left-10 opacity-20 animate-float'>
+          <div className='w-4 h-4 bg-red-400 rounded-full'></div>
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div
           className='absolute top-40 right-20 opacity-30 animate-float'
           style={{ animationDelay: '1s' }}>;
@@ -318,6 +352,7 @@ export default function CybersecurityServices() {;
         </div>;
         <div
           className='absolute bottom-40 left-20 opacity-25 animate-float'
+<<<<<<< HEAD
 
 
         </div>
@@ -326,18 +361,25 @@ export default function CybersecurityServices() {;
         </div>
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+=======
+          style={{ animationDelay: '2s' }}
+        >
+          <div className='w-3 h-3 bg-purple-400 rounded-full'></div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Service Highlights */}
-      <section
+<section
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
-        <div className='container mx-auto px-4'>          <motion.div
+        <div className='container mx-auto px-4'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
       {/* Service Highlights */  } catch (error) {
     console.error("Error:", error);
@@ -346,11 +388,71 @@ export default function CybersecurityServices() {;
 }
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
+=======
+className='text-center mb-16'
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Cybersecurity{' '}
+              <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>
+                Services
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Comprehensive security solutions that protect your digital assets
+              and ensure business continuity
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {serviceHighlights.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
+              >
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <service.icon className='w-full h-full text-white' />
+                </div>
+                <h3 className='text-2xl font-bold text-white mb-4'>
+                  {service.title}
+                </h3>
+                <p className='text-gray-300 mb-6 leading-relaxed'>
+                  {service.description}
+                </p>
+                <ul className='space-y-2'>
+                  {service.features.map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'
+                    >
+                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Detailed Services */}
+<section className='py-20 bg-black'>
+        <div className='container mx-auto px-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
@@ -431,6 +533,12 @@ export default function CybersecurityServices() {;
               designed for modern enterprises
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {advancedCybersecurityServices2025.map((service, index) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
               <motion.div
 
@@ -446,6 +554,10 @@ export default function CybersecurityServices() {;
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+className='animated-border'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -457,6 +569,7 @@ export default function CybersecurityServices() {;
                       </div>
                     </div>
                     {service.popular && (
+<<<<<<< HEAD
                       <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     )  } catch (error) {
     console.error("Error:", error);
@@ -467,6 +580,22 @@ export default function CybersecurityServices() {;
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-red-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+=======
+                      <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
+                        Popular
+                      </span>
+                    )}
+                  </div>
+<p className='text-gray-300 mb-4 leading-relaxed'>
+                    {service.description}
+                  </p>
+                  <div className='flex items-center justify-between mb-4'>
+                    <div className='text-2xl font-bold text-red-400'>
+                      {service.price}
+                      <span className='text-gray-400 text-lg'>
+                        {service.period}
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
@@ -496,8 +625,12 @@ export default function CybersecurityServices() {;
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+<<<<<<< HEAD
                     >                      Get Protected
                     <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+=======
+                    >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       Get Protected
                     </Link>
                   </div>
@@ -514,6 +647,7 @@ export default function CybersecurityServices() {;
       </section>;
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
 
@@ -523,12 +657,21 @@ export default function CybersecurityServices() {;
         <div className="container mx-auto px-4">
           <motion.div
 
+=======
+<section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
@@ -537,6 +680,12 @@ export default function CybersecurityServices() {;
               Advanced protection that keeps your business safe and compliant
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {benefits.map((benefit, index) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
 
@@ -556,10 +705,15 @@ export default function CybersecurityServices() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+className='text-center group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
@@ -570,12 +724,33 @@ export default function CybersecurityServices() {;
         <div className="container mx-auto px-4 text-center">
           <motion.div
 
+=======
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  {benefit.title}
+                </h3>
+                <p className='text-gray-300 leading-relaxed'>
+                  {benefit.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+<section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>
+        <div className='container mx-auto px-4 text-center'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
+=======
+className='max-w-4xl mx-auto'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
@@ -611,8 +786,13 @@ export default function CybersecurityServices() {;
                 <div className="text-gray-300">Threat Detection</div>
               </div>
               <div>
+<<<<<<< HEAD
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
+=======
+                <div className='text-3xl font-bold text-red-400 mb-2'>450%</div>
+                <div className='text-gray-300'>ROI Improvement</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
@@ -623,6 +803,7 @@ export default function CybersecurityServices() {;
 
 }
     </Layout>
+<<<<<<< HEAD
   )
             className="max-w-4xl mx-auto";
           >;
@@ -695,3 +876,6 @@ export default function CybersecurityServices() {;
       </section>;
 
 
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

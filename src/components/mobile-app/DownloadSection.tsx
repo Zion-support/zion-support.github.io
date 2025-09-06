@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
@@ -12,8 +15,18 @@ appStoreUrl = {appStoreUrl,}
 <<<<<<< HEAD
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
+<<<<<<< HEAD
 import { AppStoreButtons } from "./AppStoreButtons",
 import { logInfo } from '@/utils/productionLogger',
+=======
+import { AppStoreButtons } from "./AppStoreButtons";
+import { logInfo } from '@/utils/productionLogger';
+export const DownloadSection: React.FC;
+}
+import React from "react"
+import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
+import { logInfo } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -119,6 +132,7 @@ export const DownloadSection: React.FC = () => {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
               />;
 
@@ -162,3 +176,6 @@ export const DownloadSection: React.FC = () => {;
 
   )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

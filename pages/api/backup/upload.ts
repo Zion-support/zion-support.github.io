@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Web3Storage, File } from 'web3.storage',;
 ;
@@ -18,6 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const files = [new File([JSON.stringify(data, null, 2)], 'profile.json', { type: 'application/json' })]
     const cid = await client.put(files, { wrapWithDirectory: false })
 
+=======
+import { Web3Storage, File } from '[^']*';
+
+const TOKEN = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ cid })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Backup failed' })

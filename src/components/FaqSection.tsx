@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -140,6 +141,21 @@ export default FaqSection;
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+
+import { GradientHeading } from "./GradientHeading";
+import {
+  Accordion;
+  AccordionContent;
+  AccordionItem;
+  AccordionTrigger} from "@/components/ui/accordion",
+import { GradientHeading } from './GradientHeading'
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from '@/components/ui/accordion'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -184,6 +200,7 @@ const faqs = [
   }
 ]
 export function FaqSection() {
+<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
   Accordion,;
   AccordionContent,;
@@ -401,6 +418,19 @@ const faqs = [
     answer:
 
 
+=======
+  return (
+    <section className='py-20 bg-zion-blue' id='faq'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='text-center mb-12'>
+          <GradientHeading>Frequently Asked Questions</GradientHeading>
+          <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>
+            Find answers to common questions about AI product listings, IT
+            equipment rentals, and datacenter maintenance services
+          </p>
+        </div>
+                <AccordionContent className='text-zion-slate-light'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function FaqSection() {
   return (
 
@@ -485,6 +515,7 @@ function FaqSection() {
 
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",;
 import {;
@@ -573,3 +604,15 @@ export default FaqSection;
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

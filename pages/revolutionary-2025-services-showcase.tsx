@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -859,6 +860,24 @@ const serviceCategories = [
                   onClick={() => {
                     setSearchTerm('')
 
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Star, Users, TrendingUp;
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Brain, Rocket, Dna, Globe, Shield, Wifi;
+  Package, Bot, Car, Building2, Monitor, Cpu;
+  Zap, Atom, Database, Cloud, Lock, Code;
+  Phone, Mail, MapPin, ExternalLink, ChevronDown;
+  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
+ } from 'lucide-react';
+// Import the new revolutionary services
+import { revolutionary2025Services  } from '../data/revolutionary-2025-innovative-services';
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+const allServices = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     setSelectedCategory('all')
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
@@ -938,6 +957,7 @@ const serviceCategories = [
         </section>
       </div>
     </>
+<<<<<<< HEAD
 
 }
 
@@ -998,3 +1018,7 @@ const serviceCategories = [
 }
 
 
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

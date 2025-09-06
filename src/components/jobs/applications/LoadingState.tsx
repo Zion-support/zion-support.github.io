@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function LoadingState() {;
   return (
@@ -59,3 +60,10 @@ export function LoadingState() {
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { Loader2 } from 'lucide-react';
+
+export function LoadingState() {
+  return (
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
