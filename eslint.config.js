@@ -1,14 +1,20 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-<<<<<<< HEAD
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import typescript from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
 export default [
-  js.configs.recommended,
+  ...compat.extends('next/core-web-vitals'),
   {
     ignores: [
       'node_modules/**',
@@ -76,11 +82,100 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js'
+      '*.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'tests.disabled/**',
+      'tools/**',
+      'utils/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
+      'recovered-branches/**',
+      'services-broken.tsx',
+      'services/**',
+      'setupTests.ts',
+      'solutions.disabled/**',
+      'src.broken/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'vite.config-backup.ts',
+      'vite.config.ts',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_backup/**',
+      'pages_backup_before_cleanup/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'pages_minimal/**',
+      'playwright.config.ts',
+      'pm2-automation/**',
+      'providers/**',
+      'public/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled.full/**',
+      'pages.disabled_auto/**',
+      'out/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'components/**',
+      'content-hub.tsx',
+      'contracts.disabled/**',
+      'cypress.config.ts',
+      'cypress/**',
+      'dao/**',
+      'data.disabled/**',
+      'data/**',
+      'deployments/**',
+      'fix_typescript_syntax_errors.jsx',
+      'fix_utils_files.ts',
+      'hooks.disabled/**',
+      'hooks/**',
+      'jest.config.jsx',
+      'jest.config.ts',
+      'jest.setup.jsx',
+      'lib.broken/**',
+      'lib.disabled/**',
+      'lib/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'middleware.security.ts',
+      'middleware/**',
+      'netlify/**',
+      'next-env.d.ts',
+      '.next/**',
+      'App.smoke.test.tsx',
+      'App.test.ts',
+      'App.test.tsx',
+      'App.tsx',
+      'AppMinimal.test.tsx',
+      'ai-optimization-backups/**',
+      'api-documentation.tsx',
+      'api.disabled.temp/**',
+      'api.tsx',
+      'apps.backup/**',
+      'apps/**',
+      'automation.tsx',
+      'automation_backup/**',
+      'blockchain-solutions.tsx',
+      'blog/**',
+      'browserstack.config.ts',
+      'case-studies.tsx',
+      'component-library.tsx',
+      'components.disabled_full/**'
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -96,27 +191,7 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
-      parser: tsparser,
-=======
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...compat.extends('next/core-web-vitals'),
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
       parser: typescriptParser,
->>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -127,9 +202,9 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-<<<<<<< HEAD
-      'react': react,
+      react,
       'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -145,6 +220,8 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
     settings: {
       react: {
@@ -171,19 +248,4 @@ export default [
       'no-console': 'off',
     },
   },
-=======
-      react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-  },
->>>>>>> main
 ];
