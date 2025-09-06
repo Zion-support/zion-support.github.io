@@ -1,54 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
 import React, { Component, ReactNode } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
 
 interface Props {
   children: ReactNode;
 }
 
-=======
 interface Props {
   children: ReactNode;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-    console.error('Error caught by boundary:', error, errorInfo);
-=======
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
     this.setState({
       error,
       errorInfo
     });
   }
 
-=======
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -56,7 +32,6 @@ class ErrorBoundary extends Component<Props, State> {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
       return (
@@ -99,13 +74,10 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
->>>>>>> origin/fix-website-loading-errors-final
         </div>
       );
     }
 
-<<<<<<< HEAD
-=======
 export default ErrorBoundary
     return { hasError: true, error };
   };
@@ -174,4 +146,3 @@ export { ErrorBoundary };
   }
 }
 export default ErrorBoundary;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

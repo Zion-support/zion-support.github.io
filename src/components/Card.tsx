@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 interface CardProps {
   children: React.ReactNode;
+<<<<<<< HEAD
   title?: string;
   description?: string;
   className?: string;
@@ -37,3 +38,15 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
+=======
+  className?: string;
+}
+
+export default function Card({ children, className = '' }: CardProps) {
+  return (
+    <motion.div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+      {children}
+    </motion.div>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
