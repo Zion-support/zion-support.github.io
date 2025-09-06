@@ -1,32 +1,50 @@
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 
 
+<<<<<<< HEAD
+=======
 
 export function securityMiddleware(request) {;
 
 
   const response = NextResponse.next();
+export function securityMiddleware(request) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export function securityMiddleware(request) {;
+  const response = NextResponse.next();
+<<<<<<< HEAD
 =======
   const response = NextResponse && NextResponse.next();
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
+<<<<<<< HEAD
 
   if (request && request.nextUrl.protocol === 'https:') {
     response && response.headers.set(
@@ -47,29 +65,62 @@ export function securityHeaders(req, res, next) {
 =======
 
 =======
-
-
-
-
-
 =======
+  if (request && request.nextUrl.protocol === 'https:') {
+    response && response.headers.set(
+      'Strict-Transport-Security',
+      'max-age=31536000; includeSubDomains; preload'
+    );
+  }
+  
+  return response;
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  return response;// Security headers middleware
+// Security headers middleware
+export function securityHeaders(req, res, next) {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+<<<<<<< HEAD
 
 
 
+=======
+  Object.entries({
+    'X-Content-Type-Options': 'nosniff'
+    'X-Frame-Options': 'DENY'
+    'X-XSS-Protection': '1; mode=block'
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',;
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
@@ -77,6 +128,7 @@ export function securityHeaders(req, res, next) {
   next();
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -135,3 +187,18 @@ function security_headers() {
   next ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+}
+}
+origin/main
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

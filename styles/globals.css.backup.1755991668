@@ -192,6 +192,14 @@ h3 {
 =======
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
@@ -206,6 +214,13 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 /* Enhanced futuristic effects */
 .neon-glow {
   text-shadow: 
@@ -517,7 +532,14 @@ a:hover {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .btn-futuristic::before {
+=======
+<<<<<<< HEAD
+.btn-futuristic::before {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 .particles-bg::before {
   content: '';
@@ -794,6 +816,15 @@ a:hover {
 .button::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   content: '';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -820,6 +851,13 @@ a:hover {
 .btn-futuristic::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   position: absolute;
   top: 0;
   left: -100%;
@@ -827,6 +865,21 @@ a:hover {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  transition: left 0.5s ease;
+
+}
+  transition: left 0.5s ease;}
+
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -859,12 +912,27 @@ a:hover {
   transition: left 0.5s ease;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 .button:hover::before {
   left: 100%;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -883,6 +951,13 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 .btn-futuristic:hover {
   transform: translateY(-2px);
   box-shadow: 
@@ -976,6 +1051,15 @@ a:hover {
 @media (max-width: 768px) {
   .particles {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -984,6 +1068,13 @@ a:hover {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     display: none;
 =======
 .button:hover {
@@ -1045,6 +1136,13 @@ a:hover {
   .card {
     @apply p-4;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   
   .button {
@@ -1066,6 +1164,15 @@ a:hover {
     animation: none !important;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

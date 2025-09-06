@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 
 
+=======
+import React from 'react';
+
+
+import React from 'react',
+import React from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -13,13 +21,23 @@ export default function TechnologyInsightsPage() {
       title: 'Quantum Computing in 2025'
       description:
 
+<<<<<<< HEAD
 
+=======
+        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
+      readTime: '15 min read'
+      featured: true
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -118,6 +136,7 @@ export default function TechnologyInsightsPage() {
       category: 'Business'
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     },  ];      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -138,6 +157,70 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+=======
+    }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>
+          Technology Insights | Zion Tech Group - Research & Innovation
+        </title>
+        <meta
+          name='description'
+          content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies."
+        />
+        <meta
+          property='og:title'
+          content='Technology Insights | Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Research insights, technology trends, and thought leadership in AI and automation.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <section className='text-center mb-16'>
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
+              Technology Insights
+            </h1>
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
+              Research insights, technology trends, and thought leadership in
+              AI, automation, and emerging technologies
+            </p>
+          </section>
+          <section className='mx-auto max-w-7xl'>
+            {/* Technology Trends */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
+                Latest Technology Trends
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                {technologyTrends.map((trend, index) => (
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
+                  >
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full'>
+                        {trend.category}
+                      </span>
+                      <span className='text-white/60 text-sm'>
+                        {trend.readTime}
+                      </span>
+                    </div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
+                      {trend.title}
+                    </h3>
+                    <p className='text-white/70 mb-4'>{trend.description}</p>
+                    <Link
+                      href={`/blog/${trend.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     
     return this.props.children;
   }
@@ -161,7 +244,6 @@ import React from 'react';
               Technology Insights;
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-=======
         <meta;
           name='description';
           content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.";
@@ -190,11 +272,49 @@ import React from 'react';
           </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                      Read More <span className='ml-1'>→</span>                    </Link>      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Technology Insights
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
+            </p>
+          </section>
+          <section className="mx-auto max-w-7xl">
+            {/* Technology Trends */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {technologyTrends.map((trend, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
+                      <span className="text-white/60 text-sm">{trend.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
+                    <p className="text-white/70 mb-4">{trend.description}</p>
+                    <Link
+                      href={`/blog/${trend.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Read More <span className="ml-1">→</span>
+                    </Link>
+                      Read More <span className='ml-1'>→</span>                    </Link>
+
+                    </Link>
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 
 
                       href={`/blog/${trend && trend.id}`}
@@ -237,6 +357,14 @@ import React from 'react';
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Research Areas */}
+=======
+
+                      href={`/blog/${trend && trend.id}`}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {researchAreas.map((area, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
             {/* Research Areas */}
@@ -245,12 +373,18 @@ import React from 'react';
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
+=======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {researchAreas.map((area, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+                {researchAreas.map((area, index) => (
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -263,6 +397,7 @@ import React from 'react';
                       {area && area.focus.map((focus, focusIndex) => (;
                         <li
                           key={focusIndex}
+<<<<<<< HEAD
                           className='text-sm text-white/60 flex items-center'>;
                           <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas && researchAreas.map((area, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
@@ -275,10 +410,18 @@ import React from 'react';
                           <span className="text-cyan-400 mr-2">•</span>;
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {researchAreas.map((area, index) => (
+<<<<<<< HEAD
+=======
+                          className='text-sm text-white/60 flex items-center'
+                        >
+                          <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas.map((area, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="text-4xl mb-4">{area.icon}</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
@@ -288,13 +431,17 @@ import React from 'react';
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           {focus}
                         </li>;
                       ))}
                     </ul>;
                   </div>;
                 ))}
+<<<<<<< HEAD
 
               </div>;
             </div>;
@@ -302,6 +449,10 @@ import React from 'react';
 
             {/* Whitepapers */}
 
+=======
+              </div>
+            </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             {/* Whitepapers */}
             <div className='mb-16'>
@@ -309,12 +460,18 @@ import React from 'react';
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
+=======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {whitepapers.map((paper, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+                {whitepapers.map((paper, index) => (
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -331,12 +488,22 @@ import React from 'react';
                     </h3>;
                     <p className='text-white/70 mb-4'>{paper && paper.description}</p>;
                     <Link
+<<<<<<< HEAD
+=======
+                      href={paper.downloadUrl}
+                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
+                    >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Research Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {whitepapers.map((paper, index) => (
 
+<<<<<<< HEAD
+=======
+                      Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -350,32 +517,53 @@ import React from 'react';
                     >
                       Download PDF <span className="ml-1">→</span>
                     </Link>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+
+            {/* Innovation Lab */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
+                Innovation Lab
+              </h2>
+              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Innovation Lab */}
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -388,6 +576,7 @@ import React from 'react';
                       state of the art.
                     </p>
                     <ul className='space-y-2 text-white/70'>                      <li>• Advanced AI research and development</li>                  <div>
+<<<<<<< HEAD
 =======
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Innovation Lab</h2>
@@ -395,6 +584,8 @@ import React from 'react';
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
@@ -407,15 +598,22 @@ import React from 'react';
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
+<<<<<<< HEAD
 
                   <div className="text-center">
 
+=======
+                  <div className='text-center'>
+                    <div className='text-6xl mb-4'>🧪</div>
+                    <p className='text-white/60 text-sm'>Innovation Lab</p>                  </div>                  <div className="text-center">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <div className="text-6xl mb-4">🧪</div>
                     <p className="text-white/60 text-sm">Innovation Lab</p>
                   </div>
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 =======
                       href={paper && paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'>;
@@ -636,18 +834,51 @@ import React from 'react';
                     </ul>;
                   </div>;
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div className='text - center'>;
                     <div className='text - 6xl mb - 4'>🧪</div>;
                     <p className='text - white / 60 text - sm'>Innovation Lab</p>                  </div>                  <div className="text - center">;
                     <div className="text - 6xl mb - 4">🧪</div>;
                     <p className="text - white / 60 text - sm">Innovation Lab</p>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
 
+=======
+            <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-white">Join the Innovation Journey</h2>
+              <p className="text-xl text-white/80 mb-6">
+                Stay updated with the latest technology insights and research from Zion Tech Group
+              </p>
+            {/* Call to Action */}
+            <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
+              <h2 className='text-3xl font-bold mb-4 text-white'>
+                Join the Innovation Journey
+              </h2>
+              <p className='text-xl text-white/80 mb-6'>
+                Stay updated with the latest technology insights and research
+                from Zion Tech Group
+              </p>
+              <div className='flex flex-wrap justify-center gap-4'>
+                <Link
+                  href='/contact'
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
+                >
+                  Get in Touch
+                </Link>
+                <Link
+                  href='/blog'
+                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -667,6 +898,7 @@ import React from 'react';
         </main>
       </div>
     </>
+<<<<<<< HEAD
 
                   Read Our Blog;
                 </Link>;
@@ -677,6 +909,9 @@ import React from 'react';
       </div>;
 
 
+=======
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -686,4 +921,13 @@ import React from 'react';
 =======
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+);
+  );
+}
+}
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

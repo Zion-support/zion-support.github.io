@@ -1,3 +1,76 @@
+<<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
+interface AIEnhancementButtonProps {
+  currentContent: string
+  enhancementType:
+    | 'summary'
+    | 'work-description'
+    | 'skill-categorization'
+    | 'general'
+  context?: string
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+
+
+export function AIEnhancementButton({
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
+interface AIEnhancementButtonProps {
+  currentContent: string
+  enhancementType:
+    | 'summary'
+    | 'work-description'
+    | 'skill-categorization'
+    | 'general'
+  context?: string
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+interface AIEnhancementButtonProps {
+  currentContent: string;
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
+  context?: string;
+  onEnhanced: (enhancedContent: string) => void;
+  buttonText?: string;
+  className?: string
+export function AIEnhancementButton({
+
+  currentContent
+  enhancementType
+  context
+  onEnhanced
+  buttonText = 'Enhance with AI'
+  className
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent |currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
+interface AIEnhancementButtonProps {;
+  currentContent: string,;
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',;
+  context?: string,;
+  onEnhanced: (enhancedContent: string) => void,;
+  buttonText?: string,;
+  className?: string;
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -6,9 +79,36 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
 
 
 
+=======
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+      return;
+    }
+
+    setError(null)
+    const enhancedContent = await enhanceContent(
+      currentContent,
+      enhancementType,
+      context
+    )
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  }
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing'),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return
     }
     setError(null)
@@ -47,7 +147,53 @@ export function AIEnhancementButton(): any ({;
       return;
     }
 
+<<<<<<< HEAD
 
+=======
+    }
+  }
+
+  },
+  
+  return (
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+        <Sparkles className='h-3 w-3' />;
+      )};
+      <span className='text-xs'>{buttonText}</span>;
+    </Button>;
+  );      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
@@ -73,6 +219,7 @@ function AIEnhancementButton() {
 if (.length < 10) {) {
   $2
 }
+<<<<<<< HEAD
       set_error ('Please enter at least some basic content before enhancing');
       return;
     }
@@ -87,6 +234,12 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
+=======
+;
+}
+      on_enhanced (enhanced_content);
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 
 
@@ -143,4 +296,13 @@ if ( {) {
 }
 ;
 
+<<<<<<< HEAD
 ;
+=======
+  )
+}
+;
+;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

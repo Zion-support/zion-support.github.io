@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,18 +32,45 @@ import React from 'react';
 import type { GetServerSideProps } from 'next';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react';
+import type { GetServerSideProps } from 'next';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import path from 'path';
 import fs from 'fs';
 
 
+<<<<<<< HEAD
+=======
+import path from 'path';
+import fs from 'fs';
+import DocsLayout from '../../../components / docs / DocsLayout';
+import CodeBlock from '../../../components / docs / CodeBlock';
+;
+import React from 'react',
+import type { GetServerSideProps } from 'next',
+import React from 'react';
+import type { GetServerSideProps } from 'next';
+import path from 'path';
+import fs from 'fs';
+import DocsLayout from '../../../components/docs/DocsLayout';
+import CodeBlock from '../../../components/docs/CodeBlock';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string;
   title: string;
   html?: string;
   code?: { language?: string; content: string }[];
+<<<<<<< HEAD
 
 }
 ;
 
+=======
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 type DocsContent = {
   title: string;
   sections: Section[];
@@ -69,7 +97,10 @@ export default function ApiDocsPage({ docs }: PageProps) {
         <section key={section.id} id={section.id} className='scroll-mt-24'>
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 type DocsContent = {;
@@ -79,6 +110,7 @@ type DocsContent = {;
 
 type PageProps = {;
   docs: DocsContent;
+<<<<<<< HEAD
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
@@ -115,6 +147,8 @@ export default function ApiDocsPage(): any ({ docs }: PageProps) {;
                 <CodeBlock key={idx} language={c && c.language}>{c && c.content}</CodeBlock>;
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export type Section = {
   id: string,
   title: string,
@@ -133,9 +167,23 @@ type PageProps = {
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const contentPath = path.join(process.cwd(), 'datadocscontent.json');
+<<<<<<< HEAD
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
   return { props: { docs } }
+=======
+}
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+  const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
+  const raw = fs.readFileSync(contentPath, 'utf8');
+  const docs = JSON.parse(raw) as DocsContent;
+  return { props: { docs } }
+}
+  return { props: { docs } };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 export default function ApiDocsPage({ docs }: PageProps) {
@@ -149,33 +197,53 @@ export default function ApiDocsPage({ docs }: PageProps) {
           )}
           {section.code && section.code.length > 0 && (
 
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+<div className="space-y-4 mt-4">
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               ))}
             </div>;
           )}
         </section>;
       ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </DocsLayout>;
   );
-=======
 
   );
 
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </DocsLayout>
   );
 }
 
+<<<<<<< HEAD
+=======
+    </DocsLayout>
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 type PageProps = {
   docs: DocsContent;
@@ -215,9 +283,36 @@ function ApiDocsPage() {
             </div>)}
         </section>))}
     </DocsLayout>);
+<<<<<<< HEAD
 }
 
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <div className='space-y-4 mt-4'>
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>
+                  {c.content}
+                </CodeBlock>              ))}            <div className="space-y-4 mt-4">
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
+
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+    </DocsLayout>
+
+);
+  );
+}
+    </DocsLayout>;
+);
+}
+    </DocsLayout>
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

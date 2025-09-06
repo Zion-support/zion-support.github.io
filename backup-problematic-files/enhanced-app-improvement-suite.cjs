@@ -8,6 +8,17 @@ const path = require('path')
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -506,6 +517,10 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced App Improvement Suite...')
   log(message, level = 'INFO')
@@ -578,6 +593,8 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       console.error(' Error in improvement "suite")
 =======
 <<<<<<< HEAD
@@ -597,3 +614,7 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

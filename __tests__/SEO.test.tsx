@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -60,3 +61,15 @@ describe('SEO', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import SEO from "../components/SEO";
+describe("SEO", () => {
+  test("renders without crashing", () => {
+    render(<SEO />);
+    expect(screen.getByTestId("seo")).toBeInTheDocument();
+  });
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

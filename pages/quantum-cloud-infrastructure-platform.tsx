@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,10 +23,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+import React from 'react',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
+<<<<<<< HEAD
   return (
     <>;
       <Head>;
@@ -68,6 +73,8 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
 		<>
@@ -97,8 +104,11 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
@@ -106,6 +116,7 @@ export default /**
  * QuantumCloudInfrastructurePlatformPage - Function description
  */
 function QuantumCloudInfrastructurePlatformPage() {
+<<<<<<< HEAD
   return (
     <>;
       <Head>;
@@ -151,3 +162,70 @@ function QuantumCloudInfrastructurePlatformPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+			/>
+		</>
+	)
+}
+
+        canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
+      />
+    </>;
+  );
+
+}
+import React from 'react',
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
+export default function QuantumCloudInfrastructurePlatformPage() {
+	return (
+		<>
+			<Head>
+				<title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>
+				<meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
+				<link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure-platform" />
+			</Head>
+			<ServiceLanding
+				title="Quantum Cloud Infrastructure Platform"
+				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations."
+				subtitle="Next-gen compute for critical workloads"
+				pricePerMonthUSD={28999  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				implementationWeeks="1-2 weeks"
+				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost"
+				features={[
+					"Managed quantum accelerators",
+					"Zero-trust and quantum-safe security",
+					"Observability and SLOs",
+					"Automated cost controls",
+					"Cross-region DR and backup",
+					"Compliance and audit kits"
+				]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
+			/>
+		</>
+	)
+				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform";
+			/>;
+		</>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

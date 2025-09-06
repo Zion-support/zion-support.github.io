@@ -1,18 +1,43 @@
 
 
+<<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   roles: DevRole[];
   user_id?: string;
 }
+<<<<<<< HEAD
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
+=======
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+export function getGitStatus(): { connected: boolean; branch?: string } {
+  try {
+    const gitDir = path.join(process.cwd(), '.git');
+    if (!fs.existsSync(gitDir)) return { connected: false }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
       .trim();
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function getGitStatus (): { connected: boolean; branch?: string } {
   try {
     const git_dir = path.join (process.cwd (), '.git');
@@ -24,10 +49,16 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     });
       .to_string ();
       .trim ();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { connected: true, branch }
   } catch {
     return { connected: false }
+=======
+    return { connected: true, branch }
+  } catch {
+    return { connected: false };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
 
@@ -41,12 +72,32 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
+<<<<<<< HEAD
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
   }
   return { isAuthenticated: false, roles: [] }
 }
 =======
+=======
+    return { connected: true, branch }
+  } catch {
+    return { connected: false }
+  }
+}
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+  // TODO: integrate real auth; for now, check a header and env var for dev
+  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
+  const adminToken = process.env.ADMIN_TOKEN;
+  if (token && adminToken && token === adminToken) {
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -57,12 +108,17 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
   allowed: DevRole[]
-): DevIdentity | undefined {
+): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
   if (!identity && identity.isAuthenticated) {
     res && res.status(401).json({ error: 'Unauthorized' });
@@ -76,7 +132,6 @@ export function requireRoles(
   return identity;
 
 }
-=======
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -211,7 +266,6 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -246,10 +300,12 @@ if ( {) {
   }
   return identity;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

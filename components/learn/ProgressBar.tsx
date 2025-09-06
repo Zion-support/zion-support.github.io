@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const pct = Math.max(0, Math.min(100, value));
 
@@ -31,6 +34,7 @@ import React from 'react';
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
 
+<<<<<<< HEAD
 type ProgressBarProps = { value: number };
 
 export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
@@ -49,6 +53,33 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
 }
 
 =======
+=======
+type ProgressBarProps = { value: number },
+import React from 'react';
+
+type ProgressBarProps = { value: number }
+type ProgressBarProps = { value: number };
+
+type ProgressBarProps = { value: number };
+
+export default function ProgressBar({ value }: ProgressBarProps) {
+export default function ProgressBar({ value }: ProgressBarProps) {;
+  const pct = Math.max(0, Math.min(100, value));
+  return (
+    <div className='w-full h-3 bg-gray-200 dark:bg-gray-800 rounded'>
+      <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` }} />
+    </div>
+  );export default function ProgressBar({ value }: ProgressBarProps) {;
+  );export default function ProgressBar({ value }: ProgressBarProps) {
+  const pct = Math.max(0, Math.min(100, value));
+
+  return (
+    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
+      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
+    </div>
+);
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 type ProgressBarProps = { value: number }
 ;
@@ -70,14 +101,23 @@ function ProgressBar() {
       <div className="h - 3 bg - blue - 600 rounded" style={{ width: `${pct}%` }} />;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
 
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  );
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

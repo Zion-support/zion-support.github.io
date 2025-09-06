@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SearchResult {
 =======
 
@@ -14,13 +20,19 @@ interface SearchResult {;
   url: string;
   category: string;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -47,7 +59,10 @@ const search_data: SearchResult[] = [;
     url: "/cloud - solutions",
     category: "Services",
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -55,7 +70,10 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
@@ -106,7 +124,10 @@ const search_data: SearchResult[] = [;
     category: "Industries",
   },
   // Company;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -139,6 +160,7 @@ const search_data: SearchResult[] = [;
   }
 ];
 
+<<<<<<< HEAD
 
 interface SearchModalProps {;
   isOpen: boolean;
@@ -263,11 +285,22 @@ const searchData: SearchResult[] = [;
   },;
 ];
 
+=======
+  useEffect(() => {;
+    if (isOpen && inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
 
 
   useEffect(() => {;
@@ -276,6 +309,13 @@ const searchData: SearchResult[] = [;
     }
   }, [isOpen]);
 
+=======
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     // Load recent searches from localStorage;
     const saved = localStorage && localStorage.getItem("recent-searches");
@@ -291,7 +331,10 @@ const searchData: SearchResult[] = [;
           item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       );
       setResults(filtered);
     } else {;
@@ -345,11 +388,16 @@ if ( {) {
     }
     setSelectedIndex (0);
   }, [query]);
+<<<<<<< HEAD
 
 
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
 
+=======
+  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
+    if (e && e.key === "Escape") {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -360,7 +408,10 @@ if ( {) {
     } else if (e && e.key === "Enter" && results[selectedIndex]) {;
       handleResultClick(results[selectedIndex]);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   const handleResultClick = (result: SearchResult) => {;
@@ -376,7 +427,10 @@ if ( {) {
     window && window.location.href = result && result.url;
   };
   const handleRecentClick = (search: string) => {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -387,10 +441,14 @@ if ( {) {
         <div
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
+<<<<<<< HEAD
 
         />;
 
 
+=======
+        />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -407,13 +465,19 @@ if ( {) {
             />;
             <button
               onClick={onClose}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               className="ml-3 p-1 hover:bg-gray-100 rounded">;
               <X className="w-5 h-5" />;
             </button>;
           </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -513,8 +577,11 @@ if (return null) {
                           ? "bg - blue - 50 border border - blue - 200";
                           : "hover:bg - gray - 50";
                       }`}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <div>;
                   <div className="text-sm text-gray-500 mb-3">;
                     Popular Searches;
@@ -526,7 +593,10 @@ if (return null) {
                       "Cybersecurity",;
                       "Digital Transformation",;
                     ].map((term) => (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       <button
                         key={term}
                         onClick={() => setQuery(term)}

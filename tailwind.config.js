@@ -23,6 +23,7 @@ module.exports = {
           900: '#1e3a8a',
           950: '#172554',
         },
+<<<<<<< HEAD
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -90,3 +91,10 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 };
+=======
+      },
+    },
+  },
+  plugins: [],
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

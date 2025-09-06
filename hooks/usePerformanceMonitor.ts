@@ -1,5 +1,29 @@
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
+=======
+  loadTime: number, firstContentfulPaint: number
+  largestContentfulPaint: number, firstInputDelay: number
+  cumulativeLayoutShift: number
+}
+export function usePerformanceMonitor() {
+
+export function usePerformanceMonitor() {;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isSupported, setIsSupported] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    // Check if Performance Observer is supported
+    if (!('PerformanceObserver' in window)) {
+    setIsSupported(false)
+    return
+  }
+    setIsSupported(true);
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       const entries = list && list.getEntries();
       
@@ -13,11 +37,17 @@ interface PerformanceMetrics {
         }
         
         if (entry && entry.entryType === 'paint') {
+<<<<<<< HEAD
 
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
 
+=======
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               ...prev,
               firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
@@ -45,8 +75,11 @@ interface PerformanceMetrics {
           setMetrics(prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -134,10 +167,15 @@ if ( {) {
         }
       });
     });
+<<<<<<< HEAD
 
       observer && observer.disconnect();
     };
 
+=======
+      observer && observer.disconnect();
+    };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []);
   return { metrics, isSupported }
 }

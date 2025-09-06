@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +195,10 @@ module.exports = ContinuousIntegration;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -220,8 +229,32 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      console.error('Fatal "error")
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      console.error('Fatal "error")
+      console.error('Fatal "error")
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      console.error('Fatal "error")
+      console.error('Fatal "error")
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+      console.error('Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
       console.error('Fatal "error")
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -250,3 +283,7 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

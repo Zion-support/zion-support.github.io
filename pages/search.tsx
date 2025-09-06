@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +26,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -30,18 +34,54 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
 import React, { useState } from 'react';
 
 import React, { useState, useEffect } from 'react',
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react',
+<<<<<<< HEAD
+
+=======
+import React, { useState, useEffect } from 'react',
+origin/automation-improvements-final
+import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
 
 import {
 
+=======
+import {
+  Search
+  Filter
+  ArrowRight
+  Clock
+  Star
+  FileText
+  Code
+  Database
+  Cloud
+  Shield
+  Brain
+  Users
+  Settings
+  Globe
+  CheckCircle
+  X
+  ChevronDown
+  ChevronUp
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Search,
   Filter,
   ArrowRight,
@@ -60,8 +100,11 @@ import {
   X,
   ChevronDown,
   ChevronUp;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from 'lucide-react';
 const searchResults = [
   {
@@ -143,18 +186,27 @@ const filters = [
   { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function SearchPage() {
 
 
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { 
   Search, Filter, Grid, List, ArrowRight, ExternalLink, 
@@ -173,6 +225,7 @@ export default function SearchPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import {;
@@ -281,27 +334,87 @@ const filters = [;
 
 export default function SearchPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export default function SearchPage() {
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  ExternalLink,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Globe,
+  Code,
+  Server,
+  TrendingUp,
+  BarChart3,
+  Cloud,
+  Network,
+  Lightbulb,
+  Flame,
+  Zap as ZapIcon,
+  X,
+  Sliders,
+  SortAsc,
+  SortDesc,;
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+export default function SearchPage() {
+export default function SearchPage() {;
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+export default function SearchPage() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const filteredResults = searchResults && searchResults.filter(result => {;
     const matchesQuery = result && result.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
                         result && result.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || result && result.category === selectedCategory;
     const matchesFilter = selectedFilter === 'All' || result && result.type === selectedFilter;
+<<<<<<< HEAD
 
 
     return matchesQuery && matchesCategory && matchesFilter;
   });
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -313,6 +426,347 @@ export default function SearchPage() {;
       </Head>;
       <div className="min-h-screen bg-gray-50">;
 
+=======
+  return (
+
+    return matchesQuery && matchesCategory && matchesFilter;
+  });
+
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  Search, Filter, Grid, List, ArrowRight, ExternalLink,;
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,;
+  X, Sliders, SortAsc, SortDesc;
+} from 'lucide-react',;
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SearchPage(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filters, setFilters] = useState({;
+    category: 'all';
+    status: 'all',;
+    priceRange: 'all',;
+    technology: 'all';
+  });
+  const [sortBy, setSortBy] = useState('relevance');
+  const [showFilters, setShowFilters] = useState(false);
+  // Mock data for search;
+  const allServices = [;
+    {;
+      id: 'ai-business-intelligence';
+      title: 'AI Business Intelligence';
+      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling';
+      category: 'AI & Machine Learning';
+      status: 'active',;
+      price: '$499/month',;
+      technology: 'AI/ML',;
+      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],;
+      link: '/ai-business-intelligence',;
+      icon: Brain,;
+      color: 'from-purple-500 to-pink-500',;
+      relevance: 95;
+    },;
+    {;
+      id: 'quantum-cybersecurity',;
+      title: 'Quantum Cybersecurity',;
+      description: 'Future-proof security with quantum-resistant encryption and AI threat detection',;
+      category: 'Cybersecurity',;
+      status: 'active',;
+      price: '$799/month',;
+      technology: 'Quantum',;
+      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],;
+      link: '/quantum-cybersecurity',;
+      icon: Shield,;
+      color: 'from-red-500 to-orange-500',;
+      relevance: 92;
+    },;
+    {;
+      id: 'ai-customer-experience',;
+      title: 'AI Customer Experience',;
+      description: 'Deliver personalized customer experiences at scale with AI-driven insights',;
+      category: 'AI & Machine Learning',;
+      status: 'active',;
+      price: '$399/month',;
+      technology: 'AI/ML',;
+      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],;
+      link: '/ai-customer-experience',;
+      icon: Users,;
+      color: 'from-green-500 to-teal-500',;
+      relevance: 88;
+    },;
+    {;
+      id: 'edge-computing-orchestration',;
+      title: 'Edge Computing Orchestration',;
+      description: 'Deploy and manage applications at the edge with intelligent orchestration',;
+      category: 'Edge Computing',;
+      status: 'active',;
+      price: '$349/month',;
+      technology: 'Edge',;
+      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],;
+      link: '/edge-computing-orchestration',;
+      icon: Network,;
+      color: 'from-purple-500 to-pink-500',;
+      relevance: 85;
+    },;
+    {;
+      id: 'space-technology',;
+      title: 'Space Technology Innovation',;
+      description: 'Accelerate space exploration with cutting-edge technology solutions',;
+      category: 'Space Technology',;
+      status: 'beta',;
+      price: '$2,499/month',;
+      technology: 'Space',;
+      features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],;
+      link: '/space-technology',;
+      icon: Rocket,;
+      color: 'from-violet-500 to-purple-500',;
+      relevance: 82;
+    },;
+    {;
+      id: 'neural-interface',;
+      title: 'Neural Interface Development',;
+      description: 'Build the future of human-computer interaction with neural interfaces',;
+      category: 'Biotechnology',;
+      status: 'beta',;
+      price: '$899/month',;
+      technology: 'Biotech',;
+      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],;
+      link: '/neural-interface',;
+      icon: Brain,;
+      color: 'from-pink-500 to-rose-500',;
+      relevance: 78;
+    },;
+    {;
+      id: 'quantum-neural-networks',;
+      title: 'Quantum Neural Networks',;
+      description: 'Quantum-powered AI with advanced consciousness capabilities',;
+      category: 'Quantum Computing',;
+      status: 'beta',;
+      price: '$1,299/month',;
+      technology: 'Quantum',;
+      features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],;
+      link: '/quantum-neural-networks',;
+      icon: Atom,;
+      color: 'from-blue-500 to-cyan-500',;
+      relevance: 75;
+    },;
+    {;
+      id: 'autonomous-devops',;
+      title: 'Autonomous DevOps',;
+      description: 'AI-powered DevOps optimization and automation platform',;
+      category: 'Cloud & DevOps',;
+      status: 'active',;
+      price: '$599/month',;
+      technology: 'DevOps',;
+      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],;
+      link: '/autonomous-devops',;
+      icon: Cpu,;
+      color: 'from-emerald-500 to-teal-500',;
+      relevance: 72;
+    },;
+    {;
+      id: 'ai-autonomous-business',;
+      title: 'AI Autonomous Business Manager',;
+      description: 'Fully autonomous business operations powered by advanced AI',;
+      category: 'AI & Machine Learning',;
+      status: 'beta',;
+      price: '$1,999/month',;
+      technology: 'AI/ML',;
+      features: ['Business automationDecision makingResource allocationPerformance optimization'],;
+      link: '/ai-autonomous-business',;
+      icon: Target,;
+      color: 'from-indigo-500 to-purple-500',;
+      relevance: 70;
+    },;
+    {;
+      id: 'quantum-financial-trading',;
+      title: 'Quantum Financial Trading',;
+      description: 'Quantum computing powered financial analysis and trading strategies',;
+      category: 'Financial Technology',;
+      status: 'beta',;
+      price: '$3,999/month',;
+      technology: 'Quantum',;
+      features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],;
+      link: '/quantum-financial-trading',;
+      icon: TrendingUp,;
+      color: 'from-emerald-500 to-green-500',;
+      relevance: 68;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const categories = [;
+    { id: 'all', name: 'All Categories', icon: '📂' },;
+    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },;
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: '☁️' },;
+    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },;
+    { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },;
+    { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },;
+    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const statuses = [;
+    { id: 'all', name: 'All Statuses', icon: '📊' },;
+    { id: 'active', name: 'Active', icon: '✅' },;
+    { id: 'beta', name: 'Beta', icon: '🧪' },;
+    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', icon: '💰' },;
+    { id: 'under-500', name: 'Under $500/month', icon: '💵' },;
+    { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },;
+    { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },;
+    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const technologies = [;
+    { id: 'all', name: 'All Technologies', icon: '🔧' },;
+    { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },;
+    { id: 'Quantum', name: 'Quantum', icon: '⚛️' },;
+    { id: 'Edge', name: 'Edge', icon: '🌐' },;
+    { id: 'Space', name: 'Space', icon: '🚀' },;
+    { id: 'Biotech', name: 'Biotech', icon: '🧬' },;
+    { id: 'DevOps', name: 'DevOps', icon: '⚙️'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Search function;
+  const performSearch = () => {;
+    if (!searchTerm.trim()) {;
+      setSearchResults([]);
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setIsSearching(true);
+    // Simulate search delay;
+    setTimeout(() => {;
+      const results = allServices.filter(service => {;
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = filters.category === 'all' || service.category === filters.category;
+        const matchesStatus = filters.status === 'all' || service.status === filters.status;
+        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
+        let matchesPrice = true;
+        if (filters.priceRange !== 'all') {;
+          const price = parseInt(service.price.replace(/[^0-9]/g, '')),;
+          switch (filters.priceRange) {;
+            case 'under-500':;
+              matchesPrice = price < 500;
+              break,;
+            case '500-1000':;
+              matchesPrice = price >= 500 && price < 1000;
+              break,;
+            case '1000-2500':;
+              matchesPrice = price >= 1000 && price < 2500;
+              break,;
+            case 'over-2500':;
+              matchesPrice = price >= 2500;
+              break;
+            } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice;
+      }),;
+      // Sort results;
+      const sortedResults = results.sort((a, b) => {;
+        switch (sortBy) {;
+          case 'relevance':;
+            return b.relevance - a.relevance,;
+          case 'price-low':;
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),;
+          case 'price-high':;
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),;
+          case 'name':;
+            return a.title.localeCompare(b.title);
+          case 'status':;
+            return a.status.localeCompare(b.status);
+          default: return 0;
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      }),;
+      setSearchResults(sortedResults);
+      setIsSearching(false);
+    }, 500);
+  },;
+  // Handle search on Enter key;
+  const handleKeyPress = (e: React.KeyboardEvent) => {;
+    if (e.key === 'Enter') {;
+      performSearch();
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  // Update search when filters change;
+  useEffect(() => {;
+    if (searchTerm.trim()) {;
+      performSearch();
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [filters, sortBy]),
+  // Clear all filters
+  const clearFilters = () => {
+    setFilters({
+      category: 'all',
+      status: 'all',
+      priceRange: 'all',
+      technology: 'all'
+    }),
+    setSortBy('relevance')
+  },
+  return (
+    <Layout>
+      <Head>
+        <title>Search - Zion Tech Group</title>
+        <meta name="description" content="Search our website for information, guides, services, and more." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -320,7 +774,10 @@ export default function SearchPage() {;
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Search Our Website;
@@ -328,19 +785,82 @@ export default function SearchPage() {;
               <p className="text-xl mb-8 text-blue-100">;
                 Find the information you need quickly and easily.;
               </p>;
+<<<<<<< HEAD
 
 
               {/* Search Bar */}
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
+<<<<<<< HEAD
+=======
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+      <SmartHeader />
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Search Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Find the perfect AI and technology solutions for your business needs.
+              Search across our comprehensive service catalog with advanced filtering options.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Search Interface */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
+              <div className="flex-1 max-w-2xl">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <input
                     type="text"
                     placeholder="Search for services, guides, articles..."
@@ -350,7 +870,10 @@ export default function SearchPage() {;
 
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300";
                   />;
@@ -359,8 +882,89 @@ export default function SearchPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
 
+=======
+        {/* Filters Section */}
+        <section className="py-8 bg-white border-b">;
+          <div className="container mx-auto px-4">;
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">;
+              <div className="flex flex-wrap gap-4">;
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors";
+                >;
+                  <Filter className="w-4 h-4 mr-2" />;
+                  Filters;
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+            </motion.div>
+          </div>
+        </section>
+        {/* Filters Section */}
+        <section className="py-8 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex flex-wrap gap-4">
+              {/* View Mode Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  <Filter className="w-4 h-4 mr-2" />
+                  Filters
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`p-2 rounded-lg transition-all duration-300 ${;
+                    viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+            {/* Filters and Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => setShowFilters(!showFilters)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
+                >
+                  <Sliders className="w-4 h-4" />
+                  Filters
+                  {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -539,7 +1143,10 @@ function SearchPage() {
                 </button>;
                 {categories.map ((category) => (
                   <button;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     key={category.name}
                     on_click={() => setSelectedCategory (category.name)}
                     className={`px - 4 py - 2 rounded - lg transition - colors ${
@@ -547,8 +1154,11 @@ function SearchPage() {
                         ? 'bg - blue - 600 text - white';
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -608,7 +1218,10 @@ function SearchPage() {
             </div>
             {showFilters && (
               <motion.div
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </button>;
 
                 {categories && categories.map((category) => (;
@@ -624,6 +1237,7 @@ function SearchPage() {
                     {category && category.name} ({category && category.count});
                   </button>;
                 ))}
+<<<<<<< HEAD
               </div>;
 
               <div className="text-sm text-gray-600">;
@@ -641,6 +1255,23 @@ function SearchPage() {
                 transition={{ duration: 0.3 }}
 
 =======
+=======
+                transition={{ duration: 0 && 0.3 }}>;
+                <div className="flex flex-wrap gap-4">;
+                  {filters && filters.map((filter) => (;
+              </div>
+
+              <div className="text-sm text-gray-600">
+                {filteredResults.length} results found
+              </div>
+            </div>
+            {showFilters && (
+              <motion.div
+                className="mt-4 p-4 bg-gray-50 rounded-lg"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                transition={{ duration: 0.3 }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )  } catch (error) {
@@ -710,12 +1341,18 @@ function SearchPage() {
   }
 }
                 className="mt-6 pt-6 border-t border-white/20"
+<<<<<<< HEAD
 
 
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              >
+                <div className="flex flex-wrap gap-4">
+                  {filters.map((filter) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -724,6 +1361,7 @@ function SearchPage() {
                           ? 'bg-blue-600 text-white';
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
+<<<<<<< HEAD
 
                   ))}                </div>
 
@@ -739,6 +1377,32 @@ function SearchPage() {
 ))}
                 </div>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+                    >
+                  ))}
+                </div>
+
+
+))}
+                </div>
+
+                  ))}                </div>
+                  ))}
+                </div>
+))}
+                </div>
+                      {filter.name} ({filter.count})
+                    </button>
+                  ))}
+                </div>
+                  ))}                </div>
+ursor/fix-lint-push-and-merge-to-main-ae4e
+                  ))}
+                </div>
+origin/automation-improvements-final
+))}
+                </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </motion.div>
             )}
           </div>
@@ -766,10 +1430,13 @@ function SearchPage() {
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                           {category.icon} {category.name  } catch (error) {
@@ -1023,7 +1690,6 @@ function SearchPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -1078,6 +1744,7 @@ function SearchPage() {
                     initial={{ opacity: 0, coordinate_y: 20 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
                   >;
                     <div className="flex items - start justify - between">;
                       <div className="flex - 1">;
@@ -1090,13 +1757,301 @@ function SearchPage() {
                         <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
                           <Link;
 
+=======
+                      {categories.map(category => (
+                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
+                          {category.icon} {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </option>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </select>;
+                  </div>;
+                  {/* Status Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Status</label>
+                    <select
+                      value={filters.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {statuses.map(status => (
+                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
+                          {status.icon} {status.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </option>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </select>;
+                  </div>;
+                  {/* Price Range Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Price Range</label>
+                    <select
+                      value={filters.priceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {priceRanges.map(range => (
+                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
+                          {range.icon} {range.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </option>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </select>;
+                  </div>;
+                  {/* Technology Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Technology</label>
+                    <select
+                      value={filters.technology  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {technologies.map(tech => (
+                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
+                          {tech.icon} {tech.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </option>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </select>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Search Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Results Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-white mb-2">
+              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </h2>
+            <p className="text-white/60">
+              {isSearching ? 'Searching...' : `${searchResults.length} services found`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </p>;
+          </div>;
+          {/* Loading State */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {isSearching && (
+            <div className="text-center py-20">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
+                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+              <p className="text-white/60">Searching our services...</p>
+            </div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* No Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {!isSearching && searchTerm && searchResults.length === 0 && (
+            <div className="text-center py-20">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
+                <Search className="w-12 h-12 text-white/40" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-white/60 mb-6">
+                Try adjusting your search terms or filters
+              </p>
+              <button
+                onClick={clearFilters  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+              >
+                Clear All Filters
+              </button>
+            </div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* Search Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {!isSearching && searchResults.length > 0 && (
+            <AnimatePresence mode="wait">
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+                {searchResults.map((service, index) => (
+                  <motion.div
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`group relative ${;
+                      viewMode === 'grid';
+                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
+                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center mb-2">
+                          <result.icon className="w-5 h-5 text-blue-600 mr-2" />
+                          <span className="text-sm text-gray-500">{result.category}</span>
+                          <span className="mx-2 text-gray-300">•</span>
+                          <span className="text-sm text-gray-500">{result.type}</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          <Link
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                             href={result.url}
                             className="hover:text - blue - 600 transition - colors";
                           >;
                             {result.title}
+<<<<<<< HEAD
 
                       </Link>
 =======
+=======
+                          </Link>
+                        </h3>
+                        <p className="text-gray-600 mb-4">
+                          {result.description}
+                        </p>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span className="mr-4">Updated {result.lastUpdated}</span>
+                          <div className="flex items-center">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                            <span>{result.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Link
+                        href={result.url}
+                        className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5" />
+                      </Link>
+                      </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -1105,6 +2060,7 @@ function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
+<<<<<<< HEAD
     technology: 'all'
   });
   const [sortBy, setSortBy] = useState('relevance');
@@ -1581,6 +2537,9 @@ function SearchPage() {
 
 
       {/* Search Results */}
+=======
+{/* Search Results */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Results Header */}
@@ -1591,21 +2550,52 @@ function SearchPage() {
             <p className="text-white/60">
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
+<<<<<<< HEAD
+=======
+    technology: 'all',
+ursor/integrate-build-improve-and-re-verify-8f7d
+        </div>
+      </section>
+
+      {/* Search Results */}
+      <section className='px-6 pb-20'>
+        <div className='max-w-7xl mx-auto'>
+          {/* Results Header */}
+          <div className='mb-8'>
+            <h2 className='text-3xl font-bold text-white mb-2'>
+              {searchTerm
+                ? `Search Results for "${searchTerm}"`
+                : 'All Services'}
+            </h2>
+            <p className='text-white/60'>
+              {isSearching
+                ? 'Searching...'
+                : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </p>
           </div>
 
           {/* Loading State */}
           {isSearching && (
+<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <p className="text-white/60">Searching our services...</p>
             </div>
+=======
+            <div className='text-center py-20'>
+              <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
+                <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
+              </div>
+              <p className='text-white/60'>Searching our services...</p>            </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
+<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -1618,6 +2608,20 @@ function SearchPage() {
                 onClick={clearFilters}
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
               >
+=======
+            <div className='text-center py-20'>
+              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
+                <Search className='w-12 h-12 text-white/40' />
+              </div>
+              <h3 className='text-2xl font-semibold text-white mb-2'>
+                No services found
+              </h3>
+              <p className='text-white/60 mb-6'>                Try adjusting your search terms or filters
+              </p>
+              <button
+                onClick={clearFilters}
+                className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 Clear All Filters
               </button>
             </div>
@@ -1625,15 +2629,27 @@ function SearchPage() {
 
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
+<<<<<<< HEAD
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                 {searchResults.map((service, index) => (
+=======
+            <AnimatePresence mode='wait'>
+              <div
+                className={
+                  viewMode === 'grid'
+                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                    : 'space-y-6'
+                }
+              >                {searchResults.map((service, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
+<<<<<<< HEAD
                       viewMode === 'grid' 
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
@@ -1645,6 +2661,8 @@ function SearchPage() {
                         <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}>
                           <service.icon className="w-8 h-8 text-white" />
                         </div>
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <div className="flex flex-col items-end gap-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                             service.status === 'active' ? 'bg-green-500/20 text-green-300' :
@@ -1673,12 +2691,75 @@ function SearchPage() {
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
+<<<<<<< HEAD
+=======
+                      viewMode === 'grid'                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
+                    }`}
+                  >
+                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                    <div className='relative z-10'>
+                      <div className='flex items-start justify-between mb-4'>
+                        <div
+                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}
+                        >
+                          <service.icon className='w-8 h-8 text-white' />
+                        </div>
+                        <div className='flex flex-col items-end gap-2'>
+                          <span
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${
+                              service.status === 'active'
+                                ? 'bg-green-500/20 text-green-300'
+                                : service.status === 'beta'
+                                  ? 'bg-yellow-500/20 text-yellow-300'
+                                  : 'bg-blue-500/20 text-blue-300'
+                            }`}
+                          >
+                            {service.status}
+                          </span>
+                          <span className='text-xs text-white/40'>
+                            {service.technology}
+                          </span>
+                        </div>
+                      </div>
+
+                      <h3 className='text-xl font-bold mb-3 text-white'>
+                        {service.title}
+                      </h3>
+                      <p className='text-white/70 leading-relaxed mb-4'>
+                        {service.description}
+                      </p>
+
+                      {/* Price */}
+                      <div className='mb-4'>
+                        <span className='text-2xl font-bold text-cyan-400'>
+                          {service.price}
+                        </span>
+                      </div>
+
+                      {/* Features */}
+                      <div className='mb-6'>
+                        <h4 className='text-white font-semibold mb-3 text-sm'>
+                          Key Features:
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.features.map((feature, idx) => (
+                            <div
+                              key={idx}
+                              className='flex items-center gap-2 text-sm text-white/70'
+                            >
+                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                             </div>
                           ))}
                         </div>
                       </div>
                       
                       <div className="flex items-center justify-between">
+<<<<<<< HEAD
+=======
+<div className="flex items-center justify-between">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <a
                           href={service.link}
                           className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
@@ -1693,6 +2774,7 @@ function SearchPage() {
                           Get Quote
                         </a>
                       </div>
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
 =======
@@ -1756,34 +2838,84 @@ function SearchPage() {
             ) : (;
               <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+</Link>
+
+                      <div className='flex items-center justify-between'>
+                        <a
+                          href={service.link}
+                          className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'
+                        >
+                          <span className='text-sm font-medium'>
+                            Learn More
+                          </span>
+                          <ExternalLink className='w-4 h-4 ml-2' />
+                        </a>
+                        <a
+                          href='mailto:kleber@ziontechgroup.com'
+                          className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105'                        >
+                          Get Quote
+                        </a>
+                      </div>
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+</Link>
+
+
+</Link>
+origin/main
+origin/automation-improvements-final
+</Link>
+                    </div>
+                      </Link>                    </div>
+ursor/fix-lint-push-and-merge-to-main-ae4e
+                  </motion.div>
+                ))}
+              </div>
+origin/automation-improvements-final
+            ) : (
+              <motion.div
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8 }}>;
-                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">;
-                  No results found;
-                </h3>;
-                <p className="text-gray-600 mb-6">;
-                  Try adjusting your search terms or filters.;
-                </p>;
+                transition={{ duration: 0.8 }}
+              >
+                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  No results found
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Try adjusting your search terms or filters.
+                </p>
                 <button
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setSelectedCategory('All');
-                    setSelectedFilter('All');
-                  }}
+                  onClick={() => {
+
+            ) : (
+              <motion.div
+                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
+                    </div>
+                      </Link>                    </div>
+                  </motion.div>
+                ))}
+              </div>
                   className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors";
                 >;
                   Clear Filters;
                 </button>;
               </motion && motion.div>;
             )}
+<<<<<<< HEAD
 
           </div>;
         </section>;
 
 
+=======
+          </div>;
+        </section>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Popular Searches */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -1791,6 +2923,7 @@ function SearchPage() {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Popular Searches;
@@ -1801,6 +2934,8 @@ function SearchPage() {
             </motion && motion.div>;
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="flex flex-wrap gap-3 justify-center">;
               {[;
                 'AI Development',;
@@ -1813,7 +2948,31 @@ function SearchPage() {
                 'Consulting';
               ].map((term, index) => (;
                 <motion&& motion.button
+<<<<<<< HEAD
 
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Popular Searches
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Common searches to help you find what you're looking for.
+              </p>
+            </motion.div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {[
+                'AI Development'
+                'Cloud Services'
+                'Cybersecurity'
+                'Database Design'
+                'Mobile Apps'
+                'Web Development'
+                'IT Support'
+                'Consulting'
+              ].map((term, index) => (
+                <motion.button
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   key={term}
                   onClick={() => setSearchQuery(term)}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-blue-100 hover:text-blue-700 transition-colors";
@@ -1916,6 +3075,7 @@ function SearchPage() {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 
   );
 
@@ -1927,11 +3087,103 @@ function SearchPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+  );
+}
+  )
+)
+                        <div className="flex flex-col items-end gap-2">
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                            service.status === 'active' ? 'bg-green-500/20 text-green-300' :
+                            service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
+                            'bg-blue-500/20 text-blue-300'
+                          }`}>
+                            {service.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </span>
+                          <span className="text-xs text-white/40">{service.technology}</span>
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+                      <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
+                      {/* Price */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="mb-4">
+                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                      </div>
+                      {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="mb-6">
+                        <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
+                        <div className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                              <span>{feature}</span>
+                            </div>
+                          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <a
+                          href={service.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
+                        >
+                          <span className="text-sm font-medium">Learn More</span>
+                          <ExternalLink className="w-4 h-4 ml-2" />
+                        </Link>
+                        <a
+                          href="mailto:kleber@ziontechgroup.com"
+                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
+                        >
+                          Get Quote
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </AnimatePresence>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* Initial State - Show all services when no search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </AnimatePresence>
           )}
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
+<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -1951,6 +3203,33 @@ function SearchPage() {
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
+=======
+            <div className='text-center py-20'>
+              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
+                <Search className='w-12 h-12 text-white/40' />
+              </div>
+              <h3 className='text-2xl font-semibold text-white mb-2'>
+                Start Your Search
+              </h3>
+              <p className='text-white/60 mb-6'>
+                Enter keywords above to find the perfect technology solutions
+                for your business
+              </p>
+              <div className='flex flex-wrap justify-center gap-2'>
+                <span className='text-sm text-white/40'>Popular searches:</span>
+                {[
+                  'AI',
+                  'Cybersecurity',
+                  'Quantum Computing',
+                  'Edge Computing',
+                ].map(term => (                  <button
+                    key={term}
+                    onClick={() => {
+                      setSearchTerm(term);
+                      performSearch();
+                    }}
+                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     {term}
                   </button>
                 ))}
@@ -1962,18 +3241,21 @@ function SearchPage() {
 
       <SmartFooter />
     </div>
+<<<<<<< HEAD
 
   );
 
   )
 =======
+=======
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -1981,20 +3263,13 @@ function SearchPage() {
 }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 )
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 )
 }
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -2005,3 +3280,25 @@ function SearchPage() {
 );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+)
+}
+origin/main
+origin/automation-improvements-final
+)
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -8,6 +8,15 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -415,12 +424,37 @@ generator.run().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr/bin/env node;
 /**
  * PM2 Documentation Generator Service;
  * Automatically generates and updates documentation;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -437,6 +471,7 @@ const fs = require('fs');
 const path = require('path');
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -469,6 +504,10 @@ const path = require('path');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class DocsGenerator {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator';
@@ -488,6 +527,12 @@ class DocsGenerator {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -518,6 +563,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -530,6 +579,26 @@ class DocsGenerator {}
     try {}
       this.log('Generating API documentation...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -574,6 +643,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Check if JSDoc is available;
       try {}
         execSync('npx jsdoc --version', { "stdio": 'pipe' }
@@ -594,6 +667,26 @@ class DocsGenerator {}
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -638,6 +731,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       this.log('API documentation generated successfully');
       return { "generated": true, "outputDir": docsDir };
     } catch (error) {}
@@ -653,6 +750,26 @@ class DocsGenerator {}
     try {}
       this.log('Generating component documentation...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      // Look for React/Vue/Svelte components;
+      const componentFiles = this.findComponentFiles();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -668,6 +785,7 @@ class DocsGenerator {}
       const componentFiles = this.findComponentFiles();
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -698,6 +816,10 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       if (componentFiles.length === 0) {}
         this.log('No component files found');
         return { "generated": false, "reason": 'No components found' };
@@ -705,6 +827,26 @@ class DocsGenerator {}
       // Generate component documentation;
       const componentDocs = this.generateComponentMarkdown(componentFiles);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -749,6 +891,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const docsDir = 'docs/components';
       if (!fs.existsSync(docsDir)) {}
         fs.mkdirSync(docsDir, { "recursive": true }
@@ -757,6 +903,26 @@ class DocsGenerator {}
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -801,6 +967,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       this.log(`Component documentation "generated": ${docsFile}`);
       return { "generated": true, "outputFile": docsFile, "componentCount": componentFiles.length };
     } catch (error) {}
@@ -812,6 +982,26 @@ class DocsGenerator {}
     const extensions = ['.jsx', '.tsx', '.vue', '.svelte'];
     const componentFiles = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -856,6 +1046,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
@@ -863,6 +1057,26 @@ class DocsGenerator {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
           
@@ -907,6 +1121,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.endsWith(ext))) {}
@@ -918,6 +1136,26 @@ class DocsGenerator {}
       };
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -962,6 +1200,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Scan common source directories;
     const sourceDirs = ['src', 'components', 'lib', 'pages'];
     for (const dir of sourceDirs) {}
@@ -979,6 +1221,11 @@ class DocsGenerator {}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -987,6 +1234,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     for (const file of componentFiles) {}
       const relativePath = path.relative(process.cwd(), file);
       const fileName = path.basename(file);
@@ -994,6 +1245,13 @@ class DocsGenerator {}
       markdown += "**"File": ** \"${relativePath}\"\n\n";
       try {}
         const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1038,6 +1296,10 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         // Extract component name (simplified);
         const componentMatch = content.match(/(?:export\s+(?:default\s+)?(?:function|const|class)\s+)(\w+)/);
         if (componentMatch) {}
@@ -1072,6 +1334,26 @@ class DocsGenerator {}
     try {}
       this.log('Updating README...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      const readmePath = 'README.md';
+      let readmeContent = '';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -1087,6 +1369,7 @@ class DocsGenerator {}
       let readmeContent = '';
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -1117,12 +1400,37 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       if (fs.existsSync(readmePath)) {}
         readmeContent = fs.readFileSync(readmePath, 'utf8');
       };
       // Generate project information;
       const projectInfo = await this.generateProjectInfo();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      // Update or create README;
+      const newReadme = this.generateReadmeContent(projectInfo, readmeContent);
+      fs.writeFileSync(readmePath, newReadme);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -1139,6 +1447,7 @@ class DocsGenerator {}
       fs.writeFileSync(readmePath, newReadme);
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -1171,6 +1480,10 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       this.log('README updated successfully');
       return { "updated": true, "file": readmePath };
     } catch (error) {}
@@ -1182,6 +1495,26 @@ class DocsGenerator {}
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -1226,6 +1559,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return {}
         "name": packageJson.name || 'Unknown Project',
         "version": packageJson.version || '1.0.0',
@@ -1253,6 +1590,27 @@ class DocsGenerator {}
   generateReadmeContent(projectInfo, existingContent) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    let readme = `# ${projectInfo.name}\n\n`;`
+    readme += `**"Version": ** ${projectInfo.version}\n\n`;`
+    readme += `${projectInfo.description}\n\n`;`
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -1269,6 +1627,7 @@ class DocsGenerator {}
     readme += `${projectInfo.description}\n\n`;`
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -1301,6 +1660,10 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (projectInfo.repository) {}
       readme += `**"Repository": ** ${projectInfo.repository}\n\n`;`
     };
@@ -1308,6 +1671,26 @@ class DocsGenerator {}
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -1352,6 +1735,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Add available scripts;
     if (Object.keys(projectInfo.scripts).length > 0) {}
       readme += "## Available Scripts\n\n";
@@ -1389,6 +1776,26 @@ class DocsGenerator {}
       };
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    const reportFile = path.join(__dirname, '../../logs/pm2/docs-generator-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -1404,6 +1811,7 @@ class DocsGenerator {}
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -1434,12 +1842,36 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     this.log(`Documentation generator report "generated": ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    try {}
+      const report = await this.generateReport();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -1455,6 +1887,7 @@ class DocsGenerator {}
       const report = await this.generateReport();
 =======
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -1485,11 +1918,21 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       let generatedCount = 0;
       if (report.apiDocs.generated) generatedCount++;
       if (report.componentDocs.generated) generatedCount++;
       if (report.readmeUpdate.updated) generatedCount++;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      this.log(`Documentation generation "completed": ${generatedCount} items generated`);
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
       
@@ -1528,6 +1971,10 @@ class DocsGenerator {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } catch (error) {}
       this.log(`Documentation generator "error": ${error.message}`);
     };
@@ -1537,6 +1984,9 @@ class DocsGenerator {}
 if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
+<<<<<<< HEAD
+};
+=======
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1573,3 +2023,7 @@ module.exports = DocsGenerator;module.exports = DocsGenerator;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

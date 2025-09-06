@@ -1,6 +1,13 @@
 import useSWR from 'swr';
 
 
+<<<<<<< HEAD
+=======
+const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null));
+export function useCurrentUser() {
+
+export function useCurrentUser() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
     user: data?.user |null
@@ -27,13 +34,22 @@ function useCurrentUser() {
 
     error
 
-=======
 
     error,
 
 
     mutate}
 
+<<<<<<< HEAD
+=======
+    error
+
+    error,
+    error
+
+    error,
+    mutate}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
 export function useCurrentUser() {
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);

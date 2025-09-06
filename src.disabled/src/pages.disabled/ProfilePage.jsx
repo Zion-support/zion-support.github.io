@@ -26,7 +26,12 @@ interface ProfilePageProps {
   // Add props here as needed
 
 
+}
 
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function ProfilePage({ }: ProfilePageProps) {
   return (
     <div>
@@ -34,11 +39,19 @@ export default function ProfilePage({ }: ProfilePageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-}
+<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+:src.disabled/src/pages.disabled/ProfilePage.jsx
+}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/ProfilePage.jsx
+=======
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/ProfilePage.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

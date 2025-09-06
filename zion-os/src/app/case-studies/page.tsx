@@ -1,16 +1,29 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function CaseStudiesPage() {;
   return (;
 
     <div className="min-h-screen py-20">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default /**
  * CaseStudiesPage - Function description
  */
 function CaseStudiesPage() {
   return (
     <div className="min - h-screen py - 20">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default function CaseStudiesPage() {return (;
+export default function CaseStudiesPage() {;
+  return (;
+    <div className="min-h-screen py-20">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

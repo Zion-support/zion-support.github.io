@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
-
+  Calendar
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Video
+  MessageSquare
+  Building
   Calendar,
   Clock,
   Users,
@@ -12,8 +29,11 @@ import {
   Video,
   MessageSquare,
   Building,;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }
@@ -107,6 +127,7 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
+<<<<<<< HEAD
 =======
 import {;
   Calendar,;
@@ -119,6 +140,23 @@ import {;
   MapPin,;
   Video,;
   MessageSquare,;
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Building,;
 } from "lucide-react";
 
@@ -229,18 +267,26 @@ export default function CalendarPage() {;
         <meta
           name="keywords"
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
+<<<<<<< HEAD
 
         />;
       </Head>;
 
 
+=======
+        />;
+      </Head>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             transition={{ duration: 0 && 0.8 }}
             className="text-center">;
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">;
@@ -269,8 +315,11 @@ export default function CalendarPage() {;
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
@@ -323,12 +372,18 @@ export default function CalendarPage() {;
                 </button>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 
           </div>;
         </div>;
       </section>;
 
 
+=======
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -373,12 +428,18 @@ export default function CalendarPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 
           </div>;
         </div>;
       </section>;
 
 
+=======
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
@@ -690,12 +751,18 @@ function CalendarPage() {
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 
           </div>;
         </div>;
       </section>;
 
 
+=======
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -790,7 +857,10 @@ function CalendarPage() {
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_x: 20 }}
@@ -814,24 +884,36 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold">Video Calls</div>;
                     <div className="text - blue - 100">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <div className="flex items - center">;
                   <MessageSquare className="w - 6 h - 6 mr - 4" />;
                   <div>;
                     <div className="font - semibold">Live Chat</div>;
                     <div className="text - blue - 100">;
                       Available 24 / 7 on our website;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">;
                   Contact Us Now;
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -841,8 +923,11 @@ function CalendarPage() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -866,6 +951,7 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -873,6 +959,16 @@ function CalendarPage() {
           </motion && motion.div>;
         </div>;
       </section>;
+=======
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Learn About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>;
   );
 =======

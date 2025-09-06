@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -14,11 +17,20 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
 
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 "use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   class_name?: string;
+<<<<<<< HEAD
+=======
+"use client";
+interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
+  className?: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 export /**
  * LoadingSpinner - Function description
@@ -29,9 +41,26 @@ function LoadingSpinner() {
     medium: "w - 8 h - 8",
     large: "w - 12 h - 12";
   }
+<<<<<<< HEAD
   return (
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+"use client",;
+interface LoadingSpinnerProps {;
+  size?: "small" | "medium" | "large",;
+  className?: string;
+}
+;
+export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {;
+  const sizeClasses = {;
+    small: "w-4 h-4",;
+    medium: "w-8 h-8",;
+    large: "w-12 h-12";
+  };
+  return (;
+    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <svg;
         className="animate - spin text - blue - 500";
         xmlns="http: //www.w3.org / 2000 / svg";

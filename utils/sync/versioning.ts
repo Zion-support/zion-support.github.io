@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export interface Version {
   major: number;
@@ -27,3 +28,20 @@ export const versioning = {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+// Versioning utilities
+export const versioning = {
+  // Add versioning functionality here
+  getVersion: () => '1.0.0'
+  compareVersions: (v1: string, v2: string) => 0
+  incrementVersion: (version: string) => version
+
+
+}
+  getVersion: () => '1.0.0',
+  compareVersions: (v1: string, v2: string) => 0,
+  incrementVersion: (version: string) => version;
+};
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

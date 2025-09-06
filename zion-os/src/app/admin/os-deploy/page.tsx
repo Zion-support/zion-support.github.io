@@ -1,5 +1,31 @@
+<<<<<<< HEAD
 
 
+=======
+'use client';
+import React, { useState } from 'react';
+export default function OSDeployPage() {
+
+export default function OSDeployPage() {;
+const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    // Simulate deployment
+    setTimeout(() => {
+      setLoading(false);
+
+    }, 3000);
+  }
+;
+  const [message, set_message] = useState ('');
+  const [message_type, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+;
+  // Mock feature keys and functions;
+  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
+;
+  const label_for = (key: string) =>: any {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -50,10 +76,16 @@ export default function OSDeployPage() {;
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
+<<<<<<< HEAD
 
 
         {/* Header */}
 
+=======
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;
           <p className="text-xl text-white/70 max-w-2xl mx-auto">;
@@ -72,7 +104,10 @@ export default function OSDeployPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -80,17 +115,26 @@ export default function OSDeployPage() {;
                   required
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
               </div>;
 
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Vertical</label>;
+<<<<<<< HEAD
 
                 <select
                   id="vertical"
                   name="vertical"
 
+=======
+                <select
+                  id="vertical"
+                  name="vertical"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
 =======
   }
@@ -141,7 +185,10 @@ ai: 'Advanced AI capabilities and automation',
                   name="vertical";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -151,47 +198,77 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="TECH">Technology</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   placeholder="zion && zion.example.com"
                 />;
               </div>;
 
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="subdomain"
                   name="subdomain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
               </div>;
 
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Default Language</label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
               </div>;
 
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Region</label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
+<<<<<<< HEAD
 
 
+=======
+          {/* Economy Settings */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
+              Economic Configuration
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label htmlFor="tokenSystem" className="block text-sm font-medium text-white/90">Token System</label>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
               </div>;
             </div>;
@@ -207,6 +284,7 @@ ai: 'Advanced AI capabilities and automation',
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -214,6 +292,11 @@ ai: 'Advanced AI capabilities and automation',
                   id="tokenSystem"
                   name="tokenSystem"
 
+=======
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
 =======
               <div className="space - y-2">;
@@ -271,13 +354,19 @@ ai: 'Advanced AI capabilities and automation',
                   name="token_system";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO-lite</option>;
@@ -291,22 +380,34 @@ ai: 'Advanced AI capabilities and automation',
                 >;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO - lite</option>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
               </div>;
 
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;
+<<<<<<< HEAD
 
                 <select
                   id="paymentGateway"
                   name="paymentGateway"
 
+=======
+                <select
+                  id="paymentGateway"
+                  name="paymentGateway"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="">None</option>;
                   <option value="stripe">Stripe</option>;
@@ -330,7 +431,10 @@ ai: 'Advanced AI capabilities and automation',
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <input
 =======
               <div className="space - y-2">;
@@ -378,7 +482,10 @@ ai: 'Advanced AI capabilities and automation',
                     type="checkbox";
                     name="features";
                     value={k}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>;
           </div>;
 
@@ -391,14 +498,20 @@ ai: 'Advanced AI capabilities and automation',
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="treasury"
                   type="checkbox"
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -408,14 +521,20 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -425,14 +544,20 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -442,14 +567,20 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -534,24 +665,34 @@ ai: 'Advanced AI capabilities and automation',
                     Partnership Management;
                   </div>;
                   <div className="text - sm text - white / 60">Institutional partnership management</div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </label>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
             </button>;
             {message && (;
 
+=======
+            </button>;
+            {message && (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 }`}
               >
-
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -941,12 +1082,16 @@ export default function AdminDeployPage() {;
               }`}>;
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {message}
               </div>;
             )}
 
+<<<<<<< HEAD
 
           </div>;
         </form>;
@@ -954,6 +1099,20 @@ export default function AdminDeployPage() {;
     </div>);
 }
 
+=======
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+          </div>;
+        </form>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 function labelFor(key: string) {;
   switch (key) {;
@@ -995,6 +1154,9 @@ function getFeatureDescription(key: string) {;
   }
 }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

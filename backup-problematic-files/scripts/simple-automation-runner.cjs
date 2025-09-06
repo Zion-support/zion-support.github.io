@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+totalSize = getDirectorySize(buildDir);
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -287,9 +293,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     totalSize = getDirectorySize(buildDir);
-    totalSize = getDirectorySize(buildDir);
-
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -317,6 +325,11 @@ if (require.main === module) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -345,14 +358,16 @@ module.exports = { runSimpleAutomation }) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -376,8 +391,32 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "status"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "status"
+        "status"
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+        "status"
+        "status"
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+        "status"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
         "status"
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -406,3 +445,7 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

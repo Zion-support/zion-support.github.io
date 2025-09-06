@@ -12,19 +12,35 @@ const CERTS_FILE = path.join(
   'data'
   'certifications'
   'certifications.json'
-=======
 
 const CERTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'certifications',
   'certifications && certifications.json'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+
+const CERTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'certifications'
+  'certifications.json'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -46,6 +62,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 
 =======
+=======
+
+};
+
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications" })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
@@ -64,6 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res && res.status(500).json({ error: "Failed to load certifications" })
   };
+<<<<<<< HEAD
 
 
 
@@ -72,6 +97,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 =======
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -105,4 +133,23 @@ if ( {) {
     return res.status (500).json ({ error: "Failed to load certifications" });
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+
+  }
+  try {
+    const certifications = null;
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications" })
+};
+  };
+}
+}
+  };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

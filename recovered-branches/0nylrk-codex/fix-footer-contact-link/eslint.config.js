@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 
 
+=======
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import js from "@eslint/js",
 import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -16,7 +27,10 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020
       globals: globals.browser}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default tseslint && tseslint.config(
   { ignores: ["dist"] },
   {
@@ -25,20 +39,64 @@ export default tseslint && tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals && globals.browser},
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     plugins: {
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
     rules: {
+<<<<<<< HEAD
 
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
 
+=======
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn"
+        { allowConstantExport: true }]
+      "@typescript-eslint/no-unused-vars": "off"}}
+      ...reactHooks.configs.recommended.rules
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "react-refresh/only-export-components": [
 
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
+<<<<<<< HEAD
 
+=======
+)
+
+),
+;
+import js from "@eslint/js",;
+import globals from "globals",;
+import reactHooks from "eslint-plugin-react-hooks",;
+import reactRefresh from "eslint-plugin-react-refresh",;
+import tseslint from "typescript-eslint",;
+export default tseslint.config(;
+  { ignores: ["dist"] },;
+  {;
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],;
+    files: ["**/*.{ts,tsx}"],;
+    languageOptions: {;
+      ecmaVersion: 2020,;
+      globals: globals.browser},;
+    plugins: {;
+      "react-hooks": reactHooks,;
+      "react-refresh": reactRefresh},;
+    rules: {;
+      ...reactHooks.configs.recommended.rules,;
+      "react-refresh/only-export-components": [;
+        "warn",;
+        { allowConstantExport: true }];
+      "@typescript-eslint/no-unused-vars": "off"}}
+);
+
+)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import js from "@eslint / js";
 import globals from './globals';
 import react_hooks from './eslint - plugin - react - hooks';
@@ -63,8 +121,39 @@ export default tseslint.config (
       "@typescript - eslint / no - unused - vars": "off"}}
 ),
 
+<<<<<<< HEAD
 =======
 
 ),
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+),
+
+import js from "@eslint/js",;
+import globals from "globals",;
+import reactHooks from "eslint-plugin-react-hooks",;
+import reactRefresh from "eslint-plugin-react-refresh",;
+import tseslint from "typescript-eslint",;
+;
+export default tseslint.config(;
+  { ignores:["dist"] },;
+  {;
+    extends:[js.configs.recommended, ...tseslint.configs.recommended],;
+    files:["**/*.{ts,tsx}"],;
+    languageOptions:{;
+      ecmaVersion:2020,;
+      globals:globals.browser},;
+    plugins:{;
+      "react-hooks":reactHooks,;
+      "react-refresh":reactRefresh},;
+    rules:{;
+      ...reactHooks.configs.recommended.rules,;
+      "react-refresh/only-export-components":[;
+        "warn",;
+        { allowConstantExport:true }],;
+      "@typescript-eslint/no-unused-vars":"off"}}
+),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
+}
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

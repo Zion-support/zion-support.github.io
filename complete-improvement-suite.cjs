@@ -2,6 +2,14 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -63,6 +71,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -79,6 +94,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -99,6 +122,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": timeout});
@@ -113,6 +143,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -131,6 +169,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     this.log('🔧 Phase "1": Resolving Merge Conflicts');
     try {
       const files = this.getAllFiles(this.projectRoot, ['.tsx',
@@ -161,6 +206,14 @@ class CompleteImprovementSuite {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -178,6 +231,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     this.log('🔧 Phase "2": Fixing Syntax Errors');
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), ['.tsx',
@@ -204,6 +264,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -236,6 +304,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     this.log('🔧 Phase "3": Applying Improvements');
     const improvements = [{
         name: 'Performance Configuration',
@@ -268,6 +343,14 @@ class CompleteImprovementSuite {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -289,6 +372,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     this.log('🔧 Phase "4": Committing and Pushing Changes');
     const commands = [{ cmd: 'git add .', "desc": 'Adding all changes' },
       {
@@ -351,6 +441,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } catch (error) {
       return false;
     }
@@ -401,6 +498,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           `✅ Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`
         );
         return true;
@@ -437,6 +541,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           `✅ Fixed syntax "in": ${path.relative(this.projectRoot, filePath)}`
         );
         return true;
@@ -454,6 +565,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -483,6 +602,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "codeSplitting": true,
         "lazyLoading": true,
         "compression": true},
@@ -505,6 +631,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-optimization.json'),
       JSON.stringify(config, null, 2)
@@ -521,6 +654,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -543,6 +684,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
         inputSanitization: true,
@@ -559,6 +707,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-enhancement.json'),
       JSON.stringify(config, null, 2)
@@ -571,6 +726,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -598,6 +761,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "interval": 60000,
         "endpoints": ['/health', '/api/status']},
       "logging": {
@@ -618,6 +788,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs.writeFileSync(
       path.join(this.projectRoot, 'monitoring-config.json'),
       JSON.stringify(config, null, 2)
@@ -635,6 +812,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -663,6 +848,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 "name": 'vendors',
                 "chunks": 'all'}}}}},
       "nextjs": {
@@ -680,6 +872,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs.writeFileSync(
       path.join(this.projectRoot, 'build-optimization.json'),
       JSON.stringify(config, null, 2)
@@ -700,6 +899,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Phase "1": Resolve merge conflicts
     await this.resolveMergeConflicts();
     // Phase 2: Fix syntax errors
@@ -717,6 +923,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -743,6 +957,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs.writeFileSync(
       path.join(this.reportsDir, 'complete-improvement-report.json'),
       JSON.stringify(finalReport, null, 2)
@@ -763,6 +984,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
@@ -770,6 +998,14 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -790,6 +1026,13 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
@@ -817,6 +1060,13 @@ suite.run().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -855,3 +1105,10 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

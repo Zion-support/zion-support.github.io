@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,3 +25,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< \"HEAD\": src.pages.disabled/MoreProductsPage.jsx import React from \'react\'; \"export default function MoreProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title=\"More Products\" description=\"Browse additional offerings priced for the average market.\" categorySlug=\"more - products\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function MoreProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title=\"More Products\" description=\"Browse additional offerings priced for the average market.\" categorySlug=\"more - products\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\""\";
 <<<<<<< "HEAD": src.pages.disabled/MoreProductsPage.jsx import _React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";""";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,13 +1,25 @@
 
+<<<<<<< HEAD
 
+=======
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Skill  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useSkills() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -18,8 +30,14 @@ export function useSkills() {;
       return false
 
 
+<<<<<<< HEAD
 
 =======
+=======
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -35,28 +53,49 @@ export function useSkills() {;
       return false;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           name: skill && skill.name;
           proficiency: skill && skill.proficiency;
           category: skill && skill.category,
           years_experience: skill && skill.years_experience
 
+<<<<<<< HEAD
         });
       if (error) throw error;
 =======
 
+=======
+
+          resume_id: resumeId;
+          name: skill.name;
+          proficiency: skill.proficiency;
+          category: skill.category
+          years_experience: skill.years_experience
+        });
+      if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           resume_id: resumeId,
           name: skill.name,
           proficiency: skill.proficiency,
@@ -66,8 +105,11 @@ export function useSkills() {;
       
       if (error) throw error,
       
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
@@ -75,8 +117,20 @@ export function useSkills() {;
       setIsLoading(false)
 
 
+<<<<<<< HEAD
 
 =======
+=======
+    }
+  }
+  const deleteSkill = async (skillId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete skills')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     setIsLoading(true),;
     setError(null),;
@@ -104,6 +158,7 @@ export function useSkills() {;
       return false;
 
 
+<<<<<<< HEAD
 
     }
     
@@ -112,18 +167,98 @@ export function useSkills() {;
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Skill } from '@/types/resume',;
+import { useAuth } from '@/hooks/useAuth',;
+import { handleResumeError, showSuccessToast } from './useResumeUtils',;
+;
+export function useSkills() {;
+  const { user } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ;
+  const addSkill = async (resumeId:string, skill:Skill):Promise<boolean> => {;
+    if (!user) {;
+      setError('You must be logged in to add skills'),;
+      return false;
+    }
+    ;
+    setIsLoading(true),;
+    setError(null),;
+    ;
+    try {;
+      const { error } = await supabase;
+        .from('resume_skills');
+        .insert({;
+          resume_id:resumeId,;
+          name:skill.name,;
+          proficiency:skill.proficiency,;
+          category:skill.category,;
+          years_experience:skill.years_experience;
+        }),;
+      ;
+      if (error) throw error,;
+      ;
+      return showSuccessToast("Skill added", "Your skill has been added to your resume"),;
+    } catch (e:any) {;
+      return handleResumeError(e, 'Could not add skill'),;
+    } finally {;
+      setIsLoading(false),;    }
+  },;
+  ;
+  const deleteSkill = async (skillId:string):Promise<boolean> => {;
+    if (!user) {;
+      setError('You must be logged in to delete skills'),;
+      return false;
+    }
+    ;
+    setIsLoading(true),;
+    setError(null),;
+    ;
+    try {;
+      const { error } = await supabase;
+        .from('resume_skills');
+        .delete();
+        .eq('id', skillId),;
+      ;
+      if (error) throw error,;
+      ;
+      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume"),;
+    } catch (e:any) {;
+      return handleResumeError(e, 'Could not delete skill'),;
+    } finally {;
+      setIsLoading(false),;
+    }
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
 
+<<<<<<< HEAD
 
+=======
+        .eq('id', skillId);
+      if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .eq('id', skillId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
@@ -132,6 +267,7 @@ export function useSkills() {;
 
 
 
+<<<<<<< HEAD
 
 =======
 import {useState} from 'react';
@@ -156,18 +292,47 @@ if ( {) {
       return false;
     }
 
+=======
+    }
+  }
+  return {
+    isLoading;
+    error;
+    addSkill;
+
+    deleteSkill
+  }
+}
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      const { error } = await supabase;
+        .from('resume_skills');
+        .delete();
+        .eq('id', skillId),;
+      if (error) throw error,;
+      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume");
+    } catch (e: any) {;
+      return handleResumeError(e, 'Could not delete skill');
+    } finally {;
+      setIsLoading(false);
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },;
   return {;
     isLoading,;
     error;
     addSkill;
     deleteSkill;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
     try {
       const { error } = await supabase;
@@ -228,4 +393,55 @@ if (throw error) {
     delete_skill;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 }
+=======
+  },;
+;
+  return {;
+    isLoading,;
+    error,;
+    addSkill,;
+    deleteSkill;
+  },; setIsLoading (true);
+setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('resume skills') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not add skill') 
+}finally {
+  setIsLoading (false) 
+}
+};
+const deleteSkill = async (skillId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete skills');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('resume skills') .delete () .eq ('id', skillId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete skill') 
+}finally {
+  setIsLoading (false) 
+}
+};
+return {
+  isLoading;
+error;
+addSkill;
+deleteSkill 
+}
+}
+  }
+}
+;
+  }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

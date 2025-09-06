@@ -1,13 +1,40 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+<<<<<<< HEAD
+=======
+  setVendorApproval
+  setVendorCommission
+  suspendVendor;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { action, vendorId, value } = req.body || {};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
     else if (action === 'suspend') suspendVendor(String(vendorId), true);
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
+<<<<<<< HEAD
 
 
+=======
+    else if (action === 'commission') setVendorCommission(String(vendorId), Number(value));
+    else return res.status(400).json({ error: 'Unknown action' });
+    res.status(200).json({ ok: true })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   };
@@ -15,6 +42,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 
+<<<<<<< HEAD
 =======
   setVendorApproval,
   setVendorCommission,
@@ -68,3 +96,6 @@ function handler() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

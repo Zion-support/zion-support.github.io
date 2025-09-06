@@ -1,12 +1,16 @@
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -24,10 +28,22 @@ import nextJest from 'next/jest.js';
 =======
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { Config } from "jest";
-import nextJest from "next/jest ;
+import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
+<<<<<<< HEAD
 
   coverageProvider: "v8",
   testEnvironment: "jsdom",
@@ -40,12 +56,25 @@ const config: Config = {
     "!src*.stories.{js,jsx,ts,tsx}",
   ],
 
+=======
+  coverageProvider: "v8"
+  testEnvironment: "jsdom"
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]
+  moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" }
+  testMatch: [
+    "**/__tests__*.(js|jsx|ts|tsx)"
+    "***.{js,jsx,ts,tsx}"
+    "!src*.d.ts"
+    "!src*.stories.{js,jsx,ts,tsx}"
+  ]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
 export default createJestConfig(config);
 import type { Config } from "jest";
+<<<<<<< HEAD
 
 
 =======
@@ -54,19 +83,27 @@ import nextJest from "next/jest.js";
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
+=======
+import nextJest from "next/jest.js";
+
+
+import nextJest from "next/jest.js";
+origin/main
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-import nextJest from "next/jest ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+ursor/fix-lint-push-and-merge-to-main-ae4e
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 const createJestConfig = nextJest({
+<<<<<<< HEAD
 
-  // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
 const createJestConfig = next_jest ({ dir: "./" });
@@ -91,15 +128,23 @@ import next_jest from "next / jest.js";
 ;
 const createJestConfig = next_jest ({
   // Provide the path to your Next.js app to load next.config.js and .env files;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   dir: "./",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
+<<<<<<< HEAD
 
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
 
+=======
+  coverageProvider: "v8",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   }
@@ -108,6 +153,7 @@ const createJestConfig = next_jest ({
     "**/*.(test|spec).(js|jsx|ts|tsx)"
   ]
   collectCoverageFrom: [
+<<<<<<< HEAD
 
 
 =======
@@ -126,10 +172,37 @@ export default createJestConfig(config);
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    "src/**/*.{js,jsx,ts,tsx}"
+    "!src/**/*.d.ts"
+    "!src/**/*.stories.{js,jsx,ts,tsx}"
+  ]
+  coverageThreshold: {
+    global: {
+      branches: 70
+      functions: 70
+      lines: 70
+      statements: 70
+    }
+  }
+}
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+export default createJestConfig(config);
+ursor/integrate-build-improve-and-re-verify-8f7d
+export default createJestConfig(config);
+origin/automation-improvements-final
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+export default createJestConfig(config);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const config: Config = {
   coverage_provider: "v8",
@@ -157,6 +230,9 @@ const config: Config = {
     },
   },
 
+=======
+const config: Config = {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
@@ -167,21 +243,47 @@ const config: Config = {
     "!src*.d && d.ts",
     "!src*.stories.{js,jsx,ts,tsx}",
   ],
+<<<<<<< HEAD
 
   coverageThreshold: {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-export default createJestConfig(config);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 =======
+  coverageThreshold: {
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
+export default createJestConfig(config);
+  coverageProvider: "v8"
+  testEnvironment: "jsdom"
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]
+  moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" }
+  testMatch: [
+    "**/__tests__*.(js|jsx|ts|tsx)"
+    "***.{js,jsx,ts,tsx}"
+    "!src*.d.ts"
+    "!src*.stories.{js,jsx,ts,tsx}"
+  ]
+  coverageThreshold: {
+    global: { branches: 70, functions: 70, lines: 70, statements: 70 },
+  },
+};
+export default createJestConfig(config);
+export default createJestConfig(config);
+ursor/fix-lint-push-and-merge-to-main-ae4e
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export default createJestConfig(config);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
 export default createJestConfig(config);
 
+<<<<<<< HEAD
 }
 ;
 // createJestConfig is exported this way to ensure that next / jest can load the Next.js config which is async;
@@ -212,3 +314,7 @@ export default createJestConfig (config);
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+origin/main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

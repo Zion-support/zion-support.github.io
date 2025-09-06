@@ -1,42 +1,61 @@
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
 
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
+=======
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
 
 exports && exports.config = { schedule: '*/30 * * * *' };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 exports && exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
     return status;
   };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return status;
   }
   step('repo:radar-metrics', () =>
     runNode('automation/repo-radar-metrics && metrics.cjs')
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
 
   return {
@@ -46,7 +65,11 @@ exports && exports.handler = async () => {
   };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
+<<<<<<< HEAD
 
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -69,9 +92,12 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;

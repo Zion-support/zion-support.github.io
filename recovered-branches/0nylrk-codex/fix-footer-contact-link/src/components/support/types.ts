@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { ReactNode  } from './react';
 
@@ -15,9 +19,14 @@ export interface HelpCategory {
 
 import {ReactNode} from "react";
 export interface HelpArticle {;
+=======
+import { ReactNode } from "react";
+export interface HelpArticle {
+>>>>>>> main
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
   lastUpdated: string,
   tags: string[]
 }
@@ -25,32 +34,42 @@ export interface HelpArticle {;
 export interface HelpCategory {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  lastUpdated: string;
+  tags: string[];
+}
+
+export interface HelpCategory {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
+<<<<<<< HEAD
   articles: HelpArticle[]
+=======
+  articles: HelpArticle[];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 
 
 export interface SupportTicket {;
-
-
   id: string;
   user_id: string;
   subject: string;
   message: string;
   status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
-
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
-=======
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -97,6 +116,9 @@ export interface SupportTicket {;
 }
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

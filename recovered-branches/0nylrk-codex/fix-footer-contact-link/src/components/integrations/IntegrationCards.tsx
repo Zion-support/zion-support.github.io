@@ -2,29 +2,57 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
+<<<<<<< HEAD
 
 interface IntegrationCardProps {;
   title: string,;
   description: string,;
   icon: React && React.ReactNode,;
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function IntegrationCard(): any ({;
   title;
   description;
   icon;
+<<<<<<< HEAD
 =======
+=======
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
+interface IntegrationCardProps {
+
+  title: string
+  description: string
+  icon: React.ReactNode
+
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+import { Badge } from "@/components/ui/badge",
+import { ArrowRight, Check, ExternalLink } from "lucide-react",
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -32,12 +60,35 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending",
   href?: string,
 
+<<<<<<< HEAD
   onConnect?: () => void
 }
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  onConnect?: () => void
+}
+
+export function IntegrationCard({;
+  title;
+  description;
+  icon;
+  status = "disconnected";
+  href;
+export function IntegrationCard({
+  title;
+  description;
+  icon;
+  status;
+  title,
+  description,
+  icon,
+  status = "disconnected",
+  href,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -79,7 +130,10 @@ interface IntegrationCardProps {
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -98,12 +152,43 @@ export function IntegrationCard({;
   title,;
   description,;
   icon,;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+=======
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { ArrowRight, Check, ExternalLink } from "lucide-react",;
+;
+interface IntegrationCardProps {;
+  title:string,;
+  description:string,;
+  icon:React.ReactNode,;
+  status?:"connected" | "disconnected" | "pending",;
+  href?:string,;
+  onConnect?:() => void;
+}
+;
+export function IntegrationCard({;
+  title,;
+  description,;
+  icon,;
+  status = "disconnected",;
+  href,;
+  onConnect} IntegrationCardProps) {;
+  return (;
+  status = "disconnected";
+  href;
+  onConnect}: IntegrationCardProps) {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -117,12 +202,25 @@ export function IntegrationCard({;
           </div>;
           {status === "connected" ? (;
             <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">;
+<<<<<<< HEAD
               <Check className="h-3 && 3.5 w-3 && 3.5" />;
+=======
+              <Check className="h-3.5 w-3.5" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <span>Connected</span>;
             </Badge>;
           ) : status === "pending" ? (;
             <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>;
           ) : (;
+<<<<<<< HEAD
+=======
+              <Check className="h-3.5 w-3.5" />;
+              <span>Connected</span>;
+            </Badge>;
+          ) :status === "pending" ? (;
+            <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>;
+          ) :(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Badge variant="outline">Not Connected</Badge>;
           )}
         </div>;
@@ -135,33 +233,47 @@ export function IntegrationCard({;
           <Button variant="outline" className="w-full" asChild>;
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">;
               <span>Manage</span>;
+<<<<<<< HEAD
               <ExternalLink className="h-3 && 3.5 w-3 && 3.5" />;
+=======
+              <ExternalLink className="h-3.5 w-3.5" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </a>;
           </Button>;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
+<<<<<<< HEAD
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
+=======
+              <ExternalLink className="h-3.5 w-3.5" />;
+            </a>;
+          </Button>;
+        ) :(;
+          <Button variant="default" className="w-full" onClick={onConnect}>;
+            <span>Connect</span>;
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </Button>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
       </CardFooter>;
     </Card>;
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export function IntegrationCards() {;
 
-=======
 
 
 
 export function IntegrationCards() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
@@ -170,7 +282,17 @@ export function IntegrationCards() {
   );
 }
 
+<<<<<<< HEAD
 =======
+=======
+export function IntegrationCards() {;
+  return (
+    <div className="grid md:grid-cols-3 gap-6">;
+      {/* Integration cards would go here */}
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -236,10 +358,56 @@ function IntegrationCards() {
       {/* Integration cards would go here */}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 =======
 
 }
 ;
 
+  ),;
+}
+;
+export function IntegrationCards() {;
+  return (;
+    <div className="grid md:grid-cols-3 gap-6">;
+      {/* Integration cards would go here */}
+    </div>;
+  ),;}
+ interface IntegrationCardProps {
+  title: string;
+description: string;
+icon: React.ReactNode;
+status?: "connected" | "disconnected" | "pending";
+href?: string;
+<span>Connected</span> </Badge>) : status === "pending" ? (<Badge variant="outline" className="bg-yellow-100 text-yellow-800" >Pending</Badge>) : (<Badge variant="outline" >Not Connected</Badge>) 
+}</div> </CardHeader> <span>Manage</span> <ExternalLink className="h-3.5 w-3.5" /> </Link> </Button>) : (<span>Connect</span> <ArrowRight className="ml-1.5 h-3.5 w-3.5" /> </Button>) 
+}</CardFooter> </Card>) 
+}{
+  /* Integration cards would go here */ 
+}</div>) 
+}
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
+          </Button>;
+        )}
+      </CardFooter>
+    </Card>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export function IntegrationCards() {
+  return (
+    <div className="grid md:grid-cols-3 gap-6">
+      {/* Integration cards would go here */}
+    </div>
+  )
+}
+}
+;
+<<<<<<< HEAD
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

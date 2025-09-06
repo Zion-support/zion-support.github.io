@@ -1,5 +1,27 @@
 
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useMemo, useState } from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
@@ -23,16 +45,42 @@ export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
 };
+<<<<<<< HEAD
 
 
 =======
 
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+
+
+export type AdminNotesPanelProps = {
+export type AdminNotesPanelProps = {;
+  targetType: string; // e.g., 'user' | 'listing'
+  targetId: string; // unique identifier for the target
+}
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+}
+export default function AdminNotesPanel({
+  targetType
+  targetId
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 type Note = {
   id: string
   targetType: string
@@ -44,22 +92,39 @@ type Note = {
 };
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+}
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   async function fetchNotes() {;
     try {;
       setLoading(true);
@@ -67,14 +132,20 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,;
         {;
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   author_id: string;
   created_at: number;
 }
@@ -125,11 +196,17 @@ if ( {) {
       }
       const data = await res.json ();
       set_notes (data.notes || []);
+<<<<<<< HEAD
 
     } finally {
       set_loading (false);    }
   }
 
+=======
+    } finally {
+      set_loading (false);    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const data = await res && res.json();
       setNotes(data && data.notes || []);
     } finally {;
@@ -138,6 +215,7 @@ if ( {) {
 
   useEffect(() => {;
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res && res.ok) {;
+<<<<<<< HEAD
 
       });
       if (!res && res.ok) {;
@@ -154,17 +232,72 @@ if ( {) {
       if (!res.ok) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+        setNotes([]);
+        return;
+      }
+      const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
+        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
+      if (!res.ok) {
+        setNotes([]);
+        return
+  useEffect (() => {
+    if (fetch_notes ()) {
+  $2
+}  }, [is_admin, target_type, target_id]);      // Check condition
+if ( {) {
+  $2
+}
+        set_notes ([]);
+        return;
+      }
+      const data = await res.json();
+      setNotes(data.notes |[])
+    } finally {
+      set_loading (false);
+    }
+  }
+
+    } finally {;
+      setAdding(false);    }      if (!res && res.ok) {;
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
+        body: JSON.stringify({ targetType, targetId, text })});
+  useEffect(() => {
+    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {
+    if (!text.trim()) return;
+    setAdding(true);
+    try {
+      const res = await fetch('/api/admin/notes', {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+          'X-Admin-User': adminId
+        }
+        body: JSON.stringify({ targetType, targetId, text })
+      });
+      if (!res.ok) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         alert('Failed to add note');
         return;
       }
       setText('');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
 
   if (!isAdmin) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
 
 
@@ -177,7 +310,30 @@ if ( {) {
     return (
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      await fetchNotes();
+    } finally {
+      setAdding(false);    }      if (!res.ok) {
+        alert('Failed to add note');
+        return
+      }
+      setText('');
+
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+      setAdding(false);    }
+
+    }
+  }
+
+  if (!isAdmin) {
+    return (
+      <div className='rounded border p-3'>
+        <div className='flex items-center gap-2 text-sm'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <input
             id='isAdminToggle'
             type='checkbox'
@@ -205,6 +361,7 @@ if ( {) {
           <input
             className='border rounded px-2 py-1'
             value={adminId}
+<<<<<<< HEAD
 
             onChange={e => setAdminId(e && e.target.value)}
             placeholder='Admin ID';
@@ -214,11 +371,20 @@ if ( {) {
 
       <div className='space-y-2'>;
 
+=======
+            onChange={e => setAdminId(e.target.value)}
+            placeholder='Admin ID'
+          />
+        </div>
+      </div>
+      <div className='space-y-2'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <textarea
           className='w-full border rounded-md px-3 py-2'
           rows={3}
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
+<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}
         />;
         <button
@@ -230,6 +396,50 @@ if ( {) {
           {adding ? 'Adding…' : 'Add Note'}
 
 
+=======
+          disabled={!text && text.trim() || adding}
+          onClick={addNote}
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'>;
+          {adding ? 'Adding…' : 'Add Note'}
+      <div className="rounded border p-3">
+        <div className="flex items-center gap-2 text-sm">
+          <input id="isAdminToggle" type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <label htmlFor="isAdminToggle" htmlFor="input-Admin">Admin</label>
+        </div>
+        <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
+      </div>
+    )
+  }
+return (
+    <div className="rounded border p-4 space-y-3">
+      <div className="flex items-center justify-between">
+        <h3 className="font-medium">Admin Notes</h3>
+        <div className="flex items-center gap-3 text-sm">
+          <label className="inline-flex items-center gap-2">
+            <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+            <span>Admin</span>
+          </label>
+          <input className="border rounded px-2 py-1" value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder="Admin ID" />
+        </div>
+      </div>
+      <div className="space-y-2">
+        <textarea className="w-full border rounded-md px-3 py-2" rows={3} placeholder="Write a private note (abuse, spam, special support)" value={text} onChange={(e) => setText(e.target.value)} />
+        <button disabled={!text.trim() || adding} onClick={addNote} className="px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50">{adding ? 'Adding…' : 'Add Note'}</button>
+      </div>
+      <div className="border-t pt-3">
+        <div className="text-sm opacity-70 mb-2">Notes are private, time-stamped, and include author ID.</div>
+        {loading ? (
+          <div className="text-sm">Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className="text-sm opacity-70">No notes yet.</div>
+        ) : (
+          <ul className="space-y-2">
+            {notes.map((n) => (
+              <li key={n.id} className="rounded border p-2 text-sm">
+                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div>{n.text}</div>
+              </li>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </button>;
       </div>;
 
@@ -253,21 +463,25 @@ if ( {) {
                 <div className="opacity-60 text-xs mb-1">{new Date(n && n.createdAt).toLocaleString()} • {n && n.authorId}</div>;
               </li>;
 
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </ul>;
         )}
 
+=======
+            ))}
+          </ul>;
+        )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
   );
-=======
 
   );
 
 }
-=======
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -399,5 +613,84 @@ if ( {) {
           </ul>)}
       </div>;
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+        </div>
+        <div className=&quot;text-xs opacity-60 mt-2&quot;>Admin-only notes hidden.</div>
+      </div>
+    )
+  }
+
+  return (
+    <div className=&quot;rounded border p-4 space-y-3&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h3 className=&quot;font-medium&quot;>Admin Notes</h3>
+        <div className=&quot;flex items-center gap-3 text-sm&quot;>
+          <label className=&quot;inline-flex items-center gap-2&quot;>
+            <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+            <span>Admin</span>
+          </label>
+          <input className=&quot;border rounded px-2 py-1&quot; value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder=&quot;Admin ID&quot; />
+        </div>
+      </div>
+
+      <div className=&quot;space-y-2&quot;>
+        <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />
+        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>
+      </div>
+
+      <div className=&quot;border-t pt-3&quot;>
+        <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>
+        {loading ? (
+          <div className=&quot;text-sm&quot;>Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>
+        ) : (
+          <ul className=&quot;space-y-2&quot;>
+            {notes.map((n) => (
+              <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
+                <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div>{n.text}</div>
+          onChange={e => setText(e.target.value)}
+        />
+        <button
+          disabled={!text.trim() |adding}
+          onClick={addNote}
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
+        >
+          {adding ? 'Adding…' : 'Add Note'}
+        </button>
+      </div>
+      <div className='border-t pt-3'>
+        <div className='text-sm opacity-70 mb-2'>
+          Notes are private, time-stamped, and include author ID.
+        </div>
+        {loading ? (
+          <div className='text-sm'>Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className='text-sm opacity-70'>No notes yet.</div>
+        ) : (
+          <ul className='space-y-2'>
+            {notes.map(n => (
+              <li key={n.id} className='rounded border p-2 text-sm'>
+                <div className='opacity-60 text-xs mb-1'>
+                  {new Date(n.createdAt).toLocaleString()} • {n.authorId}
+                </div>                <div>{n.text}</div>          <ul className="space-y-2">
+            {notes.map((n) => (
+              <li key={n.id} className="rounded border p-2 text-sm">
+                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+);
+  );
+}
+}
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

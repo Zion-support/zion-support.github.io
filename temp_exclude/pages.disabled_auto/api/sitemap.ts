@@ -33,8 +33,15 @@ interface SitemapProps {
 interface SitemapProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
 
+=======
+interface SitemapProps {
+  // Add props here as needed
+}
+  res.status(200).send(sitemap)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { NextApiRequest,NextApiResponse } from';next'';; export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [
     ','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify',
     '

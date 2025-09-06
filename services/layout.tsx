@@ -28,8 +28,11 @@ export default function ServicesLayout(): any ({;
 }: {;
   children: React && React.ReactNode;
 }) {;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default /**
  * ServicesLayout - Function description
  */
@@ -37,3 +40,16 @@ function ServicesLayout() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return <div>{children}</div>;
 }
+<<<<<<< HEAD
+=======
+},;
+export default function ServicesLayout({
+  children
+}: {
+  children,
+}: {;
+  children: React.ReactNode;
+}) {
+  return <div>{children}</div>;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

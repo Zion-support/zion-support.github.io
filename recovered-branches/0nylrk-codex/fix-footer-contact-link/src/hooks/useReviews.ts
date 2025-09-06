@@ -22,19 +22,74 @@ if (return) {
 }
     setIsLoading (true),
 
-=======
 
 
   // Fetch reviews for a project
 
   const fetchProjectReviews = async (projectId: string) => {
 
+<<<<<<< HEAD
+=======
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Review, ReviewReport} from "@/types/reviews";
+import {toast} from "@/hooks/use-toast";
+export function useReviews(projectId?: string) {;
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [userReview, setUserReview] = useState<Review | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import { useState } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { Review, ReviewReport } from "@/types/reviews";
+import { toast } from "@/hooks/use-toast";
+export function useReviews(projectId?: string) {
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [reviews, setReviews] = useState<Review[]>([]),
+  const [userReview, setUserReview] = useState<Review | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import { Review, ReviewReport } from "@/types/reviews",
+import { toast } from "@/hooks/use-toast",
+export function useReviews(projectId?: string) {
+  const { user } = useAuth(),
+  const [isLoading, setIsLoading] = useState(false),
+  const [reviews, setReviews] = useState<Review[]>([]),
+  const [userReview, setUserReview] = useState<Review | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
+  // Fetch reviews for a project
+
+  const fetchProjectReviews = async (projectId: string) => {
+    if (!projectId) return;
+    setIsLoading(true)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    if (!projectId) return,
+    
+    setIsLoading(true),
+    
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    try {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select(`
+          *,
+          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
+        `)
+        .eq("project_id", projectId)
+        .eq("is_visible", true)
     if (!projectId) return,
     
     setIsLoading(true),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { data, error } = await supabase;
         .from ("reviews");
@@ -42,42 +97,100 @@ if (return) {
           *;
 
 
+<<<<<<< HEAD
+=======
+        .eq("status", "approved");
+      if (error) throw error;
+      setReviews(data |[]);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .eq("status", "approved"),
         
       if (error) throw error,
       
       setReviews(data || []),
       
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Check if current user has already submitted a review
       if (user) {
         const { data: userReviewData, error: userReviewError } = await supabase
           .from("reviews")
           .select("*")
           .eq("project_id", projectId)
+<<<<<<< HEAD
 
           .eq("reviewer_id", user.id)
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           .single(),
           
 
 
+<<<<<<< HEAD
+=======
+          .eq("reviewer_id", user.id)
+          .single();
+          .single(),
+          
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
+<<<<<<< HEAD
       console && console.error("Error fetching reviews:", err);
       toast({
 
+=======
+      console.error("Error fetching reviews:", err),
+      toast({
+        title: "Error";
+        description: "Failed to load reviews"
+        title: "Error",
+        description: "Failed to load reviews",
+        variant: "destructive"})
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  // Fetch reviews for a user (to display on profile)
+  const fetchUserReviews = async (userId: string) => {
+    if (!userId) return;
+    setIsLoading(true)
+  },
+  
+  // Fetch reviews for a user (to display on profile)
+  const fetchUserReviews = async (userId: string) => {
+    if (!userId) return,
+    
+    setIsLoading(true),
+    
+    try {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select(`
+          *,
+          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
+        `)
+        .eq("reviewee_id", userId)
+        .eq("is_visible", true)
+        .eq("status", "approved")
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         title: "Error",
         description: "Failed to load reviews",
 
 
         variant: "destructive"})
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("project_id", project_id);
@@ -129,7 +242,6 @@ if (return) {
 }
     setIsLoading (true),
 
-=======
 
   },
   
@@ -140,7 +252,10 @@ if (return) {
     setIsLoading(true),
     
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { data, error } = await supabase;
         .from ("reviews");
@@ -148,24 +263,36 @@ if (return) {
           *;
 
 
+<<<<<<< HEAD
+=======
+        .order("created_at", { ascending: false });
+      if (error) throw error;
+      setReviews(data |[])
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .order("created_at", { ascending: false }),
         
       if (error) throw error,
       
       setReviews(data || [])
+<<<<<<< HEAD
 
 
     } catch (err: any) {
       console && console.error("Error fetching user reviews:", err);
       toast({
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         title: "Error",
         description: "Failed to load reviews",
 
 
         variant: "destructive"})
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("reviewee_id", user_id);
@@ -193,6 +320,23 @@ if (throw error) {
   // Submit a review;
   const submit_review = async (review: {
 
+<<<<<<< HEAD
+=======
+    } catch (err: any) {
+      console.error("Error fetching user reviews:", err),
+      toast({
+        title: "Error";
+        description: "Failed to load reviews"
+        title: "Error",
+        description: "Failed to load reviews",
+        variant: "destructive"})
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  // Submit a review
+  const submitReview = async (review: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     project_id: string;
     reviewee_id: string;
     rating: number;
@@ -200,6 +344,7 @@ if (throw error) {
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
+<<<<<<< HEAD
 
     would_work_again?: boolean,
     is_anonymous: boolean;
@@ -235,6 +380,8 @@ if ( {) {
           description: "You have already submitted a review for this project"
           variant: "destructive"})
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           reviewer_id: user.id});
         .select ();
         .single ();
@@ -269,8 +416,11 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"});
 
-=======
 
+<<<<<<< HEAD
+=======
+    would_work_again?: boolean
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
   // Submit a review
@@ -283,12 +433,24 @@ if ( {) {
     quality_rating?: number,
     timeliness_rating?: number,
     would_work_again?: boolean,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     is_anonymous: boolean
   }) => {
     if (!user) {
       toast({
+<<<<<<< HEAD
 
+=======
+        title: "Error";
+        description: "You must be logged in to submit a review"
+        variant: "destructive"});
+      return false
+    }
+    setIsSubmitting(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
@@ -297,7 +459,10 @@ if ( {) {
     
     setIsSubmitting(true),
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { data, error } = await supabase
         .from("reviews")
@@ -305,7 +470,96 @@ if ( {) {
           ...review,
           reviewer_id: user.id})
         .select()
+<<<<<<< HEAD
 
+=======
+        .single();
+      if (error) throw error;
+      toast({
+        title: "Success"
+        description: "Your review has been submitted and is pending approval"});
+      setUserReview(data);
+      return true
+    } catch (err: any) {
+      console.error("Error submitting review:", err);
+      // Check for unique constraint violation
+      if (err.code === "23505") {
+        toast({
+          title: "Error";
+          description: "You have already submitted a review for this project"
+          variant: "destructive"})
+      } else {
+        toast({
+          title: "Error";
+          description: "Failed to submit review"
+          variant: "destructive"})
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        .single(),
+        
+      if (error) throw error,
+      
+      toast({
+        title: "Success",
+        description: "Your review has been submitted and is pending approval"}),
+      
+      setUserReview(data),
+      return true
+    } catch (err: any) {
+      console.error("Error submitting review:", err),
+      
+      // Check for unique constraint violation
+      if (err.code === "23505") {
+        toast({
+          title: "Error",
+          description: "You have already submitted a review for this project",
+          variant: "destructive"})
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to submit review",
+          variant: "destructive"})
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { useState } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Review, ReviewReport } from "@/types/reviews",;
+import { toast } from "@/hooks/use-toast",;
+export function useReviews(projectId?: string) {;
+  const { user } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [reviews, setReviews] = useState<Review[]>([]),;
+  const [userReview, setUserReview] = useState<Review | null>(null),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  // Fetch reviews for a project;
+  const fetchProjectReviews = async (projectId: string) => {;
+    if (!projectId) return,;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase;
+        .from("reviews");
+        .select(`;
+          *,;
+          reviewer_profile:profiles!reviewer_id(display_name, avatar_url);
+        `);
+        .eq("project_id", projectId);
+        .eq("is_visible", true);
+        .eq("status", "approved"),;
+      if (error) throw error,;
+      setReviews(data || []),;
+      // Check if current user has already submitted a review;
+      if (user) {;
+        const { data: userReviewData, error: userReviewError } = await supabase;
+          .from("reviews");
+          .select("*");
+          .eq("project_id", projectId);
+          .eq("reviewer_id", user.id);
+          .single(),;
+        if (!userReviewError && userReviewData) {;
+          setUserReview(userReviewData);
+        }
         .single(),
         
       if (error) throw error,
@@ -331,7 +585,7 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
       return false;
     } finally {
@@ -341,7 +595,21 @@ if ( {) {
 
   };
 
+<<<<<<< HEAD
 =======
+=======
+      }
+      return false
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  // Update a review
+  const updateReview = async (reviewId: string, updates: Partial<Review>) => {
+    if (!user) return false;
+    setIsSubmitting(true)
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
@@ -426,24 +694,42 @@ if ( {) {
   },
 
 
+<<<<<<< HEAD
 
   
+=======
+  
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false,
     
     setIsSubmitting(true),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { error } = await supabase
         .from("reviews")
         .update(updates)
         .eq("id", reviewId)
+<<<<<<< HEAD
 
         .eq("reviewer_id", user.id)
 
+=======
+        .eq("reviewer_id", user.id)
+        .eq("status", "pending");
+      if (error) throw error;
+      toast({
+        title: "Success"
+        description: "Your review has been updated"});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .eq("status", "pending"),
         
       if (error) throw error,
@@ -452,16 +738,22 @@ if ( {) {
         title: "Success",
         description: "Your review has been updated"}),
       
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       if (userReview) {
         setUserReview({ ...userReview, ...updates })
       }
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console && console.error("Error updating review:", err);
       toast({
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Update a review;
   const update_review = async (review_id: string, updates: Partial < Review>) => {
@@ -501,14 +793,12 @@ if ( {) {
         description: "Failed to update review"
         variant: "destructive"});
       return false;
-=======
 
         title: "Error",
         description: "Failed to update review",
         variant: "destructive"}),
 
       return false
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
       setIsSubmitting (false);
     }
@@ -518,6 +808,24 @@ if ( {) {
   
 
 
+<<<<<<< HEAD
+=======
+      console.error("Error updating review:", err),
+      toast({
+        title: "Error";
+        description: "Failed to update review"
+        variant: "destructive"});
+        title: "Error",
+        description: "Failed to update review",
+        variant: "destructive"}),
+      return false
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -525,16 +833,27 @@ if ( {) {
       const { error } = await supabase
         .from("review_reports")
         .insert({
+<<<<<<< HEAD
 
           reporter_id: user && user.id,
 
           reason});
 =======
 
+=======
+          reporter_id: user && user.id,
+
+          reason});
+
+          review_id: reviewId;
+          reporter_id: user.id
+          reason});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           review_id: reviewId,
           reporter_id: user.id,
           reason}),
         
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (error) {
@@ -542,6 +861,8 @@ if ( {) {
         if (error && error.code === "23505") {
           toast({
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             title: "Error",
             description: "You have already reported this review",
@@ -621,21 +942,151 @@ if ( {) {
           title: "Report Submitted",
           description: "Thank you. Our team will review your report"}),
 
+<<<<<<< HEAD
+=======
+      if (error) {
+        // Check for unique constraint violation
+        if (error.code === "23505") {
+          toast({
+            title: "Error";
+            description: "You have already reported this review"
+            title: "Error",
+            description: "You have already reported this review",
+            variant: "destructive"})
+        } else {
+          throw error
+        }
+      } else {
+        toast({
+          title: "Report Submitted"
+          description: "Thank you. Our team will review your report"});
+          title: "Report Submitted",
+          description: "Thank you. Our team will review your report"}),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         return true
       }
     } catch (err: any) {
       console.error("Error reporting review:", err),
       toast({
+<<<<<<< HEAD
 
+=======
+        title: "Error";
+        description: "Failed to report review"
+        variant: "destructive"})
+    }
+    return false
+  }
+  // Initialize by fetching reviews if projectId is provided
+  if (projectId && reviews.length === 0 && !isLoading) {
+    fetchProjectReviews(projectId)
+  }
+  return {
+    reviews;
+    userReview;
+    isLoading;
+    isSubmitting;
+    fetchProjectReviews;
+    fetchUserReviews;
+        title: "Error",
+        description: "Failed to report review",
+        variant: "destructive"})
+  },;
+  // Update a review;
+  const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
+    if (!user) return false,;
+    setIsSubmitting(true),;
+    try {;
+      const { error } = await supabase;
+        .from("reviews");
+        .update(updates);
+        .eq("id", reviewId);
+        .eq("reviewer_id", user.id);
+        .eq("status", "pending"),;
+      if (error) throw error,;
+      toast({;
+        title: "Success",;
+        description: "Your review has been updated"}),;
+      if (userReview) {;
+        setUserReview({ ...userReview, ...updates });
+      }
+;
+      return true;
+    } catch (err: any) {;
+      console.error("Error updating review:", err),;
+      toast({;
+        title: "Error",;
+        description: "Failed to update review",;
+        variant: "destructive"}),;
+      return false;
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },;
+  // Report a review;
+  const reportReview = async (reviewId: string, reason: string) => {;
+    if (!user) return false,;
+    try {;
+      const { error } = await supabase;
+        .from("review_reports");
+        .insert({;
+          review_id: reviewId,;
+          reporter_id: user.id,;
+          reason}),;
+      if (error) {;
+        // Check for unique constraint violation;
+        if (error.code === "23505") {;
+          toast({;
+            title: "Error",;
+            description: "You have already reported this review",;
+            variant: "destructive"});
+        } else {;
+          throw error;
+        }
+      } else {;
+        toast({;
+          title: "Report Submitted",;
+          description: "Thank you. Our team will review your report"}),;
+        return true;
+      }
+    } catch (err: any) {;
+      console.error("Error reporting review:", err),;
+      toast({;
+        title: "Error",;
+        description: "Failed to report review",;
+        variant: "destructive"});
+    }
+;
+    return false;
+  },;
+  // Initialize by fetching reviews if projectId is provided;
+  if (projectId && reviews.length === 0 && !isLoading) {;
+    fetchProjectReviews(projectId);
+  }
+;
+  return {;
+    reviews,;
+    userReview,;
+    isLoading,;
+    isSubmitting,;
+    fetchProjectReviews,;
+    fetchUserReviews,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
     submitReview;
     updateReview;
 
     reportReview}
+<<<<<<< HEAD
 =======
     submit_review;
     update_review;
     report_review}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    submit_review;
+    update_review;
+    report_review}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }

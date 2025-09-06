@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default function Contact() {;
@@ -8,6 +9,15 @@ export default function Contact() {;
         <h1>Contact Us</h1>;
         <p>Get in touch with our team for your IT and AI service needs.</p>;
       </main>;
+=======
+export default function Contact() {;
+  return (
+    <div>
+      <main>
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team for your IT and AI service needs.</p>
+      </main>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>;
   );
 =======

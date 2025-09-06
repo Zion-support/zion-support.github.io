@@ -25,6 +25,19 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
 
+<<<<<<< HEAD
+=======
+import { useState  } from 'react';
+import { useState } from 'react'
+import { Copy, Send } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
+interface PromptCardProps {
+  prompt: Prompt
+export function PromptCard({ prompt }: PromptCardProps) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = null;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>;
       <p className='mb-4 text-sm'>{prompt && prompt.text}</p>;
@@ -35,6 +48,7 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           onClick={handleCopy}
           aria-label='Copy prompt'>;
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
+<<<<<<< HEAD
 
 
 }
@@ -94,3 +108,58 @@ function PromptCard() {
 }
 
 ;
+=======
+        </Button>
+        <Button
+          variant='secondary'
+          size='sm'
+          onClick={handleSend}
+          aria-label='Send to ZionGPT'
+        >
+          <Send className='w-4 h-4' />        </Button>
+      </div>
+    </div>
+  )
+}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
+import { useState } from 'react',;
+
+}
+  );
+}
+
+import { useState } from 'react';
+import { Copy, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import type { Prompt } from '@/types/prompts',;
+interface PromptCardProps {;
+  prompt: Prompt;
+}
+
+          <Send className="w-4 h-4" />
+          <Send className="w-4 h-4" />
+        </Button>
+        <Button
+          variant='secondary'
+          size='sm'
+          onClick={handleSend}
+          aria-label='Send to ZionGPT'
+        >
+          <Send className='w-4 h-4' />        </Button>
+      </div>
+    </div>
+  )
+}
+}
+;
+}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
+          <Send className="w-4 h-4" />
+        </Button>
+      </div>;
+    </div>;
+  );
+};
+}
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

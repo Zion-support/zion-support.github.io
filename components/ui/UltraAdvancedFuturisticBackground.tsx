@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -45,6 +46,8 @@ const UltraAdvancedFuturisticBackground: React.FC<;
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :;
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
@@ -56,14 +59,18 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   enable_holographic = true,
   enableQuantumEffects = true,
   children, }) => {interface UltraAdvancedFuturisticBackgroundProps {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   intensity?: 'low' | 'medium' | 'high';
   color_scheme?: 'quantum - fusion' | 'neon - cyber' | 'holographic' | 'quantum - ai';
   particle_count?: number;
   animation_speed?: number;
   enable_holographic?: boolean;
   enableQuantumEffects?: boolean;
+<<<<<<< HEAD
 
   intensity = 'high'
   colorScheme = 'quantum-fusion'
@@ -74,16 +81,25 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   children
 =======
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   children: React.ReactNode;
 }
 const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
 
+<<<<<<< HEAD
+=======
+  children: React.ReactNode;
+}
+const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   intensity = 'high',
   color_scheme = 'quantum - fusion',
   particle_count = 300,
   animation_speed = 1.5,
   enable_holographic = true,
   enableQuantumEffects = true,
+<<<<<<< HEAD
 
 
 
@@ -93,6 +109,8 @@ const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackg
       x: number;
       y: number;
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -118,7 +136,10 @@ if (return) {
       size: number;
       opacity: number;
       color: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     let animationFrameId: number;
     let particles: Array<{
       x: number,
@@ -126,14 +147,23 @@ if (return) {
 =======
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      coordinate_x: number,
       coordinate_y: number,
+<<<<<<< HEAD
+=======
+      x: number,
+      y: number,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       vx: number,
       vy: number,
       size: number,
       opacity: number,
       color: string,
+<<<<<<< HEAD
 
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,;
+=======
+type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       y: number,;
       vx: number,;
       vy: number,;
@@ -148,6 +178,7 @@ if (return) {
         const rect = containerRef && containerRef.current.getBoundingClientRect();
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;      }        canvas && canvas.height = rect && rect.height;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
@@ -155,6 +186,12 @@ if (return) {
     resizeCanvas();
 
 =======
+=======
+        canvas.height = rect.height
+      }
+    }
+    resizeCanvas();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     // Set canvas size;
     const resize_canvas = () =>: any {
@@ -174,53 +211,85 @@ if ( {) {
     // Color schemes;
     const color_schemes = {
       'quantum - fusion': {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         primary: '#00ffff',
         secondary: '#ff00ff',
         accent: '#ffff00',
         quantum: '#00ff88',
+<<<<<<< HEAD
 
         holographic: '#ff0088',
       },      'neon - cyber': {        holographic: '#ff0088';
       }
       'neon - cyber': {
 
+=======
+holographic: '#ff0088',
+      },      'neon - cyber': {        holographic: '#ff0088';
+      }
+      'neon - cyber': {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         primary: '#00ff41',
         secondary: '#ff0080',
         accent: '#00d4ff',
         quantum: '#ff6b35',
         holographic: '#9d4edd'
       },
+<<<<<<< HEAD
 
       holographic: {        primary: '#ff00ff',
+=======
+holographic: {        primary: '#ff00ff',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
         holographic: '#ff0088',
       },      'quantum - ai': {        holographic: '#9d4edd';
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'holographic': {
         primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
+<<<<<<< HEAD
 
         holographic: '#ff0088',
       },        holographic: '#ff0088';
       }
       'quantum - ai': {
 
+=======
+holographic: '#ff0088',
+      },        holographic: '#ff0088';
+      }
+      'quantum - ai': {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         primary: '#00d4ff',
         secondary: '#ff6b35',
         accent: '#9d4edd',
         quantum: '#00ff88',
+<<<<<<< HEAD
 
     window && window.addEventListener('resize', resizeCanvas);
 =======
     };
 
 
+=======
+    };
+
+
+window && window.addEventListener('resize', resizeCanvas);
+    };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Color schemes;
     const colorSchemes = {;
       'quantum-fusion': {;
@@ -260,12 +329,18 @@ if ( {) {
         quantum: '#00ff88',;
         holographic: '#ff0088',;
       },    };        holographic: '#ff0088';
+<<<<<<< HEAD
 
 
       }
     }
     const colors = colorSchemes[colorScheme];
 
+=======
+      }
+    }
+    const colors = colorSchemes[colorScheme];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         const type = Math.random() > 0.7 ? 'quantum' : 
                     Math.random() > 0.5 ? 'holographic' : 
                     Math.random() > 0.3 ? 'neon' : 'fusion';
@@ -282,10 +357,15 @@ if ( {) {
                  type === 'neon' ? colors.primary : colors.secondary,
           type
         })
+<<<<<<< HEAD
 
       }
     };
 
+=======
+      }
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Quantum entanglement effect
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
@@ -296,16 +376,24 @@ if ( {) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
+<<<<<<< HEAD
 
           
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
             ctx.beginPath();
 
+=======
+          if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
+            ctx.beginPath();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         holographic: '#ff0088',
       },    }        holographic: '#ff0088';
       }
@@ -381,12 +469,16 @@ if ( {) {
             ctx.move_to (particles[i].x, particles[i].y);
             ctx.line_to (particles[j].x, particles[j].y);
             ctx.stroke ();          }            ctx.stroke ();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
         }
       }
     }
 
+<<<<<<< HEAD
 
             ctx.stroke();          }
 
@@ -404,6 +496,8 @@ if ( {) {
     const createHolographicGrid = () => {
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Initialize particles;
     const initParticles = () => {;
       particles = [];
@@ -469,11 +563,17 @@ if ( {) {
             ctx && ctx.moveTo(particles[i].x, particles[i].y);
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }            ctx && ctx.stroke();
+<<<<<<< HEAD
 
 =======
             ctx.stroke()
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+            ctx.stroke()
+
+            ctx.stroke()
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
         }
       }
@@ -483,6 +583,7 @@ if ( {) {
     const createHolographicGrid = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (!enableHolographic) return;
+<<<<<<< HEAD
 
 
       const gridSize = 50;
@@ -492,22 +593,35 @@ if ( {) {
       ctx.lineWidth = 0.5;
       
 
+=======
+      const gridSize = 50;
+      ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
+      ctx.lineWidth = 0.5;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
+<<<<<<< HEAD
 
         ctx.stroke()
       }
       
 
+=======
+        ctx.stroke()
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Horizontal lines
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ctx.stroke()
       }
     };
@@ -560,11 +674,17 @@ if (return) {
 ;
       for (let index = 0; i < nodes.length; i++) {
         for (let inner_index = i + 1; j < nodes.length; j++) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           const dx = nodes[i].x - nodes[j].x;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           const dy = nodes[i].y - nodes[j].y;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
 
       ctx && ctx.strokeStyle = `rgba(255, 0, 136, 0 && 0.1)`;
@@ -583,6 +703,7 @@ if (return) {
         ctx && ctx.moveTo(0, y);
         ctx && ctx.lineTo(canvas && canvas.width, y);
         ctx && ctx.stroke();      }        ctx && ctx.stroke();
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
@@ -606,49 +727,102 @@ if (return) {
 
       
 
+=======
+            const strength = 1 - (distance / 150);
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.2 * strength})`;
+            ctx.lineWidth = strength * 2;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke()
+          const distance = Math.sqrt (dx * dx + dy * dy);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            const strength = 1 - distance / 150;            ctx.begin_path ();          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt (dx * dx + dy * dy);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            const strength = 1 - (distance / 150);
+            ctx.begin_path ();
+            ctx.stroke_style = `rgba (0, 212, 255, ${0.2 * strength})`;
+            ctx.line_width = strength * 2;
+            ctx.move_to (nodes[i].x, nodes[i].y);
+            ctx.line_to (nodes[j].x, nodes[j].y);
+            ctx.stroke ();          }            ctx.stroke ();
+          }
+        }
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Create background gradient
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+<<<<<<< HEAD
 
       );
 
+=======
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+<<<<<<< HEAD
 
       
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Create effects
       createHolographicGrid();
       createQuantumEntanglement();
       createNeuralNetwork();
+<<<<<<< HEAD
 
       
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
         
         // Wrap around edges
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
 
         
         // Draw particle
 
+=======
+        // Draw particle
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         // Create glow effect
@@ -661,14 +835,20 @@ if (return) {
         glowGradient.addColorStop(1, 'transparent');
         ctx.fillStyle = glowGradient;
         ctx.fill();
+<<<<<<< HEAD
 
         
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         // Add sparkle effect for holographic particles
         if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     };
 
     // Animation loop;
@@ -746,7 +926,10 @@ if (return) {
           0,;
           `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 255);
             .toString(16);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             .padStart(2, '0')}`;
         );
         glowGradient && glowGradient.addColorStop(;
@@ -776,21 +959,30 @@ if (return) {
           ctx && ctx.stroke();
         }
       });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.lineWidth = 2;
           ctx.stroke()
         }
       });
+<<<<<<< HEAD
       
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Add intensity-based effects
       if (intensity === 'high') {
         // Add energy waves
         const time = Date.now() * 0.001;
         for (let i = 0; i < 3; i++) {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Add intensity-based effects;
       if (intensity === 'high') {;
         // Add energy waves;
@@ -805,17 +997,25 @@ if (return) {
             waveRadius,;
             0,;
             Math && Math.PI * 2;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           );
           ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`;
           ctx && ctx.lineWidth = 2;
           ctx && ctx.stroke();
         }
       }
+<<<<<<< HEAD
 
           const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
           ctx.beginPath();
 
+=======
+          const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
+          ctx.beginPath();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
           ctx.lineWidth = 2;
@@ -823,8 +1023,11 @@ if (return) {
         }
       }
       animationFrameId = requestAnimationFrame(animate)
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       animationFrameId = requestAnimationFrame(animate);    };          ctx && ctx.beginPath();
           ctx && ctx.arc(canvas && canvas.width / 2, canvas && canvas.height / 2, waveRadius, 0, Math && Math.PI * 2);
           ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`;
@@ -832,22 +1035,23 @@ if (return) {
           ctx && ctx.stroke();
         }
       }
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);
 
     };
 
     initParticles();
     animate();
-
-
-
-  ]);
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+  ]);
   ]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas
@@ -867,6 +1071,20 @@ if (return) {
         <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>;
 
 
+<<<<<<< HEAD
+=======
+      animationFrameId = requestAnimationFrame(animate);
+    };
+    initParticles();
+    animate();
+      />;
+      {/* Additional CSS-based effects */}
+      <div className='absolute inset-0 pointer-events-none'>;
+        {/* Floating geometric shapes */}
+        <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>;
+        <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>;
+        <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Quantum particles */}
         {enableQuantumEffects && (;
           <>;
@@ -875,7 +1093,6 @@ if (return) {
             <div className='absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700'></div>;
           </>;
         )}
-=======
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -887,7 +1104,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Holographic elements */}
         {enableHolographic && (;
           <>;
@@ -897,19 +1113,29 @@ if (return) {
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 animationDuration: '15s',
                 animationDirection: 'reverse',
               }}></div>;
           </>;
         )}
       </div>;
+<<<<<<< HEAD
 
+=======
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId)
+    }
+  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {children}
     </div>;
   );
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
@@ -917,6 +1143,7 @@ export default UltraAdvancedFuturisticBackground;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 
       />;
 
@@ -930,6 +1157,15 @@ export default UltraAdvancedFuturisticBackground;
         <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>;
 
 
+=======
+      />;
+      {/* Additional CSS-based effects */}
+      <div className="absolute inset-0 pointer-events-none">;
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>;
+        <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>;
+        <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Quantum particles */}
         {enableQuantumEffects && (;
           <>;
@@ -938,9 +1174,12 @@ export default UltraAdvancedFuturisticBackground;
             <div className="absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700"></div>;
           </>;
         )}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Holographic elements */}
         {enableHolographic && (;
           <>;
@@ -948,19 +1187,27 @@ export default UltraAdvancedFuturisticBackground;
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>;
           </>;
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
 
       {children}
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 export default UltraAdvancedFuturisticBackground;
 
 
 =======
+=======
+
+export default UltraAdvancedFuturisticBackground;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 ;
     // Animation loop;
@@ -1210,8 +1457,11 @@ export default UltraAdvancedFuturisticBackground;
 ;
 export default UltraAdvancedFuturisticBackground;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {children}
     </div>
   );
@@ -1219,5 +1469,540 @@ export default UltraAdvancedFuturisticBackground;
 };
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        ctx.fillStyle = glowGradient,
+        ctx.fill(),
+        
+        // Add sparkle effect for holographic particles
+        if (particle.type === 'holographic' && Math.random() > 0.95) {
+          ctx.beginPath(),
+          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
+          ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`,
+          ctx.lineWidth = 2,
+          ctx.stroke()
+        }
+      }),
+      
+      // Add intensity-based effects
+      if (intensity === 'high') {
+        // Add energy waves
+        const time = Date.now() * 0.001
+        for (let i = 0, i < 3, i++) {
+          const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2),
+          ctx.beginPath(),
+          ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2),
+          ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`,
+          ctx.lineWidth = 2,
+          ctx.stroke()
+        }
+      }
+      
+      animationFrameId = requestAnimationFrame(animate)
+    },
+
+    initParticles(),
+    animate(),
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas),
+      cancelAnimationFrame(animationFrameId)
+    }
+  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
+
+  return (
+    <div ref={containerRef} className=&quot;relative w-full h-full overflow-hidden&quot;>
+      <canvas
+        ref={canvasRef}
+        className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
+        style={{ zIndex: -1 }}
+      />
+      
+      {/* Additional CSS-based effects */}
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        {/* Floating geometric shapes */}
+        <div className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse&quot;></div>
+        <div className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000&quot;></div>
+        <div className=&quot;absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500&quot;></div>
+        
+        {_/* Quantum particles */}
+        {_enableQuantumEffects && (
+          <>
+            <div className=&quot;absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping&quot;></div>
+            <div className=&quot;absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300&quot;></div>
+            <div className=&quot;absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700&quot;></div>
+          </>
+        )}
+        
+        {_/* Holographic elements */}
+        {_enableHolographic && (
+          <>
+            <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin&quot; style={{ animationDuration: '20s' }}></div>
+            <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin&quot; style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+          </>
+        )}
+      </div>
+      
+      {_children}
+    </div>
+  )
+},
+
+export default UltraAdvancedFuturisticBackground
+
+let animationFrameId: number;
+let particles: Array< {
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+//Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
+particles.push ({
+
+  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :
+const UltraAdvancedFuturisticBackground: React.FC<
+  UltraAdvancedFuturisticBackgroundProps
+> = ({
+  intensity = 'high'
+  colorScheme = 'quantum-fusion'
+  particleCount = 300
+  animationSpeed = 1.5
+  enableHolographic = true
+  enableQuantumEffects = true
+  children,}) => {interface UltraAdvancedFuturisticBackgroundProps {
+
+  intensity?: 'low' | 'medium' | 'high';
+  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  children: React.ReactNode
+}
+const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
+
+  intensity = 'high'
+  colorScheme = 'quantum-fusion'
+  particleCount = 300
+  animationSpeed = 1.5
+  enableHolographic = true
+  enableQuantumEffects = true
+  children
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    let animationFrameId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      opacity: number
+      color: string
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'
+    // Set canvas size
+    const resizeCanvas = () => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;      }        canvas.height = rect.height
+      }
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Color schemes
+    const colorSchemes = {
+      'quantum-fusion': {
+        primary: '#00ffff'
+        secondary: '#ff00ff'
+        accent: '#ffff00'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },      'neon-cyber': {        holographic: '#ff0088'
+      }
+      'neon-cyber': {
+        primary: '#00ff41'
+        secondary: '#ff0080'
+        accent: '#00d4ff'
+        quantum: '#ff6b35'
+        holographic: '#9d4edd'
+      }
+      holographic: {        primary: '#ff00ff'
+        secondary: '#00ffff'
+        accent: '#ffff00'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },      'quantum-ai': {        holographic: '#9d4edd'
+      }
+      'holographic': {
+        primary: '#ff00ff'
+        secondary: '#00ffff'
+        accent: '#ffff00'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },        holographic: '#ff0088'
+      }
+      'quantum-ai': {
+        primary: '#00d4ff'
+        secondary: '#ff6b35'
+        accent: '#9d4edd'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },    };        holographic: '#ff0088'
+      }
+    }
+    const colors = colorSchemes[colorScheme];
+    // Initialize particles
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        const type =
+          Math.random() > 0.7
+            ? 'quantum'
+            : Math.random() > 0.5
+              ? 'holographic'
+              : Math.random() > 0.3
+                ? 'neon'
+                : 'fusion';      for (let i = 0, i < particleCount, i++) {
+        const type = Math.random() > 0.7 ? 'quantum' :
+                    Math.random() > 0.5 ? 'holographic' :
+                    Math.random() > 0.3 ? 'neon' : 'fusion';
+          x: Math.random() * canvas.width
+          y: Math.random() * canvas.height
+          vx: (Math.random() - 0.5) * 2 * animationSpeed
+          vy: (Math.random() - 0.5) * 2 * animationSpeed
+          size: Math.random() * 3 + 1
+          opacity: Math.random() * 0.8 + 0.2
+          color:
+            type === 'quantum'
+              ? colors.quantum
+              : type === 'holographic'
+                ? colors.holographic
+                : type === 'neon'
+                  ? colors.primary
+                  : colors.secondary
+          type
+        });      }          color: type === 'quantum' ? colors.quantum :
+                 type === 'holographic' ? colors.holographic :
+                 type === 'neon' ? colors.primary : colors.secondary
+          type
+        })
+    }
+    // Quantum entanglement effect
+    const createQuantumEntanglement = () => {
+      if (!enableQuantumEffects) return;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (
+            distance < 100 &&
+            particles[i].type === 'quantum' &&
+            particles[j].type === 'quantum'
+          ) {            ctx.beginPath();
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
+            ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();          }            ctx.stroke()
+            ctx.stroke();          }
+
+          }
+        }
+      }
+    }
+    };
+
+    // Holographic grid effect
+    const createHolographicGrid = () => {
+      if (!enableHolographic) return;
+      const gridSize = 50;
+      const offset = (Date.now() * 0.001) % gridSize;
+      ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
+      ctx.lineWidth = 0.5;
+      // Vertical lines
+      for (let x = offset; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();      }
+      // Horizontal lines
+      for (let y = offset; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();      }        ctx.stroke()
+      }
+    }
+    // Neural network effect
+    const createNeuralNetwork = () => {
+      if (!enableQuantumEffects) return;
+      const nodes = particles.filter(
+        p => p.type === 'quantum' |p.type === 'holographic'
+      );
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 150) {
+            const strength = 1 - distance / 150;            ctx.beginPath();          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 150) {
+            const strength = 1 - (distance / 150);
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.2 * strength})`;
+            ctx.lineWidth = strength * 2;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();          }            ctx.stroke()
+            ctx.stroke();          }
+
+          }
+        }
+      }
+    }
+    };
+
+    // Animation loop
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Create background gradient
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2
+        canvas.height / 2
+        0
+        canvas.width / 2
+        canvas.height / 2
+        Math.max(canvas.width, canvas.height) / 2      );
+      // Create background gradient
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
+      gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Create effects
+      createHolographicGrid();
+      createQuantumEntanglement();
+      createNeuralNetwork();
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        // Update position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        // Bounce off edges
+        if (particle.x < 0 |particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 |particle.y > canvas.height) particle.vy *= -1;
+        // Bounce off edges
+        if (particle.x < 0 |particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 |particle.y > canvas.height) particle.vy *= -1;
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        // Create glow effect
+        const glowGradient = ctx.createRadialGradient(
+          particle.x, particle.y, 0;
+          particle.x, particle.y, particle.size * 3
+        );
+        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`);
+        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, '0')}`);
+        glowGradient.addColorStop(1, 'transparent');
+        ctx.fillStyle = glowGradient;
+        ctx.fill();
+        // Create glow effect
+        const glowGradient = ctx.createRadialGradient(
+          particle.x
+          particle.y
+          0
+          particle.x
+          particle.y
+          particle.size * 3
+        );
+        glowGradient.addColorStop(
+          0
+          `${particle.color}${Math.floor(particle.opacity * 255)
+            .toString(16)
+            .padStart(2, '0')}`
+        );
+        glowGradient.addColorStop(
+          0.5
+          `${particle.color}${Math.floor(particle.opacity * 0.5 * 255)
+            .toString(16)
+            .padStart(2, '0')}`
+        );
+        glowGradient.addColorStop(1, 'transparent');
+        ctx.fillStyle = glowGradient;
+        ctx.fill();
+        // Add sparkle effect for holographic particles
+        if (particle.type === 'holographic' && Math.random() > 0.95) {
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+          ctx.strokeStyle = `${particle.color}${Math.floor(
+            particle.opacity * 255
+          )
+            .toString(16)
+            .padStart(2, '0')}`;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      });          ctx.lineWidth = 2;
+          ctx.stroke()
+        }
+      });
+      // Add intensity-based effects
+      if (intensity === 'high') {
+        // Add energy waves
+        const time = Date.now() * 0.001;
+        for (let i = 0; i < 3; i++) {
+          const waveRadius =
+            (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
+          ctx.beginPath();
+          ctx.arc(
+            canvas.width / 2
+            canvas.height / 2
+            waveRadius
+            0
+            Math.PI * 2
+          );
+          ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      }
+      animationFrameId = requestAnimationFrame(animate);    };          ctx.beginPath();
+          ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
+          ctx.lineWidth = 2;
+          ctx.stroke()
+        }
+      }
+      animationFrameId = requestAnimationFrame(animate)
+    }
+    initParticles();
+    animate();
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
+    }
+  }, [
+    intensity
+    colorScheme
+    particleCount
+    animationSpeed
+    enableHolographic
+    enableQuantumEffects
+  ]);
+
+  return (
+    <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full pointer-events-none'
+        style={{ zIndex: -1 }}
+      />
+      {/* Additional CSS-based effects */}
+      <div className='absolute inset-0 pointer-events-none'>
+        {/* Floating geometric shapes */}
+        <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
+        <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
+        <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
+        {/* Quantum particles */}
+        {enableQuantumEffects && (
+          <>
+            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>
+            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300'></div>
+            <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
+          </>
+        )}
+
+        {/* Holographic elements */}
+        {enableHolographic && (
+          <>
+            <div
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin'
+              style={{ animationDuration: '20s' }}
+            ></div>
+            <div
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
+              style={{
+                animationDuration: '15s'
+                animationDirection: 'reverse'
+              }}
+            ></div>
+          </>
+        )}
+      </div>
+      {children}
+    </div>
+  );
+}
+};
+
+export default UltraAdvancedFuturisticBackground;
+  return (
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: -1 }}
+      />
+      {/* Additional CSS-based effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>
+        {/* Quantum particles */}
+        {enableQuantumEffects && (
+          <>
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700"></div>
+          </>
+        )}
+        {/* Holographic elements */}
+        {enableHolographic && (
+          <>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+          </>
+        )}
+      </div>
+      {children}
+    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackground;
+
+export default UltraAdvancedFuturisticBackground;
+export default UltraAdvancedFuturisticBackground;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

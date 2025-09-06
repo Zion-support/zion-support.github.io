@@ -1,4 +1,60 @@
+<<<<<<< HEAD
 const AUTO_SERVICE_TITLES = [
+=======
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { useState, useEffect, useRef, Suspense } from "react",
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
+import { ProductListing } from "@/types/listings",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { toast } from "@/hooks/use-toast",
+import { NextSeo } from '@/components/NextSeo',
+import { Header } from "@/components/Header",
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
+import {logErrorToProduction} from '@/utils/productionLogger',
+const AUTO_SERVICE_TITLES = [
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import {toast} from "@/hooks/use-toast"
+import {NextSeo} from '@/components/NextSeo'
+import {Header} from "@/components/Header"
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
+import {logErrorToProduction} from '@/utils/productionLogger'
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { useState, useEffect, useRef, Suspense } from "react",
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
+import { ProductListing } from "@/types/listings",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { toast } from "@/hooks/use-toast",
+import { NextSeo } from '@/components/NextSeo',
+import { Header } from "@/components/Header",
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
+import {logErrorToProduction} from '@/utils/productionLogger',
+const AUTO_SERVICE_TITLES = [
+  "AI-Powered Customer Support",
+  "Cloud Infrastructure Management",
+  "Predictive Analytics Consulting",
+  "Cybersecurity Automation Suite",
+  "Robotic Process Automation",
+  "Machine Learning Model Tuning",
+  "IoT Device Integration Service",
+  "Blockchain Data Solutions"
+],
+
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import {toast} from "@/hooks/use-toast"
+import {NextSeo} from '@/components/NextSeo'
+import {Header} from "@/components/Header"
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
+import {logErrorToProduction} from '@/utils/productionLogger'
+const AUTO_SERVICE_TITLES = [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
   "Predictive Analytics Consulting"
@@ -7,6 +63,7 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
+<<<<<<< HEAD
 
 import { use_router } from 'next / router';
 import Link from 'next / link';
@@ -39,10 +96,281 @@ function generateInnovationListing (index: number): ProductListing {
 
 
 
+=======
+]
+function generateInnovationListing(index: number): ProductListing {
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const params = router.query as { slug?: string }
+  const slug = slugProp ?? params.slug
+      icon: <Briefcase className="w-6 h-6" />
+    }
+    'talents': {
+      title: "Talents"
+      description: "Connect with AI experts, developers, and tech specialists"
+      icon: <Brain className="w-6 h-6" />
+    }
+    'equipment': {
+      title: "Equipment"
+      description: "Rent or buy specialized hardware, servers, and devices"
+      icon: <Code className="w-6 h-6" />
+    }
+      title: "Talents"
+      description: "Connect with AI experts, developers, and tech specialists"
+      icon: <Brain className="w-6 h-6" />
+    },
+    'equipment': {
+      title: "Equipment",
+      description: "Rent or buy specialized hardware, servers, and devices",
+      icon: <Code className="w-6 h-6" />
+    }
+],
+
+function generateInnovationListing(index: number): ProductListing {
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const reviewCount = Math.floor(Math.random() * 50) + 10,
+
+  return {
+    id: `innovation-auto-${index}`,
+    title,
+    description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,
+    category: "Innovation",
+    price,
+    currency: "$",
+    tags: ["innovation", "ai", "service"],
+    author: {
+      name: "AutoGen Solutions",
+      id: "autogen"
+    },
+    images: ["https://source.unsplash.com/random/800x500?technology"],
+    createdAt: new Date().toISOString(),
+    rating,
+    reviewCount,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: Math.floor(Math.random() * 20) + 80
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ProductListingCard } from "@/components/ProductListingCard",;
+import { useState, useEffect, useRef, Suspense } from "react",;
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react';
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",;
+import { ProductListing } from "@/types/listings",;
+import { useRouter } from 'next/router',;
+import Link from 'next/link',;
+import { toast } from "@/hooks/use-toast",;
+import { NextSeo } from '@/components/NextSeo',;
+import { Header } from "@/components/Header",;
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+const AUTO_SERVICE_TITLES = [;
+  "AI-Powered Customer Support",;
+  "Cloud Infrastructure Management",;
+  "Predictive Analytics Consulting",;
+  "Cybersecurity Automation Suite",;
+  "Robotic Process Automation",;
+  "Machine Learning Model Tuning",;
+  "IoT Device Integration Service",;
+  "Blockchain Data Solutions";
+],;
+function generateInnovationListing(index: number): ProductListing {;
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',;
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000;
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars;
+  const reviewCount = Math.floor(Math.random() * 50) + 10,;
+  return {;
+    id: `innovation-auto-${index}`,;
+    title,;
+    description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,;
+    category: "Innovation",;
+    price,;
+    currency: "$",;
+    tags: ["innovation", "ai", "service"],;
+    author: {;
+      name: "AutoGen Solutions",;
+      id: "autogen";
+    },;
+    images: ["https://source.unsplash.com/random/800x500?technology"],;
+    createdAt: new Date().toISOString(),;
+    rating,;
+    reviewCount,;
+    location: "Global",;
+    availability: "Immediate",;
+    aiScore: Math.floor(Math.random() * 20) + 80;
+  }
+}
+;
+interface CategoryDetailProps {;
+  slug?: string;
+}
+;
+export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {;
+  const router = useRouter(),;
+  // Get slug from Next.js router query params;
+  const params = router.query as { slug?: string },;
+  const slug = slugProp ?? params.slug,;
+  // Redirect to categories list if slug is missing;
+  if (!slug) {;
+    router.push('/categories'),;
+    return null;
+  }
+  const [isLoading, setIsLoading] = useState(true),
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
+  const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
+    title: "",
+    description: "",
+    icon: <Bot className="w-6 h-6" />
+  }),
+  const innovationCounterRef = useRef(0),
+
+  // Map of category slugs to their display data
+  const categoryData = {
+    'services': {
+      title: "Services",
+      description: "On-demand IT support, consulting, development, and more",
+      icon: <Briefcase className="w-6 h-6" />
+    },
+    'talents': {
+      title: "Talents",
+      description: "Connect with AI experts, developers, and tech specialists",
+      icon: <Brain className="w-6 h-6" />
+    },
+    'equipment': {
+      title: "Equipment",
+      description: "Rent or buy specialized hardware, servers, and devices",
+      icon: <Code className="w-6 h-6" />
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
+=======
+      title: "Innovation"
+      description: "Discover cutting-edge solutions and tech breakthroughs"
+      icon: <Bot className="w-6 h-6" />
+    }
+    }
+    },
+    },
+    'content-creation': {
+      title: "Content Creation"
+      description: "Generate high-quality content for your projects"
+      icon: <PenLine className="w-6 h-6" />
+    }
+    },
+    'data-analysis': {
+      title: "Data Analysis"
+      description: "Extract insights from complex datasets"
+      icon: <BarChart className="w-6 h-6" />
+    }
+    },
+    'computer-vision': {
+      title: "Computer Vision"
+      description: "Image and video processing solutions"
+      icon: <Eye className="w-6 h-6" />
+    }
+    },
+    'virtual-assistants': {
+      title: "Virtual Assistants"
+      description: "Intelligent automation for your workflow"
+      icon: <Bot className="w-6 h-6" />
+    }
+
+
+    'ai-models-apis': {
+      title: "AI Models & APIs"
+      description: "Access cutting-edge AI models with easy integration"
+      icon: <Brain className="w-6 h-6" />
+
+
+    },
+
+
+    'content-creation': {
+      title: "Content Creation"
+      description: "Generate high-quality content for your projects"
+      icon: <PenLine className="w-6 h-6" />
+
+
+    },
+
+
+    'data-analysis': {
+      title: "Data Analysis"
+      description: "Extract insights from complex datasets"
+      icon: <BarChart className="w-6 h-6" />
+
+
+    },
+
+
+    'computer-vision': {
+      title: "Computer Vision"
+      description: "Image and video processing solutions"
+      icon: <Eye className="w-6 h-6" />
+
+
+    },
+
+
+    'virtual-assistants': {
+      title: "Virtual Assistants"
+      description: "Intelligent automation for your workflow"
+      icon: <Bot className="w-6 h-6" />
+
+
+    },
+
+
+    },
+    },
+    'voice-speech': {
+      title: "Voice & Speech"
+      description: "Speech recognition and synthesis tools"
+      icon: <Mic className="w-6 h-6" />
+    }
+    },
+
+    },
+
+    'developer-tools': {
+      title: "Developer Tools",
+      description: "AI-powered coding assistance and automation",;
+      icon: <Code className="w-6 h-6" />;
+    };          icon: <Bot className="w-6 h-6" />},
+    'developer-tools': {
+
+    },
+
+      title: "Developer Tools",
+      description: "AI-powered coding assistance and automation",;
+      icon: <Code className="w-6 h-6" />;
+    };          icon: <Bot className="w-6 h-6" />},
+    },
+      title: "Developer Tools"
+      description: "AI-powered coding assistance and automation"
+      icon: <Code className="w-6 h-6" />
+    };          icon: <Bot className="w-6 h-6" />}
+        setCategory(currentCategory)
+        innovationCounterRef.current = 0
+    : 'Category | Zion Marketplace'
+  const seoDescription =
+    category.description |'Explore listings in this category.'
+    },
+
+    'developer-tools': {
+      title: "Developer Tools"
+      description: "AI-powered coding assistance and automation"
+      icon: <Code className="w-6 h-6" />
+
+
+
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
@@ -148,6 +476,11 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -156,6 +489,7 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+<<<<<<< HEAD
 
   useEffect(() => {
     async function load() {
@@ -262,26 +596,75 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
+<<<<<<< HEAD
 
 
       <Suspense fallback={<ListingGridSkeleton />}> 
 
 
         <div className="min-h-screen bg-zion-blue">
+=======
+      <Suspense fallback={<ListingGridSkeleton />}>
+  return (
+    <>
+      <NextSeo title={seoTitle} description={seoDescription} />
+      <Header />
+
+      <Suspense fallback={<ListingGridSkeleton />}> 
+      <Suspense fallback={<ListingGridSkeleton />}> 
+        <div className="min-h-screen bg-zion-blue">
+
+      <Suspense fallback={<ListingGridSkeleton />}> 
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
             <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
               ← Back to Categories
             </Link>
           </div>
+<<<<<<< HEAD
 
 
           
 
+=======
+          
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+                {category.icon}
+              </div>
+            </div>
+            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+              {category.title}
+            </GradientHeading>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+              {category.description}
+            </p>
+          </div>
+          {isLoading ? (
+            <ListingGridSkeleton />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {listings.map((listing,) => (
+                <ProductListingCard
+                  key = {listing.id,}
+                  listing = {listing,}
+                  onRequestQuote = {handleRequestQuote,}
+                  detailBasePath="/marketplace/listing"
+                />
+            </div>
+          )}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
@@ -355,6 +738,13 @@ function generateInnovationListing (index: number): ProductListing {
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
+<<<<<<< HEAD
+=======
+          
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {category.icon}
               </div>;
             </div>;
@@ -363,6 +753,7 @@ function generateInnovationListing (index: number): ProductListing {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router';
@@ -391,6 +782,22 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   const slug = slugProp ?? params && params.slug;
 
 
+=======
+            </p>
+          </div>
+          {isLoading ? (
+            <ListingGridSkeleton />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {listings.map((listing,) => (
+                <ProductListingCard
+                  key = {listing.id,}
+                  listing = {listing,}
+                  onRequestQuote = {handleRequestQuote,}
+                  detailBasePath="/marketplace/listing"
+                />
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
@@ -512,14 +919,29 @@ function generateInnovationListing(): any (index: number): ProductListing {;
                   onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
                 />;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               ))}
             </div>;
           )}
 
+<<<<<<< HEAD
 
+=======
+              ))}
+            </div>
+          )}
+          </div>
+        </div>
+      </Suspense>
+    </>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           </div>;
         </div>;
@@ -528,8 +950,11 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   );
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </p>;
           </div>;
           {is_loading ? (
@@ -548,3 +973,12 @@ function generateInnovationListing(): any (index: number): ProductListing {;
       </Suspense>;
     </>);
 }
+<<<<<<< HEAD
+=======
+;
+;
+;
+
+
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

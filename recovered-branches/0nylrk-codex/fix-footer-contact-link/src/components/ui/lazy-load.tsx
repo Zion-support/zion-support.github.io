@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 import {useEffect, useState, useRef, ReactNode} from "react";
@@ -18,6 +19,12 @@ interface LazyLoadProps {;
 
 export function LazyLoad(): any ({;
 
+=======
+  loadingComponent?: ReactNode;
+  className?: string;
+}
+export function LazyLoad(): any ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   height = "200px";
   width = "100%";
   children;
@@ -27,11 +34,30 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+<<<<<<< HEAD
+=======
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
+  height?: string | number;
+  width?: string | number;
+
+  children: ReactNode
+
+  loadingComponent?: ReactNode;
+import { cn } from "@/lib/utils",
+import { Skeleton } from "@/components/ui/skeleton",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,
+<<<<<<< HEAD
 
   className?: string
 }
@@ -39,16 +65,114 @@ interface LazyLoadProps {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  className?: string
+}
+
+export function LazyLoad({;
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+export function LazyLoad({
+
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+  className}: LazyLoadProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  height = "200px",
+  width = "100%",
+  children,
+  loadingComponent,
+  className}: LazyLoadProps) {
+  const [isVisible, setIsVisible] = useState(false),
+  const [isLoaded, setIsLoaded] = useState(false),
+  const containerRef = useRef<HTMLDivElement>(null),
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+<<<<<<< HEAD
 
 
+=======
+          setIsVisible(true),
+          observer.disconnect()
+        }
+      }
+      {
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        threshold: 0.1}
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+      },
+      {
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        threshold: 0.1}
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+import { useEffect, useState, useRef, ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { Skeleton } from "@/components/ui/skeleton",;
+interface LazyLoadProps {;
+  height?: string | number,;
+  width?: string | number,;
+  children: ReactNode,;
+  loadingComponent?: ReactNode,;
+  className?: string;
+}
+;
+export function LazyLoad({;
+  height = "200px",;
+  width = "100%",;
+  children,;
+  loadingComponent,;
+  className}: LazyLoadProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isLoaded, setIsLoaded] = useState(false),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+
+
+
+import { useEffect, useState, useRef, ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { Skeleton } from "@/components/ui/skeleton",;
+;
+interface LazyLoadProps {;
+  height?:string | number,;
+  width?:string | number,;
+  children:ReactNode,;
+  loadingComponent?:ReactNode,;
+  className?:string;
+}
+;
+export function LazyLoad({;
+  height = "200px",;
+  width = "100%",;
+  children,;
+  loadingComponent,;
+  className} LazyLoadProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isLoaded, setIsLoaded] = useState(false),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
+<<<<<<< HEAD
 
           setIsVisible(true);
           observer && observer.disconnect();
@@ -89,14 +213,39 @@ if ( {) {
         threshold: 0.1}
     );
 
+=======
+          setIsVisible(true),;
+          observer.disconnect(),;
+        }
+      },;
+      {;
+        rootMargin:"200px", // Start loading when element is within 200px of viewport;
+        threshold:0.1}
+    ),;
+;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current),;
+    }
+;
+    return () => {;
+      if (containerRef.current) {;
+        observer.unobserve(containerRef.current),;
+      }
+    );
+
+    );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     // Check condition
 if ( {) {
   $2
 }
       observer.observe (container_ref.current);
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           setIsVisible(true),
           observer.disconnect()
         }
@@ -105,7 +254,10 @@ if ( {) {
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
     return () => {
       // Check condition
@@ -115,7 +267,11 @@ if ( {) {
         observer.unobserve (container_ref.current);
       }
     }
+<<<<<<< HEAD
 
+=======
+  }, []);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       };
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
@@ -132,18 +288,63 @@ if ( {) {
       }
     }
   }, []);
+<<<<<<< HEAD
 
 =======
-
-
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
   }, []),;
 
+<<<<<<< HEAD
+=======
+          setIsVisible(true),;
+          observer.disconnect();
+        }
+      },;
+      {;
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0.1}
+    ),;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current);
+    }
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)
+      }
+    }
+  }, []);
+  useEffect(() => {
+    if (isVisible) {
+      // Simulate loading delay (remove in production)
+      const timer = setTimeout(() => {
+        setIsLoaded(true)
+      }, 500);
+      return () => clearTimeout(timer)
+    }
+  }, [isVisible]);
+  const defaultLoadingComponent = (
+    <Skeleton
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  );
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500"
+        isLoaded ? "opacity-100" : "opacity-0";
+
+  }, []),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
+<<<<<<< HEAD
       }, 500);
 
       return () => clearTimeout(timer);
@@ -157,6 +358,11 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+    <Skeleton
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;
@@ -164,7 +370,10 @@ if ( {) {
   return (
     <div
       ref={containerRef}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className={cn("transition-opacity duration-500", 
         isLoaded ? "opacity-100" : "opacity-0"
         className
@@ -177,9 +386,9 @@ if ( {) {
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
-=======
 
 
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -189,3 +398,145 @@ if ( {) {
 
 
 
+=======
+      }, 500),;
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]),;
+  const defaultLoadingComponent = (;
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  ),
+
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500", 
+        isLoaded ? "opacity-100" : "opacity-0",
+        className
+      )}
+    >
+      {isVisible ? (
+        <>
+          {!isLoaded && (loadingComponent |defaultLoadingComponent)}
+          {isLoaded && children}
+        </>
+      ) : (
+        loadingComponent |defaultLoadingComponent
+      )}
+    </div>
+  )
+}
+    </div>;
+  );
+}
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Simulate loading delay (remove in production);
+      const timer = set_timeout (() => {
+        setIsLoaded (true);
+      }, 500);
+;
+      return () => clear_timeout (timer);
+    }
+  }, [is_visible]);
+;
+  const defaultLoadingComponent = (
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded - md bg - zion - blue - light / 20";
+    />);
+;
+  return (
+    <div;
+      ref={container_ref}
+      className={cn ("transition - opacity duration - 500",
+        is_loaded ? "opacity - 100" : "opacity - 0";
+        class_name)}
+    >;
+      {is_visible ? (
+        <>;
+          {!is_loaded && (loading_component || defaultLoadingComponent)}
+          {is_loaded && children}
+        </>) : (
+        loading_component || defaultLoadingComponent)}
+    </div>);
+    },;
+  }, []),;
+;
+  useEffect(() => {;
+    if (isVisible) {;
+      // Simulate loading delay (remove in production);
+      const timer = setTimeout(() => {;
+        setIsLoaded(true),;
+      }, 500),;
+;
+      return () => clearTimeout(timer),;
+    }
+  }, [isVisible]),;
+;
+  const defaultLoadingComponent = (;
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20";
+    />;
+  ),;
+;
+  return (;
+    <div;
+      ref={containerRef}
+      className={cn("transition-opacity duration-500", ;
+        isLoaded ? "opacity-100" :"opacity-0",;
+        className;
+      )}
+    >;
+      {isVisible ? (;
+        <>;          {!isLoaded && (loadingComponent || defaultLoadingComponent)}
+          {isLoaded && children}
+        </>;
+      ) :(;
+        loadingComponent || defaultLoadingComponent;
+      )}
+    </div>;
+  ),; interface LazyLoadProps {
+  height?: string | number;
+width?: string | number;
+children: ReactNode;
+loadingComponent?: ReactNode;
+className?: string 
+}export function LazyLoad ({
+  height = "200px";
+width = "100%";
+children;
+loadingComponent;
+className 
+}: LazyLoadProps) {
+  const [isVisible, setIsVisible] = useState (false);
+const [isLoaded, setIsLoaded] = useState (false);
+const containerRef = useRef<HTMLDivElement> (null);
+const observer = new IntersectionObserver ( (entries) => {
+  if (entries[0].isIntersecting) {
+  threshold: 0.1 
+});
+useEffect ( () => {
+  if (isVisible) {
+  //Simulate loading delay (remove in production) return () => clearTimeout (timer) 
+}
+}, [isVisible]);
+const defaultLoadingComponent = (<Skeleton />);
+return (<div) 
+}> {
+  isVisible ? (<> {
+  !isLoaded && (loadingComponent || defaultLoadingComponent) 
+}{
+  isLoaded && children 
+}</>) : (loadingComponent || defaultLoadingComponent) 
+}</div>) 
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

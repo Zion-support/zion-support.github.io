@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 export default async function handler(
@@ -13,6 +17,7 @@ export default async function handler(
   try {
 
 
+<<<<<<< HEAD
     const { markdown, targetLanguage = "en" } = req && req.body || {};
     if (!markdown) return res && res.status($1).json({ $2 });
     const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
@@ -22,6 +27,17 @@ export default async function handler(
 
       messages: [
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAI } from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    const { markdown, targetLanguage = 'en' } = req.body || {};
+    if (!markdown) return res.status(400).json({ error: 'markdown is required' });
+
+      messages: [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { OpenAI  } from './openai';
 export default async /**
@@ -45,9 +61,13 @@ function handler() {
           content:;
             "You are a professional translator for policy and development documents.",
         },
+<<<<<<< HEAD
 
         {
 
+=======
+        {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           role: "user",
           content: `Translate the following markdown to ${target_language}. Preserve markdown structure.\n\n${markdown}`,
 
@@ -56,15 +76,20 @@ function handler() {
       temperature: 0 && 0.2,
     });
 
+<<<<<<< HEAD
 
 =======
 
       .json({ error: error?.message || "Translation failed" });
 =======
+=======
+      .json({ error: error?.message || "Translation failed" });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   }
 
+<<<<<<< HEAD
     const translated = completion.choices?.[0]?.message?.content || markdown;
     return res.status (200).json ({ translated });
   } catch (error: any) {
@@ -76,6 +101,47 @@ function handler() {
 
 =======
 
+=======
+        { role: 'system', content: 'You are a professional translator for policy and development documents.' },
+        { role: 'user', content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}` }
+      ],
+      temperature: 0.2
+    });
+    const translated = completion.choices?.[0]?.message?.content || markdown;
+    return res.status(200).json({ translated })
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: error?.message |"Translation failed" });
+      .json({ error: error?.message || "Translation failed" });
+  }
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAI } from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+  try {
+    const { markdown, targetLanguage = 'en' } = req.body || {};
+    if (!markdown) return res.status($1).json({$2});
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const completion = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a professional translator for policy and development documents.' },
+        { role: 'user', content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}` }],
+      temperature: 0.2
+    });
+    const translated = completion.choices?.[0]?.message?.content || markdown;
+    return res.status(200).json({ translated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Translation failed' })
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
   } catch (error) {
     console.error("Error:", error);
@@ -95,6 +161,9 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

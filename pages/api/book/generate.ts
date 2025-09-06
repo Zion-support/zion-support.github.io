@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
+  const apiKey = process.env.OPENAI_API_KEY;
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' }),
+    return
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
     const completion = await client.chat.completions.create({
@@ -9,6 +26,7 @@
   }
   res.status(200).json({ chapters: drafted })
 
+<<<<<<< HEAD
 =======
 }
 
@@ -32,10 +50,40 @@ if ( {) {
 if ( {) {
   $2
 =======
+=======
+}
+
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] }
+  const apiKey = process.env.OPENAI_API_KEY
+  if (!apiKey) {
+    // Fallback: return structured placeholders
+    const drafted = chapters.map((c) => ({
+      title: c.title
+      content: `Draft notes for ${c.title} about ${meta?.title |'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`}))
+    res.status(200).json({ chapters: drafted })
+    return
+  }
+  const client = new OpenAI({ apiKey });
+  const system = `You are a book-writing assistant. Write concise but high-signal chapters for a visionary, systems-architecture book. Maintain clear structure, use short paragraphs, bullets where helpful, and end each chapter with 3 actionable principles.`;
+  const drafted = [] as { title: string, content: string }[];
+  for (const ch of chapters) {
+    const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`;
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: prompt }
+      ],
+      temperature: 0.7
+      });
+    const text = completion.choices?.[0]?.message?.content || '';
+    drafted.push({ title: ch.title, content: text })
+  }
+  res.status(200).json({ chapters: drafted })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -60,7 +108,54 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 
+=======
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },;
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {;
+    // Fallback: return structured placeholders;
+    const drafted = chapters.map((c) => ({;
+      title: c.title;
+      content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`}));
+    res.status(200).json({ chapters: drafted });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const client = new OpenAI({ apiKey });
+  const system = `You are a book-writing assistant. Write concise but high-signal chapters for a visionary, systems-architecture book. Maintain clear structure, use short paragraphs, bullets where helpful, and end each chapter with 3 actionable principles.`,;
+  const drafted = [] as { title: string, content: string }[],;
+  for (const ch of chapters) {;
+    const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`;
+    const completion = await client.chat.completions.create({;
+      model: 'gpt-4o-mini';
+      messages: [;
+        { role: 'system', content: system },;
+        { role: 'user', content: prompt }],;
+      temperature: 0.7});
+    const text = completion.choices?.[0]?.message?.content || '';
+    drafted.push({ title: ch.title, content: text });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -69,4 +164,12 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 
+=======
+}
+
+  res.status(200).json({ chapters: drafted });
+};
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

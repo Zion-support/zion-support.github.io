@@ -1,11 +1,29 @@
+<<<<<<< HEAD
 
 import { Helmet } from './react - helmet - async';
 
+=======
+import { Helmet } from './react - helmet - async';
+
+export function SEO(): any ({;
+  title;
+  description;
+  keywords;
+  // Default to the Google Drive image URL;
+  ogImage = "https: //drive && drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+  ogUrl;
+  canonical,;
+  noindex}: SEOProps) {;
+
+
+import { Helmet } from "react-helmet-async";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SEOProps {
 
   title: string
   description: string
 
+<<<<<<< HEAD
 =======
 import {Helmet} from "react-helmet-async";
 interface SEOProps {;
@@ -34,13 +52,20 @@ export function SEO(): any ({;
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 =======
 
-import { Helmet } from "react-helmet-async",
 =======
+  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { Helmet } from "react-helmet-async",
 import {Helmet} from "react-helmet-async";
-=======
 import { Helmet } from "react-helmet-async",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SEOProps {
   title: string,
   description: string,
@@ -48,14 +73,36 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
-
   noindex?: boolean
 }
 
+<<<<<<< HEAD
+=======
+export function SEO({;
+  title;
+  description;
+  keywords;
+export function SEO({
+  title,
+  description,
+  keywords,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   // Default to the Google Drive image URL
 
+<<<<<<< HEAD
+=======
+  // Default to the Google Drive image URL
+
+  ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+  ogUrl;
+  canonical
+  noindex}: SEOProps) {
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace";
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
   canonical,
@@ -63,22 +110,59 @@ interface SEOProps {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+=======
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace";
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  return (
+
+import { Helmet } from "react-helmet-async",;
+;
+interface SEOProps {;
+  title:string,;
+  description:string,;
+  keywords?:string,;
+  ogImage?:string,;
+  ogUrl?:string,;
+  canonical?:string,;
+  noindex?:boolean;
+}
+;
+export function SEO({;
+  title,;
+  description,;
+  keywords,;
+  // Default to the Google Drive image URL;
+  ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",;
+  ogUrl,;
+  canonical,;
+  noindex} SEOProps) {;
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace",;
+  const fullTitle = title ? `${title} | ${siteTitle}` :siteTitle,;
+  ;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
       {keywords && <meta name="keywords" content={keywords} />}
+<<<<<<< HEAD
 
 
 
+=======
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />;
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:image" content={ogImage} />;
       {ogUrl && <meta property="og:url" content={ogUrl} />}
+<<<<<<< HEAD
 
 export /**
  * SEO - Function description
@@ -87,18 +171,21 @@ function SEO() {
   const site_title = "Zion - The Future of Tech & AI Marketplace";
   const full_title = title ? `${title} | ${site_title}` : site_title;
 ;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
-    <Helmet>;
-      <title>{full_title}</title>;
-      <meta name="description" content={description} />;
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />;
-      <meta property="og:title" content={full_title} />;
-      <meta property="og:description" content={description} />;
-      <meta property="og:image" content={og_image} />;
-      {og_url && <meta property="og:url" content={og_url} />}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
       {/* Twitter */}
+<<<<<<< HEAD
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={full_title} />;
@@ -115,6 +202,24 @@ function SEO() {
 
 
 =======
+=======
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@lovable_dev" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      {/* No index directive for search engines if needed */}
+      {noindex && <meta name="robots" content="noindex" />}
+
+
+
+
+    </Helmet>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -150,7 +255,23 @@ export function SEO({;
       <meta property="og:image" content={ogImage} />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
 ;
+<<<<<<< HEAD
 
+=======
+      ;
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />;
+      <meta name="twitter:site" content="@lovable_dev" />;
+      <meta name="twitter:title" content={fullTitle} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={ogImage} />;
+      ;
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      ;
+      {/* No index directive for search engines if needed */}
+      {noindex && <meta name="robots" content="noindex" />}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
@@ -160,7 +281,11 @@ export function SEO({;
 
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
@@ -168,11 +293,75 @@ export function SEO({;
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </Helmet>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </Helmet>);
+    </Helmet>;
+  ),; interface SEOProps {
+  title: string;
+description: string;
+keywords?: string;
+ogImage?: string;
+ogUrl?: string;
+canonical?: string;
+noindex?: boolean 
+}export function SEO ({
+  title;
+description;
+keywords;
+//Default to the Google Drive image URL ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+ogUrl;
+canonical;
+noindex 
+}: SEOProps) {
+  return (<Helmet> <title> {
+  fullTitle 
+}</title> <meta name="description" content= {
+  description 
+}/> {
+  keywords && <meta name="keywords" content= {
+  keywords 
+}/> 
+}{
+  /* Open Graph /Facebook */ 
+}<meta property="og:type" content="website" /> <meta property="og:title" content= {
+  fullTitle 
+}/> <meta property="og:description" content= {
+  description 
+}/> <meta property="og:image" content= {
+  ogImage 
+}/> {
+  ogUrl && <meta property="og:url" content= {
+  ogUrl 
+}/> 
+}{
+  /* Twitter */ 
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@lovable dev" /> <meta name="twitter:title" content= {
+  fullTitle 
+}/> <meta name="twitter:description" content= {
+  description 
+}/> <meta name="twitter:image" content= {
+  ogImage 
+}/> {
+  /* Canonical URL */ 
+}{
+  canonical && <link rel="canonical" href= {
+  canonical 
+}/> 
+}{
+  /* No index directive for search engines if needed */ 
+}{
+  noindex && <meta name="robots" content="noindex" /> 
+}
+}
+}
+;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

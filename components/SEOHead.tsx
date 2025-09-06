@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,6 +28,12 @@ import Head from 'next / head';
 import { use_router } from 'next / router';
 interface SEOHeadProps {
 
+=======
+import React from 'react';
+import Head from 'next / head';
+import { use_router } from 'next / router';
+interface SEOHeadProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   title?: string;
   description?: string;
   keywords?: string;
@@ -38,8 +45,11 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = 'Zion Tech Group - Technology Solutions',;
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',;
@@ -81,24 +91,36 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       'https://linkedin && linkedin.com/company/zion-tech-group',;
       'https://twitter && twitter.com/ziontechgroup';
     ]  };
+<<<<<<< HEAD
 
 
   return (
     <Head>;
       {/* Basic Meta Tags */}
 
+=======
+  return (
+    <Head>;
+      {/* Basic Meta Tags */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <title>{title}</title>;
       <meta name="description" content={description} />;
       <meta name="keywords" content={keywords} />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
       <metahttpEquiv="Content-Type" content="text/html charset=utf-8" />;
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />;
+<<<<<<< HEAD
 
 
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Tags */}
 
+=======
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Open Graph Tags */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:type" content={ogType} />;
@@ -110,6 +132,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta property="og:locale" content="en_US" />;
 
       {/* Twitter Card Tags */}
+<<<<<<< HEAD
       <meta name="twitter:card" content={twitterCard} />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
@@ -117,6 +140,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
 
+=======
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#2563eb" />;
       <meta name="msapplication-TileColor" content="#2563eb" />;
@@ -155,7 +186,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
 
 
+<<<<<<< HEAD
 =======
+=======
+      <meta name="theme-color" content="#1e40af" />;
+      <meta name="msapplication-TileColor" content="#1e40af" />;
+      <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology solutions.',
@@ -258,23 +295,36 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="theme - color" content="#1e40af" />;
       <meta name="msapplication - TileColor" content="#1e40af" />;
       <meta name="msapplication - config" content="/browserconfig.xml" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
         }}
       />;
 
 
+=======
+          __html: JSON.stringify(structuredData |defaultStructuredData)
+        }}
+      />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
+<<<<<<< HEAD
 
           __html: JSON.stringify (structured_data || defaultStructuredData);
         }}
@@ -288,9 +338,23 @@ const SEOHead: React.FC < SEOHeadProps> = ({
 ;
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SEOHead;
+=======
+export default SEOHead;
+export default SEOHead;
+};
+
+export default SEOHead;
+}
+};
+
+export default SEOHead;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

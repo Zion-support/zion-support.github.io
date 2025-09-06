@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
@@ -29,12 +32,31 @@ import ApiDocsHub from "../pages/ApiDocsHub";
 import ApiReference from "../pages/ApiReference";
 import ApiGettingStarted from "../pages/ApiGettingStarted";
 import ApiWebhooks from "../pages/ApiWebhooks";
+<<<<<<< HEAD
 
 import ApiSampleCode from "../pages/ApiSampleCode";
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import ApiSampleCode from "../pages/ApiSampleCode";
+
+
+import ApiSampleCode from "../pages/ApiSampleCode";
+import ApiErrorCodes from "../pages/ApiErrorCodes";
+import React from "react",
+import { Navigate, Route, Routes } from "react-router-dom",
+import DeveloperPortal from "../pages/DeveloperPortal",
+import ApiDocsHub from "../pages/ApiDocsHub",
+import ApiReference from "../pages/ApiReference",
+import ApiGettingStarted from "../pages/ApiGettingStarted",
+import ApiWebhooks from "../pages/ApiWebhooks",
+import ApiSampleCode from "../pages/ApiSampleCode";
+import ApiErrorCodes from "../pages/ApiErrorCodes";
+import ApiSampleCode from "../pages/ApiSampleCode",
+import ApiErrorCodes from "../pages/ApiErrorCodes",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function DeveloperRoutes() {
   return (
     <Routes>
@@ -48,10 +70,16 @@ export default function DeveloperRoutes() {
       <Route path="/docs/errors" element={<ApiErrorCodes />} />
     </Routes>
   )
+<<<<<<< HEAD
 
 };
 
 =======
+=======
+};
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { Navigate, Route, Routes } from "react-router-dom",;
 import DeveloperPortal from "../pages/DeveloperPortal",;
@@ -60,10 +88,29 @@ import ApiReference from "../pages/ApiReference",;
 import ApiGettingStarted from "../pages/ApiGettingStarted",;
 import ApiWebhooks from "../pages/ApiWebhooks",;
 import ApiSampleCode from "../pages/ApiSampleCode",;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import ApiErrorCodes from "../pages/ApiErrorCodes";
 export default function DeveloperRoutes() {;
   return (
+=======
+};
+import React from "react",;
+import { Navigate, Route, Routes } from "react-router-dom",;
+import DeveloperPortal from "../pages/DeveloperPortal",;
+import ApiDocsHub from "../pages/ApiDocsHub",;
+import ApiReference from "../pages/ApiReference",;
+import ApiGettingStarted from "../pages/ApiGettingStarted",;
+import ApiWebhooks from "../pages/ApiWebhooks",;
+import ApiSampleCode from "../pages/ApiSampleCode",;
+import ApiErrorCodes from "../pages/ApiErrorCodes",;
+;
+export default function DeveloperRoutes() {;
+  return (;
+import ApiErrorCodes from "../pages/ApiErrorCodes";
+export default function DeveloperRoutes() {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Routes>;
       <Route path="/" element={<Navigate to="/developers/portal" />} />;
       <Route path="/portal" element={<DeveloperPortal />} />;
@@ -74,8 +121,12 @@ export default function DeveloperRoutes() {;
       <Route path="/docs/samples" element={<ApiSampleCode />} />;
       <Route path="/docs/errors" element={<ApiErrorCodes />} />;
     </Routes>;
+<<<<<<< HEAD
   );
 
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { Navigate, Route, Routes } from './react-router-dom';
 import DeveloperPortal from "../pages / DeveloperPortal";
@@ -100,11 +151,37 @@ function DeveloperRoutes() {
       <Route path="/docs / samples" element={<ApiSampleCode />} />;
       <Route path="/docs / errors" element={<ApiErrorCodes />} />;
     </Routes>);
-}
-
+<<<<<<< HEAD
 =======
 
 }
 
+  ),; export default function DeveloperRoutes () {
+  return (<Routes> <Route path="/" element= {
+  <Navigate to="/developers/portal" /> 
+}/> <Route path="/portal" element= {
+  <DeveloperPortal /> 
+}/> <Route path="/docs" element= {
+  <ApiDocsHub /> 
+}/> <Route path="/docs/getting-started" element= {
+  <ApiGettingStarted /> 
+}/> <Route path="/docs/reference" element= {
+  <ApiReference /> 
+}/> <Route path="/docs/webhooks" element= {
+  <ApiWebhooks /> 
+}/> <Route path="/docs/samples" element= {
+  <ApiSampleCode /> 
+}/> <Route path="/docs/errors" element= {
+  <ApiErrorCodes /> 
+}/> 
+}
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+}
+<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

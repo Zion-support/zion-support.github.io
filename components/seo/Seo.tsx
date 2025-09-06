@@ -22,24 +22,28 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 
   return <NextSeo {...props} />;
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function Seo(props: SeoProps) {;
   return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {;
 
   return <NextSeo {...props} />;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
-=======
 
+<<<<<<< HEAD
 import { NextSeo } from 'next - seo';
 import { NextSeoProps } from 'next - seo';
 ;
 export type SeoProps = NextSeoProps;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export default /**
  * Seo - Function description
@@ -52,8 +56,25 @@ function Seo() {
   return <NextSeo {...props} />;
 }
 
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+import { NextSeo } from 'next-seo';
+import { NextSeoProps } from 'next-seo';
+export type SeoProps = NextSeoProps;
+export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
+
+export default function Seo(props: SeoProps) {;
+  return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {;
+  return <NextSeo {...props} />;
+}
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

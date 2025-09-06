@@ -1,9 +1,22 @@
 
 
+<<<<<<< HEAD
+=======
+export default function Page() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Case Study — Techcrunch Pebble</title>;
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Case Study — Techcrunch Pebble</title>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <meta
           name='description'
           content='Pragmatic case scenario inspired by live site signals.'
@@ -23,9 +36,13 @@
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
 
+=======
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -34,8 +51,11 @@
       </main>;
     </div>;
   );export default function Page() {;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
 
@@ -51,12 +71,17 @@
   );export default function Page() {
   return (
 
-=======
 export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
+<<<<<<< HEAD
+=======
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <Head>;
+        <title>Case Study — Techcrunch Pebble</title>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -100,16 +125,23 @@ function Page() {
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
         <title > Case Study — Techcrunch Pebble</title>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Techcrunch Pebble" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
+<<<<<<< HEAD
 
 }
 
 =======
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Case Study — Techcrunch Pebble</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></p><h2 > Scenario</h2><p > Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
@@ -117,11 +149,46 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+      <Head>
+        <title>Case Study — Techcrunch Pebble</title>
+        <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Case Study — Techcrunch Pebble&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>
+        <h1 className='text-3xl font-extrabold'>
+          Case Study — Techcrunch Pebble
+        </h1>
+        <div
+          className='mt-4'
+          dangerouslySetInnerHTML={{
+            __html:
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>'
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'>
+          Auto-generated by Cloud Deep Research Factory.
+        </p>
+      </main>
+    </div>
+    </div>;
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Techcrunch Pebble</title>
@@ -135,7 +202,27 @@ function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>
+  );
+}
+    </div>;
+  );
+}
+
+}
+    </div>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

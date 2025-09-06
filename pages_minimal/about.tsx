@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default function About() {;
@@ -25,4 +26,18 @@ function About() {
 
     </div>);
 
+=======
+export default function About() {;
+  return (
+    </div>);
+    <div>
+      <main>
+        <h1>About Zion Tech Group</h1>
+        <p>
+          We are a leading provider of advanced IT solutions and AI services.
+        </p>
+      </main>
+    </div>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }

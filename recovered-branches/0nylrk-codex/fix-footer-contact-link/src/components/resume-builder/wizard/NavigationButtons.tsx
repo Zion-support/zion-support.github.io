@@ -1,37 +1,71 @@
 
+<<<<<<< HEAD
 
 
+=======
+{onNext && (;
+
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { NavigationButtonsProps } from "./types",;
+;
+export const NavigationButtons = ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
+<<<<<<< HEAD
+=======
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const NavigationButtons = ({;
   onBack;
   onNext;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 
 
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const NavigationButtons = ({
   onBack,
   onNext,
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
@@ -41,6 +75,7 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isLoading = false}: NavigationButtonsProps) => {;
   return (
@@ -59,15 +94,47 @@ export const NavigationButtons = ({;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
 
 =======
+=======
+  isLoading = false}: NavigationButtonsProps) => {;
+  return (;
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;
+          {backLabel}
+        </Button>
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>
+      )}
+
+  nextLabel = "Next",;
+  isLoading = false} NavigationButtonsProps) => {;
+  return (;
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;          {backLabel}
+        </Button>;
+      )}
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {onNext && (
 
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
+<<<<<<< HEAD
 
 
 
@@ -109,3 +176,42 @@ export const NavigationButtons = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </div>;
+  ),;
+},; export const NavigationButtons = ({
+  onBack;
+onNext;
+isNextDisabled = false;
+backLabel = "Back";
+nextLabel = "Next";
+isLoading = false 
+}: NavigationButtonsProps) => {
+  return (<div className="flex justify-between" > {
+  onBack && (<Button variant="outline" onClick= {
+  onBack 
+}> {
+  backLabel 
+}</Button>) 
+}{
+  onNext && (<Button onClick= {
+  onNext 
+}disabled= {
+  isNextDisabled || isLoading 
+}> {
+  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
+}{
+  nextLabel 
+}
+}</div>) 
+};
+    </div>
+  )
+}
+
+    </div>;
+  );
+    </div>;
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

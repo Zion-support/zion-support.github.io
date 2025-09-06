@@ -7,7 +7,10 @@ export interface MilestoneInput {
   start_date: string;
   end_date: string | null,
   project_type: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 
@@ -15,16 +18,62 @@ export interface GeneratedMilestone {;
 
   title: string;
   description: string;
+<<<<<<< HEAD
 
       setIsGenerating(true),
 
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
+=======
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+export interface MilestoneInput {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from 'sonner';
+export interface MilestoneInput {;
+  scope: string;
+  startDate: string;
+
+  endDate: string | null
+
+  projectType: string
+}
+export interface GeneratedMilestone {
+
+export interface GeneratedMilestone {;
+  title: string;
+  description: string;
+  dueDate: string;
+
+  estimatedHours: number
+
+  isAiGenerated: boolean
+}
+export function useMilestoneGenerator() {
+
+export function useMilestoneGenerator() {;
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
+    try {
+      setIsGenerating(true)
+      const { data, error } = await supabase.functions.invoke('generate-milestones', {
+      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+
+      setIsGenerating(true),
+      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
 =======
   due_date: string;
@@ -51,11 +100,17 @@ if (throw error) {
 }
       // Mark each milestone as AI generated;
       const milestonesWithFlag = data.milestones.map ((milestone: any) => ({
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ...milestone,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         isAiGenerated: true}));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
       setGeneratedMilestones (milestonesWithFlag);
       return milestonesWithFlag;
@@ -63,12 +118,36 @@ if (throw error) {
       console.error ('Error generating milestones:', error);
       toast.error ('Failed to generate milestones');
       return [];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {
       setIsGenerating (false);
     }
   }
+<<<<<<< HEAD
 
+=======
+      const milestonesWithFlag = data.milestones.map((milestone: any) => ({
+        ...milestone
+        isAiGenerated: true}));
+      setGeneratedMilestones(milestonesWithFlag);
+      return milestonesWithFlag
+    } catch (error) {
+      console.error('Error generating milestones:', error);
+      toast.error('Failed to generate milestones');
+      return []
+    } finally {
+      setIsGenerating(false)
+    }
+  }
+  const clearGeneratedMilestones = () => {
+    setGeneratedMilestones([])
+  }
+  return {
+    generateMilestones;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
@@ -116,13 +195,19 @@ export function useMilestoneGenerator() {;
   },;
   return {;
     generateMilestones,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
     generatedMilestones;
     isGenerating;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const clearGeneratedMilestones = () =>: any {
     setGeneratedMilestones ([]);
@@ -134,4 +219,77 @@ export function useMilestoneGenerator() {;
     is_generating;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     clearGeneratedMilestones}
+<<<<<<< HEAD
 }
+=======
+}
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { toast } from 'sonner',;
+;
+export interface MilestoneInput {;
+  scope:string,;
+  startDate:string,;
+  endDate:string | null,;
+  projectType:string;}
+;
+export interface GeneratedMilestone {;
+  title:string,;
+  description:string,;
+  dueDate:string,;
+  estimatedHours:number,;
+  isAiGenerated:boolean;
+}
+;
+export function useMilestoneGenerator() {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),;
+;
+  const generateMilestones = async (input:MilestoneInput):Promise<GeneratedMilestone[]> => {;
+    try {;
+      setIsGenerating(true),;
+;
+      const { data, error } = await supabase.functions.invoke('generate-milestones', {;
+        body:input;
+      }),;
+;
+      if (error) throw error,;
+;
+      // Mark each milestone as AI generated;
+      const milestonesWithFlag = data.milestones.map((milestone:any) => ({;
+        ...milestone,;
+        isAiGenerated:true})),;
+;
+      setGeneratedMilestones(milestonesWithFlag),;
+      return milestonesWithFlag,;
+    } catch (error) {;
+      console.error('Error generating milestones:', error),;
+      toast.error('Failed to generate milestones'),;
+      return [],;
+    } finally {;
+      setIsGenerating(false),;
+    }
+  },;
+;
+  const clearGeneratedMilestones = () => {;
+    setGeneratedMilestones([]),;
+  },;
+;
+  return {;
+    generateMilestones,;
+    generatedMilestones,;
+    isGenerating,;
+    clearGeneratedMilestones},;
+} const generateMilestones = async (input: MilestoneInput) : Promise<GeneratedMilestone[]> => {
+  try {
+  setIsGenerating (true);
+if (error) throw error;
+// Mark each milestone as AI generated 
+}
+    generatedMilestones;
+    isGenerating;
+
+    clearGeneratedMilestones}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

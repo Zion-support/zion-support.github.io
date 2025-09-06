@@ -25,6 +25,17 @@ export default function TalentDirectory() {
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             )
+<<<<<<< HEAD
+=======
+  const isAdmin = user?.userType === 'admin'
+  const paginatedTalents = filteredTalents
+  const pageKey = `talent-directory-${routeKey}-${router.asPath}`
+  )
+}
+  )
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -157,6 +168,13 @@ export default function TalentDirectory() {;
     currentPage,
     initialized]), // Fixed dependencies
 
+<<<<<<< HEAD
+=======
+  const handleRequestHire = (talent: TalentProfile) => {
+    setSelectedTalent(talent),
+    setIsHireModalOpen(true)
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
@@ -314,6 +332,19 @@ export default function TalentDirectory() {;
                           onClick={(e) => {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
+<<<<<<< HEAD
+=======
+                          }}
+}}
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
+              )}
+            </ErrorBoundary>
+          </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   const pageKey = `talent-directory-${routeKey}-${router && router.asPath}`;
@@ -329,5 +360,61 @@ export default function TalentDirectory() {;
   );
 }
 
+<<<<<<< HEAD
 ;
 
+=======
+          {/* Mobile filter sidebar */}
+          {isMobileFilterOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
+              <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="font-bold text-white">Filter & Sort</h3>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setIsMobileFilterOpen(false)}
+                    className="text-zion-slate-light h-8 w-8 p-0"
+                  >
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
+                  </Button>
+                </div>
+                <FilterSidebar
+                  searchTerm={searchTerm}
+                  setSearchTerm={setSearchTerm}
+                  selectedSkills={selectedSkills}
+                  toggleSkill={toggleSkill}
+                  selectedAvailability={selectedAvailability}
+                  toggleAvailability={toggleAvailability}
+                  selectedRegions={selectedRegions}
+                  toggleRegion={toggleRegion}
+                  priceRange={priceRange}
+                  setPriceRange={setPriceRange}
+                  experienceRange={experienceRange}
+                  setExperienceRange={setExperienceRange}
+                  expandedSections={expandedSections}
+                  toggleSection={toggleSection}
+                  sortOption={sortOption}
+                  setSortOption={setSortOption}
+                  clearFilters={clearFilters}
+                  isMobileFilterOpen={isMobileFilterOpen}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+  )
+}
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

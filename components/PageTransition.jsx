@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 ;
 const PageTransition = () =>: any {
@@ -10,4 +13,7 @@ const PageTransition = () =>: any {
 ;
 export default PageTransition;
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 
 export default function InvestorsPage() {
@@ -30,6 +31,13 @@ export default function InvestorsPage() {
 
 export default function InvestorsPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export default function InvestorsPage() {;
+import React from 'react';
+import Head from 'next/head';
+
+export default function InvestorsPage() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -64,6 +72,7 @@ export default function InvestorsPage() {;
         </div>;
         <div className='pt-4 text-slate-300'>;
           Contact IR:{' '}
+<<<<<<< HEAD
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
           </a>;
@@ -75,6 +84,17 @@ export default function InvestorsPage() {;
 export default function InvestorsPage() {
 	return (
 
+=======
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            kleber@ziontechgroup.com
+          </a>
+        </div>
+      </div>
+    </div>;
+  );	return (
+export default function InvestorsPage() {
+	return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -92,6 +112,7 @@ export default function InvestorsPage() {
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
+<<<<<<< HEAD
 
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
@@ -116,6 +137,8 @@ export default function InvestorsPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
@@ -179,10 +202,23 @@ function InvestorsPage() {
   </div>;
   </div>),
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 	),
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+	),
+}
+	)
+}
+	),
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

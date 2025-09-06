@@ -1,8 +1,30 @@
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+=======
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">
@@ -16,6 +38,7 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
 
 import React from 'react';
 import {Button} from "@/components/ui/button";
@@ -24,6 +47,19 @@ import {ArrowLeft} from "lucide-react";
 export function BackToDirectoryButton() {;
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">;
+=======
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { ArrowLeft } from "lucide-react";
+export function BackToDirectoryButton() {;
+  return (;
+    <div className="container mx-auto px-4 md:px-6 mb-12">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Button variant="outline" asChild className="my-8">;
         <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
@@ -32,6 +68,7 @@ export function BackToDirectoryButton() {;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -63,8 +100,25 @@ function BackToDirectoryButton() {
 =======
   )
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+} <Button variant="outline" asChild className="my-8"> <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"> <ArrowLeft className="mr-2 h-4 w-4" /> 
+  );
+}
+}
+;
+
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

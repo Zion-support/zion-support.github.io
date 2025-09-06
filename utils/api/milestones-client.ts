@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export async /**
  * fetch_milestones - Function description
@@ -41,6 +42,57 @@ function updateMilestoneStatus() {
 }
 
 =======
+=======
+export async function fetchMilestones() {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {headers: { 'Content-Type': 'application/json' }
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
+  return res.json();
+}
+export async function createMilestone() {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {method: 'POST';
+    headers: { 'Content-Type': 'application/json' }
+    credentials: 'include';
+    body: JSON.stringify(payload)});
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+export async function updateMilestoneStatus() {
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
+    headers: { 'Content-Type': 'application/json' }
+    credentials: 'include';
+    body: JSON.stringify(body)});
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+export async function fetchMilestones(projectId: string) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include'}),;
+  if (!res.ok) throw new Error('Failed to load milestones'),;
+  return res.json();
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -68,7 +120,18 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),;
   if (!res.ok) throw new Error(await res.text());
   return res.json();
+<<<<<<< HEAD
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

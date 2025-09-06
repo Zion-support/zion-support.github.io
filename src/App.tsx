@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Button from './components/Button'
@@ -63,19 +64,47 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Header onMenuClick={() => {}} />
+=======
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+
+export default function App() {
+  const handleMenuClick = () => {
+    // Handle menu click if needed
+  };
+
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header onMenuClick={handleMenuClick} />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+<<<<<<< HEAD
             <Route path="/pricing" element={<Pricing />} />
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
+<<<<<<< HEAD
   )
 }
 
 export default App;
+=======
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,16 +1,29 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function TermsPage() {;
   return (;
 
     <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default /**
  * TermsPage - Function description
  */
 function TermsPage() {
   return (
     <div className="min - h-screen bg - white">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default function TermsPage() {return (;
+export default function TermsPage() {;
+  return (;
+    <div className="min-h-screen bg-white">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

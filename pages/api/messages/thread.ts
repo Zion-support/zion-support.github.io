@@ -1,7 +1,39 @@
 
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
+import {
+
+  getConversationById,
+  getMessages,
+  sendMessage,;
+
+
+=======
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
+import {
+  getConversationById
+  getMessages
+  sendMessage
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
+import {
+  getConversationById,
+  getMessages,
+  sendMessage,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+} from "../../../utils/messaging/storage";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = requireUser(req, res);
+  if (!user) return;
+
+<<<<<<< HEAD
+=======
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
@@ -16,6 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === "GET") {
     const { id } = req && req.query;
     if (!id || typeof id !== "string") return res && res.status($1).json({ $2 });
@@ -29,6 +62,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const messages = getMessages(id);
 
+<<<<<<< HEAD
+=======
+  if (req && req.method === "GET") {
+    const { id } = req && req.query;
+    if (!id || typeof id !== "string") return res && res.status($1).json({ $2 });
+    if (!id || typeof id !== 'string') return res.status(400).json({ error: 'Missing id' });
+    const conversation = getConversationById(id);
+    if (!conversation || !conversation && conversation.participants.includes(user && user.id)) {
+      return res && res.status(404).json({ error: "Conversation not found" });
+    }
+    const messages = getMessages(id);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       conversationId,
       recipientId,
 =======
@@ -39,6 +84,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { conversation, message } = sendMessage({
       conversationId,
 
+<<<<<<< HEAD
+=======
+      senderId: user.id, recipientId,
+import { NextApiRequest, NextApiResponse  } from './next';
+import { require_user  } from '../../../utils / auth';
+import {
+  getConversationById,
+  get_messages,
+  send_message,
+} from '../../../utils / messaging / storage';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const user = require_user (req, res);
+  // Check condition
+if (return) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {
   $2
@@ -62,8 +131,11 @@ if ( {) {
       body,
       link_url,
       attachmentBase64,
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       attachment_name,
       context,
     } = req.body || {}
@@ -75,8 +147,11 @@ if ( {) {
       conversation_id,
       sender_id: user.id,
       recipient_id,
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       body,
       link_url,
       attachmentBase64,
@@ -85,13 +160,17 @@ if ( {) {
 
       context,
     });
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       context});
     res.status(200).json({ conversation, message })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } else {
+<<<<<<< HEAD
     res && res.status(405).json({ error: "Method not allowed" });
   }
 
@@ -105,6 +184,105 @@ if ( {) {
   }
 }
 
+=======
+    res.status (200).json ({ conversation, message });
+  } else {
+    res.status (405).json ({ error: "Method not allowed" });
+  }
+}
+
+}
+    res.status (200).json ({ conversation, message });
+  } else {
+    res.status (405).json ({ error: "Method not allowed" });
+
+    res.status(405).json({ error: "Method not allowed" });
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = requireUser(req, res);
+  if (!user) return;
+  if (req.method === 'GET') {
+    const { id } = req.query;
+    if (!id || typeof id !== 'string') return res.status($1).json({$2});
+    const conversation = getConversationById(id);
+    if (!conversation || !conversation.participants.includes(user.id)) {
+      return res.status(404).json({ error: 'Conversation not found' })
+    }
+    const messages = getMessages(id);
+    res.status(200).json({ conversation, messages })
+  } else if (req.method === 'POST') {
+    const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {};
+    if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
+    const { conversation, message } = sendMessage({
+      conversationId,
+      senderId: user.id,
+      recipientId,
+      body,
+      linkUrl,
+      attachmentBase64,
+      attachmentName,
+      context
+    });
+    res.status(200).json({ conversation, message })
+  } else {
+    res.status(405).json({ error: 'Method not allowed' })
+  }
+}
+    res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage';
+export default function handler(req, res) {
+  try {
+  const user = requireUser(req, res);
+  if (!user) return,;
+  if (req.method === 'GET') {
+    const { id } = req.query;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const messages = getMessages(id);
+    res.status(200).json({ conversation, messages });
+  } else if (req.method === 'GET') {
+    const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {};
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const { conversation, message } = sendMessage({;
+      conversationId;
+      senderId: user.id,;
+      recipientId,;
+      body,;
+      linkUrl,;
+      attachmentBase64,;
+      attachmentName;
+      context});
+    res.status(200).json({ conversation, message });
+  } else {;
+    res.status(405).json({ error: 'Method not allowed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,8 +299,15 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
   }
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+}
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

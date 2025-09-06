@@ -1,14 +1,15 @@
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplyToJobFormProps {
 
   job: Job
 
   onSuccess?: () => void
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -23,6 +24,7 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
+<<<<<<< HEAD
 interface ApplyToJobFormProps {;
   job: Job,;
   onSuccess?: () => void;
@@ -51,12 +53,70 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
 
 
 
+=======
+}
+
+
+
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+import { Job } from "@/types/jobs",
+import { toast } from "sonner",
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+}
+
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
+  const { user } = useAuth();
+  const { applyToJob } = useJobApplications();
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+  const { user } = useAuth();
+  const { applyToJob } = useJobApplications();
+
+  const { resumes, isLoading: isResumesLoading } = useResume()
+  const navigate = useNavigate();
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  const { user } = useAuth(),
+  const { applyToJob } = useJobApplications(),
+  const { resumes, isLoading: isResumesLoading } = useResume(),
+  const navigate = useNavigate(),
+  
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return
 
     }
+<<<<<<< HEAD
 
     if (!coverLetter && coverLetter.trim()) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -65,6 +125,16 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     }
 
 
+=======
+    if (!coverLetter.trim()) {
+      setError("Please provide a cover letter"),
+      return
+    }
+    setIsSubmitting(true);
+    setError(null);
+    try {
+      const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     
     setIsSubmitting(true),
     setError(null),
@@ -72,10 +142,15 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
+<<<<<<< HEAD
 
 
       if (success) {
         toast.success("Your application has been submitted!");
+=======
+      if (success) {
+        toast.success("Your application has been submitted!"),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (onSuccess) {
           onSuccess()
         }
@@ -83,7 +158,10 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -154,20 +232,36 @@ if ( {) {
     } catch (err: any) {
       set_error (err.message || "Failed to submit application"),
       toast.error ("Failed to submit application");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 
     } finally {
       setIsSubmitting(false)
     }
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
 
 
+<<<<<<< HEAD
+=======
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -185,7 +279,10 @@ if ( {) {
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     setIsSubmitting(true);
     setError(null);
@@ -216,12 +313,90 @@ if ( {) {
         </p>;
       </div>;
 
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
+import { Job } from "@/types/jobs",;
+import { toast } from "sonner",;
+;
+interface ApplyToJobFormProps {;
+  job:Job,;
+  onSuccess?:() => void;
+}
+;
+export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
+  const { user } = useAuth(),;
+  const { applyToJob } = useJobApplications(),;
+  const { resumes, isLoading:isResumesLoading } = useResume(),;
+  const navigate = useNavigate(),;
+  ;
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),;
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ;
+  const handleSubmit = async (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    ;
+    if (!user) {;
+      toast.error("You must be logged in to apply"),;
+      navigate("/login", { state:{ returnTo:`/jobs/${job.id}` } }),;
+      return,;
+    }
+    ;
+    if (!coverLetter.trim()) {;
+      setError("Please provide a cover letter"),;
+      return,;
+    }
+    ;
+    setIsSubmitting(true),;
+    setError(null),;
+    ;
+    try {;
+      const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),;
+      ;
+      if (success) {;
+        toast.success("Your application has been submitted!"),;
+        if (onSuccess) {;
+          onSuccess(),;
+        }
+      }
+    } catch (err:any) {;
+      setError(err.message || "Failed to submit application"),;
+      toast.error("Failed to submit application");
+    } finally {;
+      setIsSubmitting(false),;
+    }
+  },;
+  ;
+  return (;
+    <form onSubmit={handleSubmit} className="space-y-6">;
+      <div>;
+        <h3 className="text-lg font-medium mb-1">Apply to:{job.title}</h3>;
+        <p className="text-sm text-muted-foreground mb-4">;
+          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix:true })}
+        </p>;
+      </div>;
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {error && (;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
 
       <div className="space-y-4">;
         <div>;
@@ -265,6 +440,17 @@ if ( {) {
         <div>;
           <Label html_for="resume">Select Resume (Optional)</Label>;
 
+=======
+      ;
+      <div className="space-y-4">;
+        <div>;
+          <Label htmlFor="coverLetter">Cover Letter</Label>;
+          <Textarea;
+            id="coverLetter";
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e && e.target.value)}
+            rows={6}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {isResumesLoading ? (
             <div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
@@ -273,8 +459,56 @@ if ( {) {
             <Select;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
+<<<<<<< HEAD
 
 =======
+=======
+          <Textarea
+            id="coverLetter"
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+            rows={6}
+            placeholder="Introduce yourself and explain why you are a good fit for this job..."
+            className="mt-1"
+          />
+          <p className="text-xs text-muted-foreground mt-1">
+            Provide a brief introduction and highlight your relevant skills and experience.
+          </p>
+        </div>
+        <div>
+          <Label htmlFor="resume">Select Resume (Optional)</Label>
+          {isResumesLoading ? (
+            <div className="flex items-center gap-2 mt-2">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span>Loading your resumes...</span>
+            </div>
+          ) : resumes && resumes.length > 0 ? (
+            <Select
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
+            >
+              <SelectTrigger className="mt-1">
+                <SelectValue placeholder="Select a resume" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="">No resume</SelectItem>
+                {resumes.map((resume) => (
+                  <SelectItem key={resume.id} value={resume.id}>
+                    {resume.basic_info.title |"Untitled Resume"}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          ) : (
+            <div className="flex items-center justify-between mt-2 p-3 border rounded-md">
+              <div className="flex items-center gap-2">
+                <FileText className="h-5 w-5 text-muted-foreground" />
+                <span>No resumes found</span>
+              </div>
+              <Button
+                variant="outline"
+                size="sm"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 type="button"
                 onClick={() => navigate("/dashboard/talent/portfolio")}
               >
@@ -288,7 +522,10 @@ if ( {) {
         <Button
           type="button"
           variant="outline"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -370,7 +607,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
             rows={6}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt-1";
           />;
@@ -387,6 +627,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               <span>Loading your resumes...</span>;
             </div>;
           ) : resumes && resumes.length > 0 ? (;
+<<<<<<< HEAD
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}>;
@@ -395,10 +636,34 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             >;
               <SelectTrigger className="mt - 1">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            placeholder="Introduce yourself and explain why you are a good fit for this job...";
+            className="mt-1";
+          />;
+          <p className="text-xs text-muted-foreground mt-1">;
+            Provide a brief introduction and highlight your relevant skills and experience.;
+          </p>;
+        </div>;
+        ;
+        <div>;
+          <Label htmlFor="resume">Select Resume (Optional)</Label>;
+          {isResumesLoading ? (;
+            <div className="flex items-center gap-2 mt-2">;
+              <Loader2 className="h-4 w-4 animate-spin" />;
+              <span>Loading your resumes...</span>;
+            </div>;
+          ) :resumes && resumes.length > 0 ? (;
+            <Select;
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
+            >;
+              <SelectTrigger className="mt-1">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -429,6 +694,50 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   );
 }
 
+=======
+        <Button
+          type="button"
+          variant="outline"
+          disabled={isSubmitting}
+          onClick={() => {;
+            if (onSuccess) onSuccess();
+                {resumes.map((resume) => (;
+                  <SelectItem key={resume.id} value={resume.id}>;
+                    {resume.basic_info.title || "Untitled Resume"}
+                  </SelectItem>;
+                ))}
+              </SelectContent>;
+            </Select>;
+          ) :(;
+            <Select;
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
+            >
+              <SelectTrigger className="mt-1">
+                <SelectValue placeholder="Select a resume" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="">No resume</SelectItem>
+                {resumes.map((resume) => (
+                  <SelectItem key={resume.id} value={resume.id}>
+                    {resume.basic_info.title || "Untitled Resume"}
+                  </SelectItem>
+                ))}
+              </SelectContent>;
+            </Select>;
+          ) : (;
+            <div className="flex items-center justify-between mt-2 p-3 border rounded-md">;
+              <div className="flex items-center gap-2">;
+                <FileText className="h-5 w-5 text-muted-foreground" />;
+                <span>No resumes found</span>;
+              </div>;
+          ) :(;
+            "Submit Application";
+          )}
+        </Button>;
+      </div>;
+    </form>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {resumes.map ((resume) => (
                   <SelectItem key={resume.id} value={resume.id}>;
                     {resume.basic_info.title || "Untitled Resume"}
@@ -444,6 +753,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                 variant="outline";
                 size="sm";
                 type="button";
+<<<<<<< HEAD
                 on_click={() => navigate ("/dashboard / talent / portfolio")}
               >;
                 Create Resume;
@@ -480,3 +790,85 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ),; interface ApplyToJobFormProps {
+  job: Job;
+onSuccess?: () => void 
+}export function ApplyToJobForm ({
+  job, onSuccess 
+}: ApplyToJobFormProps) {
+  const {
+  user 
+}= useAuth ();
+const {
+  applyToJob 
+}= useJobApplications ();
+const {
+  resumes, isLoading: isResumesLoading 
+}= useResume ();
+const navigate = useNavigate ();
+const [isSubmitting, setIsSubmitting] = useState (false);
+const [error, setError] = useState<string | null> (null);
+}setError (null);
+if (success) {
+  if (onSuccess) {
+  
+}finally {
+  setIsSubmitting (false) 
+}
+;
+
+};
+handleSubmit 
+}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
+  error 
+}</AlertDescription> </Alert>) 
+}<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
+  selectedResumeId 
+}onValueChange= {
+  setSelectedResumeId 
+}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>) ) 
+}</SelectContent> </Select> > Create Resume </Button> </div>) 
+}</div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") 
+}</Button> </div> </form>) 
+}
+                onClick={() => navigate("/dashboard/talent/portfolio")}
+              >
+                Create Resume
+              </Button>
+            </div>
+          )}
+        </div>;
+      </div>;
+      <div className="flex justify-end gap-2">;
+        <Button;
+          type="button";
+          variant="outline";
+          disabled={isSubmitting}
+          onClick={() => {
+            if (onSuccess) onSuccess()
+          }}
+        >
+          Cancel
+        </Button>
+        <Button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <>
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              Submitting...
+            </>
+          ) : (
+            "Submit Application"
+          )}
+        </Button>
+      </div>
+    </form>
+  )
+}
+        </Button>;
+      </div>;
+    </form>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

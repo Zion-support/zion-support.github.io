@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
 
@@ -16,21 +19,60 @@ export default function AdminLearn() {
       headers: { 'Content-Type': 'application/json' },
 
       body: JSON.stringify(form)
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react';
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState('');
+  async function saveCourse() {
+    setMessage('')
+    const resp = await fetch('/api/admin/learn/course', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form)
+})
+import { useEffect, useState } from 'react',;
+;
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState(''),
+
+import { useEffect, useState } from 'react';
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
+  const [message, setMessage] = useState('')
+  async function saveCourse() {
+    setMessage('')
+    const resp = await fetch('/api/admin/learn/course', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify(form)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     })
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
+<<<<<<< HEAD
 
   }
 =======
       body: JSON.stringify(form)
 
+=======
+      body: JSON.stringify(form)
+
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }),
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
     else setMessage('Error: ' + (data.error || 'unknown'))
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useEffect, useState } from 'react';
 export default function AdminLearn(req, res) {
   try {
@@ -50,12 +92,19 @@ export default function AdminLearn(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+}
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -78,6 +127,7 @@ export default function AdminLearn(req, res) {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
+<<<<<<< HEAD
 
 =======
 }
@@ -135,12 +185,30 @@ function save_course() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+}
+
+      {message && <div className="text-sm">{message}</div>}
+    </div>
+  );
+};
+      {message && <div className="text-sm">{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </div>
   );
 };
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {message && <div className="text-sm">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -153,8 +221,15 @@ function save_course() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

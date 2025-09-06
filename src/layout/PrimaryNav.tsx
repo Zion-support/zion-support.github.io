@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { useState  } from 'react';
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -76,19 +81,69 @@ function PrimaryNav() {
   const suggestions = generateSearchSuggestions ();
   let unread_count = 0;
 
+<<<<<<< HEAD
+=======
+import { useState } from 'react'
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { Logo } from '@/components/header/Logo'
+import { PointsBadge } from '@/components/loyalty/PointsBadge'
+import { UserMenu } from '@/components/header/UserMenu'
+import { LanguageSelector } from '@/components/header/LanguageSelector'
+import { ModeToggle } from '@/components/ModeToggle'
+import { useAuth } from '@/hooks/useAuth'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useMessaging } from '@/context/MessagingContext'
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions } from '@/data/marketplaceData'
+import { slugify } from '@/lib/slugify'
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
+import { MobileMenu } from '@/components/header/MobileMenu'
+import { MobileBottomNav } from '@/components/header/MobileBottomNav'
+import { Menu, X } from 'lucide-react'
+import { useTranslation  } from 'react-i18next';
+import { CartDrawer  } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
+export function PrimaryNav() {
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const { user } = useAuth()
+  const isLoggedIn = !!user
+  const isMobile = useIsMobile()
+  const { t } = useTranslation()
+  const router = useRouter()
+  const [query, setQuery] = useState('')
+  const suggestions = generateSearchSuggestions()
+  let unreadCount = 0
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
     const messaging = use_messaging ();
     unread_count = messaging.unread_count;
   } catch {
+<<<<<<< HEAD
 
     // context not available
 
+=======
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // context not available
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -116,6 +171,33 @@ if ( {) {
             component: 'PrimaryNav',
           })) }
   }
+<<<<<<< HEAD
+=======
+  }
+import { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Logo } from '@/components/header/Logo',;
+import { PointsBadge } from '@/components/loyalty/PointsBadge',;
+import { UserMenu } from '@/components/header/UserMenu',;
+import { LanguageSelector } from '@/components/header/LanguageSelector',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { generateSearchSuggestions } from '@/data/marketplaceData',;
+import { slugify } from '@/lib/slugify',;
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next',;
+import { CartDrawer } from '@/components/cart/CartDrawer',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -141,6 +223,7 @@ export function PrimaryNav() {;
       router;
         .push(`/search?q=${encodeURIComponent(trimmed)}`);
         .then(() => setQuery(''));
+<<<<<<< HEAD
         .catch(err =>;
           logErrorToProduction('Search navigation failed', err, {;
             query: trimmed,;
@@ -148,6 +231,11 @@ export function PrimaryNav() {;
           });
         );    }
   };
+=======
+        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
+    }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
         data-testid='header'>;
@@ -175,7 +263,27 @@ export function PrimaryNav() {;
       >
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
+<<<<<<< HEAD
 
+=======
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className='hidden lg:block order-1 flex-shrink-0'>
+            <ResponsiveNavigation
+              openLoginModal={returnToPath => setLoginOpen(true)}
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className='hidden lg:block order-1 flex-shrink-0'>
+            <ResponsiveNavigation
+              openLoginModal={returnToPath => setLoginOpen(true)}
+            />          </div>
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          {/* Actions container with responsive layout */}
+          <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
+            <form
+              onSubmit={handleSubmit}
+              className='flex-shrink-0'
+              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
+            />          </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
@@ -193,6 +301,7 @@ export function PrimaryNav() {;
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
+<<<<<<< HEAD
 
       <header;
         className='sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md';
@@ -218,6 +327,8 @@ export function PrimaryNav() {;
               <EnhancedSearchInput;
                 value={query}
                 on_change={set_query}
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 onSelectSuggestion={sugg => {
                   log_debug ('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
@@ -242,10 +353,74 @@ if ( {) {
                     // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`);
 
+<<<<<<< HEAD
+=======
+                onSelectSuggestion={sugg => {
+                  logDebug('PrimaryNav search suggestion selected:', {
+                    suggestion: sugg
+                  });                  // Handle different suggestion types with proper navigation
+                  if (sugg.id) {
+                    // Product listings with IDs go to product detail page
+                    router.push(`/marketplace/listing/${sugg.id}`)
+                  } else if (true) {}
+                  ) {
+                    // Documentation suggestions navigate directly to their path
+                    router.push(sugg.slug)
+                  } else if (sugg.type === 'blog' && sugg.slug) {
+                    // Blog posts navigate to blog detail page
+                    router.push(`/blog/${sugg.slug}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   } else {
                     // Default: search results page with query parameter;
                     router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
                   }
+<<<<<<< HEAD
+=======
+                  setQuery('')
+                  // Track analytics event
+                  if (typeof window !== 'undefined' && window.gtag) {
+                    window.gtag('event', 'search_suggestion_click', {
+                      search_term: sugg.text
+                      suggestion_type: sugg.type
+                      suggestion_id: sugg.id |sugg.slug
+                    })
+                  }
+                  // // // // // console.log('PrimaryNav search suggestion selected:'
+  sugg)
+                  // Handle different suggestion types with proper navigation
+                  if(sugg.id) {
+                    // Product listings with IDs go to product detail page`
+                    router.push(`/marketplace/listing/${sugg.id
+'`
+}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                    // Documentation suggestions navigate directly to their path'
+                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
+                    // Blog posts navigate to blog detail page`
+                    router.push(`/blog/${sugg.slug}`)} else {
+                    // Default: search results page with slug;`
+                    router.push(`/search/${sugg.slug |slugify(sugg.text)}`)}
+                  setQuery('')
+                  // Track analytics event'
+                  if(typeof window !== 'null' && window.gtag) {
+                    window.gtag('event',search_suggestion_click', {
+                      search_term: sugg.text
+                      suggestion_type: sugg.type
+                      suggestion_id: sugg.id |sugg.slug
+})}
+                }}
+                searchSuggestions = {suggestions,}
+              />
+            </form>
+            {/* Compact actions group */}
+            <div className='flex items-center gap-1'>
+              <PointsBadge />
+              <CartDrawer />
+            </div>
+                  } else {
+                    // Default: search results page with query parameter;
+                    router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
+                  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                 onSelectSuggestion={sugg => {;
                   logDebug('PrimaryNav search suggestion selected:', {;
@@ -257,7 +432,10 @@ if ( {) {
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),;
                   // Handle different suggestion types with proper navigation;
                   if (sugg.id) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     // Product listings with IDs go to product detail page;
                     router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
                   } else if (;
@@ -375,14 +553,20 @@ if ( {) {
               />;
             </form>;
             {/* Compact actions group */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer />
             </div>
             
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -394,7 +578,17 @@ if ( {) {
               {!isLoggedIn && (
                 <>
                   <Link
+<<<<<<< HEAD
 
+=======
+                    href='/auth/login'
+                    className='text-sm hover:text-primary whitespace-nowrap'
+                    data-testid='login-link'
+                    onClick={e => {
+                      e.preventDefault()
+                      setLoginOpen(true) }}
+                  >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
@@ -406,12 +600,22 @@ if ( {) {
               <CartDrawer />;
             </div>;
             {/* Compact controls group */}
+<<<<<<< HEAD
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
+=======
+            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
             {/* Auth links - flex wrap for very small screens */}
+<<<<<<< HEAD
 
+=======
+            <div className="flex items-center gap-1 flex-wrap">;
+              {!isLoggedIn && (;
+                <>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Link;
                     href="/auth/login";
                     className="text-sm hover: text-primary whitespace-nowrap";
@@ -421,8 +625,11 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     {t('auth.login')}
                   </Link>
                     onClick={e => {;
@@ -431,6 +638,11 @@ if ( {) {
                   >;
                     {t('auth && auth.login')}
                   </Link>;
+<<<<<<< HEAD
+=======
+                    {t('auth.login')}
+                  </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Link
                     href='/signup'
                     className='text-sm hover:text-primary whitespace-nowrap'>;
@@ -455,6 +667,33 @@ if ( {) {
             {!isLoggedIn && (
               <Link
 
+<<<<<<< HEAD
+=======
+                {t('auth.login')}
+              </Link>
+            )}
+            {isLoggedIn && <UserMenu />}
+            </div>
+          </div>
+          {/* Tablet view (md to lg) - simplified controls */}
+          <div className='hidden md:flex lg:hidden items-center gap-2 order-2'>
+            </div>;
+          </div>;
+          {/* Tablet view (md to lg) - simplified controls */}
+          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+            <ModeToggle />
+            <LanguageSelector />
+            {!isLoggedIn && (
+              <Link
+                href='/auth/login'
+                className='text-sm hover:text-primary'
+                data-testid='login-link'
+                onClick={e => {
+                  e.preventDefault()
+                  setLoginOpen(true) }}
+
+              >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -479,6 +718,7 @@ if ( {) {
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
+<<<<<<< HEAD
 
                 onClick={e => {;
                   e && e.preventDefault();
@@ -537,6 +777,18 @@ if ( {) {
           {/* Mobile menu button */}
 
 
+=======
+          </div>
+              {isLoggedIn && <UserMenu  />}
+            </div>
+          </div>
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={t('general.toggle_mobile_menu')}          >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
           {/* Mobile menu button */}
           <button
@@ -545,8 +797,11 @@ if ( {) {
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -558,6 +813,7 @@ if ( {) {
       {mobileMenuOpen && (;
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
           <div
+<<<<<<< HEAD
 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -676,8 +932,25 @@ setLoginOpen (true) ;
   )}
 '"`;
 
+=======
+  unreadCount
+            className='absolute inset-0 bg-black/50 backdrop-blur-sm'
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden='true'          />
+          <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={returnToPath => setLoginOpen(true)}            />
+          </div>
+        </div>
+      )}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
-
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
 //Track analytics event
@@ -719,8 +992,11 @@ setLoginOpen (true)
   unreadCount
 
   unreadCount 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -737,6 +1013,22 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
+<<<<<<< HEAD
+=======
+;
+;
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={(returnToPath) => setLoginOpen(true)}
+            />;
+          </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -747,6 +1039,7 @@ setLoginOpen (true)
               <Menu className='h - 6 w - 6' />)}
           </button>;
         </div>;
+<<<<<<< HEAD
       </header>;
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>;
@@ -765,6 +1058,8 @@ setLoginOpen (true)
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('');
 //Track analytics event;
@@ -833,7 +1128,11 @@ setLoginOpen (true);
 
 
 ;
+<<<<<<< HEAD
 
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </h3>";
                     <div className="space - y-2 ml - 4">;
                       {category.items.map ((service: unknown, service_index: unknown;
@@ -881,4 +1180,15 @@ setLoginOpen (true);
 '"`;
 }
 
+<<<<<<< HEAD
 ;
+=======
+      )}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

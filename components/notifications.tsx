@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,8 +25,48 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 
   return <NotificationCenter />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import dynamic from 'next / dynamic';
+;
+const NotificationCenter = dynamic (
+  () => import ('../components / notifications / NotificationCenter'),
+  {
+    ssr: false
+  }
+);
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false}),
+export default function NotificationsPage() {
+const NotificationCenter = dynamic(;
+  () => import('../components/notifications/NotificationCenter'),;
+  {;
+    ssr: false,;
+  }
+);
+export default function NotificationsPage() {;
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
+  ssr: false}),;
+export default function NotificationsPage() {;
+  return <NotificationCenter />;
+}
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+  ssr: false}),
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

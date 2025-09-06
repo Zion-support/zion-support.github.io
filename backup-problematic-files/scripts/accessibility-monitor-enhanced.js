@@ -14,12 +14,12 @@ const accessibilityChecks = {
     return true
   }
 };
-Object.entries(accessibilityChecks).forEach(([name, check]) => {
+Object && Object.entries(accessibilityChecks).forEach(([name, check]) => {
   try {
     const result = check();
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
+    console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
-    console.log(`❌ ${name}: ERROR - ${error.message}`);
+    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
   }
 });
 console.log('🎉 Accessibility monitoring completed!');

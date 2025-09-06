@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Activity } from 'lucide-react';
 
@@ -38,3 +39,12 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null; // Placeholder component
+};
+
+export default PerformanceMonitor;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

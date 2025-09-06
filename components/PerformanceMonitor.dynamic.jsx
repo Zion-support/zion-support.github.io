@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 const PerformanceMonitor.dynamic = () => {
   return (
@@ -8,5 +11,8 @@ const PerformanceMonitor.dynamic = () => {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default PerformanceMonitor.dynamic;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,9 +29,36 @@ import React from 'react';
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+import React from 'react';
+  return <OrgChartPage />;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function TeamPage() {;
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
+export default function TeamPage() {
+const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), {;
+  ssr: false,;
+});
+
+export default function TeamPage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false })
+export default function TeamPage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
+export default function TeamPage() {;
+  return <OrgChartPage />;
+}
+;
+}
+export default function TeamPage() {
+  return <OrgChartPage />;
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

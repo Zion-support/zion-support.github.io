@@ -26,7 +26,12 @@ interface AccessibilityProps {
   // Add props here as needed
 
 
+}
 
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function Accessibility({ }: AccessibilityProps) {
   return (
     <div>
@@ -37,8 +42,28 @@ export default function Accessibility({ }: AccessibilityProps) {
 
 
 
+<<<<<<< HEAD
 }
 
 =======
 
 
+=======
+
+
+:src.pages.disabled/Accessibility.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.pages.disabled/Accessibility.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Accessibility.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

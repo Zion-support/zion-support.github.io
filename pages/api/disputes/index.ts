@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -7,6 +10,7 @@ import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb';
@@ -17,36 +21,51 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const user = parseUserFromRequest(req);
 
 
+<<<<<<< HEAD
+=======
+  const user = parseUserFromRequest(req);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === "GET") {
     const all = await readAllDisputes();
     let filtered = all;
     if (user && user.role !== "admin") {
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
+<<<<<<< HEAD
 
       );
     }
     return res && res.status(200).json({ disputes: filtered });
 
 =======
+=======
+      );
+    }
+    return res && res.status(200).json({ disputes: filtered });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
+=======
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -57,6 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       talentUserId,
       reason,
       reasonDetails,
+<<<<<<< HEAD
 
     if (
       !projectId |
@@ -68,16 +88,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(400).json({ error: "Missing required fields" });
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       description} = req.body || {};
 
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const id = generateCaseId();
 
 =======
+=======
+    }
+    const id = generateCaseId();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';
 import { parseUserFromRequest  } from '../../../utils / auth';
@@ -95,6 +122,25 @@ if ( {) {
   $2
 }
     const all = await readAllDisputes ();
+<<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createDispute, readAllDisputes } from "../../../utils/fsdb";
+import { parseUserFromRequest } from "../../../utils/auth";
+import { DisputeCase, DisputeReason } from "../../../types/disputes";
+import { generateCaseId } from "../../../utils/fsdb";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const user = parseUserFromRequest(req);
+  if (req.method === "GET") {
+    const all = await readAllDisputes();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     let filtered = all;
     // Check condition
 if ( {) {
@@ -106,6 +152,7 @@ if ( {) {
     }
     return res.status (200).json ({ disputes: filtered });
   }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -134,6 +181,9 @@ if ( {) {
     const dispute: DisputeCase = {
 
 
+=======
+    const dispute: DisputeCase = {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id,
       projectId: String(projectId),
       entityType,
@@ -155,10 +205,11 @@ if ( {) {
     return res && res.status(201).json({ dispute });
   }
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 
 =======
       project_id: String (project_id),
@@ -189,6 +240,69 @@ res.setHeader("Allow", "GET,POST");
 }
 
 =======
+=======
+  if (req.method === "POST") {
+    const now = new Date().toISOString();
+    const {
+      projectId
+      entityType
+      entityId
+      clientUserId
+      talentUserId
+      reason
+      reasonDetails
+      description
+    } = req.body |{}
+    if (
+      !projectId |
+      !clientUserId |
+      !talentUserId |
+      !reason |
+      !description
+    ) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+    const id = generateCaseId();
+    const dispute: DisputeCase = {
+      id
+      projectId: String(projectId)
+      entityType
+      entityId
+      clientUserId: String(clientUserId)
+      talentUserId: String(talentUserId)
+      createdAt: now
+      updatedAt: now
+      status: "Open"
+      reason: reason as DisputeReason
+      reasonDetails
+      description
+      attachments: []
+      messages: []
+    }
+      id,
+      projectId: String(projectId),
+      entityType,
+      entityId,
+      clientUserId: String(clientUserId),
+      talentUserId: String(talentUserId),
+      createdAt: now,
+      updatedAt: now,
+      status: "Open",
+      reason: reason as DisputeReason,
+      reasonDetails,
+      description,
+      attachments: [],
+      messages: [],
+    };
+
+    await createDispute(dispute);
+    return res.status(201).json({ dispute });
+  }
+
+  res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -276,7 +390,6 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
-
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -286,6 +399,12 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+  res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }
   } catch (error) {
@@ -309,6 +428,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

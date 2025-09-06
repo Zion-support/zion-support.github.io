@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
  
 
 
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 async function post(url: string, body: any) {
   try {
@@ -17,6 +21,21 @@ async function post(url: string, body: any) {
 
 
 =======
+=======
+}
+
+
+
+ 
+import fs from 'fs';
+import path from 'path';
+const HOST = process.env.SELF_HOST |'http: //localhost:3000'
+async function post(url: string, body: any) {
+
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return await res.json()
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -25,6 +44,7 @@ async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
@@ -45,13 +65,64 @@ async function main() {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
 
+=======
+}
+
+}
+
+async function main() {
+  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),
+  if (!fs.existsSync(seedsPath)) {
+    // // // console.log('No seeds file found at', seedsPath),
+    process.exit(0)
+  }
+  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,
+  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
+  fs.mkdirSync(outDir, { recursive: true }),
+  for (const s of seeds) {
+    const gen = await post(`${HOST}/api/seo/generate`, s),
+    if (gen?.slug && gen?.payload) {
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
+      console.log('Generated', gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
+      // // // console.log('Generated', gen.slug)
+;
+async function main() {;
+  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),;
+  if (!fs.existsSync(seedsPath)) {;
+    // // // console.log('No seeds file found at', seedsPath),;
+    process.exit(0);
+  }
+  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,;
+  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),;
+  fs.mkdirSync(outDir, { recursive: true }),;
+  for (const s of seeds) {;
+    const gen = await post(`${HOST}/api/seo/generate`, s),;
+    if (gen?.slug && gen?.payload) {;
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
+      // // // console.log('Generated', gen.slug);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 main().catch((e) => { console && console.error(e), process && process.exit(1) });
 
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+      fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2));
+      console && console.log('Generated', gen && gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+main().catch((e) => { console && console.error(e), process && process.exit(1) });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 import fs from 'fs';
 import path from 'path';
@@ -91,8 +162,63 @@ if ( {) {
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
 
+<<<<<<< HEAD
 main().catch((e) => { console.error(e), process.exit(1) });
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+/* eslint-disable no-console */;
+import fs from 'fs',;
+import path from 'path',;
+;
+const HOST = process.env.SELF_HOST || 'http://localhost:3000',;
+;
+async function post(url:string, body:any) {;
+  const res = await fetch(url, { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify(body) }),;
+  return await res.json(),;
+}
+;
+async function main() {;
+  const seedsPath = path.join(process.cwd(), 'datapage-metadata', 'seo-seeds.json'),;
+  if (!fs.existsSync(seedsPath)) {;
+    // // // console.log('No seeds file found at', seedsPath),;
+    process.exit(0),;
+  }
+  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt:string, region?:string, service?:string }>,;
+  const outDir = path.join(process.cwd(), 'datapage-metadata', 'seo'),;
+  fs.mkdirSync(outDir, { recursive:true }),;
+  for (const s of seeds) {;
+    const gen = await post(`${HOST}/api/seo/generate`, s),;
+    if (gen?.slug && gen?.payload) {;
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
+      // // // console.log('Generated', gen.slug),;
+    }
+  }
+}
+;
+main().catch((e) => { console.error(e), process.exit(1), }),/* eslint-disable no-console */ 
+}const seeds = JSON.parse (fs.readFileSync (seedsPath, 'utf8') ) as Array< {
+  prompt: string, region?: string, service?: string 
+}>;
+const outDir = path.join (process.cwd (), 'datapage-metadataseo');
+fs.mkdirSync (outDir, {
+  recursive: true 
+});
+for (const s of seeds) {
+  const gen = await post (`$ {
+  HOST 
+}/api/seo/generate`, s);
+if (gen?.slug && gen?.payload) {
+  
+}
+}
+}
+    }
+  }
+}
+;
+main().catch((e) => { console.error(e), process.exit(1) });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

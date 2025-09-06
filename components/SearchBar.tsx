@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,6 +32,15 @@ import Link from 'next / link';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+
+
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -42,7 +52,10 @@ interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const SearchBar: React.FC = () => {
   const [query, set_query] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -62,16 +75,26 @@ const SearchBar: React.FC = () => {
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+<<<<<<< HEAD
       url: '/ai - services',
+=======
+url: '/ai - services',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       type: 'category',
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+<<<<<<< HEAD
       url: '/it - services',
       type: 'category',
     },
 
+=======
+url: '/it - services',
+      type: 'category',
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -91,8 +114,11 @@ const SearchBar: React.FC = () => {
       type: 'page'
     }
   ];
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {;
@@ -138,25 +164,37 @@ const SearchBar: React.FC = () => {
       setResults([]);
       setIsOpen(false);
       return,;
+<<<<<<< HEAD
 
     }
     setIsLoading(true);
 
 
+=======
+    }
+    setIsLoading(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 300));
 
     const filteredResults = searchData && searchData.filter(item =>;
       item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
 
   };
 
+=======
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const value = e && e.target.value;
     setQuery(value);
@@ -173,6 +211,7 @@ const SearchBar: React.FC = () => {
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
+<<<<<<< HEAD
   };
 
   useEffect(() => {;
@@ -187,6 +226,28 @@ const SearchBar: React.FC = () => {
       document && document.removeEventListener('mousedown', handleClickOutside);
     };
 
+=======
+  const handleResultClick = () => {
+    setIsOpen(false)
+    setQuery('')
+  }
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+    setIsOpen(false)
+    inputRef.current?.blur()
+  }
+  }
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
@@ -219,6 +280,7 @@ const SearchBar: React.FC = () => {
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
           </div>;
         )}
+<<<<<<< HEAD
 
       </div>;
 
@@ -229,10 +291,20 @@ const SearchBar: React.FC = () => {
           {results && results.length > 0 ? (;
             <div className="py-2">;
               {results && results.map((result, index) => (;
+=======
+      </div>;
+      {/* Search Results Dropdown */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+          {results.length > 0 ? (
+            <div className="py-2">
+              {results.map((result, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Link
                   key={index}
                   href={result && result.url}
                   onClick={handleResultClick}
+<<<<<<< HEAD
                   className="block px-4 py-3 hover:bg-gray-50 transition-colors">;
                   <div className="flex items-start space-x-3">;
                     <div className="flex-shrink-0">;
@@ -393,9 +465,54 @@ if ( {) {
 ;
 
 =======
+=======
+
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                        result.type === 'service' ? 'bg-blue-500' :
+                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                      }`}></div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">
+                        {result.title}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate">
+                        {result.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : query && !isLoading ? (
+            <div className="px-4 py-3 text-sm text-gray-500">
+              No results found for &quot;{query}&quot;
+            </div>
+          ) : null}
+        </div>;
+      )}
+    </div>
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;
+=======
+export default SearchBar;
+export default SearchBar;
+};
+
+export default SearchBar;
+};
+
+export default SearchBar;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

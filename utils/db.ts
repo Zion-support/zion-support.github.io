@@ -16,6 +16,7 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
   fs && fs.renameSync(tmpPath, filePath);
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
@@ -75,8 +76,25 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
+=======
+// Mock database utility
+import fs from 'fs';
+import path from 'path';
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+}
+export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+  try {
+    if (fs.existsSync(filePath)) {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+    }
+  } catch (error) {
+    console.error('Error reading file:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
+<<<<<<< HEAD
 
 // Default database configuration
 const defaultConfig: DatabaseConfig = {
@@ -92,6 +110,8 @@ const defaultConfig: DatabaseConfig = {
 export const db = new DatabaseManager(defaultConfig);
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
   const tmp_path = `${file_path}.tmp`;
@@ -103,16 +123,33 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   items.push (item);
   writeJsonFile < T[]>(file_name, items);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+
+export function writeJsonFile<T>(fileName: string, data: T): void {
+
+export function writeJsonFile<T>(fileName: string, data: T): void {;
+  const filePath = getFilePath(fileName);
+  const tmpPath = `${filePath}.tmp`;
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
+  fs.renameSync(tmpPath, filePath);
+}
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
+  const items = readJsonFile<T[]>(fileName, []);
+  items.push(item);
+  writeJsonFile<T[]>(fileName, items);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+<<<<<<< HEAD
 
 =======
 import fs from 'fs';
@@ -123,3 +160,13 @@ import path from 'path';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import fs from 'fs';
+import path from 'path';
+
+import fs from 'fs';
+import path from 'path';
+
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

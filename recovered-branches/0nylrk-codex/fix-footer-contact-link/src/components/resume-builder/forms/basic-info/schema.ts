@@ -2,6 +2,14 @@
 export const basicInfoSchema = z.object({;
 
 
+<<<<<<< HEAD
+=======
+
+import {z} from "zod";
+export const basicInfoSchema = z.object({
+import {z} from "zod";
+export const basicInfoSchema = z.object({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
   email: z.string().email("Invalid email address");
@@ -9,7 +17,10 @@ export const basicInfoSchema = z.object({;
   location: z.string().optional();
   website: z.string().url().optional().or(z.literal(""));
   linkedin: z.string().optional();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const basicInfoSchema = z && z.object({
   fullName: z && z.string().min(1, "Full name is required");
   title: z && z.string().min(1, "Professional title is required");
@@ -22,8 +33,11 @@ export const basicInfoSchema = z && z.object({
   hourlyRate: z && z.number().positive().optional()});
 
 export type BasicInfoFormData = z && z.infer<typeof basicInfoSchema>;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { z } from './zod';
 export const basicInfoSchema = z.object ({
   full_name: z.string ().min (1, "Full name is required");
@@ -38,11 +52,20 @@ export const basicInfoSchema = z.object ({
 ;
 export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 =======
+=======
+
+
+  github: z.string().optional()
+  hourlyRate: z.number().positive().optional()});
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { z } from "zod",
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -52,12 +75,62 @@ export const basicInfoSchema = z.object({
   location: z.string().optional(),
   website: z.string().url().optional().or(z.literal("")),
   linkedin: z.string().optional(),
+<<<<<<< HEAD
+=======
+  github: z.string().optional(),
+  hourlyRate: z.number().positive().optional()}),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 
+<<<<<<< HEAD
 
 
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
+import { z } from "zod",;
+export const basicInfoSchema = z.object({;
+  fullName: z.string().min(1, "Full name is required"),;
+  title: z.string().min(1, "Professional title is required"),;
+  email: z.string().email("Invalid email address"),;
+  phone: z.string().optional(),;
+  location: z.string().optional(),;
+  website: z.string().url().optional().or(z.literal("")),;
+  linkedin: z.string().optional(),;
+  github: z.string().optional(),;
+  hourlyRate: z.number().positive().optional()});
+
+
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+
+import { z } from "zod",;
+;
+export const basicInfoSchema = z.object({;
+  fullName:z.string().min(1, "Full name is required"),;
+  title:z.string().min(1, "Professional title is required"),;
+  email:z.string().email("Invalid email address"),;
+  phone:z.string().optional(),;
+  location:z.string().optional(),;
+  website:z.string().url().optional().or(z.literal("")),;
+  linkedin:z.string().optional(),;
+  github:z.string().optional(),;
+  hourlyRate:z.number().positive().optional()}),;
+;
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,; export const basicInfoSchema = z.object ({
+  fullName: z.string () .min (1, "Full name is required");
+title: z.string () .min (1, "Professional title is required");
+email: z.string () .email ("Invalid email address");
+phone: z.string () .optional ();
+location: z.string () .optional ();
+website: z.string () .url () .optional () .or (z.literal ("") );
+linkedin: z.string () .optional ();
+github: z.string () .optional ();
+hourlyRate: z.number () .positive () .optional () 
+});
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

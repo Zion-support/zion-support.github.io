@@ -1,8 +1,21 @@
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Search, Sliders } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Search, Sliders } from "lucide-react",
+import { Input } from "@/components/ui/input",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -16,7 +29,23 @@ interface MobileFilterBarProps {
 
 
 
+<<<<<<< HEAD
 
+=======
+export function MobileFilterBar({
+  searchTerm;
+
+  setSearchTerm
+  setIsMobileFilterOpen
+
+
+export function MobileFilterBar({ ;
+  searchTerm;
+export function MobileFilterBar({ 
+  searchTerm,
+  setSearchTerm, 
+  setIsMobileFilterOpen 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -40,23 +69,31 @@ interface MobileFilterBarProps {
     </div>
   )
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
 =======
 
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
 
+<<<<<<< HEAD
 export function MobileFilterBar(): any ({ ;
   searchTerm;
   setSearchTerm, ;
@@ -65,6 +102,36 @@ export function MobileFilterBar(): any ({ ;
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
       <Button
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Search, Sliders } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+;
+interface MobileFilterBarProps {;
+  searchTerm:string,;
+  setSearchTerm:(value:string) => void,;
+  setIsMobileFilterOpen:(isOpen:boolean) => void;
+}
+;
+export function MobileFilterBar({ ;
+  searchTerm,;
+  setSearchTerm, ;
+  setIsMobileFilterOpen ;
+} MobileFilterBarProps) {;
+  return (;
+    <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
+      <Button ;
+;
+export function MobileFilterBar({;
+  searchTerm;
+  setSearchTerm;
+  setIsMobileFilterOpen;
+}: MobileFilterBarProps) {;
+  return (;
+    <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
+      <Button;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         onClick={() => setIsMobileFilterOpen(true)} ;
         variant="outline";
         className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light";
@@ -72,6 +139,7 @@ export function MobileFilterBar(): any ({ ;
         <Sliders className="h-4 w-4" />;
         Filter Talents;
       </Button>;
+<<<<<<< HEAD
 
       <div className="relative mt-4">;
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
@@ -86,6 +154,8 @@ export function MobileFilterBar(): any ({ ;
   );
 }
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
@@ -120,9 +190,28 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+
+      ;
+      <div className="relative mt-4">;
+        <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
+        <Input;
+          placeholder="Search talents...";
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
+        />;
+      </div>;
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

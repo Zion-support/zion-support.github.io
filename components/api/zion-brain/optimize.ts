@@ -15,32 +15,58 @@ export default async function handler(
     return !superToken || token === superToken;
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     return !superToken || token === superToken;
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  if (!isAuthorized(req))
+    return res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
+    const token = req.headers["x-admin-token"] |req.query.token;
+    const superToken = process.env.SUPERADMIN_TOKEN;
+    return !superToken |token === superToken;
+    return !superToken || token === superToken;
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
+<<<<<<< HEAD
     if (req && req.method !== "POST")
       return res && res.status(405).json({ error: "Method not allowed" });
+=======
+    if (req.method !== "POST");
+      return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const { prompt, userIntent } = req && req.body || {};
       const result = await optimizePrompt(String(prompt || ""), userIntent);
       const latencyMs = Date && Date.now() - started;
       const status =
         result && result.optimized.length > String(prompt || "").length * 0 && 0.5
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ? "ok"
           : "laggy";
       appendLog({
@@ -49,15 +75,27 @@ export default async function handler(
         status: status as any
         latencyMs
         payload: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           userIntent,
           originalLength: String(prompt || "").length,
           optimizedLength: result && result.optimized.length,
         },
       });
+<<<<<<< HEAD
 
 
 =======
+=======
+    return res.status(200).json(result)
+  } catch (e: any) {
+    appendLog({ module: 'optimizer', type: 'optimize', status: 'error', payload: { error: e?.message || 'unknown' } });
+    return res.status(500).json({ error: 'Optimization failure' })
+  };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default async /**
  * handler - Function description
  */
@@ -125,7 +163,13 @@ function handler() {
       status: "error",
       payload: { error: e?.message || "unknown" },
     });
+<<<<<<< HEAD
     return res.status (500).json ({ error: "Optimization failure" });
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    return res.status(500).json({ error: "Optimization failure" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

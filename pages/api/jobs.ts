@@ -5,12 +5,15 @@ import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
+<<<<<<< HEAD
 
 
 const FILE = "jobs && jobs.json";
 
 
 export default async function handler(
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -19,13 +22,118 @@ export default async function handler(
   if (!rateLimit(req, res)) return;
 
 
+<<<<<<< HEAD
+=======
+const FILE = "jobs.json";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  if (!rateLimit(req, res)) return;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db';
+import type { Job } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+const FILE = 'jobs.json';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!rateLimit(req, res)) return;
+  if (req.method === 'GET') {
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    res.status(200).json({ jobs });
+    return
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === "GET") {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
   }
+<<<<<<< HEAD
 
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const {;
+      title,;
+      description,;
+      category,;
+      requiredSkills = [];
+      budgetMinUsd;
+      budgetMaxUsd,;
+      deliveryDeadlineIso,;
+      clientEmail} = req.body || {},;
+    if (!title || !description || !clientEmail) {;
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const nowIso = new Date().toISOString();
+    const job: Job = {;
+      id: uuidv4();
+      title: String(title);
+      description: String(description);
+      category: String(category || '');
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [];
+      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined;
+      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined,;
+      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,;
+      clientEmail: String(clientEmail);
+      status: 'New',;
+      createdAtIso: nowIso,;
+      updatedAtIso: nowIso},;
+    // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.;
+    if (!job.category) {;
+      const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
+      if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
+      else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
+      else job.category = 'General';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const jobs = readJsonFile<Job[]>(FILE, []),;
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs),;
+  }
+
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4, as, uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -53,7 +161,10 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const {
       title
       description
@@ -66,13 +177,17 @@ if ( {) {
     } = req.body |{}
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === "POST") {
     const {
       title,
       description,
       category,
+<<<<<<< HEAD
       required_skills = [],
       budgetMinUsd,
       budgetMaxUsd,
@@ -94,6 +209,28 @@ if ( {) {
     const job: Job = {
 
 
+=======
+required_skills = [],
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      clientEmail} = req.body || {};
+    if (!title || !description || !clientEmail) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return
+    }
+    const nowIso = new Date().toISOString();
+    const job: Job = {
+      id: uuidv4(),
+      title: String(title),
+      description: String(description),
+category: String(category || ""),
+      requiredSkills: Array && Array.isArray(requiredSkills)
+        ? requiredSkills && requiredSkills.map(String)
+        : [],
+      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -103,6 +240,7 @@ if ( {) {
       updatedAtIso: nowIso
     }
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
+<<<<<<< HEAD
 
     if (!job && job.category) {
       const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
@@ -115,17 +253,33 @@ if ( {) {
             s && s.includes("langchain") ||
             s && s.includes("rag"),
 
+=======
+    if (!job && job.category) {
+      const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
+      if (
+        skills && skills.some(
+          (s) =>
+            s && s.includes("openai") ||
+            s && s.includes("langchain") ||
+            s && s.includes("rag"),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         )
       )
         job && job.category = "LLM App";
       else if (
         skills && skills.some(
           (s) =>
+<<<<<<< HEAD
 
             s && s.includes("aws") ||
             s && s.includes("kubernetes") ||
             s && s.includes("terraform"),
 
+=======
+            s && s.includes("aws") ||
+            s && s.includes("kubernetes") ||
+            s && s.includes("terraform"),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         )
       )
         job && job.category = "Cloud";
@@ -138,6 +292,7 @@ if ( {) {
     res && res.status(201).json({ job });
     return;
   }
+<<<<<<< HEAD
 
     }
 
@@ -149,6 +304,27 @@ if ( {) {
     res.status(201).json({ job });
     return
 =======
+=======
+      id: uuidv4(), title: String(title),
+      description: String(description), category: String(category || ''),
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [], budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined, deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
+      clientEmail: String(clientEmail), status: 'New',
+      createdAtIso: nowIso,
+      updatedAtIso: nowIso};
+    // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
+    if (!job.category) {
+      const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
+      if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
+      else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
+else job.category = 'General'
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res.status(201).json({ job });
+    return
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
   } catch (error) {
     console.error("Error:", error);
@@ -167,6 +343,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -179,6 +356,12 @@ if ( {) {
 
 
 =======
+=======
+  }
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       client_email,
     } = req.body || {}
     // Check condition
@@ -239,15 +422,54 @@ if (=>) {
     res.status (201).json ({ job });
     return;
   }
+<<<<<<< HEAD
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db';
+import type { Job } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+const FILE = 'jobs.json';
+export default async function handler(req, res) {
+  try {
+  if (!rateLimit(req, res)) return,;
+  if (req.method === 'GET') {
+    const jobs = readJsonFile<Job[]>(FILE, []),;
+    res.status(200).json({ jobs });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+}
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

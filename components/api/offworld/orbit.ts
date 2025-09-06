@@ -10,6 +10,17 @@ import {
 } from '@/utils/offworld/orbitdb';
 
 
+<<<<<<< HEAD
+=======
+import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import {
+  connectOrbit,
+  appendChatMessage,
+  recordVote,;
+  editConstitution,;
+} from '@/utils/offworld/orbitdb';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {
   connectOrbit
@@ -19,6 +30,7 @@ import {
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
 
+<<<<<<< HEAD
 
   req: NextApiRequest,
   res: NextApiResponse;
@@ -30,11 +42,27 @@ import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+  req: NextApiRequest
+  res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse;
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const { stores } = await connectOrbit();
   if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ) {  const { action } = req && req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,8 +71,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { stores } = await connectOrbit();
   if (!stores) return res && res.status(503).json({ error: 'OrbitDB unavailable' });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
     if (action === 'chat' && req && req.method === 'POST') {
       await appendChatMessage(stores, body);
@@ -76,8 +107,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (action === 'constitution' && req && req.method === 'POST') {
       await editConstitution(stores, body);
 
+<<<<<<< HEAD
       return res && res.status(200).json({ ok: true })
 
+=======
+      return res.status(200).json({ ok: true })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
@@ -88,7 +123,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
+<<<<<<< HEAD
 =======
+=======
+    return res && res.status(500).json({ error: e && e.message })
+  };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
   connect_orbit,
   appendChatMessage,
@@ -156,8 +197,16 @@ if ( {) {
     return res.status (500).json ({ error: e.message });
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+    return res.status(500).json({ error: e.message })
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -5,18 +9,32 @@ import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
+<<<<<<< HEAD
+=======
+
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
+<<<<<<< HEAD
 
 
 
@@ -40,6 +58,25 @@ interface EducationListProps {;
 export function EducationList(): any ({ educationEntries, onEdit, onDelete }: EducationListProps) {;
   if (!educationEntries || educationEntries && educationEntries.length === 0) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Education } from "@/types/resume";
+import { EducationItem } from "./EducationItem";
+interface EducationListProps {
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+>>>>>>> main
+}
+
+export function EducationList({
+  educationEntries,
+  onEdit,
+  onDelete,
+}: EducationListProps) {
+  if (!educationEntries || educationEntries.length === 0) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return null;
   }
 
@@ -48,6 +85,7 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
 
 
   return (
+<<<<<<< HEAD
 
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Education</h3>;
@@ -101,3 +139,69 @@ if ( {) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
+        <EducationItem
+          key={edu.id}
+          education={edu}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
+  );
+}
+;
+
+
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+;
+interface EducationListProps {;
+  educationEntries:Education[],;
+  onEdit:(education:Education) => void,;
+  onDelete:(id:string) => void;
+}
+;
+export function EducationList({ educationEntries, onEdit, onDelete } EducationListProps) {;
+  if (!educationEntries || educationEntries.length === 0) {;
+    return null,;
+  }
+;
+  return (;
+    <div className="space-y-4">;
+      <h3 className="text-md font-medium">Added Education</h3>;
+      {educationEntries.map((edu) => (;
+        <EducationItem ;
+          key={edu.id} ;
+          education={edu} ;
+          onEdit={onEdit} ;
+          onDelete={onDelete} ;
+        />;
+      ))}
+    </div>;
+  ),;}
+ <EducationItem key= {
+  edu.id 
+}education= {
+  edu 
+}onEdit= {
+  onEdit 
+}onDelete= {
+  onDelete 
+}/>) ) 
+}</div>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

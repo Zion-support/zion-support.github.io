@@ -1,9 +1,20 @@
 
 
+<<<<<<< HEAD
 =======
 
 =======
 
+=======
+};
+};
+};
+};
+;
+,;
+,
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }}}};
 ;
 ;
@@ -11,7 +22,9 @@
 }
 }
 }
+},
 
+<<<<<<< HEAD
 },;
 ,;
 
@@ -23,6 +36,29 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+,
+
+ursor/fix-lint-push-and-merge-to-main-28da
+},;
+,;
+ursor/automate-test-improve-and-merge-code-4094
+ursor/fix-syntax-push-and-merge-to-main-40de
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
+},;
+,;
+
+
+
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -34,21 +70,31 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
+
 };
+<<<<<<< HEAD
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+};
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 };
 };
 };
 ,
+<<<<<<< HEAD
 
 
 
@@ -56,6 +102,11 @@ export const messageChannelHandler: MessageHandler = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
@@ -106,7 +157,9 @@ export default MessageChannelHandler;
 
 
 
+;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
@@ -117,3 +170,15 @@ export default MessageChannelHandler;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+},;
+,;
+
+
+
+origin/main
+}}}};
+;
+},;
+,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

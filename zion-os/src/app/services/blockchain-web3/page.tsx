@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 "use client",;
 export default function BlockchainWeb3Page() {;
   return (;
@@ -8,7 +11,10 @@ export default function BlockchainWeb3Page() {;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 "use client",
 export default /**
  * BlockchainWeb3Page - Function description
@@ -20,7 +26,20 @@ function BlockchainWeb3Page() {
         <h1 className="text - 4xl font - bold">Blockchain & Web3 Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+"use client";
+export default function BlockchainWeb3Page() {return (;
+"use client",;
+export default function BlockchainWeb3Page() {;
+  return (;
+    <div className="space-y-8">;
+      <div className="text-center space-y-4">;
+        <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
+        <p className="text-xl opacity-80 max-w-3xl mx-auto">;
+          Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </p>;
       </div>;
       {/* Service Overview */}
@@ -220,7 +239,10 @@ function BlockchainWeb3Page() {
         </div>;
       </div>;
       {/* Pricing Tiers */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <div className="space - y-6">;
         <h2 className="text - 2xl font - semibold text - center">Service Packages</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
@@ -271,7 +293,10 @@ function BlockchainWeb3Page() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - orange - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Build the Future?</h2>;

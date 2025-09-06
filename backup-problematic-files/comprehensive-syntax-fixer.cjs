@@ -1,10 +1,14 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ;
 function fixSyntaxErrors(filePath) {;
@@ -200,39 +204,42 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;
     this.totalErrors = 0;
   }
-
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
-
   async fixAllSyntaxErrors() {
     this.log('🔧 Starting comprehensive syntax error fixing...');
-    
     try {
       // Get all TypeScript and JavaScript files
       const files = this.getAllCodeFiles();
       this.log(`Found ${files.length} files to check`);
-      
       for (const file of files) {
         await this.fixFileSyntax(file);
       }
-      
       this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
       this.log(`📊 Total errors fixed: ${this.totalErrors}`);
-      
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
 
@@ -331,6 +338,14 @@ class ComprehensiveSyntaxFixer {
     return fixed;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Run the fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllSyntaxErrors().catch(console.error);
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/main
 
@@ -448,3 +463,7 @@ module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

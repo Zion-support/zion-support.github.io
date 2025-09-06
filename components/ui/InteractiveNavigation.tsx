@@ -1,16 +1,25 @@
+<<<<<<< HEAD
+=======
+;
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-;
 
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -28,13 +37,19 @@ interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </Link>;
 
             {/* Submenu */}
             {item && item.submenu && activeItem === item && item.name && (;
               <motion&& motion.div
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -70,6 +85,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 
 
+<<<<<<< HEAD
+=======
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+};
+
+export default InteractiveNavigation;};
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -77,6 +104,7 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
+<<<<<<< HEAD
 
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
 
@@ -163,8 +191,21 @@ const InteractiveNavigation: React.FC: = () => {";
 
 export default Component}
 =======
+=======
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
+            <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
+            <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default Component}
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default Component}
+
+export default Component}
+export default Component}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

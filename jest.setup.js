@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 
 
 import "@testing-library/jest-dom";
 
 
 
+=======
+import "@testing-library/jest-dom";
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
     return {
+<<<<<<< HEAD
       route: "/"
       pathname: "/"
       query: {}
@@ -26,39 +32,32 @@ import "@testing-library/jest-dom";
 jest && jest.mock("next/router", () => ({
   useRouter() {
     return {
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       route: "/",
       pathname: "/",
       query: {},
       asPath: "/",
-      push: jest && jest.fn(),
-      pop: jest && jest.fn(),
-      reload: jest && jest.fn(),
-      back: jest && jest.fn(),
-      prefetch: jest && jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest && jest.fn(),
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
       events: {
-        on: jest && jest.fn(),
-        off: jest && jest.fn(),
-        emit: jest && jest.fn(),
-=======
-
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn(),
-
       },
       isFallback: false,
     };
   },
 }));
 
-
-=======
-
-
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   const React = require("react");
+<<<<<<< HEAD
   return function MockImage({ src, alt, ...props }) {
 
 
@@ -189,10 +188,51 @@ addEventListener: jest.fn(),
 }),
 // Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {constructor() {}});
+=======
+  return function MockedImage({ src, alt, ...props }) {
+    return React.createElement("img", { src, alt, ...props });
+  };
+});
+
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  const React = require("react");
+  return {
+    _esModule: true,
+    default: ({ children, href, ...props }) => {
+      return React.createElement("a", { href, ...props }, children);
+    },
+  };
+});
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
+<<<<<<< HEAD
+=======
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
@@ -200,6 +240,7 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
+<<<<<<< HEAD
 // Global test setup,
 beforeEach(() => {
   // Reset all mocks before each test,
@@ -212,3 +253,10 @@ beforeEach(() => {
 });
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+// Global test setup
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {useEffect, useState} from 'react';
 
@@ -8,6 +11,7 @@ import FilterBar from '../../components/learn/FilterBar';
 
 
 
+<<<<<<< HEAD
 export default function LearnMarketplace() {;
   const [filters, setFilters] = useState({;
     category: '',;
@@ -15,13 +19,14 @@ export default function LearnMarketplace() {;
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     category: '',
     level: '',
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
 
-=======
 import { useEffect, useState } from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -31,8 +36,6 @@ export default function LearnMarketplace(req, res) {
   const [courses, setCourses] = useState<Course[]>([]);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {;
@@ -41,8 +44,17 @@ export default function LearnMarketplace(req, res) {
       setLoading(true);
 
       const params = new URLSearchParams();
+<<<<<<< HEAD
 
 
+=======
+      if (filters && filters.category) params && params.set('category', filters && filters.category);
+      if (filters && filters.level) params && params.set('level', filters && filters.level);
+      if (filters && filters.isFree) params && params.set('isFree', filters && filters.isFree);
+      const resp = await fetch(`/api/learn/courses?${params && params.toString()}`);
+      const data = await resp && resp.json();
+      setCourses(data && data.courses || []);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setLoading(false);
 =======
 import {useEffect, useState} from 'react';
@@ -85,17 +97,69 @@ function load() {
   }, [filters]);
 ;
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setCourses(data.courses || []);
       setLoading(false)
     }
     load()
   }, [filters]);
+<<<<<<< HEAD
 
 =======
       setCourses(data.courses |[]);
       setLoading(false);
 
+=======
+import { useEffect, useState  } from 'react';
+import {useEffect, useState} from 'react';
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace() {
+
+      setCourses(data.courses |[]);
+      setLoading(false);
+
+  const [filters, setFilters] = useState({
+    category: ''
+    level: ''
+    isFree: ''
+  });  const [courses, setCourses] = useState<Course[]>([]);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function load() {
+    category: '',
+    level: '',
+    isFree: '',;
+  });  const [courses, setCourses] = useState<Course[]>([]);
+import { useEffect, useState } from 'react';
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace(req, res) {
+  try {
+  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+
+      const params = new URLSearchParams();
+      if (filters.category) params.set('category', filters.category);
+      if (filters.level) params.set('level', filters.level);
+      if (filters.isFree) params.set('isFree', filters.isFree);
+      const resp = await fetch(`/api/learn/courses?${params.toString()}`);
+      const data = await resp.json();
+      setCourses(data.courses |[]);
+      setLoading(false);
+    }
+    load();
+  }, [filters]);
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -103,9 +167,12 @@ function load() {
 }
     load()
   }, [filters]),
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -119,7 +186,10 @@ function load() {
       {loading ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className='space-y-6'>;
       <div className='flex items-end justify-between gap-4'>;
         <div>;
@@ -136,12 +206,18 @@ function load() {
       ) : (;
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
+<<<<<<< HEAD
 
 =======
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ))}
         </div>;
       )}
@@ -149,7 +225,21 @@ function load() {
     </div>;
   );
 
+<<<<<<< HEAD
 =======
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+          ))}
+        </div>;
+      )}
+    </div>;
+  );
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -166,15 +256,67 @@ function load() {
         </div>)}
     </div>);
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+    }
+    load()
+  }, [filters]),
+
+  return (
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex items-end justify-between gap-4&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Zion Academy</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>Courses • Certifications • Career Boost</div>
+        </div>
+      </div>
+
+      <FilterBar {_...filters} onChange={_setFilters} />
+
+      {_loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={_c} />
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {courses.map(c => (            <CourseCard key={c.id} course={c} />
+          ))}
+        </div>
+      )}
+    </div>
+);
+
+}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,11 +25,17 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+=======
+import React from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface OptimizedImageProps {;
 
   src: string, alt: string,;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
@@ -43,7 +50,10 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -57,9 +67,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   style;
 }) => {;
   if (fill) {;
+<<<<<<< HEAD
 
 =======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
+=======
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+
+const: OptimizedImage: React.FC<OptimizedImageProps> = ({
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   src,
   alt,
   width,
@@ -86,10 +104,14 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
+<<<<<<< HEAD
 
 
     <Image;
 
+=======
+    <Image;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       src={src}
       alt={alt}
       width={width |800}
@@ -109,7 +131,9 @@ if ( {) {
       sizes={sizes}
 
 
+<<<<<<< HEAD
 
+=======
 =======
       quality={quality}
       style={style}
@@ -120,10 +144,26 @@ if ( {) {
   );
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
+quality={quality}
+      style={style}
+  );
+}
+;
+export default OptimizedImage;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      quality={quality}
+      style={style}
+
+  );
+};
+
+export default OptimizedImage;
+<<<<<<< HEAD
 =======
 ;
 export default OptimizedImage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

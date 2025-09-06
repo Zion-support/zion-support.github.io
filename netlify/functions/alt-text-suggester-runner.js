@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -12,7 +15,10 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 exports.config = {
   schedule: '*/15 * * * *'
 }
@@ -22,10 +28,15 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 =======
@@ -42,9 +53,12 @@ exports && exports.config = {
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 exports.handler = async () => {

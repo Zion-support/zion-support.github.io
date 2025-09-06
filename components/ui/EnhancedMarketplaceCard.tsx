@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
           <div className="h-12 w-12 rounded bg-gray-200" />)};
 
+=======
+          <div className="h-12 w-12 rounded bg-gray-200" />)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -32,7 +36,10 @@ import React from 'react';
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="h - 12 w - 12 rounded bg - gray - 200" />)}
         <h3 className="text - lg font - semibold text - gray - 900">{title}</h3>;
       </div>;
@@ -43,7 +50,10 @@ import Image from 'next/image';
 import Link from 'next / link';
 import Image from 'next / image';
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
@@ -61,7 +71,10 @@ interface EnhancedMarketplaceCardProps {;
   featured?: boolean;
   class_name?: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   title,
   description,
@@ -73,7 +86,10 @@ const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   reviews,
   featured = false,
   class_name = '';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }) => {
 =======
 
@@ -91,12 +107,18 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="flex items-start space-x-3 mb-4">;
           {image ? (;
             <Image
               src={image} 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               alt={title}
               width={48}
               height={48}
@@ -114,14 +136,20 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
                 {category}
               </span>;
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
 
         {/* Description */}
         <p className="text-sm text-gray-600 mb-4 flex-1">{description}</p>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Rating */}
         {rating && reviews && (;
           <div className="flex items-center space-x-1 mb-4">;
@@ -150,7 +178,10 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
               {price}
             </span>;
           )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Link href={href} className={`block group ${class_name}`}>;
       <div className={`bg - white rounded - lg shadow - md hover:shadow - lg transition - shadow duration - 300 p - 6 h - full flex flex - col ${
         featured ? 'ring - 2 ring - blue - 500' : '';
@@ -210,7 +241,10 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
         </div>;
       </div>;
     </Link>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface MarketplaceCardProps {
   title: string
   description: string
@@ -237,16 +271,23 @@ interface MarketplaceCardProps {;
   onAddToCart?: () => void;
   on_favorite?: () => void;
 }
+<<<<<<< HEAD
 
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 
+=======
+const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   title;
   description;
   price;
   rating;
   image;
   onAddToCart;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">;
           <Heart className="w-4 h-4 text-gray-600" />;
         </button>;
@@ -272,12 +313,16 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
         </button>;
       </div>;
     </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 
 }
 export default EnhancedMarketplaceCard;
+<<<<<<< HEAD
 =======
   on_favorite;
 }) => {
@@ -316,3 +361,6 @@ export default EnhancedMarketplaceCard;
 export default EnhancedMarketplaceCard;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

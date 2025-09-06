@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -12,6 +15,22 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Add skip link for keyboard navigation
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'sr-only focus: not-sr-only'
+    skipLink.style.cssText = `
+      position: absolute, top: -40px
+      left: 6px, background: #000
+      color: #fff, padding: 8px
+      text-decoration: none, z-index: 1000
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
 
@@ -73,7 +92,10 @@ const AccessibilityEnhancer: React.FC = () => {;
       document && document.removeEventListener('keydown', handleKeyDown);
       if (skipLink && skipLink.parentNode) {;
         skipLink && skipLink.parentNode.removeChild(skipLink);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -81,7 +103,10 @@ const AccessibilityEnhancer: React.FC = () => {;
     }
   }, []);
   return null;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect } from 'react';
 ;
 const AccessibilityEnhancer: React.FC = () => {
@@ -245,11 +270,17 @@ if ( {) {
   $2
 }
       root.class_list.add ('high - contrast');
+<<<<<<< HEAD
 
     } else {
       root.class_list.remove ('high - contrast');
     }
 
+=======
+    } else {
+      root.class_list.remove ('high - contrast');
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     root.class_list.remove ('font - small', 'font - normal', 'font - large', 'font - extra - large');
     root.class_list.add (`font-${fontSizeValue}`);
 ;
@@ -258,12 +289,18 @@ if ( {) {
   $2
 }
       root.class_list.add ('reduced - motion');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } else {
       root.class_list.remove ('reduced - motion');
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 // Add CSS for focus management;
@@ -340,15 +377,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
   const toggleHighContrast = () => {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage && localStorage.setItem('highContrast', newValue && newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+<<<<<<< HEAD
 
   };
   const changeFontSize = (newSize: string) => {;
 
+=======
+  };
+  const changeFontSize = (newSize: string) => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setFontSize(newSize);
     localStorage && localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
@@ -381,18 +426,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
+<<<<<<< HEAD
 
           </div>;
         </div>;
       </div>;
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export default AccessibilityEnhancer;
-=======
 };
 
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -416,6 +469,7 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 =======
 ;
   const toggleHighContrast = () =>: any {
@@ -485,3 +539,10 @@ export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default AccessibilityEnhancer;
+};
+
+export default AccessibilityEnhancer;
+export default AccessibilityEnhancer;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

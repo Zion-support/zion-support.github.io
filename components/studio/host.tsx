@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,28 +26,78 @@ import React, { useState } from 'react';
 
 
 
+=======
+};
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({;
+    voice: 'Visionary',;
+    language: 'English',;
+import React, { useState } from 'react';
+
+type PersonaConfig = {
+  voice: 'Visionary' | 'Grounded' | 'Technical';
+  language: string;
+  cloneStyleText?: string;
+}
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({
+
+
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
 
 
+<<<<<<< HEAD
 =======
 
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+
+type PersonaConfig = {
+  voice: 'Visionary' | 'Grounded' | 'Technical',
+  language: string,
+  cloneStyleText?: string
+};
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
+  const [operatorPrompt, setOperatorPrompt] = useState(;
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
+  );};
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+  const [operatorPrompt, setOperatorPrompt] = useState(
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+  );}
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
 
 =======
         method: 'POST',
@@ -108,6 +159,8 @@ function StudioHostPage() {
       set_generating (false);    }      const data = await res.json ();
       set_episode (data.episode);
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } catch (e) {
       console.error (e);
       alert ('Failed to generate episode');
@@ -115,6 +168,7 @@ function StudioHostPage() {
       set_generating (false);
     }
 
+<<<<<<< HEAD
     }
 
     }
@@ -127,6 +181,76 @@ function StudioHostPage() {
     setPublishing(true);
 
 
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ episodeId: episode.id, persona })});
+      const data = await res.json();
+      setEpisode(data.episode)
+  }
+;
+  const handle_synthesize = async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    set_synthesizing (true);
+    try {
+      const res = await fetch ('/api / podcast / synthesize', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ episode_id: episode.id, persona }),
+      });
+      const data = await res.json ();
+      set_episode (data.episode);
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to synthesize audio');
+    } finally {
+      set_synthesizing (false);    }      const data = await res.json ();
+      set_episode (data.episode);
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to synthesize audio');
+    } finally {
+      set_synthesizing (false);
+    }
+  };
+  const handlePublishRss = async () => {;
+    if (!episode?.id) return;
+    setPublishing(true);
+    try {
+      const res = await fetch('/api/podcast/rss', { method: 'POST' }),
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.')
+  }
+;
+  const handlePublishRss = async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    set_publishing (true);
+    try {
+      const res = await fetch ('/api / podcast / rss', { method: 'POST' });
+      await res.json ();
+      alert ('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to update RSS');
+    } finally {
+      set_publishing (false);    }
+  }
+;
+  return (
+    <div className='space - y-8'>;
+      <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>      await res.json ();
+      alert ('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to update RSS');
+    } finally {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
 
@@ -168,26 +292,38 @@ function StudioHostPage() {
             </select>;
           </div>;
           <div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <label className='block text - sm font - medium'>Language</label>;
             <input;
               className='mt - 1 w - full border rounded p - 2';
               value={persona.language}
               on_change={e =>;
                 set_persona ({ ...persona, language: e.target.value });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
 
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">AI Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
 =======
@@ -265,6 +401,16 @@ function StudioHostPage() {
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
+<<<<<<< HEAD
+=======
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+          </div>
+        </div>
+      </section>
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold">Episode Generator</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -287,9 +433,13 @@ function StudioHostPage() {
         </button>
       </section>
       {episode && (
+<<<<<<< HEAD
 
         <section className="space-y-4">
 
+=======
+        <section className="space-y-4">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
@@ -297,9 +447,13 @@ function StudioHostPage() {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
+<<<<<<< HEAD
 
                 {episode.questions?.map((q: string, idx: number) => (
 
+=======
+                {episode.questions?.map((q: string, idx: number) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <li key={idx}>{q}</li>
 =======
               value={persona && persona.voice}
@@ -360,6 +514,7 @@ function StudioHostPage() {
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
 
@@ -369,6 +524,281 @@ function StudioHostPage() {
             <div>
               <h4 className="font-semibold">Best Quote</h4>
               <p>{episode.bestQuote}</p>
+=======
+
+  const [generating, setGenerating] = useState(false),
+  const [episode, setEpisode] = useState<any>(null),
+  const [synthesizing, setSynthesizing] = useState(false),
+  const [publishing, setPublishing] = useState(false),
+
+  const handleGenerate = async () => {
+    setGenerating(true),
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })}),
+      const data = await res.json()
+      setEpisode(data.episode)
+    } catch (e) {
+      console.error(e),
+  const handleGenerate = async () => {
+    setGenerating(true);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          persona
+          invitee: { name: inviteeName, bio: inviteeBio }
+          topic
+          operatorPrompt
+        })
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to generate episode');
+    } finally {
+      setGenerating(false);    }      const data = await res.json();
+      setEpisode(data.episode)
+    } catch (e) {
+      console.error(e);
+      alert('Failed to generate episode')
+    } finally {
+      setGenerating(false)
+    }
+  }
+  const handleSynthesize = async () => {
+    if (!episode?.id) return;
+    setSynthesizing(true);
+    try {
+      const res = await fetch('/api/podcast/synthesize', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ episodeId: episode.id, persona })
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to synthesize audio');
+    } finally {
+      setSynthesizing(false);    }      const data = await res.json();
+      setEpisode(data.episode)
+    } catch (e) {
+      console.error(e);
+      alert('Failed to synthesize audio')
+    } finally {
+      setSynthesizing(false)
+    }
+  }
+  const handlePublishRss = async () => {
+    if (!episode?.id) return;
+    setPublishing(true);
+    try {
+      const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error(e);
+      alert('Failed to update RSS');
+    } finally {
+      setPublishing(false);    }
+  }
+  return (
+    <div className='space-y-8'>
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.')
+    } catch (e) {
+      console.error(e);
+      alert('Failed to update RSS')
+    } finally {
+      setPublishing(false)
+    }
+  }
+
+  return (
+    <div className='space-y-8'>
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>AI Persona</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Voice</label>
+            <select
+              className='mt-1 w-full border rounded p-2'
+              value={persona.voice}
+              onChange={e =>
+                setPersona({ ...persona, voice: e.target.value as any })
+              }
+            >
+              <option value='Visionary'>Visionary</option>
+              <option value='Grounded'>Grounded</option>
+              <option value='Technical'>Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className='block text-sm font-medium'>Language</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+              value={persona.language}
+              onChange={e =>
+                setPersona({ ...persona, language: e.target.value })
+              }
+            />
+          </div>
+          <div>
+            <label className='block text-sm font-medium'>
+              Clone Style (optional)
+            </label>
+            <textarea
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              placeholder='Paste representative writing or notes to clone tone'
+              value={persona.cloneStyleText |''}
+              onChange={e =>
+                setPersona({ ...persona, cloneStyleText: e.target.value })
+              }
+            />          </div>
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Invitee Name</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+              value={inviteeName}
+              onChange={e => setInviteeName(e.target.value)}
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <label className='block text-sm font-medium'>Invitee Bio</label>
+            <textarea
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              value={inviteeBio}
+              onChange={e => setInviteeBio(e.target.value)}
+            />
+          </div>
+          <div className='md:col-span-3'>
+            <label className='block text-sm font-medium'>Topic</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+              value={topic}
+              onChange={e => setTopic(e.target.value)}
+            />
+          </div>
+          <div className='md:col-span-3'>
+            <label className='block text-sm font-medium'>Operator Prompt</label>
+            <textarea
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              value={operatorPrompt}
+              onChange={e => setOperatorPrompt(e.target.value)}
+            />
+          </div>
+        </div>
+        <button
+          className='px-4 py-2 bg-blue-600 text-white rounded'
+          onClick={handleGenerate}
+          disabled={generating}
+        >          {generating ? 'Generating…' : 'Generate Episode'}
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold">AI Persona</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>
+            <select
+              className="mt-1 w-full border rounded p-2"
+              value={persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+            >
+              <option value="Visionary">Visionary</option>
+              <option value="Grounded">Grounded</option>
+              <option value="Technical">Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+
+    }
+  };
+
+  return (
+
+          </div>
+        </div>
+      </section>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+          </div>
+        </div>
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && (
+        <section className='space-y-4'>
+          <h2 className='text-xl font-semibold'>Episode Draft</h2>
+          <div className='border rounded p-4 space-y-3'>
+            <p className='text-sm text-gray-600'>ID: {episode.id}</p>
+            <h3 className='text-lg font-bold'>{episode.title}</h3>
+            <div>
+              <h4 className='font-semibold'>Questions</h4>
+              <ol className='list-decimal list-inside space-y-1'>                {episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">
+          <h2 className="text-xl font-semibold">Episode Draft</h2>
+          <div className="border rounded p-4 space-y-3">
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>
+            <h3 className="text-lg font-bold">{episode.title}</h3>
+            <div>
+              <h4 className="font-semibold">Questions</h4>
+              <ol className="list-decimal list-inside space-y-1">
+                  <li key={idx}>{q}</li>
+
+                ))}
+              </ol>
+            </div>
+            <div>
+              <h4 className="font-semibold">Best Quote</h4>
+              </ol>
+            </div>
+            <div>
+              <h4 className='font-semibold'>Best Quote</h4>
+              <p>{episode.bestQuote}</p>
+            </div>
+                disabled={publishing}
+              >                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (              <p>{episode.bestQuote}</p>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div>
@@ -545,6 +975,7 @@ function StudioHostPage() {
                 disabled={synthesizing}
               >;
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
+<<<<<<< HEAD
               </button>;
               <button;
                 className='px - 4 py - 2 bg - gray - 800 text - white rounded';
@@ -575,15 +1006,26 @@ function StudioHostPage() {
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>;
               <button className="px - 4 py - 2 bg - gray - 800 text - white rounded" on_click={handlePublishRss} disabled={publishing}>;
+=======
+                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
+              </button>;
+              <button className="px - 4 py - 2 bg - gray - 800 text - white rounded" on_click={handlePublishRss} disabled={publishing}>;
+              </button>
+              <button className="px-4 py-2 bg-gray-800 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>;
             </div>;
             {episode.audio && (
+<<<<<<< HEAD
 
 }
 
 =======
               <div className='flex gap - 3'>;
+=======
+              <div className='flex gap-3'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -601,6 +1043,7 @@ function StudioHostPage() {
                 {episode.audio.mp4Url && (
                   <a;
                     href={episode.audio.mp4Url}
+<<<<<<< HEAD
                     className='text - blue - 600 underline';
                   >;
                     Download MP4;
@@ -615,6 +1058,8 @@ function StudioHostPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
@@ -622,7 +1067,26 @@ function StudioHostPage() {
 
 ;
 
+<<<<<<< HEAD
 =======
+=======
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {episode.audio && (
 
                 {publishing ? 'Publishing…' : 'Update RSS'}
@@ -630,6 +1094,9 @@ function StudioHostPage() {
             </div>
             {episode.audio && (
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

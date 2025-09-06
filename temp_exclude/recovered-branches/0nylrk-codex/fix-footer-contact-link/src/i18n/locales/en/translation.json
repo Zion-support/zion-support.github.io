@@ -13,38 +13,75 @@
     "error": "Error",
     "explore": "Explore",
     "menu": "Menu",
+<<<<<<< HEAD
 
+=======
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+    "saving": "Saving..."
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
     "toggle_mobile_menu": "Toggle mobile menu";
 },
+<<<<<<< HEAD
 
+=======
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  "nav": {
+    "home": "Home",
+    "marketplace": "Marketplace",
+:public/locales/en-US/common.json
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+<<<<<<< HEAD
 
+=======
+origin/chore/build-setup
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "services": "Services",
 =======
     "services": "Services",
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
+<<<<<<< HEAD
 >>>>>>> origin/chore/cleanup-and-build
 =======
     "categories": "Categories",
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+=======
+origin/chore/cleanup-and-build
+    "categories": "Categories",
+ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",
     "messages": "Messages",
+<<<<<<< HEAD
 
     "faq": "FAQ",
     "help": "Help Center",
 
 =======
 >>>>>>> origin/chore/cleanup-and-build
+=======
+    "faq": "FAQ",
+    "help": "Help Center",
+:public/locales/en-US/common.json
+    "post_job": "Post Job",
+    "analytics": "Analytics",
+    "faq": "FAQ",
+    "help": "Help Center",
+origin/chore/build-setup
+origin/chore/cleanup-and-build
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -53,16 +90,30 @@
     "green-it": "Green IT",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
+<<<<<<< HEAD
 
+=======
     "sitemap": "Sitemap"
   },
-
-
     "post_job": "Post Job"
   },
+    "sitemap": "Sitemap";
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    "sitemap": "Sitemap"
+  },
+origin/chore/build-setup
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+    "post_job": "Post Job"
+  },
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+=======
+ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -72,10 +123,21 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
+<<<<<<< HEAD
 
     "logout_success": "Logged out successfully";
 },
 
+=======
+    "logout_success": "Logged out successfully";
+},
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+    "logout_success": "Logged out successfully"
+  },
+    "logout_success": "Logged out successfully";
+},
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
     "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
@@ -97,8 +159,14 @@
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
+<<<<<<< HEAD
 
 
+=======
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+:public/locales/en-US/common.json
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "tool_chat_desc": "Get instant assistance from our AI-powered chat";
 },
   "marketplace": {
@@ -118,7 +186,13 @@
     "city": "City",
     "country": "Country",
     "subtotal": "Subtotal",
+<<<<<<< HEAD
 
+=======
+    "pay": "Pay with Stripe (test)";
+},
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "tool_chat_desc": "Get instant assistance from our AI-powered chat"
   },
   "jobs": {
@@ -136,9 +210,14 @@
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
   },
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+=======
+ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "language": {
     "en": "English",
     "es": "Español",
@@ -166,8 +245,14 @@
     "missing_languages": "Missing in {{count}} languages",
     "edit": "Edit",
     "saved": "Saved",
+<<<<<<< HEAD
 
 
+=======
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+:public/locales/en-US/common.json
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "changes_saved": "Translation changes have been saved";
 },
   "error_boundary": {
@@ -189,11 +274,25 @@
     "title_placeholder": "Enter job title",
     "description_placeholder": "Describe the job in detail"
   }
+<<<<<<< HEAD
 >>>>>>> origin/chore/build-setup
 
-    "changes_saved": "Translation changes have been saved"
-  }
 =======
 
 }
+    "changes_saved": "Translation changes have been saved"
+  }
+}
+origin/chore/build-setup
+:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    "changes_saved": "Translation changes have been saved"
+  }
+ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
+}
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+=======
+ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

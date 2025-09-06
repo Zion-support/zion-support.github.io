@@ -1,17 +1,25 @@
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import fs from 'fs';
 import path from 'path';
 
@@ -20,6 +28,22 @@ const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json');
 const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions');
 
 
+<<<<<<< HEAD
+=======
+ const ts = new Date () .toISOString () 
+const ts = new Date () .toISOString () 
+ const ts = new Date () .toISOString () 
+
+const ts = new Date () .toISOString ()
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = path.join(process.cwd(), 'datadocs');
+const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
+const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function ensureDir(dir: string) {
   if (!fs && fs.existsSync(dir)) {
     fs && fs.mkdirSync(dir, { recursive: true })
@@ -31,27 +55,47 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  }
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
 
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' })
+;
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const body = req.body;
 
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
 
+<<<<<<< HEAD
     const body = req && req.body;
 
     const jsonString =
@@ -64,13 +108,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .slice(0, 14);
 
 
+=======
+    const body = req.body;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
 
     res && res.status(200).json({ ok: true, version: ts });
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     res.status(200).json({ ok: true, version: ts })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
@@ -137,6 +187,7 @@ if ( {) {
     fs.writeFileSync (path.join (VERSIONS_DIR, `${ts}.json`), json_string, 'utf8');
 ;
     res.status (200).json ({ ok: true, version: ts });
+<<<<<<< HEAD
 
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
@@ -146,9 +197,53 @@ if ( {) {
 }
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     res.status (500).json ({ error: 'Failed to save content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' });
+  }
+}
+    res.status (500).json ({ error: 'Failed to save content' });
+  }  } catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' });
+
+    const _ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14),
+
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8'),
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8'),
+
+    res.status(200).json({ ok: true, version: ts })
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+
+    const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+    const ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14);
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
+    res.status(200).json({ ok: true, version: ts });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' });
+  }
+
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+  }  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

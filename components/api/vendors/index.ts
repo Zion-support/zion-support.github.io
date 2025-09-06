@@ -9,12 +9,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ vendors })
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+<<<<<<< HEAD
 =======
+=======
+  const vendors = listVendors();
+  res && res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = listVendors();
+  res && res.status(200).json({ vendors })
+}
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { list_vendors } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -28,9 +37,26 @@ function handler() {
   const vendors = list_vendors ();
   res.status (200).json ({ vendors });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+import { listVendors } from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = null;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const vendors = listVendors();
+  res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

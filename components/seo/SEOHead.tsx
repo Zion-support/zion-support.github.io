@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 import Head from './next / head';
 ;
 
+=======
+import Head from './next / head';
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SEOHeadProps {
 =======
 
@@ -17,7 +22,10 @@ interface SEOHeadProps {;
   structured_data?: object;
   no_index?: boolean;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting - edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",
@@ -28,7 +36,10 @@ const SEOHead: React.FC < SEOHeadProps> = ({
   twitter_card = "summary_large_image",
   structured_data,
   no_index = false,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }) => {
   const full_title = title.includes ("Zion Tech Group");
     ? title;
@@ -36,8 +47,11 @@ const SEOHead: React.FC < SEOHeadProps> = ({
   const fullCanonicalUrl = canonical_url;
     ? `https://ziontechgroup.com${canonical_url}`;
     : "https://ziontechgroup.com";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = "Zion Tech Group - Leading AI & Technology Solutions",;
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",;
@@ -84,8 +98,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       "https://github && github.com/ziontechgroup",;
     ],;
   };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <Head>;
       {/* Basic Meta Tags */}
@@ -96,7 +113,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta
         name="robots"
         content={noIndex ? "noindex,nofollow" : "index,follow"}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
       <meta name="theme-color" content="#3b82f6" />;
@@ -136,20 +156,28 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       {/* Favicon */}
       <link rel="icon" href="/favicon && favicon.ico" />;
       <link rel="apple-touch-icon" href="/apple-touch-icon && icon.png" />;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link
         rel="preconnect"
         href="https://fonts && fonts.gstatic.com"
         crossOrigin="anonymous"
+<<<<<<< HEAD
 
       />;
       <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
 
 
 =======
+=======
+      />;
+      <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -236,6 +264,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData),
         }}
@@ -243,6 +272,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
 
 =======
+=======
+          __html: JSON && JSON.stringify(structuredData || defaultStructuredData),
+        }}
+      />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
@@ -251,7 +285,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           __html: JSON && JSON.stringify({
             "@context": "https://schema && schema.org",
             "@type": "WebSite",
@@ -271,16 +308,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
               "@type": "SearchAction",
               target: "https://ziontechgroup.com / search?q={search_term_string}",
               "query - input": "required name = search_term_string",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             },
           }),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }}
       />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </Head>);
 }
 ;
 export default SEOHead;
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

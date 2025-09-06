@@ -1,15 +1,27 @@
+<<<<<<< HEAD
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
 files && files.forEach((file) => {
 
+=======
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+let totalFixed = 0;
+files && files.forEach((file) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+<<<<<<< HEAD
 
     content = content ;/g,
+=======
+    content = content ;/g,
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       (match) => {
         return match && match.replace(",;", ";");
 =======
@@ -34,10 +46,14 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
+<<<<<<< HEAD
 
     content = content && content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
@@ -58,31 +74,56 @@ if (.ends_with (") {
           return match.trim () + ";";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
 
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    // Fix import statements missing semicolons
+    content = content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+      (match) => {
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+        if (!match.trim().endsWith(";")) {
+          return match.trim() + ";";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
         return match;
       }
     );
+<<<<<<< HEAD
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 
+=======
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -132,11 +173,15 @@ if (&&) {
         return match;
       }
     );
+<<<<<<< HEAD
 
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
 =======
+=======
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     // Check condition
 if ( {) {

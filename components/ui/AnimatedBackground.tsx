@@ -1,21 +1,40 @@
 
 
+<<<<<<< HEAD
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
+=======
+export default function AnimatedBackground() {;
+  return (
+    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
+import React from 'react';
+
+export default function AnimatedBackground() {
+  return (
+    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{
           background:
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
         }}
+<<<<<<< HEAD
+=======
+          0% {
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       />
       <style jsx global>{`
         @keyframes bgflow {
-
+          0% {;
           0% {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -29,17 +48,26 @@
     </div>;
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Gradient Background */}
 
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />;
 
 
+<<<<<<< HEAD
+=======
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Animated Orbs */}
       <motion&& motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
@@ -94,10 +122,15 @@ function AnimatedBackground() {
           repeat: Infinity
           ease: "easeInOut"
         }}
+<<<<<<< HEAD
 
       />;
       <motion&& motion.div
 
+=======
+      />;
+      <motion&& motion.div
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, -80, 0]
@@ -118,10 +151,15 @@ function AnimatedBackground() {
           repeat: Infinity
           ease: "easeInOut"
         }}
+<<<<<<< HEAD
 
       />;
       <motion&& motion.div
 
+=======
+      />;
+      <motion&& motion.div
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, 60, 0]
@@ -142,16 +180,23 @@ function AnimatedBackground() {
           repeat: Infinity
           ease: "easeInOut"
         }}
+<<<<<<< HEAD
 
       />;
 
 
+=======
+      />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Grid Pattern */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
             linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
           `
@@ -161,10 +206,13 @@ function AnimatedBackground() {
 
     </div>;
   );
+<<<<<<< HEAD
 
 };
 export default AnimatedBackground;
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       {/* Grid Pattern */}
       <div;
@@ -183,6 +231,20 @@ export default AnimatedBackground;
 export default AnimatedBackground;
 ;
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        }
+      `}</style>
+    </div>
+  )
+}
+
+}
+export default AnimatedBackground;
+};
+
+export default AnimatedBackground;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

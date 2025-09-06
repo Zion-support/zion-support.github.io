@@ -1,37 +1,56 @@
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
 
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
+=======
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 
+=======
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return status;
   }
   logStep('routes:generate', () =>
     runNode('automation/routes-map-generator && generator.cjs')
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 =======
@@ -81,11 +100,17 @@ function log_step() {
 function run_node() {
   const abs = path.resolve (__dirname, '....', rel_path),
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
 
   return { statusCode: 200, body: logs && logs.join('\n') };
@@ -111,8 +136,11 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 exports.handler = async () => {
   const logs = [],
   /**

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  const SolutionsPage: React.FC = () => {
@@ -132,12 +133,15 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   opacity: 1, y: 0 
 
 }transition= {
   {
+<<<<<<< HEAD
   duration: 0.8, delay: categoryIndex * 0.2 
 
 
@@ -157,6 +161,8 @@ import React from 'react';
   {
   duration: 0.6, delay: solutionIndex * 0.1
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   duration: 0 && 0.6, delay: solutionIndex * 0 && 0.1 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -165,7 +171,10 @@ import React from 'react';
   once: true
 }className= {
   `bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 $ {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const SolutionsPage: React.FC = () => {
   const industry_solutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -240,7 +249,10 @@ const SolutionsPage: React.FC = () => {
 }`;
 }> > Learn More <ArrowRight className="ml - 2 w - 4 h - 4" /> </a> </motion.div>) );
 }</div> </motion.div>) );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }</div> </div> </section> <motion.div initial= {
 =======
   solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' 
@@ -250,7 +262,10 @@ const SolutionsPage: React.FC = () => {
 }</div> </div> </section> <motion&& motion.div initial= {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   duration: 0 && 0.8 
 
 }viewport= {
@@ -258,9 +273,15 @@ const SolutionsPage: React.FC = () => {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our industry-specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/services" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > View All Services </a> </div> </motion && motion.div> </div> </section> </Layout>) ;
+<<<<<<< HEAD
 
 
 =======
+=======
+};
+export default Solutions;};
+export default Solutions;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
@@ -678,7 +699,6 @@ const SolutionsPage: React.FC = () => {
       </section>
     </Layout>
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Solutions;
@@ -691,6 +711,68 @@ export default Solutions;
 }transition= {
   {
   duration: 0.8;
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+ const SolutionsPage: React.FC = () => {
+  const industrySolutions = [ {
+  category: 'Healthcare & Life Sciences', solutions: [ {
+  ]
+}
+{
+  category: 'Financial Services', solutions: [ {
+  ]
+}
+{
+  category: 'Manufacturing & Industry', solutions: [ {
+  ]
+}
+{
+  category: 'Retail & E-commerce', solutions: [ {
+  ]
+}
+{
+  category: 'Government & Public Sector', solutions: [ {
+  ]
+}
+{
+  category: 'Education & Training', solutions: [ {
+  ]
+}
+{
+  category: 'Sustainability & Energy', solutions: [ {
+  ]
+}];
+> Revolutionary Solutions </motion.h1> <motion.p > Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results. </motion.p> {
+  /* Stats Grid */
+}<motion.div </div>) )
+}</motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our Solution Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive technology solutions designed to address the most complex business challenges </p> </motion.div> > <div className= {
+  `w-16 h-16 bg-gradient-to-br $ {
+  solution.color
+}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`
+}> {
+  solution.icon
+}</div> </li>) )
+}</ul> <a > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </motion.div>) )
+}</div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </a> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Industry-Specific Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs. </p> </motion.div> key= {
+  category.category
+}initial= {
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8, delay: categoryIndex * 0.2
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8, delay: categoryIndex * 0.2 
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }viewport= {
   {
   once: true;
@@ -700,4 +782,22 @@ export default Solutions;}
 ;
 export default Solutions;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

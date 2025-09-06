@@ -1,8 +1,19 @@
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {useState, useEffect} from "react";
+import {useAuth} from "./useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -19,6 +30,13 @@ interface OnboardingStatus {
 
 
 
+<<<<<<< HEAD
+=======
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -30,7 +48,10 @@ interface OnboardingStatus {
 
     responseReceived: false
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }),
   
 
@@ -42,13 +63,28 @@ interface OnboardingStatus {
       
 
 
+<<<<<<< HEAD
+=======
+  });
+  }),
+  
+  useEffect(() => {
+
+    const fetchOnboardingStatus = async () => {
+      if (!user) return;
+      if (!user) return,
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           .single(),
           
@@ -59,6 +95,15 @@ interface OnboardingStatus {
           return
 
 
+<<<<<<< HEAD
+=======
+          .single();
+          .single(),
+          
+        if (error) {
+          console.error("Error fetching onboarding status:", error),
+          return
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -96,9 +141,12 @@ export function useOnboardingStatus() {;
         if (error) {;
           console.error("Error fetching onboarding status:", error),;
           return;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
         if (data) {
           setStatus({
@@ -110,6 +158,7 @@ export function useOnboardingStatus() {;
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
+<<<<<<< HEAD
 =======
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
@@ -140,11 +189,45 @@ export function useOnboardingStatus() {;
     const fetchOnboardingStatus = async () => {;
       if (!user) return;
 
+=======
+
+import { useState, useEffect } from "react",;
+import { useAuth } from "./useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+;
+interface OnboardingStatus {;
+  profileCompleted:boolean,;
+  skillsAdded:boolean,;
+  availabilitySet:boolean,;
+  matchReceived:boolean,;
+  jobPosted:boolean,;
+  inviteSent:boolean,;
+  responseReceived:boolean;
+}
+;
+export function useOnboardingStatus() {;
+  const { user } = useAuth(),;
+  const [status, setStatus] = useState<OnboardingStatus>({;
+    profileCompleted:false,;
+    skillsAdded:false,;
+    availabilitySet:false,;
+    matchReceived:false,;
+    jobPosted:false,;
+    inviteSent:false,;
+    responseReceived:false;
+  }),;
+  ;
+  useEffect(() => {;
+    const fetchOnboardingStatus = async () => {;
+      if (!user) return,;
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       try {;
         // Get user onboarding progress from database;
         const { data, error } = await supabase;
           .from('user_onboarding');
           .select('*');
+<<<<<<< HEAD
           .eq('user_id', user && user.id);
           .single();
 
@@ -161,6 +244,38 @@ export function useOnboardingStatus() {;
         console.error("Error in onboarding status hook:", err);
       }
 
+=======
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)
+
+        }
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)
+      }
+    }
+    fetchOnboardingStatus()
+  }, [user]);
+
+  return status
+}
+      } catch (err) {;
+        console.error("Error in onboarding status hook:", err);
+      }
+        if (data) {;
+          setStatus({;
+            profileCompleted: data && data.profile_completed || false,;
+            skillsAdded: data && data.skills_added || false,;
+            availabilitySet: data && data.availability_set || false,;
+            matchReceived: data && data.match_received || false,;
+            jobPosted: data && data.job_posted || false,;
+            inviteSent: data && data.talent_invited || false,;
+            responseReceived: data && data.quote_received || false;
+          });
+        }
+      } catch (err) {;
+        console && console.error("Error in onboarding status hook:", err);
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     };
 
     fetchOnboardingStatus();
@@ -168,7 +283,10 @@ export function useOnboardingStatus() {;
 
   return status;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -240,6 +358,7 @@ if ( {) {
   }, [user]);
 ;
   return status;
+<<<<<<< HEAD
 }
 
 =======
@@ -247,3 +366,99 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          .eq('user_id', user.id);
+          .single(),;
+          ;
+        if (error) {;
+          console.error("Error fetching onboarding status:", error),;
+          return,;
+        }
+        ;
+        if (data) {;
+          setStatus({;
+            profileCompleted:data.profile_completed || false,;
+            skillsAdded:data.skills_added || false,;
+            availabilitySet:data.availability_set || false,;
+            matchReceived:data.match_received || false,;
+            jobPosted:data.job_posted || false,;
+            inviteSent:data.talent_invited || false,;
+            responseReceived:data.quote_received || false;
+          }),;
+        }
+      } catch (err) {;
+        console.error("Error in onboarding status hook:", err),;
+      }
+    },;
+    ;
+    fetchOnboardingStatus(),;
+  }, [user]),;
+  ;
+  return status,;}
+}catch (err) {
+  
+  useEffect(() => {
+    const fetchOnboardingStatus = async () => {
+      if (!user) return,
+
+interface OnboardingStatus {profileCompleted: boolean,
+  skillsAdded: boolean,
+  availabilitySet: boolean,
+  matchReceived: boolean,
+  jobPosted: boolean,
+  inviteSent: boolean,
+  responseReceived: boolean}
+
+export function useOnboardingStatus() {const { user} = useAuth();
+  const [status, setStatus] = useState<OnboardingStatus>({profileCompleted: false, skillsAdded: false, availabilitySet: false, matchReceived: false, jobPosted: false, inviteSent: false, responseReceived: false});
+  
+  useEffect_(() => {const fetchOnboardingStatus = async () => {
+      if (!user) return;
+      
+      try {
+        // Get user onboarding progress from database,
+const { data, error} = await supabase
+          .from('useronboarding')
+          .select('*')
+          .eq('userid', user.id)
+          .single(),
+          
+        if (error) {
+          console.error("Error fetching onboarding status:", error),
+          return        }
+        
+        if (data) {
+          setStatus({
+            profileCompleted: data.profilecompleted || false,
+            skillsAdded: data.skillsadded || false,
+            availabilitySet: data.availabilityset || false,
+            matchReceived: data.matchreceived || false,
+            jobPosted: data.jobposted || false,
+            inviteSent: data.talentinvited || false,
+            responseReceived: data.quotereceived || false
+          })
+        }
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)      }
+    },
+        if (error) {return}
+        
+        if (data) {setStatus({
+            profileCompleted: data.profilecompleted || false, skillsAdded: data.skillsadded || false, availabilitySet: data.availabilityset || false, matchReceived: data.matchreceived || false, jobPosted: data.jobposted || false, inviteSent: data.talentinvited || false, responseReceived: data.quotereceived || false})
+        }
+      } catch (err) {}
+    };
+    
+    fetchOnboardingStatus()
+  }, [user]),
+  
+  return status
+}
+;
+
+};
+}, [user]);
+return status;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

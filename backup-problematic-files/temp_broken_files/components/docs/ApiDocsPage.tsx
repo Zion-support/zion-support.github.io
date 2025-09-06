@@ -5,6 +5,7 @@ import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
+<<<<<<< HEAD
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
@@ -29,6 +30,18 @@ export default function ApiDocsPage() {
         <header className=&quot;flex items-center justify-between&quot;>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:components/docs/ApiDocsPage.tsx
+        onChangeVisibility={setVisibility}
+      />
+      <main className="p-6 space-y-6">
+        <header className="flex items-center justify-between">
+        onChangeVisibility={setVisibility}      />
+      <main className=&quot;p-6 space-y-6&quot;>
+        <header className=&quot;flex items-center justify-between&quot;>
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
@@ -39,11 +52,21 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
+<<<<<<< HEAD
 
 
         {_activeEndpoint ? (
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:components/docs/ApiDocsPage.tsx
+        {activeEndpoint ? (
+
+
+        {_activeEndpoint ? (
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
@@ -78,15 +101,24 @@ function ChangelogWidget() {
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>
+<<<<<<< HEAD
 
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
 
 =======
+=======
+:components/docs/ApiDocsPage.tsx
+      <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
+    </div>
+  )
+}
+      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
+  )}
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 };
-=======
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx

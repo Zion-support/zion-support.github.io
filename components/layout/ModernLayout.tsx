@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 
 import Head from './next / head';
 import { ReactNode } from './react';
 ;
 
+=======
+import Head from './next / head';
+import { ReactNode } from './react';
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 type ModernLayoutProps = {
   children: ReactNode
 =======
@@ -14,10 +20,15 @@ type ModernLayoutProps = {;
   description?: string;
   keywords?: string;
   canonical?: string;
+<<<<<<< HEAD
 
 }
 ;
 
+=======
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const ModernLayout = ({
 =======
 const ModernLayout = ({;
@@ -27,10 +38,14 @@ const ModernLayout = ({;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
+<<<<<<< HEAD
 
 }: ModernLayoutProps) => {;
 
 =======
+=======
+}: ModernLayoutProps) => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }: ModernLayoutProps) =>: any {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
@@ -39,7 +54,10 @@ const ModernLayout = ({;
         <title>{title}</title>;
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <meta property="og: type" content="website" />;
         <meta property="og:url" content={canonical || "https://ziontechgroup && ziontechgroup.com"} />;
         <meta property="og:title" content={title} />;
@@ -60,9 +78,12 @@ const ModernLayout = ({;
     </>;
   ),;
 };
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="robots" content="index, follow" />;

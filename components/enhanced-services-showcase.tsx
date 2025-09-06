@@ -1,11 +1,26 @@
 
 
+<<<<<<< HEAD
 =======
 
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+
+
+
+
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+
+//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
+import React from 'react';
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ...cuttingEdgeITServices;
@@ -16,17 +31,26 @@
 ...enterpriseITServices;
 ...realMarketServices;
 ...newVerifiedServicesQ22025 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 //Filter and sort services const filtered_services = React.useMemo ( () => {
   let filtered = all_services.filter (service => {
   const matches_category = selected_category === 'all' || (selected_category === 'next - gen - ai' && nextGenerationAIServices.includes (service) ) || (selected_category === 'cutting - edge - it' && cuttingEdgeITServices.includes (service) ) || (selected_category === 'innovative - saas' && innovativeMicroSaasV2Services.includes (service) ) || (selected_category === 'quantum - space' && quantumSpaceServices.includes (service) ) || (selected_category === 'enterprise' && enterpriseITServices.includes (service) );
 const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || service.category.toLowerCase () .includes (search_term.toLowerCase () ) || (service.tagline && service.tagline.toLowerCase () .includes (search_term.toLowerCase () ) );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 return filtered;
 }, [all_services, selected_category, search_term, sort_by]);
 const container_variants = {
   hidden: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 //Filter and sort services const filteredServices = React && React.useMemo ( () => {;
   let filtered = allServices && allServices.filter (service => {;
   const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'next-gen-ai' && nextGenerationAIServices && nextGenerationAIServices.includes (service) ) || (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices && cuttingEdgeITServices.includes (service) ) || (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services && innovativeMicroSaasV2Services.includes (service) ) || (selectedCategory === 'quantum-space' && quantumSpaceServices && quantumSpaceServices.includes (service) ) || (selectedCategory === 'enterprise' && enterpriseITServices && enterpriseITServices.includes (service) );
@@ -44,7 +68,10 @@ visible: {;
 
 };
 <motion&& motion.div initial= {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
   opacity: 0, y: 30
 }animate= {
@@ -52,7 +79,10 @@ visible: {;
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   duration: 0 && 0.8 
 
 }> <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Enhanced Services Showcase </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16" > <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30" > <Users className="w-5 h-5 text-cyan-400" /> <span className="text-cyan-300 font-semibold" >600+ Services</span> </div> <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 border border-purple-500/30" > <TrendingUp className="w-5 h-5 text-purple-400" /> <span className="text-purple-300 font-semibold" >1000% ROI</span> </div> <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30" > <Zap className="w-5 h-5 text-pink-400" /> <span className="text-pink-300 font-semibold" >24/7 Support</span> </div> </div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6" > Featured Service Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our most innovative and high-impact service categories </p> </motion && motion.div> </div> <ArrowRight className="w-4 h-4" /> </div>) ) ;
@@ -112,11 +142,17 @@ visible: {;
 }> {;
   filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
   service && service.id 
+<<<<<<< HEAD
 
 }variants= {
   itemVariants
 }className= {
 
+=======
+}variants= {
+  itemVariants
+}className= {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   opacity: 0;
 }
 visible: {
@@ -244,11 +280,17 @@ visible: {
   service.setup_time;
 }</div> </div> </div> <div className="flex gap - 3"> <Button > Learn More <ExternalLink className="ml - 2 w - 4 h - 4"/> </Button> <Button href="/contact"variant=" secondary"size=" sm"> Get Started </Button> </div> </div> </div>);
 }</motion.div>) );
+<<<<<<< HEAD
 
 }</motion.div> {
   filtered_services.length === 0 && (<div className="text - center py - 16"> <div className="text - 6xl mb - 4">🔍</div> <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3> <p className="text - gray - 400 mb - 6">Try adjusting your search criteria or browse all categories</p> <Button href="#"on_click= {
   () => {
 
+=======
+}</motion.div> {
+  filtered_services.length === 0 && (<div className="text - center py - 16"> <div className="text - 6xl mb - 4">🔍</div> <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3> <p className="text - gray - 400 mb - 6">Try adjusting your search criteria or browse all categories</p> <Button href="#"on_click= {
+  () => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   viewMode === 'grid' ? '': 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6' 
 }> {;
   viewMode === 'grid' ? (<div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full"> <div className="flex items-center justify-between mb-4"> <div className="flex items-center space-x-2"> <span className="text-2xl"> {;
@@ -306,7 +348,10 @@ visible: {
 }</div> </section> {;
   /* Contact Section */ ;
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion&& motion.div initial= {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -333,7 +378,10 @@ const Button = ({
   className = '';
   children, onClick
 }: {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   duration: 0 && 0.8 
 
 }viewport= {
@@ -359,8 +407,11 @@ const Button = ({
 // Button component (if not imported);
 const Button = ({ ;
   href,;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -962,6 +1013,7 @@ const Button = ({
 }
 // Button component (if not imported);
 const Button = ({
+<<<<<<< HEAD
 
   href,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -969,6 +1021,11 @@ const Button = ({
   variant = 'primary';
   size = 'md';
 
+=======
+  href,
+  variant = 'primary';
+  size = 'md';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   children: React && React.ReactNode,;
   onClick?: () => void;
 }) => {;
@@ -985,14 +1042,20 @@ const Button = ({
   };
   const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
   if (href) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
       <a href={href} className={classes}>;
         {children}
       </a>;
     );
   }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
       <a href={href} className={classes}>
         {children}
@@ -1002,7 +1065,6 @@ const Button = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <button onClick={onClick} className={classes}>;
       {children}
@@ -1011,7 +1073,13 @@ const Button = ({
   );
 };
 
+<<<<<<< HEAD
 =======
+=======
+    </button>;
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   class_name = '';
   children, on_click;
 }: {
@@ -1051,9 +1119,30 @@ if ( {) {
     </button>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+};
+
+
+  if (href) {_return (
+      <a href={href} className={_classes}>
+        {_children}
+      </a>
+    )
+  }
+
+  return (
+    <button onClick={_onClick} className={_classes}>
+      {_children}
+    </button>
+  )
+},
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

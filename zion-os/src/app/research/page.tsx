@@ -1,16 +1,29 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function ResearchPage() {;
   return (;
 
     <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default /**
  * ResearchPage - Function description
  */
 function ResearchPage() {
   return (
     <div className="min - h-screen bg - white">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default function ResearchPage() {return (;
+export default function ResearchPage() {;
+  return (;
+    <div className="min-h-screen bg-white">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - emerald - 600 to - teal - 600 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

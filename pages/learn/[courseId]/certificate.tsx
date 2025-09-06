@@ -1,17 +1,24 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useRouter } from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
   const router = useRouter()
   const { courseId } = router.query as { courseId: string }
   if (!courseId) return null
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
+<<<<<<< HEAD
 
 =======
 }
@@ -41,3 +48,18 @@ if (return null, ) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+  );
+};
+  )
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

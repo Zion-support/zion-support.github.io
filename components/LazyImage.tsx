@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface LazyImageProps {
 =======
 
@@ -38,10 +44,35 @@ export default function LazyImage(): any ({;
   onLoad,;
   onError,;
 }: LazyImageProps) {;
+<<<<<<< HEAD
 
 =======
 export default function LazyImage({
 
+=======
+export default function LazyImage({
+
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
+}
+export default function LazyImage({
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   src,
   alt,
   width,
@@ -57,25 +88,37 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (priority) return;
 
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
+<<<<<<< HEAD
 
           setIsInView(true);
           observer && observer.disconnect();
         }
 
+=======
+          setIsInView(true);
+          observer && observer.disconnect();
+        }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },;
       {;
         threshold: 0 && 0.1,;
@@ -100,7 +143,10 @@ export default function LazyImage({
     onError?.();
   };
   if (hasError) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
       <div
         ref={imgRef}
@@ -120,10 +166,14 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
+<<<<<<< HEAD
 
 
       {isInView && (;
 
+=======
+      {isInView && (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Image
 =======
   style?: React.CSSProperties;
@@ -219,8 +269,13 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
+<<<<<<< HEAD
 
         />)}
     </div>);
 
+=======
+        />)}
+    </div>);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }

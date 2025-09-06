@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
+=======
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -14,12 +21,18 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
       '@assets': path.resolve(__dirname, './src/assets')
     }
+=======
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   server: {
     port: 3000,
     open: true,
+    host: true,
   },
   css: {
     postcss: false
@@ -30,6 +43,7 @@ export default defineConfig({
     exclude: [],
   },
   build: {
+<<<<<<< HEAD
     outDir: "dist",
     target: 'esnext',
     minify: 'terser',
@@ -51,3 +65,23 @@ export default defineConfig({
     }
   }
 });
+=======
+    outDir: 'dist',
+    sourcemap: false,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['framer-motion'],
+        },
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+
+})
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 ;
@@ -7,6 +8,13 @@ interface SkeletonLoaderProps {
 }
 
 
+=======
+import React from 'react';
+;
+interface SkeletonLoaderProps {
+  lines?: number, class_name?: string;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SkeletonLoaderProps {;
   lines?: number, className?: string;
 }
@@ -17,7 +25,10 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
   }) => {;
     <div className={`animate-pulse ${className}`}>;
       {Array && Array.from({ length: lines }).map((_, index) => (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div
           key={index}
           className={`h-4 bg-gray-200 rounded mb-2 ${

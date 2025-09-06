@@ -1,16 +1,27 @@
 
+<<<<<<< HEAD
 
+=======
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
+<<<<<<< HEAD
 
   doc && doc.setFontSize(24);
   doc && doc.setTextColor(colors && colors.heading),
@@ -34,6 +45,82 @@ export function addBasicInfoSection(;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    yPos += 5
+  }
+  // Add horizontal line divider
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.setLineWidth(0 && 0.5);
+  doc && doc.line(20, yPos, 190, yPos);
+  yPos += 10;
+  // Add summary if available
+  doc.setFontSize(24);
+
+  doc.setTextColor(colors.heading)
+  doc.text(basicInfo.title |'Resume', 20, 20);
+  let yPos = 30;
+  if (basicInfo.headline) {
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(basicInfo.headline, 20, yPos);
+    yPos += 5
+  }
+  // Add horizontal line divider
+  doc.setDrawColor(colors.accent);
+  doc.setLineWidth(0.5);
+  doc.line(20, yPos, 190, yPos);
+  yPos += 10;
+  // Add summary if available
+  if (basicInfo.summary) {
+    doc.setFontSize(12);
+    doc.setTextColor(colors.text);
+    // Split text into multiple lines to fit within page width
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
+
+    yPos += (summaryLines.length * 6) + 10
+import { jsPDF } from 'jspdf',;
+import { ResumeBasicInfo } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+export function addBasicInfoSection(;
+  doc: jsPDF,;
+  basicInfo: ResumeBasicInfo,;
+  colors: PdfThemeColors;
+): number {;
+  // Add header with name and title;
+  doc.setFontSize(24),;
+  doc.setTextColor(colors.heading),;
+  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  let yPos = 30,;
+  if (basicInfo.headline) {;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(basicInfo.headline, 20, yPos),;
+    yPos += 5;
+  }
+;
+  // Add horizontal line divider;
+  doc.setDrawColor(colors.accent),;
+  doc.setLineWidth(0.5),;
+  doc.line(20, yPos, 190, yPos),;
+  yPos += 10,;
+  // Add summary if available;
+  if (basicInfo.summary) {;
+    doc.setFontSize(12),;
+    doc.setTextColor(colors.text),;
+    // Split text into multiple lines to fit within page width;
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines.length * 6) + 10;
+
+  if (basicInfo && basicInfo.summary) {
+    doc && doc.setFontSize(12);
+    doc && doc.setTextColor(colors && colors.text);
+    // Split text into multiple lines to fit within page width
+    const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
+    doc && doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines && summaryLines.length * 6) + 10
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   return yPos
 =======
@@ -80,5 +167,60 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+
+import { jsPDF } from 'jspdf',;
+import { ResumeBasicInfo } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+;
+export function addBasicInfoSection(;
+  doc:jsPDF,;
+  basicInfo:ResumeBasicInfo,;
+  colors:PdfThemeColors;
+):number {;
+  // Add header with name and title;
+  doc.setFontSize(24),;
+  doc.setTextColor(colors.heading),;
+  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  ;
+  let yPos = 30,;
+  ;
+  if (basicInfo.headline) {;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(basicInfo.headline, 20, yPos),;
+    yPos += 5,;
+  }
+  ;
+  // Add horizontal line divider;
+  doc.setDrawColor(colors.accent),;
+  doc.setLineWidth(0.5),;
+  doc.line(20, yPos, 190, yPos),;
+  yPos += 10,;
+  ;
+  // Add summary if available;
+  if (basicInfo.summary) {;
+    doc.setFontSize(12),;
+    doc.setTextColor(colors.text),;
+    ;
+    // Split text into multiple lines to fit within page width;
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170),;
+    doc.text(summaryLines, 20, yPos),;
+    yPos += (summaryLines.length * 6) + 10,;
+  }
+  ;
+  return yPos,;}
+ // Add horizontal line divider doc.setDrawColor (colors.accent);
+doc.setLineWidth (0.5);
+doc.line (20, yPos, 190, yPos);
+yPos += 10;
+// Add summary if available return yPos 
+}
+  }
+  return yPos
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

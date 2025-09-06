@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 import { ReactNode } from "react";
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function AdminLayout({ children }: { children: ReactNode }) {;
   return (;
 
 
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
+<<<<<<< HEAD
 =======
 import { ReactNode  } from './react';
 export default /**
@@ -15,6 +19,13 @@ function AdminLayout() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { ReactNode } from "react";
+export default function AdminLayout({ children }: { children: ReactNode }) {return (;
+export default function AdminLayout({ children }: { children: ReactNode }) {;
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Admin Header */}
       <div className="glass border - b border - white / 10">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -52,13 +63,25 @@ function AdminLayout() {
       <div className="py - 8">;
         {children}
       </div>;
+<<<<<<< HEAD
 
     </div>;
   );
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 export default Layout;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>;
+  );
+}
+};
+
+export default Layout;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

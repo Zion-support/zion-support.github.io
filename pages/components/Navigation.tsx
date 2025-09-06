@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import React, { useState } from "react";
@@ -12,9 +23,28 @@ import { motion  } from './framer-motion';
 import {
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ArrowRight,
+  Award,
+  BarChart3,
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   BookOpen,
   Brain,
   Building,
@@ -49,7 +79,10 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {;
   ArrowRight,;
   Award,;
@@ -92,10 +125,25 @@ import {;
   Users,;
   X,;
   Zap,;
+<<<<<<< HEAD
 
 } from "lucide-react";
 =======
 
+=======
+} from "lucide-react";
+ursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
+  Zap,;
+} from "lucide-react";
+
+  Truck,
+  Users,
+  X,
+  Zap
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Clock,
   DollarSign,
   Cpu,
@@ -134,20 +182,37 @@ import {;
   Clock as Time,
   DollarSign as Money;
 
+<<<<<<< HEAD
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
 
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+} from 'lucide-react';
+origin/automation-improvements-final
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ArrowRight
   Award
   BarChart3
@@ -193,8 +258,12 @@ import {;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+origin/main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const navigationItems = [
   {
     title: "Services"
@@ -261,7 +330,10 @@ const navigation_items = [;
         popular: false
       }
       {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         title: "Cloud Solutions",
         href: "/cloud - solutions",
         icon: Cloud,
@@ -356,7 +428,10 @@ const navigation_items = [;
     href: "/resources",
     icon: FileText,
     submenu: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {
         title: "Blog"
         href: "/blog"
@@ -364,7 +439,10 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         title: "Case Studies",
         href: "/case - studies",
         icon: BarChart3,
@@ -382,7 +460,10 @@ const navigation_items = [;
         icon: BookOpen,
         description: "Step - by - step guides",
       },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {
         title: "FileTextation"
         href: "/docs"
@@ -392,12 +473,18 @@ const navigation_items = [;
     ]
   }
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     title: "Company",
     href: "/about",
     icon: Building,
     submenu: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {
         title: "About Us"
         href: "/about"
@@ -437,7 +524,10 @@ const navigation_items = [;
     ]
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const navigationItems = [;
   {;
     title: "Services",;
@@ -643,6 +733,7 @@ const navigationItems = [;
     ],;
   },;
 ];
+<<<<<<< HEAD
 
 const quickLinks = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },;
@@ -652,12 +743,14 @@ const quickLinks = [;
   { title: "Quote", href: "/quote", icon: FileText },;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
+=======
+export default function Navigation() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -668,7 +761,15 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function Navigation() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -693,7 +794,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="hover:text-blue-200 transition-colors">;
 =======
 ;
@@ -740,14 +844,20 @@ function Navigation() {
                 href="/pricing";
                 className="hover:text - blue - 200 transition - colors";
               >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
               <span className="text-white font-bold text-xl">Z</span>;
@@ -771,20 +881,29 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text - sm text - gray - 500">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   href={item && item.href}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
                   <item && item.icon className="w-5 h-5" />;
                   <span>{item && item.title}</span>;
                   <ChevronDown className="w-4 h-4" />;
                 </Link>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -833,22 +952,32 @@ function Navigation() {
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
+<<<<<<< HEAD
 
             </div>;
           </div>;
 
 
+=======
+            </div>;
+          </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
 
           </button>;
         </div>;
 
 
+=======
+          </button>;
+        </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div

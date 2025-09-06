@@ -1,29 +1,53 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AgencyDashboardPage({ vendor }: Props) {
 =======
+=======
+export default function AgencyDashboardPage({ vendor }: Props) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+import { FormEvent, useEffect, useState } from 'react';
+import type { Vendor } from '../utils/vendor-types';
+
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };
+
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function AgencyDashboardPage({ vendor }: Props) {;
+type Props = { vendor: Vendor | null };
+
+export default function AgencyDashboardPage({ vendor }: Props) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
 
+<<<<<<< HEAD
   if (!activeVendor);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>;
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   async function saveProfile(): any (e: FormEvent<HTMLFormElement>) {;
@@ -41,24 +65,35 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         .split(',');
         .map(s => s && s.trim());
         .filter(Boolean),;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         .filter(Boolean),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
 
 
+<<<<<<< HEAD
+=======
+    } as Vendor;
+    // For MVP, update via direct API not implemented; keep local preview only;
+    setActiveVendor(updated);  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
       about: String(formData && formData.get('about') || activeVendor && activeVendor.about || ''),;
       servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
         .split();
         .map(s => s && s.trim());
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
@@ -75,14 +110,64 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
+<<<<<<< HEAD
 
+=======
+  if (!activeVendor)
+    return (
+      <div className='text-gray-500'>No vendor found. Please apply first.</div>
+    );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
+  async function saveProfile(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const updated = {
+      ...activeVendor
+      name: String(formData.get('name') |activeVendor.name)
+      about: String(formData.get('about') |activeVendor.about |'')
+      servicesOffered: String(
+        formData.get('servicesOffered') |
+          activeVendor.servicesOffered?.join(',') |
+          ''
+      )
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+        .filter(Boolean),
+    } as Vendor;
+    // For MVP, update via direct API not implemented; keep local preview only
+    setActiveVendor(updated);  }
+  function addPackage() {
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;      name: String(formData.get('name') |activeVendor.name)
+      about: String(formData.get('about') |activeVendor.about |'')
+      servicesOffered: String(formData.get('servicesOffered') |activeVendor.servicesOffered?.join() |'')
+        .split()
+        .map(s => s.trim())
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+  function addPackage() {
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [
+      ...(activeVendor.packages |[])
+      {
+        id: `pkg_${Date.now()}`
+        title: pkgTitle
+        description: pkgDesc
+        priceUsd: Number(pkgPrice)
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
@@ -91,7 +176,10 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -101,12 +189,18 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             Pending Verification;
           </span>;
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
 
       <section className='space-y-4'>;
         <h2 className='text-lg font-medium'>Profile</h2>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <form
           onSubmit={saveProfile}
           className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -122,9 +216,13 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>About</label>;
             <textarea
               name='about'
+<<<<<<< HEAD
 
               defaultValue={activeVendor && activeVendor.about || ''}
 
+=======
+              defaultValue={activeVendor && activeVendor.about || ''}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -133,7 +231,10 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -144,6 +245,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             </button>          </div>;
         </form>;
       </section>;
+<<<<<<< HEAD
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
@@ -151,6 +253,8 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ...activeVendor;
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
@@ -171,12 +275,180 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+      <section className='space-y-3'>;
+        <h2 className='text-lg font-medium'>Publish Packages</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
+      ...activeVendor;
+
+  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>,
+
+  async function saveProfile(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault(),
+    const formData = new FormData(e.currentTarget)
+    const updated = {
+      ...activeVendor,
+
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ''),
+      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
+        .split()
+        .map(s => s.trim())
+.filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+  function addPackage() {
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [...(activeVendor.packages || []), {
+      id: `pkg_${Date.now()}`,
+      title: pkgTitle,
+      description: pkgDesc,
+      priceUsd: Number(pkgPrice)}],
+setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
   return (
+    <div className="space-y-8">;
+      <div className="flex items-center justify-between">;
+        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
+        {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
+      </div>;
+      <section className="space-y-4">;
+        <h2 className="text-lg font-medium">Profile</h2>;
+        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <div>;
+            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>;
+            <input name="name" defaultValue={activeVendor && activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm mb-1" htmlFor="input-About">About</label>;
+            <textarea name="about" defaultValue={activeVendor && activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>;
+            <input name="servicesOffered" defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>;
+          </div>;
+        </form>;
+      </section>;
+      <section className='space-y-3'>;
+        <h2 className='text-lg font-medium'>Publish Packages</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+            <div
+              key={p && p.id}
+              className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
+              <div className='font-medium'>{p && p.title}</div>;
+              <div className='text-sm text-gray-500'>{p && p.description}</div>;
+              <div className='mt-2 text-sm'>${p && p.priceUsd}</div>;
+            </div>;
+          ))}
+        </div>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-2 items-end'>;
+          <input
+            placeholder='Title'
+            value={pkgTitle}
+            onChange={e => setPkgTitle(e && e.target.value)}
+            className='border rounded px-3 py-2 bg-transparent';
+          />;
+          <input
+            placeholder='Description'
+            value={pkgDesc}
+            onChange={e => setPkgDesc(e && e.target.value)}
+            className='border rounded px-3 py-2 bg-transparent';
+          />;
+          <div className='flex gap-2'>;
+
+  return (
+    <div className='space-y-8'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-2xl font-semibold'>Agency Dashboard</h1>
+        {!activeVendor.verified && (
+          <span className='text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800'>
+            Pending Verification
+          </span>
+        )}
+      </div>
+      <section className='space-y-4'>
+        <h2 className='text-lg font-medium'>Profile</h2>
+        <form
+          onSubmit={saveProfile}
+          className='grid grid-cols-1 md:grid-cols-2 gap-4'
+        >
+          <div>
+            <label className='block text-sm mb-1'>Agency Name</label>
+            <input
+              name='name'
+              defaultValue={activeVendor.name}
+              className='w-full border rounded px-3 py-2 bg-transparent'
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <label className='block text-sm mb-1'>About</label>
+            <textarea
+              name='about'
+              defaultValue={activeVendor.about |''}
+              rows={4}
+              className='w-full border rounded px-3 py-2 bg-transparent'
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <label className='block text-sm mb-1'>Services Offered</label>
+            <input
+              name='servicesOffered'
+              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
+              className='w-full border rounded px-3 py-2 bg-transparent'
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
+              Save
+            </button>          </div>
+        </form>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Publish Packages</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    setPkgTitle('');
+    setPkgDesc('');
+    setPkgPrice('');
+  }
+  return (
+<<<<<<< HEAD
+=======
+    <div className="space-y-8">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
+        {!activeVendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
+      </div>
+      <section className="space-y-4">
+        <h2 className="text-lg font-medium">Profile</h2>
+        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>
+            <input name="name" defaultValue={activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm mb-1" htmlFor="input-About">About</label>
+            <textarea name="about" defaultValue={activeVendor.about |''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>
+            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() |''} className="w-full border rounded px-3 py-2 bg-transparent" />
+          </div>
+          <div className="md:col-span-2">
+            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>
+          </div>
+        </form>
+      </section>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
@@ -251,31 +523,93 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     const data = await res.json();
     setItems(data.items || [])
 
+<<<<<<< HEAD
   }
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-
-
-
-
-
-  useEffect(() => {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Publish Packages</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+            <div
+              key={p.id}
+              className='border border-gray-200 dark:border-gray-800 rounded p-4'
+            >
+              <div className='font-medium'>{p.title}</div>
+              <div className='text-sm text-gray-500'>{p.description}</div>
+              <div className='mt-2 text-sm'>${p.priceUsd}</div>
+            </div>
+          ))}
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-2 items-end'>
+          <input
+            placeholder='Title'
+            value={pkgTitle}
+            onChange={e => setPkgTitle(e.target.value)}
+            className='border rounded px-3 py-2 bg-transparent'
+          />
+          <input
+            placeholder='Description'
+            value={pkgDesc}
+            onChange={e => setPkgDesc(e.target.value)}
+            className='border rounded px-3 py-2 bg-transparent'
+          />
+          <div className='flex gap-2'>
+            <input
+              placeholder='Price (USD)'
+              type='number'
+              value={pkgPrice}
+              onChange={e => setPkgPrice(Number(e.target.value))}
+              className='border rounded px-3 py-2 bg-transparent w-full'
+            />
+            <button
+              onClick={addPackage}
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+            >
+              Add
+            </button>          </div>
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">
+          <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
+          <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
+          <div className="flex gap-2">
+            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
+            <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Project Pipeline</h2>
+        <Pipeline vendorId={activeVendor.id} />
+      </section>
+      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
+    </div>
+  );        <Pipeline vendorId={activeVendor.id} />
+      </section>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+          </div>
+        </form>
+      </section>
+
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
         </div>;
       </section>;
 
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemId, status })});
     fetchItems()
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
@@ -291,7 +625,24 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
 }
 
+<<<<<<< HEAD
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ itemId, status })}),
+    fetchItems()
+
+          </select>
+        </div>
+      ))}
+    </div>
+  )
+}
+function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
+
+function Pipeline({ vendorId }: { vendorId: string }) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [items, setItems] = useState<any[]>([]);
 
   async function fetchItems() {;
@@ -311,13 +662,24 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
+<<<<<<< HEAD
 
   useEffect(() => {;
 
 
+=======
+  useEffect(() => {;
+
+
+
+  }
+
+  }
+
+  useEffect(() => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fetchItems();
   }, []);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
@@ -338,7 +700,13 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
 
+<<<<<<< HEAD
 =======
+=======
+            defaultValue={item && item.status}
+            onChange={e => changeStatus(item && item.id, e && e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {FormEvent, useEffect, useState} from 'react';
 import type { Vendor } from '../utils / vendor - types';
 ;
@@ -609,8 +977,11 @@ function change_status() {
             default_value={item.status}
             on_change={e => change_status (item.id, e.target.value)}
             className='border rounded px - 2 py - 1 bg - transparent text - sm';
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -618,18 +989,61 @@ function change_status() {
             <option value='in_progress'>In Progress</option>;
             <option value='complete'>Complete</option>;
             <option value='lost'>Lost</option>          </select>;
+<<<<<<< HEAD
 
 
+=======
+        </div>))}
+    </div>          <select default_value={item.status} on_change={e => change_status (item.id, e.target.value)} className="border rounded px - 2 py - 1 bg - transparent text - sm">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <option value="lead">Lead</option>;
             <option value="qualified">Qualified</option>;
             <option value="proposal">Proposal</option>;
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
+<<<<<<< HEAD
 
 
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+            defaultValue={item.status}
+            onChange={e => changeStatus(item.id, e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm'
+          >
+            <option value='lead'>Lead</option>
+            <option value='qualified'>Qualified</option>
+            <option value='proposal'>Proposal</option>
+            <option value='in_progress'>In Progress</option>
+            <option value='complete'>Complete</option>
+            <option value='lost'>Lost</option>          </select>
+        </div>
+      ))}
+    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+        </div>
+      ))}
+    </div>
+  );
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null; // tie to auth later
+  return { props: { vendor } }
+};  )
+}
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
@@ -641,13 +1055,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const vendor = listVendors()[0] || null, // tie to auth later;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: { vendor } }
-
-
-    </div>
-
+<<<<<<< HEAD
 
 =======
 };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+    </div>
+};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
         </div>))}
@@ -666,3 +1083,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

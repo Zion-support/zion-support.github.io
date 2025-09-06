@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+import { createNotification  } from './createNotification';
+import { HireRequestNotificationParams } from './types';
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -8,20 +15,43 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
-
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
+<<<<<<< HEAD
 
+=======
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
   const projectInfo = projectType 
     ? `${projectType} project` 
 
+<<<<<<< HEAD
+=======
+  talentId;
+  adminId;
+  requesterName;
+
+  requesterEmail
+
+  projectType;
+  projectSummary;
+  hireRequestId
+}: HireRequestNotificationParams) {
+
+  const projectInfo = projectType
+    ? `${projectType} project`
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -50,6 +80,7 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
+<<<<<<< HEAD
 
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
@@ -58,10 +89,21 @@ export async function createHireRequestNotifications({
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   talentId,
   adminId,
   requesterName,
 
+<<<<<<< HEAD
+=======
+      success: talentNotification.success && adminNotification.success;
+      talentNotification
+      adminNotification
+  talentId,
+  adminId,
+  requesterName,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   requesterEmail, 
   projectType,
   projectSummary,
@@ -104,7 +146,57 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
+<<<<<<< HEAD
 
+=======
+import { createNotification } from './createNotification',;
+import { HireRequestNotificationParams } from './types',;
+/**;
+ * Creates a hire request notification for admin and talent;
+ */;
+export async function createHireRequestNotifications({;
+  talentId,;
+  adminId,;
+  requesterName,;
+  requesterEmail,;
+  projectType,;
+  projectSummary,;
+  hireRequestId;
+}: HireRequestNotificationParams) {;
+  const projectInfo = projectType;
+    ? `${projectType} project`;
+    : "project",;
+  const summaryText = projectSummary;
+    ? `: "${projectSummary}"`;
+    : "",;
+  // Create notification for talent;
+  const talentNotification = await createNotification({;
+    userId: talentId,;
+    title: `New Hire Request from ${requesterName}`,;
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;
+    type: 'hire_request',;
+    relatedId: hireRequestId,;
+    sendEmail: true,;
+    actionUrl: '/dashboard',;
+    actionText: 'View Request';
+  }),;
+  // Create notification for admin if admin ID is provided;
+  if (adminId) {;
+    const adminNotification = await createNotification({;
+      userId: adminId,;
+      title: `New Hire Request for Talent`,;
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;
+      type: 'hire_request',;
+      relatedId: hireRequestId,;
+      sendEmail: true,;
+      actionUrl: '/admin/hire-requests',;
+      actionText: 'Review Request';
+    }),;
+    return {;
+      success: talentNotification.success && adminNotification.success,;
+      talentNotification;
+      adminNotification;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     }
   }
@@ -168,6 +260,15 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+  }
+  return {
+    success: talentNotification.success
+
+    talentNotification
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }

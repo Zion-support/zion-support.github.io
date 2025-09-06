@@ -1,9 +1,33 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =;
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists;
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
     // Fix missing commas in import statements;
 
 
+<<<<<<< HEAD
+=======
+    // Fix missing commas in import statements
+
+    // Fix missing commas in import statements;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
@@ -13,9 +37,13 @@
       return match && match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
+<<<<<<< HEAD
 
     content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
+=======
+    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Fix function parameter syntax errors
     content = content && content.replace(
       /function\s*\(([^)]+)\)\s*{/g,
@@ -27,8 +55,11 @@
 
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -82,7 +113,10 @@ function fixImportSyntax() {
     }
     return modified;
   } catch (error) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const items = fs && fs.readdirSync(currentDir);
 
     for (const item of items) {
@@ -103,7 +137,10 @@ function fixImportSyntax() {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ].includes(item)
         ) {
           continue;
@@ -159,22 +196,30 @@ if (
       }
     }
   }
+<<<<<<< HEAD
 
 
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
 
+=======
+console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
+<<<<<<< HEAD
 
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 
 =======
+=======
+console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   traverse (dir);
   return files;
 }

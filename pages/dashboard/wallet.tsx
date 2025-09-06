@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+export default function WalletPage() {_return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import React from "react";
@@ -5,23 +9,34 @@ import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import dynamic from "next/dynamic",;
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
 
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 import dynamic from "next/dynamic",
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function WalletPage() {
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -29,6 +44,7 @@ export default function WalletPage() {
         <WalletPanel />
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 =======
 }
@@ -55,3 +71,34 @@ function WalletPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+  );
+};
+  )
+    </EnhancedLayout>);
+}
+
+
+
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
+export default function WalletPage(req, res) {
+  try {
+  return (;
+    <EnhancedLayout title="Your ZION$ Wallet">;
+      <div className="max-w-2xl mx-auto">;
+        <WalletPanel />;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

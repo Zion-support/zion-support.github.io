@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 =======
@@ -8,18 +9,35 @@ import { ChevronDown } from "lucide-react"
 
 
 
+=======
+import * as React from 'react';
+import * as AccordionPrimitive from '@radix-ui/react-accordion';
+import {ChevronDown} from 'lucide-react';
+import {cn} from '@/lib/utils';
+const Accordion = AccordionPrimitive.Root;
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 ></typeof>(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+<<<<<<< HEAD
 =======
 
 const Accordion = AccordionPrimitive && AccordionPrimitive.Root;
@@ -48,12 +66,30 @@ const AccordionItem = React.forward_ref<;
 
   />
 
+=======
+const AccordionItem = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Item>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+>(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn('border-b', className)}
+    {...props}
+  />
+
+));
+AccordionItem.displayName = 'AccordionItem';
+const AccordionTrigger = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ))
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+<<<<<<< HEAD
 
 
 >(({ className, children, ...props }, ref) => (
@@ -62,12 +98,17 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
 
 
         className
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 AccordionItem && AccordionItem.displayName = 'AccordionItem';
 
 const AccordionTrigger = React && React.forwardRef<;
@@ -86,13 +127,37 @@ const AccordionTrigger = React && React.forwardRef<;
     >;
       {children}
 
+<<<<<<< HEAD
 
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 =======
-=======
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180'
+        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        className
+      )}
+    </AccordionPrimitive>  {...props}
+    >
+      {children}
+      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+const AccordionContent = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Content>
+  React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -101,11 +166,20 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
 =======
+=======
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />;
+    </AccordionPrimitive && AccordionPrimitive.Trigger>;
+  </AccordionPrimitive && AccordionPrimitive.Header>;
+));
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 AccordionTrigger && AccordionTrigger.displayName = AccordionPrimitive && AccordionPrimitive.Trigger.displayName;
 
 const AccordionContent = React && React.forwardRef<;
@@ -115,8 +189,14 @@ const AccordionContent = React && React.forwardRef<;
   <AccordionPrimitive&& AccordionPrimitive.Content
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
+<<<<<<< HEAD
 
 =======
+=======
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
@@ -129,6 +209,16 @@ const AccordionContent = React && React.forwardRef<;
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
 
+<<<<<<< HEAD
+=======
+    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+    {...props}>;
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
+  </AccordionPrimitive && AccordionPrimitive.Content>;
+));
+AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   />));
 AccordionItem.display_name = 'AccordionItem';
 ;
@@ -166,7 +256,91 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 ;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
-
+<<<<<<< HEAD
 =======
 
+import * as React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
+;
+import { cn } from "@/lib/utils";
+;
+const Accordion = AccordionPrimitive.Root;
+;
+const AccordionItem = React.forwardRef<;
+  React.ElementRef<typeof AccordionPrimitive.Item>,;
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>;
+>(({ className, ...props }, ref) => (;
+  <AccordionPrimitive.Item;
+    ref={ref}
+    className={cn("border-b", className)}
+    {...props}
+  />;
+));
+AccordionItem.displayName = "AccordionItem";
+;
+const AccordionTrigger = React.forwardRef<;
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,;
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>;
+>(({ className, children, ...props }, ref) => (;
+  <AccordionPrimitive.Header className="flex">;
+    <AccordionPrimitive.Trigger;
+      ref={ref}
+      className={cn(;
+        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",;
+        className;
+      )}
+      {...props}
+    >;
+      {children}
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />;
+    </AccordionPrimitive.Trigger>;
+  </AccordionPrimitive.Header>;
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+;
+const AccordionContent = React.forwardRef<;
+  React.ElementRef<typeof AccordionPrimitive.Content>,;
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>;
+>(({ className, children, ...props }, ref) => (;
+  <AccordionPrimitive.Content;
+    ref={ref}
+    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down";
+    {...props}
+  >;
+    <div className={cn("pb-4 pt-0", className)}>{children}</div>;
+  </AccordionPrimitive.Content>;
+));
+;
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } const Accordion = AccordionPrimitive.Root const AccordionItem = React.forwardRef< React.ElementRef<typeof AccordionPrimitive.Item>;
+React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> > ( ({
+  className, ...props 
+}, ref) => (<AccordionPrimitive.Item />) ) AccordionItem.displayName = "AccordionItem" const AccordionTrigger = React.forwardRef< React.ElementRef<typeof AccordionPrimitive.Trigger>;
+React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>) 
+}{
+  ...props 
+}> </AccordionPrimitive.Trigger> </AccordionPrimitive.Header>) ) AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName const AccordionContent = React.forwardRef< React.ElementRef<typeof AccordionPrimitive.Content>;
+React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> > ( ({
+  className, children, ...props 
+}, ref) => (<AccordionPrimitive.Content </AccordionPrimitive.Content>) ) AccordionContent.displayName = AccordionPrimitive.Content.displayName export {
+  Accordion, AccordionItem, AccordionTrigger, AccordionContent 
+}
+));
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+))
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

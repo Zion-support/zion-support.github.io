@@ -1,9 +1,33 @@
+<<<<<<< HEAD
 
 
 
 import {format} from "date-fns";
 
 =======
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> main
+import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
+import {format} from "date-fns";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",
 import { 
   Dialog,
@@ -21,12 +45,33 @@ import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
 
 
+import React from "react";
 
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import type { QuoteRequest } from "@/types/quotes";
+
+import { format } from "date-fns";
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
+<<<<<<< HEAD
 
 import {format} from "date-fns";
 =======
@@ -34,6 +79,42 @@ import {format} from "date-fns";
   };
 
 =======
+=======
+<<<<<<< HEAD
+=======
+import { format } from "date-fns";
+interface QuoteDetailsProps {
+  quote: QuoteRequest | null;
+  isOpen: boolean;
+  onClose: () => void;
+>>>>>>> main
+}
+
+import {format} from "date-fns";
+
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not specified";
+    try {
+      return format(new Date(dateString), "PPP");
+    } catch (e) {
+      return dateString;
+    }
+  };
+
+}
+
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null;
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not specified";
+    try {
+      return format(new Date(dateString), "PPP");
+    } catch (e) {
+      return dateString;
+    }
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import {;
   Dialog,;
@@ -49,17 +130,24 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
 
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import {
   Dialog,
@@ -90,18 +178,25 @@ if (return null) {
 if (return "Not specified") {
   $2
 }
+<<<<<<< HEAD
 
     try {
       return format (new Date (date_string), "PPP");
     } catch (e) {
 
 
+=======
+    try {
+      return format (new Date (date_string), "PPP");
+    } catch (e) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';
     try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
 
+<<<<<<< HEAD
       return dateString;
     }
 
@@ -114,10 +209,58 @@ if (return "Not specified") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+=======
+
+
+
+  return (
+
+      return dateString;
+    }
+  }
+  return (
+
+import React from "react",;
+import { ;
+  Dialog,;
+  DialogContent, ;
+  DialogHeader, ;
+  DialogTitle, ;
+  DialogDescription ;
+} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Separator } from "@/components/ui/separator",;
+import { QuoteStatusBadge } from "./QuoteStatusBadge",;
+import type { QuoteRequest } from "@/types/quotes",;
+import { format } from "date-fns",;
+;
+interface QuoteDetailsProps {;
+  quote:QuoteRequest | null,;
+  isOpen:boolean,;
+  onClose:() => void;
+}
+;
+export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
+  if (!quote) return null,;
+;
+  const formatDate = (dateString?:string) => {;
+    if (!dateString) return 'Not specified',;
+    try {;
+      return format(new Date(dateString), 'PPP'),;
+    } catch (e) {;
+      return dateString,;
+    }
+  },;
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle className="text-2xl flex items-center justify-between">;
+<<<<<<< HEAD
             <span>{quote && quote.project_name}</span>;
             <QuoteStatusBadge status={quote && quote.status} />;
           </DialogTitle>;
@@ -128,6 +271,18 @@ if (return "Not specified") {
 
         <Separator className="my-4" />;
 
+=======
+            <span>{quote.project_name}</span>;
+            <QuoteStatusBadge status={quote.status} />;
+          </DialogTitle>;
+          <DialogDescription>;
+            Quote request submitted on {formatDate(quote.created_at)}
+          </DialogDescription>;
+        </DialogHeader>;
+        ;
+        <Separator className="my-4" />;
+        ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           <Card>;
             <CardContent className="pt-6">;
@@ -135,32 +290,53 @@ if (return "Not specified") {
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
                   <User className="h-4 w-4 text-gray-500" />;
+<<<<<<< HEAD
                   <span>{quote && quote.requester_name}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
                   <Mail className="h-4 w-4 text-gray-500" />;
                   <span>{quote && quote.requester_email}</span>;
+=======
+                  <span>{quote.requester_name}</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Mail className="h-4 w-4 text-gray-500" />;
+                  <span>{quote.requester_email}</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 
+=======
+          ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Card>;
             <CardContent className="pt-6">;
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>;
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
                   <Calendar className="h-4 w-4 text-gray-500" />;
+<<<<<<< HEAD
                   <span>Start date: {formatDate(quote && quote.start_date)}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
                   <Clock className="h-4 w-4 text-gray-500" />;
                   <span>Timeline: {quote && quote.timeline}</span>;
+=======
+                  <span>Start date:{formatDate(quote.start_date)}</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Clock className="h-4 w-4 text-gray-500" />;
+                  <span>Timeline:{quote.timeline}</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
 
         <Card className="mt-6">;
           <CardContent className="pt-6">;
@@ -192,7 +368,123 @@ if (return "Not specified") {
         </div>;
       </DialogContent>;
     </Dialog>;
+=======
+;
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null,;
+  const formatDate = (dateString?: string) => {;
+    if (!dateString) return 'Not specified',;
+    try {;
+      return format(new Date(dateString), 'PPP');
+    } catch (e) {;
+      return dateString;
+    }
+  },
+
+  return (
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl flex items-center justify-between">
+            <span>{quote.project_name}</span>
+            <QuoteStatusBadge status={quote.status} />
+          </DialogTitle>
+          <DialogDescription>
+            Quote request submitted on {formatDate(quote.created_at)}
+          </DialogDescription>
+        </DialogHeader>
+<<<<<<< HEAD
+        <Separator className="my-4" />
+=======
+
+        <Separator className="my-4" />
+
+>>>>>>> main
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card>
+            <CardContent className="pt-6">
+              <h3 className="text-lg font-medium mb-3">
+                Requester Information
+              </h3>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <User className="h-4 w-4 text-gray-500" />
+                  <span>{quote.requester_name}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-gray-500" />
+                  <span>{quote.requester_email}</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+          <Card>
+            <CardContent className="pt-6">
+              <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-4 w-4 text-gray-500" />
+                  <span>Start date: {formatDate(quote.start_date)}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-gray-500" />
+                  <span>Timeline: {quote.timeline}</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+        <Card className="mt-6">
+          <CardContent className="pt-6">
+            <h3 className="text-lg font-medium mb-3">Project Details</h3>
+            <p className="mb-4">{quote.project_summary}</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+            {quote.project_description && (
+              <>
+                <h4 className="font-medium mt-4">Additional Details</h4>
+                <p>{quote.project_description}</p>
+              </>
+            )}
+
+            <div className="mt-6 flex items-center gap-2">
+              <DollarSign className="h-4 w-4 text-gray-500" />
+              <span className="font-medium">Budget: </span>
+              {quote.budget_display ||
+                (quote.budget_min && quote.budget_max
+                  ? `$${quote.budget_min} - $${quote.budget_max}`
+                  : quote.budget_min
+                    ? `$${quote.budget_min}`
+                    : "Not specified")}
+            </div>
+          </CardContent>
+        </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+        <div className="mt-6 flex justify-end">
+          <Button onClick={onClose}>Close</Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
+>>>>>>> main
 };
 
 =======
@@ -275,8 +567,11 @@ if (return "Not specified") {
     </Dialog>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   )
 

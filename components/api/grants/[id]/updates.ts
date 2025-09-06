@@ -2,9 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
+<<<<<<< HEAD
 
 
 
+=======
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -14,7 +21,10 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
@@ -22,8 +32,11 @@ function readGrant(id: string): GrantApplication | null {
 =======
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
@@ -37,6 +50,7 @@ function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,6 +60,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 
 
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id: string }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query as { id: string };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -63,10 +83,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     existing.updates = [...(existing.updates |[]), update];
     existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 =======
   const { id } = req && req.query as { id: string };
   if (!id) return res && res.status(400).json({ error: 'Missing id' });
 
+=======
+  const { id } = req && req.query as { id: string };
+  if (!id) return res && res.status(400).json({ error: 'Missing id' });
+
+  const { id } = req.query as { id: string }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query as { id: string };
+  if (!id) return res.status(400).json({ error: 'Missing id' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const existing = readGrant(id);
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
 
@@ -75,6 +105,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 
 
+<<<<<<< HEAD
 
     writeGrant(existing);
     return res && res.status(201).json({ update });
@@ -95,12 +126,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
 
 
+<<<<<<< HEAD
 =======
+=======
+  res && res.setHeader('Allow', 'GET, POST');
+  res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
+    existing && existing.updatedAt = new Date().toISOString();
+    writeGrant(existing);
+    return res && res.status(201).json({ update })
+  }
+  res && res.setHeader('AllowGET, POST');
+  res && res.status(405).end('Method Not Allowed')
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { GrantApplication } from '../../../../types / grants';
 ;
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
@@ -192,6 +237,7 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -201,3 +247,15 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+
+
+
+
+  res.status(405).end('Method Not Allowed')
+}
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

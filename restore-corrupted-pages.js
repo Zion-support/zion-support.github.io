@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 '),
@@ -7,11 +11,13 @@
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
 
-=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
     }
     // Clean up the content
@@ -22,11 +28,19 @@
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     
 
 
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -39,7 +53,10 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 '),
       // Check condition
 if ( {) {
@@ -63,6 +80,15 @@ if ( {) {
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
 
+<<<<<<< HEAD
+=======
+;
+    // Create a backup of the current corrupted file;
+    const timestamp = Date.now();
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
+    fs.writeFileSync(corruptedBackupPath, currentContent),;
+    // Restore the page;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
@@ -70,8 +96,11 @@ if ( {) {
       corruptedBackup: corruptedBackupPath;
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -82,6 +111,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Function to scan and restore all corrupted pages
 function restoreAllCorruptedPages() {
   const pagesDir = path.join(process.cwd(), 'pages')
@@ -107,8 +140,11 @@ function restoreAllCorruptedPages() {
         results.total++,
         
         console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -130,22 +166,55 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
 
 
 
         const result = restorePage(fullPath),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
           console.log(`   Used backup: ${result.backupUsed}`)
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
+<<<<<<< HEAD
 
+=======
+          results.failed++
+          console.log(`❌ Failed: ${fullPath}`)
+
+          console.log(`   Reason: ${result.reason}`)
+          results.failed++,
+          results.failed++,
+          console.log(`❌ Failed: ${fullPath}`),
+          console.log(`   Reason: ${result.reason}`)
+          // // // console.log(`❌ Failed: ${fullPath}`),
+          // // // console.log(`   Reason: ${result.reason}`)
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
+        results.total++,;
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
+        const result = restorePage(fullPath);
+        if (result.restored) {;
+          results.restored++,;
+          // // // console.log(`✅ Restored: ${fullPath}`),;
+          // // // console.log(`   Used backup: ${result.backupUsed}`),;
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {;
+          results.failed++,;
+          // // // console.log(`❌ Failed: ${fullPath}`),;
+          // // // console.log(`   Reason: ${result.reason}`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           results.failed++,
-=======
           results.failed++,
 
 
@@ -159,19 +228,51 @@ function restoreAllCorruptedPages() {;
   }
 
 
+<<<<<<< HEAD
+=======
+  console.log('🚀 Starting page restoration process...')
+  scanDirectory(pagesDir)
+  // Generate summary
+  console.log('\n📊 Restoration Summary: ')
+  console.log(`   Total pages: ${results.total}`)
+  console.log(`   Restored: ${results.restored}`)
+  console.log(`   Failed: ${results.failed}`)
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json')
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
+
+  return results
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
-=======
   
   console.log('🚀 Starting page restoration process...'),
-=======
   // // // console.log('🚀 Starting page restoration process...'),
+<<<<<<< HEAD
 
   scanDirectory(pagesDir),
   // Generate summary
 
 
+=======
+  scanDirectory(pagesDir),
+  // Generate summary
+  console.log('\n📊 Restoration Summary: '),
+  console.log(`   Total pages: ${results.total}`),
+  console.log(`   Restored: ${results.restored}`),
+  console.log(`   Failed: ${results.failed}`),
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
+  
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+  
+  return results
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -198,14 +299,20 @@ function restoreAllCorruptedPages() {;
   return results;
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Function to scan and restore all corrupted pages;
 /**
  * restoreAllCorruptedPages - Function description
@@ -281,20 +388,33 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
-=======
 
+<<<<<<< HEAD
+=======
+module.exports = {
+
+  restorePage
+  restoreAllCorruptedPages
+  findBestBackup
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 module.exports = {;
   restorePage,;
   restoreAllCorruptedPages,;
   findBestBackup;
 };
+<<<<<<< HEAD
 =======
 
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 module.exports = {
   restore_page,
   restoreAllCorruptedPages,
@@ -302,8 +422,23 @@ module.exports = {
 
 
 };
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+main
+
+module.exports = {
+  restorePage,
+  restoreAllCorruptedPages,
+  findBestBackup;
+},;
+
+};
+main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

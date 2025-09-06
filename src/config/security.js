@@ -3,6 +3,7 @@ export const security_config = {
   // Content Security Policy;
   csp: {
     directives: {
+<<<<<<< HEAD
 
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
@@ -15,6 +16,18 @@ export const security_config = {
       baseUri: ["'self'"],
       formAction: ["'self'"],
 
+=======
+      defaultSrc: ["'self'"]
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"]
+      fontSrc: ["'self'", "https://fonts.gstatic.com"]
+      imgSrc: ["'self'", "data:", "https:"]
+      scriptSrc: ["'self'"]
+      connectSrc: ["'self'"]
+      frameSrc: ["'none'"]
+      objectSrc: ["'none'"]
+      baseUri: ["'self'"]
+      formAction: ["'self'"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       upgradeInsecureRequests: []
     }
   }

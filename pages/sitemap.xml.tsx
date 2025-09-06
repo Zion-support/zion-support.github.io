@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function generateSiteMap() {;
   const baseUrl = "https://ziontechgroup && ziontechgroup.com";
 
@@ -99,14 +102,20 @@ function generateSiteMap() {;
          <changefreq>weekly</changefreq>;
          <priority>${page === "" ? "1 && 1.0" : "0 && 0.8"}</priority>;
        </url>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
      `;
        });
        .join("")}
    </urlset>;
  `;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { GetServerSideProps  } from './next';
 ;
 /**
@@ -220,11 +229,15 @@ function generateSiteMap() {
 /**
  * SiteMap - Function description
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function SiteMap() {
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+<<<<<<< HEAD
 
 
 function SiteMap() {;
@@ -232,6 +245,8 @@ function SiteMap() {;
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap();
 
@@ -246,8 +261,11 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
 };
 
 export default SiteMap;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;

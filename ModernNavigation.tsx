@@ -2,10 +2,16 @@
 import React from './react';
 ;
 
+<<<<<<< HEAD
+=======
+import React from './react';
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ModernNavigationProps {
   class_name?: string;
 }
 
+<<<<<<< HEAD
 
 export default function ModernNavigation() {
 
@@ -19,6 +25,11 @@ interface ModernNavigationProps {
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
 >>>>>>> origin/main
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function ModernNavigation({
+  className = "",
+}: ModernNavigationProps) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
@@ -71,17 +82,38 @@ function ModernNavigation() {
       <p > This component is currently under development.</p>;
     </div>);
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
 }
-=======
-
-
-
-=======
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-=======
 }
+}
+
+:ModernNavigation.tsx
+
+}
+
+:ModernNavigation.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
+}
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+:ModernNavigation.tsx
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
+}
+origin/main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

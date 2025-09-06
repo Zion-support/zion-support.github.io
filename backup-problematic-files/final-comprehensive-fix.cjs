@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +27,10 @@ const fs = require('fs');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
@@ -74,6 +83,8 @@ console.log('✅ Fixed SEO.tsx');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
@@ -85,6 +96,10 @@ console.log('✅ Fixed SEO.tsx');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -110,6 +125,11 @@ fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -136,6 +156,10 @@ const filesToFix = [
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -152,6 +176,8 @@ console.log('✅ Fixed use-toast.ts');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
@@ -163,6 +189,10 @@ console.log('✅ Fixed use-toast.ts');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -176,7 +206,6 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
-
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -188,6 +217,11 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -212,6 +246,10 @@ console.log(`\n📊 Syntax fixing complete:`)) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ) {
     ) {
     if (processFile(file)) {
@@ -219,15 +257,18 @@ console.log(`\n📊 Syntax fixing complete:`)) {
   }
 }
 }
-
 if ( {
   ) {
      {
-<<<<<<< HEAD
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 <<<<<<< HEAD
 =======
 if ( {
@@ -266,6 +307,10 @@ console.log('✨ Final comprehensive fixes completed!');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -309,6 +354,8 @@ const fs = require('fs')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   .replace(/"isLoading": fals e/g, '"isLoading")
 =======
 <<<<<<< HEAD
@@ -328,3 +375,7 @@ const fs = require('fs')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

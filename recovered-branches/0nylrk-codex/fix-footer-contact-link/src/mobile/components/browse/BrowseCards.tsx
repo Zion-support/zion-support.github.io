@@ -2,7 +2,10 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -10,6 +13,7 @@ import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
+<<<<<<< HEAD
 interface BrowseItem {;
   id: string,;
   title: string,;
@@ -23,24 +27,76 @@ import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 =======
+=======
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+interface BrowseItem {
+
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  location?: string;
+  badges: string[]
+
+  price?: string;
+  image?: string;
+  match?: number;
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   location?: string;
   badges: string[],;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  location?: string,
+  badges: string[],
+  price?: string,
+  image?: string,
+  match?: number,
+  location?: string;
+  badges: string[],;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   price?: string;
   image?: string;
   match?: number;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+  timePosted?: string
+}
+interface BrowseCardsProps {
+
+  items: BrowseItem[]
+  type: "jobs" | "talents"
+
+  onViewDetails: (id: string) => void
+}
+
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
+  const [savedItems, setSavedItems] = useState<string[]>([]);
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+  const [savedItems, setSavedItems] = useState<string[]>([]);
+
+  const [savedItems, setSavedItems] = useState<string[]>([]),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
       prev.includes(id)
@@ -65,31 +121,86 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
         : [...prev, id];
     );
   };
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
         <Card key={item && item.id} className="overflow-hidden">;
+<<<<<<< HEAD
+=======
+
+import React, { useState } from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+;
+interface BrowseItem {;
+  id:string,;
+  title:string,;
+  subtitle:string,;
+  description:string,;
+  location?:string,;
+  badges:string[],;
+  price?:string,;
+  image?:string,;
+  match?:number,;
+  timePosted?:string;
+}
+;
+interface BrowseCardsProps {;
+  items:BrowseItem[],;
+  type:"jobs" | "talents",;
+  onViewDetails:(id:string) => void;
+}
+;
+export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
+  const [savedItems, setSavedItems] = useState<string[]>([]),;
+  ;
+  const toggleSaved = (id:string) => {;
+    setSavedItems(prev => ;
+      prev.includes(id) ;
+        ? prev.filter(itemId => itemId !== id);
+        :[...prev, id];
+    ),;
+  },;
+  ;
+  return (;
+    <div className="space-y-4 pb-24">;
+      {items.map((item) => (;
+        <Card key={item.id} className="overflow-hidden">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <CardContent className="p-0">;
             <div className="p-4">;
               <div className="flex justify-between">;
                 <div className="flex items-center gap-3">;
                   {type === "talents" ? (;
                     <Avatar className="h-12 w-12">;
+<<<<<<< HEAD
                       <AvatarImage src={item && item.image} />;
                       <AvatarFallback>{item && item.title.charAt(0).toUpperCase()}</AvatarFallback>;
                     </Avatar>;
                   ) : (;
+=======
+                      <AvatarImage src={item.image} />;
+                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>;
+                    </Avatar>;
+                  ) :(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
+<<<<<<< HEAD
 
                   <div>;
                     <h3 className="font-medium">{item && item.title}</h3>;
@@ -98,22 +209,86 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                 </div>;
 
 
-                <button
 =======
+  }
+
+  },
+  
+  return (
+    <div className="space-y-4 pb-24">
+      {items.map((item) => (
+        <Card key={item.id} className="overflow-hidden">
+          <CardContent className="p-0">
+            <div className="p-4">
+              <div className="flex justify-between">
+                <div className="flex items-center gap-3">
+                  {type === "talents" ? (
+                    <Avatar className="h-12 w-12">
+                      <AvatarImage src={item.image} />
+                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
+                    </Avatar>
+                  ) : (
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                      <span className="text-primary font-semibold">JOB</span>
+                    </div>
+                  )}
+                  <div>
+                    <h3 className="font-medium">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                  </div>
+                </div>
+
+                  <div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                <button
 
                 <button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
                   {savedItems && savedItems.includes(item && item.id) ? (;
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
+<<<<<<< HEAD
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-
 =======
+                    <h3 className="font-medium">{item.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>;
+                  </div>;
+                </div>;
+                ;
+                <button ;
+                  className="h-8 w-8 flex items-center justify-center";
+                  onClick={() => toggleSaved(item.id)}
+                >;
+                  {savedItems.includes(item.id) ? (;
+                    <BookmarkCheck className="h-5 w-5 text-primary" />;
+                  ) :(;
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
+                  )}
+                <button
+                <button 
+                  className="h-8 w-8 flex items-center justify-center"
+                  onClick={() => toggleSaved(item.id)}
+                >
+                  {savedItems.includes(item.id) ? (
+                    <BookmarkCheck className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+                  )}
+                </button>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-1">
+                {item.badges.map((badge, index) => (
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="text-xs font-normal"
+                  >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -181,18 +356,27 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
+<<<<<<< HEAD
 
                 </button>;
               </div>;
 
               <div className="mt-3 flex flex-wrap gap-1">;
 
+=======
+                </button>;
+              </div>;
+                </button>;
+              </div>;
+              <div className="mt-3 flex flex-wrap gap-1">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {item.badges.map((badge, index) => (;
                   <Badge;
                     key={index} ;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -229,16 +413,74 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 {item && item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
                     {item && item.match}% match;
+=======
+                {item && item.badges.map((badge, index) => (;
+                  <Badge
+                    key={index} 
+                    variant="outline" 
+                    className="text-xs font-normal">;
+              ;
+              <div className="mt-3 flex flex-wrap gap-1">;
+                {item.badges.map((badge, index) => (;
+                  <Badge ;
+                    key={index} ;
+                    variant="outline" ;
+                    className="text-xs font-normal";
+                  >;
+                    {badge}
+                  </Badge>;
+                ))}
+              </div>;
+              ;
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>;
+              ;
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
+                {item.location && (;
+                  <div className="flex items-center gap-1">;
+                    <MapPin className="h-3 w-3" />;
+                    <span>{item.location}</span>;
+                  </div>;
+                )}
+                ;
+                {item.price && (;
+                  <div className="flex items-center gap-1">;
+                    <DollarSign className="h-3 w-3" />;
+                    <span>{item.price}</span>;
+                  </div>;
+                )}
+                ;
+                {item.timePosted && (;
+                  <div className="flex items-center gap-1">;
+                    <Clock className="h-3 w-3" />;
+                    <span>{item.timePosted}</span>;
+                  </div>;
+                )}
+                ;
+                {item.match && (;
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
+                    {item.match}% match;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>;
                 )}
               </div>;
             </div>;
+<<<<<<< HEAD
 
             <div className="border-t border-border p-3 flex justify-end">;
 
               <Button
                 size="sm"
                 onClick={() => onViewDetails(item && item.id)}
+=======
+              <Button
+                size="sm"
+                onClick={() => onViewDetails(item && item.id)}
+            ;
+            <div className="border-t border-border p-3 flex justify-end">;
+              <Button ;
+                size="sm";
+                onClick={() => onViewDetails(item.id)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="gap-1";
               >;
                 View Details <ChevronRight className="h-4 w-4" />;
@@ -247,12 +489,16 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 
     </div>;
   );
 }
 
 =======
+=======
+    </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   time_posted?: string;
 }
 interface BrowseCardsProps {
@@ -349,4 +595,97 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ interface BrowseItem {
+  id: string;
+title: string;
+subtitle: string;
+description: string;
+location?: string;
+badges: string[];
+price?: string;
+image?: string;
+match?: number;
+timePosted?: string 
+}interface BrowseCardsProps {
+  
+}export function BrowseCards ({
+  items, type, onViewDetails 
+}: BrowseCardsProps) {
+  const [savedItems, setSavedItems] = useState<string[]> ([]);
+setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) <AvatarImage src= {
+  item.image 
+}/> <AvatarFallback> {
+  item.title.charAt (0) .toUpperCase () 
+}</AvatarFallback> </Avatar>) : (<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center" > <span className="text-primary font-semibold" >JOB</span> </div>) 
+}<div> </div> </div> <button) : (<Bookmark className="h-5 w-5 text-muted-foreground" />) 
+}</button> </div> <Badge key= {
+  index 
+}variant="outline" className="text-xs font-normal" > {
+  badge 
+}</Badge>) ) 
+}</div> <span> {
+  item.location 
+}</span> </div>) 
+}<span> {
+  item.price 
+}</span> </div>) 
+}<span> {
+  item.timePosted 
+}</span> </div>) 
+}{
+  item.match 
+}% match </div>) 
+}</div> </div> <div className="border-t border-border p-3 flex justify-end" > <Button > View Details <ChevronRight className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) 
+}</div>) 
+}
+                    {badge}
+                  </Badge>
+                ))}
+              </div>
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
+                {item.location && (
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-3 w-3" />
+                    <span>{item.location}</span>
+                  </div>
+                )}
+                {item.price && (
+                  <div className="flex items-center gap-1">
+                    <DollarSign className="h-3 w-3" />
+                    <span>{item.price}</span>
+                  </div>
+                )}
+                {item.timePosted && (
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{item.timePosted}</span>
+                  </div>
+                )}
+                {item.match && (
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
+                    {item.match}% match
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="border-t border-border p-3 flex justify-end">
+              <Button
+                size="sm"
+                onClick={() => onViewDetails(item.id)}
+                className="gap-1"
+              >
+                View Details <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

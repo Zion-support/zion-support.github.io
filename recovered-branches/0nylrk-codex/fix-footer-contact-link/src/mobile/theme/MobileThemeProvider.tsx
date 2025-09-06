@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from './react';
 import { use_theme } from '@/hooks / use_theme';
 
@@ -14,6 +15,34 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
   const { theme } = useTheme();
 =======
+=======
+import React from "react";
+import { useTheme } from "@/hooks/useTheme";
+interface MobileThemeProviderProps {
+  children: React.ReactNode
+}
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
+
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+interface MobileThemeProviderProps {
+  children: React.ReactNode
+import React from "react",;
+import { useTheme } from "@/hooks/useTheme",;
+interface MobileThemeProviderProps {;
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+interface MobileThemeProviderProps {
+  children: React.ReactNode;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useTheme} from "@/hooks/useTheme";
 interface MobileThemeProviderProps {;
   children: React && React.ReactNode;
@@ -29,14 +58,19 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
+<<<<<<< HEAD
 
     </div>;
   );
 }
 
 =======
+=======
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export /**
  * MobileThemeProvider - Function description
  */
@@ -48,4 +82,49 @@ function MobileThemeProvider() {
       {children}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import React from "react",;
+import { useTheme } from "@/hooks/useTheme",;
+;
+interface MobileThemeProviderProps {;
+  children:React.ReactNode;
+}
+;
+export function MobileThemeProvider({ children } MobileThemeProviderProps) {;
+  const { theme } = useTheme(),;
+  ;
+  return (;
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' :'light'}`}>;
+      {children}
+    </div>;
+  ),;}
+ interface MobileThemeProviderProps {
+  children: React.ReactNode 
+}export function MobileThemeProvider ({
+  children 
+}: MobileThemeProviderProps) {
+  const {
+  theme 
+}= useTheme ();
+`mobile-app $ {
+  theme === 'dark' ? 'dark' : 'light' 
+}` 
+}> {
+  children 
+}</div>) 
+}
+  children: React.ReactNode;
+}
+;
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+  const { theme } = useTheme();
+  return (;
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+      {children}
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

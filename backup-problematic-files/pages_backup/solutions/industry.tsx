@@ -17,4 +17,8 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Industry;
+=======
+export default Industry;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

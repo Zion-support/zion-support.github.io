@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {;
   Card,;
@@ -28,6 +29,64 @@ export function ConversionAnalysisChart(): any ({;
 
 =======
 import React from './react';
+=======
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {;
+
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import React from "react";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+<<<<<<< HEAD
+  CardTitle,
+} from '@/components / ui / card';
+import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  CardTitle,;
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {
+  data: Array<Record<string, any>>;
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+
+export function ConversionAnalysisChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: ConversionAnalysisProps) {
+  const dataKeys =
+    data && data.length > 0
+      ? Object.keys(data[0]).filter((key) => key !== "date")
+      : [];
+
+export function ConversionAnalysisChart(): any ({;
+  data,;
+  timeRange,;
+  onTimeRangeChange,;
+}: ConversionAnalysisProps) {;
+  const dataKeys =;
+    data && data.length > 0;
+      ? Object && Object.keys(data[0]).filter((key) => key !== "date");
+import React from './react';
 import {
   Card,
   CardContent,
@@ -36,33 +95,88 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
+<<<<<<< HEAD
 
+
+
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+interface ConversionAnalysisProps {
+  data: Array<Record<string any>>,
+  timeRange: string,
+  onTimeRangeChange: (range: string) => void
+}
+
+export function ConversionAnalysisChart({
+  data,
+  timeRange,
+  onTimeRangeChange,
+}: ConversionAnalysisProps) {
+  const dataKeys =
+    data && data.length > 0
+      ? Object.keys(data[0]).filter((key) => key !== "date");
+      : [];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
+  const dataKeys = data && data.length > 0
+    ? Object.keys(data[0]).filter(key => key !== 'date')
+    : [],
+<<<<<<< HEAD
+=======
+
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <AnalyticsChart
+          title=""
+          data={data |[]}
+          dataKeys={dataKeys}
+          type="bar"
 
 
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+<<<<<<< HEAD
+=======
+export /**
+ * ConversionAnalysisChart - Function description
+ */
+function ConversionAnalysisChart() {
+  const data_keys =;
+    data && data.length > 0;
+      ? Object.keys (data[0]).filter ((key) => key !== "date");
+      : [];
+;
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
       <CardHeader>;
         <CardTitle className="text - white text - lg">;
           Conversion Analysis;
         </CardTitle>;
         <CardDescription className="text - zion - slate - light">;
+<<<<<<< HEAD
 
           Track different conversion types;
         </CardDescription>;
@@ -70,6 +184,38 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       <CardContent>;
 
 
+=======
+          Track different conversion types;
+        </CardDescription>;
+
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+;
+interface ConversionAnalysisProps {;
+  data:Array<Record<string any>>,;
+  timeRange:string,;
+  onTimeRangeChange:(range:string) => void;
+}
+;
+export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } ConversionAnalysisProps) {;
+  const dataKeys = data && data.length > 0;
+    ? Object.keys(data[0]).filter(key => key !== 'date');
+    :[],;
+;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>;
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+      </CardContent>
+    </Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -95,12 +241,16 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 
 
 
@@ -119,3 +269,29 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+        <AnalyticsChart;
+          title="";
+          data={data || []}
+          dataKeys={dataKeys}
+          type="bar";
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+      </CardContent>;
+    </Card>;
+  ),;}
+ interface ConversionAnalysisProps {
+  data: Array<Record<string any>>;
+timeRange: string;
+onTimeRangeChange: (range: string) => void 
+}data, timeRange, onTimeRangeChange 
+}: ConversionAnalysisProps) {
+  const dataKeys = data && data.length > 0 ? Object.keys (data[0]) .filter (key => key !== 'date') : [];
+return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle className="text-white text-lg" >Conversion Analysis</CardTitle> <CardDescription className="text-zion-slate-light" >Track different conversion types</CardDescription> </CardHeader> <CardContent> <AnalyticsChart title="" data= {
+  data || [] 
+}/> </CardContent> </Card>) 
+}
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

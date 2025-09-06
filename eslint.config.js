@@ -99,8 +99,13 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
+<<<<<<< HEAD
         afterAll: 'readonly'
       }
+=======
+        afterAll: 'readonly',
+      },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -125,7 +130,11 @@ export default [
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
+<<<<<<< HEAD
       'react/react-in-jsx-scope': 'off'
+=======
+      'react/react-in-jsx-scope': 'off',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     settings: {
       react: {
@@ -159,7 +168,13 @@ export default [
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
+<<<<<<< HEAD
       'no-undef': 'error'
     }
   }
+=======
+      'no-undef': 'error',
+    },
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ];

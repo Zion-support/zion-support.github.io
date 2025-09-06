@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 interface FeatureCardProps {;
   icon: string,;
@@ -26,11 +29,27 @@ interface FeatureCardProps {
   features: string[],
   gradient: string,
   class_name?: string;
+<<<<<<< HEAD
+=======
+interface FeatureCardProps {icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  gradient: string;
+interface FeatureCardProps {;
+  icon: string,;
+  title: string,;
+  description: string,;
+  features: string[],;
+  gradient: string,;
+  className?: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 export default /**
  * FeatureCard - Function description
  */
 function FeatureCard() {
+<<<<<<< HEAD
 
   return (
     <div className={`feature - card group ${class_name}`}>;
@@ -49,6 +68,17 @@ function FeatureCard() {
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
         <span className="text-white text-xl">{icon}</span>
 
+=======
+  return (
+      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
+        <span className="text-white text-xl">{icon}</span>
+
+    <div className={`feature-card group ${className}`}>
+      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>;
+        <span className=&quot;text-white text-xl&quot;>{icon}</span>
+      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
+        <span className="text-white text-xl">{icon}</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>
@@ -56,7 +86,10 @@ function FeatureCard() {
         {features.map((feature, index) => (
           <li key={index}>• {feature}</li>
         ))}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </ul>;
     </div>);
 }

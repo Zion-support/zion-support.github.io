@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function FuturisticBackground() {
 =======
@@ -34,12 +35,17 @@ export default function FuturisticBackground() {;
     <div className='pointer-events-none absolute inset-0 overflow-hidden'>;
       {/* Animated gradient background */}
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className='futuristic-bg absolute -inset-20' />;
 
       {/* Moving grid overlay */}
       <div className='grid-overlay absolute inset-0 opacity-20' />;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Glow orbs */}
       <div className='absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float' />;
       <div className='absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay:1 && 1.2s]' />;
@@ -49,11 +55,15 @@ export default function FuturisticBackground() {;
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">;
       {/* Animated gradient background */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="futuristic-bg absolute -inset-20" />;
 
       {/* Moving grid overlay */}
       <div className="grid-overlay absolute inset-0 opacity-20" />;
+<<<<<<< HEAD
 
 
       {/* Glow orbs */}
@@ -61,6 +71,15 @@ export default function FuturisticBackground() {;
 }
 
 =======
+=======
+      {/* Glow orbs */}
+      <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />;
+      <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1 && 1.2s]" />;
+      <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2 && 2.1s]" />;
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 export default /**
  * FuturisticBackground - Function description
@@ -92,8 +111,11 @@ function FuturisticBackground() {
       <div className="absolute -top - 16 right - 1/3 w - 72 h - 72 rounded - full bg - violet - 500 / 20 blur - 3xl animate - float [animation - delay:2.1s]" />;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
       <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1.2s]" />
       <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />
@@ -101,5 +123,44 @@ function FuturisticBackground() {
     </div>
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react";
+import React from 'react';
+
+
+export default function FuturisticBackground() {
+  return (
+    <div className='pointer-events-none absolute inset-0 overflow-hidden'>
+      {/* Animated gradient background */}
+      <div className='futuristic-bg absolute -inset-20' />
+      {/* Moving grid overlay */}
+      <div className='grid-overlay absolute inset-0 opacity-20' />
+      {/* Glow orbs */}
+      <div className='absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float' />
+      <div className='absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay:1.2s]' />
+      <div className='absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]' />
+    </div>;
+  );export default function FuturisticBackground() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="futuristic-bg absolute -inset-20" />
+      {/* Moving grid overlay */}
+      <div className="grid-overlay absolute inset-0 opacity-20" />
+      {/* Glow orbs */}
+      <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
+      <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1.2s]" />
+      <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 
 
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
 
+=======
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -42,7 +50,10 @@ if ( {) {
         owner,
         repo,
         path: 'data / dao / metrics.json',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
@@ -50,7 +61,10 @@ if ( {) {
       });
     }
     return {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
@@ -66,7 +80,10 @@ exports.handler = async function() {
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 =======
       status_code: 200,
@@ -95,7 +112,10 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
     };
@@ -113,6 +133,7 @@ if ( {) {
 
     const cachePath = path && path.join(process && process.cwd(), 'datadaometrics && datadaometrics.json'),
     const content = fs && fs.readFileSync(cachePath, 'utf-8'),
+<<<<<<< HEAD
 
 
     if (owner && repo && token) {
@@ -122,6 +143,12 @@ if ( {) {
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
 
+=======
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -58,3 +59,15 @@ describe('PWARegistration', () => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import PWARegistration from "../components/PWARegistration.dynamic";
+describe("PWARegistration", () => {
+  test("renders without crashing", () => {
+    render(<PWARegistration />);
+    expect(screen.getByTestId("pwa-registration")).toBeInTheDocument();
+  });
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

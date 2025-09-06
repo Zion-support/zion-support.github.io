@@ -25,8 +25,13 @@ export default function ServicesOverviewPage() {
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
             "Foundational architecture",
+<<<<<<< HEAD
             "Billing + subscriptions",
             "Growth analytics",
+=======
+            "Billing + subscriptions", 
+            "Growth analytics"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ]}
           icon="🚀"
         />
@@ -52,11 +57,19 @@ export default function ServicesOverviewPage() {
           icon="⚡"
         />
         <ServiceCard
+<<<<<<< HEAD
           href="/services/ai-copilots"
           title="AI Copilots"
           description="Intelligent assistants that enhance productivity and automate complex tasks"
           bullets={["Code development", "Customer support", "Sales & marketing"]}
           icon="🧠"
+=======
+          href="/services/automation-solutions"
+          title="Automation Solutions"
+          description="RPA, workflow automation, and AI-powered automation"
+          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          icon="⚡"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />
         <ServiceCard
           href="/services/data-analytics"
@@ -66,6 +79,7 @@ export default function ServicesOverviewPage() {
           icon="📊"
         />
         <ServiceCard
+<<<<<<< HEAD
           href="/services/cloud-migration"
           title="Cloud Migration"
           description="Seamless cloud migration with zero downtime and cost optimization"
@@ -130,6 +144,30 @@ export default function ServicesOverviewPage() {
         />
       </div>
       <CTA />
+=======
+          href="/services/digital-transformation"
+          title="Digital Transformation"
+          description="Complete digital transformation solutions and legacy modernization"
+          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/cybersecurity"
+          title="Cybersecurity"
+          description="Comprehensive security solutions and compliance management"
+          bullets={["Security assessment", "Threat detection", "Compliance"]}
+          icon="🔒"
+        />
+        <ServiceCard
+          href="/services/cloud-services"
+          title="Cloud Services"
+          description="Cloud migration, architecture, and optimization solutions"
+          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
+          icon="☁️"
+        />
+      </div>
+      <CTA />{" "}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>
   );
 }
@@ -175,9 +213,16 @@ function CTA() {
         Ready to Get Started?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
         Talk to our experts about your project. We'll help you choose the right
         service and create a custom solution for your business needs.
       </p>
+=======
+        {" "}
+        Talk to our experts about your project. We&apos;ll help you choose the right
+        service and create a custom solution for your business needs.{" "}
+      </p>{" "}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
@@ -189,6 +234,7 @@ function CTA() {
           href="mailto:kleber@ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
         >
+<<<<<<< HEAD
           Email Us
         </a>
       </div>
@@ -196,6 +242,12 @@ function CTA() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
+=======
+          {" "}
+          Email Us{" "}
+        </a>{" "}
+      </div>{" "}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>
   );
 }

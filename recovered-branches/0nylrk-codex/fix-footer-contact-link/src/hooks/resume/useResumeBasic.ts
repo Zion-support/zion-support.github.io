@@ -1,4 +1,27 @@
 
+<<<<<<< HEAD
+=======
+import { useFetchResume  } from './useFetchResume';
+import { useResumeActions } from './useResumeActions';
+export function useResumeBasic() {
+
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+export function useResumeBasic() {;
+  const fetchResumeOperations = useFetchResume();
+  const resumeActions = useResumeActions();
+  return {
+    // From useFetchResume
+    isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
+    error: fetchResumeOperations.error |resumeActions.error;
+    resume: fetchResumeOperations.resume;
+    fetchResume: fetchResumeOperations.fetchResume;
+    // From useResumeActions
+    createResume: resumeActions.createResume;
+    updateBasicInfo: resumeActions.updateBasicInfo
+
+    updateBasicInfo: resumeActions.updateBasicInfo,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -13,13 +36,16 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
     setActiveResume: resumeActions.setActiveResume}
 }
-=======
     isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
+<<<<<<< HEAD
     error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
@@ -53,3 +79,28 @@ function useResumeBasic() {
     setActiveResume: resume_actions.setActiveResume}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import { useFetchResume } from './useFetchResume',;
+import { useResumeActions } from './useResumeActions',;
+;
+export function useResumeBasic() {;
+  const fetchResumeOperations = useFetchResume(),;
+  const resumeActions = useResumeActions(),;
+  ;
+  return {;
+    // From useFetchResume;
+    isLoading:fetchResumeOperations.isLoading || resumeActions.isLoading,;
+    error:fetchResumeOperations.error || resumeActions.error,;
+    resume:fetchResumeOperations.resume,;
+    fetchResume:fetchResumeOperations.fetchResume,;
+    ;
+    // From useResumeActions;
+    createResume:resumeActions.createResume,;
+    updateBasicInfo:resumeActions.updateBasicInfo,;
+    setActiveResume:resumeActions.setActiveResume},;
+} 
+}
+    setActiveResume: resumeActions.setActiveResume}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

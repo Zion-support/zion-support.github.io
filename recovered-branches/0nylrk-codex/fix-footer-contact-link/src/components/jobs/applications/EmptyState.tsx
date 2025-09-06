@@ -20,6 +20,7 @@ function EmptyState() {
       </CardContent>;
     </Card>);
 
+<<<<<<< HEAD
 }
 =======
 
@@ -41,3 +42,64 @@ export function EmptyState() {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card",
+import { Link } from "react-router-dom",
+export function EmptyState() {
+  return (
+    <Card className="bg-muted/30">
+      <CardContent className="pt-6 text-center">
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>
+        <p className="text-muted-foreground mb-4">
+          You haven't submitted any applications yet. Browse available jobs to get started!
+        </p>
+        <Button className="mt-4" asChild>
+          <Link to="/jobs">Browse Jobs</Link>
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+    </Card>;
+  );
+}
+    </Card>
+  )
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Link } from "react-router-dom";
+}
+
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Link } from "react-router-dom",;
+;
+export function EmptyState() {;
+  return (;
+    <Card className="bg-muted/30">;
+      <CardContent className="pt-6 text-center">;
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>;
+        <p className="text-muted-foreground mb-4">;
+          You haven't submitted any applications yet. Browse available jobs to get started!;
+        </p>;
+        <Button className="mt-4" asChild>;
+          <Link to="/jobs">Browse Jobs</Link>;
+        </Button>;
+      </CardContent>;
+    </Card>;
+
+  ),;
+} export function EmptyState () {
+  return (<Card className="bg-muted/30" > <CardContent className="pt-6 text-center" > <h3 className="text-lg font-medium mb-2" >No Applications Yet</h3> <p className="text-muted-foreground mb-4" > mt-4"asChild> <Link to=" /jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> 
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

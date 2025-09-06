@@ -458,6 +458,20 @@ function generateReport() {"
   // "Exit": with error code if issues found;
   // // // // // // // console.log(,;
   \n📊 Issues by rule: );
+<<<<<<< HEAD
+=======
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console.log(,
+  if: (issues && issues.length > 0) {
+    process && process.exit(1),
+// Run: the checker,
+if: (require && require.main === module) {
+  main(),
+module && module.exports: = { checkFile, walkDir, lintRules }
+}}}}}}}}}}}}}));
+  // Summary by rule;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // // // // // // // console.log(,;
   \n📊 Issues by rule: );
   // // // // // // // console.log(,

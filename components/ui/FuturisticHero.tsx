@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 import Link from 'next / link';
+=======
+import Link from 'next/link';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import AnimatedBackground from './AnimatedBackground';
 
 
 export default function FuturisticHero() {
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function FuturisticHero() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+export default function FuturisticHero() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -46,17 +56,24 @@ function FuturisticHero() {
             </a>;
           </Link>;
           <Link href='/services'>;
+<<<<<<< HEAD
 
             <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
 
+=======
+            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               Explore Services;
             </a>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 
   );
 }
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
@@ -81,6 +98,12 @@ export default function FuturisticHero() {
 
   );
 
+<<<<<<< HEAD
+=======
+    </section>
+);
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
             Talent marketplace • Project accelerators • Secure contracts •;
@@ -111,7 +134,19 @@ function FuturisticHero() {
     </section>);
 }
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </section>;
+  );
+}
+
+}
+    </section>
+  );
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

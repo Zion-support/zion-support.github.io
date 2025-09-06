@@ -1,28 +1,67 @@
 
+<<<<<<< HEAD
 
 
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
 =======
+=======
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+
+import { Trophy } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
-=======
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ReputationDisplayProps {
 
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
+<<<<<<< HEAD
+=======
+export const ReputationDisplay = ({
+  reputation;
+  size = 'md'
+}: ReputationDisplayProps) => {
+  // Calculate next milestone
+  const currentLevel = Math.floor(reputation / 100);
+  const nextMilestone = (currentLevel + 1) * 100;
+  const progress = ((reputation % 100) / 100) * 100;
+
+export const ReputationDisplay = ({ ;
+  reputation;
+export const ReputationDisplay = ({ 
+  reputation,
+  size = 'md' 
+}: ReputationDisplayProps) => {
+  // Calculate next milestone
+  const currentLevel = Math.floor(reputation / 100),
+  const nextMilestone = (currentLevel + 1) * 100,
+  const progress = ((reputation % 100) / 100) * 100,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -30,26 +69,47 @@ interface ReputationDisplayProps {
       icon: "w-3 h-3"
       progress: "h-1"
 
+<<<<<<< HEAD
 
+=======
+    }
+    md: {
+      container: "text-sm"
+      icon: "w-4 h-4"
+      progress: "h-2"
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     md: {
       container: "text-sm",
       icon: "w-4 h-4",
       progress: "h-2" 
     },
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     lg: {
       container: "text-base"
       icon: "w-5 h-5"
       progress: "h-3"
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
 
 
+<<<<<<< HEAD
+=======
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-1">
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
@@ -63,13 +123,25 @@ interface ReputationDisplayProps {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
+=======
+}
+export default ReputationDisplay;
+
+},
+
+export default ReputationDisplay,
+import { Trophy } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
 }
+<<<<<<< HEAD
 
 export const ReputationDisplay = ({ ;
   reputation;
@@ -80,23 +152,44 @@ export const ReputationDisplay = ({ ;
   const nextMilestone = (currentLevel + 1) * 100;
   const progress = ((reputation % 100) / 100) * 100;
 
+=======
+;
+export const ReputationDisplay = ({;
+  reputation,;
+  size = 'md';
+}: ReputationDisplayProps) => {;
+  // Calculate next milestone;
+  const currentLevel = Math.floor(reputation / 100),;
+  const nextMilestone = (currentLevel + 1) * 100,;
+  const progress = ((reputation % 100) / 100) * 100,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Styling based on size;
   const sizeClasses = {;
     sm: {;
       container: "text-xs",;
       icon: "w-3 h-3",;
       progress: "h-1";
+<<<<<<< HEAD
     };
     md: {;
       container: "text-sm",;
       icon: "w-4 h-4",;
       progress: "h-2" ;
     };
+=======
+    },;
+    md: {;
+      container: "text-sm",;
+      icon: "w-4 h-4",;
+      progress: "h-2";
+    },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     lg: {;
       container: "text-base",;
       icon: "w-5 h-5",;
       progress: "h-3";
     }
+<<<<<<< HEAD
   };
 
   return (
@@ -113,14 +206,17 @@ export const ReputationDisplay = ({ ;
     </div>;
   );
 };
-
-
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 
 },
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ReputationDisplay;
 
 =======
@@ -129,6 +225,7 @@ import { Progress } from '@/components / ui / progress';
 interface ReputationDisplayProps {
   reputation: number,
   size?: 'sm' | 'md' | 'lg';
+<<<<<<< HEAD
 }
 export const ReputationDisplay = ({
   reputation;
@@ -175,3 +272,68 @@ export const ReputationDisplay = ({
 export default ReputationDisplay;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import { Trophy } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+;
+interface ReputationDisplayProps {;
+  reputation:number,;
+  size?:'sm' | 'md' | 'lg';
+}
+;
+export const ReputationDisplay = ({ ;
+  reputation,;
+  size = 'md' ;
+} ReputationDisplayProps) => {;
+  // Calculate next milestone;
+  const currentLevel = Math.floor(reputation / 100),;
+  const nextMilestone = (currentLevel + 1) * 100,;
+  const progress = ((reputation % 100) / 100) * 100,;
+  ;
+  // Styling based on size;
+  const sizeClasses = {;
+    sm:{;
+      container:"text-xs",;
+      icon:"w-3 h-3",;
+      progress:"h-1";
+    },;
+    md:{;
+      container:"text-sm",;
+      icon:"w-4 h-4",;
+      progress:"h-2" ;
+    },;
+    lg:{;
+      container:"text-base",;
+      icon:"w-5 h-5",;
+      progress:"h-3";
+    }
+  },;
+  ;
+  },;
+  return (;
+    <div className="space-y-1">;
+      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
+        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
+        <span className="font-semibold">{reputation}</span>;
+        <span className="text-muted-foreground">rep</span>;
+      </div>;
+      <Progress value={progress} className={sizeClasses[size].progress} />;
+      <div className="text-xs text-muted-foreground">;
+        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
+      </div>;
+    </div>;
+size = 'md' 
+}: ReputationDisplayProps) => {
+  //Calculate next milestone const currentLevel = Math.floor (reputation / 100);
+const nextMilestone = (currentLevel + 1) * 100;
+const progress = ( (reputation % 100) /100) * 100;
+sm: {
+  </div> </div>) 
+};
+export default ReputationDisplay;
+  );
+};
+
+export default ReputationDisplay;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

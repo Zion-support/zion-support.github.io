@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function AutomationPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -10,6 +15,7 @@ export default function AutomationPage() {
     </div>
 
 
+<<<<<<< HEAD
 export default function AutomationPage() {;
   return (
     <div className="container mx-auto px-4 py-10">;
@@ -39,3 +45,15 @@ function AutomationPage() {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ),
+}
+
+  )
+}
+
+  )
+}
+  ),
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -6,9 +10,53 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 
   useEffect(() => {
+=======
+
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+import { useState, useEffect } from "react",
+import { useRouter } from "next/router",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+          setError("Profile ID is missing.");
+          return;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const router = useRouter(),
+  const profileId = router.query.profileId as string,
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const fetchProfile = async () => {
   useEffect((,) => {;
     const fetchProfile = async () => {;
@@ -26,10 +74,24 @@ export default function ProfileDetail() {;
       setError(null),
       try {
         if (!profileId) {
+<<<<<<< HEAD
 
           setError("Profile ID is missing."),
           return
 
+=======
+          setError("Profile ID is missing.");
+          return;
+          setError("Profile ID is missing."),
+          return
+        }
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+          .single();
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
 
 
@@ -37,10 +99,23 @@ export default function ProfileDetail() {;
 
 
 
+<<<<<<< HEAD
+=======
+          throw new Error(error.message);
+        }
+        if (!data) {
+          setError("Profile not found.");
+          return;
+
+          .single();
+          .single(),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (error) {
           throw new Error(error.message);
         }
         if (!data) {
+<<<<<<< HEAD
 
 
         const { data, error } = await supabase;
@@ -58,11 +133,18 @@ export default function ProfileDetail() {;
           setError("Profile not found.");
           return;
 
+=======
+          setError("Profile not found.");
+          return;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           setError("Profile not found."),
           return
 
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         setProfileData(data)
       } catch (err: any) {
         setError(err.message |"Failed to fetch profile.")
@@ -70,6 +152,7 @@ export default function ProfileDetail() {;
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
+<<<<<<< HEAD
 
       } finally {
       } catch (err: any) {;
@@ -87,6 +170,19 @@ export default function ProfileDetail() {;
 
   }, [profileId]);
 
+=======
+    }
+    fetchProfile()
+
+  }, [profileId]);
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    fetchProfile()
+  }, [profileId]);
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
 
     fetchProfile()
@@ -116,9 +212,20 @@ export default function ProfileDetail() {;
   }, [profileId]);
 
     )
+<<<<<<< HEAD
 
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
 
+=======
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+  }
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -176,7 +283,10 @@ export default function ProfileDetail() {;
     },;
     fetchProfile();
   }, [profileId]),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {;
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -202,6 +312,7 @@ export default function ProfileDetail() {;
   }
   return (
     <>;
+<<<<<<< HEAD
 
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
 
@@ -210,6 +321,62 @@ export default function ProfileDetail() {;
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 
 
+=======
+      <SEO;
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+      />
+      <Header />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-12 gap-6">
+          {/* Main Content */}
+          <div className="col-span-12 lg:col-span-8">
+            {/* Profile Header */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <Avatar className="w-20 h-20">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    ) : (
+                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
+                    )}
+                  </Avatar>
+                  <div>
+                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+                      {profileData.full_name}
+                      {profileData.is_verified && (
+                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                      )}
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -239,6 +406,7 @@ export default function ProfileDetail() {;
                       {profileData && profileData.is_verified && (;
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
                       )}
+<<<<<<< HEAD
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
 export default /**
@@ -366,6 +534,40 @@ if ( {) {
 
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+=======
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+                </div>;
+              </CardContent>;
+            </Card>;
+            {/* About Section */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>
               </CardHeader>
@@ -423,7 +625,12 @@ if ( {) {
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
+<<<<<<< HEAD
 
+=======
+                        {link.title |link.url}
+                      </a>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </CardContent>;
             </Card>;
@@ -500,30 +707,58 @@ if ( {) {
                         <LinkIcon className="h-4 w-4" />;
                         {link && link.title || link && link.url}
                       </a>;
+<<<<<<< HEAD
+=======
+                        {link.title |link.url}
+                      </a>
+                        {link.title || link.url}
+                      </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     ))}
                   </div>;
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
+<<<<<<< HEAD
 
               </CardContent>;
             </Card>;
           </div>;
 
 
+=======
+              </CardContent>
+            </Card>
+          </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 
+=======
+                id: profileData?.id |''
+                full_name: profileData?.full_name |''
+                professional_title: profileData?.professional_title |''
+                hourly_rate: profileData?.hourly_rate |0
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
 
 
               }}
             />;
+=======
+                hourly_rate: profileData?.hourly_rate || 0
+                hourly_rate: profileData?.hourly_rate || 0,
+                hourly_rate: profileData?.hourly_rate || 0
+              }}
+            />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Contact</h3>;
@@ -548,7 +783,14 @@ if ( {) {
                     </a>;
                   </div>;
                 )}
+<<<<<<< HEAD
 
+=======
+              </div>
+            </div>
+              </div>
+            </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>;
             </div>;
 
@@ -559,22 +801,41 @@ if ( {) {
               <h3 className="text-xl font-bold mb-4">Social</h3>;
               <div className="flex flex-col space-y-3">;
                 {profileData && profileData.github_url && (;
+<<<<<<< HEAD
                   <a
 
                     href = {profileData && profileData.github_url,}
 
+=======
+
+                    href = {profileData && profileData.github_url,}
+
+                  <a
+                    href={profileData.github_url}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+<<<<<<< HEAD
 
                     href = {profileData && profileData.twitter_url,}
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     title="GitHub"
                   >
                     <Github className="h-4 w-4" />
                     GitHub
+<<<<<<< HEAD
 
+=======
+                  </a>
+                )}
+                {profileData.twitter_url && (
+                  <a
+                    href = {profileData.twitter_url,}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </Link>
                 )}
                 {profileData.twitter_url && (;
@@ -582,17 +843,30 @@ if ( {) {
                     href={profileData.twitter_url}
 
                     target="_blank"
+<<<<<<< HEAD
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
 
                     href = {profileData && profileData.linkedin_url,}
 
+=======
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="Twitter"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     title="Twitter"
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
+<<<<<<< HEAD
 
+=======
+                  </a>
+                )}
+                {profileData.linkedin_url && (
+                  <a
+                    href = {profileData.linkedin_url,}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </Link>
                 )}
                 {profileData.linkedin_url && (;
@@ -600,6 +874,7 @@ if ( {) {
                     href={profileData.linkedin_url}
 
                     target="_blank"
+<<<<<<< HEAD
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
@@ -759,12 +1034,20 @@ if ( {) {
                     LinkedIn;
                   </a>)}
 
+=======
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="LinkedIn"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     title="LinkedIn"
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
+<<<<<<< HEAD
 
                   </Link>
+=======
+                  </a>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 )}
               </div>;
             </div>;
@@ -780,6 +1063,44 @@ if ( {) {
 
     </>);
 ;
+<<<<<<< HEAD
+=======
+}
+}, [profile_id]);
+<p > Error: {
+  error ;
+}</p> </div>) ;
+}return (<> <SEO) : (<AvatarFallback> {
+  profile_data.full name?.char_at (0) ;
+}</AvatarFallback>) ;
+}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
+}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
+}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
+}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
+}</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
+}</CardContent> </Card> </div> <HireNowCTA talentProfile= {{;
+  id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0 ;
+}/> Website </Link> </div>) ;
+}</div> </div> <a href= {profileData.github url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub" > <Github className="h-4 w-4" /> GitHub </Link>) ;
+}{profileData.twitter url && (<a href= {;
+  profileData.twitter url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter" > <Twitter className="h-4 w-4" /> Twitter </Link>) ;
+}{profileData.linkedin url && (<a href= {;
+  profileData.linkedin url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
+}</div> </div> </div> </div> </div> </>) ;
+}'"}
+                  </Link>
+                )}
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 }, [profile_id]);
 <p > Error: {
@@ -798,6 +1119,7 @@ if ( {) {
   {
   id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0 ;
 ;
+<<<<<<< HEAD
 }/> Website </Link> </div>) ;
 }</div> </div> <a href= {
   profile_data.github url ";
@@ -816,3 +1138,9 @@ if ( {) {
   );
 }
 ;
+=======
+    </>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

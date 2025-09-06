@@ -23,10 +23,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD
 =======
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
@@ -40,12 +39,36 @@ import { motion } from 'framer-motion';
   CheckCircle,
 =======
 
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+
+  Eye
+  Ear
+  Hand
+  Brain
+  CheckCircle
+  AlertTriangle
+  Globe
+  Users
+  Shield
+  Zap
+  FileText
+  Settings
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   AlertTriangle,
   Globe,
   Users,
@@ -53,6 +76,7 @@ import { motion } from 'framer-motion';
   Zap,
   FileText,
   Settings;
+<<<<<<< HEAD
 
 
 
@@ -60,6 +84,11 @@ import { motion } from 'framer-motion';
 const accessibility_features = [;
   {
 
+=======
+} from 'lucide-react';
+const accessibility_features = [;
+  {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {;
   Eye, ;
   Ear, ;
@@ -220,14 +249,179 @@ const accessibilityGuidelines = [;
       "Customizable timing";
     ];
 
-  }
-];
-
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
 
+
+
+
+
+
+
+export default function AccessibilityPage() {
+export default function AccessibilityPage() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  }
+];
+import Head from 'next/head';
+import Layout from '../components/Layout';
+} from 'lucide-react';
+const accessibilityFeatures = [
+  {
+    title: "Visual Accessibility"
+    description: "Features to support users with visual impairments"
+    icon: Eye
+    features: [
+      "High contrast color schemes"
+      "Scalable text and interface elements"
+      "Screen reader compatibility"
+      "Alternative text for images"
+      "Keyboard navigation support"
+    ]
+  }
+  {
+    title: "Auditory Accessibility"
+    description: "Support for users with hearing impairments"
+    icon: Ear
+    features: [
+      "Video captions and transcripts"
+      "Visual indicators for audio cues"
+      "Text-based communication options"
+      "Volume controls and audio descriptions"
+      "Sign language support where applicable"
+    ]
+  }
+  {
+    title: "Motor Accessibility"
+    description: "Features for users with motor impairments"
+    icon: Hand
+    features: [
+      "Keyboard-only navigation"
+      "Voice control compatibility"
+      "Large click targets"
+      "Customizable interaction timing"
+      "Switch control support"
+    ]
+  }
+  {
+    title: "Cognitive Accessibility"
+    description: "Support for users with cognitive differences"
+    icon: Brain
+    features: [
+      "Clear and simple language"
+      "Consistent navigation patterns"
+      "Error prevention and recovery"
+      "Progress indicators"
+      "Customizable interface complexity"
+    ]
+  }
+];
+const standardsCompliance = [
+  {
+    standard: "WCAG 2.1 AA"
+    description: "Web Content Accessibility Guidelines 2.1 Level AA compliance"
+    status: "Compliant"
+    coverage: "95%"
+    icon: Shield
+  }
+  {
+    standard: "Section 508"
+    description: "U.S. federal accessibility requirements"
+    status: "Compliant"
+    coverage: "100%"
+    icon: FileText
+  }
+  {
+    standard: "ADA"
+    description: "Americans with Disabilities Act compliance"
+    status: "Compliant"
+    coverage: "100%"
+    icon: Users
+  }
+  {
+    standard: "EN 301 549"
+    description: "European accessibility standard for ICT products"
+    status: "Compliant"
+    coverage: "90%"
+    icon: Globe
+  }
+];
+const accessibilityTools = [
+  {
+    name: "Screen Reader Testing"
+    description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver"
+    frequency: "Monthly"
+  }
+  {
+    name: "Keyboard Navigation"
+    description: "Comprehensive keyboard navigation testing for all interactive elements"
+    frequency: "Weekly"
+  }
+  {
+    name: "Color Contrast Analysis"
+    description: "Automated and manual color contrast testing to ensure readability"
+    frequency: "With each design update"
+  }
+  {
+    name: "User Testing"
+    description: "Regular testing with users who have disabilities to identify barriers"
+    frequency: "Quarterly"
+  }
+];
+const accessibilityGuidelines = [
+  {
+    category: "Content"
+    guidelines: [
+      "Use clear and simple language"
+      "Provide alternative text for images"
+      "Use proper heading structure"
+      "Ensure sufficient color contrast"
+      "Provide captions for videos"
+    ]
+  }
+  {
+    category: "Navigation"
+    guidelines: [
+      "Logical tab order"
+      "Skip links for main content"
+      "Consistent navigation patterns"
+      "Breadcrumb navigation"
+      "Search functionality"
+    ]
+  }
+  {
+    category: "Forms"
+    guidelines: [
+      "Clear labels and instructions"
+      "Error messages and validation"
+      "Required field indicators"
+      "Logical grouping of related fields"
+      "Multiple input methods"
+    ]
+  }
+  {
+    category: "Interactive Elements"
+    guidelines: [
+      "Keyboard accessible"
+      "Focus indicators"
+      "Adequate target sizes"
+      "No seizure-inducing content"
+      "Customizable timing"
+    ]
+  }
+];
+import Head from 'next/head';
+import Layout from '../components/Layout';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+origin/automation-improvements-final
+
+<<<<<<< HEAD
 
 
 =======
@@ -238,13 +432,19 @@ import Layout from '../components/Layout';
 
 export default function AccessibilityPage() {
 =======
+=======
+export default function AccessibilityPage() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface AccessibilityProps {
   className?: string;
 }
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -257,14 +457,16 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -281,7 +483,29 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Web Accessibility
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Ensuring digital inclusion for everyone
+              </p>
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+            </motion.div>
+          </div>
+        </section>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -430,7 +654,10 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -444,7 +671,10 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -464,10 +694,16 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   </ul>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 
@@ -475,6 +711,8 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
     </MainLayout>
 =======
@@ -958,4 +1196,38 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Have Questions About Accessibility?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Contact Accessibility Team
+                </a>
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  General Contact
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+            </div>
+          </div>
+        </section>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+      </div>
+    </MainLayout>;
+  );
+};
+
+export default Accessibility;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

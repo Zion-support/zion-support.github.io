@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
         "isDesktop":width >= 1024})},;
 
+=======
+"isDesktop":width >= 1024})},;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     updateDimensions(),;
     window && window.addEventListener(;
   'resize', updateDimensions),;
@@ -8,8 +12,11 @@
   'resize', updateDimensions)}, []),;
   return state},;
 export default useResponsive,;import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   'resize', updateDimensions)}, []);
   return state}
 export default useResponsive;import { useState, useEffect } from 'react';
@@ -32,6 +39,7 @@ interface Breakpoints {
   xl: number;
   '2xl': number;
 }
+<<<<<<< HEAD
 
     window && window.addEventListener(;
 
@@ -42,6 +50,14 @@ interface Breakpoints {
 export default useResponsive;
 
 =======
+=======
+    window && window.addEventListener(;
+  'resize', updateDimensions);
+    return () => window && window.removeEventListener(;
+  'resize', updateDimensions)}, []);
+export default useResponsive;
+import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final

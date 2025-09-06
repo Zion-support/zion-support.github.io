@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
       'Prompt and response tracing',
       'Cost and token analytics',
@@ -15,6 +16,68 @@
     link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite';
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
 
+=======
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+
+const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',}
+export const newRealServices: EnhancedRealMicroSaasService[] = [
+  {const contact = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+}
+;
+export const newRealServices: EnhancedRealMicroSaasService[] = [;
+  {
+    link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite';
+    marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
+    id: 'llm-observability-suite'
+    name: 'LLM Observability Suite'
+    tagline: 'Track latency, cost, quality and drift across all prompts'
+    price: '$199'
+    period: '/month'
+    description:
+      'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.'
+    features: [
+      'Prompt and response tracing'
+      'Cost and token analytics'
+      'Automatic PII redaction'
+      'Offline and online evals'
+      'Guardrail policy engine'
+      'Drift and performance alerts'
+      'SDKs for JS, Python, Go'
+      'Grafana and Datadog exporters'
+    ]
+    popular: true
+    icon: '📈'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/llm-observability-suite'
+    marketPosition:
+      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters';
+    ];
+    popular: true;
+    icon: '📈';
+    color: 'from-cyan-600 to-blue-700';
+    textColor: 'text-cyan-400';
+    link: 'https://ziontechgroup.com/llm-observability-suite';
+    marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -33,9 +96,13 @@
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.';
     launchDate: '2025-01-10';
     customers: 32;
+<<<<<<< HEAD
 
     rating: 4 && 4.8,
 
+=======
+    rating: 4 && 4.8,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 22
 =======
     color: 'from - cyan - 600 to - blue - 700',
@@ -78,10 +145,15 @@
     name: 'AI Sales Email Copilot';
     tagline: 'Personalized multi - touch outbound with real - time enrichment';
     price: '$129';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot';
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot';
+    marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'B2B startups, agencies, SDR teams';
     trialDays: 14;
     setupTime: '2 hours';
@@ -100,9 +172,13 @@
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.';
     launchDate: '2024-12-20';
     customers: 120;
+<<<<<<< HEAD
 
     rating: 4 && 4.7,
 
+=======
+    rating: 4 && 4.7,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 58
 =======
     period: '/month',
@@ -143,10 +219,15 @@
     name: 'Security Posture as Code';
     tagline: 'CIS / NIST / Kyverno policy packs with drift remediation';
     price: '$399';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/security-posture-as-code';
     marketPosition: 'Brings policy-as-code and compliance automation into one product.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/security-posture-as-code';
+    marketPosition: 'Brings policy-as-code and compliance automation into one product.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
     setupTime: '1–3 days';
@@ -181,9 +262,13 @@
     implementation_details: 'Policy engine plus cloud / K8s scanners and fix generators.';
     launch_date: '2025 - 01 - 05';
     customers: 18;
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 14
 =======
     rating: 4.6,
@@ -195,10 +280,15 @@
     name: 'ETL Observability Starter';
     tagline: 'Data pipeline health with schema change and freshness alerts';
     price: '$99';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/etl-observability-starter';
     marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/etl-observability-starter';
+    marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;
     setupTime: '1 day';
@@ -233,9 +323,13 @@
     implementation_details: 'Light agents and metadata collectors with warehouse connectors.';
     launch_date: '2025 - 01 - 12';
     customers: 25;
+<<<<<<< HEAD
 
     rating: 4 && 4.5,
 
+=======
+    rating: 4 && 4.5,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 12
   }
   {
@@ -252,10 +346,15 @@
     icon: '🛰️';
     color: 'from-cyan-600 to-sky-700';
     textColor: 'text-cyan-400';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/api-performance-shield';
     marketPosition: 'Unified performance and security at SMB-friendly pricing.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/api-performance-shield';
+    marketPosition: 'Unified performance and security at SMB-friendly pricing.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -298,9 +397,13 @@
     implementation_details: 'Managed edge configs and anomaly ML with safe rollout tools.';
     launch_date: '2025 - 01 - 15';
     customers: 14;
+<<<<<<< HEAD
 
     rating: 4 && 4.7,
 
+=======
+    rating: 4 && 4.7,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 9
   }
   {
@@ -317,10 +420,15 @@
     icon: '📊';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-product-analytics';
     marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-product-analytics';
+    marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Product teams, founders, analysts';
     trialDays: 14;
     setupTime: '1 day';
@@ -366,9 +474,13 @@
     implementation_details: 'Event capture SDKs and warehouse - first analytics.';
     launch_date: '2025 - 01 - 02';
     customers: 41;
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 20
   }
   {
@@ -385,10 +497,15 @@
     icon: '💬';
     color: 'from-rose-600 to-orange-700';
     textColor: 'text-rose-400';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-support-deflection';
     marketPosition: 'Faster time-to-value vs. enterprise chatbot suites.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-support-deflection';
+    marketPosition: 'Faster time-to-value vs. enterprise chatbot suites.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Support teams, SMB SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -434,9 +551,13 @@
     implementation_details: 'Embeddable widget and handoff connectors.';
     launch_date: '2024 - 12 - 15';
     customers: 75;
+<<<<<<< HEAD
 
     rating: 4 && 4.7,
 
+=======
+    rating: 4 && 4.7,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 48
   }
   {
@@ -453,9 +574,13 @@
     icon: '💸';
     color: 'from-amber-600 to-yellow-700';
     textColor: 'text-amber-400';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     marketPosition: 'Actionable savings, not just dashboards.';
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
@@ -499,9 +624,13 @@
     implementation_details: 'Read - only billing analysis with PR - based changes.';
     launch_date: '2025 - 01 - 03';
     customers: 19;
+<<<<<<< HEAD
 
     rating: 4 && 4.5,
 
+=======
+    rating: 4 && 4.5,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 11
 =======
     rating: 4.5,
@@ -513,10 +642,15 @@
     name: 'Privacy Vault';
     tagline: 'Tokenize PII and control access with audit trails';
     price: '$179';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/privacy-vault';
     marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/privacy-vault';
+    marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -551,9 +685,13 @@
     implementation_details: 'Drop - in SDKs and proxy - based tokenization.';
     launch_date: '2025 - 01 - 07';
     customers: 9;
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 7
 =======
     rating: 4.6,
@@ -572,10 +710,15 @@
     ];
     popular: false;
     icon: '🧠';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite';
     marketPosition: 'Accessible alternative to enterprise fraud stacks.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite';
+    marketPosition: 'Accessible alternative to enterprise fraud stacks.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
     setupTime: '2–5 days';
@@ -603,9 +746,13 @@
     implementation_details: 'Streaming and batch detectors with human - in - the - loop review.';
     launch_date: '2025 - 01 - 09';
     customers: 11;
+<<<<<<< HEAD
 
     rating: 4 && 4.5,
 
+=======
+    rating: 4 && 4.5,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 8
   }
   {
@@ -622,10 +769,15 @@
     icon: '🗃️';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/managed-postgres-ha';
     marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/managed-postgres-ha';
+    marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
     setupTime: '1–2 days';
@@ -668,9 +820,13 @@
     implementation_details: 'Managed cluster with observability and runbooks.';
     launch_date: '2025 - 01 - 16';
     customers: 8;
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 5
   }
   {
@@ -687,9 +843,13 @@
     icon: '⚡';
     color: 'from-amber-600 to-yellow-700';
     textColor: 'text-amber-300';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.';
     targetAudience: 'Frontend, growth, product';
     trialDays: 14;
@@ -733,9 +893,13 @@
     implementation_details: 'Agent + dashboards + anomaly alerts.';
     launch_date: '2025 - 01 - 17';
     customers: 12;
+<<<<<<< HEAD
 
     rating: 4 && 4.5,
 
+=======
+    rating: 4 && 4.5,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 6
   }
   {
@@ -758,10 +922,15 @@
     ];
     popular: false;
     icon: '🔎';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/seo-automation';
     marketPosition: 'Builder-focused alternative to heavy SEO suites.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/seo-automation';
+    marketPosition: 'Builder-focused alternative to heavy SEO suites.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Growth, content, agencies';
     trialDays: 14;
     setupTime: 'Same day';
@@ -787,9 +956,13 @@
     market_size: '$6B SEO Tools';
     growth_rate: 'Stable';
     variant: 'neural';
+<<<<<<< HEAD
 
     rating: 4 && 4.4,
 
+=======
+    rating: 4 && 4.4,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 4
 =======
     contact_info: contact;
@@ -813,10 +986,15 @@
     ];
     popular: true;
     icon: '🔁';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/webhook-relay-replay';
     marketPosition: 'Production safety net for integrations.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/webhook-relay-replay';
+    marketPosition: 'Production safety net for integrations.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Developers, platforms';
     trialDays: 14;
     setupTime: '1 hour';
@@ -847,9 +1025,13 @@
     implementation_details: 'Broker + storage + replayer UI.';
     launch_date: '2025 - 01 - 19';
     customers: 7;
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 3
 =======
     rating: 4.6,
@@ -861,10 +1043,15 @@
     name: 'PDF Render API Pro';
     tagline: 'Fast HTML - to - PDF with brand - safe templates';
     price: '$49';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/pdf-render-api';
     marketPosition: 'Secure alternative to self-hosting headless browsers.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/pdf-render-api';
+    marketPosition: 'Secure alternative to self-hosting headless browsers.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;
     setupTime: '30 minutes';
@@ -891,9 +1078,13 @@
     use_cases: ['InvoicesReports'];
     roi: 'Save days of maintenance yearly';
     competitors: ['PDFShiftDocRaptor'];
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 10
   }
   {
@@ -910,10 +1101,15 @@
     icon: '🛰️';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-300';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/api-observability-starter';
     marketPosition: 'Developer-first observability starter kit.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/api-observability-starter';
+    marketPosition: 'Developer-first observability starter kit.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;
     setupTime: '1 day';
@@ -956,9 +1152,13 @@
     use_cases: ['API reliability_performance'];
     roi: 'Reduce MTTR by 30–50%';
     competitors: ['HoneycombLightstep'];
+<<<<<<< HEAD
 
     rating: 4 && 4.5,
 
+=======
+    rating: 4 && 4.5,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 4
   }
   {
@@ -989,7 +1189,10 @@
     ];
     popular: true;
     icon: '🔐';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - emerald - 600 to - teal - 700';
     text_color: 'text - emerald - 300';
     link: 'https://ziontechgroup.com / sso - in - a-box';
@@ -997,7 +1200,10 @@
     target_audience: 'SaaS teams';
     trial_days: 14;
     setup_time: '2–5 days';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Security & Compliance';
     real_service: true;
     technology: ['KeycloakAuth gateways'];
@@ -1013,9 +1219,13 @@
     implementation_details: 'Hosted broker + mappings UI.';
     launch_date: '2025 - 01 - 17';
     customers: 6;
+<<<<<<< HEAD
 
     rating: 4 && 4.7,
 
+=======
+    rating: 4 && 4.7,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 3
 =======
     rating: 4.7,
@@ -1034,7 +1244,10 @@
     ];
     popular: false;
     icon: '🛰️';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - sky - 600 to - blue - 700';
     text_color: 'text - sky - 300';
     link: 'https://ziontechgroup.com / it - asset - discovery - agent';
@@ -1042,7 +1255,10 @@
     target_audience: 'IT and security ops';
     trial_days: 14;
     setup_time: '1–3 days';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'IT Operations';
     real_service: true;
     technology: ['nmapSNMPGo'];
@@ -1053,9 +1269,13 @@
     market_size: '$2B ITAM';
     growth_rate: 'Growing';
     variant: 'holographic';
+<<<<<<< HEAD
 
     rating: 4 && 4.4,
 
+=======
+    rating: 4 && 4.4,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: 2
   }
   {
@@ -1083,10 +1303,15 @@
     ];
     popular: true;
     icon: '📋';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/vendor-risk-automation';
     marketPosition: 'Faster and lighter than legacy GRC.',
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/vendor-risk-automation';
+    marketPosition: 'Faster and lighter than legacy GRC.',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     targetAudience: 'Security, procurement';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -1117,21 +1342,30 @@
     implementation_details: 'Portal + integrations + reports.';
     launch_date: '2025 - 01 - 19';
     customers: 6;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     rating: 4 && 4.5,
     reviews: 3
 =======
     rating: 4.5,
     reviews: 3;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 ];
     target_audience: 'AI product teams, platform engineers, data teams',
     trial_days: 21,
     setup_time: '1 day',
     category: 'AI & Machine Learning',
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     real_service: true,
     technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
     integrations: [;
@@ -1150,7 +1384,10 @@
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launch_date: '2025 - 01 - 10',
     customers: 32,
@@ -1159,8 +1396,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi - touch outbound with real - time enrichment',
@@ -1169,7 +1409,10 @@
     description:;
       'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow - up scheduling',
@@ -1179,7 +1422,10 @@
     ],
     popular: false,
     icon: '✉️',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - violet - 600 to - fuchsia - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / ai - sales - email - copilot',
@@ -1197,7 +1443,10 @@
     competitors: ['Copy.ai', 'Lavender', 'Instantly'],
     market_size: '$15B Sales Engagement',
     growth_rate: 'Strong growth',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -1210,7 +1459,10 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Policy packs for CIS/NIST',
 =======
     id: 'security - posture - as - code',
@@ -1222,7 +1474,10 @@
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.',
     features: [;
       'Policy packs for CIS / NIST',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
@@ -1230,7 +1485,10 @@
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
 =======
@@ -1257,15 +1515,21 @@
     implementation_details:;
       'Policy engine plus cloud / K8s scanners and fix generators.',
     launch_date: '2025 - 01 - 05',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     customers: 18,
     rating: 4 && 4.6,
     reviews: 14,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'etl - observability - starter',
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -1274,7 +1538,10 @@
     description:;
       'Monitor data pipelines end - to - end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
@@ -1282,8 +1549,11 @@
     ],
     popular: false,
     icon: '🗄️',
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / etl - observability - starter',
@@ -1305,7 +1575,10 @@
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Light agents and metadata collectors with warehouse connectors.',
     launch_date: '2025 - 01 - 12',
     customers: 25,
@@ -1314,8 +1587,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'api - performance - shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -1324,7 +1600,10 @@
     description:;
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
@@ -1332,7 +1611,10 @@
     ],
     popular: true,
     icon: '🛰️',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - cyan - 600 to - sky - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / api - performance - shield',
@@ -1340,7 +1622,10 @@
     target_audience: 'API - first startups, SaaS, marketplaces',
     trial_days: 14,
     setup_time: 'Same day',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'DevOps & Automation',
     real_service: true,
     technology: ['Workers', 'Rust', 'Redis'],
@@ -1362,7 +1647,10 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Auto-segmentation and cohorts',
 =======
     id: 'ai - product - analytics',
@@ -1375,14 +1663,20 @@
       'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.',
     features: [;
       'Auto - segmentation and cohorts',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
     ],
     popular: false,
     icon: '📊',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - product - analytics',
@@ -1394,7 +1688,10 @@
     category: 'Analytics & Business Intelligence',
     real_service: true,
     technology: ['Next.js', 'PostHog', 'ClickHouse'],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
     use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
     roi: 'Find growth levers 2x faster',
@@ -1412,7 +1709,10 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Multi-channel widgets',
 =======
     id: 'ai - support - deflection',
@@ -1424,14 +1724,20 @@
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.',
     features: [;
       'Multi - channel widgets',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
     ],
     popular: true,
     icon: '💬',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - rose - 600 to - orange - 700',
     text_color: 'text - rose - 400',
     link: 'https://ziontechgroup.com / ai - support - deflection',
@@ -1442,7 +1748,10 @@
     category: 'Customer Support & Success',
     real_service: true,
     technology: ['RAG', 'Vector DB', 'Next.js'],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
     use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
     roi: 'Reduce tickets 30–50%',
@@ -1460,8 +1769,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -1470,7 +1782,10 @@
     description:;
       'Proactive optimization for AWS / Azure / GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan / RIs planning',
@@ -1478,7 +1793,10 @@
     ],
     popular: true,
     icon: '💸',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - amber - 600 to - yellow - 700',
     text_color: 'text - amber - 400',
     link: 'https://ziontechgroup.com / cloud - cost - autopilot',
@@ -1486,7 +1804,10 @@
     target_audience: 'FinOps teams, platform and SRE',
     trial_days: 21,
     setup_time: '2–5 days',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Cloud & Infrastructure',
     real_service: true,
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
@@ -1507,7 +1828,10 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Field-level encryption',
 =======
     id: 'privacy - vault',
@@ -1519,14 +1843,20 @@
       'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [;
       'Field - level encryption',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
     ],
     popular: false,
     icon: '🔏',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - slate - 600 to - gray - 700',
     text_color: 'text - slate - 300',
     link: 'https://ziontechgroup.com / privacy - vault',
@@ -1535,7 +1865,10 @@
     target_audience: 'Developers, privacy and legal teams',
     trial_days: 14,
     setup_time: '1–3 days',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Security & Compliance',
     real_service: true,
     technology: ['KMS', 'HSM', 'PostgreSQL'],
@@ -1556,7 +1889,10 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Graph-based anomaly detection',
 =======
     id: 'ai - fraud - detection - lite',
@@ -1568,14 +1904,20 @@
       'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [;
       'Graph - based anomaly detection',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
     ],
     popular: false,
     icon: '🧠',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - pink - 600 to - rose - 700',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / ai - fraud - detection - lite',
@@ -1583,7 +1925,10 @@
     target_audience: 'Marketplaces, fintech, e - commerce',
     trial_days: 14,
     setup_time: '2–5 days',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Financial Technology',
     real_service: true,
     technology: ['Graph DB', 'Python', 'Kafka'],
@@ -1605,8 +1950,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -1615,7 +1963,10 @@
     description:;
       'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
@@ -1623,7 +1974,10 @@
     ],
     popular: true,
     icon: '🗃️',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / managed - postgres - ha',
@@ -1632,7 +1986,10 @@
     target_audience: 'Startups, SMBs, data teams',
     trial_days: 14,
     setup_time: '1–2 days',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Observability',
     real_service: true,
     technology: ['PostgreSQL', 'Patroni', 'Wal - G'],
@@ -1653,8 +2010,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -1663,7 +2023,10 @@
     description:;
       'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
@@ -1671,7 +2034,10 @@
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - amber - 600 to - yellow - 700',
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / browser - performance - monitor',
@@ -1679,7 +2045,10 @@
     target_audience: 'Frontend, growth, product',
     trial_days: 14,
     setup_time: '30 minutes',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Quality & Monitoring',
     real_service: true,
     technology: ['JS SDK', 'ClickHouse'],
@@ -1700,8 +2069,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
@@ -1710,7 +2082,10 @@
     description:;
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
@@ -1718,7 +2093,10 @@
     ],
     popular: false,
     icon: '🔎',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / seo - automation',
@@ -1729,7 +2107,10 @@
     category: 'Developer Tools',
     real_service: true,
     technology: ['Node.js', 'Headless Chrome'],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: ['Search Console'],
     use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20–100%',
@@ -1747,8 +2128,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -1757,7 +2141,10 @@
     description:;
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
@@ -1765,7 +2152,10 @@
     ],
     popular: true,
     icon: '🔁',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - cyan - 600 to - sky - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / webhook - relay - replay',
@@ -1776,7 +2166,10 @@
     category: 'Developer Tools',
     real_service: true,
     technology: ['Kafka', 'S3', 'Node.js'],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: ['Stripe', 'Shopify', 'GitHub'],
     use_cases: ['Webhook reliability', 'Debugging'],
     roi: 'Reduce integration incidents 50%+',
@@ -1794,8 +2187,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'pdf - render - api - pro',
     name: 'PDF Render API Pro',
     tagline: 'Fast HTML - to - PDF with brand - safe templates',
@@ -1804,7 +2200,10 @@
     description:;
       'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Serverless scale',
       'Template gallery',
       'Brand - safe fonts',
@@ -1812,7 +2211,10 @@
     ],
     popular: true,
     icon: '📄',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - slate - 600 to - gray - 700',
     text_color: 'text - slate - 300',
     link: 'https://ziontechgroup.com / pdf - render - api',
@@ -1820,7 +2222,10 @@
     target_audience: 'SaaS, finance, ops',
     trial_days: 14,
     setup_time: '30 minutes',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Developer Tools',
     real_service: true,
     technology: ['Workers', 'Headless Chrome'],
@@ -1841,7 +2246,10 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Auto-instrumentation',
 =======
     id: 'api - observability - starter - pro',
@@ -1853,14 +2261,20 @@
       'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.',
     features: [;
       'Auto - instrumentation',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
     ],
     popular: false,
     icon: '🛰️',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / api - observability - starter',
@@ -1868,7 +2282,10 @@
     target_audience: 'Backend teams, SRE',
     trial_days: 14,
     setup_time: '1 day',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Observability',
     real_service: true,
     technology: ['OpenTelemetry', 'Grafana'],
@@ -1889,8 +2306,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
@@ -1899,7 +2319,10 @@
     description:;
       'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
@@ -1907,7 +2330,10 @@
     ],
     popular: true,
     icon: '🔐',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / sso - in - a-box',
@@ -1915,7 +2341,10 @@
     target_audience: 'SaaS teams',
     trial_days: 14,
     setup_time: '2–5 days',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'Security & Compliance',
     real_service: true,
     technology: ['Keycloak', 'Auth gateways'],
@@ -1936,8 +2365,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Agentless discovery with CMDB sync',
@@ -1946,7 +2378,10 @@
     description:;
       'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
@@ -1954,7 +2389,10 @@
     ],
     popular: false,
     icon: '🛰️',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - sky - 600 to - blue - 700',
     text_color: 'text - sky - 300',
     link: 'https://ziontechgroup.com / it - asset - discovery - agent',
@@ -1962,7 +2400,10 @@
     target_audience: 'IT and security ops',
     trial_days: 14,
     setup_time: '1–3 days',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     category: 'IT Operations',
     real_service: true,
     technology: ['nmap', 'SNMP', 'Go'],
@@ -1983,8 +2424,11 @@
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring',
@@ -1993,7 +2437,10 @@
     description:;
       'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
     features: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
@@ -2001,7 +2448,10 @@
     ],
     popular: true,
     icon: '📋',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - rose - 600 to - orange - 700',
     text_color: 'text - rose - 300',
     link: 'https://ziontechgroup.com / vendor - risk - automation',
@@ -2012,7 +2462,10 @@
     category: 'Security & Compliance',
     real_service: true,
     technology: ['Node.js', 'React'],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: ['SecurityScorecard'],
     use_cases: ['Vendor due diligence'],
     roi: 'Cut cycle time by 50%+',
@@ -2028,9 +2481,12 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -2476,6 +2932,7 @@
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
+<<<<<<< HEAD
 
 ;
 
@@ -2484,6 +2941,11 @@
 
 
 =======
+=======
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -3197,6 +3659,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
   }
 ];
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,6 +1,28 @@
 
 
+<<<<<<< HEAD
 =======
+=======
+id: uuidv4(),
+    partnerId: auth && auth.partner.id,
+    key: uuidv4(),
+    active: true,
+    createdAt: now,
+    rateLimitPerMinute: apiKey && apiKey.rateLimitPerMinute ?? 60,
+  };
+  keys && keys.push(newKey as any);
+  await saveApiKeys(keys);
+  return res && res.status(201).json({ apiKey: newKey && newKey.key });    id: uuidv4();
+    partnerId: auth && auth.partner.id;
+    key: uuidv4();
+    active: true;
+    createdAt: now;
+    rateLimitPerMinute: apiKey && apiKey.rateLimitPerMinute ?? 60};
+  keys && keys.push(newKey as any);
+  await saveApiKeys(keys);
+  return res && res.status(201).json({ apiKey: newKey && newKey.key })
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
@@ -26,12 +48,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     createdAt: now,
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   authenticate_request,
   listApiKeys,
   saveApiKeys,
@@ -114,4 +138,82 @@ if (existing.active = false) {
   await saveApiKeys (keys);
   return res.status (201).json ({ api_key: new_key.key });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+  authenticateRequest
+  listApiKeys
+  saveApiKeys;
+  authenticateRequest,
+  listApiKeys,;
+  saveApiKeys,;
+} from '../../../utils/api/partnerAuth';
+import { v4 as uuidv4 } from 'uuid';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: 'Unauthorized' });  }
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
+  // Create new key
+  const now = new Date().toISOString();
+  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
+
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {;
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" });
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);  const existing = keys.find((k) => k.id === apiKey.id);
+  if (existing) existing.active = false;
+  // Create new key
+  const now = new Date().toISOString();
+  const newKey = {
+    id: uuidv4()
+    partnerId: auth.partner.id
+    key: uuidv4()
+    active: true
+    createdAt: now
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60
+  }
+  keys.push(newKey as any);
+  await saveApiKeys(keys);
+  return res.status(201).json({ apiKey: newKey.key });    id: uuidv4();
+    partnerId: auth.partner.id;
+    key: uuidv4();
+    active: true;
+    createdAt: now;
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60}
+  keys.push(newKey as any);
+  await saveApiKeys(keys);
+
+  return res.status(201).json({ apiKey: newKey.key })
+}
+  const newKey = {
+
+}
+}
+  const newKey = {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

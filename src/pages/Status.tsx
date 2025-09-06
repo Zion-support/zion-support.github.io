@@ -1,4 +1,8 @@
 import { logWarn } from '@/utils/productionLogger'
+<<<<<<< HEAD
+=======
+import { logWarn } from '@/utils/productionLogger'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
@@ -6,6 +10,20 @@ import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from '@/utils/productionLogger';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { logWarn } from '@/utils/productionLogger',
+interface ServiceStatus {
+  name: string
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
+  description: string
+  lastChecked: string
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 class ErrorBoundary extends React.Component {
@@ -61,6 +79,15 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     
     return this.props.children;
   }
+<<<<<<< HEAD
+=======
+
+        return <CheckCircle className="h-5 w-5 text-green-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />
+      default:;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />};
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
   )
@@ -127,6 +154,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
 
   )
+<<<<<<< HEAD
 }
 
 import { log_warn } from '@/utils / production_logger';
@@ -147,6 +175,89 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
   );
 }
+=======
+
+import { log_warn } from '@/utils / production_logger';
+interface ServiceStatus {
+  name: string,
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
+  description: string,
+  last_checked: string;
+}
+        return <CheckCircle className="h - 5 w - 5 text - green - 500" />;
+        return <Clock className="h - 5 w - 5 text - blue - 500" />;
+      default:;
+        return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
+ * Status - Function description
+ */
+function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
+}
+                  </CardContent>;
+                </Card>;
+              </div>;
+              <div className="text-center">;
+                <p className="text-zion-slate-light mb-4">;
+                  For detailed incident history and real-time updates:;
+                </p>;
+                <Button;
+                  variant="outline";
+                  asChild;
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                >;
+                  <a;
+                    href={statusUrl} ;
+                    target="_blank";
+                    rel="noopener noreferrer";
+                    className="flex items-center gap-2";
+                  >;
+                    <ExternalLink className="h-4 w-4" />;
+                    Visit Full Status Page;
+                  </a>;
+                </Button>;
+              </div>;
+            </>;
+          )}
+;
+          <div className="mt-12 text-center">;
+            <Card className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-white">Need Help?</CardTitle>;
+              </CardHeader>;
+              <CardContent className="space-y-4">;
+                <p className="text-zion-slate-light">;
+                  If you're experiencing issues not reflected here, please contact our support team.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                  >;
+                    <Link href="/contact">Contact Support</Link>;
+                  </Button>;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10";
+                  >;
+                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">;
+                      @ZionTechGroup;
+                    </a>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+}
+;
+;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 ;

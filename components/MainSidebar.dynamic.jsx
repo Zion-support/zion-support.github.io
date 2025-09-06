@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 const MainSidebar.dynamic = () => {
   return (
@@ -8,5 +11,8 @@ const MainSidebar.dynamic = () => {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default MainSidebar.dynamic;

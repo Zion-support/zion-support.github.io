@@ -2,12 +2,22 @@
 
 interface AccessibilityContextType {;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 interface AccessibilityContextType {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+interface AccessibilityContextType {;
+import React, { createContext, useContext, useState, ReactNode } from "react";
+
+interface AccessibilityContextType {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -23,12 +33,19 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
+=======
+export const useAccessibility = () => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 export const useAccessibility = () => {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -42,7 +59,10 @@ interface AccessibilityProviderProps {
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -61,6 +81,7 @@ interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
 
+<<<<<<< HEAD
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
   children,;
 }) => {;
@@ -71,14 +92,30 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
 }) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  children,
+}) => {;
+
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children
+}) => {
+  children,
+}) => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const value = {;
     highContrast,;
     largeText,;
@@ -87,8 +124,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
     toggleLargeText,;
     toggleReducedMotion,;
   };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -98,6 +138,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
 
+<<<<<<< HEAD
 const AccessibilityContext = create_context<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -152,9 +193,24 @@ export default AccessibilityProvider;
 ;
 
 =======
+=======
+}
+export default AccessibilityProvider;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 export default AccessibilityProvider;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+
+export default AccessibilityProvider;
+}
+export default AccessibilityProvider;
+};
+
+export default AccessibilityProvider;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

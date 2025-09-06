@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { ResumeBasicInfo  } from '@/types / resume';
 
@@ -8,6 +12,7 @@ interface ResumeBasicInfoSectionProps {
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {;
   basicInfo: ResumeBasicInfo;
+<<<<<<< HEAD
 }
 
 export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSectionProps) {;
@@ -54,3 +59,27 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { ResumeBasicInfo } from "@/types/resume";
+interface ResumeBasicInfoSectionProps {
+  basicInfo: ResumeBasicInfo;
+>>>>>>> main
+}
+
+export function ResumeBasicInfoSection({
+  basicInfo,
+}: ResumeBasicInfoSectionProps) {
+  return (
+    <div className="space-y-2 border-b pb-4 mb-6">
+      <h1 className="text-2xl font-bold">
+        {basicInfo.headline || basicInfo.title}
+      </h1>
+      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
+    </div>
+  );
+}
+;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

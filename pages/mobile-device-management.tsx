@@ -1,9 +1,44 @@
+<<<<<<< HEAD
 
 
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function MDMPage() {
+  const features = [
+    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
+
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
+export default function MDMPage() {
+  const features = [
+    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions']
+  const pricing = [
+    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' }
+    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' }
+    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }]
+  const references = [
+    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' }
+    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' }
+    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
+
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
+;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+export default function MDMPage() {
+  const features = [
+    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
     { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
@@ -14,8 +49,11 @@ export default function MDMPage() {
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
 
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <Layout>
       <Head>
@@ -33,12 +71,22 @@ export default function MDMPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
+              <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
+              <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
+              <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
           </header>
           <section>
@@ -73,13 +121,19 @@ export default function MDMPage() {
                   <ExternalLink className="w-4 h-4" />
                   <span>{r.name}</span>
 
+<<<<<<< HEAD
 
+=======
+                </a>
+              ))}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -87,6 +141,10 @@ export default function MDMPage() {
           </section>
 
 
+=======
+            </div>
+          </section>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
               <Shield className="w-5 h-5 text-purple-400" />
@@ -96,10 +154,17 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-
+<<<<<<< HEAD
 =======
 }
 
+  );
+};
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+<<<<<<< HEAD
 =======
 import React from 'react',
 import Head from 'next / head',
@@ -188,3 +253,11 @@ function MDMPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

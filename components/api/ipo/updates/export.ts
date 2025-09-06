@@ -1,5 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+const id = String(req.query.id || '');
+  const updates = readJsonFile('updates.json', [] as any[]);
+  const u = updates.find((x: any) => x.id === id),
+  if (!u) return res.status(404).json({ error: 'Not found' });
+  res.setHeader('Content-Typeapplication/pdf');
+  res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
+  const doc = new PDFDocument({ size: 'A4', margin: 50 });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJsonFile } from "../../../../utils/api/storage";
+import { requireSuperadminApi } from "../../../../utils/api/auth";
+import PDFDocument from "pdfkit";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -11,6 +32,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
   const doc = new PDFDocument({ size: 'A4', margin: 50 });
 
+<<<<<<< HEAD
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+  const id = String(req.query.id |"");
+  const updates = readJsonFile("updates.json", [] as any[]);
+  const u = updates.find((x: any) => x.id === id);
+  if (!u) return res.status(404).json({ error: "Not found" });
+  res.setHeader("Content-Type", "application/pdf");
+  res.setHeader(
+    "Content-Disposition"
+    `attachment; filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
+  );
+  res.setHeader("Content-Typeapplication/pdf");
+  res.setHeader(
+    "Content-Disposition"
+    `attachment, filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
+  );
+  const doc = new PDFDocument({ size: "A4", margin: 50 });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -19,7 +62,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
@@ -47,12 +93,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "");
   doc && doc.end();
   doc && doc.end();
+<<<<<<< HEAD
 
 
 =======
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 
+=======
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+
+}
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+  doc.end()
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -94,6 +151,7 @@ function handler() {
   doc.end ();
   doc.end ();
 }
+<<<<<<< HEAD
 
 =======
   doc.end();
@@ -101,3 +159,17 @@ function handler() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  doc.end();
+
+
+  doc.fontSize(14).text("KPIs");
+  doc.fontSize(12).text(u.kpis |"");
+  doc.end();
+  doc.end();
+}
+
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+  doc.end();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

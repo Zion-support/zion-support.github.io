@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,12 +26,23 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 
+=======
+interface Particle {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   x: number;
   y: number;
 =======
   coordinate_x: number;
   coordinate_y: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface Particle {
+  x: number;
+  y: number;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   vx: number;
   vy: number;
   size: number;
@@ -38,23 +50,54 @@ import { motion } from 'framer-motion';
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
+<<<<<<< HEAD
+=======
 
 
+export default function UltraFuturisticBackground2029(): any ({;
+  children,;
+}: {;
+  children: React && React.ReactNode;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+  maxLife: number;
+
+<<<<<<< HEAD
+=======
+interface EnergyField {
+  x: number;
+  y: number;
+  radius: number;
+  intensity: number;
+  color: string;
+
+  pulse: number;
+export default function UltraFuturisticBackground2029({
   children,
 }: {;
 
 
   children: React.ReactNode;
+  children
+}: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  children,
+}: {;
+  children: React.ReactNode;
+<<<<<<< HEAD
 =======
   children,
 }: {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children: React.ReactNode;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+<<<<<<< HEAD
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });interface Particle {;
   x: number,;
@@ -81,16 +124,49 @@ interface EnergyField {;
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
 =======
+=======
+export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });interface Particle {
+  x: number
+  y: number
+  vx: number
+  vy: number
+  size: number
+  opacity: number
+  color: string
+  type: 'energy' | 'data' | 'quantum' | 'neon'
+  life: number
+  maxLife: number
+}
+interface EnergyField {
+  x: number
+  y: number
+  radius: number
+  intensity: number
+  color: string
+
+  pulse: number
+}
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+<<<<<<< HEAD
 
 interface Particle {
   x: number,
@@ -117,6 +193,8 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
   coordinate_x: number,
   coordinate_y: number,
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   vx: number,
   vy: number,
   size: number,
@@ -134,34 +212,69 @@ interface EnergyField {
   color: string,
   pulse: number;
 }
+<<<<<<< HEAD
 
       canvas.height = window.innerHeight
     };
 
 
+=======
+      canvas.height = window.innerHeight
+    };
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
+<<<<<<< HEAD
 
       setMousePosition({ x: e.clientX, y: e.clientY })
     };
 
 
+=======
+      setMousePosition({ x: e.clientX, y: e.clientY });    };      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
+<<<<<<< HEAD
 
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
         data: ['#0080ff#8000ff#ff0080#80ff00'],
         quantum: ['#ff8000#8000ff#00ffff#ff0080'],
 
+=======
+        energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00']
+        data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00']
+        quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080']
+        neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff']
+      }
+      for (let i = 0; i < 150; i++) {
+        const type = ['energy', 'data', 'quantum', 'neon'][
+          Math.floor(Math.random() * 4)
+        ] as keyof typeof colors;        particles.push({        energy: ['#00ffff#ff00ff#ffff00#00ff00']
+        data: ['#0080ff#8000ff#ff0080#80ff00']
+        quantum: ['#ff8000#8000ff#00ffff#ff0080']
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         neon: ['#ff0066#00ffff#ffff00#ff00ff']
       }
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
+<<<<<<< HEAD
 
         particles.push({
           x: Math.random() * canvas.width,
@@ -174,10 +287,28 @@ interface EnergyField {
           type;
           life: Math.random() * 100,
 
+=======
+          x: Math.random() * canvas.width
+          y: Math.random() * canvas.height
+          vx: (Math.random() - 0.5) * 0.8
+          vy: (Math.random() - 0.5) * 0.8
+          size: Math.random() * 4 + 1
+          opacity: Math.random() * 0.8 + 0.2
+          color: colors[type][Math.floor(Math.random() * colors[type].length)]
+          type
+          life: Math.random() * 100
+          maxLife: 100
+        });
+      }
+      particlesRef.current = particles;    }
+    // Initialize energy fields
+    const initEnergyFields = () => {          life: Math.random() * 100
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           maxLife: 100
         })
       }
       particlesRef.current = particles
+<<<<<<< HEAD
 
     };
 
@@ -203,16 +334,79 @@ interface EnergyField {
     };
 
 
+=======
+    }
+    // Initialize energy fields
+    const initEnergyFields = () => {
+      const fields: EnergyField[] = [];
+      const fieldColors = [
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff8000'
+      ];
+      for (let i = 0; i < 8; i++) {        fields.push({      const fields: EnergyField[] = []
+      const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'];
+      for (let i = 0, i < 8, i++) {
+        fields.push({
+          x: Math.random() * canvas.width
+          y: Math.random() * canvas.height
+          radius: Math.random() * 200 + 100
+          intensity: Math.random() * 0.5 + 0.3
+          color: fieldColors[Math.floor(Math.random() * fieldColors.length)]
+          pulse: Math.random() * Math.PI * 2
+        });
+      }
+      energyFieldsRef.current = fields;    };          pulse: Math.random() * Math.PI * 2
+        })
+      }
+      energyFieldsRef.current = fields
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     initParticles();
     initEnergyFields();
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw energy fields
+<<<<<<< HEAD
 
       energyFieldsRef.current.forEach((field) => {
         field.pulse += 0.02;
 
+=======
+      energyFieldsRef.current.forEach(field => {
+        field.pulse += 0.02;
+        const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
+        // Create radial gradient for energy field
+        const gradient = ctx.createRadialGradient(
+          field.x
+          field.y
+          0
+          field.x
+          field.y
+          field.radius
+        );
+        gradient.addColorStop(
+          0
+          `${field.color}${Math.floor(field.intensity * pulseIntensity * 255)
+            .toString(16)
+            .padStart(2, '0')}`
+        );
+        gradient.addColorStop(
+          0.5
+          `${field.color}${Math.floor(
+            field.intensity * pulseIntensity * 0.5 * 255
+          )
+            .toString(16)
+            .padStart(2, '0')}`
+        );
+        gradient.addColorStop(1, 'transparent');
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
+        ctx.fill();      });        field.pulse += 0.02;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         // Create radial gradient for energy field
         const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
@@ -230,25 +424,39 @@ interface EnergyField {
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
+<<<<<<< HEAD
 
           particle.y = Math.random() * canvas.height
 
+=======
+          particle.y = Math.random() * canvas.height;        }          particle.y = Math.random() * canvas.height
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
         // Interactive particle behavior based on mouse position
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
+<<<<<<< HEAD
 
         
 
+=======
+        if (distance < 200) {
+          const force = (200 - distance) / 200;
+          particle.vx += (dx / distance) * force * 0.01;
+          particle.vy += (dy / distance) * force * 0.01;        }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (distance < 200) {
           const force = (200 - distance) / 200;
           particle.vx += (dx / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01
+<<<<<<< HEAD
 
         }
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -258,6 +466,7 @@ interface EnergyField {
         if (particle.y > canvas.height) particle.y = 0;
         // Draw particle with type-specific effects
         ctx.save();
+<<<<<<< HEAD
 
         
 
@@ -481,6 +690,8 @@ if (particle.coordinate_y = 0) {
             ctx.shadow_blur = 15;
             ctx.globalCompositeOperation = 'screen';
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -659,7 +870,21 @@ if (particle.coordinate_y = 0) {
             ctx.shadow_color = particle.color;
             ctx.shadow_blur = 20;
             ctx.globalCompositeOperation = 'lighter';
+<<<<<<< HEAD
 
+=======
+            ctx.stroke()
+          }
+        })
+      });
+      for (let i = 0, i < 5, i++) {
+        switch (particle.type) {
+          case 'energy':
+            // Energy particles with glow effect
+            ctx.shadowColor = particle.color;
+            ctx.shadowBlur = 15;
+            ctx.globalCompositeOperation = 'screen';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             break;
           case 'data':;
             // Data particles with digital effect;
@@ -677,6 +902,7 @@ if (particle.coordinate_y = 0) {
             ctx && ctx.shadowBlur = 20;
             ctx && ctx.globalCompositeOperation = 'lighter';
             break;        }
+<<<<<<< HEAD
 
         
         ctx.beginPath();
@@ -685,10 +911,30 @@ if (particle.coordinate_y = 0) {
         ctx.fill();
         
 
+=======
+        const lifeRatio = particle.life / particle.maxLife;
+        const currentOpacity = particle.opacity * lifeRatio;
+            break
+        }
+        const lifeRatio = particle.life / particle.maxLife;
+        const currentOpacity = particle.opacity * lifeRatio;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle =
+          particle.color +
+          Math.floor(currentOpacity * 255)
+            .toString(16)
+            .padStart(2, '0');
+        ctx.fill();        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0');
+        ctx.fill();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ctx.restore();
         // Draw connections between nearby particles
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
+<<<<<<< HEAD
 
             break;        }
         const life_ratio = particle.life / particle.max_life;
@@ -727,6 +973,13 @@ if ( {) {
   $2
 }
 
+=======
+          const distance = Math.sqrt(
+            Math.pow(particle.x - otherParticle.x, 2) +
+              Math.pow(particle.y - otherParticle.y, 2)
+          );
+          if (distance < 120) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             const opacity = (1 - distance / 120) * 0.3;
             ctx.stroke_style =;
               particle.color +;
@@ -739,11 +992,24 @@ if ( {) {
             ctx.stroke ();
           }
         });      });
+<<<<<<< HEAD
 
           
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
 
+=======
+      // Draw quantum wave interference patterns
+      const time = Date.now() * 0.001;
+      for (let i = 0; i < 5; i++) {        const waveX = (canvas.width / 6) * (i + 1);
+        const waveY = canvas.height / 2;
+        const amplitude = 50;
+        const frequency = 0.01;
+        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();          const distance = Math.sqrt(
+            Math.pow(particle.x - otherParticle.x, 2) +
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             Math.pow(particle.y - otherParticle.y, 2)
           );
           if (distance < 120) {
@@ -753,6 +1019,7 @@ if ( {) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
 
 
         const lifeRatio = particle && particle.life / particle && particle.maxLife;
@@ -829,17 +1096,30 @@ if ( {) {
         });
 =======
             ctx.stroke()
+=======
+            ctx.stroke()
+            ctx.stroke();
+          }
+        });            ctx.stroke()
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
         })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
+<<<<<<< HEAD
 
       for (let i = 0, i < 5, i++) {
 
+=======
+      // Draw quantum wave interference patterns
+      const time = Date.now() * 0.001;
+      for (let i = 0; i < 5; i++) {      for (let i = 0, i < 5, i++) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         const waveX = (canvas.width / 6) * (i + 1);
         const waveY = canvas.height / 2;
         const amplitude = 50;
         const frequency = 0.01;
+<<<<<<< HEAD
 
         
         ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
@@ -847,10 +1127,16 @@ if ( {) {
         ctx.beginPath();
         
 
+=======
+        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         for (let x = 0, x < canvas.width, x += 2) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
             ctx.moveTo(x, y)
+<<<<<<< HEAD
 =======
 ;
       // Draw quantum wave interference patterns;
@@ -907,6 +1193,8 @@ if ( {) {
           }
         }
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         for (let coordinate_x = 0; x < canvas.width; x += 2) {
           const coordinate_y =;
             wave_y +;
@@ -917,37 +1205,82 @@ if ( {) {
   $2
 }
             ctx.move_to (x, y);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           } else {
             ctx.line_to (x, y);
           }
         }
+<<<<<<< HEAD
 
       
 
+=======
+          } else {
+            ctx.lineTo(x, y)
+          }
+        }
+        for (let x = 0; x < canvas.width; x += 2) {
+          const y =
+            waveY +
+            amplitude *
+              Math.sin(frequency * x + time + i) *
+              Math.sin(frequency * x * 0.5 + time * 0.7);          if (x === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+        ctx.stroke();      }
+        ctx.stroke()
+      }
+      // Draw neural network connections
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 20; i++) {        const x1 = Math.random() * canvas.width;
+        const y1 = Math.random() * canvas.height;
+        const x2 = Math.random() * canvas.width;
+        const y2 = Math.random() * canvas.height;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       for (let i = 0, i < 20, i++) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = Math.random() * canvas.width;
         const y2 = Math.random() * canvas.height;
+<<<<<<< HEAD
 
         
         ctx.beginPath();
 
+=======
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+      }
+      animationRef.current = requestAnimationFrame(animate);    };        ctx.beginPath();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
         ctx.stroke()
       }
       animationRef.current = requestAnimationFrame(animate)
+<<<<<<< HEAD
 
     };
 
 
+=======
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
       if (animationRef.current) {
+<<<<<<< HEAD
 
 
       // Draw quantum wave interference patterns;
@@ -1024,16 +1357,24 @@ if ( {) {
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
 
+=======
+        cancelAnimationFrame(animationRef.current);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
     }
   }, [mousePosition]);
   return (
+<<<<<<< HEAD
     <div className='relative w-full h-full overflow-hidden'>;
+=======
+    <div className='relative w-full h-full overflow-hidden'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 
       />;
 
@@ -1107,28 +1448,52 @@ if ( {) {
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
 
+=======
+            rotate: 360,
+            scale: [1, 1 && 1.2, 1],
+            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
+      />
+      {/* Floating geometric shapes */}
+      <div className='absolute inset-0 pointer-events-none'>
+        <motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
+          animate={{
+            rotate: 360
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.4, 0.2],          }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',      }
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         cancelAnimationFrame(animationRef.current)
       }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
   }, [mousePosition])
 
 
+<<<<<<< HEAD
   return (
     <div className="relative w-full h-full overflow-hidden">;
+=======
+    }
+  }, [mousePosition]);
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 
       />;
 
@@ -1169,24 +1534,161 @@ if ( {) {
             y: [0, -20, 0],
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          }}
 
+=======
+            rotate: 360,
+            scale: [1, 1 && 1.2, 1]
+            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
+      />
+      {/* Floating geometric shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
+          animate={{
+            rotate: 360
+            scale: [1, 1.2, 1];
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 
 =======
             opacity: [0.2, 0.4, 0.2];
+=======
+            opacity: [0.2, 0.4, 0.2];
+            opacity: [0.2, 0.4, 0.2];
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
+
+        // Draw particle with type-specific effects
+        ctx.save(),
+        
+        switch (particle.type) {_case 'energy':
+            // Energy particles with glow effect
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 15,
+            ctx.globalCompositeOperation = 'screen',
+            break,
+          case 'data':
+            // Data particles with digital effect
+            ctx.globalCompositeOperation = 'multiply',
+            break,
+          case 'quantum':
+            // Quantum particles with uncertainty effect
+            ctx.globalCompositeOperation = 'overlay',
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 10,
+            break,
+          case 'neon':
+            // Neon particles with bright glow
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 20,
+            ctx.globalCompositeOperation = 'lighter',
+            break
+        }
+
+        const lifeRatio = particle.life / particle.maxLife
+        const currentOpacity = particle.opacity * lifeRatio
+
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0'),
+        ctx.fill(),
+        
+        ctx.restore(),
+
+        // Draw connections between nearby particles
+        particlesRef.current.forEach((otherParticle, otherIndex) => {
+          if (index === otherIndex) return,
+          
+          const distance = Math.sqrt(
+            Math.pow(particle.x - otherParticle.x, 2) + 
+            Math.pow(particle.y - otherParticle.y, 2)
+          ),
+        }
+        
+        ctx.stroke()
+      }
+
+      // Draw neural network connections
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)',
+      ctx.lineWidth = 1,
+      
+      for (let i = 0, i < 20, i++) {
+        const x1 = Math.random() * canvas.width
+        const y1 = Math.random() * canvas.height
+        const x2 = Math.random() * canvas.width
+        const y2 = Math.random() * canvas.height
+        
+        ctx.beginPath(),
+        ctx.moveTo(x1, y1),
+        ctx.lineTo(x2, y2),
+        ctx.stroke()
+      }
+
+      animationRef.current = requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas),
+      window.removeEventListener('mousemove', handleMouseMove),
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+    }
+  }, [mousePosition]),
+
+  return (
+    <div className=&quot;relative w-full h-full overflow-hidden&quot;>
+      {/* Animated background canvas */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
+        style={{ zIndex: -1 }}
+      />
+      
+      {/* Floating geometric shapes */}
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        <motion.div
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20&quot;
+          animate={{
+            rotate: 360,
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: "easeInOut"
           }}
 
+=======
+ease: "easeInOut"
+          }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
 
         <motion&& motion.div
+<<<<<<< HEAD
 
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
           animate={{
@@ -1197,6 +1699,10 @@ if ( {) {
 
           }}
 
+=======
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
+          animate={{
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
 
         <motion&& motion.div
@@ -1204,12 +1710,18 @@ if ( {) {
           animate={{
             rotate: [45, 405],
             scale: [1, 1 && 1.1, 1],          }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           transition={{
             duration: 12
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]
 =======
@@ -1229,17 +1741,27 @@ if ( {) {
           animate={{
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: "easeInOut"
           }}
 
         />;
         <motion&& motion.div
 
+=======
+ease: "easeInOut"
+          }}
+        />;
+        <motion&& motion.div
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
 =======
         />;
@@ -1251,12 +1773,25 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
+<<<<<<< HEAD
+=======
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
+          animate={{
+            y: [0, -20, 0]
+            opacity: [0.2, 0.5, 0.2],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             ease: 'easeInOut',          }}
         />;
         <motion.div;
           className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
+<<<<<<< HEAD
 
             duration: 12
             repeat: Infinity
@@ -1264,6 +1799,8 @@ if ( {) {
 
           }}
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
 
         <motion&& motion.div
@@ -1271,16 +1808,23 @@ if ( {) {
           animate={{
             rotate: [-45, 315],
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],          }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           transition={{
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             rotate: [45, 405];
             scale: [1, 1.1, 1];
           }}
           transition={{
+<<<<<<< HEAD
 
           className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
 =======
@@ -1302,18 +1846,25 @@ if ( {) {
 
           }}
           transition={{
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
 
-=======
             rotate: [-45, 315];
             opacity: [0.2, 0.6, 0.2];
 
+<<<<<<< HEAD
+=======
+            rotate: [-45, 315];
+            opacity: [0.2, 0.6, 0.2];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
 
 
           }}
@@ -1337,19 +1888,34 @@ if ( {) {
 
 =======
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+=======
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+<div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Content */}
+<<<<<<< HEAD
 
+=======
+      <div className='relative z-10'>{children}</div>;
+    </div>;
+  );      {/* Content */}
+      <div className="relative z-10">;
+        {children}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -1365,12 +1931,46 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className='relative z-10'>{children}</div>
     </div>
 
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+            duration: 10,
+            repeat: Infinity,
+
+          }}
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+
+          }}
+
+        />
+      </div>
+      {/* Gradient overlays for depth */}
+      <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />
+      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
+      {/* Content */}
+      <div className='relative z-10'>{children}</div>
+    </div>
+  );      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
+}
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

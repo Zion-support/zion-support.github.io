@@ -1,10 +1,22 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
 
+<<<<<<< HEAD
+=======
+import React from 'react',
+import ReactDOM from 'react-dom/client',
+import App from './App.tsx',
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -37,17 +49,22 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App ;
 import './index ;
 import {HelmetProvider} from 'react-helmet-async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
-=======
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -67,12 +84,40 @@ import {NotificationProvider} from './context';
 import {AnalyticsProvider} from './context/AnalyticsContext';
 // Render the app with proper provider structure;
 ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).render(<React && React.StrictMode>;
+<<<<<<< HEAD
+=======
+  </React.StrictMode>);
+
+import React from 'react',;
+import ReactDOM from 'react-dom/client',;
+import App from './App.tsx',;
+import './index.css',;
+import { HelmetProvider } from 'react-helmet-async',;
+import { BrowserRouter as Router } from 'react-router-dom',;
+// Import i18n configuration;
+import './i18n',;
+import { LanguageProvider } from '@/context/LanguageContext',;
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup',;
+import { WhitelabelProvider } from '@/context/WhitelabelContext',;
+// Import auth and notification providers;
+import { AuthProvider } from '@/context/auth/AuthProvider',;
+import { NotificationProvider } from './context',;
+// Import analytics provider;
+import { AnalyticsProvider } from './context/AnalyticsContext',;
+// Render the app with proper provider structure;
+ReactDOM.createRoot(document.getElementById('root')!).render(;
+  <React.StrictMode>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <HelmetProvider>;
       <WhitelabelProvider>;
         <Router>;
           <AuthProvider>;
             <NotificationProvider>;
               <AnalyticsProvider>;
+<<<<<<< HEAD
+=======
+                <LanguageProvider authState={{ isAuthenticated:false, user:null }}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>;
                   <App />;
                   <LanguageDetectionPopup />;
@@ -83,6 +128,7 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
 
 import React from 'react';
 import ReactDOM from 'react-dom / client';
@@ -119,10 +165,21 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
       </WhitelabelProvider>;
     </HelmetProvider>;
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   </React.StrictMode>);
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  </React.StrictMode>),; // Render the app with proper provider structure ReactDOM.createRoot (document.getElementById ('root') !) .render (<React.StrictMode> <HelmetProvider> <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <LanguageProvider authState= {
+  {
+  isAuthenticated: false, user: null 
+}
+}> <App /> <LanguageDetectionPopup /> </LanguageProvider> </AnalyticsProvider> </NotificationProvider> </AuthProvider> </Router> </WhitelabelProvider> </HelmetProvider> </React.StrictMode>);
+  </React.StrictMode>);
+  </React.StrictMode>);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

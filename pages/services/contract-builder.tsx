@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {useEffect} from 'react';
@@ -5,20 +6,39 @@ import {useRouter} from 'next/router';
 export default function ContractBuilderRedirect() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect() {
+
+
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+export default function ContractBuilderRedirect() {;
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+export default function ContractBuilderRedirect() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/automation/contract-builder');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, [router]);
   return null;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 }
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
@@ -41,7 +61,23 @@ function ContractBuilderRedirect() {
 router.replace ('/automation / contract - builder');
   }, [router]);
   return null;
+<<<<<<< HEAD
 
+=======
+;
+}
+
+}
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect(req, res) {
+  try {
+  const router = useRouter();
+  useEffect(() => {;
+    router.replace('/automation/contract-builder');
+  }, [router]);
+  return null;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -49,5 +85,8 @@ router.replace ('/automation / contract - builder');
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

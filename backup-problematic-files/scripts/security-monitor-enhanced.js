@@ -14,12 +14,12 @@ const securityChecks = {
     return true
   }
 };
-Object.entries(securityChecks).forEach(([name, check]) => {
+Object && Object.entries(securityChecks).forEach(([name, check]) => {
   try {
     const result = check();
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
+    console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
-    console.log(`❌ ${name}: ERROR - ${error.message}`);
+    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
   }
 });
 console.log('🎉 Security monitoring completed!');

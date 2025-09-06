@@ -1,15 +1,23 @@
+<<<<<<< HEAD
 
 
 // Define HTML element types;
 interface HTMLElement {;
 
+=======
+// Define HTML element types;
+interface HTMLElement {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { cva, type VariantProps  } from './class - variance - authority';
 import { cn  } from '../../lib / utils';
@@ -22,12 +30,18 @@ interface HTMLElement {
   text_content: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 
 interface HTMLDivElement extends HTMLElement {
   tag_name: 'DIV';
 }
 
 
+=======
+interface HTMLDivElement extends HTMLElement {
+  tag_name: 'DIV';
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface HTMLDivElement extends HTMLElement {;
   tagName: 'DIV';
 }
@@ -56,7 +70,10 @@ export interface BadgeProps;
   extends React && React.HTMLAttributes<HTMLDivElement>,;
     VariantProps<typeof badgeVariants> {}
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
@@ -91,7 +108,12 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
+<<<<<<< HEAD
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
+=======
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 export { Badge, badge_variants }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

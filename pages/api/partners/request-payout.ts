@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -15,8 +19,11 @@ export default async function handler(
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+<<<<<<< HEAD
+=======
+if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { code, amount } = req && req.body || {};
   if (!code) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
@@ -29,8 +36,11 @@ export default async function handler(
       return res && res.status(200).json({ ok: true, status: "queued", mock: true });
     }
     const supabase = getServerSupabase();
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -70,7 +80,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: e?.message });
 
     const { error } = await supabase.from('payout_requests').insert({
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    const { error } = await supabase && supabase.from("payout_requests").insert({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
@@ -83,7 +97,10 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -141,6 +158,7 @@ if ( {) {
       partner_code: String (code).toLowerCase (),
       amount: Number (amount) || null,
       status: "requested",
+<<<<<<< HEAD
     });
     if (return res.status (500).json ({ error: "Database error" })) {
   $2
@@ -151,3 +169,50 @@ if ( {) {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { code, amount } = req.body || {};
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      return res.status(200).json({ ok: true, status: 'queued', mock: true });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const supabase = getServerSupabase();
+    const { error } = await supabase.from('payout_requests').insert({;
+      partner_code: String(code).toLowerCase();
+      amount: Number(amount) || null;
+      status: 'requested'});
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    return res.status(200).json({ ok: true, status: 'requested' });
+  } catch (error) {
+    return res.status(500).json({ error: e?.message });
+    const { error } = await supabase.from('payout_requests').insert({
+      partner_code: String(code).toLowerCase(),
+      amount: Number(amount) || null,
+      status: 'requested'
+    });
+    if (error) return res.status(500).json({ error: 'Database error' });
+    return res.status(200).json({ ok: true, status: 'requested' })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

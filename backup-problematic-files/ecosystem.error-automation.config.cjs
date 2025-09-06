@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +35,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -70,6 +79,17 @@ module.exports = {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      "name": 'syntax-error-fixer';
+      "script": 'scripts/pm2/syntax-error-fixer.js';
+        "NODE_ENV": 'production';
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": 'syntax-error-fixer';
       "script": 'scripts/pm2/syntax-error-fixer.js';
@@ -98,6 +118,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "PORT": 3000
       };
       "env_production": {
@@ -218,6 +242,17 @@ module.exports = {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      "name": 'typescript-error-fixer';
+      "script": 'scripts/pm2/typescript-error-fixer.js';
+        "NODE_ENV": 'production';
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": 'typescript-error-fixer';
       "script": 'scripts/pm2/typescript-error-fixer.js';
@@ -246,6 +281,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -281,6 +320,11 @@ module.exports = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "NODE_ENV": 'production';
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -304,6 +348,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -367,6 +415,17 @@ module.exports = {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      "name": 'file-extension-normalizer';
+      "script": 'scripts/pm2/file-extension-normalizer.js';
+        "NODE_ENV": 'production';
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": 'file-extension-normalizer';
       "script": 'scripts/pm2/file-extension-normalizer.js';
@@ -395,6 +454,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -535,6 +598,11 @@ module.exports = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "NODE_ENV": 'production';
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -558,6 +626,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -581,6 +653,9 @@ module.exports = {
       'pre-setup': ''
     }
   }
+<<<<<<< HEAD
+};
+=======
 };
 <<<<<<< HEAD
 =======
@@ -604,3 +679,7 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

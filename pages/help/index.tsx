@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+export async function getStaticProps() {
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return { props: { articles }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export async function getStaticProps() {;
@@ -5,12 +21,97 @@ export async function getStaticProps() {;
   return { props: { articles } };
 
 
+<<<<<<< HEAD
+=======
+export async function getStaticProps() {;
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
+  return { props: { articles } };
+export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[] }) {;
+  const categories = Array && Array.from(new Set(articles && articles.map(a => a && a.category)));
+  return (
+    <div className='space-y-8'>;
+      <h1 className='text-2xl font-semibold'>Help Center</h1>;
+      {categories && categories.map(cat => (;
+        <div key={cat} className='space-y-3'>;
+          <h2 className='text-xl font-medium'>{cat}</h2>;
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
+            {articles;
+              .filter(a => a && a.category === (cat as any));
+              .map(a => (;
+                <Link key={a && a.id} href={`/help/${a && a.slug}`}>;
+                  <a className='enhanced-card hover:shadow-md'>;
+                    <div className='font-medium'>{a && a.title}</div>;
+                    <div className='text-xs opacity-70 mt-1'>;
+                      Last updated {new Date(a && a.updatedAt).toLocaleDateString()}
+                    </div>                  </a>;
+                </Link>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               ))}
           </div>;
         </div>;
       ))}
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>;
+  );
+  const categories = Array.from(new Set(articles.map((a) => a.category)));
+  return (
+    <div className="space-y-8">
+      <h1 className="text-2xl font-semibold">Help Center</h1>
+      {categories.map((cat) => (
+        <div key={cat} className="space-y-3">
+          <h2 className="text-xl font-medium">{cat}</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {articles
+              .filter((a) => a.category === (cat as any))
+              .map((a) => (
+                <Link key={a.id} href={`/help/${a.slug}`}>
+    </div>
+  )
+}
+
+<a className="enhanced-card hover:shadow-md">
+                    <div className="font-medium">{a.title}</div>
+                    <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
+                  </a>
+
+import Link from 'next/link';
+import { readJson  } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {
+
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return { props: { articles } }
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
+  const categories = Array.from(new Set(articles.map(a => a.category)));
+
+import {readJson} from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return { props: { articles } };
+
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
+  const categories = Array.from(new Set(articles.map(a => a.category)));
+import { readJson } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return { props: { articles }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
+  const categories = Array.from(new Set(articles.map((a) => a.category))),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -25,13 +126,24 @@ export async function getStaticProps() {;
                   <a className="enhanced-card hover:shadow-md">
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
+<<<<<<< HEAD
                   </a>
                 </Link>
-
+=======
+                  </Link>
+                </Link>
+              ))}
+          </div>
+        </div>
+      ))}
     </div>
-  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+}
 }
 
+<<<<<<< HEAD
 =======
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
@@ -78,6 +190,12 @@ function HelpIndex() {
 }
 
 =======
+=======
+);
+
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -98,6 +216,9 @@ function HelpIndex() {
   }
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,6 +1,19 @@
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+#!/usr/bin/env node const root = new URL('.',
+import && import.meta.url).pathname,
+const svgPath = resolve(root, '../assets/zion && zion.svg'),
+#!/usr/bin/env node
+import { mkdirSync, existsSync } from 'node: fs',
+import { resolve } from 'node: path', import sharp from 'sharp',
+const root = new URL('.',
+#!/usr/bin/env node const root = new URL('.',
+import.meta.url).pathname,
+const svgPath = resolve(root, '../assets/zion.svg'),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 
@@ -24,9 +37,14 @@ for (const size of sizes) {
   console && console.log('generated', out)
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+  console && console.log('generated', out)
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr / bin / env node const root = new URL ('.',
 import.meta.url).pathname,
 const svg_path = resolve (root, '../assets / zion.svg'),
@@ -41,10 +59,19 @@ for (const size of sizes) {
   // eslint - disable - next - line no - console;
   console.log ('generated', out);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   console.log('generated', out)
 
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  console.log('generated', out)
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

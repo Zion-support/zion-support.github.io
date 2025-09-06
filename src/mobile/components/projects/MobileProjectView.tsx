@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import {
+  CheckCircle
+  ChevronRight
+  FileText
+  MessageSquare
+  Video
+} from 'lucide-react'
+import { Progress } from '@/components/ui/progress'
+import { SeverityIndicator } from '../common/SeverityIndicator'
+import { useRouter } from 'next/router'
+import { toast } from 'sonner'
+
+interface Milestone {
+  id: string;
+  title: string;
+  dueDate: string;
+  status: "completed" | "in_progress" | "pending";
+  paymentStatus: "paid" | "pending" | "overdue";
+  amount: string
+interface ProjectViewProps {
+  project: {
+    id: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 id: string;
     title: string;
     client: {;
@@ -9,6 +39,13 @@ id: string;
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD
+=======
+    description: string
+  }
+  milestones: Milestone[]
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -41,7 +78,10 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface Milestone {
   id: string;
   title: string;
@@ -65,6 +105,7 @@ interface ProjectViewProps {
     description: string;
   }
   milestones: Milestone[];
+<<<<<<< HEAD
 
     description: string;
   };
@@ -90,6 +131,8 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   };
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -111,7 +154,32 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     // Navigate to messaging with this client
   },
   
+<<<<<<< HEAD
 
+=======
+  
+  return (
+    <div className="space-y-6 px-4 pb-24">
+      <Card>
+        <CardContent className="p-4">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-lg font-medium">{project.title}</h2>
+                <div className="flex items-center gap-2 mt-1">
+                  <Avatar className="h-6 w-6">
+                    <AvatarImage src={project.client.avatar} alt={project.client.name} />
+                    <AvatarFallback>{project.client.name[0]}</AvatarFallback>
+                  </Avatar>
+                  <span className="text-sm">{project.client.name}</span>
+                </div>
+              </div>
+              <Badge>{project.status}</Badge>
+            </div>
+            <div className='space-y-1'>
+              <div className='flex justify-between items-center text-sm'>
+                <span className="font-medium">{project.progress}%</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
 
@@ -123,16 +191,23 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
                 <span>Progress</span>
                 <span className='font-medium'>{project.progress}%</span>
+<<<<<<< HEAD
               </div>
               <Progress value={project.progress} className='h-2' />
             </div>
 
 
+=======
+              <Progress value={project.progress} className='h-2' />
+            </div>
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             
             <div className="grid grid-cols-2 gap-3 text-sm">
 
 
               <div>
+<<<<<<< HEAD
                 <p className='text-muted-foreground'>Start Date</p>
                 <p className='font-medium'>{project.startDate}</p>
               </div>
@@ -143,6 +218,42 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className="font-medium">{project.endDate || "Not set"}</p>
 
 
+=======
+            <div className='grid grid-cols-2 gap-3 text-sm'>
+                <p className="text-muted-foreground">Start Date</p>
+                <p className="font-medium">{project.startDate}</p>
+              </div>
+              <div>
+                <p className='text-muted-foreground'>End Date</p>
+                <p className='font-medium'>{project.endDate |'Not set'}</p>
+ursor/fix-website-loading-errors-and-merge-6662
+            <div className='space-y-1'>
+              <div className='flex justify-between items-center text-sm'>
+            
+            <div className="space-y-1">
+              <div className="flex justify-between items-center text-sm">
+                <span>Progress</span>
+                <span className="font-medium">{project.progress}%</span>
+              </div>
+              <Progress value={project.progress} className="h-2" />
+            </div>
+            <div className='grid grid-cols-2 gap-3 text-sm'>
+            
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <div>
+                <p className="text-muted-foreground">Start Date</p>
+                <p className="font-medium">{project.startDate}</p>
+              </div>
+              <div>
+                <p className='text-muted-foreground'>End Date</p>
+                <p className='font-medium'>{project.endDate |'Not set'}</p>
+                <p className="text-muted-foreground">End Date</p>
+                <p className="font-medium">{project.endDate || "Not set"}</p>
+              </div>
+              <div>
+                <p className="text-muted-foreground">Total Amount</p>
+                <p className="font-medium">{project.totalAmount}</p>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>
               <div>
                 <p className='text-muted-foreground'>Total Amount</p>
@@ -153,8 +264,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className='font-medium capitalize'>{project.status}</p>
               </div>
             </div>
+<<<<<<< HEAD
 
 
+=======
+              <p className="text-sm text-muted-foreground mb-1">Description</p>
+              <p className="text-sm">{project.description}</p>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             
 
 
@@ -221,8 +337,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
+<<<<<<< HEAD
 
 
+=======
+                onClick={startProjectCall}              >
+                <Video className='h-4 w-4' /> Call
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -245,13 +366,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
 
               </Button>
-            </div>
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 
 
       
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
@@ -328,7 +451,40 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     <div className='space - y-6 px - 4 pb - 24'>;
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
+<<<<<<< HEAD
 
+=======
+      
+      <section>
+        <h2 className="text-lg font-medium mb-4">Milestones</h2>
+        <div className="space-y-3">
+          {milestones.map((milestone) => (
+            <Card key={milestone.id}>
+              <CardContent className="p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div className="flex items-center gap-2">
+                    {milestone.status === "completed" ? (
+                      <CheckCircle className="h-5 w-5 text-green-500" />
+                    ) : (
+                      <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
+                    )}
+                    <h3 className="font-medium">{milestone.title}</h3>
+                  </div>
+                  <Badge
+                    variant={
+                      milestone.paymentStatus === 'paid'
+                        ? 'default'
+                        : milestone.paymentStatus === 'overdue'
+                          ? 'destructive'
+                          : 'outline'
+                    }                  >
+                    {milestone.paymentStatus}
+                  </Badge>
+                </div>
+                <div className='pl-7'>
+                  <div className='flex justify-between text-sm'>
+                    <span className='text-muted-foreground'>Due Date:</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
@@ -433,7 +589,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     <h3 className='font - medium'>{milestone.title}</h3>;
                   </div>;
                   <Badge;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
@@ -446,8 +605,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <span>{milestone.dueDate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -468,9 +630,24 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 
 
                   </Badge>;
+=======
+          ))}
+        </div>
+      </section>
+    </div>
+  )
+}
+                  </Badge>;
+      </section>
+    </div>
+  )
+}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
                 <div className='pl - 7'>;
                   <div className='flex justify - between text - sm'>;
@@ -499,8 +676,21 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>))}
         </div>;
       </section>;
+<<<<<<< HEAD
     </div>);
 }
 
 
 ;
+=======
+    </div>;
+  );
+};
+}
+}
+ursor/fix-website-loading-errors-and-merge-6662
+}
+;
+
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -31,12 +34,16 @@ import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
 
+<<<<<<< HEAD
   const { user, isLoading, logout } = useAuth();
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -45,17 +52,48 @@ export default function Profile() {;
 
 
   if (isLoading) {
+<<<<<<< HEAD
 =======
+=======
+  const { user, isLoading, logout } = useAuth();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (!isLoading && !user) {;
       toast && toast.error("Please log in to view your profile");
       navigate("/login?redirect=/profile");
     }
   }, [user, isLoading, navigate]);
+<<<<<<< HEAD
 
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+=======
+  if (isLoading) {;
+    return (
+
+import React, { useEffect } from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+;
+export default function Profile() {;
+  const { user, isLoading, logout } = useAuth(),;
+  const navigate = useNavigate(),;
+;
+  useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast.error("Please log in to view your profile"),;
+      navigate("/login?redirect=/profile"),;
+    }
+  }, [user, isLoading, navigate]),;
+;
+  if (isLoading) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
@@ -63,22 +101,38 @@ export default function Profile() {;
         </div>;
         <Footer />;
       </>;
+<<<<<<< HEAD
     );
   }
 
 
   if (!user) {;
     return (
+=======
+  if (!user) {;
+    return (
+    ),;
+  }
+;
+  if (!user) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">;
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>;
             <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>;
+<<<<<<< HEAD
 
             <Button
               onClick={() => navigate("/login?redirect=/profile")}
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
+=======
+            <Button ;
+              onClick={() => navigate("/login?redirect=/profile")}
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             >;
               Go to Login;
             </Button>;
@@ -88,8 +142,13 @@ export default function Profile() {;
       </>;
     );
   }
+<<<<<<< HEAD
   return (
 
+=======
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -99,6 +158,7 @@ export default function Profile() {;
             <div className="flex flex-col md:flex-row gap-6">;
               <div className="md:w-1/3">;
                 <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;
+<<<<<<< HEAD
                   {user && user.displayName ? user && user.displayName.split(' ').map(name => name[0]).join('') : user && user.email?.charAt(0)}
                 </div>;
               </div>;
@@ -108,14 +168,94 @@ export default function Profile() {;
 
                 <Button
                   onClick={() => {;
+=======
+                <Button
+                  onClick={() => {;
                     logout();
+  const { user, isLoading, logout } = useAuth();
+  const navigate = useNavigate();
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth();
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
 
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!isLoading && !user) {
+      toast.error("Please log in to view your profile"),
+      navigate("/login?redirect=/profile")
+    }
+  }, [user, isLoading, navigate]);
+  }, [user, isLoading, navigate]),
+
+  if (isLoading) {
+    return (
+      <>
+        <Header />
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="animate-pulse text-white">Loading profile...</div>
+        </div>
+        <Footer />
+      </>
+    )
+  }
+  if (!user) {
+    return (
+      <>
+        <Header />
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
+            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
+            <Button
+              onClick={() => navigate("/login?redirect=/profile")}
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
+            >
+              Go to Login
+            </Button>
+          </div>
+        </div>
+        <Footer />
+      </>
+    )
+  }
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="md:w-1/3">
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
+                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
+                </div>
+              </div>
+              <div className="md:w-2/3">
+                <h2 className="text-xl font-bold text-white">{user.displayName |"User"}</h2>
+                <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                    logout();
 
                     logout(),
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     navigate("/")
                   }}
                   variant="outline"
@@ -131,7 +271,10 @@ export default function Profile() {;
       <Footer />
     </>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     navigate("/");
                   }}
                   variant="outline";
@@ -158,8 +301,11 @@ if ( {) {
 }
       toast.error ("Please log in to view your profile");
       navigate ("/login?redirect=/profile");
-=======
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -174,6 +320,7 @@ export default function Profile() {;
     if (!isLoading && !user) {;
       toast.error("Please log in to view your profile"),;
       navigate("/login?redirect=/profile");
+<<<<<<< HEAD
 
     }
   }, [user, is_loading, navigate]);
@@ -205,12 +352,40 @@ if ( {) {
             <Button;
               on_click={() => navigate ("/login?redirect=/profile")}
               className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+=======
+    }
+  }, [user, isLoading, navigate]);
+  if (isLoading) {;
+    return (;
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="animate-pulse text-white">Loading profile...</div>;
+        </div>;
+        <Footer />;
+      </>;
+    );
+  }
+;
+  if (!user) {;
+    return (;
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">;
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>;
+            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>;
+            <Button;
+              onClick={() => navigate("/login?redirect=/profile")}
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             >;
               Go to Login;
             </Button>;
           </div>;
         </div>;
         <Footer />;
+<<<<<<< HEAD
       </>);
   }
   return (
@@ -237,6 +412,36 @@ if ( {) {
                   variant="outline";
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') :user.email?.charAt(0)}
+      </>;
+    );
+  }
+;
+  return (;
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue">;
+        <div className="container mx-auto px-4 py-8">;
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+            <div className="flex flex-col md:flex-row gap-6">;
+              <div className="md:w-1/3">;
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;
+                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
+                </div>;
+              </div>;
+              <div className="md:w-2/3">;
+                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>;
+                <p className="text-zion-slate-light mb-4">{user.email}</p>;
+                <Button;
+                  onClick={() => {;
+                    logout();
+                    navigate("/");
+                  }}
+                  variant="outline";
+                  className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 >;
                   Logout;
                 </Button>;
@@ -246,6 +451,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 
     </>);
 }
@@ -255,3 +461,26 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </>;
+  ); export default function Profile () {
+  const {
+  user, isLoading, logout 
+}= useAuth ();
+const navigate = useNavigate ();
+useEffect ( () => {
+  if (!isLoading && !user) {
+  
+}
+;
+
+}, [user, isLoading, navigate]);
+return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {
+  return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) 
+}return (<> <Header /> variant="outline" className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white" 
+}
+    </>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+"autoMerge"
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -580,6 +583,7 @@ gitAutomation.start().catch(console.error);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       "autoMerge"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "conflictResolution"
       "branchProtection"
       "mergeStrategy"
@@ -650,8 +654,32 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      console.error('Error loading "history")
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      console.error('Error loading "history")
+      console.error('Error loading "history")
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      console.error('Error loading "history")
+      console.error('Error loading "history")
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+      console.error('Error loading "history")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
       console.error('Error loading "history")
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -680,3 +708,7 @@ gitAutomation.start().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

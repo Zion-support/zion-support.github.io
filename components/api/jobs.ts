@@ -8,7 +8,6 @@ import path from 'path';
 
 
 const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
-=======
 
 const JOBS_FILE = path && path.join(process && process.cwd(), 'data', 'jobs', 'jobs && jobs.json');
 
@@ -29,21 +28,28 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: 'Failed to load jobs' });
   }
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json");
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
   try {
+<<<<<<< HEAD
 
 
 };
@@ -53,6 +59,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : [];
     return res && res.status(200).json({ jobs })
   } catch (e) {
@@ -61,8 +69,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json');
 ;
@@ -103,9 +114,57 @@ if ( {) {
     return res.status (500).json ({ error: "Failed to load jobs" });
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+
+const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  try {
+    const jobs = (await fs.pathExists(JOBS_FILE))
+      ? await fs.readJSON(JOBS_FILE)
+      : [];
+    return res.status(200).json({ jobs });
+  } catch (e) {
+    return res.status(500).json({ error: 'Failed to load jobs' });
+  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {;
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  try {
+    const jobs = (await fs.pathExists(JOBS_FILE)) ? await fs.readJSON(JOBS_FILE) : [];
+
+    return res.status(200).json({ jobs })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load jobs" })
+}
+};
+}
+
+}
+  };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

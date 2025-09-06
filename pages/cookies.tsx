@@ -1,19 +1,24 @@
 
 
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   Shield,
   Settings,
@@ -74,8 +79,6 @@ export default function CookiePolicyPage() {
   }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -119,6 +122,43 @@ export default function CookiePolicyPage() {;
     analytics: false,;
     marketing: false,;
     functional: false;
+<<<<<<< HEAD
+=======
+
+origin/automation-improvements-final
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+  Shield
+  Settings
+  Info
+  ExternalLink
+  ArrowRight
+  CheckCircle
+  XCircle
+  AlertTriangle
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
+} from 'lucide-react';
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   });
 
   const cookieTypes = [;
@@ -173,7 +213,10 @@ export default function CookiePolicyPage() {;
       keywords="cookie policy, cookies, privacy, data protection, website cookies">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -182,14 +225,20 @@ export default function CookiePolicyPage() {;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Cookie{' '}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Policy;
                 </span>;
@@ -201,8 +250,11 @@ export default function CookiePolicyPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Cookie Management */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -210,7 +262,10 @@ export default function CookiePolicyPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -228,7 +283,10 @@ export default function CookiePolicyPage() {;
                   {cookieTypes && cookieTypes.map((cookie, index) => (;
                     <motion&& motion.div
                       key={cookie && cookie.id}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       className="border border-gray-200 rounded-lg p-6"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -269,7 +327,10 @@ export default function CookiePolicyPage() {;
                               />;
                             </button>;
                           )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </div>;
                       </div>;
 
@@ -295,20 +356,29 @@ export default function CookiePolicyPage() {;
                       analytics: false,;
                       marketing: false,;
                       functional: false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
                     Reject All;
                   </button>;
                   <button
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     onClick={() => setCookiePreferences({;
                       necessary: true,;
                       analytics: true,;
                       marketing: true,;
                       functional: true;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
@@ -316,7 +386,10 @@ export default function CookiePolicyPage() {;
                   </button>;
                   <button
                     onClick={savePreferences}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
 =======
   Shield,
@@ -524,7 +597,10 @@ if (return) {
                     on_click={save_preferences}
                     className="px - 6 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
                   >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     Save Preferences;
                   </button>;
                 </div>;
@@ -532,7 +608,10 @@ if (return) {
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -686,12 +765,18 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion.div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -702,7 +787,10 @@ if (return) {
                 please don't hesitate to contact us.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="max-w-2xl mx-auto text-center">;
               <div className="bg-white rounded-lg shadow-lg p-8">;
                 <div className="space-y-4">;
@@ -718,7 +806,10 @@ if (return) {
                   </p>;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Contact Information */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -752,6 +843,78 @@ if (return) {
                   </p>;
                   <p className="text - sm text - gray - 500">;
                     Last updated: {new Date ().toLocaleDateString ()}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  </p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+<<<<<<< HEAD
+
+=======
+
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Questions About Our Cookie Policy?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                If you have any questions about our use of cookies or this policy
+                please don't hesitate to contact us.
+              </p>
+            </motion.div>
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-indigo-600 mr-3" />
+                    <span className="text-lg font-semibold text-gray-900">Privacy Team</span>
+                  </div>
+                  <p className="text-gray-600">
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text-indigo-600 hover:text-indigo-700">privacy@ziontechgroup.com</a>
+                  </p>
+                  <p className="text-gray-600">
+                    Phone: <a href="tel:+13024640950" className="text-indigo-600 hover:text-indigo-700">+1 302 464 0950</a>
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Last updated: {new Date().toLocaleDateString()}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Questions About Our Cookie Policy?;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                If you have any questions about our use of cookies or this policy,
+                please don't hesitate to contact us.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-2xl mx - auto text - center">;
+              <div className="bg - white rounded - lg shadow - lg p - 8">;
+                <div className="space - y-4">;
+                  <div className="flex items - center justify - center">;
+                    <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
+                    <span className="text - lg font - semibold text - gray - 900">Privacy Team</span>;
+                  </div>;
+                  <p className="text - gray - 600">;
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text - indigo - 600 hover:text - indigo - 700">privacy@ziontechgroup.com</a>;
+                  </p>;
+                  <p className="text - gray - 600">;
+                    Phone: <a href="tel:+13024640950" className="text - indigo - 600 hover:text - indigo - 700">+1 302 464 0950</a>;
+                  </p>;
+                  <p className="text - sm text - gray - 500">;
+                    Last updated: {new Date ().toLocaleDateString ()}
 
                   </p>;
                 </div>;
@@ -760,28 +923,62 @@ if (return) {
           </div>;
         </section>;
       </div>;
+  );
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
 
-=======
 
+origin/automation-improvements-final
+
+export default function CookiesPage() {
+export default function CookiesPage() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
 
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+<<<<<<< HEAD
+=======
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+ursor/fix-lint-push-and-merge-to-main-ae4e
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -789,6 +986,7 @@ export default function CookiesPage() {
           <ul className="list-disc list-inside text-gray-300 space-y-1">
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -803,20 +1001,50 @@ export default function CookiesPage() {
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
+=======
+
+            <li>Purpose: performance and security</li>
+
+<li>Purpose: performance and security</li>
+
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+origin/automation-improvements-final
+            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+origin/automation-improvements-final
+          <p className='text-gray-400 text-sm'>
+            Questions?{' '}
+            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+              kleber@ziontechgroup.com
+            </a>
+          </p>
+        </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 =======
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
     </UltraAdvancedFuturisticBackground>
   )
 }
 
         canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
+<<<<<<< HEAD
       />;
       <div className='container mx-auto px-4 py-24 text-white'>;
         <div className='max-w-3xl mx-auto space-y-6'>;
@@ -882,12 +1110,43 @@ function CookiesPage() {
             <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
               kleber@ziontechgroup.com;
 
+=======
+            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+            <li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+          <p className=&quot;text-gray-400 text-sm&quot;>Questions? <a className=&quot;text-cyan-400&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</Link></p>
+
+        </div>
+      </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  );
+      </Layout>
+    </>;
+  );
+
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </a>;
           </p>;
         </div>;
       </Layout>;
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -898,10 +1157,31 @@ function CookiesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+  );
+
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </>);
 ;
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+}
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

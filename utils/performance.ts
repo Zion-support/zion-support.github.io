@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
@@ -8,7 +11,10 @@ export const measure_performance = (): PerformanceMetrics | null => {
 }
     return null;
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint_entries = performance.getEntriesByType ('paint');
@@ -18,6 +24,24 @@ export const measure_performance = (): PerformanceMetrics | null => {
       return acc + (entry as any).value;
     }, 0);
 
+<<<<<<< HEAD
+=======
+import { PerformanceMetrics } from '../types';
+export const measurePerformance = (): PerformanceMetrics | null => {
+  if (typeof window === 'undefined' |!('performance' in window)) {
+  if (typeof window === 'undefined' || !('performance' in window)) {;
+    return null;
+  }
+  try {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+    const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {
+      return acc + (entry as any).value;
+    }, 0);
+    const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return {
       fcp: fcp ? fcp.startTime : undefined
       lcp: lcp ? lcp.startTime : undefined
@@ -25,8 +49,11 @@ export const measure_performance = (): PerformanceMetrics | null => {
       cls: cls
       ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
     }
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -36,12 +63,18 @@ export const measure_performance = (): PerformanceMetrics | null => {
       cls: cls,
       ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.warn ('Error measuring performance:', error);
     return null;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 
@@ -51,13 +84,20 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
-=======
 
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
+<<<<<<< HEAD
+=======
+}
+export const getPerformanceScore = (metrics: PerformanceMetrics): {
+};
+
+export const getPerformanceScore = (metrics: PerformanceMetrics): {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -76,12 +116,18 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
+<<<<<<< HEAD
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   const scores = {
     fcp: getScore(metrics.fcp, thresholds.fcp)
@@ -92,7 +138,10 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const poorCount = Object.values(scores).filter(score => score === 'poor').length;
   const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
 =======
@@ -156,10 +205,20 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+  return { overall, scores }
+}
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+  return { overall, scores }
+}
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return { overall, scores };
 };
 
+<<<<<<< HEAD
 
   return { overall, scores }
 }
@@ -168,6 +227,12 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
 
+=======
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
+
+
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -186,6 +251,7 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -215,3 +281,11 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+
+};
+
+};
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

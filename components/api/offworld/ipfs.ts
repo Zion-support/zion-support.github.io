@@ -9,6 +9,25 @@ import {
 } from '@/utils/offworld/ipfs';
 
 
+<<<<<<< HEAD
+=======
+) {  const { action } = req && req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req && req.query;
+  const body = typeof req && req.body === 'string' ? JSON && JSON.parse(req && req.body) : req && req.body;
+  try {
+    if (req && req.method === 'POST' && action === 'json') {
+      const { cid, provider } = await addJSON(body);
+      if (!cid) return res && res.status(503).json({ error: 'IPFS unavailable' });
+      return res && res.status(200).json({ cid, provider });
+import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import {
+  addJSON,
+  publishManifesto,;
+  OFFWORLD_TOPICS,;
+} from '@/utils/offworld/ipfs';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {
   addJSON
@@ -17,16 +36,30 @@ import {
 } from '@/utils/offworld/ipfs';
 export default async function handler(
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   req: NextApiRequest,
   res: NextApiResponse;
 
 
+<<<<<<< HEAD
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 =======
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse;
+) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ) {  const { action } = req && req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -40,13 +73,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { cid, provider } = await addJSON(body);
       if (!cid) return res && res.status(503).json({ error: 'IPFS unavailable' });
       return res && res.status(200).json({ cid, provider });
-=======
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   try {
     if (req.method === 'POST' && action === 'json') {
@@ -54,6 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
       return res.status(200).json({ cid, provider })
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
@@ -63,6 +95,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto,
         body?.message || ''
 
+=======
+    }
+    if (req && req.method === 'POST' && action === 'broadcast') {
+      const ok = await publishManifesto(
+        OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto,
+        body?.message || ''
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       );
       return res && res.status(200).json({ ok });
     }
@@ -70,18 +109,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }    }
+<<<<<<< HEAD
 
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto, body?.message || '');
       return res && res.status(200).json({ ok })
 
+=======
+    if (req.method === 'POST' && action === 'broadcast') {
+      const ok = await publishManifesto(OFFWORLD_TOPICS.manifesto, body?.message |'');
+
+      return res.status(200).json({ ok })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
 
-    return res && res.status(500).json({ error: e && e.message })
-  };
 
+<<<<<<< HEAD
 }
 
 
@@ -144,3 +189,8 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    return res.status(500).json({ error: e.message })
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 
+=======
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const endpoints = [
       '/'
       '/learn'
@@ -16,7 +22,10 @@
         const ms = Date && Date.now() - t0;
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         const ms = Date && Date.now() - t0;
         results && results.push({
           path: ep,
@@ -32,8 +41,11 @@
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
       // Fetch existing file, append, and trim to last 500 entries
@@ -65,7 +77,10 @@
       }
     }
     return {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
     };
@@ -74,14 +89,23 @@
   }
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+exports.handler = async function() {
+  try {
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const url = `${baseUrl}${ep}`,
       const t0 = Date && Date.now(),
       try {
@@ -118,6 +142,7 @@
     }
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
+<<<<<<< HEAD
 
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
@@ -126,6 +151,12 @@
 },
 
 =======
+=======
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {

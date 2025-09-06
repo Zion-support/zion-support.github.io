@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 console && console.log('🔧 Fixing all syntax errors...');
 
 // Fix accessibility && accessibility.tsx
@@ -15,19 +18,26 @@ const fixAccessibility = () => {
     
     fs && fs.writeFileSync('pages/accessibility && accessibility.tsx', content);
     console && console.log('✅ Fixed accessibility && accessibility.tsx');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 // Fix api && api.tsx
 const fixApi = () => {
   try {
     let content = fs && fs.readFileSync('pages/api && api.tsx', 'utf8');
+<<<<<<< HEAD
     
 
     // Ensure proper closing structure
@@ -39,12 +49,23 @@ const fixApi = () => {
     fs && fs.writeFileSync('pages/api && api.tsx', content);
     console && console.log('✅ Fixed api && api.tsx');
 
+=======
+    // Ensure proper closing structure
+    if (!content.includes('export default')) {;
+      content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
+    }
+    fs && fs.writeFileSync('pages/api && api.tsx', content);
+    console && console.log('✅ Fixed api && api.tsx');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 // Fix careers && careers.tsx
@@ -60,13 +81,19 @@ const fixCareers = () => {
     
     fs && fs.writeFileSync('pages/careers && careers.tsx', content);
     console && console.log('✅ Fixed careers && careers.tsx');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 // Fix support && support.tsx
@@ -82,13 +109,19 @@ const fixSupport = () => {
     
     fs && fs.writeFileSync('pages/support && support.tsx', content);
     console && console.log('✅ Fixed support && support.tsx');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 // Fix webinars && webinars.tsx
@@ -104,7 +137,10 @@ const fixWebinars = () => {
     
     fs && fs.writeFileSync('pages/webinars && webinars.tsx', content);
     console && console.log('✅ Fixed webinars && webinars.tsx');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message);
@@ -112,11 +148,16 @@ const fixWebinars = () => {
   }
 }
 // Main execution
+<<<<<<< HEAD
 
 const main = () => {
   console && console.log('Starting comprehensive syntax fixes...');
   
 
+=======
+const main = () => {
+  console && console.log('Starting comprehensive syntax fixes...');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const fixes = [
 
     fixAccessibility
@@ -255,11 +296,15 @@ const main = () =>: any {
       success_count++;
     }
   }
+<<<<<<< HEAD
 
   
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
   
 
+=======
+  console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (successCount > 0) {
     console && console.log('\n📝 Adding fixed files...');
     try {

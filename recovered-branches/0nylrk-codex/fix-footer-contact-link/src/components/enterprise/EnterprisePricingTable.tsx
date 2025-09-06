@@ -1,8 +1,37 @@
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Check, X} from "lucide-react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { Check, X } from "lucide-react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button",
+import { Check, X } from "lucide-react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -25,6 +54,7 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]}
     {
 
+<<<<<<< HEAD
 
       name: "Business",;
       price: "$1,999";
@@ -33,12 +63,33 @@ export function EnterprisePricingTable() {
       name: "Business",
       price: "$1,999",
 
+=======
+      name: "Business",;
+      price: "$1,999";
+
+      name: "Business",
+      price: "$1,999",
+
+      name: "Business"
+      price: "$1,999";
+      billing: "/month"
+      description: "Ideal for growing companies"
+      users: "Up to 50 users"
+      popular: true
+      name: "Business",;
+      price: "$1,999";
+      name: "Business",
+      price: "$1,999",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -87,6 +138,7 @@ export function EnterprisePricingTable() {
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Check, X} from "lucide-react";
@@ -94,6 +146,8 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/c
 import {Badge} from "@/components/ui/badge";
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;
@@ -105,7 +159,10 @@ import {;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function EnterprisePricingTable() {;
   const plans = [;
     {;
@@ -127,7 +184,11 @@ export function EnterprisePricingTable() {;
         { name: "Dedicated success manager", included: false }]},;
     {;
       name: "Business",;
+<<<<<<< HEAD
       price: "$1,999";
+=======
+      price: "$1,999",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       billing: "/month",;
       description: "Ideal for growing companies",;
       users: "Up to 50 users",;
@@ -157,10 +218,84 @@ export function EnterprisePricingTable() {;
         { name: "Admin dashboard", included: true },;
         { name: "Team collaboration", included: true },;
         { name: "API access", included: true },;
+<<<<<<< HEAD
         { name: "Custom integrations", included: true },;
         { name: "Dedicated success manager", included: true }]}],;
 
   return (
+=======
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Check, X } from "lucide-react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+;
+export function EnterprisePricingTable() {;
+  const plans = [;
+    {;
+      name:"Teams",;
+      price:"$599",;
+      billing:"/month",;
+      description:"Perfect for small teams",;
+      users:"Up to 10 users",;
+      popular:false,;
+      features:[;
+        { name:"Private hiring portal", included:true },;
+        { name:"Dedicated talent pool", included:true },;
+        { name:"Standard SLA (24h)", included:true },;
+        { name:"Basic branding", included:true },;
+        { name:"Admin dashboard", included:true },;
+        { name:"Team collaboration", included:true },;
+        { name:"API access", included:false },;
+        { name:"Custom integrations", included:false },;
+        { name:"Dedicated success manager", included:false }]},;
+    {;
+      name:"Business",;
+      price:"$1,999",;
+      billing:"/month",;
+      description:"Ideal for growing companies",;
+      users:"Up to 50 users",;
+      popular:true,;
+      features:[;
+        { name:"Private hiring portal", included:true },;
+        { name:"Dedicated talent pool", included:true },;
+        { name:"Enhanced SLA (8h)", included:true },;
+        { name:"Advanced branding", included:true },;
+        { name:"Admin dashboard", included:true },;
+        { name:"Team collaboration", included:true },;
+        { name:"API access", included:true },;
+        { name:"Custom integrations", included:false },;
+        { name:"Dedicated success manager", included:false }]},;
+    {;
+      name:"Enterprise",;
+      price:"Custom",;
+      billing:"",;
+      description:"For large organizations",;
+      users:"Unlimited users",;
+      popular:false,;
+      features:[;
+        { name:"Private hiring portal", included:true },;
+        { name:"Dedicated talent pool", included:true },;
+        { name:"Premium SLA (1h)", included:true },;
+        { name:"Full white labeling", included:true },;
+        { name:"Admin dashboard", included:true },;
+        { name:"Team collaboration", included:true },;
+        { name:"API access", included:true },;
+        { name:"Custom integrations", included:true },;
+        { name:"Dedicated success manager", included:true }]}],;
+;
+  return (;
+        { name: "Custom integrations", included: true };
+        { name: "Dedicated success manager", included: true }]}];
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <section id="pricing" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
@@ -169,12 +304,17 @@ export function EnterprisePricingTable() {;
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="overflow-x-auto">;
           <Table className="border rounded-lg">;
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
+<<<<<<< HEAD
                 {plans && plans.map((plan) => (;
                   <TableHead key={plan && plan.name} className="text-center">;
                     <div className="flex flex-col items-center">;
@@ -184,6 +324,8 @@ export function EnterprisePricingTable() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
@@ -200,6 +342,7 @@ export function EnterprisePricingTable() {;
                         className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan && plan.popular ? 'default' : 'outline'}>;
                         {plan && plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+<<<<<<< HEAD
                       </Button>;
                     </div>;
                   </TableHead>;
@@ -217,10 +360,26 @@ export function EnterprisePricingTable() {;
                       ) : (;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;
                       )}
+=======
+                {plans.map((plan) => (;
+                  <TableHead key={plan.name} className="text-center">;
+                    <div className="flex flex-col items-center">;
+                      {plan.popular && (;
+              {plans[0].features.map((feature, index) => (;
+                <TableRow key={feature.name}>;
+                  <TableCell className="font-medium">{feature.name}</TableCell>;
+                  {plans.map((plan) => (;
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
+                      {plan.features[index].included ? (;
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
+                      ) :(;
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;                      )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </TableCell>;
                   ))}
                 </TableRow>;
               ))}
+<<<<<<< HEAD
 
             </TableBody>;
           </Table>;
@@ -235,6 +394,11 @@ export function EnterprisePricingTable() {;
 }
 
 =======
+=======
+            </TableBody>;
+          </Table>;
+        </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -356,4 +520,186 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+        <div className="mt-8 text-center text-sm text-muted-foreground">;
+          All plans include SSL security, 99.9% uptime SLA, and dedicated support;
+        </div>;
+      </div>;
+    </section>;
+  ),;}
+ import {
+  Table;
+TableBody;
+TableCell;
+TableHead;
+TableHeader;
+export function EnterprisePricingTable () {
+  const plans = [ {
+  name: "Teams";
+price: "$599";
+billing: "/month";
+description: "Perfect for small teams";
+users: "Up to 10 users";
+popular: false;
+features: [ {
+  name: "Private hiring portal", included: true 
+};
+{
+  name: "Dedicated talent pool", included: true 
+};
+{
+  name: "Standard SLA (24h) ", included: true 
+};
+{
+  name: "Basic branding", included: true 
+};
+{
+  name: "Admin dashboard", included: true 
+};
+{
+  name: "Team collaboration", included: true 
+};
+{
+  name: "API access", included: false 
+};
+{
+  name: "Custom integrations", included: false 
+};
+{
+  name: "Dedicated success manager", included: false 
+}] 
+};
+{
+  name: "Business";
+price: "$1, 999";
+billing: "/month";
+description: "Ideal for growing companies";
+users: "Up to 50 users";
+popular: true;
+features: [ {
+  name: "Private hiring portal", included: true 
+};
+{
+  name: "Dedicated talent pool", included: true 
+};
+{
+  name: "Enhanced SLA (8h) ", included: true 
+};
+{
+  name: "Advanced branding", included: true 
+};
+{
+  name: "Admin dashboard", included: true 
+};
+{
+  name: "Team collaboration", included: true 
+};
+{
+  name: "API access", included: true 
+};
+{
+  name: "Custom integrations", included: false 
+};
+{
+  name: "Dedicated success manager", included: false 
+}] 
+};
+{
+  name: "Enterprise";
+price: "Custom";
+billing: "";
+description: " For large organizations";
+users: " Unlimited users";
+popular: false;
+features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.map ( (plan) => (<TableHead key= {
+  plan.name 
+}className="text-center"> <div className="flex flex-col items-center"> {
+  plan.popular && (<Badge className="mb-2 bg-zion-purple">Most Popular</Badge>) 
+}<span className="font-bold text-xl"> {
+  plan.name 
+}</span> <div className="flex items-baseline mt-1"> <span className="text-2xl font-bold"> {
+  plan.price 
+}</span> <span className="text-sm text-muted-foreground ml-1"> {
+  plan.billing 
+}</span> </div> <p className="text-sm text-muted-foreground mt-1"> {
+  plan.description 
+}</p> <p className="text-sm font-medium mt-2"> {
+  plan.users 
+}</p> <Button className= {
+  `mt-4 w-full $ {
+  plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : '' 
+}` 
+}variant= {
+  plan.popular ? 'default': 'outline' 
+}> </Button> </div> </TableHead>) ) 
+}</TableRow> </TableHeader> <TableBody> {
+  plans[0].features.map ( (feature, index) => (<TableRow key= {
+  feature.name 
+}> <TableCell className="font-medium"> {
+  feature.name 
+}</TableCell> {
+  plans.map ( (plan) => (<TableCell key= {
+  `$ {
+  plan.name 
+}-$ {
+  feature.name 
+}` 
+}className="text-center"> {
+  plan.features[index].included ? (<Check className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-muted-foreground mx-auto"/>) 
+}</TableCell>) ) 
+}</TableRow>) ) 
+}</TableBody> </Table> </div> <div className="mt-8 text-center text-sm text-muted-foreground"> All plans include SSL security, 99.9% uptime SLA, and dedicated support </div> </div> </section>) 
+}
+                        <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
+                      )}
+                      <span className="font-bold text-xl">{plan.name}</span>
+                      <div className="flex items-baseline mt-1">
+                        <span className="text-2xl font-bold">{plan.price}</span>
+                        <span className="text-sm text-muted-foreground ml-1">
+                          {plan.billing}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {plan.description}
+                      </p>
+                      <p className="text-sm font-medium mt-2">{plan.users}</p>
+                      <Button
+                        className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
+                        variant={plan.popular ? 'default' : 'outline'}
+                      >
+                        {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+                      </Button>
+                    </div>
+                  </TableHead>
+                ))}
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {plans[0].features.map((feature, index) => (
+                <TableRow key={feature.name}>
+                  <TableCell className="font-medium">{feature.name}</TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">
+                      {plan.features[index].included ? (
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+        <div className="mt-8 text-center text-sm text-muted-foreground">
+          All plans include SSL security, 99.9% uptime SLA, and dedicated support
+        </div>
+      </div>
+    </section>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

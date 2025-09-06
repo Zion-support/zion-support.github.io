@@ -1,17 +1,35 @@
 
+<<<<<<< HEAD
 
+=======
+declare module 'react' {
+  const React: any;
+
+  export default React
+  // Basic overloads for useRef to handle common cases
+  export function useRef<T>(initialValue: T): { current: T }
+  export function useRef<T>(initialValue: T | null): { current: T | null }
+  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
+<<<<<<< HEAD
     initialState: S | (() => S)
+=======
+    initialState: S | (() => S);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -20,6 +38,7 @@
   export function useId(): string
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
+<<<<<<< HEAD
     render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
 =======
@@ -47,11 +66,26 @@
   export const clone_element: any;
   export type ReactNode = any;
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 
 
+<<<<<<< HEAD
+=======
+    render: (props: P, ref: Ref<T>) => ReactElement | null;
+  ): any;
+  export const Fragment: any;
+  export const StrictMode: any;
+  export const cloneElement: any;
+  export type ReactNode = any;
+  export type ReactElement = any
+  export type ComponentType<P = {}> = (props: P) => any
+  export type ReactElement = any,
+  export type ComponentType<P = {}> = (props: P) => any,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -91,21 +125,30 @@
   export type LegacyRef < T = any> = any;
   export type ElementRef < T = any> = any,
   export type CSSProperties = Record < string, string | number | undefined>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 declare module 'react-dom' {
   export * from 'react-dom / index';
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 declare module 'react / jsx - runtime' {
   export const jsx: any;
   export const jsxs: any,
   export const Fragment: any;
 
 }
+<<<<<<< HEAD
 =======
 
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 declare module 'react-dom' {
   export * from 'react-dom/index'
@@ -116,8 +159,11 @@ declare module 'react/jsx-runtime' {;
   export const jsxs: any,
   export const Fragment: any;
 };
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -147,6 +193,39 @@ declare module 'react' {;
   export type ReactElement = any,;
   export type ComponentType<P = {}> = (props: P) => any,;
   export type FC<P = {}> = (props: P) => any,;
+<<<<<<< HEAD
+=======
+}
+declare module 'react' {;
+  const React:any,;
+  export default React,;
+  // Basic overloads for useRef to handle common cases;
+  export function useRef<T>(initialValue:T):{ current:T },;
+  export function useRef<T>(initialValue:T | null):{ current:T | null },;
+  export function useRef<T = undefined>(initialValue?:T):{ current:T | undefined },;
+  export const useEffect:any,;
+  export type Dispatch<A> = (value:A) => void,;
+  export type SetStateAction<S> = S | ((prevState:S) => S),;
+  export function useState<S>(;
+    initialState:S | (() => S);
+  ):[S, Dispatch<SetStateAction<S>>],;
+  export function createContext<T>(defaultValue:T):any,;
+  export function useContext<T>(context:any):T,;
+  export const useMemo:any,;
+  export const useCallback:any,;
+  export function useId():string,;
+  // Generic definition to allow usage like forwardRef<HTMLDivElement Props>();
+  export function forwardRef<T P = {}>(;
+    render:(props:P, ref:Ref<T>) => ReactElement | null;
+  ):any,;
+  export const Fragment:any,;
+  export const StrictMode:any,;
+  export const cloneElement:any,;
+  export type ReactNode = any,;
+  export type ReactElement = any,;
+  export type ComponentType<P = {}> = (props:P) => any,;
+  export type FC<P = {}> = (props:P) => any,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   export type ComponentProps<T = any> = any,;
   export type ComponentPropsWithoutRef<T = any> = any,;
   export type PropsWithoutRef<T = any> = any,;
@@ -164,13 +243,46 @@ declare module 'react' {;
   export type LegacyRef<T = any> = any,;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
+<<<<<<< HEAD
 
 =======
+=======
+}
+declare module 'react-dom' {
+  export * from 'react-dom/index'
+}
+declare module 'react/jsx-runtime' {
+  export const jsx: any;
+  export const jsxs: any
+
+  export const Fragment: any
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
+;
+declare module 'react/jsx-runtime' {;
+  export const jsx: any,;
+  export const jsxs: any;
+  export const Fragment: any;
+}
+
+}
+;
+declare module 'react-dom' {;
+  export * from 'react-dom/index',;}
+;
+declare module 'react/jsx-runtime' {;
+  export const jsx:any,;
+  export const jsxs:any,;
+  export const Fragment:any;
+}
+ 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+}
+<<<<<<< HEAD
 
 ;
 declare module 'react/jsx-runtime' {;
@@ -182,3 +294,5 @@ declare module 'react/jsx-runtime' {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

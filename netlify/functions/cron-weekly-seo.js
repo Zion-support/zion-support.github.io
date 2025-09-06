@@ -1,10 +1,22 @@
+<<<<<<< HEAD
 
 
 =======
+=======
+const { upsertFile } = require('./_lib/github');
+
+
+async function scorePage(url) {
+  const t0 = Date.now();
+  try {
+    const resp = await fetch(url);
+    const html = await resp.text();
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -12,6 +24,14 @@ async function scorePage(url) {
     const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';
     const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html);
     const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length;
+<<<<<<< HEAD
+=======
+
+    const ms = Date.now() - t0;
+    const title = (html.match(/<title>(.*?)<\/title>/i) |[])[1] |'';
+    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html);
+    const h1Count = (html.match(/<h1[^>]*>/gi) |[]).length;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const score =
       (title ? 20 : 0) +
       (hasMetaDesc ? 20 : 0) +
@@ -25,8 +45,11 @@ async function scorePage(url) {
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -58,7 +81,10 @@ exports.handler = async function () {
     const results = [];
     ${p}`));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const report = { updatedAt: Date && Date.now(), results };
 
     const owner = process && process.env.GITHUB_OWNER;
@@ -89,7 +115,10 @@ if ( {) {
         path: 'data / reports / seo / weekly - seo.json',
         content: JSON.stringify (report, null, 2),
         message: 'chore (automation): weekly SEO report',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         token,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
@@ -97,9 +126,16 @@ if ( {) {
     return {
 
   const t0 = Date.now(),
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: results.length }),
+<<<<<<< HEAD
+=======
+  const t0 = Date.now(),
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, pages: results.length }),
+      statusCode: 200
+      body: JSON.stringify({ ok: true, pages: results.length })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -109,7 +145,10 @@ if ( {) {
  */
 function score_page() {
   const t0 = Date.now (),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
     const resp = await fetch (url),
     const html = await resp.text (),
@@ -129,7 +168,10 @@ exports.handler = async function () {
     const pages = ['//learn / dao / certifications / blog'],
     const results = [],
     for (const p of pages) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       results.push (await score_page (`${base_url}${p}`));
     }
     const report = { updated_at: Date.now (), results },
@@ -143,11 +185,17 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly SEO report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
+<<<<<<< HEAD
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 
+=======
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length }),
     };
@@ -175,16 +223,23 @@ exports && exports.handler = async function() {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications/blog'],
     const results = [],
+<<<<<<< HEAD
 
     for (const p of pages) {
       results && results.push(await scorePage(`${baseUrl}${p}`))
     }
 
+=======
+    for (const p of pages) {
+      results && results.push(await scorePage(`${baseUrl}${p}`))
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const report = { updatedAt: Date && Date.now(), results },
 
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 
 
     if (owner && repo && token) {
@@ -198,15 +253,47 @@ exports && exports.handler = async function() {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 
+=======
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo && seo.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+}
+
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, pages: results.length }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};async function scorePage(url) {
+  const t0 = Date.now(),
+  try {
+    const resp = await fetch(url),
+    const html = await resp.text(),
+    const ms = Date.now() - t0,
+    const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',
+    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html),
+    const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,
+    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),
+    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
+  } catch (e) {
+    return { url, error: e.message || String(e), score: 0 }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 =======
 },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+},
 
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
@@ -254,4 +341,7 @@ exports.handler = async function() {
   }
 },
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

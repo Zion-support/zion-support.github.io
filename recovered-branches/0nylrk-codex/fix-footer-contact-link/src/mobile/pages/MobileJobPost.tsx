@@ -16,8 +16,14 @@ import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
 
 
+<<<<<<< HEAD
 
 =======
+=======
+type JobPostStep = "details" | "requirements" | "budget" | "preview";
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -46,8 +52,19 @@ export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
 
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+type JobPostStep = "details" | "requirements" | "budget" | "preview",
+
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -57,11 +74,20 @@ export function MobileJobPost() {
       setCurrentStep("preview")
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
 
 
+<<<<<<< HEAD
+=======
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -70,19 +96,26 @@ export function MobileJobPost() {
     } else if (currentStep === "preview") {
       setCurrentStep("budget")
     }
+<<<<<<< HEAD
 
-
+=======
+  }
   },
   
-
-
   const renderStepContent = () => {
     switch (currentStep) {
-=======
-
+      case "details": return <DetailsStep />,
+      case "requirements":
+        return <RequirementsStep />,
+      case "budget":
+        return <BudgetStep />,
+      case "preview":
+        return <PreviewStep />,
+      default:
+        return <DetailsStep />
+    }
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
-
   const goToNextStep = () => {;
     if (currentStep === "details") {;
       setCurrentStep("requirements");
@@ -92,7 +125,6 @@ export function MobileJobPost() {;
       setCurrentStep("preview");
     }
   };
-
   const goToPrevStep = () => {;
     if (currentStep === "requirements") {;
       setCurrentStep("details");
@@ -101,6 +133,271 @@ export function MobileJobPost() {;
     } else if (currentStep === "preview") {;
       setCurrentStep("budget");
     }
+  };
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details": return <DetailsStep />;
+      case "requirements":;
+        return <RequirementsStep />;
+      case "budget":;
+        return <BudgetStep />;
+      case "preview":;
+        return <PreviewStep />;
+      default:;
+        return <DetailsStep />;
+    }
+  };
+  }
+  },
+  
+  return (
+    <div className="min-h-screen flex flex-col">
+      <MobileHeader
+        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
+        showBack
+      />
+      <main className="flex-1 py-4 pb-24 px-4">
+        <div className="mb-6 flex justify-between">
+          <div className="flex space-x-1">
+            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
+            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
+            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
+            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
+          </div>
+          <Button variant="outline" className="flex gap-1">
+            <Zap className="h-4 w-4" /> AI Assist
+          </Button>
+        </div>
+        {renderStepContent()}
+        <div className="flex gap-2 mt-6">
+          {currentStep !== "details" && (
+            <Button
+              variant="outline"
+              className="flex-1 gap-1"
+              onClick={goToPrevStep}
+            >
+              <ChevronLeft className="h-4 w-4" /> Back
+            </Button>
+      />;
+      <main className="flex-1 py-4 pb-24 px-4">;
+        <div className="mb-6 flex justify-between">;
+          <div className="flex space-x-1">;
+            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
+            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
+            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
+            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
+          </div>;
+
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { ;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue ;
+} from "@/components/ui/select",;
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { Card, CardContent } from "@/components/ui/card",;
+;
+type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+;
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),;
+  ;
+  const goToNextStep = () => {;
+    if (currentStep === "details") {;
+      setCurrentStep("requirements"),;
+    } else if (currentStep === "requirements") {;
+      setCurrentStep("budget"),;
+    } else if (currentStep === "budget") {;
+      setCurrentStep("preview"),;
+    }
+  },;
+  ;
+  const goToPrevStep = () => {;
+    if (currentStep === "requirements") {;
+      setCurrentStep("details"),;
+    } else if (currentStep === "budget") {;
+      setCurrentStep("requirements"),;
+    } else if (currentStep === "preview") {;
+      setCurrentStep("budget"),;
+    }
+  },;
+  ;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details":return <DetailsStep />,;
+      case "requirements":;
+        return <RequirementsStep />,;
+      case "budget":;
+        return <BudgetStep />,;
+      case "preview":;
+        return <PreviewStep />,;
+      default:;
+        return <DetailsStep />;
+    }
+  },;
+  ;
+  return (;
+    <div className="min-h-screen flex flex-col">;
+      <MobileHeader;
+        title={`Post a Job (${currentStep === "preview" ? 4 :currentStep === "budget" ? 3 :currentStep === "requirements" ? 2 :1}/4)`}
+        showBack;
+      />;
+      ;
+      <main className="flex-1 py-4 pb-24 px-4">;
+        <div className="mb-6 flex justify-between">;
+          <div className="flex space-x-1">;
+            <Badge variant={currentStep === "details" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
+            <Badge variant={currentStep === "requirements" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
+            <Badge variant={currentStep === "budget" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
+            <Badge variant={currentStep === "preview" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
+          </div>;
+          ;
+          <Button variant="outline" className="flex gap-1">;
+            <Zap className="h-4 w-4" /> AI Assist;
+          </Button>;
+        </div>;
+          )}
+          <Button
+            className="flex-1 gap-1"
+            onClick={goToNextStep}
+          >
+            {currentStep === "preview" ? "Publish Job" : "Continue"}
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+          </Button>
+        </div>
+      </main>
+      <BottomNavigation />
+    </div>
+  )
+}
+function DetailsStep() {
+  return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Details</h2>
+      <div className="space-y-2">
+        <Label htmlFor="title">Job Title</Label>
+        <Input id="title" placeholder="e.g. Senior React Developer" />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="company">Company Name</Label>
+        <Input id="company" placeholder="Your company name" />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="location">Location</Label>
+        <Select defaultValue="remote">
+          <SelectTrigger>
+            <SelectValue placeholder="Select location type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="remote">Remote</SelectItem>
+            <SelectItem value="onsite">On-site</SelectItem>
+            <SelectItem value="hybrid">Hybrid</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="jobType">Job Type</Label>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="Select job type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="fulltime">Full-time</SelectItem>
+            <SelectItem value="parttime">Part-time</SelectItem>
+            <SelectItem value="contract">Contract</SelectItem>
+            <SelectItem value="freelance">Freelance</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+          rows={5}
+        />
+      </div>
+    </div>
+  )
+}
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]);
+  const [newSkill, setNewSkill] = useState("");
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue;
+} from "@/components/ui/select",;
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { Card, CardContent } from "@/components/ui/card",;
+type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+  },
+  
+
+
+  const renderStepContent = () => {
+    switch (currentStep) {
+
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+
+<<<<<<< HEAD
+=======
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  const goToNextStep = () => {;
+    if (currentStep === "details") {;
+      setCurrentStep("requirements");
+    } else if (currentStep === "requirements") {;
+      setCurrentStep("budget");
+    } else if (currentStep === "budget") {;
+      setCurrentStep("preview");
+    }
+<<<<<<< HEAD
+  };
+
+=======
+  },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  const goToPrevStep = () => {;
+    if (currentStep === "requirements") {;
+      setCurrentStep("details");
+    } else if (currentStep === "budget") {;
+      setCurrentStep("requirements");
+    } else if (currentStep === "preview") {;
+      setCurrentStep("budget");
+    }
+<<<<<<< HEAD
   };
 
   const renderStepContent = () => {;
@@ -121,11 +418,16 @@ export function MobileJobPost() {;
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
@@ -133,6 +435,7 @@ export function MobileJobPost() {;
         showBack
 
       />;
+<<<<<<< HEAD
 
       <main className="flex-1 py-4 pb-24 px-4">;
         <div className="mb-6 flex justify-between">;
@@ -143,10 +446,42 @@ export function MobileJobPost() {;
             <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
           </div>;
 
+=======
+
+  },;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details": return <DetailsStep />,;
+      case "requirements":;
+        return <RequirementsStep />,;
+      case "budget":;
+        return <BudgetStep />,;
+      case "preview":;
+        return <PreviewStep />,;
+      default:;
+        return <DetailsStep />;
+    }
+  },;
+  return (;
+    <div className="min-h-screen flex flex-col">;
+      <MobileHeader;
+        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
+        showBack;
+      />;
+      <main className="flex-1 py-4 pb-24 px-4">;
+        <div className="mb-6 flex justify-between">;
+          <div className="flex space-x-1">;
+            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
+            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
+            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
+            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
+          </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Button variant="outline" className="flex gap-1">;
             <Zap className="h-4 w-4" /> AI Assist;
           </Button>;
         </div>;
+<<<<<<< HEAD
 
         {renderStepContent()}
 
@@ -171,10 +506,58 @@ export function MobileJobPost() {;
         </div>;
       </main>;
 
+=======
+        ;
+        {renderStepContent()}
+        ;
+        <div className="flex gap-2 mt-6">;
+          {currentStep !== "details" && (;
+            <Button ;
+              variant="outline" ;
+              className="flex-1 gap-1" ;
+              onClick={goToPrevStep}
+            >;
+              <ChevronLeft className="h-4 w-4" /> Back;
+            </Button>;
+          )}
+          ;
+          <Button ;
+            className="flex-1 gap-1";
+            onClick={goToNextStep}
+          >;
+            {currentStep === "preview" ? "Publish Job" :"Continue"}
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+          </Button>;
+        </div>;
+      </main>;
+        {renderStepContent()}
+;
+        <div className="flex gap-2 mt-6">;
+          {currentStep !== "details" && (;
+            <Button;
+              variant="outline";
+              className="flex-1 gap-1";
+              onClick={goToPrevStep}
+            >
+              <ChevronLeft className="h-4 w-4" /> Back
+            </Button>
+          )}
+;
+          <Button;
+            className="flex-1 gap-1";
+            onClick={goToNextStep}
+          >;
+            {currentStep === "preview" ? "Publish Job" : "Continue"}
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+          </Button>;
+        </div>;
+      </main>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <BottomNavigation />;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 function DetailsStep() {;
   return (
@@ -186,11 +569,31 @@ function DetailsStep() {;
         <Input id="title" placeholder="e && e.g. Senior React Developer" />;
       </div>;
 
+=======
+      ;
+      <BottomNavigation />;
+    </div>;
+  ),;
+}
+;
+function DetailsStep() {;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Details</h2>;
+      <div className="space-y-2">;
+        <Label htmlFor="title">Job Title</Label>;
+        <Input id="title" placeholder="e.g. Senior React Developer" />;
+      </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space-y-2">;
         <Label htmlFor="company">Company Name</Label>;
         <Input id="company" placeholder="Your company name" />;
       </div>;
+<<<<<<< HEAD
 
+=======
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space-y-2">;
         <Label htmlFor="location">Location</Label>;
         <Select defaultValue="remote">;
@@ -204,7 +607,11 @@ function DetailsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
+=======
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space-y-2">;
         <Label htmlFor="jobType">Job Type</Label>;
         <Select>;
@@ -219,6 +626,7 @@ function DetailsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
       <div className="space-y-2">;
         <Label htmlFor="description">Job Description</Label>;
@@ -226,13 +634,24 @@ function DetailsStep() {;
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="description">Job Description</Label>;
+        <Textarea ;
+          id="description" ;
+          placeholder="Describe the job role and responsibilities" ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           rows={5}
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -389,12 +808,18 @@ function DetailsStep() {
       </div>;
       <div className="space - y-2">;
         <Label html_for="description">Job Description</Label>;
+<<<<<<< HEAD
+=======
+      <div className="space-y-2">;
+        <Label htmlFor="description">Job Description</Label>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Textarea;
           id="description";
           placeholder="Describe the job role and responsibilities";
           rows={5}
         />;
       </div>;
+<<<<<<< HEAD
     </div>);
 }
 /**
@@ -402,19 +827,27 @@ function DetailsStep() {
  */
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function RequirementsStep() {
   const [skills, set_skills] = useState < string[]>([;
     "React", "TypeScript", "Node.js";
   ]);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node && Node.js";
@@ -423,20 +856,46 @@ function RequirementsStep() {;
 
   const addSkill = () => {;
     if (newSkill && !skills && skills.includes(newSkill)) {;
+<<<<<<< HEAD
 
       setSkills([...skills, newSkill]);
       setNewSkill("");
     }
 
 
+=======
+    </div>;
+  );
+}
+
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]),
+  const [newSkill, setNewSkill] = useState(""),
+  
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill]),
+      setNewSkill("")
+    }
+  }
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill))
+  }
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
   },
   
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -476,7 +935,33 @@ function RequirementsStep() {;
           {skills.map((skill) => (
             <Badge
               key={skill}
+<<<<<<< HEAD
 
+=======
+              variant="secondary"
+              className="flex items-center gap-1 px-3 py-1"
+            >
+              {skill}
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+;
+function RequirementsStep() {;
+  const [skills, setSkills] = useState<string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]),;
+  const [newSkill, setNewSkill] = useState(""),;
+  const addSkill = () => {;
+    if (newSkill && !skills.includes(newSkill)) {;
+      setSkills([...skills, newSkill]),;
+      setNewSkill("");
+    }
+
+      setSkills([...skills, newSkill]);
+      setNewSkill("");
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   const removeSkill = (skill: string) => {;
@@ -486,7 +971,41 @@ function RequirementsStep() {;
   return (
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
+<<<<<<< HEAD
 
+=======
+  ),;
+}
+;
+function RequirementsStep() {;
+  const [skills, setSkills] = useState<string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]),;
+  const [newSkill, setNewSkill] = useState(""),;
+  ;
+  const addSkill = () => {;
+    if (newSkill && !skills.includes(newSkill)) {;
+      setSkills([...skills, newSkill]),;
+      setNewSkill(""),;
+    }
+  },;
+  ;
+  const removeSkill = (skill:string) => {;
+    setSkills(skills.filter(s => s !== skill));
+  },;
+  ;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Requirements</h2>;
+      ;
+  };
+  const removeSkill = (skill: string) => {;
+    setSkills(skills.filter(s => s !== skill));
+  };
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Requirements</h2>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
         <Select>;
@@ -501,7 +1020,11 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
+=======
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
         <Select>;
@@ -518,6 +1041,7 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
       <div className="space-y-2">;
         <Label>Required Skills</Label>;
@@ -566,6 +1090,87 @@ function RequirementsStep() {;
           id="requirements" 
           placeholder="List any specific requirements or qualifications" 
           rows={4}
+=======
+              variant="secondary"
+              className="flex items-center gap-1 px-3 py-1">;
+      ;
+      <div className="space-y-2">;
+        <Label>Required Skills</Label>;
+        <div className="flex flex-wrap gap-2 mb-3">;
+          {skills.map((skill) => (;
+            <Badge;
+              key={skill} ;
+              variant="secondary";
+              className="flex items-center gap-1 px-3 py-1";
+            >;
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+              variant="secondary"
+              className="flex items-center gap-1 px-3 py-1"
+            >
+              {skill}
+
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+
+              <button ;
+                className="ml-1 rounded-full hover:bg-background/20 p-1";
+                onClick={() => removeSkill(skill)}
+              >;
+                ×;
+              </button>;
+            </Badge>;
+          ))}
+        </div>;
+        <div className="flex gap-2">;
+          <Input ;
+            value={newSkill}
+            onChange={(e) => setNewSkill(e.target.value)}
+            placeholder="Add a skill";
+            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+          />;
+          <Button onClick={addSkill}>Add</Button>;
+        </div>;
+      </div>;
+              {skill}
+              <button;
+                className="ml-1 rounded-full hover:bg-background/20 p-1";
+                onClick={() => removeSkill(skill)}
+              >
+                ×
+              </button>
+            </Badge>
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <Input
+            value={newSkill}
+            onChange={(e) => setNewSkill(e.target.value)}
+            placeholder="Add a skill"
+            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+          />
+          <Button onClick={addSkill}>Add</Button>
+        </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="requirements">Specific Requirements</Label>
+        <Textarea
+          id="requirements"
+          placeholder="List any specific requirements or qualifications"
+          rows={4}
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="responsibilities">Key Responsibilities</Label>
+        <Textarea
+          id="responsibilities"
+          placeholder="List the key responsibilities for this role"
+          rows={4}
+        />
+      </div>
+    </div>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
       </div>;
 
@@ -574,19 +1179,127 @@ function RequirementsStep() {;
         <Textarea
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
+<<<<<<< HEAD
 
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="requirements">Specific Requirements</Label>;
+        <Textarea ;
+          id="requirements" ;
+          placeholder="List any specific requirements or qualifications" ;
+          rows={4}
+        />;
+      </div>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="responsibilities">Key Responsibilities</Label>;
+        <Textarea ;
+          id="responsibilities" ;
+          placeholder="List the key responsibilities for this role" ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          rows={4}
+        />;
+      </div>;
+    </div>;
+<<<<<<< HEAD
+  );
+=======
+=======
+}
+        <Textarea 
+          id="responsibilities" 
+          placeholder="List the key responsibilities for this role" 
           rows={4}
         />;
       </div>;
     </div>;
   );
-=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+function BudgetStep() {
+  return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Budget & Timeline</h2>
+      <div className="space-y-2">
+        <Label htmlFor="paymentType">Payment Type</Label>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="Select payment type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="hourly">Hourly Rate</SelectItem>
+            <SelectItem value="fixed">Fixed Price</SelectItem>
+            <SelectItem value="salary">Salary</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label>Salary Range</Label>
+        <div className="flex gap-4 items-center">
+          <Input placeholder="Min" type="number" className="w-full" />
+          <span>to</span>
+          <Input placeholder="Max" type="number" className="w-full" />
+          <Select defaultValue="usd">
+            <SelectTrigger className="w-24">
+              <SelectValue placeholder="Currency" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="usd">USD</SelectItem>
+              <SelectItem value="eur">EUR</SelectItem>
+              <SelectItem value="gbp">GBP</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="deadline">Application Deadline</Label>
+        <Input type="date" id="deadline" />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="startDate">Expected Start Date</Label>
+        <Input type="date" id="startDate" />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="duration">Project Duration</Label>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="Select project duration" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="ltw">Less than a week</SelectItem>
+            <SelectItem value="ltm">Less than a month</SelectItem>
+            <SelectItem value="1-3m">1-3 months</SelectItem>
+            <SelectItem value="3-6m">3-6 months</SelectItem>
+            <SelectItem value="6m+">6+ months</SelectItem>
+            <SelectItem value="ongoing">Ongoing</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="additionalInfo">Additional Budget Information</Label>
+        <Textarea
+          id="additionalInfo"
+          placeholder="Any additional information about budget or payment"
+        <Textarea 
+          id="additionalInfo" 
+          placeholder="Any additional information about budget or payment" 
+          rows={3}
+        />
+      </div>
+    </div>
+  )
 }
 
 
+<<<<<<< HEAD
+=======
+}
+
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function BudgetStep() {;
   return (
     <div className="space-y-4">;
@@ -698,7 +1411,20 @@ function BudgetStep() {
       <h2 className="text - lg font - medium">Budget & Timeline</h2>;
       <div className="space - y-2">;
         <Label html_for="payment_type">Payment Type</Label>;
+<<<<<<< HEAD
 
+=======
+  ),;
+}
+;
+function BudgetStep() {;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Budget & Timeline</h2>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="paymentType">Payment Type</Label>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select payment type" />;
@@ -710,6 +1436,7 @@ function BudgetStep() {
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
       <div className="space - y-2">;
         <Label > Salary Range</Label>;
@@ -720,6 +1447,17 @@ function BudgetStep() {
           <Select default_value="usd">;
             <SelectTrigger className="w - 24">;
 
+=======
+      ;
+      <div className="space-y-2">;
+        <Label>Salary Range</Label>;
+        <div className="flex gap-4 items-center">;
+          <Input placeholder="Min" type="number" className="w-full" />;
+          <span>to</span>;
+          <Input placeholder="Max" type="number" className="w-full" />;
+          <Select defaultValue="usd">;
+            <SelectTrigger className="w-24">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <SelectValue placeholder="Currency" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -730,6 +1468,7 @@ function BudgetStep() {
           </Select>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
       <div className="space - y-2">;
         <Label html_for="deadline">Application Deadline</Label>;
@@ -742,6 +1481,21 @@ function BudgetStep() {
       <div className="space - y-2">;
         <Label html_for="duration">Project Duration</Label>;
 
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="deadline">Application Deadline</Label>;
+        <Input type="date" id="deadline" />;
+      </div>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="startDate">Expected Start Date</Label>;
+        <Input type="date" id="startDate" />;
+      </div>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="duration">Project Duration</Label>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select project duration" />;
@@ -749,10 +1503,15 @@ function BudgetStep() {
           <SelectContent>;
             <SelectItem value="ltw">Less than a week</SelectItem>;
             <SelectItem value="ltm">Less than a month</SelectItem>;
+<<<<<<< HEAD
 
             <SelectItem value="1 - 3m">1 - 3 months</SelectItem>;
             <SelectItem value="3 - 6m">3 - 6 months</SelectItem>;
 
+=======
+            <SelectItem value="1-3m">1-3 months</SelectItem>;
+            <SelectItem value="3-6m">3-6 months</SelectItem>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <SelectItem value="6m+">6+ months</SelectItem>;
             <SelectItem value="ongoing">Ongoing</SelectItem>;
           </SelectContent>;
@@ -760,6 +1519,7 @@ function BudgetStep() {
       </div>;
 
 
+<<<<<<< HEAD
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
@@ -776,6 +1536,8 @@ function BudgetStep() {
 
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -811,6 +1573,7 @@ function PreviewStep() {
     </div>
   )
 
+<<<<<<< HEAD
 
 function PreviewStep() {;
   return (
@@ -856,6 +1619,8 @@ function PreviewStep() {;
 }
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space - y-2">;
         <Label html_for="additional_info">Additional Budget Information</Label>;
         <Textarea;
@@ -878,10 +1643,38 @@ function PreviewStep() {
           <h3 className="font - bold text - lg">Senior React Developer</h3>;
           <p className="text - muted - foreground">TechCorp Inc. • Remote • Full - time</p>;
           <div className="flex gap - 2 my - 3">;
+<<<<<<< HEAD
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="additionalInfo">Additional Budget Information</Label>;
+        <Textarea ;
+          id="additionalInfo" ;
+          placeholder="Any additional information about budget or payment" ;
+          rows={3}
+        />;
+      </div>;
+    </div>;
+  ),;
+}
+;
+function PreviewStep() {;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium mb-2">Job Preview</h2>;
+      ;
+      <Card>;
+        <CardContent className="p-4">;
+          <h3 className="font-bold text-lg">Senior React Developer</h3>;
+          <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>;
+          ;
+          <div className="flex gap-2 my-3">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Badge variant="outline">React</Badge>;
             <Badge variant="outline">TypeScript</Badge>;
             <Badge variant="outline">Node.js</Badge>;
           </div>;
+<<<<<<< HEAD
           <div className="space - y-1 text - sm mt - 4">;
             <p className="font - medium">Salary Range:</p>;
             <p>$80, 000 - $120, 000 USD / year</p>;
@@ -909,3 +1702,83 @@ function PreviewStep() {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+}
+
+          ;
+          <div className="space-y-1 text-sm mt-4">;
+            <p className="font-medium">Salary Range:</p>;
+            <p>$80,000 - $120,000 USD / year</p>;
+          </div>;
+          ;
+          <div className="space-y-1 text-sm mt-3">;
+            <p className="font-medium">Experience Level:</p>;
+            <p>Senior</p>;
+          </div>;
+          ;
+          <div className="space-y-1 text-sm mt-3">;
+            <p className="font-medium">Application Deadline:</p>;
+            <p>December 15, 2023</p>;
+          </div>;
+          ;
+          <div className="mt-4 pt-3 border-t border-border">;
+            <h4 className="font-medium mb-2">Description</h4>;
+            <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      ;
+      <Button variant="outline" className="w-full">Edit Job Post</Button>;
+    </div>;
+  ),;
+} import {
+  Select;
+SelectContent;
+SelectItem;
+SelectTrigger;
+SelectValue type JobPostStep = "details" | "requirements" | "budget" | "preview";
+const goToNextStep = () => {
+  if (currentStep === "details") {
+  
+}
+};
+const goToPrevStep = () => {
+  
+}
+};
+const renderStepContent = () => {
+  switch (currentStep) {
+  case "requirements": return <RequirementsStep />;
+case "budget": return <BudgetStep />;
+case "preview": default: return <DetailsStep /> 
+}
+};
+min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {
+  renderStepContent () 
+}<Button variant=" outline"className=" flex-1 gap-1"onClick= {
+  goToPrevStep 
+}> <ChevronLeft className=" h-4 w-4"/> Back </Button>) 
+}<Button </Button> </div> </main> <BottomNavigation /> </div>) 
+}<div className=" space-y-2"> <Label htmlFor=" title">Job Title</Label> <Input id=" title"placeholder=" e.g. Senior React Developer"/> </div> <div className=" space-y-2"> <Label htmlFor=" company">Company Name</Label> <Input id=" company"placeholder=" Your company name"/> </div> <div className=" space-y-2"> <Label htmlFor=" location">Location</Label> <Select defaultValue=" remote"> <SelectTrigger> <SelectValue placeholder=" Select location type"/> </SelectTrigger> <SelectContent> <SelectItem value=" remote">Remote</SelectItem> <SelectItem value=" onsite">On-site</SelectItem> <SelectItem value=" hybrid">Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" jobType">Job Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select job type"/> </SelectTrigger> <SelectContent> <SelectItem value=" fulltime">Full-time</SelectItem> <SelectItem value=" parttime">Part-time</SelectItem> <SelectItem value=" contract">Contract</SelectItem> <SelectItem value=" freelance">Freelance</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" description">Job Description</Label> <Textarea id=" description"placeholder=" Describe the job role and responsibilities"rows= {
+  5 
+}/> </div> </div>) 
+}const addSkill = () => {
+  if (newSkill && !skills.includes (newSkill) ) {
+  <div className=" space-y-2"> <Label htmlFor=" experience">Experience Level</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select experience level"/> </SelectTrigger> <SelectContent> <SelectItem value=" entry">Entry Level</SelectItem> <SelectItem value=" mid">Mid Level</SelectItem> <SelectItem value=" senior">Senior</SelectItem> <SelectItem value=" expert">Expert</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" education">Education</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select required education"/> </SelectTrigger> <SelectContent> <SelectItem value=" high school">High School</SelectItem> <SelectItem value=" associate">Associate Degree</SelectItem> <SelectItem value=" bachelor">Bachelor's Degree</SelectItem> <SelectItem value=" master">Master's Degree</SelectItem> <SelectItem value=" phd">PhD</SelectItem> <SelectItem value=" none">No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Required Skills</Label> key= {
+  skill 
+}variant=" secondary"className=" flex items-center gap-1 px-3 py-1"> {
+  skill 
+}<button > × </button> </Badge>) ) 
+}</div> <div className=" flex gap-2"> <Input /> <Button onClick= {
+  addSkill 
+}>Add</Button> </div> </div> <div className=" space-y-2"> <Label htmlFor=" requirements">Specific Requirements</Label> <Textarea /> </div> <div className=" space-y-2"> <Label htmlFor=" responsibilities">Key Responsibilities</Label> <Textarea /> </div> </div>) 
+}<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {
+  3 
+}/> </div> </div>) 
+}<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> 
+}
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

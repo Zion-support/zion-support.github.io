@@ -1,8 +1,55 @@
 import React from 'react';
 
 const Pricing: React.FC = () => {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-white py-20">
+=======
+  const plans = [
+    {
+      name: 'Basic',
+      price: '$99',
+      period: '/month',
+      features: [
+        'Basic AI consultation',
+        'Email support',
+        '5GB cloud storage',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Pro',
+      price: '$199',
+      period: '/month',
+      features: [
+        'All Basic features',
+        'Priority support',
+        '50GB cloud storage',
+        'Advanced analytics',
+        'Custom integrations'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      features: [
+        'All Pro features',
+        '24/7 dedicated support',
+        'Unlimited storage',
+        'Custom AI models',
+        'On-premise deployment',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">

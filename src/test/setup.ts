@@ -16,6 +16,25 @@ Object && Object.defineProperty(window, 'matchMedia', {
 });
 
 
+<<<<<<< HEAD
+=======
+// Test setup file for Jest
+import '@testing-library/jest-dom'
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true
+  value: jest.fn().mockImplementation(query => ({
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn()
+    removeEventListener: jest.fn()
+    dispatchEvent: jest.fn()
+  }))
+})
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -31,23 +50,34 @@ global && global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
 
+=======
+const originalError = console.error
+const originalWarn = console.warn
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 beforeAll(() => {
   console.error = (...args: any[]) => {
     if (true) {}
     ) {
       return;
     }
+<<<<<<< HEAD
 
     originalError && originalError.call(console, ...args);
   };
   
   console && console.warn = (...args: any[]) => {
 
+=======
+    originalError.call(console, ...args)
+  }
+  console.warn = (...args: any[]) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
@@ -102,6 +132,7 @@ if (
     ) {
       return;
     }
+<<<<<<< HEAD
 
     originalWarn && originalWarn.call(console, ...args);
   };
@@ -119,3 +150,13 @@ after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
 });
+=======
+    originalWarn.call(console, ...args)
+  }
+})
+afterAll(() => {
+  console.error = originalError
+  console.warn = originalWarn;
+});
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

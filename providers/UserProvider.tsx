@@ -1,5 +1,14 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
+=======
+import React, {;
+  createContext,;
+  useContext,;
+  useEffect,;
+  useMemo,;
+  useState,;} from 'react';} from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export type UserRole = 'client' | 'talent';
 
 export type User = {

@@ -3,6 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +24,10 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -39,6 +48,17 @@ class ComprehensiveTestRunner {}
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       "total": 0
     }}
@@ -55,6 +75,10 @@ class ComprehensiveTestRunner {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "total": 0;
     }};
   log(message) {}
@@ -81,26 +105,31 @@ class ComprehensiveTestRunner {}
         "command": 'npm run build',
         "type": 'build'
       };
-=======
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-
 class ComprehensiveTestRunner {
   async runTests() {
     console.log('🧪 Running Comprehensive Test Suite...');
-    
     const tests = [
       { name: 'Unit Tests', command: 'npm test -- --passWithNoTests' },
       { name: 'Type Check', command: 'npm run type-check' },
       { name: 'Lint Check', command: 'npm run lint' },
       { name: 'Build Test', command: 'npm run build' },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/main
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
-
     for (const test of tests) {
       try {
         console.log(`Running: ${test.name}`);
@@ -112,8 +141,9 @@ class ComprehensiveTestRunner {
     }
   }
 }
-
 const runner = new ComprehensiveTestRunner();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -136,3 +166,7 @@ runner.runTests().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface UseWalletProps {
   // Add props here as needed
 }
@@ -16,3 +17,15 @@ export default function UseWallet({ }: UseWalletProps) {
 }
 
 
+=======
+const ServiceComparison = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServiceComparison</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ServiceComparison;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

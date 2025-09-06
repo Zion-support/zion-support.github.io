@@ -123,6 +123,7 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
+<<<<<<< HEAD
       } catch(error) { 
       statusReport.pm2Processes = [] }
       } catch(error) { 
@@ -143,6 +144,16 @@ async function checkAutomationStatus() {
       statusReport.pm2Processes = [] }
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
+
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;

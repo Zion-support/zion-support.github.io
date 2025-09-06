@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +26,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -33,15 +37,70 @@ class ErrorBoundary extends React.Component {
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+=======
+
+"use client";
+"use client";
+
+"use client";
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+  Menu,
+
+'use client';
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+  Menu, 
+  X, 
+  Phone, 
+  Mail, 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 "use client";
 ;
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
+<<<<<<< HEAD
 
 import {
 
 
+=======
+import {
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+Phone,
+  Mail, 
+MapPin,
+  MapPin,
+  Brain,
+  Network,
+  Cloud,
+  ArrowRight
+} from 'lucide-react';
+origin/main
+
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+Instagram,
+  ChevronDown, 
+  Menu, 
+
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   X,
   ChevronDown,
   Code,
@@ -57,10 +116,18 @@ import {
   Factory,
   Truck,
 
+<<<<<<< HEAD
 =======
 
 
 
+=======
+
+
+CreditCard,
+
+  CreditCard,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Menu
   X
   ChevronDown
@@ -77,8 +144,11 @@ import {
   Factory
   Truck
   CreditCard
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {;
   Menu,;
   X,;
@@ -96,7 +166,15 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+} from "lucide-react";
+
+  CreditCard,;
+
+  CreditCard,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from "lucide-react";
 
 export default function Header() {;
@@ -107,7 +185,10 @@ export default function Header() {;
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from './lucide-react';
 ;
 export default /**
@@ -129,23 +210,92 @@ function Header() {
     }
     window.addEventListener ("scroll", handle_scroll);
     return () => window.removeEventListener ("scroll", handle_scroll);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []);
 ;
   const services_dropdown = [;
     {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
+<<<<<<< HEAD
 
 
 =======
 
 =======
+=======
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+            <Link href="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="h-5 w-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+        {/* Mobile Menu */}
+<Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
@@ -155,7 +305,84 @@ function Header() {
 
 
 
+<<<<<<< HEAD
 =======
+=======
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Finance', href: '/solutions/finance' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    { 
+      name: 'Industries', 
+      href: '/industries', 
+      dropdown: [
+        { name: 'Financial Services', href: '/industries/financial' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Government', href: '/industries/government' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about', 
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources', 
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'API Documentation', href: '/api-docs' }
+      ]
+    },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -179,7 +406,56 @@ function Header() {
                 <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+</div>
+{/* Desktop Navigation */}
+
+          </div>
+{/* Desktop Navigation */}
+
+          </div>
+          {/* Desktop Navigation */}
+<nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+
+          <nav className="hidden md:flex space-x-8">
+
+          <nav className="hidden lg:flex space-x-8">
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+origin/automation-improvements-final
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+ursor/integrate-build-improve-and-re-verify-8f7d
+          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
+origin/main
+            {navigation.map((item) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -187,6 +463,7 @@ function Header() {
 
 
   useEffect(() => {;
+<<<<<<< HEAD
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 0);
     };
@@ -309,6 +586,219 @@ function Header() {
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          <div className="hidden lg:flex items-center space-x-8">
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Services <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <div className="p-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        {servicesDropdown.map((service) => (
+                          <Link key={service.title} href={service.href} className="group">
+                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
+                              <div>
+                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
+                                <p className="text-sm text-gray-600">{service.description}</p>
+                              </div>
+                            </div>
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <button
+                  onClick={() => item.dropdown && toggleDropdown(item.name)}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                >
+                  <Link href={item.href}>{item.name}</Link>
+                  {item.dropdown && (
+                    <ChevronDown 
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} 
+                    />
+                  )}
+                </button>
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                      >
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+</AnimatePresence>
+            </div>
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsSolutionsOpen(true)}
+                onMouseLeave={() => setIsSolutionsOpen(false)}
+              >
+                Solutions <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsSolutionsOpen(true)}
+                    onMouseLeave={() => setIsSolutionsOpen(false)}
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden mt-4 border-t border-gray-200 pt-4"
+            >
+              {navigation.map((item) => (
+                <div key={item.name} className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                    {item.dropdown && (
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="p-1"
+                      >
+                        <ChevronDown 
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+                  {item.dropdown && activeDropdown === item.name && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsIndustriesOpen(true)}
+                onMouseLeave={() => setIsIndustriesOpen(false)}
+              >
+                Industries <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isIndustriesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsIndustriesOpen(true)}
+                    onMouseLeave={() => setIsIndustriesOpen(false)}
+                  >
+                    <div className="p-4">
+                      {industriesDropdown.map((industry) => (
+                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                          <industry.icon className="w-5 h-5 text-blue-600" />
+                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            {/* Regular Navigation Items */}
+            {navigation.slice(0, 2).map((item) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -316,18 +806,34 @@ function Header() {
                 {item && item.name}
               </Link>;
             ))}
+<<<<<<< HEAD
+=======
+origin/automation-improvements-final
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           </div>
 
->>>>>>> origin/automation-improvements-final
-=======
           </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+</div>
+          </nav>;
+          </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
@@ -346,18 +852,32 @@ function Header() {
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+          </nav>
+          </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
+<<<<<<< HEAD
 
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
 
 
 
+=======
+
+
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+origin/main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             >
               Get Started
             </Link>
@@ -365,24 +885,43 @@ function Header() {
 
         </div>
 
+<<<<<<< HEAD
 =======
+=======
+</div>
+      </nav>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
               Get Started;
             </Link>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             >
               Get Started
             </Link>
           </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+        </div>
+      </nav>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -392,13 +931,38 @@ function Header() {
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
+<<<<<<< HEAD
 
           </button>;
+=======
+      </nav>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+              {navigation.map((item) => (
+                <div key={item.name}>
+
+          </button>;
+</button>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
+
+
+
+<<<<<<< HEAD
 =======
 
-
-
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+              {navigation.map((item) => (
+                <div key={item.name}>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Mobile Menu */}
@@ -409,6 +973,10 @@ function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white shadow-lg">;
+<<<<<<< HEAD
+=======
+className="lg:hidden bg-white shadow-lg">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="px-4 py-6 space-y-4">;
                 {navigation && navigation.map((item) => (;
                   <Link
@@ -418,11 +986,48 @@ function Header() {
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
+<<<<<<< HEAD
+=======
+origin/main
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 ))}
                 <Link
                   href="/contact"
                   onClick={closeMenu}
+<<<<<<< HEAD
 
+=======
+className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
+                  Get Started;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          )}
+        </AnimatePresence>;
+      </div>;
+    </header>;
+
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+</div>
+    </header>
+
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       title: "Web Development",
       description: "Custom websites and web applications",
       href: "/services / web - development",
@@ -590,11 +1195,15 @@ function Header() {
         </AnimatePresence>;
       </div>;
     </header>);
+<<<<<<< HEAD
 
 }
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                   )}
                 </div>
               ))}
@@ -604,8 +1213,11 @@ function Header() {
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 >
                   Get Started
                 </Link>
@@ -614,12 +1226,20 @@ function Header() {
           )}
         </AnimatePresence>
 
+      </div>
+    </header>
+  );
+}
       </nav>
     </header>
   );
 };
 
 export default Header;
+}
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

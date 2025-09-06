@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import React, { useState } from "react";
@@ -11,6 +14,7 @@ import { motion, AnimatePresence  } from './framer-motion';
 
 import {
 
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -37,15 +41,79 @@ import {;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
+=======
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+  BarChart3
+} from 'lucide-react;
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+ursor/integrate-build-improve-and-re-verify-8f7d
+  BarChart3,
+  Search,;
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+  BarChart3,
+  Search
+} from 'lucide-react';
+import SearchModal from './SearchModal';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   BarChart3
 } from 'lucide-react;
+  BarChart3
+} from 'lucide-react;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 
 
 =======
 
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   Menu
   X
@@ -73,19 +141,30 @@ import SearchModal from "./SearchModal";
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default function Navigation() {
 =======
+export default function Navigation() {
 export default function Navigation() {;
+origin/main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export default function Navigation() {
+export default function Navigation() {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -119,7 +198,10 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -139,7 +221,10 @@ function Navigation() {
       icon: Shield
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const solutions = [;
     {
@@ -148,7 +233,10 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -156,7 +244,10 @@ function Navigation() {
       icon: Zap
     }
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -237,7 +328,10 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {
       name: "Training"
       href: "/training"
@@ -250,8 +344,11 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const services = [;
     {;
       name: "AI Services",;
@@ -405,15 +502,24 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
+<<<<<<< HEAD
 
   ];
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ];
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ];
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <>;
       {/* Top Bar */}
@@ -430,7 +536,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -499,14 +608,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -531,17 +646,26 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
+<<<<<<< HEAD
 
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
 
 
+=======
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Home;
+              </Link>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -601,11 +725,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <Link;
                               key={index}
+<<<<<<< HEAD
 
                 </AnimatePresence>;
               </div>;
 
 
+=======
+                </AnimatePresence>;
+              </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -684,11 +813,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <Link;
                               key={index}
+<<<<<<< HEAD
 
                 </AnimatePresence>;
               </div>;
 
 
+=======
+                </AnimatePresence>;
+              </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -726,11 +860,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
                 </AnimatePresence>;
               </div>;
 
 
+=======
+                </AnimatePresence>;
+              </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -768,19 +907,35 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
-
-
+<<<<<<< HEAD
 =======
                 </AnimatePresence>;
               </div>;
+              <Link
+                href="/pricing"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 
+                </AnimatePresence>;
+              </div>;
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+origin/main
+origin/automation-improvements-final
+
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -793,11 +948,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <Link
                 href="/contact"
 
+<<<<<<< HEAD
+=======
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+<<<<<<< HEAD
 
 =======
 
@@ -805,6 +965,14 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               >
                 Get Started
               </Link>
@@ -837,11 +1005,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
+<<<<<<< HEAD
 
             </button>;
           </div>;
 
 
+=======
+            </button>;
+          </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -855,12 +1028,18 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
 
                   >;
                     Home;
                   </Link>;
 
 
+=======
+                  >;
+                    Home;
+                  </Link>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -877,11 +1056,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {service && service.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
 
                     </div>;
                   </div>;
 
 
+=======
+                    </div>;
+                  </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -898,11 +1082,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {solution && solution.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
 
                     </div>;
                   </div>;
 
 
+=======
+                    </div>;
+                  </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -919,11 +1108,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {industry && industry.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
 
                     </div>;
                   </div>;
 
 
+=======
+                    </div>;
+                  </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -940,21 +1134,32 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {resource && resource.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
 
                     </div>;
                   </div>;
 
 
+=======
+                    </div>;
+                  </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   >;
                     Pricing;
                   </Link>;
                   <div className="px-4 py-2 space-y-2">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -1219,12 +1424,18 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </a>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
           </AnimatePresence>;
         </div>;
       </nav>;
 
 
+=======
+          </AnimatePresence>;
+        </div>;
+      </nav>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

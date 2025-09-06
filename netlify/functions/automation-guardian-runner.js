@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 
 
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const abs = path && path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
@@ -19,6 +25,7 @@ exports && exports.handler = async () => {
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),
     logs && logs.push(`exit=${status}`),
+<<<<<<< HEAD
 
     return status
   }
@@ -27,6 +34,12 @@ exports && exports.handler = async () => {
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
 
 
+=======
+    return status
+  }
+  // Generate sitemap for crawling
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
@@ -34,6 +47,7 @@ exports && exports.handler = async () => {
     logs && logs.push(`Search index generation skipped: ${String(error)}`)
   }
   // Commit and push
+<<<<<<< HEAD
 
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
@@ -43,12 +57,22 @@ exports && exports.handler = async () => {
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
   // Attempt to push any changes
 
+=======
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
 
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description

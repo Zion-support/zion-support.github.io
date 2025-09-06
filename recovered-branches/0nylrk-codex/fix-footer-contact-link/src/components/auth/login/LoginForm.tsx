@@ -1,4 +1,36 @@
 
+<<<<<<< HEAD
+
+
+=======
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {LogIn, User, Eye, EyeOff} from "lucide-react";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { LogIn, User, Eye, EyeOff } from "lucide-react",
+<<<<<<< HEAD
+=======
+
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Link } from "react-router-dom",
+// Form validation schema
+const loginSchema = z.object({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import { useState } from "react",
@@ -8,7 +40,6 @@ import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -17,13 +48,35 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Link} from "react-router-dom";
 
 
+<<<<<<< HEAD
+=======
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
+type LoginFormValues = z.infer<typeof loginSchema>;
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
+<<<<<<< HEAD
 
 
+=======
+export function LoginForm() {;
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+export function LoginForm() {
+  const { login, isLoading } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema)
     defaultValues: {
@@ -31,22 +84,40 @@ type LoginFormValues = z.infer<typeof loginSchema>,
       password: ""}})
   const onSubmit = async (data: LoginFormValues) => {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (isSubmitting) return,
     
 
 
+<<<<<<< HEAD
+=======
+    if (isSubmitting) return;
+    if (isSubmitting) return,
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
       setIsSubmitting(false)
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
 
+<<<<<<< HEAD
+=======
+    }
+  }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
     <Form {...form}>
@@ -74,7 +145,10 @@ type LoginFormValues = z.infer<typeof loginSchema>,
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -91,7 +165,10 @@ import {;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
 import { Link } from "react-router-dom",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Form validation schema;
 const loginSchema = z && z.object({;
   email: z && z.string().email("Please enter a valid email").min(1, "Email is required");
@@ -103,7 +180,19 @@ export function LoginForm() {;
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 
+=======
+// Form validation schema;
+const loginSchema = z.object({;
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),;
+  password: z.string().min(6, "Password must be at least 6 characters")}),;
+type LoginFormValues = z.infer<typeof loginSchema>,;
+export function LoginForm() {;
+  const { login, isLoading } = useAuth(),;
+  const [showPassword, setShowPassword] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const form = useForm<LoginFormValues>({;
     resolver: zodResolver(loginSchema),;
     defaultValues: {;
@@ -111,6 +200,7 @@ export function LoginForm() {;
       password: ""}}),;
 
   const onSubmit = async (data: LoginFormValues) => {;
+<<<<<<< HEAD
     if (isSubmitting) return;
 
     try {;
@@ -128,11 +218,17 @@ export function LoginForm() {;
       <form
         onSubmit={form && form.handleSubmit(onSubmit)} 
 
+=======
+    <Form {...form}>;
+      <form
+        onSubmit={form && form.handleSubmit(onSubmit)} 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className="space-y-6"
         autoComplete="off" // Disable browser autofill>;
         <FormField
           control={form && form.control}
           name="email"
+<<<<<<< HEAD
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
@@ -143,11 +239,98 @@ export function LoginForm() {;
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill
+=======
+
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { LogIn, User, Eye, EyeOff } from "lucide-react",;
+;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Link } from "react-router-dom",;
+;
+// Form validation schema;
+const loginSchema = z.object({;
+  email:z.string().email("Please enter a valid email").min(1, "Email is required"),;
+  password:z.string().min(6, "Password must be at least 6 characters")}),;
+;
+type LoginFormValues = z.infer<typeof loginSchema>,;
+;
+export function LoginForm() {;
+  const { login, isLoading } = useAuth(),;
+  const [showPassword, setShowPassword] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  ;
+  const form = useForm<LoginFormValues>({;
+    resolver:zodResolver(loginSchema),;
+    defaultValues:{;
+      email:"",;
+      password:""}}),;
+;
+  const onSubmit = async (data:LoginFormValues) => {;
+    if (isSubmitting) return,;
+    ;
+    try {;
+      setIsSubmitting(true),;
+      await login(data.email, data.password),;
+    } finally {;
+      setIsSubmitting(false),;
+    }
+  },;
+;
+  return (;
+    <Form {...form}>;
+      <form ;
+    if (isSubmitting) return,;
+    try {;
+      setIsSubmitting(true);
+      await login(data.email, data.password);
+    } finally {;
+      setIsSubmitting(false);
+    }
+  };
+  return (;
+    <Form {...form}>;
+      <form;
+        onSubmit={form.handleSubmit(onSubmit)} ;
+        className="space-y-6";
+        autoComplete="off" // Disable browser autofill;
+      >;
+        <FormField;
+          control={form.control}
+                  <Input;
+                    placeholder="you@example.com";
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+                    {...field}
+                    autoComplete="off" // Disable browser autofill;
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+              <FormControl>
+                <div className="relative">
+                  <Input
+                    placeholder="you@example.com"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                    {...field}
+                    autoComplete="off" // Disable browser autofill;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   />;
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
+<<<<<<< HEAD
             </FormItem>;
 
 
@@ -161,33 +344,88 @@ export function LoginForm() {;
         <FormField
           control={form && form.control}
           name="password"
+=======
+        />;
+        <FormField
+          control={form && form.control}
+          name="password"
+            </FormItem>;          )}
+        />;
+;
+        <FormField;
+          control={form.control}
+          name="password";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="text-zion-slate-light">Password</FormLabel>;
               <FormControl>;
                 <div className="relative">;
+<<<<<<< HEAD
+=======
+            </FormItem>;
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-zion-slate-light">Password</FormLabel>
+              <FormControl>
+                <div className="relative">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Input
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
                     className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill
+<<<<<<< HEAD
                   />;
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+=======
+                  />
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+<<<<<<< HEAD
+=======
+                  <Input;
+                    type={showPassword ? "text" :"password"}
+                    placeholder="••••••••";
+                    className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple";
+                    {...field}
+                    autoComplete="off" // Disable browser autofill;
+                  />;
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  <Button;
+                    type="button";
+                    variant="ghost";
+                    size="sm";
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     onClick={() => setShowPassword(!showPassword)}
                   >;
                     {showPassword ? (;
                       <EyeOff className="h-4 w-4" />;
+<<<<<<< HEAD
                     ) : (;
                       <Eye className="h-4 w-4" />;
                     )}
                     <span className="sr-only">;
                       {showPassword ? "Hide password" : "Show password"}
+=======
+                    ) :(;
+                      <Eye className="h-4 w-4" />;
+                    )}
+                    <span className="sr-only">;
+                      {showPassword ? "Hide password" :"Show password"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </span>;
                   </Button>;
                 </div>;
@@ -195,6 +433,7 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
+<<<<<<< HEAD
 
         />;
 
@@ -312,10 +551,53 @@ if (return) {
           <div className="text - sm">;
             <Link to="/forgot - password" className="font - medium text - zion - cyan hover:text - zion - cyan - light">;
 
+=======
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? (
+                      <EyeOff className="h-4 w-4" />
+                    ) : (
+                      <Eye className="h-4 w-4" />
+                    )}
+                    <span className="sr-only">
+                      {showPassword ? "Hide password" : "Show password"}
+                    </span>
+                  </Button>
+                </div>
+              </FormControl>
+              <FormMessage className="text-red-400" />
+            </FormItem>
+          )}
+        />
+        <div className="flex items-center justify-between">
+          <div className="text-sm">
+            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+              Forgot your password?
+            </Link>
+          </div>
+        </div>
+        <Button
+          type="submit"
+          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+          disabled={isLoading |isSubmitting}
+        >
+          {isLoading |isSubmitting ? "Logging in..." : "Login"}
+        </Button>
+      </form>
+    </Form>
+  )
+
+        />;
+;
+        <div className="flex items-center justify-between">;
+          <div className="text-sm">;
+            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               Forgot your password?;
             </Link>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
         <Button;
           type="submit";
@@ -334,3 +616,47 @@ if (return) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+        <Button;
+          type="submit";
+          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+          disabled={isLoading || isSubmitting}
+        >;
+          {isLoading || isSubmitting ? "Logging in..." :"Login"}
+        </Button>;
+      </form>;
+    </Form>;
+  ),; import {
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormLabel;
+//Form validation schema const loginSchema = z.object ({
+  email: z.string () .email ("Please enter a valid email") .min (1, "Email is required");
+password: z.string () .min (6, "Password must be at least 6 characters") 
+});
+const onSubmit = async (data: LoginFormValues) => {
+  if (isSubmitting) return;
+try {
+  setIsSubmitting (true);
+await login (data.email, data.password) 
+}finally {
+  setIsSubmitting (false) 
+}
+
+}
+;
+
+};
+...form 
+}> <form <FormItem> <FormLabel className="text-zion-slate-light" >Email address</FormLabel> <FormControl> <div className="relative" > <Input /> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+}/> <FormField <FormControl> <div className="relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) 
+}</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+}/> <div className="flex items-center justify-between" > <div className="text-sm" > <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light" > Forgot your password? </Link> </div> </div> <Button </Button> </form> </Form>) 
+}
+}
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

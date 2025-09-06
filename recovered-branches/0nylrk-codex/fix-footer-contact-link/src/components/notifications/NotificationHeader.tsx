@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -8,6 +12,7 @@ import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
   unreadCount: number,;
   onMarkAllAsRead: () => Promise<void>;
+<<<<<<< HEAD
 
 
 
@@ -19,6 +24,23 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
   onMarkAllAsRead
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>;
+>>>>>>> main
+}
+
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+  unreadCount,
+  onMarkAllAsRead,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
@@ -27,6 +49,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 =======
 import {Button} from '@/components/ui/button';
 interface NotificationHeaderProps {;
@@ -87,3 +110,21 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
+        >;
+          Mark all as read;
+        </Button>;
+      )}
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+=======
+    </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> main
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

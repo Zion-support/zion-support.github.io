@@ -1,10 +1,15 @@
 
 
+<<<<<<< HEAD
+=======
+  return res.status(405).json({ error: "method_not_allowed" });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -30,6 +35,16 @@ if ( {) {
   $2
 }
     return res.status (200).json (company.plan.usage_limits);
+=======
+const { companyId } = req && req.query;
+  if (!companyId || typeof companyId !== "string") {
+    return res && res.status(400).json({ error: "companyId required" });
+  }
+  const company = store && store.getCompanyById(companyId);
+  if (!company) return res && res.status(404).json({ error: "Company not found" });
+  if (req && req.method === "GET") {
+    return res && res.status(200).json(company && company.plan.usageLimits);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   // Check condition
 if ( {) {

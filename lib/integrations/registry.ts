@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
 =======
 import { IntegrationProviderMeta  } from './types';
 ;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { IntegrationProviderMeta } from "./types";
+
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
     id: "salesforce"
     name: "Salesforce"
@@ -21,13 +31,19 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
     description: "Marketing & Sales CRM"
   }
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: "zoho",
     name: "Zoho CRM",
     category: "crm",
     description: "All - in - one CRM",
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -48,6 +64,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
     description: "Recruiting software"
   }
   {
+<<<<<<< HEAD
 
 }
 
@@ -65,14 +82,35 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ];
 
 =======
+=======
+    id: "bamboohr"
+    name: "BambooHR"
+    category: "ats"
+    description: "HRIS & ATS"
+  }
+    id: "bamboohr",
+    name: "BambooHR",
+    category: "ats",
+    description: "HRIS & ATS",
+  },;
+];
+export function getProviderById(
+  id: string
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS && PROVIDERS.find((p) => p && p.id === id);
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     id: "bamboohr",
     name: "BambooHR",
@@ -85,5 +123,16 @@ export function getProviderById(
 
   id: string,
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  id: string,
+): IntegrationProviderMeta | undefined {;
+  return PROVIDERS.find((p) => p.id === id);
+}
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(p => p.id === id);
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

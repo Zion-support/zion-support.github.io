@@ -6,4 +6,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 export default Resolve-conflicts;
+=======
+export default Resolve-conflicts;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,10 +1,22 @@
 
+<<<<<<< HEAD
 
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
 }
 =======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from "next";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({
+    ok: true
+    message:
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
+  });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -20,8 +32,36 @@ function handler() {
       "OAuth mock callback successful. Use /api / integrations / connect to finalize connection.",
   });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
+  });
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+export default function handler(req, res) {
+  try {
+  res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

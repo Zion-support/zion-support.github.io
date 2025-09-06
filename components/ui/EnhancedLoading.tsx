@@ -22,10 +22,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -53,13 +58,25 @@ function EnhancedLoading() {
         <div key={idx} className="skeleton h - 4 rounded" />))}
     </div>);
 
+<<<<<<< HEAD
 }
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>
 
   );
 
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      ))}
+    </div>;
+    </div>
+  );
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

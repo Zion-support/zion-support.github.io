@@ -153,8 +153,16 @@ class AutoFixer {}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
+<<<<<<< HEAD
       importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
       totalFixes: 0,
+=======
+<<<<<<< HEAD
+=======
+      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
+      totalFixes: 0,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();
@@ -182,4 +190,8 @@ if (require.main === module) {}
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = AutoFixer;
+=======
+module.exports = AutoFixer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

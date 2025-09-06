@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import Link from "next/link",;
 export const metadata = {;
@@ -10,7 +13,10 @@ export default function EventsPage() {;
 
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Link from './next / link';,
 export const metadata = {
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
@@ -22,7 +28,23 @@ export default /**
 function EventsPage() {
   return (
     <div className="min - h-screen">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import Link from "next/link";
+export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops";
+  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
+  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"}
+export default function EventsPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
+  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
+  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
+export default function EventsPage() {;
+  return (;
+    <div className="min-h-screen">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -54,12 +76,23 @@ function EventsPage() {
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   Our flagship annual conference bringing together technology leaders, innovators,
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
 
                   Our flagship annual conference bringing together technology leaders, innovators,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
+                  Our flagship annual conference bringing together technology leaders, innovators,
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
+                  Our flagship annual conference bringing together technology leaders, innovators;
+                  Our flagship annual conference bringing together technology leaders, innovators,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   and visionaries to explore the future of AI, quantum computing, and enterprise;
                   technology solutions.;
                 </p>;
@@ -132,11 +165,24 @@ function EventsPage() {
               <p className="text - gray - 400 mb - 4">;
                 Large - scale industry events featuring keynote speakers, panel discussions,
 
+<<<<<<< HEAD
 =======
 
                 Large-scale industry events featuring keynote speakers, panel discussions,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                Large-scale industry events featuring keynote speakers, panel discussions,;
+
+              <h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Large - scale industry events featuring keynote speakers, panel discussions,
+              <h3 className="text-xl font-semibold mb-3">Conferences</h3>;
+              <p className="text-gray-400 mb-4">;
+                Large-scale industry events featuring keynote speakers, panel discussions;
+                Large-scale industry events featuring keynote speakers, panel discussions,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
@@ -154,11 +200,24 @@ function EventsPage() {
               <p className="text - gray - 400 mb - 4">;
                 Online educational sessions covering specific topics, technologies,
 
+<<<<<<< HEAD
 =======
 
                 Online educational sessions covering specific topics, technologies,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                Online educational sessions covering specific topics, technologies,;
+
+              <h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Online educational sessions covering specific topics, technologies,
+              <h3 className="text-xl font-semibold mb-3">Webinars</h3>;
+              <p className="text-gray-400 mb-4">;
+                Online educational sessions covering specific topics, technologies;
+                Online educational sessions covering specific topics, technologies,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
@@ -245,12 +304,23 @@ function EventsPage() {
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <p className="text-gray-400 mb-4 leading-relaxed">;
 
                 Hands-on workshop covering the basics of quantum computing, qubits,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <p className="text - gray - 400 mb - 4 leading - relaxed">;
+                Hands - on workshop covering the basics of quantum computing, qubits,
+              <p className="text-gray-400 mb-4 leading-relaxed">;
+                Hands-on workshop covering the basics of quantum computing, qubits;
+                Hands-on workshop covering the basics of quantum computing, qubits,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

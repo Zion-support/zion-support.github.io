@@ -1,14 +1,24 @@
 
 
+<<<<<<< HEAD
 
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
 =======
+=======
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+
+import * as React from "react";
+import { Toaster as SonnerToaster } from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Toaster, as, SonnerToaster} from "sonner";
-=======
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -20,6 +30,14 @@ import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
   return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
+export function Toaster() {
+  return (
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -32,10 +50,18 @@ export function Toaster() {;
 
         descriptionClassName: "text-zion-slate-light"}}
 
+<<<<<<< HEAD
 =======
 
 
 =======
+=======
+
+
+    />
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;
@@ -50,9 +76,12 @@ export function Toaster() {;
           border: '1px solid #1e3a6f'};
         duration: 4000;
         descriptionClassName: "text-zion-slate-light"}}
+<<<<<<< HEAD
 
     />;
   );
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 import * as React from './react';
@@ -73,6 +102,7 @@ function Toaster() {
         duration: 4000,
         descriptionClassName: "text - zion - slate - light"}}
     />);
+<<<<<<< HEAD
 }
 
 =======
@@ -80,3 +110,14 @@ function Toaster() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+;
+
+
+    />;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

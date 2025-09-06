@@ -76,4 +76,7 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

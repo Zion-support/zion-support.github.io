@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }
@@ -23,22 +24,50 @@ function ProfileBadges() {
 =======
 
 import React from 'react';
+=======
+
+}
+
+import React from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels } from '../../utils/kyc';
 import { VerifiedBadge } from './VerifiedBadge';
 
+<<<<<<< HEAD
+=======
+import React from 'react',
+import React from 'react';
+import type { KycProfile } from '../../utils/kyc';
+import { getBadgeLabels } from '../../utils/kyc';
+import { VerifiedBadge } from './VerifiedBadge';
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+
+  const labels = getBadgeLabels(profile |undefined);
+  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+  const labels = getBadgeLabels(profile |undefined);
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
   return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return <VerifiedBadge labels={labels} />
-
+}
 }
 
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

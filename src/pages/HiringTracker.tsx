@@ -1,3 +1,67 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
+import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { Briefcase } from 'lucide-react'
+function HiringTrackerContent() {
+
+  const router = useRouter()
+  const jobId = router.query.jobId as string
+  const [activeTab, setActiveTab] = useState<string>('kanban')
+
+import { useState } from "react",
+import { useRouter } from "next/router",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from 'lucide-react'
+function HiringTrackerContent() {
+
+  const router = useRouter()
+  const jobId = router.query.jobId as string
+  const [activeTab, setActiveTab] = useState<string>('kanban')
+
+function HiringTrackerContent() {
+  const router = useRouter(),
+  const jobId = router.query.jobId as string,
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
+
+  return (
+    <>
+      <SEO 
+        title="Hiring Tracker | Zion AI Marketplace" 
+        description="Manage your candidate pipeline in the Zion AI Marketplace." 
+      />
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold flex items-center">
+              <Briefcase className="mr-2 h-6 w-6 text-primary" />
+              Hiring Pipeline
+            </h1>
+            <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
+
+  return (
+    <>
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace"
+        description="Manage your candidate pipeline in the Zion AI Marketplace."
+      />
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold flex items-center">
+              <Briefcase className="mr-2 h-6 w-6 text-primary" />
+              Hiring Pipeline
+            </h1>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 return (
     <>;
       <SEO
@@ -6,12 +70,23 @@ return (
 
 
             <p className="text-muted-foreground mt-1">
+<<<<<<< HEAD
               Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
 
 
+=======
+            </p>
+          </div>
+        </div>
+        <Tabs
+          defaultValue='kanban'
+          onValueChange={setActiveTab}
+          className='mb-8'
+        >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 
@@ -39,16 +114,24 @@ return (
           
 
           <TabsContent value="analytics" className="mt-6">
+<<<<<<< HEAD
             <HiringAnalytics jobId={jobId} />
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
 
   );
 }
 
 
+=======
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
@@ -68,7 +151,11 @@ export default function HiringTracker() {
 
   return (
   )
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
@@ -229,4 +316,8 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

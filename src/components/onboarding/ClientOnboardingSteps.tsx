@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
+import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
+import { OnboardingTracker, OnboardingStep } from './OnboardingTracker'
+export function ClientOnboardingSteps() {
+  const onboardingStatus = useOnboardingStatus()
+
+import React from "react",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function ClientOnboardingSteps() {
+
+  const onboardingStatus = useOnboardingStatus()
+  const steps: OnboardingStep[] = [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
@@ -9,6 +27,7 @@ function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
     {
+<<<<<<< HEAD
       id: 'post - job',
       label: 'Post your first job',
       completed: onboarding_status.job_posted,
@@ -31,6 +50,63 @@ function ClientOnboardingSteps() {
     },
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
+=======
+      id: 'post-job'
+      label: 'Post your first job'
+      completed: onboardingStatus.jobPosted
+      link: '/post-job'
+      action: 'Post Job'
+    }
+    {
+      id: 'invite'
+      label: 'Send invitation to talent'
+      completed: onboardingStatus.inviteSent
+      link: '/talent'
+      action: 'Find Talent'
+    }
+    {
+      id: 'response'
+      label: 'Receive your first application'
+      completed: onboardingStatus.responseReceived
+      link: '/client-dashboard'
+      action: 'Check Dashboard'
+    }
+  ]
+  return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client-dashboard"
+      action: "Check Dashboard"}]
+      action: "Check Dashboard"}],
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+}
+
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
+}
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
+
+export function ClientOnboardingSteps() {
+  const onboardingStatus = useOnboardingStatus(),
+  
+  const steps: OnboardingStep[] = [
+    {
+      id: "post-job",
+      label: "Post your first job",
+      completed: onboardingStatus.jobPosted,
+      link: "/post-job",
+      action: "Post Job"},
+    {
+      id: "invite",
+      label: "Send invitation to talent",
+      completed: onboardingStatus.inviteSent,
+      link: "/talent",
+      action: "Find Talent"},
+    {
+      id: "response",
+      label: "Receive your first application",
+      link: '/client-dashboard',;
+      action: 'Check Dashboard',;
+    };
+  ];
+  return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client-dashboard",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       action: "Check Dashboard"}],
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
@@ -66,3 +142,10 @@ export function ClientOnboardingSteps() {;
       action: "Check Dashboard"}];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
+<<<<<<< HEAD
+=======
+;
+ursor/fix-website-loading-errors-and-merge-6662
+;
+      completed: onboardingStatus.responseReceived,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

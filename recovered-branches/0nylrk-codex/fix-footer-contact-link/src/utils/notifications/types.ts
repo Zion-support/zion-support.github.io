@@ -4,21 +4,51 @@ export type NotificationType = 'message' | 'quote_request' | 'booking_confirmati
 
 export interface CreateNotificationParams {
   user_id: string;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface CreateNotificationParams {;
 
   userId: string;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   title: string;
   message: string;
   type: NotificationType;
 
+<<<<<<< HEAD
+=======
+export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+export interface CreateNotificationParams {
+export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+
+export interface CreateNotificationParams {;
+  userId: string;
+  title: string;
+  message: string;
+  type: NotificationType;
+  relatedId?: string | null;
+  sendEmail?: boolean;
+  actionUrl?: string | null
+  actionText?: string | null
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export interface CreateNotificationResult {;
 
 
+<<<<<<< HEAD
+=======
+export interface CreateNotificationResult {
+
+export interface CreateNotificationResult {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   success: boolean;
   notificationId?: string
   error?: any
@@ -29,6 +59,12 @@ export interface CreateNotificationResult {;
 export interface HireRequestNotificationParams {;
 
 
+<<<<<<< HEAD
+=======
+export interface HireRequestNotificationParams {
+
+export interface HireRequestNotificationParams {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -37,7 +73,10 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
@@ -65,15 +104,21 @@ export interface OnboardingNotificationParams {
 }
 export interface SystemNotificationParams {
   user_id: string;
-=======
 
 
 export interface OnboardingNotificationParams {;
 
+<<<<<<< HEAD
+=======
+export interface OnboardingNotificationParams {
+
+export interface OnboardingNotificationParams {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
 }
+<<<<<<< HEAD
 
 
 export interface SystemNotificationParams {;
@@ -85,3 +130,68 @@ export interface SystemNotificationParams {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+export interface SystemNotificationParams {;
+
+  userId: string;
+  title: string;
+  message: string;
+
+export interface SystemNotificationParams {
+
+export interface SystemNotificationParams {;
+  userId: string;
+  title: string;
+  message: string;
+  actionUrl?: string | null;
+  actionText?: string | null
+
+  sendEmail?: boolean
+}
+export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
+export interface CreateNotificationParams {;
+  userId: string,;
+  title: string,;
+  message: string,;
+  type: NotificationType,;
+  relatedId?: string | null,;
+  sendEmail?: boolean,;
+  actionUrl?: string | null,;
+  actionText?: string | null;
+}
+;
+export interface CreateNotificationResult {;
+  success: boolean,;
+  notificationId?: string,;
+  error?: any;
+}
+;
+export interface HireRequestNotificationParams {;
+  talentId: string,;
+  adminId?: string,;
+  requesterName: string,;
+  requesterEmail: string,;
+  projectType?: string,;
+  projectSummary?: string,;
+  hireRequestId: string;
+}
+;
+export interface OnboardingNotificationParams {;
+  userId: string,;
+  missingMilestone: string,;
+  userRole: 'talent' | 'client';
+}
+;
+export interface SystemNotificationParams {;
+  userId: string,;
+  title: string,;
+  message: string,;
+  actionUrl?: string | null,;
+  actionText?: string | null;
+  sendEmail?: boolean;
+}
+;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

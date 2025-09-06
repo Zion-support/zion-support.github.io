@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
       <main>;
         <h1>QualityAssuranceTestingChat</h1>;
         <p>Service details coming soon...</p>;
@@ -15,6 +16,8 @@ export default QualityAssuranceTestingChat;
 
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -26,7 +29,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const QualityAssuranceTestingChat: NextPage = () => {
   return (
     <div>
@@ -34,8 +36,11 @@ const QualityAssuranceTestingChat: NextPage = () => {
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -59,4 +64,54 @@ const QualityAssuranceTestingChat: NextPage = () => {
 ;
 export default QualityAssuranceTestingChat;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    <div>
+      <Head>
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;QualityAssuranceTestingChat service&quot; />
+      </Head>
+      
+      <main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+      </main>
+    </div>
+  )
+},
+
+export default QualityAssuranceTestingChat
+
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const QualityAssuranceTestingChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+        <meta
+          name="description"
+          content="QualityAssuranceTestingChat service"
+        />{" "}
+      </Head>
+      <main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+  );
+}
+export default QualityAssuranceTestingChat;
+
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

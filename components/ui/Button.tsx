@@ -5,6 +5,12 @@ import React from "react";
 
 import React from './react';
 ;
+<<<<<<< HEAD
+=======
+import React from './react';
+;
+import React from "react";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -16,7 +22,10 @@ interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 interface ButtonProps {
   children: React.ReactNode,
@@ -32,7 +41,9 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   onClick,
   disabled = false,
-  type = 'button'
+  type = "button",
+  asChild = false,
+  ...props
 }) => {
   const baseClasses = 'font-semibold rounded-lg transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   const variantClasses = {
@@ -41,13 +52,17 @@ const Button: React.FC<ButtonProps> = ({
     outline: 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black focus:ring-cyan-400',
     ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
   };
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const sizeClasses = {
-    sm: "h-8 px-3 text-xs"
-    md: "h-10 px-4 py-2"
-    lg: "h-12 px-8 text-lg"
-  }
+    sm: "h-8 px-3 text-xs",
+    md: "h-10 px-4 py-2",
+    lg: "h-12 px-8 text-lg",
+  };
+
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return React.cloneElement(children as React.ReactElement, {
@@ -84,15 +99,23 @@ const Button: React.FC<ButtonProps> = ({;
     md: "h-10 px-4 py-2",;
     lg: "h-12 px-8 text-lg",;
   };
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   class_name?: string;
   on_click?: () => void;
   disabled?: boolean;
@@ -149,9 +172,25 @@ if ( {) {
       type={type}
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 export { Button };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export { Button };
+
+export default Button;
+      {...props}
+    >;
+      {children}
+    </button>);
+}
+;
+export { Button }
+;
+
+export { Button };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

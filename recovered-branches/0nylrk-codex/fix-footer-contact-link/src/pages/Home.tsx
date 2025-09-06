@@ -1,8 +1,41 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {BenefitsSection} from "@/components/BenefitsSection";
+import {HowItWorksSection} from "@/components/HowItWorksSection";
+import {NewsletterSection} from "@/components/NewsletterSection";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {SEO} from "@/components/SEO";
+import {HeroSection} from "@/components/HeroSection";
+import {QuickAccess} from "@/components/home/QuickAccess";
+import {FeatureCTAs} from "@/components/home/FeatureCTAs";
+import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+import React from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { NewsletterSection } from "@/components/NewsletterSection",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { SEO } from "@/components/SEO",
+import { HeroSection } from "@/components/HeroSection",
+import { QuickAccess } from "@/components/home/QuickAccess",
+
+
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -26,6 +59,7 @@ export default function Home() {
     </div>
   )
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -66,6 +100,10 @@ import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
 
 =======
+=======
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -79,6 +117,7 @@ import { HeroSection } from "@/components/HeroSection",;
 import { QuickAccess } from "@/components/home/QuickAccess",;
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+<<<<<<< HEAD
 
 export default function Home() {;
   return (
@@ -119,6 +158,11 @@ export default /**
 function Home() {
   return (
     <div className="min - h-screen bg - background">;
+=======
+export default function Home() {;
+  return (;
+    <div className="min-h-screen bg-background">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <SEO;
         title="Zion - The Tech & AI Marketplace";
         description="Discover top AI and tech talent, services, and equipment in one place.";
@@ -130,7 +174,44 @@ function Home() {
       <QuickAccess />;
       <FeatureCTAs />;
       <FeatureHighlights />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import React from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { CategoriesSection } from "@/components/CategoriesSection",;
+import { BenefitsSection } from "@/components/BenefitsSection",;
+import { HowItWorksSection } from "@/components/HowItWorksSection",;
+import { NewsletterSection } from "@/components/NewsletterSection",;
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { SEO } from "@/components/SEO",;
+import { HeroSection } from "@/components/HeroSection",;
+import { QuickAccess } from "@/components/home/QuickAccess",;
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",;
+;
+export default function Home() {;
+  return (;
+    <div className="min-h-screen bg-background">;
+      <SEO ;
+        title="Zion - The Tech & AI Marketplace" ;
+        description="Discover top AI and tech talent, services, and equipment in one place.";
+        keywords="AI, technology, marketplace, services, talent";
+        canonical="https://app.ziontechgroup.com/";
+      />;
+      <Header />;
+      ;
+      <HeroSection />;
+      ;
+      <QuickAccess />;
+      ;
+      <FeatureCTAs />;
+      ;
+      <FeatureHighlights />;
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <CategoriesSection />;
       <BenefitsSection />;
       <HowItWorksSection />;
@@ -139,10 +220,27 @@ function Home() {
       <Footer />;
 
     </div>);
+<<<<<<< HEAD
+=======
 }
 
-=======
 ;
 
 
+    </div>);
+}
+    </div>;
+  );
+} export default function Home () {
+  return (<div className="min-h-screen bg-background" > 
+    </div>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+;
+<<<<<<< HEAD
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

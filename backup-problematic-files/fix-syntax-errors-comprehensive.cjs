@@ -3,6 +3,12 @@
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -135,18 +141,25 @@ console.log('🔧 Starting comprehensive syntax error fixing...');
 const fs = require('fs');
 const path = require('path');
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Fix common syntax errors
-
     // Fix unnecessary escape characters
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -159,6 +172,11 @@ function fixSyntaxErrors(filePath) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -294,6 +312,10 @@ function fixSyntaxErrors(content, filePath) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
@@ -310,6 +332,7 @@ function fixSyntaxErrors(content, filePath) {
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -320,6 +343,26 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
@@ -464,6 +507,10 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -560,7 +607,6 @@ function fixSyntaxErrors(content, filePath) {;
   fixed = fixed.replace(malformedArrayRegex, "$1$2$3,$4");
   return { fixed, changes }
 }
-
 // Function to process a single file;
 function processFile(filePath) {;
   try {;
@@ -577,7 +623,6 @@ function processFile(filePath) {;
     return 0;,
 }
 }
-
 // Function to recursively find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;
   let files = [];
@@ -595,10 +640,8 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;
   } catch (error) {;
   console.error(`Error reading directory ${dir}:`, error.message);,
 }
-
   return files;,
 }
-
 // Main execution;
 function $1() {;
   const srcDir = path.join(__dirname, "src");
@@ -638,6 +681,9 @@ async function main() {
         }
     }
     if (totalFixes > 0) {
+<<<<<<< HEAD
+    } else {
+=======
     } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1054,3 +1100,7 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

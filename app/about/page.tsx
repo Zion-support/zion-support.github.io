@@ -3,13 +3,25 @@ export const metadata = {;
   title: "About | Zion Tech Group",;
   description:;
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   description:
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+export const metadata = {
+  title: "About | Zion Tech Group",
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 export default function AboutPage() {;
   return (
@@ -82,7 +94,10 @@ function AboutPage() {
             </div>{" "}
             <div>;
               {" "}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
                 Our Vision;
               </h2>{" "}
@@ -90,12 +105,18 @@ function AboutPage() {
                 {" "}
                 A world where every business can leverage advanced technology to;
                 compete effectively and scale efficiently, regardless of their;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 technical expertise.{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="bg - gray - 50 rounded - lg p - 8 mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -128,13 +149,19 @@ function AboutPage() {
                   Partnership;
                 </h3>{" "}
                 <p className="text - sm text - gray - 600">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   We work as an extension of your team;
                 </p>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -148,7 +175,10 @@ function AboutPage() {
                   AI & Machine Learning;
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {" "}
                   <li>• Large Language Model (LLM) applications</li>{" "}
                   <li>• Retrieval - Augmented Generation (RAG)</li>{" "}
@@ -156,14 +186,20 @@ function AboutPage() {
                   <li>• MLOps and model deployment</li>{" "}
                 </ul>{" "}
               </div>{" "}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="border border - gray - 200 rounded - lg p - 6">;
                 {" "}
                 <h3 className="font - semibold text - gray - 900 mb - 3">;
                   Cloud & Infrastructure;
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {" "}
                   <li>• AWS, GCP, and Azure migration</li>{" "}
                   <li>• Kubernetes and containerization</li>{" "}
@@ -173,9 +209,13 @@ function AboutPage() {
               </div>{" "}
             </div>{" "}
           </div>{" "}
+<<<<<<< HEAD
 
               Let's discuss how we can help your business leverage technology;
 
+=======
+              Let's discuss how we can help your business leverage technology;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               for growth.{" "}
             </p>{" "}
             <a
@@ -203,7 +243,15 @@ function AboutPage() {
           </div>{" "}
         </div>{" "}
       </div>{" "}
+<<<<<<< HEAD
 
     </div>);
 
+=======
+    </div>
+  );
+    </div>);
+    </div>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }

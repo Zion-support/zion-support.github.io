@@ -39,7 +39,11 @@ export default function EnhancedCard(): any ({;
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
@@ -48,8 +52,11 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     </div>
   );
 }
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 ;
 export default /**
@@ -61,9 +68,37 @@ function EnhancedCard() {
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+}
+
+import React from "react";
+
+import React from "react";
+export default function EnhancedCard({
+  children
+  className = ""
+}: {
+  children,
+  className = "",
+}: {;
+  children: React.ReactNode;
+  className?: string;
+}) {
+
+  return (
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+  );
+  return (
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+  );
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

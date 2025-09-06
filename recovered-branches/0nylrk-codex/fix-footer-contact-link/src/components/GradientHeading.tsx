@@ -7,6 +7,14 @@ interface GradientHeadingProps {;
 }
 
 
+<<<<<<< HEAD
+=======
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
   const Tag = level;
 
@@ -15,19 +23,23 @@ export function GradientHeading(): any ({ children, className, level = "h2" }: G
       className={cn(
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
 
-        className
-      )}>;
-=======
+import { cn } from "@/lib/utils";
+import React from "react";
+interface GradientHeadingProps {
 
+<<<<<<< HEAD
+=======
+  children: React.ReactNode
+  className?: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { cn } from "@/lib/utils",
 import React from "react",
-=======
 import {cn} from "@/lib/utils";
 import React from "react";
-=======
 import { cn } from "@/lib/utils",
 import React from "react",
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GradientHeadingProps {
   children: React.ReactNode,
@@ -37,24 +49,72 @@ interface GradientHeadingProps {
 }
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
     <Tag
       className={cn(
 
+<<<<<<< HEAD
+=======
+interface GradientHeadingProps {
+  children: React.ReactNode,
+  className?: string,
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
+
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+  const Tag = level;
+  const Tag = level,
+  
+  return (
+    <Tag
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+
+        className
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+import { cn } from "@/lib/utils",;
+import React from "react",;
+interface GradientHeadingProps {;
+  children: React.ReactNode,;
+  className?: string,;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+  return (;
+    <Tag;
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+        className;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className
 
       )}
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
 
     </Tag>;
   );
 }
 
+<<<<<<< HEAD
 =======
+=======
+        className
+      )}>;
+      {children}
+    </Tag>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { cn } from '@/lib / utils';
 import React from './react';
 interface GradientHeadingProps {
@@ -77,4 +137,45 @@ function GradientHeading() {
       {children}
     </Tag>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import { cn } from "@/lib/utils",;
+import React from "react",;
+;
+interface GradientHeadingProps {;
+  children:React.ReactNode,;
+  className?:string,;
+  level?:"h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" } GradientHeadingProps) {;
+  const Tag = level,;
+  ;
+  return (;
+    <Tag ;
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",;
+        className;
+      )}
+    >;
+      {children}
+    </Tag>;
+  ),;}
+ interface GradientHeadingProps {
+  children: React.ReactNode;
+className?: string;
+return (<Tag className= {
+  cn () 
+}> {
+  children 
+}</Tag>) 
+}
+      )}
+    >
+      {children}
+    </Tag>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

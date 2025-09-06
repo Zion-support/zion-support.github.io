@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,6 +32,14 @@ interface AnalyticsProps {
 }
 
 
+=======
+import React, { useEffect } from 'react';
+import Head from 'next / head';
+;
+interface AnalyticsProps {
+  tracking_id?: string;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface AnalyticsProps {;
   trackingId?: string;
 }
@@ -49,11 +58,17 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
         window && window.dataLayer.push(args),;
+<<<<<<< HEAD
 
       }
       window && window.gtag = gtag;
       gtag('js', new Date());
 
+=======
+      }
+      window && window.gtag = gtag;
+      gtag('js', new Date());
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       gtag('config', trackingId, {;
         page_title: document && document.title,;
         page_location: window && window.location.href,;
@@ -120,7 +135,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     (window as any).trackEvent = trackEvent;
 =======
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
@@ -226,6 +244,7 @@ if ( {) {
   }
   return (
     <Head>;
+<<<<<<< HEAD
 
       <script;
         dangerouslySetInnerHTML={{
@@ -252,13 +271,34 @@ if ( {) {
                         value: Math.round (load_time),
 
 =======
+=======
+      <script;
+        dangerouslySetInnerHTML={{
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                         name: 'load',
                         value: Math.round(loadTime),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       });
+<<<<<<< HEAD
 =======
+=======
+          __html: `
+            // Performance monitoring
+            if ('performance' in window) {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const perfData = performance.getEntriesByType('navigation')[0];
+                  if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+                        name: 'load'
+                        value: Math.round(loadTime)
+                        name: 'load',
+                        value: Math.round(loadTime),
+                      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
                       window && window.gtag('event', 'timing_complete', {
@@ -268,6 +308,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                   }
+<<<<<<< HEAD
                 }, 0)
               })
             }
@@ -277,10 +318,20 @@ if ( {) {
 ;
 
 =======
+=======
+}
+                }, 0);
+              });
+            }
+          `
+          `,
+        }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           `,
 
         }}
+export default Analytics;
       />
     </Head>
   );
@@ -288,5 +339,13 @@ if ( {) {
 };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Analytics;
+=======
+export default Analytics;
+}
+};
+
+export default Analytics;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,21 +1,45 @@
 
 
-=======
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Page: NextPage = () => {
   return (
+=======
+const Page: NextPage = () => {
+  return (
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import type { NextPage } from 'next'
+import Head from 'next/head'
+const Page: NextPage = () => {
+  return (
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+const Page: NextPage = () => {_return (
+const Page: NextPage = () => {
+  return (
+ursor/fix-lint-push-and-merge-to-main-ce13
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>
       <Head>
         <title>Auto Update 2025-08-23T23-59-59-376Z</title>
@@ -29,6 +53,7 @@ const Page: NextPage = () => {
   )
 
 
+<<<<<<< HEAD
 export default Page;
 
 =======
@@ -64,3 +89,20 @@ export default Page
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+},
+
+
+export default Page
+
+}
+export default Page;
+
+},
+;
+export default Page
+},
+
+
+export default Page
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

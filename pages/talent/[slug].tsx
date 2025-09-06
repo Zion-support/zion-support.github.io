@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +28,16 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import EnhancedButton from "../../components/ui/EnhancedButton";
+import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -44,6 +55,7 @@ import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
 const TalentProfile: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query;
+<<<<<<< HEAD
 
 
 const TalentProfile: NextPage = () => {;
@@ -92,11 +104,30 @@ const TalentProfile: NextPage = () => {;
 
 
 
+=======
+  const [responseLog, setResponseLog] = useState<
+    Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>
+  >([]);
+  const handleRespond = (action: "Accept" | "Decline" | "Negotiate") => {
+    setResponseLog((prev) => [
+      ...prev
+      { action, at: new Date().toISOString() }
+    ]);
+  }
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
+import { useState } from 'react',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+const TalentProfile: NextPage = () => {
+  const router = useRouter(),
+  const { slug } = router.query,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
-
   return (
     <div className="space-y-6 pb-20">
       <Head>
@@ -132,8 +163,11 @@ const TalentProfile: NextPage = () => {;
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const [response_log, setResponseLog] = useState<;
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>;
@@ -182,10 +216,19 @@ const TalentProfile: NextPage = () => {;
       </header>;
 
               {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
+<<<<<<< HEAD
+=======
+              {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {responseLog.map((r, idx) => (
                 <li key={idx} className="flex items-center justify-between">
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
+<<<<<<< HEAD
                 </li>
 
 
@@ -246,17 +289,32 @@ const TalentProfile: NextPage = () => {;
                 </li>))}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </ul>;
           </div>;
         </aside>;
       </section>;
+<<<<<<< HEAD
 
 },;
 
@@ -271,3 +329,25 @@ export default TalentProfile;
 export default TalentProfile;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </div>);
+    </div>);
+  );
+}
+;
+export default TalentProfile;
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </ul>;
+          </div>;
+        </aside>;
+      </section>;
+    </div>;
+  );
+},;
+export default TalentProfile;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

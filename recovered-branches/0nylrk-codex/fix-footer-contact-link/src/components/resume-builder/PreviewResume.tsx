@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import {Resume} from '@/types/resume';
@@ -21,6 +25,7 @@ import {;
 interface PreviewResumeProps {;
   resume: Resume;
   onBack: () => void;
+<<<<<<< HEAD
 
 
 
@@ -28,10 +33,39 @@ interface PreviewResumeProps {;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Resume } from "@/types/resume";
+import {
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
+  CertificationsSection,
+} from "./preview";
+
+interface PreviewResumeProps {
+  resume: Resume;
+  onBack: () => void;
+>>>>>>> main
+}
+
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Resume Preview */}
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
@@ -41,6 +75,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+<<<<<<< HEAD
 
 interface PreviewResumeProps {;
   resume: Resume,;
@@ -103,3 +138,23 @@ function PreviewResume() {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  );
+}
+
+    </div>;
+  ),;}
+ </div> </div>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+export default function RegisterPage() {;
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
+import Layout from "../components/Layout";
+export default function RegisterPage() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export default function RegisterPage() {;
@@ -56,8 +66,11 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -68,7 +81,10 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -82,7 +98,10 @@ export default function RegisterPage() {;
             </p>;
           </motion && motion.div>;
           <motion&& motion.div
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -108,12 +127,18 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     />;
                   </div>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -128,12 +153,18 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   />;
                 </div>;
               </div>;
               <div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -153,12 +184,18 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   />;
                 </div>;
               </div>;
               <div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -172,11 +209,17 @@ export default function RegisterPage() {;
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
+<<<<<<< HEAD
 
                 />;
               </div>;
               <div>;
 
+=======
+                />;
+              </div>;
+              <div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -207,11 +250,16 @@ export default function RegisterPage() {;
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
+<<<<<<< HEAD
 
                   </button>;
                 </div>;
 
 
+=======
+                  </button>;
+                </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
@@ -460,7 +508,10 @@ if ( {) {
                           {key === "lowercase" && "One lowercase letter"}
                           {key === "number" && "One number"}
                           {key === "special" && "One special character"}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </span>;
                       </div>;
                     ),;
@@ -468,7 +519,10 @@ if ( {) {
                 </div>;
               </div>;
               <div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -507,12 +561,18 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>;
 
               <div className="space-y-4">;
                 <div className="flex items-center">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -534,7 +594,10 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       className="text-blue-400 hover:text-blue-300">;
 =======
                         </span>;
@@ -607,12 +670,18 @@ if ( {) {
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
@@ -652,12 +721,18 @@ if ( {) {
                 >;
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </span>;
                   Create account;
                 </button>;
               </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -665,16 +740,25 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }

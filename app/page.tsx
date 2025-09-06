@@ -21,9 +21,9 @@ export default function HomePage() {
           We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
           <Link
             href="/services"
+<<<<<<< HEAD
 =======
           <Link 
             href="/services" 
@@ -44,10 +44,13 @@ export default function HomePage() {
           <Link 
             href="/services" 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <a
@@ -60,6 +63,10 @@ export default function HomePage() {
           <a 
             href="https://ziontechgroup.com" 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          <a
+            href="https://ziontechgroup.com"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -70,8 +77,11 @@ export default function HomePage() {
       <section className="py-12">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card
             title="Micro SaaS"
@@ -120,6 +130,7 @@ export default function HomePage() {
             href="/services/data-analytics"
             description="Business intelligence, predictive analytics, and data engineering solutions."
             icon="📊"
+<<<<<<< HEAD
 =======
           <Card 
             title="IT Services" 
@@ -166,6 +177,26 @@ export default function HomePage() {
             href="/services/cybersecurity-suite"
             description="Enterprise-grade security solutions with 24/7 monitoring and threat detection."
             icon="🔒"
+=======
+          />
+          <Card
+            title="Digital Transformation"
+            href="/services/digital-transformation"
+            description="Complete digital transformation solutions and legacy system modernization."
+            icon="🔄"
+          />
+          <Card
+            title="Cybersecurity"
+            href="/services/cybersecurity"
+            description="Comprehensive security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <Card
+            title="Cloud Services"
+            href="/services/cloud-services"
+            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
+            icon="☁️"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           />
         </div>
       </section>
@@ -180,6 +211,9 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <FeatureCard
             title="Fast Delivery"
             description="Rapid prototyping and deployment with modern tools and practices."
@@ -203,6 +237,7 @@ export default function HomePage() {
           <FeatureCard
             title="Cost Effective"
             description="Optimized solutions that reduce operational costs and improve efficiency."
+<<<<<<< HEAD
 =======
           <FeatureCard 
             title="Cost Effective" 
@@ -211,6 +246,8 @@ export default function HomePage() {
 >>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           />
         </div>
       </section>
@@ -220,10 +257,14 @@ export default function HomePage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
   return (
     <Link
       href={href}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -240,6 +281,8 @@ function Card({ title, description, href, icon }: {
 >>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -249,6 +292,7 @@ function Card({ title, description, href, icon }: {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function FeatureCard({ title, description }: { title: string; description: string }) {
@@ -263,12 +307,16 @@ function FeatureCard({ title, description }: {
 >>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+function FeatureCard({ title, description }: { title: string; description: string }) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -278,3 +326,6 @@ function FeatureCard({ title, description }: {
 =======
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,10 +1,8 @@
 
 
-=======
-
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
 
 import React from 'react';
   id: string;
@@ -16,6 +14,7 @@ export function currentBadge(balance: number): Badge | null {;
 
 
   let current: Badge | null = null;
+<<<<<<< HEAD
 =======
 threshold: number, //token balance threshold ;
 };
@@ -28,6 +27,8 @@ const BADGES: Badge[] = [;
 ];
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 export type Badge = {
   id: string,
@@ -42,7 +43,12 @@ const BADGES: Badge[] = [
   { id: "elite", label: "Elite", threshold: 1000 }],
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,
+<<<<<<< HEAD
 =======
+=======
+import React from 'react';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 ;
   id: string;
@@ -56,6 +62,7 @@ const BADGES: Badge[] = [;
   { id: 'pro', label: 'Pro', threshold: 500 },
   { id: 'elite', label: 'Elite', threshold: 1000 },
 ];
+<<<<<<< HEAD
 ;
 export function current_badge (balance: number): Badge | null {
   let current: Badge | null = null;
@@ -66,6 +73,16 @@ export default /**
  */
 function Badges() {
   const active = current_badge (balance);
+=======
+export function currentBadge(balance: number): Badge | null {
+
+export function currentBadge(balance: number): Badge | null {;
+  let current: Badge | null = null;
+;
+  return current;
+export default function Badges({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className='flex gap - 2 items - center flex - wrap'>;
       {BADGES.map (boolean => (        <span;
@@ -74,7 +91,10 @@ function Badges() {
             balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   for (const b of BADGES) {
     // Check condition
 if (current = b) {
@@ -82,6 +102,7 @@ if (current = b) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return current;
 export default function Badges(): any ({ balance }: { balance: number }) {;
@@ -121,6 +142,15 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
     </div>;
   );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
 
+=======
+    <div className="flex gap-2 items-center flex-wrap">
+      {BADGES.map((b) => (
+        <span
+          key={b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+    </div>;
+  );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       )}
     </div>;
   );
@@ -148,16 +178,16 @@ function Badges() {
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-
-
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
 export default function Badges({ balance }: { balance: number }) {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Badges({ balance }: { balance: number }) {
 
   const active = currentBadge(balance);
@@ -173,8 +203,11 @@ export default function Badges({ balance }: { balance: number }) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
@@ -185,5 +218,80 @@ export default function Badges({ balance }: { balance: number }) {
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+        </span>)}
+    </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
+    </div>);
+      {BADGES.map((b) => (
+        <span
+          key={b.id}
+          className={_`px-3 py-1 rounded-full text-xs border ${
+            balance >= b.threshold
+              ? &quot;bg-yellow-100 border-yellow-300 text-yellow-800&quot;
+              : &quot;bg-gray-100 border-gray-200 text-gray-500&quot;
+          }`}
+          title={`Requires ${b.threshold} ZION$`}
+        >
+          {_b.label}
+        </span>
+      ))}
+      {active && (
+        <span className=&quot;ml-2 text-xs text-green-600&quot;>Current: {active.label}</span>
+      )}
+    </div>
+  )
+
+}
+            balance >= b.threshold
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null
+  for (const b of BADGES) {
+    if (balance >= b.threshold) current = b
+  }
+  return current
+}
+
+export default function Badges({ balance }: { balance: number }) {;
+
+export default function Badges({ balance }: { balance: number }) {
+  const active = currentBadge(balance);
+
+  return (
+    <div className='flex gap-2 items-center flex-wrap'>
+      {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
+      {BADGES.map((b) => (
+        <span
+          key={b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+            balance >= b.threshold
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
+              : "bg-gray-100 border-gray-200 text-gray-500"
+
+          }`}
+          title={`Requires ${b.threshold} ZION$`}
+        >
+          {b.label}
+        </span>
+      ))}
+      {active && (
+        <span className='ml-2 text-xs text-green-600'>
+          Current: {active.label}
+        </span>
+      )}
+    </div>
+);        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
+      )}
+    </div>
+  );
+}
+  );
+
+}
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

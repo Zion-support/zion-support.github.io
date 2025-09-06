@@ -19,14 +19,18 @@ export default defineConfig({
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   css: {
     postcss: false
   },
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
+<<<<<<< HEAD
 <<<<<<< HEAD
     exclude: [],
   },
@@ -39,6 +43,10 @@ export default defineConfig({
     ],
   },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    exclude: [],
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -53,6 +61,9 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name || '';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
@@ -84,6 +95,7 @@ export default defineConfig({
     reportCompressedSize: false,
     emptyOutDir: true,
     assetsInlineLimit: 4096,
+<<<<<<< HEAD
 =======
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
@@ -94,6 +106,8 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   optimizeDeps: {
     include: [
@@ -106,6 +120,9 @@ export default defineConfig({
       'tailwind-merge'
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
       target: 'esnext'
@@ -145,6 +162,7 @@ export default defineConfig({
         return { relative: true };
       }
     }
+<<<<<<< HEAD
 =======
     exclude: ['@radix-ui/react-icons']
   },
@@ -164,3 +182,7 @@ export default defineConfig({
 =======
 });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  }
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

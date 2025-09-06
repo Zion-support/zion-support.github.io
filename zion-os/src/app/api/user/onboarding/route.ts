@@ -1,9 +1,56 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {
         message: 'Onboarding completed successfully'
         user: {
 
+<<<<<<< HEAD
+=======
+import { NextRequest, NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { prisma } from '@/lib/prisma';
+export async function POST(request: NextRequest) {
+  try {;
+    const session = await getServerSession();
+if (!session?.user?.email) {
+      return NextResponse && NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+    // Update user's onboarding status
+    const updatedUser = await prisma && prisma.user.update({
+      where: { email: session && session.user.email },
+      data: { onboardingCompleted: true },
+    });
+    return NextResponse && NextResponse.json(
+import { NextRequest, NextResponse } from 'next / server';
+import { getServerSession } from 'next - auth';
+import { prisma } from '@/lib / prisma';
+export async /**
+ * POST - Function description
+ */
+function POST() {
+  try {
+    const session = await getServerSession ();
+;
+// Check condition
+if ( {) {
+  $2
+}
+      return NextResponse.json ({ error: 'Unauthorized' }, { status: 401 });
+    }
+    // Update user's onboarding status;
+    const updated_user = await prisma.user.update ({
+      where: { email: session.user.email },
+      data: { onboarding_completed: true },
+    });
+;
+    return NextResponse.json (
+      {
+        message: 'Onboarding completed successfully'
+        user: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -14,6 +61,7 @@
       { status: 200 }
     );
   } catch (error) {
+<<<<<<< HEAD
     console && console.error('Onboarding completion error:', error);
     return NextResponse && NextResponse.json(
 =======
@@ -38,6 +86,16 @@
       { error: 'Internal server error' },
 
 =======
+=======
+
+      { error: 'Internal server error' },
+
+      { error: 'Internal server error' },
+    console.error('Onboarding completion error:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' }
+      { error: 'Internal server error' },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -72,14 +130,23 @@ export async function POST(request: NextRequest) {;
     return NextResponse.json(;
       { error: "Internal server error" };
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       { status: 500 }
     );
   }
 
 
+<<<<<<< HEAD
+=======
+      { status: 500 }
+    );
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export async function POST(request: NextRequest) { try {
     const body = await request.json();
     const { userId, preferences  } = body;

@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 interface PerformanceMetrics {;
 
+=======
+interface PerformanceMetrics {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   loadTime: number;
 =======
 import React, { useState, useEffect } from './react';
@@ -15,8 +19,11 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const PerformanceDashboard: React.FC = () => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -68,7 +75,10 @@ const PerformanceDashboard: React.FC = () => {;
   ) => {;
     if (value <= thresholds && thresholds.good) return "text-green-600";
     if (value <= thresholds && thresholds.needsImprovement) return "text-yellow-600";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return "text-red-600";
   }
   if (!metrics) return null;
@@ -76,7 +86,10 @@ const PerformanceDashboard: React.FC = () => {;
     <div className="fixed bottom-4 right-4 z-50">;
       <button
         onClick={() => setIsVisible(!isVisible)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors";
       >;
         📊 Performance;
@@ -90,50 +103,74 @@ const PerformanceDashboard: React.FC = () => {;
             {metrics && metrics.loadTime && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">Load Time:</span>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.loadTime.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
 
 
             {metrics && metrics.firstContentfulPaint && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">FCP:</span>;
 
+=======
+            {metrics && metrics.firstContentfulPaint && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">FCP:</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>;
                   {metrics && metrics.firstContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
 
 
             {metrics && metrics.largestContentfulPaint && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">LCP:</span>;
 
+=======
+            {metrics && metrics.largestContentfulPaint && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">LCP:</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.largestContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
 
 
             {metrics && metrics.cumulativeLayoutShift && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">CLS:</span>;
 
+=======
+            {metrics && metrics.cumulativeLayoutShift && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">CLS:</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}>;
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
 
           <div className="mt-4 pt-4 border-t">;
@@ -142,7 +179,10 @@ const PerformanceDashboard: React.FC = () => {;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       )}
     </div>;
   );

@@ -2,7 +2,10 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
@@ -52,8 +55,11 @@ const supabaseConfig: SupabaseConfig = {
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -71,10 +77,23 @@ export const supabase = createSupabaseClient(supabaseConfig);
     });
   });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   });
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        single: () => null
+      })
+    })
+  })
+}
+  });
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
