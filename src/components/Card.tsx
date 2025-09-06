@@ -5,7 +5,11 @@ interface CardProps {
   children?: React.ReactNode;
 =======
   children: React.ReactNode;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   title?: string;
   description?: string;
   className?: string;
@@ -56,6 +60,24 @@ const Card: React.FC<CardProps> = ({
 
 <<<<<<< HEAD
 export default Card;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  className?: string;
+}
+
+export default function Card({ children, className = '' }: CardProps) {
+  return (
+    <motion.div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+      {children}
+    </motion.div>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
+=======
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 =======
 export default Card;
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

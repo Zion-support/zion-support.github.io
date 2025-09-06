@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 export const metadata = {
   title: "Micro SaaS | Zion Tech Group",
   description: "Scalable software-as-a-service solutions for modern businesses. Custom web applications, API development, and cloud integration.",
+=======
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = { 
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
+  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+>>>>>>> bfa374f2346b9b099cf6d7b959fd7dc047e316cc
 };
 
 export default function MicroSaaSPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20">
@@ -99,6 +110,27 @@ export default function MicroSaaSPage() {
           <a
             href="/contact"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+=======
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Micro SaaS Development
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Build and launch your next micro SaaS product with our comprehensive development services. 
+          From AI-powered tools to productivity apps, we help you create revenue-generating solutions.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Development Inquiry"
+            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+          >
+            Start Your SaaS Project
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
+>>>>>>> bfa374f2346b9b099cf6d7b959fd7dc047e316cc
           >
             Start Your Project
           </a>

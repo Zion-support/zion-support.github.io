@@ -1,23 +1,43 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 <<<<<<< HEAD
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import nextPlugin from '@next/eslint-plugin-next';
+import globals from 'globals';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+=======
+<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 
 export default [
-  js.configs.recommended,
+  ...compat.extends('next/core-web-vitals'),
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       '.next/**',
       'out/**',
@@ -27,13 +47,17 @@ export default [
       'src.disabled/**',
       'src.pages.disabled/**',
 =======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'backup-problematic-files/**',
       'src.disabled/**',
       'components.disabled/**',
@@ -90,11 +114,100 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js'
+      '*.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'tests.disabled/**',
+      'tools/**',
+      'utils/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
+      'recovered-branches/**',
+      'services-broken.tsx',
+      'services/**',
+      'setupTests.ts',
+      'solutions.disabled/**',
+      'src.broken/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'vite.config-backup.ts',
+      'vite.config.ts',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_backup/**',
+      'pages_backup_before_cleanup/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'pages_minimal/**',
+      'playwright.config.ts',
+      'pm2-automation/**',
+      'providers/**',
+      'public/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled.full/**',
+      'pages.disabled_auto/**',
+      'out/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'components/**',
+      'content-hub.tsx',
+      'contracts.disabled/**',
+      'cypress.config.ts',
+      'cypress/**',
+      'dao/**',
+      'data.disabled/**',
+      'data/**',
+      'deployments/**',
+      'fix_typescript_syntax_errors.jsx',
+      'fix_utils_files.ts',
+      'hooks.disabled/**',
+      'hooks/**',
+      'jest.config.jsx',
+      'jest.config.ts',
+      'jest.setup.jsx',
+      'lib.broken/**',
+      'lib.disabled/**',
+      'lib/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'middleware.security.ts',
+      'middleware/**',
+      'netlify/**',
+      'next-env.d.ts',
+      '.next/**',
+      'App.smoke.test.tsx',
+      'App.test.ts',
+      'App.test.tsx',
+      'App.tsx',
+      'AppMinimal.test.tsx',
+      'ai-optimization-backups/**',
+      'api-documentation.tsx',
+      'api.disabled.temp/**',
+      'api.tsx',
+      'apps.backup/**',
+      'apps/**',
+      'automation.tsx',
+      'automation_backup/**',
+      'blockchain-solutions.tsx',
+      'blog/**',
+      'browserstack.config.ts',
+      'case-studies.tsx',
+      'component-library.tsx',
+      'components.disabled_full/**'
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -113,27 +226,7 @@ export default [
         afterAll: 'readonly',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       },
-      parser: tsparser,
-=======
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...compat.extends('next/core-web-vitals'),
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
       parser: typescriptParser,
->>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -168,9 +261,9 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-<<<<<<< HEAD
-      'react': react,
+      react,
       'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -187,6 +280,10 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
+<<<<<<< HEAD
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+=======
 <<<<<<< HEAD
       'no-trailing-spaces': 'error',
       'indent': 'off',
@@ -309,6 +406,7 @@ export default [
       'jsx-a11y/no-access-key': 'warn',
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     },
     settings: {
       react: {
@@ -318,6 +416,9 @@ export default [
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   {
     files: ['**/*.js'],
     languageOptions: {
@@ -337,6 +438,8 @@ export default [
       'no-console': 'off',
     },
   },
+<<<<<<< HEAD
+=======
 =======
       react,
       'react-hooks': reactHooks,
@@ -353,4 +456,5 @@ export default [
   },
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ];

@@ -53,7 +53,11 @@ const HowItWorksSection = () => {
       </div>
     </section>
 =======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -674,7 +678,11 @@ export default HowItWorksSection;
 <<<<<<< HEAD
 export default HowItWorksSection;
 =======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 export default Component;
 
 }
@@ -713,5 +721,9 @@ export default Component;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

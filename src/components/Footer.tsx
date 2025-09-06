@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
 <<<<<<< HEAD
 =======
@@ -26,6 +30,10 @@ import {
   Github,
   ChevronUp,
 } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -101,12 +109,22 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+=======
+
+        <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
@@ -115,6 +133,11 @@ const Footer: React.FC = () => {
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -142,7 +165,11 @@ const Footer: React.FC = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
         </div>
       </div>
 <<<<<<< HEAD

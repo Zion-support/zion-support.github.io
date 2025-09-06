@@ -36,12 +36,82 @@ export default function AIProjectManagerPage() {
               <p className="text-gray-600 mb-4">Streamlined project workflows with intelligent automation.</p>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Analytics</h3>
               <p className="text-gray-600 mb-4">Comprehensive project analytics and performance insights.</p>
             </div>
           </div>
+=======
+      {/* Success Metrics */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Proven Results</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <MetricCard
+            number="40%"
+            label="Faster Project Completion"
+            description="Average time reduction across all projects"
+          />
+          <MetricCard
+            number="99%"
+            label="Accuracy Rate"
+            description="AI prediction accuracy for project outcomes"
+          />
+          <MetricCard
+            number="60%"
+            label="Resource Optimization"
+            description="Improvement in resource utilization efficiency"
+          />
+          <MetricCard
+            number="85%"
+            label="Team Satisfaction"
+            description="Increase in team productivity and satisfaction"
+          />
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-16 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Perfect For Every Industry</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <UseCaseCard
+            icon="💻"
+            title="Software Development"
+            description="Agile project management with AI-powered sprint planning and code review automation."
+            benefits={["Sprint optimization", "Bug prediction", "Code quality analysis", "Release planning"]}
+          />
+          <UseCaseCard
+            icon="🏗️"
+            title="Construction"
+            description="Complex construction project management with resource optimization and safety monitoring."
+            benefits={["Resource scheduling", "Safety compliance", "Timeline tracking", "Cost optimization"]}
+          />
+          <UseCaseCard
+            icon="🎨"
+            title="Creative Agencies"
+            description="Creative project management with client collaboration and creative workflow optimization."
+            benefits={["Client management", "Creative briefs", "Asset tracking", "Approval workflows"]}
+          />
+          <UseCaseCard
+            icon="🏥"
+            title="Healthcare"
+            description="Healthcare project management with compliance tracking and patient care optimization."
+            benefits={["Compliance monitoring", "Patient tracking", "Resource allocation", "Quality assurance"]}
+          />
+          <UseCaseCard
+            icon="🎓"
+            title="Education"
+            description="Educational project management with curriculum planning and student progress tracking."
+            benefits={["Curriculum planning", "Student tracking", "Resource management", "Assessment planning"]}
+          />
+          <UseCaseCard
+            icon="🏪"
+            title="Retail"
+            description="Retail project management with inventory optimization and customer experience enhancement."
+            benefits={["Inventory management", "Customer analytics", "Store operations", "Marketing campaigns"]}
+          />
+>>>>>>> bfa374f2346b9b099cf6d7b959fd7dc047e316cc
         </div>
       </section>
 
