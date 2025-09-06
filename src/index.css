@@ -14,8 +14,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-<<<<<<< HEAD
-=======
 }
 
 .App {
@@ -102,5 +100,4 @@ code {
   .content {
     padding: 1rem;
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
